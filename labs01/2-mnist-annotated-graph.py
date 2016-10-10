@@ -13,21 +13,29 @@ HIDDEN = 100
 class Network:
     def __init__(self, logdir, experiment, threads):
         # Construct the graph
-        self.images = tf.placeholder(tf.float32, [None, WIDTH, HEIGHT, 1])
-        self.labels = tf.placeholder(tf.int64, [None])
+        with tf.name_scope("inputs"):
+            self.images = tf.placeholder(tf.float32, [None, WIDTH, HEIGHT, 1], name="images")
+            self.labels = tf.placeholder(tf.int64, [None], name="labels")
+            flattened_images = tf.reshape(self.images, [-1, WIDTH*HEIGHT], name="flattened_images")
 
-        flattened_images = tf.reshape(self.images, [-1, WIDTH*HEIGHT])
-        hidden_layer_pre = tf.matmul(flattened_images, tf.Variable(tf.random_normal([WIDTH*HEIGHT, HIDDEN]))) + tf.Variable(tf.random_normal([HIDDEN]))
-        hidden_layer = tf.nn.tanh(hidden_layer_pre)
-        output_layer = tf.matmul(hidden_layer, tf.Variable(tf.random_normal([HIDDEN, LABELS]))) + tf.Variable(tf.random_normal([LABELS]))
+        with tf.name_scope("hidden_layer"):
+            hidden_layer_pre = tf.matmul(flattened_images, tf.Variable(tf.random_normal([WIDTH*HEIGHT, HIDDEN]), name="W"))
+            hidden_layer_pre += tf.Variable(tf.random_normal([HIDDEN]), name="b")
+            hidden_layer = tf.nn.tanh(hidden_layer_pre, name="activation")
+        with tf.name_scope("output_layer"):
+            output_layer = tf.matmul(hidden_layer, tf.Variable(tf.random_normal([HIDDEN, LABELS]), name="W"))
+            output_layer += tf.Variable(tf.random_normal([LABELS]), name="b")
 
-        loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(output_layer, self.labels))
-        tf.scalar_summary("training/loss", loss)
-        self.training = tf.train.AdamOptimizer().minimize(loss)
+        with tf.name_scope("loss"):
+            loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(output_layer, self.labels), name="loss")
+            tf.scalar_summary("training/loss", loss)
+        with tf.name_scope("train"):
+            self.training = tf.train.AdamOptimizer().minimize(loss)
 
-        predictions = tf.argmax(output_layer, 1)
-        accuracy = tf.reduce_mean(tf.cast(tf.equal(predictions, self.labels), tf.float32))
-        tf.scalar_summary("training/accuracy", accuracy)
+        with tf.name_scope("accuracy"):
+            predictions = tf.argmax(output_layer, 1, name="predictions")
+            accuracy = tf.reduce_mean(tf.cast(tf.equal(predictions, self.labels), tf.float32), name="accuracy")
+            tf.scalar_summary("training/accuracy", accuracy)
 
         # Summaries
         self.summaries = {'training': tf.merge_all_summaries() }
@@ -64,7 +72,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', default=50, type=int, help='Batch size.')
     parser.add_argument('--epochs', default=20, type=int, help='Number of epochs.')
     parser.add_argument('--logdir', default="logs", type=str, help='Logdir name.')
-    parser.add_argument('--exp', default="", type=str, help='Experiment name.')
+    parser.add_argument('--exp', default="2-mnist-annotated-graph", type=str, help='Experiment name.')
     parser.add_argument('--threads', default=1, type=int, help='Maximum number of threads to use.')
     args = parser.parse_args()
 

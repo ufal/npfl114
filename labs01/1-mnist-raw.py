@@ -4,9 +4,6 @@ from __future__ import print_function
 import datetime
 import numpy as np
 import tensorflow as tf
-layers = tf.contrib.layers
-losses = tf.contrib.losses
-metrics = tf.contrib.metrics
 
 LABELS = 10
 WIDTH = 28
@@ -16,31 +13,26 @@ HIDDEN = 100
 class Network:
     def __init__(self, logdir, experiment, threads):
         # Construct the graph
-        with tf.name_scope("inputs"):
-            self.images = tf.placeholder(tf.float32, [None, WIDTH, HEIGHT, 1], name="images")
-            self.labels = tf.placeholder(tf.int64, [None], name="labels")
-            flattened_images = layers.flatten(self.images)
+        self.images = tf.placeholder(tf.float32, [None, WIDTH, HEIGHT, 1])
+        self.labels = tf.placeholder(tf.int64, [None])
 
-        hidden_layer = layers.fully_connected(flattened_images, num_outputs=HIDDEN, activation_fn=tf.nn.relu, scope="hidden_layer")
-        output_layer = layers.fully_connected(hidden_layer, num_outputs=LABELS, activation_fn=None, scope="output_layer")
+        flattened_images = tf.reshape(self.images, [-1, WIDTH*HEIGHT])
+        hidden_layer_pre = tf.matmul(flattened_images, tf.Variable(tf.random_normal([WIDTH*HEIGHT, HIDDEN]))) + tf.Variable(tf.random_normal([HIDDEN]))
+        hidden_layer = tf.nn.tanh(hidden_layer_pre)
+        output_layer = tf.matmul(hidden_layer, tf.Variable(tf.random_normal([HIDDEN, LABELS]))) + tf.Variable(tf.random_normal([LABELS]))
 
-        loss = losses.sparse_softmax_cross_entropy(output_layer, self.labels, scope="loss")
-        self.training = layers.optimize_loss(loss, None, None, tf.train.AdamOptimizer(), summaries=['loss', 'gradients', 'gradient_norm'], name='training')
+        loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(output_layer, self.labels))
+        tf.scalar_summary("training/loss", loss)
+        self.training = tf.train.AdamOptimizer().minimize(loss)
 
-        with tf.name_scope("accuracy"):
-            predictions = tf.argmax(output_layer, 1, name="predictions")
-            accuracy = metrics.accuracy(predictions, self.labels)
-            tf.scalar_summary("training/accuracy", accuracy)
-
-        with tf.name_scope("confusion_matrix"):
-            confusion_matrix = metrics.confusion_matrix(predictions, self.labels, weights=tf.not_equal(predictions, self.labels), dtype=tf.float32)
-            confusion_image = tf.reshape(confusion_matrix, [1, LABELS, LABELS, 1])
+        predictions = tf.argmax(output_layer, 1)
+        accuracy = tf.reduce_mean(tf.cast(tf.equal(predictions, self.labels), tf.float32))
+        tf.scalar_summary("training/accuracy", accuracy)
 
         # Summaries
         self.summaries = {'training': tf.merge_all_summaries() }
         for dataset in ["dev", "test"]:
-            self.summaries[dataset] = tf.merge_summary([tf.scalar_summary(dataset + "/accuracy", accuracy),
-                                                        tf.image_summary(dataset + "/confusion_matrix", confusion_image)])
+            self.summaries[dataset] = tf.scalar_summary(dataset + "/accuracy", accuracy)
 
         # Create the session
         self.session = tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
@@ -53,17 +45,8 @@ class Network:
 
     def train(self, images, labels):
         self.steps += 1
-        feed_dict = {self.images: images, self.labels: labels}
-
-        if self.steps == 1:
-            metadata = tf.RunMetadata()
-            self.session.run(self.training, feed_dict, options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE), run_metadata = metadata)
-            self.summary_writer.add_run_metadata(metadata, 'step1')
-        elif self.steps % 100 == 0:
-            _, summary = self.session.run([self.training, self.summaries['training']], feed_dict)
-            self.summary_writer.add_summary(summary, self.steps)
-        else:
-            self.session.run(self.training, feed_dict)
+        _, summary = self.session.run([self.training, self.summaries['training']], {self.images: images, self.labels: labels})
+        self.summary_writer.add_summary(summary, self.steps)
 
     def evaluate(self, dataset, images, labels):
         summary = self.summaries[dataset].eval({self.images: images, self.labels: labels}, self.session)
@@ -81,7 +64,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', default=50, type=int, help='Batch size.')
     parser.add_argument('--epochs', default=20, type=int, help='Number of epochs.')
     parser.add_argument('--logdir', default="logs", type=str, help='Logdir name.')
-    parser.add_argument('--exp', default="", type=str, help='Experiment name.')
+    parser.add_argument('--exp', default="1-mnist-raw", type=str, help='Experiment name.')
     parser.add_argument('--threads', default=1, type=int, help='Maximum number of threads to use.')
     args = parser.parse_args()
 

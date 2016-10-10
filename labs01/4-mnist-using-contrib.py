@@ -4,6 +4,9 @@ from __future__ import print_function
 import datetime
 import numpy as np
 import tensorflow as tf
+layers = tf.contrib.layers
+losses = tf.contrib.losses
+metrics = tf.contrib.metrics
 
 LABELS = 10
 WIDTH = 28
@@ -12,44 +15,32 @@ HIDDEN = 100
 
 class Network:
     def __init__(self, logdir, experiment, threads):
-        def linear(x, layer_size, activation, name):
-            with tf.variable_scope(name):
-                input_size = x.get_shape()[-1]
-                weights = tf.get_variable("weights", [input_size, layer_size])
-                tf.histogram_summary("training/" + name + "/weights", weights)
-                biases = tf.get_variable("biases", [layer_size])
-                tf.histogram_summary("training/" + name + "/biases", biases)
-                y = tf.matmul(x, weights) + biases
-                if activation:
-                    tf.histogram_summary("training/" + name + "/preactivation", y)
-                    y = activation(y)
-                tf.histogram_summary("training/" + name + "/value", y)
-                return y
-
         # Construct the graph
         with tf.name_scope("inputs"):
             self.images = tf.placeholder(tf.float32, [None, WIDTH, HEIGHT, 1], name="images")
             self.labels = tf.placeholder(tf.int64, [None], name="labels")
-            flattened_images = tf.reshape(self.images, [-1, WIDTH*HEIGHT], name="flattened_images")
+            flattened_images = layers.flatten(self.images)
 
-        hidden_layer = linear(flattened_images, HIDDEN, activation=tf.tanh, name="hidden_layer")
-        output_layer = linear(hidden_layer, LABELS, activation=None, name="output_layer")
+        hidden_layer = layers.fully_connected(flattened_images, num_outputs=HIDDEN, activation_fn=tf.nn.relu, scope="hidden_layer")
+        output_layer = layers.fully_connected(hidden_layer, num_outputs=LABELS, activation_fn=None, scope="output_layer")
 
-        with tf.name_scope("loss"):
-            loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(output_layer, self.labels), name="loss")
-            tf.scalar_summary("training/loss", loss)
-        with tf.name_scope("train"):
-            self.training = tf.train.AdamOptimizer().minimize(loss)
+        loss = losses.sparse_softmax_cross_entropy(output_layer, self.labels, scope="loss")
+        self.training = layers.optimize_loss(loss, None, None, tf.train.AdamOptimizer(), summaries=['loss', 'gradients', 'gradient_norm'], name='training')
 
         with tf.name_scope("accuracy"):
             predictions = tf.argmax(output_layer, 1, name="predictions")
-            accuracy = tf.reduce_mean(tf.cast(tf.equal(predictions, self.labels), tf.float32), name="accuracy")
+            accuracy = metrics.accuracy(predictions, self.labels)
             tf.scalar_summary("training/accuracy", accuracy)
+
+        with tf.name_scope("confusion_matrix"):
+            confusion_matrix = metrics.confusion_matrix(predictions, self.labels, weights=tf.not_equal(predictions, self.labels), dtype=tf.float32)
+            confusion_image = tf.reshape(confusion_matrix, [1, LABELS, LABELS, 1])
 
         # Summaries
         self.summaries = {'training': tf.merge_all_summaries() }
         for dataset in ["dev", "test"]:
-            self.summaries[dataset] = tf.scalar_summary(dataset + "/accuracy", accuracy)
+            self.summaries[dataset] = tf.merge_summary([tf.scalar_summary(dataset + "/accuracy", accuracy),
+                                                        tf.image_summary(dataset + "/confusion_matrix", confusion_image)])
 
         # Create the session
         self.session = tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
@@ -90,7 +81,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', default=50, type=int, help='Batch size.')
     parser.add_argument('--epochs', default=20, type=int, help='Number of epochs.')
     parser.add_argument('--logdir', default="logs", type=str, help='Logdir name.')
-    parser.add_argument('--exp', default="", type=str, help='Experiment name.')
+    parser.add_argument('--exp', default="4-mnist-using-contrib", type=str, help='Experiment name.')
     parser.add_argument('--threads', default=1, type=int, help='Maximum number of threads to use.')
     args = parser.parse_args()
 

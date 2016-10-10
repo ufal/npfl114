@@ -12,19 +12,28 @@ HIDDEN = 100
 
 class Network:
     def __init__(self, logdir, experiment, threads):
+        def linear(x, layer_size, activation, name):
+            with tf.variable_scope(name):
+                input_size = x.get_shape()[-1]
+                weights = tf.get_variable("weights", [input_size, layer_size])
+                tf.histogram_summary("training/" + name + "/weights", weights)
+                biases = tf.get_variable("biases", [layer_size])
+                tf.histogram_summary("training/" + name + "/biases", biases)
+                y = tf.matmul(x, weights) + biases
+                if activation:
+                    tf.histogram_summary("training/" + name + "/preactivation", y)
+                    y = activation(y)
+                tf.histogram_summary("training/" + name + "/value", y)
+                return y
+
         # Construct the graph
         with tf.name_scope("inputs"):
             self.images = tf.placeholder(tf.float32, [None, WIDTH, HEIGHT, 1], name="images")
             self.labels = tf.placeholder(tf.int64, [None], name="labels")
             flattened_images = tf.reshape(self.images, [-1, WIDTH*HEIGHT], name="flattened_images")
 
-        with tf.name_scope("hidden_layer"):
-            hidden_layer_pre = tf.matmul(flattened_images, tf.Variable(tf.random_normal([WIDTH*HEIGHT, HIDDEN]), name="W"))
-            hidden_layer_pre += tf.Variable(tf.random_normal([HIDDEN]), name="b")
-            hidden_layer = tf.nn.tanh(hidden_layer_pre, name="activation")
-        with tf.name_scope("output_layer"):
-            output_layer = tf.matmul(hidden_layer, tf.Variable(tf.random_normal([HIDDEN, LABELS]), name="W"))
-            output_layer += tf.Variable(tf.random_normal([LABELS]), name="b")
+        hidden_layer = linear(flattened_images, HIDDEN, activation=tf.tanh, name="hidden_layer")
+        output_layer = linear(hidden_layer, LABELS, activation=None, name="output_layer")
 
         with tf.name_scope("loss"):
             loss = tf.reduce_mean(tf.nn.sparse_softmax_cross_entropy_with_logits(output_layer, self.labels), name="loss")
@@ -53,8 +62,17 @@ class Network:
 
     def train(self, images, labels):
         self.steps += 1
-        _, summary = self.session.run([self.training, self.summaries['training']], {self.images: images, self.labels: labels})
-        self.summary_writer.add_summary(summary, self.steps)
+        feed_dict = {self.images: images, self.labels: labels}
+
+        if self.steps == 1:
+            metadata = tf.RunMetadata()
+            self.session.run(self.training, feed_dict, options = tf.RunOptions(trace_level=tf.RunOptions.FULL_TRACE), run_metadata = metadata)
+            self.summary_writer.add_run_metadata(metadata, 'step1')
+        elif self.steps % 100 == 0:
+            _, summary = self.session.run([self.training, self.summaries['training']], feed_dict)
+            self.summary_writer.add_summary(summary, self.steps)
+        else:
+            self.session.run(self.training, feed_dict)
 
     def evaluate(self, dataset, images, labels):
         summary = self.summaries[dataset].eval({self.images: images, self.labels: labels}, self.session)
@@ -72,7 +90,7 @@ if __name__ == '__main__':
     parser.add_argument('--batch_size', default=50, type=int, help='Batch size.')
     parser.add_argument('--epochs', default=20, type=int, help='Number of epochs.')
     parser.add_argument('--logdir', default="logs", type=str, help='Logdir name.')
-    parser.add_argument('--exp', default="", type=str, help='Experiment name.')
+    parser.add_argument('--exp', default="3-mnist-run-metadata-and-histograms", type=str, help='Experiment name.')
     parser.add_argument('--threads', default=1, type=int, help='Maximum number of threads to use.')
     args = parser.parse_args()
 
