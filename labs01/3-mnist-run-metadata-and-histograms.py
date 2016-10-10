@@ -57,7 +57,7 @@ class Network:
 
         self.session.run(tf.initialize_all_variables())
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
-        self.summary_writer = tf.train.SummaryWriter("{}/{}{}".format(logdir, timestamp, experiment), graph=self.session.graph, flush_secs=10)
+        self.summary_writer = tf.train.SummaryWriter("{}/{}-{}".format(logdir, timestamp, experiment), graph=self.session.graph, flush_secs=10)
         self.steps = 0
 
     def train(self, images, labels):
