@@ -6,7 +6,7 @@ In order to run the examples, you need TensorFlow installed.
 
 Generally, you can follow the [official Download and Setup guide](https://www.tensorflow.org/versions/master/get_started/os_setup.html).
 
-Extra simple version to install TensorFlow 0.11rf0 for Linux:
+Extra simple version to install TensorFlow 0.11rc0 for Linux:
 - Installing to your user Python packages:
   - Python 2.7: `pip install --user https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp27-none-linux_x86_64.whl`
   - Python 3.4: `pip install --user https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc0-cp34-cp34m-linux_x86_64.whl`
