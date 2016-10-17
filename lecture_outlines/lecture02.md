@@ -1,7 +1,5 @@
 # Oct 17
 
-[Not yet complete]
-
 - *Common Datasets*
 
 | Name | Description | Instances |
@@ -17,3 +15,12 @@
 | [PTB](https://catalog.ldc.upenn.edu/ldc99t42) | (Penn Treebank) 2500 stories from Wall Street Journal, annotated with POS tags and parsed into trees. | 1M words |
 | [PDT](https://ufal.mff.cuni.cz/prague-dependency-treebank) | (Prague Dependency Treebank) Czech sentences annotated on 4 layers (word, morphological, analytical, tectogrammatical). | 1.9M words |
 | [UD](http://universaldependencies.org/) | (Universal Dependencies) Treebanks of 40+ languages with consistent annotation of lemmas, POS tags, morphological features and dependency trees. | 55 treebanks |
+
+- Capacity, overfitting and underfitting [Section 5.2 of DLB, excluding Section 5.2.1]
+- Hyperparameters and validation sets [Section 5.3 of DLB]
+- Neural networks as graphs [Chapter 6 before Section 6.1 of DLB]
+- Output activation functions [Section 6.2 of DLB, excluding Section 6.2.1.2 and 6.2.2.4]
+- Hidden activation functions [Section 6.3 of DLB, excluding Section 6.3.3]
+- Basic network architectures [Section 6.4 of DLB]
+- Gradient Descent and Stochastic Gradient Descent [Sections 4.3 and 5.9 of DLB]
+- Backpropagation algorithm [Section 6.5 to 6.5.3 of DLB, especially Algorithms 6.2 and 6.3; *note that Algorithms 6.5 and 6.6 are used in practice*]
