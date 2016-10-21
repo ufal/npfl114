@@ -24,8 +24,8 @@ class Network:
         self.training = tf.train.AdamOptimizer().minimize(loss)
 
         # Create the session
-        self.session = tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
-                                                        intra_op_parallelism_threads=args.threads))
+        self.session = tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=threads,
+                                                        intra_op_parallelism_threads=threads))
 
         self.session.run(tf.initialize_all_variables())
 

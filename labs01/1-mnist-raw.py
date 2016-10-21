@@ -35,8 +35,8 @@ class Network:
             self.summaries[dataset] = tf.scalar_summary(dataset + "/accuracy", accuracy)
 
         # Create the session
-        self.session = tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
-                                                        intra_op_parallelism_threads=args.threads))
+        self.session = tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=threads,
+                                                        intra_op_parallelism_threads=threads))
 
         self.session.run(tf.initialize_all_variables())
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
