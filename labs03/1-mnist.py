@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     # Construct the network
     network = Network(threads=args.threads, logdir=args.logdir, expname=args.exp)
-    network.construct(100, saver=True)
+    network.construct(100)
 
     # Train
     for i in range(args.epochs):
