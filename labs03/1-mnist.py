@@ -26,14 +26,14 @@ class Network:
         else:
             self.summary_writer = None
 
-    def construct(self, hidden_layer):
+    def construct(self, hidden_layer_size):
         with self.session.graph.as_default():
             with tf.name_scope("inputs"):
                 self.images = tf.placeholder(tf.float32, [None, self.WIDTH, self.HEIGHT, 1], name="images")
                 self.labels = tf.placeholder(tf.int64, [None], name="labels")
 
             flattened_images = tf_layers.flatten(self.images, scope="preprocessing")
-            hidden_layer = tf_layers.fully_connected(flattened_images, num_outputs=hidden_layer, activation_fn=tf.nn.relu, scope="hidden_layer")
+            hidden_layer = tf_layers.fully_connected(flattened_images, num_outputs=hidden_layer_size, activation_fn=tf.nn.relu, scope="hidden_layer")
             output_layer = tf_layers.fully_connected(hidden_layer, num_outputs=self.LABELS, activation_fn=None, scope="output_layer")
             self.predictions = tf.argmax(output_layer, 1)
 
