@@ -102,7 +102,7 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", default=50, type=int, help="Batch size.")
     parser.add_argument("--epochs", default=20, type=int, help="Number of epochs.")
     parser.add_argument("--logdir", default="logs", type=str, help="Logdir name.")
-    parser.add_argument("--exp", default="4-mnist-using-contrib", type=str, help="Experiment name.")
+    parser.add_argument("--exp", default="1-mnist", type=str, help="Experiment name.")
     parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
     args = parser.parse_args()
 
