@@ -359,7 +359,7 @@ You might notice some differences in your PivotTable view after you export it to
 You can get more information about the current filter in the Properties dialog box .
 When you are in Design view of a form or report , you can use the ruler to help you resize controls .
 The width of the ruler 's unit of measure is based on the regional settings in Microsoft Windows Control Panel .
-Select the line you want to copy and press CTRL – C .
+Select the line you want to copy and press CTRL - C .
 Changing the ANSI SQL query mode for the current database after you 've created one or more queries .
 Changing the ANSI SQL query mode in an existing application .
 If the key exists , Access checks for the existence of a value name that matches the name of the referenced file .
@@ -398,22 +398,22 @@ The Nellie , a cruising yawl , swung to her anchor without a flutter of the sail
 The Chapman lighthouse , a three-legged thing erect on a mud-flat , shone strongly .
 It was just like Marlow . It was accepted in silence .
 The North Pole was one of these places , I remember .
-But there was one yet – the biggest , the most blank , so to speak – that I had a hankering after .
+But there was one yet - the biggest , the most blank , so to speak - that I had a hankering after .
 I believe I undertook amongst other things not to disclose any trade secrets .
 The mere wealth I leave to others .
-After this I got embraced , told to wear flannel , be sure to write often , and so on – and I left .
+After this I got embraced , told to wear flannel , be sure to write often , and so on - and I left .
 I said , Yes .
 He had just the faintest blush , and said modestly , I 've been teaching one of the native women about the station .
 I lived in a hut in the yard , but to be out of the chaos I would sometimes get into the accountant 's office .
 The noise outside had ceased , and presently in going out I stopped at the door .
 As he weighed sixteen stone I had no end of rows with the carriers .
-An hour afterwards I came upon the whole concern wrecked in a bush – man , hammock , groans , blankets , horrors .
+An hour afterwards I came upon the whole concern wrecked in a bush - man , hammock , groans , blankets , horrors .
 I felt I was becoming scientifically interesting .
 As a matter of fact , I had plenty to do in fishing my command out of the river .
 That , and the repairs when I brought the pieces to the station , took some months .
 There were rumors that a very important station was in jeopardy , and its chief , Mr. Kurtz , was ill .
 As to me , I had hardly ever spoken to him before .
-It seems he could not make bricks without something , I do n't know what – straw maybe .
+It seems he could not make bricks without something , I do n't know what - straw maybe .
 Madam President , there has clearly been a misunderstanding .
 As a final point I emphasize that the existing positive actions must be kept in place .
 I give the floor to Mrs Green .
@@ -423,7 +423,7 @@ Mr President , I should merely like to answer Mr Kellett-Bowman in one sentence 
 This is legislation requiring a unanimous vote in the Council , which is usually a guarantee of inaction .
 It is heartening that the European Union recognises the problems and is willing to focus on them .
 Mr President , many thanks to Mr Barzanti .
-Too many continue to scrape together a living in a kind of La Bohéme garret .
+Too many continue to scrape together a living in a kind of La Boheme garret .
 However , I can not support the reference to abortion .
 I would very much like to know on what kind of scientific evidence the Greens are basing all these amendments .
 Then there is Amendment No-12 .

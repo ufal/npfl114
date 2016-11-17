@@ -2630,7 +2630,7 @@ You can change the caption of Group 1 to Fixed and Promotions 2 to Category in t
 After you do this , the Category field will have three members : Fixed , Popular , and Other .
 On the Format menu , click Group .
 While holding down the ALT key , click the line you want to move .
-Press CTRL – V to paste the line .
+Press CTRL - V to paste the line .
 The aggregate functions wo n't include records containing blank ( Null ) values in their calculations .
 For example , the Count function returns a count of all the records without Null values .
 For more information , see the Microsoft Office 2002 Resource Kit .
@@ -2688,7 +2688,7 @@ He sat there impassively , reading the night-owl edition of the next morning 's 
 As the counterman swung into action , he spoke over his shoulder to Quinn .
 For several years Quinn had been having the same conversation with this man , whose name he did not know .
 They were both Mets fans , and the hopelessness of that passion had created a bond between them .
-First two times up , Kingsman hits solo shots , he said . Boom , boom . Big mothers – all the way to the moon .
+First two times up , Kingsman hits solo shots , he said . Boom , boom . Big mothers - all the way to the moon .
 Pittsburgh gets men on second and third , one out , so the Mets go to the bullpen for Allen .
 The Mets bring the corners in for a force at home , or maybe they can get the double play if it 's hit up the middle .
 Pena comes up and chicken-shits a little grounder to first and the fucker goes through Kingman 's legs .
@@ -2742,7 +2742,7 @@ Once he had taken the leap into that name , he had stopped thinking about Auster
 If this man was as good a detective as the Stillmans thought he was , perhaps he would be able to help with the case .
 Quinn would make a clean breast of it , Auster would forgive him , and together they would work to save Peter Stillman .
 He looked through the yellow pages for the Auster Detective Agency .
-There was one Paul Auster in Manhattan , living on Riverside Drive – not far from Quinn 's own house .
+There was one Paul Auster in Manhattan , living on Riverside Drive - not far from Quinn 's own house .
 Since Auster did not have an office , that meant he worked at home .
 As he walked up Riverside Drive , he became aware of the fact that he was no longer following Stillman .
 That 's why I rang the buzzer without asking who it was .
@@ -2763,7 +2763,7 @@ No , said Quinn .
 I wish it was . But this has nothing to do with literature .
 I came here looking for Paul Auster , the private detective .
 The what ? Auster laughed , and in that laugh everything was suddenly blown to bits .
-He must just as well have asked for Chief Sitting Bull – the effect would have been no different .
+He must just as well have asked for Chief Sitting Bull - the effect would have been no different .
 That might be , said Auster .
 But I 'm not a detective .
 A writer ? Quinn spoke the word as though it were a lament .
@@ -2800,7 +2800,7 @@ But Cid Hamete , the acknowledged author , never makes an appearance .
 Yes , I see what you 're getting at .
 The theory I present in the essay is that he is actually a combination of four different people .
 Sancho Panza is of course the witness .
-There 's no other candidate – since he is the only one who accompanies Don Quixote on all his adventures .
+There 's no other candidate - since he is the only one who accompanies Don Quixote on all his adventures .
 On the other hand , we know that Sancho has a great gift for language .
 To cure Don Quixote of his madness .
 The Knight of the Sad Countenance does not give up his obsessions .
@@ -2994,14 +2994,14 @@ Now when I was a little chap I had a passion for maps .
 I would look for hours at South America , or Africa , or Australia , and lose myself in all the glories of exploration .
 Well , I have n't been there yet , and shall not try now .
 Other places were scattered about the Equator , and in every sort of latitude all over the two hemispheres .
-And as I looked at the map of it in a shop-window , it fascinated me as a snake would a bird – a silly little bird .
+And as I looked at the map of it in a shop-window , it fascinated me as a snake would a bird - a silly little bird .
 Then I remembered there was a big concern , a Company for trade on that river .
 I went on along Fleet Street , but could not shake off the idea .
 I always went my own road and on my own legs where I had a mind to go .
 So I worried them .
 The men said ' My dear fellow ' and did nothing .
-Then – would you believe it ? – I tried the women .
-I got my appointment – of course ; and I got it very quick .
+Then - would you believe it ? - I tried the women .
+I got my appointment - of course ; and I got it very quick .
 It appears the Company had received news that one of their captains had been killed in a scuffle with the natives .
 A calamity had come to it , sure enough . The people had vanished .
 What became of the hens I do n't know either .
@@ -3025,7 +3025,7 @@ If I were , said I , I would n't be talking like this with you .
 How do you English say , eh ? Good-by .
 I ventured to hint that the Company was run for profit .
 You forget , dear Charlie , that the laborer is worthy of his hire , she said , brightly .
-In the street – I do n't know why – a queer feeling came to me that I was an impostor .
+In the street - I do n't know why - a queer feeling came to me that I was an impostor .
 Some , I heard , got drowned in the surf ; but whether they did or not , nobody seemed particularly to care .
 They wanted no excuse for being there . They were a great comfort to look at .
 For a time I would feel I belonged still to a world of straightforward facts ; but the feeling would not last long .
@@ -3052,16 +3052,16 @@ I did n't want any more loitering in the shade , and I made haste towards the st
 Moreover , I respected the fellow .
 Yes ; I respected his collars , his vast cuffs , his brushed hair .
 He had been out nearly three years ; and , later on , I could not help asking him how he managed to sport such linen .
-They , above – the Council in Europe , you know – mean him to be .
+They , above - the Council in Europe , you know - mean him to be .
 Next day I left that station at last , with a caravan of sixty men , for a two-hundred-mile tramp .
 Still I passed through several abandoned villages .
-I fancy I see it now , but I am not sure – not at all .
-Certainly the affair was too stupid – when I think of it – to be altogether natural .
+I fancy I see it now , but I am not sure - not at all .
+Certainly the affair was too stupid - when I think of it - to be altogether natural .
 Still ... . But at the moment it presented itself simply as a confounded nuisance .
 I asked myself what I was to do there , now my boat was lost .
-He inspired uneasiness . That was it ! Uneasiness . Not a definite mistrust – just uneasiness – nothing more .
-His position had come to him – why ? Perhaps because he was never ill ...
-He originated nothing , he could keep the routine going – that 's all . But he was great .
+He inspired uneasiness . That was it ! Uneasiness . Not a definite mistrust - just uneasiness - nothing more .
+His position had come to him - why ? Perhaps because he was never ill ...
+He originated nothing , he could keep the routine going - that 's all . But he was great .
 He could not wait . Had to start without me .
 Mr. Kurtz was ...
 I felt weary and irritable . Hang Kurtz , I thought .
@@ -3289,7 +3289,7 @@ The young man said , You are from Gala district .
 From Umsalongwe .
 I wonder if I 'll get that far .
 When Bray was delivered to the house there was no one at home but servants well primed to welcome him .
-There were – or used to be – leopards on the outskirts of the town ; Dando had once had his dog taken .
+There were - or used to be - leopards on the outskirts of the town ; Dando had once had his dog taken .
 At six Roland Dando came home .
 An old black Labrador with corns on his elbows stood slowly swinging his tail before Dando as he talked .
 Of course , Mweta has to hand out a job to everybody .
@@ -3308,7 +3308,7 @@ He and his wife took over the Silver Rhino last year .
 I like old Hjalmar .
 He 's just been to Denmark or somewhere because his mother died .
 Good God , they 've been gone at least five or six years .
-Oh I 'll tell you who 's still around though – Barry Forsyth .
+Oh I 'll tell you who 's still around though - Barry Forsyth .
 Forsyth Construction . You 'll see the board everywhere .
 There was another large meal , and an exchange about a bottle of white wine between Dando and his cook , Festus .
 Of course I do n't open wrong kind bottle .
@@ -3375,7 +3375,7 @@ Well , perhaps I am , then .
 I should think the bar of the Silver Rhino 's as good a place as any to learn what 's really going on .
 How people still think with their blood and enjoy to contempt ... yes , the bar at the Silver Rhino .
 Our son Stephen is looking after it tonight .
-It 's amazing how he deals with those fellows – better than I do , I can tell you .
+It 's amazing how he deals with those fellows - better than I do , I can tell you .
 We promised him a liberal education when we left South Africa , you see .
 You have it , Hjalmar .
 With an absent smile to Bray across the room , she took up , for a moment , an abandoned beauty .
@@ -3398,7 +3398,7 @@ Oh but you should , Mrs. Wentz said , almost dreaming .
 No more and no less than you do about what happened to Africans .
 For God 's sake , Timothy , stop baring your teeth and sink them into something .
 Rebecca 's been to the Sputnik and she says it 's terrific now .
-No , no – well , Ras took her ...
+No , no - well , Ras took her ...
 Rebecca Edwards came in from the veranda , smiling good-naturedly , inquiringly , under the remarks shied at her .
 Dando refused and Vivien had to go home to the children , and Rebecca Edwards protested that hers were alone too .
 There began one of those chases about in the night that , Bray saw , Neil Bayley fiercely enjoyed .
@@ -3408,7 +3408,7 @@ He exchanged dark looks with his wife , Petunia .
 Dudley , who was so large his bottom drooped over either side of the kitchen chair , grinned and turned to Harry .
 I meant " please " ! said Harry quickly .
 Harry stared from his purple-faced uncle to his pale aunt , who was trying to heave Dudley to his feet .
-Harry Potter was a wizard – a wizard fresh from his first year at Hogwarts School of Witchcraft and Wizardry .
+Harry Potter was a wizard - a wizard fresh from his first year at Hogwarts School of Witchcraft and Wizardry .
 And if the Dursleys were unhappy to have him back for the holidays , it was nothing to how Harry felt .
 He missed Hogwarts so much it was like having a constant stomach ache .
 It was this scar that made Harry so particularly unusual , even for a wizard .
@@ -3425,7 +3425,7 @@ MUUUUUUM ! howled Dudley , tripping over his feet as he dashed back towards the 
 The moment he had finished , Aunt Petunia whisked away his plate .
 As they stared at each other , Harry heard Dudley 's voice from the hall .
 Just Dobby .
-Er – I do n't want to be rude or anything , but – this is n't a great time for me to have a house-elf in my bedroom .
+Er - I do n't want to be rude or anything , but - this is n't a great time for me to have a house-elf in my bedroom .
 Aunt Petunias high , false laugh sounded from the living room .
 You ca n't have met many decent wizards , said Harry , trying to cheer him up .
 Oh no , sir , no Dobby will have to punish himself most grievously for coming to see you , sir .
@@ -3437,22 +3437,22 @@ But he stopped quickly , because thinking about Hermione was painful .
 Voldemort ? said Harry .
 Thinking about Ron was painful , too .
 Harry nodded and Dobby 's eyes suddenly shone with tears .
-But I 've got to go back – term starts on September the first .
+But I 've got to go back - term starts on September the first .
 Harry Potter must not put himself in peril .
 What terrible things ? said Harry at once .
 Slowly , Dobby shook his head .
 But Dobby 's eyes were wide and he seemed to be trying to give Harry a hint .
 Dobby has heard Dumbledore 's powers rival those of He Who Must Not Be Named at the height of his strength .
-What – the – devil – are – you – doing ? said Uncle Vernon through gritted teeth , his face horribly close to Harry 's .
+What - the - devil - are - you - doing ? said Uncle Vernon through gritted teeth , his face horribly close to Harry 's .
 Shaking , Harry let Dobby out of the wardrobe .
 Friends who do n't even write to Harry Potter ? said Dobby slyly .
 Dobby blinked anxiously up at Harry .
 He made a grab for the letters , but Dobby jumped out of reach .
-Before Harry could move , Dobby had darted to the bedroom door , pulled it open – and sprinted down the stairs .
+Before Harry could move , Dobby had darted to the bedroom door , pulled it open - and sprinted down the stairs .
 Mouth dry , stomach lurching , Harry sprang after him , trying not to make a sound .
 With a crack like a whip , Dobby vanished .
 Aunt Petunia dug some ice-cream out of the freezer and Harry , still shaking , started scrubbing the kitchen clean .
-Uncle Vernon might still have been able to make his deal – if it had n't been for the owl .
+Uncle Vernon might still have been able to make his deal - if it had n't been for the owl .
 Mrs Mason screamed like a banshee and ran from the house , shouting about lunatics .
 He was bearing down on Harry like a great bulldog , all his teeth bared .
 And laughing like a maniac , he dragged Harry back upstairs .
@@ -3479,7 +3479,7 @@ Harry heard Uncle Vernon cough .
 At last , panting , they reached the landing , then carried the trunk through Harry 's room to the open window .
 Uncle Vernon coughed again .
 Harry and George threw their shoulders against the trunk and it slid out of the window into the back seat of the car .
-He was scrambling back onto the chest of drawers when Uncle Vernon hammered on the unlocked door – and it crashed open .
+He was scrambling back onto the chest of drawers when Uncle Vernon hammered on the unlocked door - and it crashed open .
 Petunia ! roared Uncle Vernon .
 He wound down the window , the night air whipping his hair , and looked back at the shrinking rooftops of Privet Drive .
 Uncle Vernon , Aunt Petunia , and Dudley were all hanging , dumbstruck , out of Harry 's window .
@@ -3530,7 +3530,7 @@ The moment she saw Harry , Ginny accidentally knocked her porridge bowl to the f
 Ginny seemed very prone to knocking things over whenever Harry entered a room .
 Pretending he had n't noticed this , Harry sat down and took the toast Mrs Weasley offered him .
 Harry 's told him to catch the Hogwarts Express as usual from King 's Cross station on September the first .
-The new Defense Against the Dark Arts teacher must be a fan – bet it 's a witch .
+The new Defense Against the Dark Arts teacher must be a fan - bet it 's a witch .
 At this point , Fred caught his mother 's eye and quickly busied himself with the marmalade .
 Oh , are you starting at Hogwarts this year ? Harry asked Ginny .
 Fortunately no one saw this except Harry , because just then Ron 's elder brother Percy walked in .
