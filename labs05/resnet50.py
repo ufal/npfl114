@@ -35,7 +35,7 @@ class Network:
 
             # JPG loading
             self.jpeg_file = tf.placeholder(tf.string, [])
-            self.jpeg_data = tf.image.resize_image_with_crop_or_pad(tf.image.decode_jpeg(tf.read_file(self.jpeg_file)), self.HEIGHT, self.WIDTH)
+            self.jpeg_data = tf.image.resize_image_with_crop_or_pad(tf.image.decode_jpeg(tf.read_file(self.jpeg_file), channels=3), self.HEIGHT, self.WIDTH)
 
     def load_jpeg(self, jpeg_file):
         return self.session.run(self.jpeg_data, {self.jpeg_file: jpeg_file})
