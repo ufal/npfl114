@@ -12,6 +12,8 @@ class Network:
     DATA = 144
     TEST = 40
     TRAIN = DATA - TEST
+    MAX_HEIGHT = DATA - 1
+
     def __init__(self, rnn_cell, rnn_cell_dim, logdir, expname, threads=1, seed=42):
         # Create an empty graph and a session
         graph = tf.Graph()
@@ -57,9 +59,11 @@ class Network:
         min_value = min(np.min(gold), np.min(predictions))
         max_value = max(np.max(gold), np.max(predictions))
         def scale(value):
-            return int(self.DATA - self.DATA * (value - min_value) / (max_value - min_value + 1) - 1)
+            if min_value==max_value:
+                return 0
+            return int(self.MAX_HEIGHT - self.MAX_HEIGHT * (value - min_value) / (max_value - min_value))
 
-        image_data = np.full([self.DATA, self.DATA, 3], 255, dtype=np.uint8)
+        image_data = np.full([self.MAX_HEIGHT + 1, self.DATA, 3], 255, dtype=np.uint8)
         for i in range(self.DATA):
             image_data[scale(gold[i]), i] = [0, 0, 255] if i < self.TRAIN else [0, 255, 0]
             image_data[scale(predictions[i]), i] = [255, 0, 0]
