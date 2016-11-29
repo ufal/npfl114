@@ -22,7 +22,7 @@ class WordEmbeddings:
                 parts = line.split(" ")
                 self._words_map[parts[0]] = len(self._words)
                 self._words.append(parts[0])
-                self._we[i] = parts[1:]
+                self._we[i] = map(float, parts[1:])
 
     @property
     def words(self):
