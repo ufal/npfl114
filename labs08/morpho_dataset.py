@@ -24,7 +24,7 @@ class MorphoDataset:
             self._data[f]['words'] = []
 
         # Load the sentences
-        with open(filename, "rw") as file:
+        with open(filename, "r") as file:
             in_sentence = False
             for line in file:
                 line = line.rstrip("\r\n")
