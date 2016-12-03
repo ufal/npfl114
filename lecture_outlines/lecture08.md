@@ -1,4 +1,4 @@
-# Nov 21
+# Nov 28
 
 - Hierarchical softmax and Negative sampling [[Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, Jeffrey Dean: Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546)]
 - Character-level embeddings using Recurrent neural networks [C2W model from [Wang Ling, Tiago Luís, Luís Marujo, Ramón Fernandez Astudillo, Silvio Amir, Chris Dyer, Alan W. Black, Isabel Trancoso: Finding Function in Form: Compositional Character Models for Open Vocabulary Word Representation](http://arxiv.org/abs/1508.02096)]
