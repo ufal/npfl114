@@ -93,8 +93,8 @@ if __name__ == "__main__":
     # Load the data
     print("Loading the data.", file=sys.stderr)
     data_train = morpho_dataset.MorphoDataset(args.data_train, add_bow_eow=True)
-    data_dev = morpho_dataset.MorphoDataset(args.data_dev, train=data_train)
-    data_test = morpho_dataset.MorphoDataset(args.data_test, train=data_train)
+    data_dev = morpho_dataset.MorphoDataset(args.data_dev, add_bow_eow=True, train=data_train)
+    data_test = morpho_dataset.MorphoDataset(args.data_test, add_bow_eow=True, train=data_train)
 
     # Construct the network
     print("Constructing the network.", file=sys.stderr)
