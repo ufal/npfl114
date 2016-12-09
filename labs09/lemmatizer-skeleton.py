@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
     # Construct the network
     print("Constructing the network.", file=sys.stderr)
-    expname = "tagger-{}{}-bs{}-epochs{}".format(args.rnn_cell, args.rnn_cell_dim, args.batch_size, args.epochs)
+    expname = "lemmatizer-{}{}-bs{}-epochs{}".format(args.rnn_cell, args.rnn_cell_dim, args.batch_size, args.epochs)
     network = Network(rnn_cell=args.rnn_cell, rnn_cell_dim=args.rnn_cell_dim,
                       num_chars=len(data_train.alphabet), bow_char=bow_char, eow_char=eow_char,
                       logdir=args.logdir, expname=expname, threads=args.threads)
