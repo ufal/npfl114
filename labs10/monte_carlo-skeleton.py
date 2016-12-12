@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     parser.add_argument("--epsilon", default=0.5, type=float, help="Epsilon.")
     parser.add_argument("--epsilon_final", default=0.01, type=float, help="Epsilon decay rate.")
-    parser.add_argument("--gamma", default=0.99, type=float, help="Discounting factor.")
+    parser.add_argument("--gamma", default=1.0, type=float, help="Discounting factor.")
     args = parser.parse_args()
 
     # Create the environment
