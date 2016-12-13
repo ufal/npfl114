@@ -7,11 +7,12 @@ import tensorflow.contrib.layers as tf_layers
 import contrib_seq2seq
 
 # Simple decoder for training
-def decoder_fn_train(encoder_state, output_fn, name=None):
-    def decoder_fn(time, cell_state, cell_input, cell_output, context_state):
+def decoder_fn_train(encoder_state, output_fn, input_fn, name=None):
+    def decoder_fn(time, cell_state, next_id, cell_output, context_state):
         cell_output = output_fn(cell_output)
         if cell_state is None:  # first call, return encoder_state
             cell_state = encoder_state
+        cell_input = input_fn(tf.squeeze(next_id, [1]), cell_state)
         return (None, cell_state, cell_input, cell_output, context_state)
 
     return decoder_fn
@@ -63,12 +64,11 @@ EPOCHS = 1000
 cell = tf.nn.rnn_cell.GRUCell(GRU_DIM)
 
 with tf.variable_scope("rnn_decoding"):
-    input_embeddings = tf.nn.embedding_lookup(embeddings, input)
     input_lens = tf.tile(tf.gather(tf.shape(input), [1]) - 1, tf.gather(tf.shape(input), [0]))
     training_logits, states = \
         contrib_seq2seq.dynamic_rnn_decoder(cell,
-                                            decoder_fn_train(cell.zero_state(tf.shape(input)[0], tf.float32), output_fn),
-                                            inputs=input_embeddings,
+                                            decoder_fn_train(cell.zero_state(tf.shape(input)[0], tf.float32), output_fn, input_fn),
+                                            inputs=tf.expand_dims(input, -1),
                                             sequence_length=input_lens)
 
 with tf.variable_scope("rnn_decoding", reuse=True):
