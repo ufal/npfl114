@@ -23,26 +23,24 @@ class PolicyGradientWithBaseline:
             # self.probabilities = ... [probabilities of all actions]
 
             self.chosen_actions = tf.placeholder(tf.int32, [None])
-            self.values = tf.placeholder(tf.float32, [None])
             self.returns = tf.placeholder(tf.float32, [None])
 
             # TODO: compute loss of both the policy and value
-            # loss_policy = ... [cross_entropy between logits and chosen_actions, multiplying it by (self.returns - self.values)]
-            # loss_value = ... [MSE of self.value and self.returns]
+            # loss_policy = ... [cross_entropy between logits and chosen_actions, multiplying it by (self.returns - self.value)]
+            # loss_value = ... [MSE of self.return and self.value]
             # self.training = ... [use loss_policy + loss_value, and use learning_rate]
 
             # Initialize variables
             self.session.run(tf.initialize_all_variables())
 
     def predict(self, observations):
-        return self.session.run([self.probabilities, self.value],
+        return self.session.run(self.probabilities,
                                 {self.observations: observations})
 
-    def train(self, observations, chosen_actions, values, returns):
+    def train(self, observations, chosen_actions, returns):
         self.session.run(self.training,
                          {self.observations: observations,
                           self.chosen_actions: chosen_actions,
-                          self.values: values,
                           self.returns: returns})
 
 if __name__ == "__main__":
@@ -86,7 +84,7 @@ if __name__ == "__main__":
     episode_returns, episode_lengths = [], []
     for batch_start in range(0, args.episodes, args.batch_size):
         # Collect data for training
-        observations, actions, values, rewards = [], [], [], []
+        observations, actions, rewards = [], [], []
         for episode in range(batch_start, batch_start + args.batch_size):
             # Perform episode
             observation = env.reset()
@@ -102,7 +100,6 @@ if __name__ == "__main__":
 
                 observations.append(observation)
                 actions.append(action)
-                values.append(value)
 
                 # perform step in the environment
                 observation, reward, done, _ = env.step(action)
@@ -131,4 +128,4 @@ if __name__ == "__main__":
                 print("Episode {}, current evaluation reward {}, mean 100-episode reward {}, mean 100-episode length {}.".format(
                     episode + 1, total_reward, np.mean(episode_returns[-100:]), np.mean(episode_lengths[-100:])))
 
-        pg.train(observations, actions, values, rewards)
+        pg.train(observations, actions, rewards)
