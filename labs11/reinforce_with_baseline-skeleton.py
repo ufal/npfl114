@@ -26,7 +26,8 @@ class PolicyGradientWithBaseline:
             self.returns = tf.placeholder(tf.float32, [None])
 
             # TODO: compute loss of both the policy and value
-            # loss_policy = ... [cross_entropy between logits and chosen_actions, multiplying it by (self.returns - self.value)]
+            # loss_policy = ... [cross_entropy between logits and chosen_actions,
+            #                    multiplied by (self.returns - tf.stop_gradient(self.value))]
             # loss_value = ... [MSE of self.return and self.value]
             # self.training = ... [use loss_policy + loss_value, and use learning_rate]
 
