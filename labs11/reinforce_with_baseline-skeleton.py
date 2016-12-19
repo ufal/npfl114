@@ -17,6 +17,7 @@ class PolicyGradientWithBaseline:
 
         # Construct the graph
         with self.session.graph.as_default():
+            self.observations = tf.placeholder(tf.float32, [None, observations])
             # TODO: define the following, using policy_and_value_network
             # logits = ...
             # self.value = ...
@@ -94,9 +95,8 @@ if __name__ == "__main__":
                 if args.render_each and episode > 0 and episode % args.render_each == 0:
                     env.render()
 
-                # TODO: compute probabilities and value function using pg.predict, and choose action according to the probabilities
+                # TODO: compute probabilities using pg.predict, and choose action according to the probabilities
                 # probabilities = ...
-                # value = ...
                 # action = ...
 
                 observations.append(observation)
@@ -119,7 +119,7 @@ if __name__ == "__main__":
                 # Evaluate
                 observation, total_reward = env.reset(), 0
                 for i in range(args.max_steps):
-                    [probabilities], _ = pg.predict([observation])
+                    [probabilities] = pg.predict([observation])
                     action = np.random.choice(np.arange(len(probabilities)), p=probabilities)
                     observation, reward, done, _ = env.step(action)
                     total_reward += reward
