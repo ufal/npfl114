@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
     # Create policy network
     def policy_network(observations):
-        hidden = tf_layers.fully_connected(observations, args.hidden_layer)
+        hidden = tf_layers.fully_connected(observations, args.hidden_layer, activation_fn=tf.nn.relu)
         logits = tf_layers.linear(hidden, env.actions)
         return logits
     pg = PolicyGradient(observations=env.observations, policy_network=policy_network, learning_rate=args.alpha, threads=args.threads)

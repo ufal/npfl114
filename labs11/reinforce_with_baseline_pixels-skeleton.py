@@ -76,7 +76,7 @@ if __name__ == "__main__":
         conv = tf_layers.convolution2d(observations, 16, 8, 4)
         conv = tf_layers.convolution2d(conv, 32, 4, 2)
         conv = tf_layers.flatten(conv)
-        hidden_layer = tf_layers.fully_connected(conv, 128)
+        hidden_layer = tf_layers.fully_connected(conv, 128, activation_fn=tf.nn.relu)
         logits = tf_layers.linear(hidden_layer, env.actions)
         value = tf_layers.linear(hidden_layer, 1)
         # TODO: If you do not want to use baseline, uncomment the next line

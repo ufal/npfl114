@@ -106,8 +106,8 @@ if __name__ == "__main__":
     # Create policy and value network
     def policy_and_value_network(observations):
         # TODO: Example network, you may choose another
-        hidden_layer = tf_layers.fully_connected(observations, 200)
-        hidden_layer = tf_layers.fully_connected(hidden_layer, 100)
+        hidden_layer = tf_layers.fully_connected(observations, 200, activation_fn=tf.nn.relu)
+        hidden_layer = tf_layers.fully_connected(hidden_layer, 100, activation_fn=tf.nn.relu)
         logits = tf_layers.linear(hidden_layer, env.actions)
         value = tf_layers.linear(hidden_layer, 1)
         return logits, value
