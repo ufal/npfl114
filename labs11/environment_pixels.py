@@ -27,7 +27,7 @@ class EnvironmentPixels:
             self._image[:, :, self._images - 1] = 0
             self._fill_polygon([(70, cart-10), (80, cart-10), (80, cart+10), (70, cart+10)], self._image[:, :, self._images - 1], 0.5)
             self._fill_polygon([(pole_y, pole_x-2), (70, cart-2), (70, cart+2), (pole_y, pole_x+2)], self._image[:, :, self._images - 1], 1)
-            return self._image
+            return np.copy(self._image)
 
     @property
     def observations(self):
