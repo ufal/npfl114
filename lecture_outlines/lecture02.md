@@ -2,12 +2,13 @@
 
 - Capacity, overfitting and underfitting [Section 5.2 of DLB, excluding Section 5.2.1]
 - Hyperparameters and validation sets [Section 5.3 of DLB]
-- Neural networks as graphs [Chapter 6 before Section 6.1 of DLB]
-- Output activation functions [Section 6.2 of DLB, excluding Section 6.2.1.2 and 6.2.2.4]
-- Hidden activation functions [Section 6.3 of DLB, excluding Section 6.3.3]
-- Basic network architectures [Section 6.4 of DLB]
-- Gradient Descent and Stochastic Gradient Descent [Sections 4.3 and 5.9 of DLB]
-- Backpropagation algorithm [Section 6.5 to 6.5.3 of DLB, especially Algorithms 6.2 and 6.3; *note that Algorithms 6.5 and 6.6 are used in practice*]
+- Neural network basics (see [NAIL002 lecture](https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=NAIL002) for detailed treatment of this topic)
+  - Neural networks as graphs [Chapter 6 before Section 6.1 of DLB]
+  - Output activation functions [Section 6.2 of DLB, excluding Section 6.2.1.2 and 6.2.2.4]
+  - Hidden activation functions [Section 6.3 of DLB, excluding Section 6.3.3]
+  - Basic network architectures [Section 6.4 of DLB]
+  - Gradient Descent and Stochastic Gradient Descent [Sections 4.3 and 5.9 of DLB]
+  - Backpropagation algorithm [Section 6.5 to 6.5.3 of DLB, especially Algorithms 6.2 and 6.3; *note that Algorithms 6.5 and 6.6 are used in practice*]
 - *Common Datasets*
 
 | *Name* | *Description* | *Instances* |
