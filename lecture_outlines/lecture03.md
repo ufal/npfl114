@@ -1,7 +1,7 @@
 # Oct 24
 
 - Softmax with NLL (negative log likelyhood) as a loss functioin [Section 6.2.2.3 of DLB, notably equation (6.30); you should also be able to compute derivative of softmax + NLL with respect to the inputs of the softmax]
-- Gradient optimization algorithms (see [NAIL002 lecture](https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=NAIL002) for detailed treatment of this topic)
+- Gradient optimization algorithms (this topic is treated in detail withing the [lecture NAIL002](https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=NAIL002))
   - SGD algorithm [Section 8.3.1 and Algorithm 8.1 of DLB]
   - Learning rate decay [`tf.train.exponential_decay`]
   - SGD with Momentum algorithm [Section 8.3.2 and Algorithm 8.2 of DLB]

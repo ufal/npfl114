@@ -2,7 +2,7 @@
 
 - Capacity, overfitting and underfitting [Section 5.2 of DLB, excluding Section 5.2.1]
 - Hyperparameters and validation sets [Section 5.3 of DLB]
-- Neural network basics (see [NAIL002 lecture](https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=NAIL002) for detailed treatment of this topic)
+- Neural network basics (this topic is treated in detail withing the [lecture NAIL002](https://is.cuni.cz/studium/eng/predmety/index.php?do=predmet&kod=NAIL002))
   - Neural networks as graphs [Chapter 6 before Section 6.1 of DLB]
   - Output activation functions [Section 6.2 of DLB, excluding Section 6.2.1.2 and 6.2.2.4]
   - Hidden activation functions [Section 6.3 of DLB, excluding Section 6.3.3]
