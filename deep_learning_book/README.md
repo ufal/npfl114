@@ -2,7 +2,7 @@
 
 The Deep Learning book by Ian Goodfellow and Yoshua Bengio and Aaron Courville
 is freely available on-line at http://www.deeplearningbook.org.
-It will be also available from MIT Press via Amazon from 9 Dec 2016.
+It is als available from MIT Press.
 
 ## PDF Version
 
