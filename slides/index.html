@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>NPFL114 Slides</title>
+    <script src="res/remark/remark-latest.min.js" type="text/javascript"></script>
+    <script src="res/katex/katex.min.js" type="text/javascript"></script>
+    <script src="res/katex/contrib/auto-render.min.js" type="text/javascript"></script>
+    <script src="res/pdfjs/pdf.min.js" type="text/javascript"></script>
+    <script src="res/graphviz/viz.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="res/katex/katex.min.css" />
+
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-slide-content { padding-top: 10px; padding-bottom: 20px; padding-left: 50px; padding-right: 50px; }
+      .remark-slide-content { background-position: top center; background-image: url('res/background.jpg'); background-repeat: no-repeat; }
+      .remark-slide-content.full, .remark-slide-content.full.middle, .remark-slide-content.full.bottom { padding: 0; }
+
+      .remark-slide-content>h1:first-child { color: #ef752a; text-align: left; width: 723px;
+        min-height: 63px; padding-right: 90px; background-position: right top;
+        background-image: url('res/ufal.svg'); background-repeat: no-repeat; background-size: auto 63px; }
+      .remark-slide-content.middle, .remark-slide-content.bottom { padding-top: 75px; }
+      .remark-slide-content.middle>h1:first-child, .remark-slide-content.bottom>h1:first-child, .remark-slide-content.full>h1:first-child {
+        position: absolute; top: 10px; left: 50px; }
+
+      .remark-slide-content.title { text-align: center; vertical-align: middle }
+      .remark-slide-content.title h1 { color: #ef752a; padding-top: 20px; padding-bottom: 20px; }
+      .remark-slide-content.title>.author { padding-top: 30px; }
+
+      .remark-slide-number { color: #ef752a; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .algorithm { padding-left: .5em; padding-right: .5em; background-color: #2b2b2b; color: #bababa; }
+
+      @media print {
+        .remark-slide-scaler {
+          transform: scale(1) !important;
+          top: 0 !important;
+          left: 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var slides = {};
+      slides["lecture"] = window.location.search.substring(1);
+      if (!slides.lecture) {
+        function querySlides(i, practicals, body) {
+          var lecture = (i < 10 ? ('0' + i) : i) + (practicals ? 'p' : '');
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', lecture + '/' + lecture + '.md');
+          xhr.onload = function() {
+            if (xhr.status === 200 || practicals)
+              querySlides(i + !!practicals, !practicals, body + (xhr.status === 200 ? '<li><a href="?' + lecture + '">Lecture ' + lecture + '</a></li>' : ''));
+            else
+              document.body.innerHTML = body + '</ul>\n';
+          };
+          xhr.send();
+        }
+        querySlides(1, false, '<h1>NPFL114 Slides</h1>\n<ul>\n');
+      } else {
+        slides["imgs"] = [];
+        remark.macros.image = function (width, align, css) {
+          var url = slides.lecture + '/' + this;
+          var img = '<img id="img-' + slides.imgs.length + '" src="' + url + '" style="' +
+            (width ? 'width:' + width + ';' : '') + (css || '') + '"/>';
+          if (align) img = '<div style="text-align: ' + align + '">' + img + '</div>';
+          slides.imgs.push(url);
+          return img;
+        };
+
+        slides["pdfs"] = [];
+        remark.macros.pdf = function (width, align, css) {
+          var url = slides.lecture + '/' + this;
+          var pdf = '<span id="pdf-' + slides.pdfs.length + '" style="display:inline-block;' +
+            (width ? 'width:' + width + ';' : '') + (css || '') + '"></span>';
+          if (align) pdf = '<div style="text-align: ' + align + '">' + pdf + '</div>';
+          slides.pdfs.push(url);
+          return pdf;
+        };
+
+        slides["dots"] = [];
+        remark.macros.dot = function (width, align, css) {
+          var dot = this.replace("{", "{bgcolor=transparent;");
+          var img = '<img id="dot-' + slides.dots.length + '" style="' +
+            (width ? 'width:' + width + ';' : '') + (css || '') + '"/>';
+          if (align) img = '<div style="text-align: ' + align + '">' + img + '</div>';
+          slides.dots.push(dot);
+          return img;
+        };
+
+        var slideshow = remark.create({
+          sourceUrl: slides.lecture + '/' + slides.lecture + '.md',
+          slideNumberFormat: 'NPFL114, Lecture ' + slides.lecture + ', %current%/%total%',
+          countIncrementalSlides: false,
+          highlightLanguage: 'python',
+          highlightStyle: 'darcula'},
+          function() {
+            document.title = 'NPFL114, Lecture ' + slides.lecture;
+
+            // Math
+            renderMathInElement(document.body, {delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+            ]});
+
+            // Images
+            for (var i in slides.imgs) {
+              (function (i) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', slides.imgs[i] + '.ref');
+                xhr.onload = function() { if (xhr.status === 200) { document.getElementById('img-' + i).title = 'Reference: ' + xhr.responseText }};
+                xhr.send();
+              })(i);
+            }
+
+            // PDFs
+            for (var i in slides.pdfs) {
+              (function(i) {
+                PDFJS.getDocument(slides.pdfs[i]).promise.then(function(pdf) {
+                  pdf.getPage(1).then(function(page) {
+                    var viewport = page.getViewport(1.0);
+                    page.getOperatorList().then(function (opList) {
+                      var svgGfx = new PDFJS.SVGGraphics(page.commonObjs, page.objs);
+                      return svgGfx.getSVG(opList, viewport).then(function (svg) {
+                        svg.width.baseVal.valueAsString = '100%';
+                        svg.height.baseVal.valueAsString = '100%';
+                        document.getElementById('pdf-' + i).appendChild(svg);
+                      });
+                    });
+                  });
+                });
+              })(i);
+
+              (function(i) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', slides.pdfs[i] + '.ref');
+                xhr.onload = function() { if (xhr.status === 200) { document.getElementById('pdf-' + i).title = 'Reference: ' + xhr.responseText }};
+                xhr.send();
+              })(i);
+            }
+
+            // GraphViz
+            for (var i in slides.dots) {
+              var svg = Viz(slides.dots[i], {format: 'svg', engine: 'dot'});
+              document.getElementById('dot-' + i).src = 'data:image/svg+xml;base64,' + btoa(svg);
+            }
+          });
+      }
+    </script>
+  </body>
+</html>
