@@ -1,6 +1,6 @@
 The lecture outlines, including references to study materials.
 The main study material is the
-[Deep Learning Book by Ian Goodfellow, Yoshua Bengio and Aaron Courville](https://github.com/ufal/npfl114/tree/master/deep_learning_book),
+[Deep Learning Book by Ian Goodfellow, Yoshua Bengio and Aaron Courville](https://github.com/ufal/npfl114/tree/post-1617/deep_learning_book),
 (referred to as DLB).
 
 References to study materials cover **all theory required** at the exam,
