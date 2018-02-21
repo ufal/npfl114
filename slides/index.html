@@ -20,26 +20,28 @@
       @font-face { font-family:SourceSansPro; font-weight:bold; font-style:italic; src:url(res/fonts/SourceSansPro/SourceSansPro-BoldItalic.ttf) }
 
       body { font-family: SourceSansPro; }
-      h1, h2, h3, h4 { font-family: Scada; font-weight: normal }
+      h1, h2, h3, h4 { font-family: Scada; font-weight: normal; margin-top: 0; margin-bottom: 0 }
+      p { margin-top: 0; margin-bottom: 15px } li p { margin-top: 15px }
       h1 { font-size: 40px !important }
       h2 { font-size: 35px !important }
       h3 { font-size: 30px !important }
       h4 { font-size: 25px !important }
-      .title h1 { font-size: 50px !important }
-      .remark-slide-content { padding-top: 10px; padding-bottom: 20px; padding-left: 50px; padding-right: 50px; }
+      .remark-slide-content { font-size: 25px !important; padding-top: 25px; padding-bottom: 20px; padding-left: 50px; padding-right: 50px; }
       .remark-slide-content { background-position: top center; background-image: url('res/background.jpg'); background-repeat: no-repeat; }
-      .remark-slide-content.full, .remark-slide-content.full.middle, .remark-slide-content.full.bottom { padding: 0; }
+      .remark-slide-content.full, .remark-slide-content.full.middle, .remark-slide-content.full.bottom { padding-left: 0; padding-right: 0 }
+      .katex { font-size: 1.1em; }
 
       .remark-slide-content>h1:first-child { color: #ef752a; text-align: left; width: 723px;
         min-height: 55px; padding-right: 90px; background-position: right top;
         background-image: url('res/ufal.svg'); background-repeat: no-repeat; background-size: auto 55px; }
-      .remark-slide-content.middle, .remark-slide-content.middle.full,
-       .remark-slide-content.bottom, .remark-slide-content.bottom.full { padding-top: 65px; }
-      .remark-slide-content.middle>h1:first-child, .remark-slide-content.bottom>h1:first-child, .remark-slide-content.full>h1:first-child {
-        position: absolute; top: 10px; left: 50px; }
+      .remark-slide-content.middle, .remark-slide-content.bottom { padding-top: 80px; padding-bottom: 35px; }
+      .remark-slide-content.middle>h1:first-child, .remark-slide-content.bottom>h1:first-child,
+      .remark-slide-content.full.middle>h1:first-child, .remark-slide-content.full.bottom>h1:first-child {
+        position: absolute; top: 25px; left: 50px; padding-left: 0px }
+      .remark-slide-content.full>h1:first-child { padding-left: 50px }
 
       .remark-slide-content.title { text-align: center; vertical-align: middle }
-      .remark-slide-content.title h1 { color: #ef752a; padding-top: 20px; padding-bottom: 20px; }
+      .remark-slide-content.title h1 { color: #ef752a; font-size: 50px !important; margin-top: 50px; margin-bottom: 50px }
       .remark-slide-content.title>.author { padding-top: 30px; font-family: Scada; font-size: 25px }
 
       .remark-slide-number { color: #ef752a; font-family: Scada; }
@@ -119,7 +121,7 @@
 
         var slideshow = remark.create({
           sourceUrl: slides.lecture + '/' + slides.lecture + '.md',
-          slideNumberFormat: 'NPFL114, Lecture ' + slides.lecture + ', %current%/%total%',
+          slideNumberFormat: 'NPFL114, Lecture ' + slides.lecture + ', <span style="display: inline-block; width:25px; text-align: right">%current%</span>/%total%',
           countIncrementalSlides: false,
           highlightLanguage: 'python',
           highlightStyle: 'darcula'},
