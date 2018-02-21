@@ -7,6 +7,7 @@
     <script src="res/katex/katex.min.js" type="text/javascript"></script>
     <script src="res/katex/contrib/auto-render.min.js" type="text/javascript"></script>
     <script src="res/pdfjs/pdf.min.js" type="text/javascript"></script>
+    <script src="res/plotly/plotly-cartesian.min.js" type="text/javascript"></script>
     <script src="res/graphviz/viz.js" type="text/javascript"></script>
     <link rel="stylesheet" href="res/katex/katex.min.css" />
 
@@ -93,6 +94,19 @@
           return pdf;
         };
 
+        slides["plotlys"] = [];
+        remark.macros.plotly = function (width, height, align, css) {
+          // We need absolute sizes because otherwise we cannot reliably set font size
+          if (width.endsWith("%")) width = parseInt(width.slice(0, -1)) * 808 / 100 + "px";
+          if (width.endsWith("%full")) width = parseInt(width.slice(0, -5)) * 908 / 100 + "px";
+          if (height.endsWith("%")) height = parseInt(height.slice(0, -1)) * 560 / 100 + "px";
+          var plotly = '<span id="plotly-' + slides.plotlys.length + '" style="display:inline-block;' +
+            'width:' + width + ';' + 'height:' + height + ';' + (css || '') + '"></span>';
+          if (align) plotly = '<div style="text-align: ' + align + '">' + plotly + '</div>';
+          slides.plotlys.push(JSON.parse(this));
+          return plotly;
+        };
+
         slides["dots"] = [];
         remark.macros.dot = function (width, align, css) {
           var dot = this.replace("{", "{bgcolor=transparent;");
@@ -151,6 +165,35 @@
                 xhr.open('GET', slides.pdfs[i] + '.ref');
                 xhr.onload = function() { if (xhr.status === 200) { document.getElementById('pdf-' + i).title = 'Reference: ' + xhr.responseText }};
                 xhr.send();
+              })(i);
+            }
+
+            // Plotly
+            for (var i in slides.plotlys) {
+              (function(i) {
+                if (!slides.plotlys[i].layout) slides.plotlys[i].layout = {};
+                slides.plotlys[i].layout["font"] = {family:"SourceSansPro", size:20, color:"#000"};
+                slides.plotlys[i].layout["margin"] = {l:35,r:35,t:35,b:35};
+                slides.plotlys[i].layout["paper_bgcolor"] = "#0000";
+                var plot = function() { Plotly.newPlot('plotly-' + i, slides.plotlys[i].data, slides.plotlys[i].layout); };
+                for (var j in slides.plotlys[i].data) {
+                  if ("csv" in slides.plotlys[i].data[j]) {
+                    var plot = function(j, plot) { return function() {
+                      Plotly.d3.csv(slides.lecture + '/' + slides.plotlys[i].data[j].csv.file, function(err, rows) {
+                        if ("z" in slides.plotlys[i].data[j].csv) {
+                          slides.plotlys[i].data[j].x = rows.map(function(row) { return row[slides.plotlys[i].data[j].csv.z]});
+                          slides.plotlys[i].data[j].y = []; for (var y in rows[0]) if (y != slides.plotlys[i].data[j].csv.z) slides.plotlys[i].data[j].y.push(y);
+                          slides.plotlys[i].data[j].z = slides.plotlys[i].data[j].y.map(function(y) { return rows.map(function(row) { return row[y]})});
+                        } else {
+                          slides.plotlys[i].data[j].x = rows.map(function(row) { return row[slides.plotlys[i].data[j].csv.x]; });
+                          slides.plotlys[i].data[j].y = rows.map(function(row) { return row[slides.plotlys[i].data[j].csv.y]; });
+                        }
+                        plot();
+                      });
+                    }}(j, plot);
+                  }
+                }
+                plot();
               })(i);
             }
 
