@@ -19,7 +19,7 @@ if __name__ == "__main__":
             # TODO: process the line
 
     # TODO: Compute and print entropy H(data distribution)
-    print("{:.2}".format(entropy))
+    print("{:.2f}".format(entropy))
 
     # TODO: Compute and print cross-entropy H(data distribution, model distribution)
     # and KL-divergence D_KL(data distribution, model_distribution)
