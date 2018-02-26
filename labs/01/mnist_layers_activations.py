@@ -92,6 +92,9 @@ if __name__ == "__main__":
     # Note that because of current ReCodEx limitations, the MNIST dataset must
     # be read from the directory of the script -- that is why the "mnist_data/"
     # from `mnist_example.py` has been changed to current directory ".".
+    #
+    # Additionally, loading of the dataset prints to stdout -- this loading message
+    # is part of expected output when evaluating on ReCodEx.
     mnist = mnist.input_data.read_data_sets(".", reshape=False, seed=42)
 
     # Construct the network
