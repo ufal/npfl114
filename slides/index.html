@@ -119,6 +119,9 @@
           return img;
         };
 
+        slides["wip"] = false;
+        remark.macros.wip = function () { slides.wip = true; return "" }
+
         var slideshow = remark.create({
           sourceUrl: slides.lecture + '/' + slides.lecture + '.md',
           slideNumberFormat: 'NPFL114, Lecture ' + slides.lecture + ', <span style="display: inline-block; width:25px; text-align: right">%current%</span>/%total%',
@@ -127,6 +130,13 @@
           highlightStyle: 'darcula'},
           function() {
             document.title = 'NPFL114, Lecture ' + slides.lecture;
+
+            // Mark WIP
+            if (slides.wip) {
+              numbers = document.getElementsByClassName("remark-slide-number");
+              for (var i = 0; i < numbers.length; i++)
+                numbers[i].innerHTML = '<span style="color: red">Please note these slides are still under construction!</span> ' + numbers[i].innerHTML;
+            }
 
             // Math
             renderMathInElement(document.body, {delimiters: [
