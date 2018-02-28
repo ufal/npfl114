@@ -111,4 +111,4 @@ if __name__ == "__main__":
     network.evaluate("test", mnist.test.images, mnist.test.labels)
 
     # TODO: Compute and print accuracy on the test set. Print accuracy as
-    # percentage rounded on two decimal places, i.e., 91.23
+    # percentage rounded on two decimal places, e.g., 91.23
