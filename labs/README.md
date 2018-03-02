@@ -2,7 +2,7 @@
 
 The tasks are evaluated automatically using the [ReCodEx Code
 Examiner](https://recodex.mff.cuni.cz/). The evaluation is
-performed using Python 3.4 and TensorFlow 1.5.0.
+performed using Python 3.4, TensorFlow 1.5.0 and NumPy 1.14.0.
 
 You can install TensorFlow 1.5.0 either to user packages using
 `pip3 install --user tensorflow==1.5.0`, or create a virtual
