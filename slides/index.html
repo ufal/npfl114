@@ -78,22 +78,24 @@
         querySlides(1, false, '<h1>NPFL114 Slides</h1>\n<ul>\n');
       } else {
         slides["imgs"] = [];
+        slides["imgsmap"] = {};
         remark.macros.image = function (width, align, css) {
           var url = slides.lecture + '/' + this;
-          var img = '<img id="img-' + slides.imgs.length + '" src="' + url + '" style="' +
+          if (!(url in slides.imgsmap)) { slides.imgsmap[url] = slides.imgs.length; slides.imgs.push(url); }
+          var img = '<img class="img-' + slides.imgsmap[url] + '" src="' + url + '" style="' +
             (width ? 'width:' + width + ';' : '') + (css || '') + '"/>';
           if (align) img = '<div style="text-align: ' + align + '">' + img + '</div>';
-          slides.imgs.push(url);
           return img;
         };
 
         slides["pdfs"] = [];
+        slides["pdfsmap"] = {};
         remark.macros.pdf = function (width, align, css) {
           var url = slides.lecture + '/' + this;
-          var pdf = '<span id="pdf-' + slides.pdfs.length + '" style="display:inline-block;' +
+          if (!(url in slides.pdfsmap)) { slides.pdfsmap[url] = slides.pdfs.length; slides.pdfs.push(url); }
+          var pdf = '<span class="pdf-' + slides.pdfsmap[url] + '" style="display:inline-block;' +
             (width ? 'width:' + width + ';' : '') + (css || '') + '"></span>';
           if (align) pdf = '<div style="text-align: ' + align + '">' + pdf + '</div>';
-          slides.pdfs.push(url);
           return pdf;
         };
 
@@ -111,12 +113,13 @@
         };
 
         slides["dots"] = [];
+        slides["dotsmap"] = [];
         remark.macros.dot = function (width, align, css) {
           var dot = this.replace("{", "{bgcolor=transparent;");
-          var img = '<img id="dot-' + slides.dots.length + '" style="' +
+          if (!(dot in slides.dotsmap)) { slides.dotsmap[dot] = slides.dots.length; slides.dots.push(dot); }
+          var img = '<img class="dot-' + slides.dotsmap[dot] + '" style="' +
             (width ? 'width:' + width + ';' : '') + (css || '') + '"/>';
           if (align) img = '<div style="text-align: ' + align + '">' + img + '</div>';
-          slides.dots.push(dot);
           return img;
         };
 
@@ -163,7 +166,9 @@
               (function (i) {
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', slides.imgs[i] + '.ref');
-                xhr.onload = function() { if (xhr.status === 200) { document.getElementById('img-' + i).title = 'Reference: ' + xhr.responseText }};
+                xhr.onload = function() { if (xhr.status === 200) {
+                  var elements = document.getElementsByClassName('img-' + i);
+                  for (var e = 0; e < elements.length; e++) elements[e].title = 'Reference: ' + xhr.responseText }};
                 xhr.send();
               })(i);
             }
@@ -179,7 +184,8 @@
                       return svgGfx.getSVG(opList, viewport).then(function (svg) {
                         svg.width.baseVal.valueAsString = '100%';
                         svg.height.baseVal.valueAsString = '100%';
-                        document.getElementById('pdf-' + i).appendChild(svg);
+                        var elements = document.getElementsByClassName('pdf-' + i);
+                        for (var e = 0; e < elements.length; e++) elements[e].appendChild(!e ? svg : svg.cloneNode(true));
                       });
                     });
                   });
@@ -189,7 +195,9 @@
               (function(i) {
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', slides.pdfs[i] + '.ref');
-                xhr.onload = function() { if (xhr.status === 200) { document.getElementById('pdf-' + i).title = 'Reference: ' + xhr.responseText }};
+                xhr.onload = function() { if (xhr.status === 200) {
+                  var elements = document.getElementsByClassName('pdf-' + i);
+                  for (var e = 0; e < elements.length; e++) elements[e].title = 'Reference: ' + xhr.responseText }};
                 xhr.send();
               })(i);
             }
@@ -226,7 +234,8 @@
             // GraphViz
             for (var i in slides.dots) {
               var svg = Viz(slides.dots[i], {format: 'svg', engine: 'dot'});
-              document.getElementById('dot-' + i).src = 'data:image/svg+xml;base64,' + btoa(svg);
+              var elements = document.getElementsByClassName('dot-' + i);
+              for (var e = 0; e < elements.length; e++) elements[e].src = 'data:image/svg+xml;base64,' + btoa(svg);
             }
           });
       }
