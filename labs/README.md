@@ -9,3 +9,7 @@ You can install TensorFlow 1.5.0 either to user packages using
 `pip3 install --user tensorflow==1.5.0`, or create a virtual
 environment using `python3 -m venv VENV_DIR` and then installing
 TensorFlow inside it by running `VENV_DIR/bin/pip3 install tensorflow==1.5.0`.
+
+Note that updates about the tasks (notably changes in the task descriptions) are
+announces on the [UFAL NPFL114](https://groups.google.com/forum/#!forum/ufal-npfl114)
+mailing list.
