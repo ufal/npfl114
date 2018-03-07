@@ -16,5 +16,5 @@ under the model distribution):
 - KL-divergence _D<sub>KL</sub>(data distribution, model distribution)_
 
 Use natural logarithms to compute the entropies and the divergence.
-The evaluation on ReCodEx is performed on data very similar to
+The evaluation on ReCodEx is performed on data structurally similar to
 [numpy_entropy_eval_examples.zip](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_eval_examples.zip).
