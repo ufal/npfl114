@@ -8,7 +8,7 @@ a corresponding action (the last space separated integer). Start with the
 
 The solution to this task should be a _model_ which passes evaluation on random
 inputs. This evaluation is performed by running the
-[gym_cartpole-evaluate.py](https://github.com/ufal/npfl114/tree/master/labs/02/gym_cartpole-evaluate.py),
+[gym_cartpole_evaluate.py](https://github.com/ufal/npfl114/tree/master/labs/02/gym_cartpole_evaluate.py),
 which loads a model and then evaluates it on 100 random episodes (optionally
 rendering if `--render` option is provided). In order to pass, you must achieve
 an average reward of at least 475 on 100 episodes.
