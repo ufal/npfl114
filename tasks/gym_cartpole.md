@@ -16,5 +16,8 @@ an average reward of at least 475 on 100 episodes.
 _The size of the training data is very small and you should consider
 it when designing the model._
 
-**Note that this task cannot be submitted in ReCodEx yet, it will be added in
-a week. Until that time, you can perform local evaluation by yourselves.**
+To submit your model in ReCodEx, use the supplied
+[gym_cartpole_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/02/gym_cartpole_recodex.py)
+script. When executed, the script embeds the saved model in current
+directory into a script `gym_cartpole_recodex_submission.py`, which can
+be submitted in ReCodEx.
