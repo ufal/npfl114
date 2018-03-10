@@ -31,14 +31,14 @@ if __name__ == "__main__":
     # Parse arguments
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("model", default="gym_cartpole/model", nargs='?', type=str, help="Name of tensorflow model.")
+    parser.add_argument("model", default="gym_cartpole/model", nargs="?", type=str, help="Name of tensorflow model.")
     parser.add_argument("--episodes", default=100, type=int, help="Number of episodes.")
     parser.add_argument("--render", default=False, action="store_true", help="Render the environment.")
     parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
     args = parser.parse_args()
 
     # Create the environment
-    env = gym.make('CartPole-v1')
+    env = gym.make("CartPole-v1")
 
     # Construct and load the network
     network = Network(threads=args.threads)
