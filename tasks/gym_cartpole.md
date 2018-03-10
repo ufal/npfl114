@@ -20,4 +20,5 @@ To submit your model in ReCodEx, use the supplied
 [gym_cartpole_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/02/gym_cartpole_recodex.py)
 script. When executed, the script embeds the saved model in current
 directory into a script `gym_cartpole_recodex_submission.py`, which can
-be submitted in ReCodEx.
+be submitted in ReCodEx. Note that by default there are at most
+**five** submission attempts, write me if you need more.
