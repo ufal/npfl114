@@ -46,7 +46,8 @@ class Network:
                                            tf.contrib.summary.scalar("train/accuracy", accuracy)]
             with summary_writer.as_default(), tf.contrib.summary.always_record_summaries():
                 for dataset in ["dev", "test"]:
-                    self.summaries[dataset] = tf.contrib.summary.scalar(dataset + "/accuracy", accuracy)
+                    self.summaries[dataset] = [tf.contrib.summary.scalar(dataset + "/loss", loss),
+                                               tf.contrib.summary.scalar(dataset + "/accuracy", accuracy)]
 
             # Initialize variables
             self.session.run(tf.global_variables_initializer())
