@@ -13,3 +13,11 @@ TensorFlow inside it by running `VENV_DIR/bin/pip3 install tensorflow==1.5.0`.
 Note that updates about the tasks (notably changes in the task descriptions) are
 announced on the [UFAL NPFL114 mailing list](https://groups.google.com/forum/#!forum/ufal-npfl114).
 However, the mailing list will not contain anything not present on this website.
+
+### Teamwork
+
+Working in teams of size 2 (or at most 3) is encouraged. All members of the team
+must submit in ReCodEx individually, but can have exactly the same
+sources/models/results. **However, each such solution must explicitly list all
+members of the team to allow plagiarism detection using
+[this template](https://github.com/ufal/npfl114/tree/master/labs/team_description.py).**
