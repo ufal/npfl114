@@ -9,5 +9,5 @@ template and implement the following:
 
 In addition to submitting the task in ReCodEx, please also run the following
 variations and observe the results in TensorBoard (notably training, development
-and test set accuracies):
+and test set accuracy and loss):
 - dropout rate `0`, `0.3`, `0.5`, `0.6`, `0.8`, `0.9`
