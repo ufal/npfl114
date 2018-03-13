@@ -15,7 +15,7 @@ class Dataset:
         self._window = window
 
         # Load the data
-        with open(filename, "r") as file:
+        with open(filename, "r", encoding="utf-8") as file:
             self._text = file.read()
 
         # Create alphabet_map
