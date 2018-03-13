@@ -19,6 +19,7 @@ class Network:
             # Inputs
             self.images = tf.placeholder(tf.float32, [None, self.WIDTH, self.HEIGHT, 1], name="images")
             self.labels = tf.placeholder(tf.int64, [None], name="labels")
+            self.is_training = tf.placeholder(tf.bool, [], name="is_training")
 
             # Computation
             flattened_images = tf.layers.flatten(self.images, name="flatten")
@@ -26,8 +27,8 @@ class Network:
 
             # TODO: Implement dropout on the hidden layer using tf.layers.dropout,
             # with using dropout date of args.dropout. The dropout must be active only
-            # during training, see `training` argument (you will need an additional
-            # placeholder to control that). Store the result to `hidden_layer_dropout`.
+            # during training -- use `self.is_training` placeholder to control the
+            # `training` argument of tf.layers.dropout. Store the result to `hidden_layer_dropout`.
 
             output_layer = tf.layers.dense(hidden_layer_dropout, self.LABELS, activation=None, name="output_layer")
             self.predictions = tf.argmax(output_layer, axis=1)
