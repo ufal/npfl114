@@ -92,9 +92,10 @@ plotly = Plotly()
 plotly.start()
 plotly.plot_start()
 
-EPOCHS = [100, 700, 1000, 8000]
-OPACITIES = [0.3, 0.45, 0.65, 1]
+EPOCHS = [0, 10, 100, 700, 1000, 8000]
+OPACITIES = [0.35, 0.42, 0.5, 0.6, 0.7, 1]
 
+l = None
 for epoch in range(len(EPOCHS)):
     for _ in range(EPOCHS[epoch]):
         x, y = data_batch(257)
@@ -102,7 +103,8 @@ for epoch in range(len(EPOCHS)):
 
     print("Loss: {}".format(l), file=sys.stderr)
     plot_x = relus_boundaries()
-    plotly.plot_points("Epoch {}".format(epoch + 1), plot_x, session.run(outputs, {inputs: plot_x}), '#22b', OPACITIES[epoch], 'linear','#2b2')
+    plotly.plot_points("Epoch {}".format(EPOCHS[epoch] if EPOCHS[epoch] < 1000 else str(EPOCHS[epoch]//1000) + "k"),
+                       plot_x, session.run(outputs, {inputs: plot_x}), '#22b', OPACITIES[epoch], 'linear','#2b2')
 
 PLOT_X = np.arange(MIN_X, MAX_X+0.01, 0.01)
 plotly.plot_points("Original<br>Function", PLOT_X, data_compute(PLOT_X), '#e33', 1, 'spline')
