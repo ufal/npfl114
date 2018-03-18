@@ -20,4 +20,4 @@ for i in range(len(gold)):
 
     same += gold[i] == system[i]
 
-print("{:.2f}".format(100 * same / len(system)))
+print("{:.2f}".format(100 * same / len(gold)))
