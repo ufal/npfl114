@@ -24,8 +24,12 @@ template, which loads the data, generate an alphabet of given size containing mo
 characters, and can generate sliding window view on the data.
 To represent characters, you might find `tf.one_hot` useful.
 
-**The task will be possible to submit in ReCodEx next week.**
+To submit the uppercased test set in ReCodEx, use the supplied
+[uppercase_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/03/uppercase_recodex.py)
+script. You need to provide at least two arguments -- the first is the path to
+the uppercased test data and all other arguments are paths to the sources used
+to generate the test data. Running the script will create
+`uppercase_recodex_submission.py` file, which can be submitted in ReCodEx.
 
 **Do not use RNNs or CNNs in this task, only densely connected layers (with
 various activation and output functions).**
-
