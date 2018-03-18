@@ -17,8 +17,8 @@ To correctly implement BatchNorm:
   `tf.get_collection(tf.GraphKeys.UPDATE_OPS)` and utilized either directly in `session.run`,
   or (preferably) attached to `self.train` using `tf.control_dependencies`.
 
-For example, when using `--cnn=CB-10-3-2-same,A-3-2,F,R-100`, the development
-accuracies after first five epochs should be 96.18, 97.38, 97.74, 97.96 and 98.30.
+For example, when using `--cnn=CB-10-3-2-same,M-3-2,F,R-100`, the development
+accuracies after first five epochs should be 95.92, 97.54, 97.84, 97.76, and 98.18.
 
 You can now experiment with various architectures and try obtaining best
 accuracy on MNIST.

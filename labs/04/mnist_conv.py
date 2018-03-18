@@ -25,7 +25,7 @@ class Network:
             # TODO: Add layers described in the args.cnn. Layers are separated by a comma and can be:
             # - C-filters-kernel_size-stride-padding: Add a convolutional layer with ReLU activation and
             #   specified number of filters, kernel size, stride and padding. Example: C-10-3-1-same
-            # - A-kernel_size-stride: Add average pooling with specified size and stride. Example: A-3-2
+            # - M-kernel_size-stride: Add max pooling with specified size and stride. Example: M-3-2
             # - F: Flatten inputs
             # - R-hidden_layer_size: Add a dense layer with ReLU activation and specified size. Ex: R-100
             # Store result in `features`.
