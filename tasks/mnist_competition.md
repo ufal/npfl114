@@ -17,9 +17,9 @@ ordering of your solutions.
 The
 [mnist_competition.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_competition.py)
 template loads data from `mnist-gan` directory and in the end saves
-the test labels in the required format.
+the test labels in the required format (each label on a separate line).
 
-To submit the uppercased test set in ReCodEx, use the supplied
+To submit the test set labels in ReCodEx, use the supplied
 [mnist_competition_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_competition_recodex.py)
 script. You need to provide at least two arguments -- the first is the path to
 the test set labels and all other arguments are paths to the sources used
