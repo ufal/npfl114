@@ -178,9 +178,10 @@
             }
 
             // PDFs
+            var worker = new PDFJS.PDFWorker();
             for (var i in slides.pdfs) {
               (function(i) {
-                PDFJS.getDocument(slides.pdfs[i]).promise.then(function(pdf) {
+                PDFJS.getDocument({url: slides.pdfs[i], worker: worker}).promise.then(function(pdf) {
                   pdf.getPage(1).then(function(page) {
                     var viewport = page.getViewport(1.0);
                     page.getOperatorList().then(function (opList) {
