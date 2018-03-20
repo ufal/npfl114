@@ -18,7 +18,8 @@ To correctly implement BatchNorm:
   or (preferably) attached to `self.train` using `tf.control_dependencies`.
 
 For example, when using `--cnn=CB-10-3-2-same,M-3-2,F,R-100`, the development
-accuracies after first five epochs should be 95.92, 97.54, 97.84, 97.76, and 98.18.
+accuracies after first five epochs on the CPU TensorFlow version should be
+95.92, 97.54, 97.84, 97.76, and 98.18.
 
 You can now experiment with various architectures and try obtaining best
 accuracy on MNIST.

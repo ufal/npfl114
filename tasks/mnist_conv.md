@@ -13,6 +13,7 @@ specifications of sequential layers:
   size. Example: `R-100`
 
 For example, when using `--cnn=C-10-3-2-same,M-3-2,F,R-100`, the development
-accuracies after first five epochs should be 95.14, 97.00, 97.68, 97.66, and 97.98.
+accuracies after first five epochs on the CPU TensorFlow version should be
+95.14, 97.00, 97.68, 97.66, and 97.98.
 
 After implementing this task, you should continue with `mnist_batchnorm`.
