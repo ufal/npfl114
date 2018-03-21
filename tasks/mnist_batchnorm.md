@@ -4,12 +4,13 @@ support batch normalization. Start with the
 template and in addition to all functionality of `mnist_conv`, implement also
 the following layer:
 - `CB-filters-kernel_size-stride-padding`: Add a convolutional layer with BatchNorm
-  and ReLU activation and specified number of filters, kernel size, stride and padding.
+  and ReLU activation and specified number of filters, kernel size, stride and padding,
   Example: `CB-10-3-1-same`
 
 To correctly implement BatchNorm:
 - The convolutional layer should not use any activation and no biases.
-- The output of the convolutional layer is passed to batch normalization layer, which
+- The output of the convolutional layer is passed to batch normalization layer
+  `tf.layers.batch_normalization`, which
   should specify `training=True` during training and `training=False` during inference.
 - The output of the batch normalization layer is passed through tf.nn.relu.
 - You need to update the moving averages of mean and variance in the batch normalization

@@ -1,6 +1,7 @@
 In this assignment, you will be training convolutional networks. Start with
 the [mnist_conv.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_conv.py)
-template and implement the following functionality. The architecture of the
+template and implement the following functionality using the `tf.layers` module.
+The architecture of the
 network is described by the `cnn` parameter, which contains comma-separated
 specifications of sequential layers:
 - `C-filters-kernel_size-stride-padding`: Add a convolutional layer with ReLU
