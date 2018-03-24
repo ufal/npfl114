@@ -11,7 +11,7 @@ took).
 
 The task is a _competition_ and the points will be awarded depending on your
 test set accuracy. If your test set accuracy surpasses 99.4%, you will be
-awarded 4 points; the rest 5 points will be distributed depending on relative
+awarded 5 points; the rest 5 points will be distributed depending on relative
 ordering of your solutions.
 
 The
