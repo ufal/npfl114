@@ -1,5 +1,5 @@
 This assignment is a simple image segmentation task. The data for this task is
-available from [fasion-masks.zip](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/fasion-masks.zip).
+available from [fashion-masks.zip](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/fashion-masks.zip).
 The inputs consist of 28×28 greyscale images of ten classes of clothing,
 while the outputs consist of the correct class _and_ a pixel bit mask.
 Your goal is to generate such outputs for the test set (including
