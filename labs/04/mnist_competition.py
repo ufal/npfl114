@@ -70,7 +70,8 @@ if __name__ == "__main__":
 
     # Load the data
     from tensorflow.examples.tutorials import mnist
-    mnist = mnist.input_data.read_data_sets("mnist-gan", reshape=False, seed=42)
+    mnist = mnist.input_data.read_data_sets("mnist-gan", reshape=False, seed=42,
+                                            source_url="https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/mnist-gan/")
 
     # Construct the network
     network = Network(threads=args.threads)
