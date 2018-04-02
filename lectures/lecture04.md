@@ -1,6 +1,6 @@
 # Mar 19
 
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?04)
+[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?04),
 [Recording](https://slideslive.com/38906635/convolutional-networks-lecture-4)
 
 - Saturating non-linearities [Section 6.3.2 and second half of Section 6.2.2.2 of DLB]
