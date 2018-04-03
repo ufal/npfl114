@@ -8,8 +8,8 @@ class Dataset:
         self._voxels = data["voxels"]
         self._labels = data["labels"] if "labels" in data else None
 
-        self._shuffle = shuffle_batches
-        self._permutation = np.random.permutation(len(self._voxels)) if self._shuffle else range(len(self._voxels))
+        self._shuffle_batches = shuffle_batches
+        self._permutation = np.random.permutation(len(self._voxels)) if self._shuffle_batches else range(len(self._voxels))
 
     def split(self, ratio):
         split = int(len(self._voxels) * ratio)
@@ -35,16 +35,11 @@ class Dataset:
     def next_batch(self, batch_size):
         batch_size = min(batch_size, len(self._permutation))
         batch_perm, self._permutation = self._permutation[:batch_size], self._permutation[batch_size:]
-        return self._voxels[batch_perm], self._labels[batch_perm]
-
-    def next_batch_data_for_prediction(self, batch_size):
-        batch_size = min(batch_size, len(self._permutation))
-        batch_perm, self._permutation = self._permutation[:batch_size], self._permutation[batch_size:]
-        return self._voxels[batch_perm]
+        return self._voxels[batch_perm], self._labels[batch_perm] if self._labels is not None else None
 
     def epoch_finished(self):
         if len(self._permutation) == 0:
-            self._permutation = np.random.permutation(len(self._voxels)) if self._shuffle else range(len(self._voxels))
+            self._permutation = np.random.permutation(len(self._voxels)) if self._shuffle_batches else range(len(self._voxels))
             return True
         return False
 
@@ -144,10 +139,10 @@ if __name__ == "__main__":
 
         network.evaluate("dev", dev.voxels, dev.labels)
 
-    labels = network.predict(test.voxels)
+    # Predict test data
     with open("3d_recognition_test.txt", "w") as test_file:
         while not test.epoch_finished():
-            voxels = test.next_batch_data_for_prediction(args.batch_size)
+            voxels, _ = test.next_batch(args.batch_size)
             labels = network.predict(voxels)
 
             for label in labels:
