@@ -123,7 +123,7 @@ if __name__ == "__main__":
     if not os.path.exists("logs"): os.mkdir("logs") # TF 1.6 will do this by itself
 
     # Load the data
-    traindev = Dataset("modelnet{}-train.npz".format(args.modelnet_dim)).split(args.train_split)
+    train, dev = Dataset("modelnet{}-train.npz".format(args.modelnet_dim)).split(args.train_split)
     test = Dataset("modelnet{}-test.npz".format(args.modelnet_dim))
 
     # Construct the network
