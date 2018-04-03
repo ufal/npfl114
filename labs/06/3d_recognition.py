@@ -138,7 +138,7 @@ if __name__ == "__main__":
 
         network.evaluate("dev", dev.voxels, dev.labels)
 
-    labels = network.predict(test.images)
+    labels = network.predict(test.voxels)
     with open("3d_recognition_test.txt", "w") as test_file:
         for label in labels:
             print(label, file=test_file)
