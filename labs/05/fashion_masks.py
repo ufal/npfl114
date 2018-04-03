@@ -3,13 +3,14 @@ import numpy as np
 import tensorflow as tf
 
 class Dataset:
-    def __init__(self, filename):
+    def __init__(self, filename, shuffle_batches = True):
         data = np.load(filename)
         self._images = data["images"]
         self._labels = data["labels"] if "labels" in data else None
         self._masks = data["masks"] if "masks" in data else None
 
-        self._permutation = np.random.permutation(len(self._images))
+        self._shuffle_batches = shuffle_batches
+        self._permutation = np.random.permutation(len(self._images)) if self._shuffle_batches else range(len(self._images))
 
     @property
     def images(self):
@@ -26,11 +27,11 @@ class Dataset:
     def next_batch(self, batch_size):
         batch_size = min(batch_size, len(self._permutation))
         batch_perm, self._permutation = self._permutation[:batch_size], self._permutation[batch_size:]
-        return self._images[batch_perm], self._labels[batch_perm], self._masks[batch_perm]
+        return self._images[batch_perm], self._labels[batch_perm] if self._labels is not None else None, self._masks[batch_perm] if self._masks is not None else None
 
     def epoch_finished(self):
         if len(self._permutation) == 0:
-            self._permutation = np.random.permutation(len(self._images))
+            self._permutation = np.random.permutation(len(self._images)) if self._shuffle_batches else range(len(self._images))
             return True
         return False
 
@@ -134,7 +135,7 @@ if __name__ == "__main__":
     # Load the data
     train = Dataset("fashion-masks-train.npz")
     dev = Dataset("fashion-masks-dev.npz")
-    test = Dataset("fashion-masks-test.npz")
+    test = Dataset("fashion-masks-test.npz", shuffle_batches=False)
 
     # Construct the network
     network = Network(threads=args.threads)
@@ -148,7 +149,10 @@ if __name__ == "__main__":
 
         network.evaluate("dev", dev.images, dev.labels, dev.masks)
 
-    labels, masks = network.predict(test.images)
+    # Predict test data
     with open("fashion_masks_test.txt", "w") as test_file:
-        for i in range(len(labels)):
-            print(labels[i], *masks[i].astype(np.uint8).flatten(), file=test_file)
+        while not test.epoch_finished():
+            images, _, _ = test.next_batch(args.batch_size)
+            labels, masks = network.predict(images)
+            for i in range(len(labels)):
+                print(labels[i], *masks[i].astype(np.uint8).flatten(), file=test_file)

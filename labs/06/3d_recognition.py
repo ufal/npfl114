@@ -3,12 +3,13 @@ import numpy as np
 import tensorflow as tf
 
 class Dataset:
-    def __init__(self, filename):
+    def __init__(self, filename, shuffle_batches = True):
         data = np.load(filename)
         self._voxels = data["voxels"]
         self._labels = data["labels"] if "labels" in data else None
 
-        self._permutation = np.random.permutation(len(self._voxels))
+        self._shuffle_batches = shuffle_batches
+        self._permutation = np.random.permutation(len(self._voxels)) if self._shuffle_batches else range(len(self._voxels))
 
     def split(self, ratio):
         split = int(len(self._voxels) * ratio)
@@ -34,11 +35,11 @@ class Dataset:
     def next_batch(self, batch_size):
         batch_size = min(batch_size, len(self._permutation))
         batch_perm, self._permutation = self._permutation[:batch_size], self._permutation[batch_size:]
-        return self._voxels[batch_perm], self._labels[batch_perm]
+        return self._voxels[batch_perm], self._labels[batch_perm] if self._labels is not None else None
 
     def epoch_finished(self):
         if len(self._permutation) == 0:
-            self._permutation = np.random.permutation(len(self._voxels))
+            self._permutation = np.random.permutation(len(self._voxels)) if self._shuffle_batches else range(len(self._voxels))
             return True
         return False
 
@@ -124,7 +125,7 @@ if __name__ == "__main__":
 
     # Load the data
     train, dev = Dataset("modelnet{}-train.npz".format(args.modelnet_dim)).split(args.train_split)
-    test = Dataset("modelnet{}-test.npz".format(args.modelnet_dim))
+    test = Dataset("modelnet{}-test.npz".format(args.modelnet_dim), shuffle_batches=False)
 
     # Construct the network
     network = Network(threads=args.threads)
@@ -138,7 +139,11 @@ if __name__ == "__main__":
 
         network.evaluate("dev", dev.voxels, dev.labels)
 
-    labels = network.predict(test.voxels)
+    # Predict test data
     with open("3d_recognition_test.txt", "w") as test_file:
-        for label in labels:
-            print(label, file=test_file)
+        while not test.epoch_finished():
+            voxels, _ = test.next_batch(args.batch_size)
+            labels = network.predict(voxels)
+
+            for label in labels:
+                print(label, file=test_file)
