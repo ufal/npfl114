@@ -1,6 +1,7 @@
 # Feb 26
 
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?01)
+[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?01),
+[Recording](https://slideslive.com/38906857/deep-learning-lecture-1-introduction-to-deep-learning)
 
 - Random variables, probability distributions, expectation, variance, Bernoulli
   distribution, Categorical distribution [Sections 3.2, 3.3, 3.8, 3.9.1 and 3.9.2 of DLB]

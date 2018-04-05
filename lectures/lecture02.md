@@ -1,7 +1,7 @@
 # Mar 05
 
 [Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?02),
-[Recording](https://slideslive.com/38906313/training-neural-networks-lecture-2)
+[Recording](https://slideslive.com/38906313/deep-learning-lecture-2-training-neural-networks)
 
 - Capacity, overfitting, underfitting, regularization [Section 5.2 of DLB]
 - Hyperparameters and validation sets [Section 5.3 of DLB]

@@ -1,7 +1,7 @@
 # Mar 12
 
 [Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?03),
-[Recording](https://slideslive.com/38906435/training-neural-networks-lecture-3)
+[Recording](https://slideslive.com/38906435/deep-learning-lecture-3-training-neural-networks-ii)
 
 - *Training neural network with a single hidden layer*
 - *Playing with TensorFlow Playground*
