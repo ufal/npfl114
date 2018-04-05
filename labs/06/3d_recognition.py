@@ -9,20 +9,27 @@ class Dataset:
         self._labels = data["labels"] if "labels" in data else None
 
         self._shuffle_batches = shuffle_batches
-        self._permutation = np.random.permutation(len(self._voxels)) if self._shuffle_batches else range(len(self._voxels))
+        self._new_permutation()
+
+    def _new_permutation(self):
+        if self._shuffle_batches:
+            self._permutation = np.random.permutation(len(self._voxels))
+        else:
+            self._permutation = np.arange(len(self._voxels))
 
     def split(self, ratio):
         split = int(len(self._voxels) * ratio)
 
         first, second = Dataset.__new__(Dataset), Dataset.__new__(Dataset)
-        for ds in [first, second]:
-            ds._shuffle_batches = self._shuffle_batches
         first._voxels, second._voxels = self._voxels[:split], self._voxels[split:]
         if self._labels is not None:
             first._labels, second._labels = self._labels[:split], self._labels[split:]
         else:
             first._labels, second._labels = None, None
-        first._permutation, second._permutation = np.random.permutation(len(first.voxels)), np.random.permutation(len(second.voxels))
+
+        for dataset in [first, second]:
+            dataset._shuffle_batches = self._shuffle_batches
+            dataset._new_permutation()
 
         return first, second
 
@@ -41,7 +48,7 @@ class Dataset:
 
     def epoch_finished(self):
         if len(self._permutation) == 0:
-            self._permutation = np.random.permutation(len(self._voxels)) if self._shuffle_batches else range(len(self._voxels))
+            self._new_permutation()
             return True
         return False
 
