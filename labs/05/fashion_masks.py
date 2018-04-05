@@ -150,7 +150,7 @@ if __name__ == "__main__":
         network.evaluate("dev", dev.images, dev.labels, dev.masks)
 
     # Predict test data
-    with open("fashion_masks_test.txt", "w") as test_file:
+    with open("{}/fashion_masks_test.txt".format(args.logdir), "w") as test_file:
         while not test.epoch_finished():
             images, _, _ = test.next_batch(args.batch_size)
             labels, masks = network.predict(images)

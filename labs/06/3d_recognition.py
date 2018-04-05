@@ -149,7 +149,7 @@ if __name__ == "__main__":
         network.evaluate("dev", dev.voxels, dev.labels)
 
     # Predict test data
-    with open("3d_recognition_test.txt", "w") as test_file:
+    with open("{}/3d_recognition_test.txt".format(args.logdir), "w") as test_file:
         while not test.epoch_finished():
             voxels, _ = test.next_batch(args.batch_size)
             labels = network.predict(voxels)

@@ -87,6 +87,6 @@ if __name__ == "__main__":
 
     # TODO: Compute test_labels, as numbers 0-9, corresponding to mnist.test.images
 
-    with open("mnist_competition_test.txt", "w") as test_file:
+    with open("{}/mnist_competition_test.txt".format(args.logdir), "w") as test_file:
         for label in test_labels:
             print(label, file=test_file)
