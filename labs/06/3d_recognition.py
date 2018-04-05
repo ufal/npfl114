@@ -15,6 +15,8 @@ class Dataset:
         split = int(len(self._voxels) * ratio)
 
         first, second = Dataset.__new__(Dataset), Dataset.__new__(Dataset)
+        for ds in [first, second]:
+            ds._shuffle_batches = self._shuffle_batches
         first._voxels, second._voxels = self._voxels[:split], self._voxels[split:]
         if self._labels is not None:
             first._labels, second._labels = self._labels[:split], self._labels[split:]
