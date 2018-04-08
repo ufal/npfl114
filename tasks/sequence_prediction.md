@@ -3,7 +3,7 @@ should learn to predict one specific sequence of
 [montly totals of international airline passengers from 1949-1960](https://github.com/ufal/npfl114/tree/master/labs/01/international-airline-passengers.tsv).
 
 Your goal is to modify the
-[sequence_generation.py](https://github.com/ufal/npfl114/tree/master/labs/07/sequence_generation.py)
+[sequence_prediction.py](https://github.com/ufal/npfl114/tree/master/labs/07/sequence_prediction.py)
 template and implement the following:
 - Use specified RNN cell type (`RNN`, `GRU` and `LSTM`) and dimensionality.
 - For the training part of the sequence, the network should sequentially
