@@ -19,7 +19,8 @@ class Network:
             # Inputs
             self.sequence = tf.placeholder(tf.float32, [self.TRAIN], name="sequence")
 
-            # TODO: Create RNN cell according to args.rnn_cell (RNN, LSTM and GRU should be supported)
+            # TODO: Create RNN cell according to args.rnn_cell (RNN, LSTM and GRU should be supported,
+            # using BasicRNNCell, BasicLSTMCell and GRUCell from tf.n.rnn_cell module),
             # with dimensionality of args.rnn_cell_dim. Store the cell in `rnn_cell`.
 
             state = # TODO: Create zero state using rnn_cell.zero_state call. Use batch size 1.
