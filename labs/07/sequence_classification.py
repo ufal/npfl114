@@ -121,7 +121,7 @@ if __name__ == "__main__":
     # Parse arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", default=16, type=int, help="Batch size.")
-    parser.add_argument("--clip_gradient", default=None, type=int, help="Norm for gradient clipping.")
+    parser.add_argument("--clip_gradient", default=None, type=float, help="Norm for gradient clipping.")
     parser.add_argument("--hidden_layer", default=None, type=int, help="Additional hidden layer after RNN.")
     parser.add_argument("--dev_sequences", default=1000, type=int, help="Number of development sequences.")
     parser.add_argument("--epochs", default=20, type=int, help="Number of epochs.")
