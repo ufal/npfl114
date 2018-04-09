@@ -40,7 +40,7 @@ class Dataset:
     @property
     def labels(self):
         return self._labels
-
+    
     def next_batch(self, batch_size):
         batch_size = min(batch_size, len(self._permutation))
         batch_perm, self._permutation = self._permutation[:batch_size], self._permutation[batch_size:]
@@ -74,7 +74,7 @@ class Network:
             # TODO: Computation and training.
             #
             # The code below assumes that:
-            # - loss is stored in `loss`
+            # - loss is stored in `self.loss`
             # - training is stored in `self.training`
             # - label predictions are stored in `self.predictions`
 
@@ -82,29 +82,45 @@ class Network:
             self.accuracy = tf.reduce_mean(tf.cast(tf.equal(self.labels, self.predictions), tf.float32))
             summary_writer = tf.contrib.summary.create_file_writer(args.logdir, flush_millis=10 * 1000)
             self.summaries = {}
-            with summary_writer.as_default(), tf.contrib.summary.record_summaries_every_n_global_steps(8):
-                self.summaries["train"] = [tf.contrib.summary.scalar("train/loss", loss),
+            with summary_writer.as_default(), tf.contrib.summary.record_summaries_every_n_global_steps(10):
+                self.summaries["train"] = [tf.contrib.summary.scalar("train/loss", self.loss),
                                            tf.contrib.summary.scalar("train/accuracy", self.accuracy)]
             with summary_writer.as_default(), tf.contrib.summary.always_record_summaries():
+                self.given_loss = tf.placeholder(tf.float32, [], name="given_loss")
+                self.given_accuracy = tf.placeholder(tf.float32, [], name="given_accuracy")
                 for dataset in ["dev", "test"]:
-                    self.summaries[dataset] = [tf.contrib.summary.scalar(dataset + "/loss", loss),
-                                               tf.contrib.summary.scalar(dataset + "/accuracy", self.accuracy)]
+                    self.summaries[dataset] = [tf.contrib.summary.scalar(dataset + "/loss", self.given_loss),
+                                               tf.contrib.summary.scalar(dataset + "/accuracy", self.given_accuracy)]
 
             # Initialize variables
             self.session.run(tf.global_variables_initializer())
             with summary_writer.as_default():
                 tf.contrib.summary.initialize(session=self.session, graph=self.session.graph)
 
-    def train(self, voxels, labels):
+
+
+    def train_batch(self, images, labels):
         self.session.run([self.training, self.summaries["train"]], {self.voxels: voxels, self.labels: labels, self.is_training: True})
 
-    def evaluate(self, dataset, voxels, labels):
-        accuracy, _ = self.session.run([self.accuracy, self.summaries[dataset]], {self.voxels: voxels, self.labels: labels, self.is_training: False})
+    def evaluate(self, dataset_name, dataset, batch_size):
+        loss, accuracy = 0, 0
+
+        while not dataset.epoch_finished():
+            batch_voxels, batch_labels = dataset.next_batch(batch_size)
+            batch_loss, batch_accuracy = self.session.run(
+                [self.loss, self.accuracy], {self.voxels: batch_voxels, self.labels: batch_labels, self.is_training: False})
+            loss += batch_loss * len(batch_labels) / len(dataset.voxels)
+            accuracy += batch_accuracy * len(batch_labels) / len(dataset.voxels)
+        self.session.run(self.summaries[dataset_name], {self.given_loss: loss, self.given_accuracy: accuracy})
+
         return accuracy
 
-    def predict(self, voxels):
-        return self.session.run(self.predictions, {self.voxels: voxels, self.is_training: False})
-
+    def predict(self, dataset, batch_size):
+        labels = []
+        while not dataset.epoch_finished():
+            images, _ = dataset.next_batch(batch_size)
+            labels.append(self.session.run(self.predictions, {self.voxels: voxels, self.is_training: False}))
+        return np.concatenate(labels)
 
 if __name__ == "__main__":
     import argparse
@@ -141,12 +157,6 @@ if __name__ == "__main__":
     network = Network(threads=args.threads)
     network.construct(args)
 
-    # Helper functions that train, test, and predict datasets. 
-    def train_epoch(data):
-        while not data.epoch_finished():
-            voxels, labels = data.next_batch(args.batch_size)
-            network.train(voxels, labels)
-
     def evaluate_on(data):
         acc = 0.0
         while not data.epoch_finished():
@@ -157,19 +167,14 @@ if __name__ == "__main__":
         acc /= len(data.labels)
         return acc
 
-    def predict_and_save(data):
-        with open("{}/3d_recognition_test.txt".format(args.logdir), "w") as test_file:
-            while not data.epoch_finished():
-                voxels, _ = data.next_batch(args.batch_size)
-                labels = network.predict(voxels)
-
-                for label in labels:
-                    print(label, file=test_file)
-
     # Train
     for i in range(args.epochs):
-        train_epoch(train)
-        dev_acc = evaluate_on(dev)
+        while not train.epoch_finished():
+            voxels, labels = train.next_batch(args.batch_size)
+            network.train_batch(voxels, labels)
+        network.evaluate("dev", dev, args.batch_size)
 
-    # Predict test data
-    predict_and_save(test)
+    with open("{}/3d_recognition_test.txt".format(args.logdir), "w") as test_file:
+        labels = network.predict(test, args.batch_size)
+        for label in labels:
+            print(label, file=test_file)
