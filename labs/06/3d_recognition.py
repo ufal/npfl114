@@ -82,7 +82,7 @@ class Network:
             self.accuracy = tf.reduce_mean(tf.cast(tf.equal(self.labels, self.predictions), tf.float32))
             summary_writer = tf.contrib.summary.create_file_writer(args.logdir, flush_millis=10 * 1000)
             self.summaries = {}
-            with summary_writer.as_default(), tf.contrib.summary.record_summaries_every_n_global_steps(10):
+            with summary_writer.as_default(), tf.contrib.summary.record_summaries_every_n_global_steps(8):
                 self.summaries["train"] = [tf.contrib.summary.scalar("train/loss", self.loss),
                                            tf.contrib.summary.scalar("train/accuracy", self.accuracy)]
             with summary_writer.as_default(), tf.contrib.summary.always_record_summaries():
@@ -172,6 +172,7 @@ if __name__ == "__main__":
             network.train_batch(voxels, labels)
         network.evaluate("dev", dev, args.batch_size)
 
+    # Predict test data
     with open("{}/3d_recognition_test.txt".format(args.logdir), "w") as test_file:
         labels = network.predict(test, args.batch_size)
         for label in labels:
