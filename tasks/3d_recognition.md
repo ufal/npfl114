@@ -13,8 +13,8 @@ only train and test portion – you need to use part of train portion as develop
 The task is a _competition_ and the points will be awarded depending on your
 test set accuracy. If your test set score surpasses 75%, you will be
 awarded 7 points; the rest 6 points will be distributed depending on relative
-ordering of your solutions. _Note that quite a straightfoward model reaches
-about 90% on the test set after several hours of training._
+ordering of your solutions. _Note that even straightfoward models can reach
+more than 90% on the test set, the current state-of-the-art is more than 98%._
 
 You should start with the
 [3d_recognition.py](https://github.com/ufal/npfl114/tree/master/labs/06/3d_recognition.py)
