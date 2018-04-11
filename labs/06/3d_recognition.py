@@ -116,7 +116,7 @@ class Network:
     def predict(self, dataset, batch_size):
         labels = []
         while not dataset.epoch_finished():
-            images, _ = dataset.next_batch(batch_size)
+            voxels, _ = dataset.next_batch(batch_size)
             labels.append(self.session.run(self.predictions, {self.voxels: voxels, self.is_training: False}))
         return np.concatenate(labels)
 
