@@ -40,7 +40,7 @@ class Dataset:
     @property
     def labels(self):
         return self._labels
-    
+
     def next_batch(self, batch_size):
         batch_size = min(batch_size, len(self._permutation))
         batch_perm, self._permutation = self._permutation[:batch_size], self._permutation[batch_size:]
@@ -96,8 +96,6 @@ class Network:
             self.session.run(tf.global_variables_initializer())
             with summary_writer.as_default():
                 tf.contrib.summary.initialize(session=self.session, graph=self.session.graph)
-
-
 
     def train_batch(self, images, labels):
         self.session.run([self.training, self.summaries["train"]], {self.voxels: voxels, self.labels: labels, self.is_training: True})
