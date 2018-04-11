@@ -107,8 +107,8 @@ class Network:
             batch_voxels, batch_labels = dataset.next_batch(batch_size)
             batch_loss, batch_accuracy = self.session.run(
                 [self.loss, self.accuracy], {self.voxels: batch_voxels, self.labels: batch_labels, self.is_training: False})
-            loss += batch_loss * len(batch_labels) / len(dataset.voxels)
-            accuracy += batch_accuracy * len(batch_labels) / len(dataset.voxels)
+            loss += batch_loss * len(batch_voxels) / len(dataset.voxels)
+            accuracy += batch_accuracy * len(batch_voxels) / len(dataset.voxels)
         self.session.run(self.summaries[dataset_name], {self.given_loss: loss, self.given_accuracy: accuracy})
 
         return accuracy
