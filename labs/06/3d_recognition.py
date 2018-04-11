@@ -136,7 +136,6 @@ if __name__ == "__main__":
     parser.add_argument("--modelnet_dim", default=20, type=int, help="Dimension of ModelNet data.")
     parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
     parser.add_argument("--train_split", default=None, type=float, help="Ratio of examples to use as train.")
-    parser.add_argument("--batch_evaluation", default=False, type=bool, help="Is evaluation batched.") # Distors dev summaries, can help with OOM. 
     args = parser.parse_args()
 
     # Create logdir name
@@ -154,16 +153,6 @@ if __name__ == "__main__":
     # Construct the network
     network = Network(threads=args.threads)
     network.construct(args)
-
-    def evaluate_on(data):
-        acc = 0.0
-        while not data.epoch_finished():
-            evaluate_batch_size = args.batch_size if args.batch_evaluation else len(data.labels)
-            voxels, labels = data.next_batch(evaluate_batch_size)
-            batch_acc = network.evaluate("dev", voxels, labels)
-            acc += batch_acc * len(labels) # average over all batches weighted by their length 
-        acc /= len(data.labels)
-        return acc
 
     # Train
     for i in range(args.epochs):
