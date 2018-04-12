@@ -54,7 +54,7 @@ class Network:
             self.labels = tf.placeholder(tf.bool, [None, args.sequence_length], name="labels")
 
             # TODO: Create RNN cell according to args.rnn_cell (RNN, LSTM and GRU should be supported,
-            # using BasicRNNCell, BasicLSTMCell and GRUCell from tf.n.rnn_cell module),
+            # using BasicRNNCell, BasicLSTMCell and GRUCell from tf.nn.rnn_cell module),
             # with dimensionality of args.rnn_cell_dim. Store the cell in `rnn_cell`.
 
             # TODO: Process self.sequences using `tf.nn.dynamic_rnn` and `rnn_cell`,
