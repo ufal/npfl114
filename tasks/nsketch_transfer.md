@@ -28,6 +28,8 @@ annotations in the required format. However, feel free to use multiple scripts
 for solving this assignment. The above template requires NASNet sources
 and pretrained weights, which you can download among others
 [here](http://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/nasnet_a_mobile.zip).
+An independent example of using NASNet for classification is also available as
+[nasnet_classify.py](https://github.com/ufal/npfl114/tree/master/labs/07/nasnet_classify.py).
 
 To submit the test set annotations in ReCodEx, use the supplied
 [nsketch_transfer_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/07/nsketch_transfer_recodex.py)
