@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+
+# This source depends on the NASNet A Mobile network, which can be downloaded
+# from http://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/nasnet_a_mobile.zip.
+
 import numpy as np
 import tensorflow as tf
 
