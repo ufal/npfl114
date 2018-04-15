@@ -7,7 +7,7 @@ and part-of-speech tag. The dataset can be loaded using the
 module.
 
 Your goal is to modify the
-[word_we.py](https://github.com/ufal/npfl114/tree/master/labs/08/word_we.py)
+[tagger_we.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_we.py)
 template and implement the following:
 - Use specified RNN cell type (`GRU` and `LSTM`) and dimensionality.
 - Create word embeddings for training vocabulary.

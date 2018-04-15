@@ -1,6 +1,6 @@
 This task is a continuation of `tagger_we` assignment.
 
-Using the [word_cle.py](https://github.com/ufal/npfl114/tree/master/labs/08/word_cle.py)
+Using the [tagger_cle.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_cle.py)
 template, add the following features in addition to `tagger_we` ones:
 - Create character embeddings for training alphabet.
 - Process unique words with a bidirectional character-level RNN.

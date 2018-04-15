@@ -1,6 +1,6 @@
 This task is a continuation of `tagger_we` assignment.
 
-Using the [word_cnne.py](https://github.com/ufal/npfl114/tree/master/labs/08/word_cnne.py)
+Using the [tagger_cnne.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_cnne.py)
 template, add the following features in addition to `tagger_we` ones:
 - Create character embeddings for training alphabet.
 - Process unique words with one-dimensional convolutional filters with
