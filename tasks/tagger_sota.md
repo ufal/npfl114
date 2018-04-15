@@ -1,7 +1,7 @@
 The goal of this task is to improve the state-of-the-art in Czech
 part-of-speech tagging. The current state-of-the-art is (to my best knowledge)
 from [Spoustová et al., 2009](http://www.aclweb.org/anthology/E09-1087)
-and is `95.67%` in supervised and `95.89%` in semi-supervised settings.
+and is 95.67% in supervised and 95.89% in semi-supervised settings.
 
 For training use the
 [czech-pdt.zip](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/czech-pdt.zip)
@@ -21,9 +21,9 @@ stored on the beginning of the line, followed by tab-separated lemma-tag pairs
 from the analyzer.
 
 This task is an open-data competition and the points will be awarded depending on your
-test set accuracy. If your test set accuracy surpasses `90%`, you will be
+test set accuracy. If your test set accuracy surpasses 90%, you will be
 awarded 4 points; the rest 6 points will be distributed depending on relative
-ordering of your solutions. Any solution surpassing `95.89%` will get additional 5 points.
+ordering of your solutions. Any solution surpassing 95.89% will get additional 5 points.
 
 To submit the test set annotations in ReCodEx, use the supplied
 [tagger_sota_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_sota_recodex.py)
