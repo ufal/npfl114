@@ -27,6 +27,6 @@ ordering of your solutions. Any solution surpassing 95.89% will get additional 5
 
 To submit the test set annotations in ReCodEx, use the supplied
 [tagger_sota_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_sota_recodex.py)
-script. You need to provide at least two arguments -- the first is the path to
+script. You need to provide at least two arguments – the first is the path to
 the test set annotations and all other arguments are paths to the sources used
 to generate the test data.

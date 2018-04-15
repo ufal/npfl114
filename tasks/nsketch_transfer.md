@@ -33,6 +33,6 @@ An independent example of using NASNet for classification is also available as
 
 To submit the test set annotations in ReCodEx, use the supplied
 [nsketch_transfer_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/07/nsketch_transfer_recodex.py)
-script. You need to provide at least two arguments -- the first is the path to
+script. You need to provide at least two arguments – the first is the path to
 the test set annotations and all other arguments are paths to the sources used
 to generate the test data.

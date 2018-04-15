@@ -21,7 +21,7 @@ the test labels in the required format (each label on a separate line).
 
 To submit the test set labels in ReCodEx, use the supplied
 [mnist_competition_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_competition_recodex.py)
-script. You need to provide at least two arguments -- the first is the path to
+script. You need to provide at least two arguments – the first is the path to
 the test set labels and all other arguments are paths to the sources used
 to generate the test data. Running the script will create
 `mnist_competition_recodex_submission.py` file, which can be submitted in ReCodEx.

@@ -28,6 +28,6 @@ space separated label and mask, the mask stored as zeros and ones, rows first).
 
 To submit the test set annotations in ReCodEx, use the supplied
 [fashion_masks_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/05/fashion_masks_recodex.py)
-script. You need to provide at least two arguments -- the first is the path to
+script. You need to provide at least two arguments – the first is the path to
 the test set annotations and all other arguments are paths to the sources used
 to generate the test data.
