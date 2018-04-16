@@ -41,7 +41,7 @@ class Network:
             # TODO: For kernel sizes of {2..args.cnne_max}, do the following:
             # - use `tf.layers.conv1d` on input embedded characters, with given kernel size
             #   and `args.cnne_filters`; use `VALID` padding, stride 1 and no activation.
-            # - perform chanel-wise max-pooling over the whole word, generating output
+            # - perform channel-wise max-pooling over the whole word, generating output
             #   of size `args.cnne_filters` for every word.
 
             # TODO: Concatenate the computed features (in the order of kernel sizes 2..args.cnne_max).
@@ -123,6 +123,7 @@ if __name__ == "__main__":
     # Parse arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", default=10, type=int, help="Batch size.")
+    parser.add_argument("--cle_dim", default=32, type=int, help="Character-level embedding dimension.")
     parser.add_argument("--cnne_filters", default=16, type=int, help="CNN embedding filters per length.")
     parser.add_argument("--cnne_max", default=4, type=int, help="Maximum CNN filter length.")
     parser.add_argument("--epochs", default=10, type=int, help="Number of epochs.")
