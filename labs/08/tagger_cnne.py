@@ -28,9 +28,11 @@ class Network:
             # TODO(we): Choose RNN cell class according to args.rnn_cell (LSTM and GRU
             # should be supported, using tf.nn.rnn_cell.{BasicLSTM,GRU}Cell).
 
-            # TODO(we): Create word embeddings for num_words of dimensionality args.we_dim.
+            # TODO(we): Create word embeddings for num_words of dimensionality args.we_dim
+            # using `tf.get_variable`.
 
-            # TODO(we): Embed self.word_ids using the word embeddings.
+            # TODO(we): Embed self.word_ids according to the word embeddings, by utilizing
+            # `tf.nn.embedding_lookup`.
 
             # Convolutional word embeddings (CNNE)
 
@@ -53,7 +55,7 @@ class Network:
             # TODO(we): Using tf.nn.bidirectional_dynamic_rnn, process the embedded inputs.
             # Use given rnn_cell (different for fwd and bwd direction).
 
-            # TODO(we): Concatenate the outputs for fwd and bwd directions.
+            # TODO(we): Concatenate the outputs for fwd and bwd directions (in the third dimension).
 
             # TODO(we): Add a dense layer (without activation) into num_tags classes and
             # store result in `output_layer`.
