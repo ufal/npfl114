@@ -38,14 +38,16 @@ class Network:
 
             # TODO: Generate character embeddings for num_chars of dimensionality args.cle_dim.
 
-            # TODO: Embed self.charseqs using the character embeddings.
+            # TODO: Embed self.charseqs (list of unique words in the batch) using the character embeddings.
 
             # TODO: Use `tf.nn.bidirectional_dynamic_rnn` to process embedded self.charseqs using
             # a GRU cell of dimensionality `args.cle_dim`.
 
-            # TODO: Sum the resulting fwd and bwd state to generate character-level word embedding (CLE).
+            # TODO: Sum the resulting fwd and bwd state to generate character-level word embedding (CLE)
+            # of unique words in the batch.
 
-            # TODO: For each word, use suitable CLE according to self.charseq_ids.
+            # TODO: Generate CLEs of all words in the batch by indexing the just computed embeddings
+            # by self.charseq_ids (using tf.nn.embedding_lookup).
 
             # TODO: Concatenate the word embeddings (computed above) and the CLE (in this order).
 

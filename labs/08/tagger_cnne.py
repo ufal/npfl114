@@ -38,7 +38,7 @@ class Network:
 
             # TODO: Generate character embeddings for num_chars of dimensionality args.cle_dim.
 
-            # TODO: Embed self.charseqs using the character embeddings.
+            # TODO: Embed self.charseqs (list of unique words in the batch) using the character embeddings.
 
             # TODO: For kernel sizes of {2..args.cnne_max}, do the following:
             # - use `tf.layers.conv1d` on input embedded characters, with given kernel size
@@ -47,8 +47,11 @@ class Network:
             #   of size `args.cnne_filters` for every word.
 
             # TODO: Concatenate the computed features (in the order of kernel sizes 2..args.cnne_max).
-            # Consequently, each word is represented using convolutional embedding (CNNE) of size
-            # `(args.cnne_max-1)*args.cnne_filters`.
+            # Consequently, each word from `self.charseqs` is represented using convolutional embedding
+            # (CNNE) of size `(args.cnne_max-1)*args.cnne_filters`.
+
+            # TODO: Generate CNNEs of all words in the batch by indexing the just computed embeddings
+            # by self.charseq_ids (using tf.nn.embedding_lookup).
 
             # TODO: Concatenate the word embeddings (computed above) and the CNNE (in this order).
 
