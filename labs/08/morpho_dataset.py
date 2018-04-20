@@ -51,7 +51,7 @@ class MorphoDataset:
             self._factors.append(self._Factor(train._factors[f] if train else None))
 
         # Load the sentences
-        with open(filename, "r") as file:
+        with open(filename, "r", encoding="utf-8") as file:
             in_sentence = False
             for line in file:
                 line = line.rstrip("\r\n")
