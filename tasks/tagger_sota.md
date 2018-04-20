@@ -25,6 +25,12 @@ test set accuracy. If your test set accuracy surpasses 90%, you will be
 awarded 4 points; the rest 6 points will be distributed depending on relative
 ordering of your solutions. Any solution surpassing 95.89% will get additional 5 points.
 
+You can start with the
+[tagger_sota.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_sota.py)
+template, which loads the PDT data, loads the morphological analysers data, and
+finally generates the predictions in the required format (which is exactly the
+same as the input format).
+
 To submit the test set annotations in ReCodEx, use the supplied
 [tagger_sota_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_sota_recodex.py)
 script. You need to provide at least two arguments – the first is the path to
