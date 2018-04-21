@@ -32,7 +32,7 @@ class Network:
             # `tf.nn.embedding_lookup`.
 
             # TODO: Using tf.nn.bidirectional_dynamic_rnn, process the embedded inputs.
-            # Use given rnn_cell (different for fwd and bwd direction).
+            # Use given rnn_cell (different for fwd and bwd direction) and self.sentence_lens.
 
             # TODO: Concatenate the outputs for fwd and bwd directions (in the third dimension).
 
