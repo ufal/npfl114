@@ -24,6 +24,9 @@ This task is an open-data competition and the points will be awarded depending o
 test set accuracy. If your test set accuracy surpasses 90%, you will be
 awarded 4 points; the rest 6 points will be distributed depending on relative
 ordering of your solutions. Any solution surpassing 95.89% will get additional 5 points.
+The evaluation (using for example development data) can be performed by
+[morpho_eval.py](https://github.com/ufal/npfl114/tree/master/labs/09/morpho_eval.py)
+script.
 
 You can start with the
 [tagger_sota.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_sota.py)
