@@ -9,3 +9,5 @@ After submitting the task to ReCodEx, you can experiment with the three
 available datasets (`fashion`, `cifar-cars` and `mnist-data`) and maybe try
 different latent variable dimensionality. The generated images are available in
 TensorBoard logs.
+
+You can also continue with `dcgan` task.
