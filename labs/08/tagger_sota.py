@@ -155,7 +155,7 @@ if __name__ == "__main__":
         network.evaluate("dev", dev, args.batch_size)
 
     # Predict test data
-    with open("{}/tagger_sota_test.txt".format(args.logdir), "w") as test_file:
+    with open("{}/tagger_sota_test.txt".format(args.logdir), "w", encoding="utf-8") as test_file:
         forms = test.factors[test.FORMS].strings
         tags = network.predict(test, args.batch_size)
         for s in range(len(forms)):
