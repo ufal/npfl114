@@ -42,7 +42,7 @@ class Network:
                 # TODO: Define a discriminator as a sequence of:
                 # - flattening layer
                 # - dense layer with 128 neurons and ReLU activation
-                # - dense layer with 1 neuron without activaiton
+                # - dense layer with 1 neuron without activation
                 #
                 # Consider the last hidden layer output to be the logit of whether the input
                 # images comes from real data. Change its shape to remove the last dimension
