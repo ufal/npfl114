@@ -155,6 +155,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", default="mnist-data", type=str, help="Dataset [fasion|cifar-cars|mnist-data].")
     parser.add_argument("--epochs", default=100, type=int, help="Number of epochs.")
     parser.add_argument("--recodex", default=False, action="store_true", help="ReCodEx mode.")
+    parser.add_argument("--recodex_validation_size", default=None, type=int, help="Validation size in ReCodEx mode.")
     parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
     parser.add_argument("--z_dim", default=100, type=int, help="Dimension of Z.")
     args = parser.parse_args()
@@ -170,7 +171,7 @@ if __name__ == "__main__":
     # Load the data
     from tensorflow.examples.tutorials import mnist
     if args.recodex:
-        data = mnist.input_data.read_data_sets(".", reshape=False, validation_size=50000, seed=42)
+        data = mnist.input_data.read_data_sets(".", reshape=False, validation_size=args.recodex_validation_size, seed=42)
     elif args.dataset == "fashion":
         data = mnist.input_data.read_data_sets("fashion", reshape=False, validation_size=0, seed=42,
                                                source_url="http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/")
