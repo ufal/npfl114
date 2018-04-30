@@ -30,7 +30,7 @@ class Network:
                 # - dense layer with 500 neurons and ReLU activation
                 #
                 # Using the last hidden layer output, produce two vectors of size self.z_dim,
-                # using a dense layer without activation, the first being `z_mean` and the second
+                # using two dense layers without activation, the first being `z_mean` and the second
                 # `z_log_variance`.
                 return z_mean, z_log_variance
 
