@@ -72,7 +72,8 @@ class Network:
             # Training
             global_step = tf.train.create_global_step()
             # TODO: Create `self.discriminator_training` as an AdamOptimizer.minimize
-            # for discriminator_loss and variables in "discriminator" namespace.
+            # for discriminator_loss and variables in the "discriminator" namespace using
+            # the option var_list=tf.global_variables("discriminator").
             # Do *not* pass global_step as argument to AdamOptimizer.minimize.
 
             # TODO: Create `self.generator_training` as an AdamOptimizer.minimize
