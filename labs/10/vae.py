@@ -30,7 +30,7 @@ class Network:
                 # - dense layer with 500 neurons and ReLU activation
                 #
                 # Using the last hidden layer output, produce two vectors of size self.z_dim,
-                # using a dense layer without activation, the first being `z_mean` and the second
+                # using two dense layers without activation, the first being `z_mean` and the second
                 # `z_log_variance`.
                 return z_mean, z_log_variance
 
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     # Parse arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", default=50, type=int, help="Batch size.")
-    parser.add_argument("--dataset", default="mnist-data", type=str, help="Dataset [fasion|cifar-cars|mnist-data].")
+    parser.add_argument("--dataset", default="mnist-data", type=str, help="Dataset [fashion|cifar-cars|mnist-data].")
     parser.add_argument("--epochs", default=100, type=int, help="Number of epochs.")
     parser.add_argument("--recodex", default=False, action="store_true", help="ReCodEx mode.")
     parser.add_argument("--recodex_validation_size", default=None, type=int, help="Validation size in ReCodEx mode.")
