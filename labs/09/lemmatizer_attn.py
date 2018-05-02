@@ -132,6 +132,7 @@ class Network:
                     outputs = # TODO: Use tf.argmax to choose most probable class (supply parameter `output_type=tf.int32`).
                     next_input = # TODO: Embed `outputs` using target_embeddings and pass it to with_attention.
                     finished = # TODO: True where outputs==eow, False otherwise
+                               # Use tf.equal for the comparison, Python's '==' is not overloaded
                     return outputs, states, next_input, finished
             self.predictions, _, self.prediction_lens = tf.contrib.seq2seq.dynamic_decode(
                 DecoderPrediction(), maximum_iterations=tf.reduce_max(source_lens) + 10)
