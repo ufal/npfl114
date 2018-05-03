@@ -71,8 +71,8 @@ class Network:
                 def initialize(self, name=None):
                     finished = # TODO: False if target_lens > 0, True otherwise
                     states = # TODO: Initial decoder state to use
-                    inputs = # TODO: embedded BOW characters of shape [self.batch_size]. You can use
-                             # tf.fill to generate BOWs of appropriate size.
+                    inputs = # TODO: embedded BOW characters of shape [self.batch_size] using target embeddings.
+                             # You can use tf.fill to generate BOWs of appropriate size.
                     return finished, inputs, states
 
                 def step(self, time, inputs, states, name=None):
@@ -97,8 +97,8 @@ class Network:
                 def initialize(self, name=None):
                     finished = # TODO: False of shape [self.batch_size].
                     states = # TODO: Initial decoder state to use.
-                    inputs = # TODO: embedded BOW characters of shape [self.batch_size]. You can use
-                             # tf.fill to generate BOWs of appropriate size.
+                    inputs = # TODO: embedded BOW characters of shape [self.batch_size] using target embeddings.
+                             # You can use tf.fill to generate BOWs of appropriate size.
                     return finished, inputs, states
 
                 def step(self, time, inputs, states, name=None):
