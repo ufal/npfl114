@@ -14,3 +14,4 @@ and illustrates the overall usage.
 
 During evaluation in ReCodEx, three different random seeds will be employed, and
 you will get a point for each setting where you reach the required reward.
+The time limit for each test is 5 minutes.
