@@ -6,7 +6,7 @@ TensorFlow.
 Use the supplied [mountain_car_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/mountain_car_evaluator.py)
 module to interact with the discretized environment. The environment
 methods and properties are described in the `monte_carlo` assignment.
-Your goal is to reach an average reward of -130 during 100 evaluation episodes.
+Your goal is to reach an average reward of -140 during 100 evaluation episodes.
 
 You can start with the [q_learning.py](https://github.com/ufal/npfl114/tree/master/labs/11/q_learning.py)
 template, which parses several useful parameters, creates the environment
