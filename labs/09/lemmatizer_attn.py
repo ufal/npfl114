@@ -103,7 +103,8 @@ class Network:
                 def step(self, time, inputs, states, name=None):
                     outputs, states = # TODO: Run the decoder GRU cell using inputs and states.
                     outputs = # TODO: Apply the decoder_layer on outputs.
-                    next_input = # TODO: Next input is with_attention called on words with index `time` in target_embedded.
+                    next_input = # TODO: Next input is with_attention called on character embeddings
+                                 # with index `time` in target_embedded.
                     finished = # TODO: False if target_lens > time + 1, True otherwise.
                     return outputs, states, next_input, finished
             output_layer, _, _ = tf.contrib.seq2seq.dynamic_decode(DecoderTraining())

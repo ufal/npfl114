@@ -78,7 +78,7 @@ class Network:
                 def step(self, time, inputs, states, name=None):
                     outputs, states = # TODO: Run the decoder GRU cell using inputs and states.
                     outputs = # TODO: Apply the decoder_layer on outputs.
-                    next_input = # TODO: Next input are words with index `time` in target_embedded.
+                    next_input = # TODO: Next input are character embeddings with index `time` in target_embedded.
                     finished = # TODO: False if target_lens > time + 1, True otherwise.
                     return outputs, states, next_input, finished
             output_layer, _, _ = tf.contrib.seq2seq.dynamic_decode(DecoderTraining())
