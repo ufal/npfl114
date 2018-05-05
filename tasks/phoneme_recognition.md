@@ -23,7 +23,7 @@ ordering of your solutions.
 You can start with the
 [phoneme_recognition.py](https://github.com/ufal/npfl114/tree/master/labs/11/phoneme_recognition.py)
 template. You will need to implement the following:
-- The CTC loss and CTC decoder employ sparse tensor -- therefore, start by
+- The CTC loss and CTC decoder employ sparse tensor – therefore, start by
   [studying them](https://www.tensorflow.org/api_guides/python/sparse_ops).
 - Convert the input phoneme sequences into sparse representation
   (`tf.where` and `tf.gather_nd` are useful).
