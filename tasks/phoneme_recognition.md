@@ -18,7 +18,8 @@ test set performance. The generated phoneme sequences are evaluated using edit d
 phoneme sequence, normalized by the length of the phoneme sequence
 (i.e., exactly as `tf.edit_distance`). If your test set score surpasses 50%, you will be
 awarded 6 points; the rest 6 points will be distributed depending on relative
-ordering of your solutions.
+ordering of your solutions. An evaluation (using for example development data)
+can be performed by [timit_mfcc26_eval.py](https://github.com/ufal/npfl114/tree/master/labs/11/timit_mfcc26_eval.py).
 
 You can start with the
 [phoneme_recognition.py](https://github.com/ufal/npfl114/tree/master/labs/11/phoneme_recognition.py)
