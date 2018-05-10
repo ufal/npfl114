@@ -5,7 +5,7 @@ import gym
 import numpy as np
 
 class GymEnvironment:
-    def __init__(self, env, bins, separators):
+    def __init__(self, env, bins=None, separators=None):
         self._env = gym.make(env)
         self._env.seed(42)
 
@@ -16,11 +16,14 @@ class GymEnvironment:
         self._episode_reward = 0
         self._episode_rewards = []
 
-    def _discretize(self, observation):
-        buckets = np.array(observation, dtype=np.int)
-        for i in range(len(observation)):
-            buckets[i] = np.digitize(observation[i], self._separators[i])
-        return np.polyval(buckets, self._bins)
+    def _maybe_discretize(self, observation):
+        if self._bins is not None:
+            buckets = np.array(observation, dtype=np.int)
+            for i in range(len(observation)):
+                buckets[i] = np.digitize(observation[i], self._separators[i])
+            observation = np.polyval(buckets, self._bins)
+
+        return observation
 
     @property
     def states(self):
@@ -38,7 +41,7 @@ class GymEnvironment:
         if start_evaluate and self._evaluating_from is None:
             self._evaluating_from = self.episode
 
-        return self._discretize(self._env.reset())
+        return self._maybe_discretize(self._env.reset())
 
     def step(self, action):
         observation, reward, done, info = self._env.step(action)
@@ -56,7 +59,7 @@ class GymEnvironment:
 
             self._episode_reward = 0
 
-        return self._discretize(observation), reward, done, info
+        return self._maybe_discretize(observation), reward, done, info
 
     def render(self):
         self._env.render()
