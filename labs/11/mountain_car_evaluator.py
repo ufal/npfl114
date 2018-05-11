@@ -2,7 +2,7 @@
 import gym
 import numpy as np
 
-import gym_discrete_evaluator
+import gym_evaluator
 
 gym.envs.register(
     id='MountainCarLimit1000-v0',
@@ -18,6 +18,6 @@ def environment(discrete=True):
             np.linspace(-1.2, 0.6, num=bins + 1)[1:-1],   # car position
             np.linspace(-0.07, 0.07, num=bins + 1)[1:-1], # car velocity
         ]
-        return gym_discrete_evaluator.GymEnvironment("MountainCarLimit1000-v0", bins, separators)
+        return gym_evaluator.GymEnvironment("MountainCarLimit1000-v0", bins, separators)
 
-    return gym_discrete_evaluator.GymEnvironment("MountainCarLimit1000-v0")
+    return gym_evaluator.GymEnvironment("MountainCarLimit1000-v0")
