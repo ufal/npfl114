@@ -27,7 +27,16 @@ class GymEnvironment:
 
     @property
     def states(self):
-        return self._bins ** len(self._separators)
+        if self._bins is not None:
+            return self._bins ** len(self._separators)
+        raise RuntimeError("Continuous environments have infinitely many states")
+
+    @property
+    def state_shape(self):
+        if self._bins is not None:
+            return []
+        else:
+            return list(self._env.observation_space.shape)
 
     @property
     def actions(self):
