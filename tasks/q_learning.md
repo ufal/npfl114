@@ -1,5 +1,5 @@
 Solve the [MountainCar-v0 environment](https://gym.openai.com/envs/MountainCar-v0)
-environment from the [OpenAI Gym](https://gym.openai.com/) using the Monte Carlo
+environment from the [OpenAI Gym](https://gym.openai.com/) using the Q-learning
 reinforcement learning algorithm. Note that this task does not require
 TensorFlow.
 
@@ -11,8 +11,8 @@ Your goal is to reach an average reward of -140 during 100 evaluation episodes.
 You can start with the [q_learning.py](https://github.com/ufal/npfl114/tree/master/labs/12/q_learning.py)
 template, which parses several useful parameters, creates the environment
 and illustrates the overall usage. Note that setting hyperparameters of
-Q-learning is tricky – I usualy start with a larger value of ε (like 0.5) an
-then gradually dimish it, to almost zero.
+Q-learning is a bit tricky – I usualy start with a larger value of ε (like 0.2 or even 0.5) an
+then gradually decrease it to almost zero.
 
 During evaluation in ReCodEx, three different random seeds will be employed, and
 you will get a point for each setting where you reach the required reward.
