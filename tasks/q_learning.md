@@ -10,7 +10,9 @@ Your goal is to reach an average reward of -140 during 100 evaluation episodes.
 
 You can start with the [q_learning.py](https://github.com/ufal/npfl114/tree/master/labs/12/q_learning.py)
 template, which parses several useful parameters, creates the environment
-and illustrates the overall usage.
+and illustrates the overall usage. Note that setting hyperparameters of
+Q-learning is tricky – I usualy start with a larger value of ε (like 0.5) an
+then gradually dimish it, to almost zero.
 
 During evaluation in ReCodEx, three different random seeds will be employed, and
 you will get a point for each setting where you reach the required reward.
