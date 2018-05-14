@@ -4,7 +4,8 @@ reinforcement learning algorithm. Note that this task does not require
 TensorFlow.
 
 Use the supplied [cart_pole_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/cart_pole_evaluator.py)
-module to interact with the discretized environment. The environment has the
+module (depending on [gym_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/gym_evaluator.py)
+to interact with the discretized environment. The environment has the
 following methods and properties:
 - `states`: number of states of the environment
 - `actions`: number of actions of the environment

@@ -3,7 +3,8 @@ environment from the [OpenAI Gym](https://gym.openai.com/) using the REINFORCE
 algorithm.
 
 Use the supplied [cart_pole_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/cart_pole_evaluator.py)
-module to interact with the _continuous_ environment. The environment
+module (depending on [gym_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/gym_evaluator.py)
+to interact with the _continuous_ environment. The environment
 has the same properties and methods as the discrete environment described
 in `monte_carlo` task, with the following additions:
 - the continuous environment has to be created with `discrete=False` option

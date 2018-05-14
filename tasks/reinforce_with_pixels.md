@@ -1,10 +1,11 @@
-/This is an experimental task which might require a lot of time to solve./
+_This is an experimental task which might require a lot of time to solve._
 
 The goal of this assignment is to extend the `reinforce_with_baseline`
 assignment to make it work on pixel inputs.
 
 The supplied [cart_pole_pixels_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/12/cart_pole_pixels_evaluator.py)
-module generates a pixel representation of the `CartPole` environment
+module (depending on [gym_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/gym_evaluator.py)
+generates a pixel representation of the `CartPole` environment
 as 80×80 image with three channels, with each channel representing one time step
 (i.e., the current situation and the two previous ones).
 

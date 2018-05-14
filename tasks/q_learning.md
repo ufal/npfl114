@@ -4,7 +4,8 @@ reinforcement learning algorithm. Note that this task does not require
 TensorFlow.
 
 Use the supplied [mountain_car_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/mountain_car_evaluator.py)
-module to interact with the discretized environment. The environment
+module (depending on [gym_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/gym_evaluator.py)
+to interact with the discretized environment. The environment
 methods and properties are described in the `monte_carlo` assignment.
 Your goal is to reach an average reward of -140 during 100 evaluation episodes.
 
