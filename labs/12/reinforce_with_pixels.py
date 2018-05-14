@@ -18,8 +18,8 @@ class Network:
             self.states = tf.placeholder(tf.float32, [None] + state_shape)
             # Chosen actions (used for training)
             self.actions = tf.placeholder(tf.int32, [None])
-            # Observed rewards (used for training)
-            self.rewards = tf.placeholder(tf.float32, [None])
+            # Observed returns (used for training)
+            self.returns = tf.placeholder(tf.float32, [None])
 
             # TODO: Compute the `logits`, `self.probabilities` and `baseline`.
 
@@ -46,9 +46,9 @@ class Network:
                     tf.contrib.summary.scalar("train/loss_softmax", loss_softmax),
                     tf.contrib.summary.scalar("train/loss_baseline", loss_baseline),
                     tf.contrib.summary.scalar("train/loss_l2", loss_l2),
-                    tf.contrib.summary.scalar("train/reward", tf.reduce_mean(self.rewards)),
+                    tf.contrib.summary.scalar("train/return", tf.reduce_mean(self.returns)),
                     tf.contrib.summary.scalar("train/baseline", tf.reduce_mean(baseline)),
-                    tf.contrib.summary.scalar("train/reward-baseline", tf.reduce_mean(self.rewards - baseline)),
+                    tf.contrib.summary.scalar("train/return-baseline", tf.reduce_mean(self.returns - baseline)),
                     tf.contrib.summary.scalar("train/gradient_norm", gradient_norm),
                     tf.contrib.summary.scalar("train/logit_entropy", logit_entropy),
                     tf.contrib.summary.histogram("train/probabilities", self.probabilities),
@@ -62,8 +62,8 @@ class Network:
     def predict(self, states):
         return self.session.run(self.probabilities, {self.states: states})
 
-    def train(self, states, actions, rewards):
-        self.session.run([self.training, self.summaries], {self.states: states, self.actions: actions, self.rewards: rewards})
+    def train(self, states, actions, returns):
+        self.session.run(self.training, {self.states: states, self.actions: actions, self.returns: returns})
 
 if __name__ == "__main__":
     import argparse
@@ -107,7 +107,7 @@ if __name__ == "__main__":
         evaluation = ...
 
         # Train for a batch of episodes
-        batch_states, batch_actions, batch_rewards = [], [], []
+        batch_states, batch_actions, batch_returns = [], [], []
         for _ in range(args.batch_size):
             # Perform episode
             state = env.reset(evaluating)
@@ -128,9 +128,10 @@ if __name__ == "__main__":
 
                 state = next_state
 
-            # TODO(reinforce): sum (and optionally discount) `rewards`
+            # TODO(reinforce): Compute returns from rewards (by summing them up and
+            # applying discount by `args.gamma`).
 
-            # TODO(reinforce): Extend the batch_{states,actions,rewards} using the episodic
-            # {states,actions,rewards}.
+            # TODO(reinforce): Extend the batch_{states,actions,returns} using the episodic
+            # {states,actions,returns}.
 
-        # TODO(reinforce): Perform network training using batch_{states,actions,rewards}.
+        # TODO(reinforce): Perform network training using batch_{states,actions,returns}.

@@ -18,8 +18,8 @@ class Network:
             self.states = tf.placeholder(tf.float32, [None] + state_shape)
             # Chosen actions (used for training)
             self.actions = tf.placeholder(tf.int32, [None])
-            # Observed rewards (used for training)
-            self.rewards = tf.placeholder(tf.float32, [None])
+            # Observed returns (used for training)
+            self.returns = tf.placeholder(tf.float32, [None])
 
             # Compute the action logits
 
@@ -35,7 +35,7 @@ class Network:
 
             # TODO: Compute `loss`, as a softmax cross entropy loss of self.actions and `logits`.
             # Because this is a REINFORCE algorithm, it is crucial to weight the loss of batch
-            # elements using `self.rewards` -- this can be accomplished using the `weights` parameter.
+            # elements using `self.returns` -- this can be accomplished using the `weights` parameter.
 
             global_step = tf.train.create_global_step()
             self.training = tf.train.AdamOptimizer(args.learning_rate).minimize(loss, global_step=global_step, name="training")
@@ -46,8 +46,8 @@ class Network:
     def predict(self, states):
         return self.session.run(self.probabilities, {self.states: states})
 
-    def train(self, states, actions, rewards):
-        self.session.run(self.training, {self.states: states, self.actions: actions, self.rewards: rewards})
+    def train(self, states, actions, returns):
+        self.session.run(self.training, {self.states: states, self.actions: actions, self.returns: returns})
 
 if __name__ == "__main__":
     # Fix random seed
@@ -79,7 +79,7 @@ if __name__ == "__main__":
         evaluation = ...
 
         # Train for a batch of episodes
-        batch_states, batch_actions, batch_rewards = [], [], []
+        batch_states, batch_actions, batch_returns = [], [], []
         for _ in range(args.batch_size):
             # Perform episode
             state = env.reset(evaluating)
@@ -100,9 +100,10 @@ if __name__ == "__main__":
 
                 state = next_state
 
-            # TODO: sum (and optionally discount) `rewards`
+            # TODO: Compute returns from rewards (by summing them up and
+            # applying discount by `args.gamma`).
 
-            # TODO: Extend the batch_{states,actions,rewards} using the episodic
-            # {states,actions,rewards}.
+            # TODO: Extend the batch_{states,actions,returns} using the episodic
+            # {states,actions,returns}.
 
-        # TODO: Perform network training using batch_{states,actions,rewards}.
+        # TODO: Perform network training using batch_{states,actions,returns}.
