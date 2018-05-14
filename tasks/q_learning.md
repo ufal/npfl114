@@ -14,6 +14,6 @@ and illustrates the overall usage. Note that setting hyperparameters of
 Q-learning is a bit tricky – I usualy start with a larger value of ε (like 0.2 or even 0.5) an
 then gradually decrease it to almost zero.
 
-During evaluation in ReCodEx, three different random seeds will be employed, and
+During evaluation in ReCodEx, two different random seeds will be employed, and
 you will get a point for each setting where you reach the required reward.
 The time limit for each test is 5 minutes.

@@ -16,6 +16,6 @@ template. Note that setting hyperparameters of
 Q-network is even more tricky than for Q-learning – if you try to vary the
 architecture, it might not learn at all.
 
-During evaluation in ReCodEx, three different random seeds will be employed, and
+During evaluation in ReCodEx, two different random seeds will be employed, and
 you will get a point for each setting where you reach the required reward.
 The time limit for each test is 10 minutes.
