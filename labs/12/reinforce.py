@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
                 next_state, reward, done, _ = env.step(action)
 
-                # TODO: Update states, actions and rewards
+                # TODO: Accumulate states, actions and rewards.
 
                 state = next_state
 
