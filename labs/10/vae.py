@@ -68,7 +68,7 @@ class Network:
             # N(z_mean, z_sd) and N(0, 1), utilizing `tf.distributions.kl_divergence`
             # and `tf.distributions.Normal`.
 
-            # TODO: Define `self.loss` as a weighted combination of
+            # TODO: Define `self.loss` as a weighted sum of
             # reconstruction_loss (weight is the number of pixels in an image)
             # and latent_loss (weight is the dimensionality of the latent variable z).
 
