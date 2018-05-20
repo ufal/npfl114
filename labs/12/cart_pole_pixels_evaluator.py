@@ -7,6 +7,7 @@ import numpy as np
 class CartPolePixelsEvaluator:
     def __init__(self):
         self._env = gym.make("CartPole-v1")
+        self._env.seed(42)
         self._iw = None
 
         self._images = 3
