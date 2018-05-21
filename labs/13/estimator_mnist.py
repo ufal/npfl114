@@ -60,7 +60,8 @@ if __name__ == "__main__":
     model = tf.estimator.Estimator(
         model_fn=mnist_model,
         model_dir=args.logdir,
-        config=tf.estimator.RunConfig(session_config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
+        config=tf.estimator.RunConfig(tf_random_seed=42,
+                                      session_config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
                                                                     intra_op_parallelism_threads=args.threads)),
         params={
             "optimizer": tf.train.AdamOptimizer,
@@ -75,7 +76,8 @@ if __name__ == "__main__":
     for i in range(args.epochs):
         # TODO: Define input_fn using `tf.estimator.inputs.numpy_input_fn`.
         # As `x`, pass "images": mnist.train images, as `y` pass `mnist.train.labels.astype(np.int)`,
-        # use specified batch_size, one epoch, and shuffle data with queue capacity 60000.
+        # use specified batch_size, one epoch. Normally we would shuffle data with queue capacity 60000,
+        # but random seed cannot be passed to this method; hence, do not shuffle data.
         # TODO: Train one epoch using the defined input_fn.
 
 
