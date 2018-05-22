@@ -97,7 +97,7 @@ if __name__ == "__main__":
 
     # Load the data
     from tensorflow.examples.tutorials import mnist
-    mnist = mnist.input_data.read_data_sets("mnist-data", reshape=False, seed=42)
+    mnist = mnist.input_data.read_data_sets(".", reshape=False, seed=42)
 
     # TODO: Create `train` dataset using `from_tensor_slices`, shuffle it using a buffer of 60000 and generate batches of size
     # args.batch_size. Note that `mnist.train.labels` must be converted to `np.int` (for example using

@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
     # Load the data
     from tensorflow.examples.tutorials import mnist
-    mnist = mnist.input_data.read_data_sets("mnist-data", reshape=False, seed=42)
+    mnist = mnist.input_data.read_data_sets(".", reshape=False, seed=42)
 
     # Train
     for i in range(args.epochs):
