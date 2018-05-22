@@ -63,6 +63,12 @@ class ConvNet:
 
     # Return hyperparameters and their ranges and distributions.
     def hyperparameters(self):
+        class Range():
+            def __init__(self, distribution, start, end):
+                self.distribution = distribution
+                self.start = start
+                self.end = end
+
         return {
             "conv1_channels": Range("int", 1, 16),      # [1, ..., 16]
             "conv1_kernel_size": Range("int", 1, 3),    # [1, 2, 3]
