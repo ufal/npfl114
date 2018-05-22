@@ -83,8 +83,8 @@ if __name__ == "__main__":
 
         # TODO: Define validation input_fn similarly, but without suffling.
         # TODO: Evaluate the validation data, using `model.evaluate` with `name="dev"` option
-        # and print its return value.
+        # and print its return value (which is a dictionary with accuracy, loss and global_step).
 
     # TODO: Define input_fn for test set as for validation data.
     # TODO: Evaluate the test set using `model.evaluate` with `name="test"` option
-    # and print its return value.
+    # and print its return value (which is a dictionary with accuracy, loss and global_step).
