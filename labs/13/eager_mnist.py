@@ -61,7 +61,7 @@ class Network(tfe.Network):
 
         # TODO: Iterate over images and labels using `tfe.Iterator` in the `dataset`.
         for ...:
-            # TODO: Compute `logits` using `self(images, training=True)`
+            # TODO: Compute `logits` using `self(images, training=False)`
 
             # TODO: Update accuracy metric using the `labels` and predictions from `logits`
 
