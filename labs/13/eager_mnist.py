@@ -20,7 +20,8 @@ class Network(tfe.Network):
         # - a MaxPooling2D layer with pooling size 2 and stride 2
         # - a Dense layer with 256 neurons and ReLU activation
         # - a Dense layer with self.LABELS neurons and no activation
-        # - a Dropout layer with 0.5 dropout rate
+        # - a Dropout layer with 0.5 dropout rate (without explicit seed)
+        # - a Flatten layer
 
         self.global_step = tf.train.create_global_step()
         self.optimizer = tf.train.AdamOptimizer()
@@ -34,7 +35,7 @@ class Network(tfe.Network):
         # - max pooling
         # - flattening layer
         # - dense layer with 256 neurons
-        # - dropout layer
+        # - dropout layer, utilizing `training` parameter
         # - dense layer with self.LABELS neurons
         # Return the computed logits.
 
@@ -99,11 +100,13 @@ if __name__ == "__main__":
     from tensorflow.examples.tutorials import mnist
     mnist = mnist.input_data.read_data_sets(".", reshape=False, seed=42)
 
-    # TODO: Create `train` dataset using `from_tensor_slices`, shuffle it using a buffer of 60000 and generate batches of size
-    # args.batch_size. Note that `mnist.train.labels` must be converted to `np.int` (for example using
-    # mnist.train.labels.astype(np.int) call).
+    # TODO: Create `train` dataset using `from_tensor_slices`, shuffle it
+    # (without explicit seed) using a buffer of 60000 and generate batches of
+    # size args.batch_size. Note that `mnist.train.labels` must be converted to
+    # `np.int` (for example using mnist.train.labels.astype(np.int) call).
 
-    # TODO: Create `dev` and `test` datasets similarly, but without shuffling.
+    # TODO: Create `dev` and `test` datasets similarly, but without shuffling
+    # and using `mnist.validation` and `mnist.test`, respectively.
 
     # Construct the network
     network = Network(args)
