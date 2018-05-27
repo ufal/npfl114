@@ -20,9 +20,9 @@ evaluation period begins only after you call `reset` with `start_evaluate`.
 
 During evaluation in ReCodEx, two different random seeds will be employed, and
 you will get a point for each setting where you reach the required reward.
-The time limit for each test is 10 minutes.
+The time limit for each test is 15 minutes.
 
-Because the time limit is 10 minutes per episode, you cannot probably train
+Because the time limit is 15 minutes per test, you cannot probably train
 the model directly in ReCodEx. Instead, you need to save the trained model and embed
 it in your Python solution (see the `gym_cartpole` assignment for an example
 of saving the model and then embedding it in a Python source).
