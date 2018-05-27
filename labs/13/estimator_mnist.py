@@ -84,10 +84,10 @@ if __name__ == "__main__":
         # the `num_epochs` specified when defining `input_fn`.
 
 
-        # TODO: Define validation input_fn similarly, but without suffling.
+        # TODO: Define validation input_fn similarly, but without suffling and using `mnist.validation`.
         # TODO: Evaluate the validation data, using `model.evaluate` with `name="dev"` option
         # and print its return value (which is a dictionary with accuracy, loss and global_step).
 
-    # TODO: Define input_fn for test set as for validation data.
+    # TODO: Define input_fn for one epoch of `mnist.test`, without shuffling.
     # TODO: Evaluate the test set using `model.evaluate` with `name="test"` option
     # and print its return value (which is a dictionary with accuracy, loss and global_step).
