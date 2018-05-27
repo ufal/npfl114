@@ -78,7 +78,10 @@ if __name__ == "__main__":
         # As `x`, pass "images": mnist.train images, as `y` pass `mnist.train.labels.astype(np.int)`,
         # use specified batch_size, one epoch. Normally we would shuffle data with queue capacity 60000,
         # but random seed cannot be passed to this method; hence, do _not_ shuffle data.
-        # TODO: Train one epoch using the defined input_fn.
+
+        # TODO: Train one epoch with `model.train` using the defined input_fn.
+        # Note that `steps` argument should be either left out or set to `None` to respect
+        # the `num_epochs` specified when defining `input_fn`.
 
 
         # TODO: Define validation input_fn similarly, but without suffling.
