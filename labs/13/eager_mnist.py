@@ -103,7 +103,7 @@ if __name__ == "__main__":
     # TODO: Create `train` dataset using `from_tensor_slices`, shuffle it
     # (without explicit seed) using a buffer of 60000 and generate batches of
     # size args.batch_size. Note that `mnist.train.labels` must be converted to
-    # `np.int` (for example using mnist.train.labels.astype(np.int) call).
+    # `np.int64` (for example using mnist.train.labels.astype(np.int64) call).
 
     # TODO: Create `dev` and `test` datasets similarly, but without shuffling
     # and using `mnist.validation` and `mnist.test`, respectively.

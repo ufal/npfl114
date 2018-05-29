@@ -75,7 +75,7 @@ if __name__ == "__main__":
     # Train
     for i in range(args.epochs):
         # TODO: Define input_fn using `tf.estimator.inputs.numpy_input_fn`.
-        # As `x`, pass "images": mnist.train images, as `y` pass `mnist.train.labels.astype(np.int)`,
+        # As `x`, pass "images": mnist.train images, as `y` pass `mnist.train.labels.astype(np.int64)`,
         # use specified batch_size, one epoch. Normally we would shuffle data with queue capacity 60000,
         # but random seed cannot be passed to this method; hence, do _not_ shuffle data.
 
