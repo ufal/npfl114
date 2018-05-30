@@ -54,28 +54,27 @@ are to Deep Learning Book, unless stated otherwise.
     - Stride and padding schemes _[Section 9.5 up to page 349, notably Equation (9.8)]_
     - Max pooling and average pooling _[Section 9.3]_
     - AlexNet _[general architecture, without knowing specific constants, i.e.,
-      the following image which is taken from **Alex Krizhevsky et al.: ImageNet
-      Classification with Deep Convolutional Neural Networks**
-      https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf ]_
+      the following image which is taken from [**Alex Krizhevsky et al.:
+      ImageNet Classification with Deep Convolutional Neural
+      Networks**](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)]_
 
       ![AlexNet](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/exam/images/alexnet.svg)
     - ResNet _[only the important ideas and overall architecture of ResNet 151,
-      without specific constants; the following is taken from **Kaiming He et
-      al.: Deep Residual Learning for Image Recognition**
-      https://arxiv.org/abs/1512.03385 ]_
+      without specific constants; the following is taken from [**Kaiming He et
+      al.: Deep Residual Learning for Image Recognition**](https://arxiv.org/abs/1512.03385)]_
 
       ![ResNet Block](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/exam/images/resnet-block.svg)
       ![ResNet Overview](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/exam/images/resnet-table.svg)
     - Object detection using Fast R-CNN _[overall architecture, RoI-pooling
       layer, parametrization of generated bounding boxes, used loss function;
-      **Ross Girshick: Fast R-CNN** https://arxiv.org/abs/1504.08083 ]_
+      [**Ross Girshick: Fast R-CNN**](https://arxiv.org/abs/1504.08083)]_
     - Proposing RoIs using Faster R-CNN _[overall architecture, the differences
       and similarities of Fast R-CNN and the proposal network from Faster R-CNN;
-      **Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun: Faster R-CNN: Towards
-      Real-Time Object Detection with Region Proposal Networks**
-      https://arxiv.org/abs/1506.01497 ]_
+      [**Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun: Faster R-CNN: Towards
+      Real-Time Object Detection with Region Proposal Networks**](https://arxiv.org/abs/1506.01497)]_
     - Image segmentation with Mask R-CNN _[overall architecture, RoI-align layer;
-      **Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick: Mask R-CNN** https://arxiv.org/abs/1703.06870 ]_
+      [**Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick: Mask
+      R-CNN**](https://arxiv.org/abs/1703.06870)]_
 
 - Recurrent networks:
     - Using RNNs to represent sequences _[Figure 10.2 with `h` as output;
@@ -87,9 +86,9 @@ are to Deep Learning Book, unless stated otherwise.
       should know how the network is trained and also how it is later used to
       predict sequences]_
     - Stacked (or multi-layer) LSTM _[Figure 10.13a of Section 10.10.5; more
-      details (not required for the exam) can be found in **Alex Graves:
-      Generating Sequences With Recurrent Neural Networks**
-      https://arxiv.org/abs/1308.0850 ]_
+      details (not required for the exam) can be found in [**Alex Graves:
+      Generating Sequences With Recurrent Neural
+      Networks**](https://arxiv.org/abs/1308.0850)]_
     - The problem of vanishing and exploding gradient _[Section 10.7]_
     - Long Shoft-Term Memory (LSTM) _[Section 10.10.1]_
     - Gated Recurrent Unit (GRU) _[Section 10.10.2]_
@@ -99,40 +98,40 @@ are to Deep Learning Book, unless stated otherwise.
   (there is usually nothing special, but if I ask what happens if a word occurs
   multiple time in a sentence, you should be able to answer)]_
     - The `word2vec` word embeddings
-        - CBOW and Skip-gram models _[**Tomas Mikolov, Kai Chen, Greg Corrado,
+        - CBOW and Skip-gram models _[[**Tomas Mikolov, Kai Chen, Greg Corrado,
           Jeffrey Dean: Efficient Estimation of Word Representations in Vector
-          Space** https://arxiv.org/abs/1301.3781 ]_
+          Space**](https://arxiv.org/abs/1301.3781)]_
         - Hierarchical softmax _[Section 12.4.3.2, or Section 2.1 of the following paper]_
-        - Negative sampling _[Section 2.2 of **Tomas Mikolov, Ilya Sutskever,
+        - Negative sampling _[Section 2.2 of [**Tomas Mikolov, Ilya Sutskever,
           Kai Chen, Greg Corrado, Jeffrey Dean: Distributed Representations of
-          Words and Phrases and their Compositionality**
-          https://arxiv.org/abs/1310.4546 ]_; note that negative sampling is
-          a simplification of Importance sampling described in Section 12.4.3.3,
-          with `w_i=1`; the proposal distribution in `word2vec` being unigram
-          distribution to the power of 3/4
-    - Character-level embeddings using RNNs _[C2W model from **Wang Ling, Tiago
+          Words and Phrases and their
+          Compositionality**](https://arxiv.org/abs/1310.4546)]_; note that
+          negative sampling is a simplification of Importance sampling described
+          in Section 12.4.3.3, with `w_i=1`; the proposal distribution in
+          `word2vec` being unigram distribution to the power of 3/4
+    - Character-level embeddings using RNNs _[C2W model from [**Wang Ling, Tiago
       Luís, Luís Marujo, Ramón Fernandez Astudillo, Silvio Amir, Chris Dyer,
       Alan W. Black, Isabel Trancoso: Finding Function in Form: Compositional
-      Character Models for Open Vocabulary Word Representation**
-      https://arxiv.org/abs/1508.02096 ]_
-    - Character-level embeddings using CNNs _[CharCNN from **Yoon Kim, Yacine
+      Character Models for Open Vocabulary Word
+      Representation**](https://arxiv.org/abs/1508.02096)]_
+    - Character-level embeddings using CNNs _[CharCNN from [**Yoon Kim, Yacine
       Jernite, David Sontag, Alexander M. Rush: Character-Aware Neural Language
-      Models** https://arxiv.org/abs/1508.06615 ]_
+      Models**](https://arxiv.org/abs/1508.06615)]_
 
-- Highway Networks _[**Rupesh Kumar Srivastava, Klaus Greff, Jürgen Schmidhuber:
-  Training Very Deep Networks** https://arxiv.org/abs/1507.06228 ]_
+- Highway Networks _[[**Rupesh Kumar Srivastava, Klaus Greff, Jürgen Schmidhuber:
+  Training Very Deep Networks**](https://arxiv.org/abs/1507.06228)]_
 
 - Machine Translation
     - Translation using encoder-decoder (also called sequence-to-sequence)
       architecture _[Sections 10.4 and Section 12.4.5]_
     - Attention mechanism in NMT _[Section 12.4.5.1, but you should also know
       the equations for the attention, notably Equations (4), (5), (6) and
-      (A.1.2) of **Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio: Neural
-      Machine Translation by Jointly Learning to Align and Translate**
-      https://arxiv.org/abs/1409.0473 ]_
-    - Subword units _[The BPE algorithm from Section 3.2 of **Rico Sennrich,
+      (A.1.2) of [**Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio: Neural
+      Machine Translation by Jointly Learning to Align and
+      Translate**](https://arxiv.org/abs/1409.0473)]_
+    - Subword units _[The BPE algorithm from Section 3.2 of [**Rico Sennrich,
       Barry Haddow, Alexandra Birch: Neural Machine Translation of Rare Words
-      with Subword Units** https://arxiv.org/abs/1508.07909 ]_
+      with Subword Units**](https://arxiv.org/abs/1508.07909)]_
 
 - Deep generative models using differentiable generator nets _[Section 20.10.2]_:
     - Variational autoencoders _[Section 20.10.3 up to page 698 (excluding),
@@ -144,19 +143,19 @@ are to Deep Learning Book, unless stated otherwise.
     - Generative Adversarial Networks _[Section 20.10.4 up to page 702 (excluding)]_
 
 - Structured Prediction
-    - Conditional Random Fields (CRF) loss _[Sections 3.4.2 and A.7 of **R.
+    - Conditional Random Fields (CRF) loss _[Sections 3.4.2 and A.7 of [**R.
       Collobert, J. Weston, L. Bottou, M. Karlen, K. Kavukcuoglu, P. Kuksa:
-      Natural Language Processing (Almost) from Scratch**
-      http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf ]_
-    - Connectionist Temporal Classification (CTC) loss *[**A. Graves, S.
+      Natural Language Processing (Almost) from
+      Scratch**](http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf)]_
+    - Connectionist Temporal Classification (CTC) loss *[[**A. Graves, S.
       Fernández, F. Gomez, J. Schmidhuber: Connectionist Temporal
       Classification: Labelling Unsegmented Sequence Data with Recurrent Neural
-      Networks** https://www.cs.toronto.edu/~graves/icml_2006.pdf ]*
+      Networks**](https://www.cs.toronto.edu/~graves/icml_2006.pdf)]*
 
 - Reinforcement learning _[note that proofs are not required for reinforcement
   learning; all references are to the Mar 2018 draft of second edition of
-  **Reinforcement Learning: An Introduction by Richar S. Sutton**
-  http://incompleteideas.net/book/bookdraft2018mar21.pdf ]_
+  [**Reinforcement Learning: An Introduction by Richar S.
+  Sutton**](http://incompleteideas.net/book/bookdraft2018mar21.pdf)]_
     - Multi-arm bandits _[Chapter 2, Sections 2.1-2.5]_
     - General setting of reinforcement learning _[agent-environment, action-state-reward, return; Chapter 3, Sections 3.1-3.3]_
     - Monte Carlo reinforcement learning algorithm _[Sections 5.1-5.4, especially the algorithm in Section 5.4]_
