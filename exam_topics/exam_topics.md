@@ -58,13 +58,14 @@ are to Deep Learning Book, unless stated otherwise.
       Classification with Deep Convolutional Neural Networks**
       https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf ]_
 
-      ![AlexNet](images/alexnet.svg)
+      ![AlexNet](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/exam/images/alexnet.svg)
     - ResNet _[only the important ideas and overall architecture of ResNet 151,
       without specific constants; the following is taken from **Kaiming He et
       al.: Deep Residual Learning for Image Recognition**
       https://arxiv.org/abs/1512.03385 ]_
 
-      ![ResNet Block](images/resnet-block.svg)![ResNet Overview](images/resnet-table.svg)
+      ![ResNet Block](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/exam/images/resnet-block.svg)
+      ![ResNet Overview](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/exam/images/resnet-table.svg)
     - Object detection using Fast R-CNN _[overall architecture, RoI-pooling
       layer, parametrization of generated bounding boxes, used loss function;
       **Ross Girshick: Fast R-CNN** https://arxiv.org/abs/1504.08083 ]_
