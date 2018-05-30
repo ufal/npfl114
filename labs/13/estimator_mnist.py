@@ -18,17 +18,19 @@ def mnist_model(features, labels, mode, params):
         # TODO: Return EstimatorSpec with `mode` and `predictions` parameters
 
     # TODO: Compute loss using `tf.losses.sparse_softmax_cross_entropy`.
+    # TODO: Create `metric_ops`, a dictionary with a key "accuracy", its value computed
+    # using `tf.metrics.accuracy`.
 
     if mode == tf.estimator.ModeKeys.TRAIN:
         # TODO: Get optimizer class, using `params.get("optimizer", None)`.
         # TODO: Create optimizer, using `params.get("learning_rate", None)` parameter.
         # TODO: Define `train_op` as `optimizer.minimize`, with `tf.train.get_global_step` as `global_step`.
-        # TODO: Return EstimatorSpec with `mode`, `loss`, `train_op` and `eval_metric_ops` arguments,
-        # the latter being a dictionary with "accuracy" key and `tf.metrics.accuracy` value.
+        # TODO: Return EstimatorSpec with `mode`, `predictions`, `loss`, `train_op` and `eval_metric_ops`
+        # arguments, the latter being a dictionary with "accuracy" key and `metric_ops` value.
 
     if mode == tf.estimator.ModeKeys.EVAL:
-        # TODO: Return EstimatorSpec with `mode`, `loss` and `eval_metric_ops` arguments,
-        # the latter being a dictionary with "accuracy" key and `tf.metrics.accuracy` value.
+        # TODO: Return EstimatorSpec with `mode`, `predictions`, `loss`, `train_op` and `eval_metric_ops`
+        # arguments, the latter being a dictionary with "accuracy" key and `metric_ops` value.
 
 
 if __name__ == "__main__":
@@ -75,19 +77,19 @@ if __name__ == "__main__":
     # Train
     for i in range(args.epochs):
         # TODO: Define input_fn using `tf.estimator.inputs.numpy_input_fn`.
-        # As `x`, pass "images": mnist.train images, as `y` pass `mnist.train.labels.astype(np.int64)`,
+        # As `x`, pass `{"images": mnist.train images}`, as `y`, pass `mnist.train.labels.astype(np.int64)`,
         # use specified batch_size, one epoch. Normally we would shuffle data with queue capacity 60000,
-        # but random seed cannot be passed to this method; hence, do _not_ shuffle data.
+        # but a random seed cannot be passed to this method; hence, do _not_ shuffle data.
 
         # TODO: Train one epoch with `model.train` using the defined input_fn.
-        # Note that `steps` argument should be either left out or set to `None` to respect
+        # Note that the `steps` argument should be either left out or set to `None` to respect
         # the `num_epochs` specified when defining `input_fn`.
 
 
-        # TODO: Define validation input_fn similarly, but without suffling and using `mnist.validation`.
+        # TODO: Define validation input_fn similarly, but using `mnist.validation`.
         # TODO: Evaluate the validation data, using `model.evaluate` with `name="dev"` option
         # and print its return value (which is a dictionary with accuracy, loss and global_step).
 
-    # TODO: Define input_fn for one epoch of `mnist.test`, without shuffling.
+    # TODO: Define input_fn for one epoch of `mnist.test`.
     # TODO: Evaluate the test set using `model.evaluate` with `name="test"` option
     # and print its return value (which is a dictionary with accuracy, loss and global_step).
