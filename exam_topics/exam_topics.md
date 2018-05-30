@@ -1,5 +1,3 @@
-# NPFL 114 – Deep Learning – Exam Topics
-
 Generally, only the topics covered on the lecture are part of the exam
 (i.e., you should be able to tell me what I told you). The references
 are to Deep Learning Book, unless stated otherwise.
