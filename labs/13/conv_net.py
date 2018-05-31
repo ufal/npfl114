@@ -48,7 +48,7 @@ class ConvNet:
 
     # Train given the MNIST data. Fashion MNIST can be loaded using:
     # from tensorflow.examples.tutorials import mnist
-    # data = mnist.input_data.read_data_sets("fashion-mnist", reshape=False, validation_size=0, seed=42,
+    # data = mnist.input_data.read_data_sets("fashion-mnist", reshape=False, seed=42,
     #                                        source_url="http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/")
     def train(self, mnist, epochs):
         start = mnist.train.epochs_completed
