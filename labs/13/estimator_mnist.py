@@ -18,19 +18,20 @@ def mnist_model(features, labels, mode, params):
         # TODO: Return EstimatorSpec with `mode` and `predictions` parameters
 
     # TODO: Compute loss using `tf.losses.sparse_softmax_cross_entropy`.
-    # TODO: Create `metric_ops`, a dictionary with a key "accuracy", its value computed
-    # using `tf.metrics.accuracy`.
+
+    # TODO: Create `eval_metric_ops`, a dictionary with a key "accuracy", its
+    # value computed using `tf.metrics.accuracy`.
 
     if mode == tf.estimator.ModeKeys.TRAIN:
         # TODO: Get optimizer class, using `params.get("optimizer", None)`.
         # TODO: Create optimizer, using `params.get("learning_rate", None)` parameter.
         # TODO: Define `train_op` as `optimizer.minimize`, with `tf.train.get_global_step` as `global_step`.
-        # TODO: Return EstimatorSpec with `mode`, `predictions`, `loss`, `train_op` and `eval_metric_ops`
-        # arguments, the latter being a dictionary with "accuracy" key and `metric_ops` value.
+        # TODO: Return EstimatorSpec with `mode`, `loss`, `train_op` and `eval_metric_ops` arguments,
+        # the latter being the precomputed `eval_metric_ops`.
 
     if mode == tf.estimator.ModeKeys.EVAL:
-        # TODO: Return EstimatorSpec with `mode`, `predictions`, `loss`, `train_op` and `eval_metric_ops`
-        # arguments, the latter being a dictionary with "accuracy" key and `metric_ops` value.
+        # TODO: Return EstimatorSpec with `mode`, `loss`, `train_op` and `eval_metric_ops`  arguments,
+        # the latter being the precomputed `eval_metric_ops`.
 
 
 if __name__ == "__main__":
