@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import tensorflow as tf
 
-
 class ConvNet:
     WIDTH = 28
     HEIGHT = 28
@@ -65,7 +64,6 @@ class ConvNet:
     # Return hyperparameters and their ranges and distributions.
     def hyperparameters(self):
         class Range():
-
             def __init__(self, distribution, start, end):
                 self.distribution = distribution
                 self.start = start
