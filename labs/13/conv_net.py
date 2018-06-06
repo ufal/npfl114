@@ -82,5 +82,5 @@ class ConvNet:
             "pool2_stride": Range("int", 1, 3),         # [1, 2, 3]
             "hidden_layer_size": Range("int", 16, 128), # [16, ..., 128]
             "batch_size": Range("int", 1, 64),          # [1, ..., 64]
-            "learning_rate": Range("log_float", 0.01, 0.001), # logarithmically distributed real number in range [0.01-0.0001]
+            "learning_rate": Range("log_float", 0.0001, 0.01),  # logarithmically distributed real number in range [0.0001-0.01]
         }
