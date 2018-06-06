@@ -1,5 +1,3 @@
-# Deep Learning Labs
-
 The tasks are evaluated automatically using the [ReCodEx Code
 Examiner](https://recodex.mff.cuni.cz/). The evaluation is
 performed using Python 3.4, TensorFlow 1.5.0, NumPy 1.14.0
