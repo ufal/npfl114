@@ -58,6 +58,7 @@
           top: 0 !important;
           left: 0 !important;
         }
+        .has-continuation-slide { display: none }
       }
     </style>
   </head>
@@ -136,8 +137,17 @@
           highlightLanguage: 'python',
           highlightLines: true,
           highlightStyle: 'darcula'},
-          function() {
+          function(slideshow) {
             document.title = 'NPFL114, Lecture ' + slides.lecture;
+
+            // Mark continuation slides
+            {
+              var slideshow_slides = slideshow.getSlides();
+              var dom_slides = document.getElementsByClassName("remark-slides-area")[0].children;
+              for (let i = 1; i < slideshow_slides.length; i++)
+                if (slideshow_slides[i].properties.continued === "true")
+                  dom_slides[i - 1].className += ' has-continuation-slide';
+            }
 
             // Mark WIP
             if (slides.wip) {
