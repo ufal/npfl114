@@ -86,7 +86,7 @@ are to Deep Learning Book, unless stated otherwise.
       Generating Sequences With Recurrent Neural
       Networks**](https://arxiv.org/abs/1308.0850)]_
     - The problem of vanishing and exploding gradient _[Section 10.7]_
-    - Long Shoft-Term Memory (LSTM) _[Section 10.10.1]_
+    - Long Short-Term Memory (LSTM) _[Section 10.10.1]_
     - Gated Recurrent Unit (GRU) _[Section 10.10.2]_
 
 - Word representations _[in all cases, you should be able to describe the

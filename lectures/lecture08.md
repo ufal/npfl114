@@ -3,7 +3,7 @@
 [Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?08),
 [Recording](https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings)
 
-- Long Shoft-Term Memory (LSTM) [Section 10.10.1 of DLB, *[Sepp Hochreiter, Jürgen Schmidhuber (1997): Long short-term memory](http://www.bioinf.jku.at/publications/older/2604.pdf), [felix A. Gers, Jürgen Schmidhuber, Fred Cummins (2000): Learning to Forget: Continual Prediction with LSTM](ftp://ftp.idsia.ch/pub/juergen/FgGates-NC.pdf)*]
+- Long Short-Term Memory (LSTM) [Section 10.10.1 of DLB, *[Sepp Hochreiter, Jürgen Schmidhuber (1997): Long short-term memory](http://www.bioinf.jku.at/publications/older/2604.pdf), [felix A. Gers, Jürgen Schmidhuber, Fred Cummins (2000): Learning to Forget: Continual Prediction with LSTM](ftp://ftp.idsia.ch/pub/juergen/FgGates-NC.pdf)*]
 - Gated Recurrent Unit (GRU) [Section 10.10.2 of DLB, *[Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, Yoshua Bengio: Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation](https://arxiv.org/abs/1406.1078)*]
 - `Word2vec` word embeddings, notably the CBOW and Skip-gram architectures [[Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean: Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)]
 - Hierarchical softmax and Negative sampling [[Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, Jeffrey Dean: Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546)]
