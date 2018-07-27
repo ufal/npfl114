@@ -1,6 +1,7 @@
 # May 21
 
 [Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?13),
+[Recording](https://slideslive.com/38907953/deep-learning-lecture-13-practical-methodology-tf-development-advanced-architectures),
 [Master Thesis Proposals](https://docs.google.com/presentation/d/11t4TudcYZcXwuWgpWDEWjRot3VdDXo_nU0nlsRfO0XI/edit?usp=sharing)
 
 - *Hyperparameter selection using Reinforcement Learning [[Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/abs/1707.07012)]*
