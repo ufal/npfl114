@@ -1,3 +1,7 @@
+### Assignment: lemmatizer_sota
+#### Date: Deadline: May 06, 23:59
+#### Points: 4-13 points
+
 The goal of this task is to improve the state-of-the-art in Czech
 lemmatization. The current state-of-the-art is (to my best knowledge)
 [czech-morfflex-pdt-161115](http://ufal.mff.cuni.cz/morphodita/users-manual#czech-morfflex-pdt_model)

@@ -1,3 +1,7 @@
+### Assignment: estimator_mnist
+#### Date: Deadline: Jun 03, 23:59
+#### Points: 3 points
+
 In this assignment, you will implement a simple MNIST convolutional classification
 model using `tf.estimator` API.
 

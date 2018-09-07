@@ -1,3 +1,7 @@
+### Assignment: fashion_masks
+#### Date: Deadline: Apr 08, 23:59
+#### Points: 6-12 points
+
 This assignment is a simple image segmentation task. The data for this task is
 available from [fashion-masks.zip](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/fashion-masks.zip).
 The inputs consist of 28×28 greyscale images of ten classes of clothing,

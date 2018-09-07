@@ -1,3 +1,7 @@
+### Assignment: mnist_batchnorm
+#### Date: Deadline: Apr 08, 23:59
+#### Points: 3 points
+
 In this assignment, you will work with extend the `mnist_conv` assignment to
 support batch normalization. Start with the
 [mnist_batchnorm.py](https://github.com/ufal/npfl114/tree/master/labs/05/mnist_batchnorm.py)

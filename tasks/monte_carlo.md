@@ -1,3 +1,7 @@
+### Assignment: monte_carlo
+#### Date: Deadline: May 20, 23:59
+#### Points: 3 points
+
 Solve the [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)
 environment from the [OpenAI Gym](https://gym.openai.com/) using the Monte Carlo
 reinforcement learning algorithm. Note that this task does not require

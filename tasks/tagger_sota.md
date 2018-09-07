@@ -1,3 +1,7 @@
+### Assignment: tagger_sota
+#### Date: Deadline: Apr 29, 23:59
+#### Points: 4-15 points
+
 The goal of this task is to improve the state-of-the-art in Czech
 part-of-speech tagging. The current state-of-the-art is (to my best knowledge)
 from [Spoustová et al., 2009](http://www.aclweb.org/anthology/E09-1087)

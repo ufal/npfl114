@@ -1,7 +1,11 @@
-# Apr 16
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?08),
-[Recording](https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings)
+### Lecture: 8. Recurrent Neural Networks II, Word Embeddings
+#### Date: Apr 16
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?08
+#### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings
+#### Lecture assignment: tagger_we
+#### Lecture assignment: tagger_cle
+#### Lecture assignment: tagger_cnne
+#### Lecture assignment: tagger_sota
 
 - Long Short-Term Memory (LSTM) [Section 10.10.1 of DLB, *[Sepp Hochreiter, Jürgen Schmidhuber (1997): Long short-term memory](http://www.bioinf.jku.at/publications/older/2604.pdf), [felix A. Gers, Jürgen Schmidhuber, Fred Cummins (2000): Learning to Forget: Continual Prediction with LSTM](ftp://ftp.idsia.ch/pub/juergen/FgGates-NC.pdf)*]
 - Gated Recurrent Unit (GRU) [Section 10.10.2 of DLB, *[Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, Yoshua Bengio: Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation](https://arxiv.org/abs/1406.1078)*]

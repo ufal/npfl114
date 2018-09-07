@@ -1,7 +1,11 @@
-# Apr 30
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?10),
-[Recording](https://slideslive.com/38907563/deep-learning-lecture-10-deep-generative-models)
+### Lecture: 10. Deep Generative Models
+#### Date: Apr 30
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?10
+#### Video: https://slideslive.com/38907563/deep-learning-lecture-10-deep-generative-models
+#### Lecture assignment: vae
+#### Lecture assignment: gan
+#### Lecture assignment: dcgan
+#### Lecture assignment: nli
 
 - Autoencoders (undercomplete, sparse, denoising) [Chapter 14, Sections 14-14.2.3 of DLB]
 - Deep Generative Models using Differentiable Generator Nets [Section 20.10.2 of DLB]

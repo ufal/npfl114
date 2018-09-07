@@ -1,3 +1,7 @@
+### Assignment: nli
+#### Date: Deadline: May 13, 23:59
+#### Points: 6-12 points
+
 In this competition you will be solving the Native Language Identification
 task. In that task, you get an English essay writen by a non-native individual
 and your goal is to identify their native language.

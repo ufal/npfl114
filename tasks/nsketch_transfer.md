@@ -1,3 +1,7 @@
+### Assignment: nsketch_transfer
+#### Date: Deadline: Apr 22, 23:59
+#### Points: 6-12 points
+
 This assignment demonstrates usefulness of transfer learning. The goal is
 to train a classifier for hand-drawn sketches. The dataset of 224×224
 grayscale sketches categorized in 250 classes is available from

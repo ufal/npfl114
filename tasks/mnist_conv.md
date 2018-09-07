@@ -1,3 +1,7 @@
+### Assignment: mnist_conv
+#### Date: Deadline: Apr 02, 15:39
+#### Points: 3 points
+
 In this assignment, you will be training convolutional networks. Start with
 the [mnist_conv.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_conv.py)
 template and implement the following functionality using the `tf.layers` module.

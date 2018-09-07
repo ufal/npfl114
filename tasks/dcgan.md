@@ -1,3 +1,7 @@
+### Assignment: dcgan
+#### Date: Deadline: May 13, 23:59
+#### Points: 1 points
+
 This task is a continuation of `gan` assignment, which you will modify to
 implement the Deep Convolutional GAN (DCGAN).
 

@@ -1,3 +1,7 @@
+### Assignment: tagger_we
+#### Date: Deadline: Apr 29, 23:59
+#### Points: 2 points
+
 In this assignment you will create a simple part-of-speech tagger.
 For training and evaluation, use
 [czech-cac.zip](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/czech-cac.zip)

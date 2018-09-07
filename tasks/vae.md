@@ -1,3 +1,7 @@
+### Assignment: vae
+#### Date: Deadline: May 13, 23:59
+#### Points: 3 points
+
 In this assignment you will implement a simple Variational Autoencoder
 for three datasets in the MNIST format.
 

@@ -1,3 +1,7 @@
+### Assignment: phoneme_recognition
+#### Date: Deadline: May 20, 23:59
+#### Points: 6-10 points
+
 This assignment is a competition task in speech recognition area. Specifically,
 your goal is to predict a sequence of phonemes given a spoken utterance.
 We will be using TIMIT corpus, with input sound waves passed through the usual

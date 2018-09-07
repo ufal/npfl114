@@ -1,3 +1,7 @@
+### Assignment: reinforce_with_baseline
+#### Date: Deadline: May 27, 23:59
+#### Points: 2 points
+
 This is a continuation of `reinforce` assignment.
 
 Using the [reinforce_with_baseline.py](https://github.com/ufal/npfl114/tree/master/labs/12/reinforce_with_baseline.py)

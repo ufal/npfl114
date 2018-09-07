@@ -1,7 +1,10 @@
-# Apr 23
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?09),
-[Recording](https://slideslive.com/38907422/deep-learning-lecture-9-recurrent-neural-networks-iii-machine-translation)
+### Lecture: 9. Recurrent Neural Networks III, Machine Translation
+#### Date: Apr 23
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?09
+#### Video: https://slideslive.com/38907422/deep-learning-lecture-9-recurrent-neural-networks-iii-machine-translation
+#### Lecture assignment: lemmatizer_noattn
+#### Lecture assignment: lemmatizer_attn
+#### Lecture assignment: lemmatizer_sota
 
 - Highway Networks [[Rupesh Kumar Srivastava, Klaus Greff, Jürgen Schmidhuber: **Training Very Deep Networks**](https://arxiv.org/abs/1507.06228)]
 - Variational Dropout [[Yarin Gal, Zoubin Ghahramani: **A Theoretically Grounded Application of Dropout in Recurrent Neural Networks**](https://arxiv.org/abs/1512.05287)]

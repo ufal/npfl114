@@ -1,3 +1,7 @@
+### Assignment: numpy_entropy
+#### Date: Deadline: Mar 12, 15:39
+#### Points: 3 points
+
 The goal of this exercise is to famirialize with Python, NumPy and ReCodEx
 submission system. Start with the
 [numpy_entropy.py](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy.py).

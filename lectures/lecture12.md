@@ -1,6 +1,11 @@
-# May 14
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?12)
+### Lecture: 12. Sequence Prediction II, Reinforcement Learning II
+#### Date: Mar 19
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?12
+#### Lecture assignment: q_learning
+#### Lecture assignment: q_network
+#### Lecture assignment: reinforce
+#### Lecture assignment: reinforce_with_baseline
+#### Lecture assignment: reinforce_with_pixels
 
 - Temporal Difference RL Methods [Section 6.1 of [Sutton's Book](http://incompleteideas.net/book/bookdraft2018mar21.pdf)]
 - SARSA algorithm [Section 6.4 of [Sutton's Book](http://incompleteideas.net/book/bookdraft2018mar21.pdf)]

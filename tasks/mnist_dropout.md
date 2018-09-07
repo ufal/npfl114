@@ -1,3 +1,7 @@
+### Assignment: mnist_dropout
+#### Date: Deadline: Mar 26, 15:39
+#### Points: 3 points
+
 This exercise evaluates the effect of dropout. Your goal is to modify the
 [mnist_dropout.py](https://github.com/ufal/npfl114/tree/master/labs/03/mnist_dropout.py)
 template and implement the following:

@@ -1,3 +1,7 @@
+### Assignment: mnist_competition
+#### Date: Deadline: Apr 02, 15:39
+#### Points: 5-10 points
+
 The goal of this assignment is to devise the best possible model for MNIST
 data set. However, in order for the test set results not to be available,
 use the data from

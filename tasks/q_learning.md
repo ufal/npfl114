@@ -1,3 +1,7 @@
+### Assignment: q_learning
+#### Date: Deadline: May 27, 23:59
+#### Points: 3 points
+
 Solve the [MountainCar-v0 environment](https://gym.openai.com/envs/MountainCar-v0)
 environment from the [OpenAI Gym](https://gym.openai.com/) using the Q-learning
 reinforcement learning algorithm. Note that this task does not require

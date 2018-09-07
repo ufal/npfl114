@@ -1,7 +1,9 @@
-# Mar 05
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?02),
-[Recording](https://slideslive.com/38906313/deep-learning-lecture-2-training-neural-networks)
+### Lecture: 2. Training Neural Networks
+#### Date: Mar 05
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?02
+#### Video: https://slideslive.com/38906313/deep-learning-lecture-2-training-neural-networks
+#### Lecture assignment: mnist_training
+#### Lecture assignment: gym_cartpole
 
 - Capacity, overfitting, underfitting, regularization [Section 5.2 of DLB]
 - Hyperparameters and validation sets [Section 5.3 of DLB]

@@ -1,3 +1,7 @@
+### Assignment: lemmatizer_noattn
+#### Date: Deadline: May 06, 23:59
+#### Points: 4 points
+
 In this assignment you will create a simple lemmatizer.
 For training and evaluation, use
 [czech-cac.zip](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/czech-cac.zip)

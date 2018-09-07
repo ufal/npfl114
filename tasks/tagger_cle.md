@@ -1,3 +1,7 @@
+### Assignment: tagger_cle
+#### Date: Deadline: Apr 29, 23:59
+#### Points: 2 points
+
 This task is a continuation of `tagger_we` assignment.
 
 Using the [tagger_cle.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_cle.py)

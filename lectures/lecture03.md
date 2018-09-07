@@ -1,7 +1,9 @@
-# Mar 12
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?03),
-[Recording](https://slideslive.com/38906435/deep-learning-lecture-3-training-neural-networks-ii)
+### Lecture: 3. Training Neural Networks II
+#### Date: Mar 12
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?03
+#### Video: https://slideslive.com/38906435/deep-learning-lecture-3-training-neural-networks-ii
+#### Lecture assignment: mnist_dropout
+#### Lecture assignment: uppercase
 
 - *Training neural network with a single hidden layer*
 - *Playing with TensorFlow Playground*

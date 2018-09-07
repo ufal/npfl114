@@ -1,3 +1,7 @@
+### Assignment: tagger_crf
+#### Date: Deadline: May 20, 23:59
+#### Points: 1 points
+
 This task is an extension of `tagger_we` assignment.
 
 Using the [tagger_crf.py](https://github.com/ufal/npfl114/tree/master/labs/11/tagger_crf.py)

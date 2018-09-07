@@ -1,3 +1,7 @@
+### Assignment: 3d_recognition
+#### Date: Deadline: Apr 15, 23:59
+#### Points: 7-13 points
+
 Your goal in this assignment is to perform 3D object recognition. The input
 is voxelized representation of an object, stored as a 3D grid of either empty
 or occupied _voxels_, and your goal is to classify the object into one of

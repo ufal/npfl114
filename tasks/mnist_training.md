@@ -1,3 +1,7 @@
+### Assignment: mnist_training
+#### Date: Deadline: Mar 19, 15:39
+#### Points: 4 points
+
 This exercise should teach you using different optimizers and learning rates
 (including exponential decay). Your goal is to modify the
 [mnist_training.py](https://github.com/ufal/npfl114/tree/master/labs/02/mnist_training.py)

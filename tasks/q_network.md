@@ -1,3 +1,7 @@
+### Assignment: q_network
+#### Date: Deadline: May 27, 23:59
+#### Points: 2 points
+
 Solve the [MountainCar-v0 environment](https://gym.openai.com/envs/MountainCar-v0)
 environment from the [OpenAI Gym](https://gym.openai.com/) using a Q-network
 (neural network variant of Q-learning algorithm).

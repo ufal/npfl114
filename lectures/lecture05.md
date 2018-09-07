@@ -1,7 +1,9 @@
-# Mar 26
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?05),
-[Recording](https://slideslive.com/38906863/deep-learning-lecture-5-convolutional-networks-ii)
+### Lecture: 5. Convolutional Networks II
+#### Date: Mar 26
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?05
+#### Video: https://slideslive.com/38906863/deep-learning-lecture-5-convolutional-networks-ii
+#### Lecture assignment: mnist_batchnorm
+#### Lecture assignment: fashion_masks
 
 - VGG [[Karen Simonyan and Andrew Zisserman: Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556)]
 - GoogLeNet (aka Inception) [[Christian Szegedy et al.: Going Deeper with Convolutions](https://arxiv.org/abs/1409.4842)]

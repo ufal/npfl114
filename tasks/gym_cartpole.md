@@ -1,3 +1,7 @@
+### Assignment: gym_cartpole
+#### Date: Deadline: Mar 19, 15:39
+#### Points: 5 points
+
 Solve the [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)
 from the [OpenAI Gym](https://gym.openai.com/), utilizing only provided supervised
 training data. The data is available in

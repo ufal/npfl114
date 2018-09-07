@@ -1,3 +1,7 @@
+### Assignment: uppercase
+#### Date: Deadline: Mar 26, 15:39
+#### Points: 6-10 points
+
 This assignment introduces first textual task. Your goal is to implement
 a network which is given a Czech text and it tries to uppercase appropriate
 letters. Specifically, your goal is to uppercase given test set as well as

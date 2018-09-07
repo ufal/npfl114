@@ -1,3 +1,7 @@
+### Assignment: lemmatizer_attn
+#### Date: Deadline: May 06, 23:59
+#### Points: 2 points
+
 This task is a continuation of `lemmatizer_noattn` assignment.
 
 Using the [lemmatizer_attn.py](https://github.com/ufal/npfl114/tree/master/labs/09/lemmatizer_attn.py)

@@ -1,3 +1,7 @@
+### Assignment: tagger_cnne
+#### Date: Deadline: Apr 29, 23:59
+#### Points: 2 points
+
 This task is a continuation of `tagger_we` assignment.
 
 Using the [tagger_cnne.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_cnne.py)

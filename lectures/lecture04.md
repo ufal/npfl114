@@ -1,7 +1,9 @@
-# Mar 19
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?04),
-[Recording](https://slideslive.com/38906635/deep-learning-lecture-4-convolutional-networks)
+### Lecture: 4. Convolutional Networks
+#### Date: Mar 19
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?04
+#### Video: https://slideslive.com/38906635/deep-learning-lecture-4-convolutional-networks
+#### Lecture assignment: mnist_conv
+#### Lecture assignment: mnist_competition
 
 - Saturating non-linearities [Section 6.3.2 and second half of Section 6.2.2.2 of DLB]
 - Gradient clipping [Section 10.11.1 of DLB]

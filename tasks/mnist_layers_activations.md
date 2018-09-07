@@ -1,3 +1,7 @@
+### Assignment: mnist_layers_activations
+#### Date: Deadline: Mar 12, 15:39
+#### Points: 5 points
+
 The motivation of this exercise is to famirialize a bit with TensorFlow and
 TensorBoard. Start by playing with
 [mnist_example.py](https://github.com/ufal/npfl114/tree/master/labs/01/mnist_example.py).

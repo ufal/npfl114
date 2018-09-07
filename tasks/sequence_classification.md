@@ -1,3 +1,7 @@
+### Assignment: sequence_classification
+#### Date: Deadline: Apr 22, 23:59
+#### Points: 3 points
+
 This exercise demonstrates `tf.nn.dynamic_rnn`, shows convergence speed and
 illustrates exploding gradient issue and how to fix it with gradient clipping.
 The network should process sequences of 50 small integers and compute parity

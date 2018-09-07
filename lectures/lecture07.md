@@ -1,7 +1,10 @@
-# Apr 09
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?07),
-[Recording](https://slideslive.com/38907052/deep-learning-lecture-7-object-detection-segmentation-recurrent-neural-networks)
+### Lecture: 7. Object Detection & Segmentation, Neural Networks
+#### Date: Apr 09
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?07
+#### Video: https://slideslive.com/38907052/deep-learning-lecture-7-object-detection-segmentation-recurrent-neural-networks
+#### Lecture assignment: nsketch_transfer
+#### Lecture assignment: sequence_classification
+#### Lecture assignment: sequence_prediction
 
 - Object detection using Fast R-CNN [[Ross Girshick: **Fast R-CNN**](https://arxiv.org/abs/1504.08083)]
 - Proposing RoIs using Faster R-CNN [[Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun: **Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks**](https://arxiv.org/abs/1506.01497)]

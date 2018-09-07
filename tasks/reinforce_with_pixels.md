@@ -1,3 +1,7 @@
+### Assignment: reinforce_with_pixels
+#### Date: Deadline: May 27, 23:59
+#### Points: 6 points
+
 _This is an experimental task which might require a lot of time to solve._
 
 The goal of this assignment is to extend the `reinforce_with_baseline`

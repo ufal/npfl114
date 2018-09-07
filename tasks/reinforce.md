@@ -1,3 +1,7 @@
+### Assignment: reinforce
+#### Date: Deadline: May 27, 23:59
+#### Points: 2 points
+
 Solve the [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)
 environment from the [OpenAI Gym](https://gym.openai.com/) using the REINFORCE
 algorithm.

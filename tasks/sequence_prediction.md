@@ -1,3 +1,7 @@
+### Assignment: sequence_prediction
+#### Date: Deadline: Apr 22, 23:59
+#### Points: 3 points
+
 The motivation of this exercise is to learn low-level handling of RNN cells. The network
 should learn to predict one specific sequence of
 [montly totals of international airline passengers from 1949-1960](https://github.com/ufal/npfl114/tree/master/labs/07/international-airline-passengers.tsv).

@@ -1,7 +1,9 @@
-# Feb 26
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?01),
-[Recording](https://slideslive.com/38906857/deep-learning-lecture-1-introduction-to-deep-learning)
+### Lecture: 1. Introduction to Deep Learning
+#### Date: Feb 26
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?01
+#### Video: https://slideslive.com/38906857/deep-learning-lecture-1-introduction-to-deep-learning
+#### Lecture assignment: numpy_entropy
+#### Lecture assignment: mnist_layers_activations
 
 - Random variables, probability distributions, expectation, variance, Bernoulli
   distribution, Categorical distribution [Sections 3.2, 3.3, 3.8, 3.9.1 and 3.9.2 of DLB]

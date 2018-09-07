@@ -1,7 +1,10 @@
-# May 07
-
-[Slides](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?11),
-[Recording](https://slideslive.com/38907562/deep-learning-lecture-11-sequence-prediction-reinforcement-learning)
+### Lecture: 11. Sequence Prediction, Reinforcement Learning
+#### Date: May 07
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/slides/?11
+#### Video: https://slideslive.com/38907562/deep-learning-lecture-11-sequence-prediction-reinforcement-learning
+#### Lecture assignment: tagger_crf
+#### Lecture assignment: phoneme_recognition
+#### Lecture assignment: monte_carlo
 
 Study material for Reinforcement Learning is the [second edition of **Reinforcement Learning: An Introduction** by Richar S. Sutton](http://incompleteideas.net/book/the-book-2nd.html), available only as a draft.
 
