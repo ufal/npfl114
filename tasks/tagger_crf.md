@@ -4,7 +4,7 @@
 
 This task is an extension of `tagger_we` assignment.
 
-Using the [tagger_crf.py](https://github.com/ufal/npfl114/tree/master/labs/11/tagger_crf.py)
+Using the [tagger_crf.py](https://github.com/ufal/npfl114/tree/past-1718/labs/11/tagger_crf.py)
 template, in addition to `tagger_we` features, implement training and decoding
 with a CRF output layer, using the `tf.contrib.crf` module.
 

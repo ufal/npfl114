@@ -21,12 +21,12 @@ ordering of your solutions. _Note that even straightfoward models can reach
 more than 90% on the test set, the current state-of-the-art is more than 98%._
 
 You should start with the
-[3d_recognition.py](https://github.com/ufal/npfl114/tree/master/labs/06/3d_recognition.py)
+[3d_recognition.py](https://github.com/ufal/npfl114/tree/past-1718/labs/06/3d_recognition.py)
 template, which loads the data, split development set from the training data,
 and on the end produces test set annotations in the required format.
 
 To submit the test set annotations in ReCodEx, use the supplied
-[3d_recognition_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/06/3d_recognition_recodex.py)
+[3d_recognition_recodex.py](https://github.com/ufal/npfl114/tree/past-1718/labs/06/3d_recognition_recodex.py)
 script. You need to provide at least two arguments – the first is the path to
 the test set annotations and all other arguments are paths to the sources used
 to generate the test data.

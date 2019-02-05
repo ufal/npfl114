@@ -3,7 +3,7 @@
 #### Points: 3 points
 
 The goal of this assignment is to try performing automatic hyperparameter
-search. Your goal is to optimize [conv_net.py](https://github.com/ufal/npfl114/tree/master/labs/13/conv_net.py)
+search. Your goal is to optimize [conv_net.py](https://github.com/ufal/npfl114/tree/past-1718/labs/13/conv_net.py)
 model with several hyperparameters, so that it achieves highest validation
 accuracy on Fashion MNIST dataset after two epochs of training.
 The hyperparameters and their possible values and distributions are described

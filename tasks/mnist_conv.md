@@ -3,7 +3,7 @@
 #### Points: 3 points
 
 In this assignment, you will be training convolutional networks. Start with
-the [mnist_conv.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_conv.py)
+the [mnist_conv.py](https://github.com/ufal/npfl114/tree/past-1718/labs/04/mnist_conv.py)
 template and implement the following functionality using the `tf.layers` module.
 The architecture of the
 network is described by the `cnn` parameter, which contains comma-separated

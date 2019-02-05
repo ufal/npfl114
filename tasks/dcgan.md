@@ -6,7 +6,7 @@ This task is a continuation of `gan` assignment, which you will modify to
 implement the Deep Convolutional GAN (DCGAN).
 
 Your goal is to modify the
-[dcgan.py](https://github.com/ufal/npfl114/tree/master/labs/10/dcgan.py)
+[dcgan.py](https://github.com/ufal/npfl114/tree/past-1718/labs/10/dcgan.py)
 template to implement a DCGAN using the embedded TODO notes. Note that
 most of the TODO notes are from `gan` assignment.
 

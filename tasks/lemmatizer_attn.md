@@ -4,7 +4,7 @@
 
 This task is a continuation of `lemmatizer_noattn` assignment.
 
-Using the [lemmatizer_attn.py](https://github.com/ufal/npfl114/tree/master/labs/09/lemmatizer_attn.py)
+Using the [lemmatizer_attn.py](https://github.com/ufal/npfl114/tree/past-1718/labs/09/lemmatizer_attn.py)
 template, add the following features in addition to `lemmatizer_noattn` ones:
 - Run the encoder using bidirectional GRU.
 - Implement attention in both decoders. Notably, project the encoder outputs and

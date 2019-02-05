@@ -7,11 +7,11 @@ For training and evaluation, use
 [czech-cac.zip](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/czech-cac.zip)
 data containing Czech tokenized sentences, each word annotated by gold lemma
 and part-of-speech tag. The dataset can be loaded using the
-[morpho_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/08/morpho_dataset.py)
+[morpho_dataset.py](https://github.com/ufal/npfl114/tree/past-1718/labs/08/morpho_dataset.py)
 module.
 
 Your goal is to modify the
-[tagger_we.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_we.py)
+[tagger_we.py](https://github.com/ufal/npfl114/tree/past-1718/labs/08/tagger_we.py)
 template and implement the following:
 - Use specified RNN cell type (`GRU` and `LSTM`) and dimensionality.
 - Create word embeddings for training vocabulary.

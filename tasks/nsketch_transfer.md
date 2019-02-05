@@ -25,7 +25,7 @@ continue training the whole composition. _Such finetuning should lead to at
 least 70% accuracy on development set (using ResNet)._
 
 You should start with the
-[nsketch_transfer.py](https://github.com/ufal/npfl114/tree/master/labs/07/nsketch_transfer.py)
+[nsketch_transfer.py](https://github.com/ufal/npfl114/tree/past-1718/labs/07/nsketch_transfer.py)
 template, which loads the data, creates NASNet network and load its weight,
 evaluates and predicts using batches, and on the end produces test set
 annotations in the required format. However, feel free to use multiple scripts
@@ -33,10 +33,10 @@ for solving this assignment. The above template requires NASNet sources
 and pretrained weights, which you can download among others
 [here](http://ufal.mff.cuni.cz/~straka/courses/npfl114/1718/nasnet_a_mobile.zip).
 An independent example of using NASNet for classification is also available as
-[nasnet_classify.py](https://github.com/ufal/npfl114/tree/master/labs/07/nasnet_classify.py).
+[nasnet_classify.py](https://github.com/ufal/npfl114/tree/past-1718/labs/07/nasnet_classify.py).
 
 To submit the test set annotations in ReCodEx, use the supplied
-[nsketch_transfer_recodex.py](https://github.com/ufal/npfl114/tree/master/labs/07/nsketch_transfer_recodex.py)
+[nsketch_transfer_recodex.py](https://github.com/ufal/npfl114/tree/past-1718/labs/07/nsketch_transfer_recodex.py)
 script. You need to provide at least two arguments – the first is the path to
 the test set annotations and all other arguments are paths to the sources used
 to generate the test data.

@@ -3,7 +3,7 @@
 #### Points: 3 points
 
 This exercise evaluates the effect of dropout. Your goal is to modify the
-[mnist_dropout.py](https://github.com/ufal/npfl114/tree/master/labs/03/mnist_dropout.py)
+[mnist_dropout.py](https://github.com/ufal/npfl114/tree/past-1718/labs/03/mnist_dropout.py)
 template and implement the following:
 - Allow using dropout with specified dropout rate on the hidden layer.
   The dropout must be _active only during training_ and not during test set

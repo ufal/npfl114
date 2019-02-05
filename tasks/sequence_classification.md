@@ -9,7 +9,7 @@ for each prefix of the sequence. The inputs are either 0/1, or vectors with
 one-hot representation of small integer.
 
 Your goal is to modify the
-[sequence_classification.py](https://github.com/ufal/npfl114/tree/master/labs/07/sequence_classification.py)
+[sequence_classification.py](https://github.com/ufal/npfl114/tree/past-1718/labs/07/sequence_classification.py)
 template and implement the following:
 - Use specified RNN cell type (`RNN`, `GRU` and `LSTM`) and dimensionality.
 - Process the sequence using `tf.nn.dynamic_rnn`.

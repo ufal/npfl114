@@ -4,7 +4,7 @@
 
 This is a continuation of `reinforce` assignment.
 
-Using the [reinforce_with_baseline.py](https://github.com/ufal/npfl114/tree/master/labs/12/reinforce_with_baseline.py)
+Using the [reinforce_with_baseline.py](https://github.com/ufal/npfl114/tree/past-1718/labs/12/reinforce_with_baseline.py)
 template, modify the REINFORCE algorithm to use a baseline.
 
 Using a baseline lowers the variance of the value function gradient estimator,

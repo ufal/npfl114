@@ -4,7 +4,7 @@
 
 In this assignment, you will work with extend the `mnist_conv` assignment to
 support batch normalization. Start with the
-[mnist_batchnorm.py](https://github.com/ufal/npfl114/tree/master/labs/05/mnist_batchnorm.py)
+[mnist_batchnorm.py](https://github.com/ufal/npfl114/tree/past-1718/labs/05/mnist_batchnorm.py)
 template and in addition to all functionality of `mnist_conv`, implement also
 the following layer:
 - `CB-filters-kernel_size-stride-padding`: Add a convolutional layer with BatchNorm
