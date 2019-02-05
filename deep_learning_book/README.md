@@ -2,7 +2,7 @@
 
 The Deep Learning book by Ian Goodfellow and Yoshua Bengio and Aaron Courville
 is freely available on-line at http://www.deeplearningbook.org.
-It is als available from MIT Press.
+It is also available from MIT Press.
 
 ## PDF Version
 
@@ -20,13 +20,10 @@ of the book including a table of content:
   Also remove all footers and headers.
 
 - On Chrome, print to PDF using A4 paper size and "None" margins.
-  Note that there is/was an *error* in Chrome causing it *not to print*
-  some math characters -- the workaround is to print the page for the second
-  time (without closing it). If the files have the same size, you are fine,
-  but if the second file is larger, keep printing the page until you get
-  two files with the same size.
+  Note that there is/was a bug in Chrome causing it *not to print*
+  some math characters -- the workaround is to print each page twice
+  (without closing it).
 
 - In order to join the PDF files and add a table of content, put the
   `deep_learning_book.tex` file to the same directory as the printed PDFs
   and run `pdflatex deep_learning_book.tex`.
-
