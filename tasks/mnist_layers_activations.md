@@ -1,6 +1,6 @@
 ### Assignment: mnist_layers_activations
 #### Date: Deadline: Mar 17, 23:59
-#### Points: 2 points
+#### Points: 3 points
 
 In order to familiarize with TensorFlow and TensorBoard, start by playing with
 [example_keras_tensorboard.py](https://github.com/ufal/npfl114/tree/master/labs/01/example_keras_tensorboard.py).

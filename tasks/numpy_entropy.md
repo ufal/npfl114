@@ -1,6 +1,6 @@
 ### Assignment: numpy_entropy
 #### Date: Deadline: Mar 17, 23:59
-#### Points: 2 points
+#### Points: 3 points
 
 The goal of this exercise is to famirialize with Python, NumPy and ReCodEx
 submission system. Start with the
