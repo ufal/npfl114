@@ -5,3 +5,4 @@
 #### Video: https://slideslive.com/38906857/deep-learning-lecture-1-introduction-to-deep-learning,2018 Video
 #### Lecture assignment: numpy_entropy
 #### Lecture assignment: mnist_layers_activations
+#### Lecture assignment: mnist_graph
