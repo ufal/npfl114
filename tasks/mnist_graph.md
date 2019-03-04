@@ -1,5 +1,5 @@
 ### Assignment: mnist_graph
-#### Date: Deadline: Mar 17, 23:59
+#### Date: Deadline: Mar 24, 23:59
 #### Points: 2 points
 
 This assignment is a variant of `mnist_layers_activations`. Your goal is to
