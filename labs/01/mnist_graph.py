@@ -83,8 +83,6 @@ if __name__ == "__main__":
     np.random.seed(42)
     if args.recodex:
         tf.keras.utils.get_custom_objects()["glorot_uniform"] = lambda: tf.keras.initializers.glorot_uniform(seed=42)
-    tf.keras.backend.set_session(tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
-                                                                  intra_op_parallelism_threads=args.threads)))
 
     # Create logdir name
     args.logdir = "logs/{}-{}-{}".format(
