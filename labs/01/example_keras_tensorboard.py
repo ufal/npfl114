@@ -39,11 +39,11 @@ model = tf.keras.Sequential([
 
 model.compile(
     optimizer=tf.keras.optimizers.Adam(),
-    loss=tf.keras.losses.sparse_categorical_crossentropy, # SparseCategoricalCrossentropy in v2
+    loss=tf.keras.losses.SparseCategoricalCrossentropy(),
     metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
 )
 
-tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=1000)
+tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=1000, profile_batch=1)
 tb_callback.on_train_end = lambda *_: None
 model.fit(
     mnist.train.data["images"], mnist.train.data["labels"],
@@ -55,4 +55,4 @@ model.fit(
 test_logs = model.evaluate(
     mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size,
 )
-tb_callback.on_epoch_end(1, dict(("test_" + metric, value) for metric, value in zip(model.metrics_names, test_logs)))
+tb_callback.on_epoch_end(1, dict(("val_test_" + metric, value) for metric, value in zip(model.metrics_names, test_logs)))
