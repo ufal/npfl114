@@ -22,6 +22,6 @@ template and implement the following:
 
 In addition to submitting the task in ReCodEx, please also run the following
 variations and observe the results in TensorBoard:
-- 0 layers, activation none
-- 1 layer, activation none, relu, tanh, sigmoid
-- 10 layers, activation sigmoid, relu
+- `0` layers, activation `none`
+- `1` layer, activation `none`, `relu`, `tanh`, `sigmoid`
+- `10` layers, activation `sigmoid`, `relu`
