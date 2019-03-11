@@ -2,6 +2,9 @@
 #### Date: Deadline: Mar 17, 23:59
 #### Points: 3 points
 
+**<span style="color: red">The templates changed on Mar 11 because of the upgrade to TF 2.0.0a0,
+be sure to use the updated ones when submitting!</span>**
+
 In order to familiarize with TensorFlow and TensorBoard, start by playing with
 [example_keras_tensorboard.py](https://github.com/ufal/npfl114/tree/master/labs/01/example_keras_tensorboard.py).
 Run it, and when it finishes, run TensorBoard using `tensorboard --logdir logs`.

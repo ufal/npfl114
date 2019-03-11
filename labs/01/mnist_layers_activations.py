@@ -22,11 +22,11 @@ args = parser.parse_args()
 
 # Fix random seeds
 np.random.seed(42)
-tf.random.set_random_seed(42)
+tf.random.set_seed(42)
 if args.recodex:
     tf.keras.utils.get_custom_objects()["glorot_uniform"] = lambda: tf.keras.initializers.glorot_uniform(seed=42)
-tf.keras.backend.set_session(tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
-                                                              intra_op_parallelism_threads=args.threads)))
+tf.config.threading.set_inter_op_parallelism_threads(args.threads)
+tf.config.threading.set_intra_op_parallelism_threads(args.threads)
 
 # Create logdir name
 args.logdir = "logs/{}-{}-{}".format(
@@ -49,11 +49,11 @@ model = tf.keras.Sequential([
 
 model.compile(
     optimizer=tf.keras.optimizers.Adam(),
-    loss=tf.keras.losses.sparse_categorical_crossentropy,
+    loss=tf.keras.losses.SparseCategoricalCrossentropy(),
     metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
 )
 
-tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=1000)
+tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=1000, profile_batch=1)
 tb_callback.on_train_end = lambda *_: None
 model.fit(
     mnist.train.data["images"], mnist.train.data["labels"],
@@ -65,7 +65,7 @@ model.fit(
 test_logs = model.evaluate(
     mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size,
 )
-tb_callback.on_epoch_end(1, dict(("test_" + metric, value) for metric, value in zip(model.metrics_names, test_logs)))
+tb_callback.on_epoch_end(1, dict(("val_test_" + metric, value) for metric, value in zip(model.metrics_names, test_logs)))
 
 # TODO: Write test accuracy as percentages rounded to two decimal places.
 with open("mnist_layers_activations.out", "w") as out_file:
