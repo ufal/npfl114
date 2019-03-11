@@ -12,13 +12,13 @@ from mnist import MNIST
 # Parse arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("--batch_size", default=50, type=int, help="Batch size.")
-parser.add_argument("--decay", default=None, type=str, help="Learning decay rate type");
+parser.add_argument("--decay", default=None, type=str, help="Learning decay rate type")
 parser.add_argument("--epochs", default=10, type=int, help="Number of epochs.")
 parser.add_argument("--hidden_layer", default=200, type=int, help="Size of the hidden layer.")
-parser.add_argument("--learning_rate", default=0.01, type=float, help="Initial learning rate.");
-parser.add_argument("--learning_rate_final", default=None, type=float, help="Final learning rate.");
-parser.add_argument("--momentum", default=None, type=float, help="Momentum.");
-parser.add_argument("--optimizer", default="SGD", type=str, help="Optimizer to use.");
+parser.add_argument("--learning_rate", default=0.01, type=float, help="Initial learning rate.")
+parser.add_argument("--learning_rate_final", default=None, type=float, help="Final learning rate.")
+parser.add_argument("--momentum", default=None, type=float, help="Momentum.")
+parser.add_argument("--optimizer", default="SGD", type=str, help="Optimizer to use.")
 parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 args = parser.parse_args()
