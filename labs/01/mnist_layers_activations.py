@@ -6,11 +6,12 @@ import datetime
 import os
 import re
 
+
 import numpy as np
 import tensorflow as tf
 
 from mnist import MNIST
-
+from pathlib import Path
 # Parse arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("--activation", default="none", type=str, help="Activation function.")
@@ -31,11 +32,12 @@ tf.config.threading.set_inter_op_parallelism_threads(args.threads)
 tf.config.threading.set_intra_op_parallelism_threads(args.threads)
 
 # Create logdir name
-args.logdir = "logs/{}-{}-{}".format(
+log_path = "logs/{}-{}-{}".format(
     os.path.basename(__file__),
     datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S"),
     ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", key), value) for key, value in sorted(vars(args).items())))
 )
+args.logdir = Path(log_path)
 
 # Load data
 mnist = MNIST()
