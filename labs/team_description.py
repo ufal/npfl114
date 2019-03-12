@@ -7,3 +7,5 @@
 # You can find out ReCodEx ID in the URL bar after navigating
 # to your User profile page. The ID has the following format:
 # 01234567-89ab-cdef-0123-456789abcdef.
+
+NO PLAGIATORS IN THIS TEAM
