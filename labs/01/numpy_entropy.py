@@ -18,11 +18,9 @@ if __name__ == "__main__":
             else:
                 data_counts[line] += 1
 
-    data_probs = {} 
-    for key in data_counts.keys():
-        count = data_counts[key]
-        data_probs[key.lower()] = count / seq_len
-
+    data_probs = {}
+    for k in data_counts.keys():
+        data_probs[k] = data_counts[k] / seq_len
 
     # Load model distribution, each line `word \t probability`.
     model_probs = {}
@@ -30,28 +28,44 @@ if __name__ == "__main__":
         for line in model:
             line = line.rstrip("\n")
             split = line.split("\t")
-            model_probs[split[0].lower()] = (np.float(split[1]))
-    
-    for k in data_probs:
-        if k not in model_probs.keys():
-            model_probs[k] = 0
-    for k in model_probs:
-        if k not in data_probs.keys():
-            data_probs[k] = 0
-    print(data_probs)
-    print(model_probs)
+            model_probs[split[0]] = float(split[1])
 
-    data_dist = np.array([data_probs[k] for k in sorted(data_probs.keys())])
-    model_dist = np.array([model_probs[k] for k in sorted(model_probs.keys())])
+    for k in data_probs.keys():
+        if k not in model_probs.keys():
+            model_probs[k] = 0.0
+
+    for k in model_probs.keys():
+        if k not in data_probs.keys():
+            data_probs[k] = 0.0
+
+    data_d = []
+    model_d = []
+
+    for k in data_probs.keys():
+        data_d.append(data_probs[k])
+        model_d.append(model_probs[k])
+
+    data_dist = np.array(data_d)
+    model_dist = np.array(model_d)
 
     # Data entropy
-    tmp = data_dist[np.nonzero(data_dist)]
-    entropy = -np.sum(tmp * np.log(tmp))
-    print("{:.2f}".format(entropy))
+    entropy = -np.sum(data_dist[data_dist > 0.0] * np.log(data_dist[data_dist > 0.0]))
+    if not np.isnan(entropy):
+        print("{:.2f}".format(entropy))
+    else:
+        print("{:.2f}".format(0.0))
+
     #Data and model cross-entropy
     cross_entropy = -np.sum(data_dist * np.log(model_dist))
-    print("{:.2f}".format(cross_entropy))
+    if not np.isnan(cross_entropy):
+        print("{:.2f}".format(cross_entropy))
+    else:
+        print("{:.2f}".format(0.0))
 
     #KL Divergence
     D_KL = cross_entropy - entropy
-    print("{:.2f}".format(D_KL))
+
+    if not np.isnan(D_KL):
+        print("{:.2f}".format(D_KL))
+    else:
+        print("{:.2f}".format(0.0))
