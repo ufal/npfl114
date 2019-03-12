@@ -83,5 +83,5 @@ test_logs = model.evaluate(
 tb_callback.on_epoch_end(1, dict(("val_test_" + metric, value) for metric, value in zip(model.metrics_names, test_logs)))
 
 # TODO: Write test accuracy as percentages rounded to two decimal places.
-with open("mnist_training", "w") as out_file:
+with open("mnist_training.out", "w") as out_file:
     print("{:.2f}".format(100 * accuracy), file=out_file)
