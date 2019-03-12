@@ -31,7 +31,7 @@ tf.config.threading.set_inter_op_parallelism_threads(args.threads)
 tf.config.threading.set_intra_op_parallelism_threads(args.threads)
 
 # Create logdir name
-args.logdir = "logs\\{}-{}-{}".format(
+args.logdir = "logs/{}-{}-{}".format(
     os.path.basename(__file__),
     datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S"),
     ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", key), value) for key, value in sorted(vars(args).items())))
@@ -75,9 +75,8 @@ test_logs = model.evaluate(
 )
 tb_callback.on_epoch_end(1, dict(("val_test_" + metric, value) for metric, value in zip(model.metrics_names, test_logs)))
 
-print(test_logs)
-"""
+accuracy = test_logs[1]
+
 # TODO: Write test accuracy as percentages rounded to two decimal places.
 with open("mnist_layers_activations.out", "w") as out_file:
     print("{:.2f}".format(100 * accuracy), file=out_file)
-"""
