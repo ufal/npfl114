@@ -31,6 +31,7 @@ if args.recodex:
 tf.config.threading.set_inter_op_parallelism_threads(args.threads)
 tf.config.threading.set_intra_op_parallelism_threads(args.threads)
 
+#FIXED THE OS DEPENDANCY IN THE LOG DIR PATH
 # Create logdir name
 log_path = "logs/{}-{}-{}".format(
     os.path.basename(__file__),
