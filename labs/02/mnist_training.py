@@ -59,8 +59,8 @@ model = tf.keras.Sequential([
 #   just after the training.
 # In both cases, `decay_steps` should be total number of training batches.
 # If a learning rate schedule is used, you can find out current learning rate
-# by using `model.optimizer.learning_rate(model.optimizer.iterations)`,
-# so after training this value should be `args.learning_rate_final`.
+# by using `model.optimizer.learning_rate`, so after training this value
+# should be `args.learning_rate_final`.
 
 model.compile(
     optimizer=None,
