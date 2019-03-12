@@ -1,29 +1,47 @@
 #!/usr/bin/env python3
+#bfc95faa-444e-11e9-b0fd-00505601122b
+#3da961ed-4364-11e9-b0fd-00505601122b
+
 import numpy as np
 
 if __name__ == "__main__":
     # Load data distribution, each data point on a line
+
+    data_counts = {}
+    seq_len = 0
     with open("numpy_entropy_data.txt", "r") as data:
         for line in data:
+            seq_len += 1
             line = line.rstrip("\n")
-            # TODO: process the line, aggregating using Python data structures
+            if line not in data_counts.keys():
+                data_counts[line] = 1
+            else:
+                data_counts[line] += 1
 
-    # TODO: Create a NumPy array containing the data distribution. The
-    # NumPy array should contain only data, not any mapping. If required,
-    # the NumPy array might be created after loading the model distribution.
+    probs = []
+    for key in data_counts.keys():
+        count = data_counts[key]
+        probs.append(count / seq_len)
+    data_dist = np.array(probs)
+
 
     # Load model distribution, each line `word \t probability`.
+    model_probs = []
     with open("numpy_entropy_model.txt", "r") as model:
         for line in model:
             line = line.rstrip("\n")
-            # TODO: process the line, aggregating using Python data structures
+            split = line.split("\t")
+            model_probs.append(float(split[1]))
+    model_dist = np.array(model_probs)
 
-    # TODO: Create a NumPy array containing the model distribution.
-
-    # TODO: Compute and print the entropy H(data distribution). You should not use
-    # manual for/while cycles, but instead use the fact that most NumPy methods
-    # operate on all elements (for example `*` is vector element-wise multiplication).
+    # Data entropy
+    entropy = -np.sum(data_dist * np.log(data_dist))
     print("{:.2f}".format(entropy))
 
-    # TODO: Compute and print cross-entropy H(data distribution, model distribution)
-    # and KL-divergence D_KL(data distribution, model_distribution)
+    #Data and model cross-entropy
+    cross_entropy = -np.sum(data_dist * np.log(model_dist))
+    print("{:.2f}".format(cross_entropy))
+
+    #KL Divergence
+    D_KL = cross_entropy - entropy
+    print("{:.2f}".format(D_KL))

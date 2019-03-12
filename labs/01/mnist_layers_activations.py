@@ -22,11 +22,11 @@ args = parser.parse_args()
 
 # Fix random seeds
 np.random.seed(42)
-tf.random.set_seed(42)
+tf.random.set_random_seed(42)
 if args.recodex:
     tf.keras.utils.get_custom_objects()["glorot_uniform"] = lambda: tf.keras.initializers.glorot_uniform(seed=42)
-tf.config.threading.set_inter_op_parallelism_threads(args.threads)
-tf.config.threading.set_intra_op_parallelism_threads(args.threads)
+tf.keras.backend.set_session(tf.Session(config=tf.ConfigProto(inter_op_parallelism_threads=args.threads,
+                                                              intra_op_parallelism_threads=args.threads)))
 
 # Create logdir name
 args.logdir = "logs/{}-{}-{}".format(
@@ -42,18 +42,27 @@ mnist = MNIST()
 model = tf.keras.Sequential([
     tf.keras.layers.InputLayer((MNIST.H, MNIST.W, MNIST.C)),
     tf.keras.layers.Flatten(),
-    # TODO: Add `args.layers` number of hidden layers with size `args.hidden_layer`,
-    # using activation from `args.activation`, allowing "none", "relu", "tanh", "sigmoid".
-    tf.keras.layers.Dense(MNIST.LABELS, activation=tf.nn.softmax),
 ])
+
+for i in range(0,args.layers):
+    if args.activation == "relu":
+        model.add(tf.keras.layers.Dense(args.hidden_layer, tf.nn.relu))
+    elif args.activation == "tanh":
+        model.add(tf.keras.layers.Dense(args.hidden_layer, tf.nn.tanh))
+    elif args.activation == "sigmoid":
+        model.add(tf.keras.layers.Dense(args.hidden_layer, tf.nn.sigmoid))
+    else:
+        model.add(tf.keras.layers.Dense(args.hidden_layer))
+
+model.add(tf.keras.layers.Dense(MNIST.LABELS, activation=tf.nn.softmax))
 
 model.compile(
     optimizer=tf.keras.optimizers.Adam(),
-    loss=tf.keras.losses.SparseCategoricalCrossentropy(),
+    loss=tf.keras.losses.sparse_categorical_crossentropy,
     metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
 )
 
-tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=1000, profile_batch=1)
+tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=1000)
 tb_callback.on_train_end = lambda *_: None
 model.fit(
     mnist.train.data["images"], mnist.train.data["labels"],
@@ -65,8 +74,8 @@ model.fit(
 test_logs = model.evaluate(
     mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size,
 )
-tb_callback.on_epoch_end(1, dict(("val_test_" + metric, value) for metric, value in zip(model.metrics_names, test_logs)))
+tb_callback.on_epoch_end(1, dict(("test_" + metric, value) for metric, value in zip(model.metrics_names, test_logs)))
 
-# TODO: Write test accuracy as percentages rounded to two decimal places.
+accuracy = 1.0 - test_logs[0]
 with open("mnist_layers_activations.out", "w") as out_file:
     print("{:.2f}".format(100 * accuracy), file=out_file)
