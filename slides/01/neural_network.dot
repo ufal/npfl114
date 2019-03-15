@@ -7,11 +7,11 @@ digraph G { rankdir=LR; splines=line;
   h4 [ label=<h<sub><font point-size="10">4</font></sub>>]
   h1 [ label=<h<sub><font point-size="10">1</font></sub>>]
   h2 [ label=<h<sub><font point-size="10">2</font></sub>>]
-  y1 [ label=<y<sub><font point-size="10">1</font></sub>>]
-  y2 [ label=<y<sub><font point-size="10">2</font></sub>>]
-  {x1, x2, x3, x4} -> {h1, h2, h3, h4} -> {y1, y2}
+  o1 [ label=<o<sub><font point-size="10">1</font></sub>>]
+  o2 [ label=<o<sub><font point-size="10">2</font></sub>>]
+  {x1, x2, x3, x4} -> {h1, h2, h3, h4} -> {o1, o2}
   lx [ label=<Input<br/>layer>; shape=none ]
   la [ label=<Hidden<br/>layer>; shape=none ]
-  ly [ label=<Output<br/>layer>; shape=none ]
-  lx -> la -> ly [ style=invis ]
+  lo [ label=<Output<br/>layer>; shape=none ]
+  lx -> la -> lo [ style=invis ]
 }

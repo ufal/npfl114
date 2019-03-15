@@ -137,55 +137,55 @@
 <path fill="none" stroke="black" d="M54.2216,-126C62.5505,-126 71.9135,-126 80.8161,-126"/>
 <polygon fill="black" stroke="black" points="80.9659,-129.5 90.9659,-126 80.9658,-122.5 80.9659,-129.5"/>
 </g>
-<!-- y1 -->
-<g id="node9" class="node"><title>y1</title>
+<!-- o1 -->
+<g id="node9" class="node"><title>o1</title>
 <ellipse fill="none" stroke="black" cx="209" cy="-126" rx="27" ry="18"/>
-<text text-anchor="start" x="203" y="-123.3" font-family="Times,serif" font-size="14.00">y</text>
+<text text-anchor="start" x="203" y="-123.3" font-family="Times,serif" font-size="14.00">o</text>
 <text text-anchor="start" x="210" y="-123.3" font-family="Times,serif" baseline-shift="sub" font-size="10.00">1</text>
 </g>
-<!-- h3&#45;&gt;y1 -->
-<g id="edge17" class="edge"><title>h3&#45;&gt;y1</title>
+<!-- h3&#45;&gt;o1 -->
+<g id="edge17" class="edge"><title>h3&#45;&gt;o1</title>
 <path fill="none" stroke="black" d="M138.752,-83.9844C150.735,-91.2552 166.23,-100.656 179.522,-108.721"/>
 <polygon fill="black" stroke="black" points="177.938,-111.854 188.303,-114.049 181.569,-105.87 177.938,-111.854"/>
 </g>
-<!-- y2 -->
-<g id="node10" class="node"><title>y2</title>
+<!-- o2 -->
+<g id="node10" class="node"><title>o2</title>
 <ellipse fill="none" stroke="black" cx="209" cy="-72" rx="27" ry="18"/>
-<text text-anchor="start" x="203" y="-69.3" font-family="Times,serif" font-size="14.00">y</text>
+<text text-anchor="start" x="203" y="-69.3" font-family="Times,serif" font-size="14.00">o</text>
 <text text-anchor="start" x="210" y="-69.3" font-family="Times,serif" baseline-shift="sub" font-size="10.00">2</text>
 </g>
-<!-- h3&#45;&gt;y2 -->
-<g id="edge18" class="edge"><title>h3&#45;&gt;y2</title>
+<!-- h3&#45;&gt;o2 -->
+<g id="edge18" class="edge"><title>h3&#45;&gt;o2</title>
 <path fill="none" stroke="black" d="M145.222,-72C153.551,-72 162.914,-72 171.816,-72"/>
 <polygon fill="black" stroke="black" points="171.966,-75.5001 181.966,-72 171.966,-68.5001 171.966,-75.5001"/>
 </g>
-<!-- h4&#45;&gt;y1 -->
-<g id="edge19" class="edge"><title>h4&#45;&gt;y1</title>
+<!-- h4&#45;&gt;o1 -->
+<g id="edge19" class="edge"><title>h4&#45;&gt;o1</title>
 <path fill="none" stroke="black" d="M132.132,-33.9358C147.073,-52.0657 171.611,-81.8426 188.722,-102.606"/>
 <polygon fill="black" stroke="black" points="186.043,-104.859 195.103,-110.35 191.445,-100.407 186.043,-104.859"/>
 </g>
-<!-- h4&#45;&gt;y2 -->
-<g id="edge20" class="edge"><title>h4&#45;&gt;y2</title>
+<!-- h4&#45;&gt;o2 -->
+<g id="edge20" class="edge"><title>h4&#45;&gt;o2</title>
 <path fill="none" stroke="black" d="M138.752,-29.9844C150.735,-37.2552 166.23,-46.6562 179.522,-54.7215"/>
 <polygon fill="black" stroke="black" points="177.938,-57.8541 188.303,-60.0492 181.569,-51.8695 177.938,-57.8541"/>
 </g>
-<!-- h1&#45;&gt;y1 -->
-<g id="edge21" class="edge"><title>h1&#45;&gt;y1</title>
+<!-- h1&#45;&gt;o1 -->
+<g id="edge21" class="edge"><title>h1&#45;&gt;o1</title>
 <path fill="none" stroke="black" d="M138.752,-168.016C150.735,-160.745 166.23,-151.344 179.522,-143.279"/>
 <polygon fill="black" stroke="black" points="181.569,-146.13 188.303,-137.951 177.938,-140.146 181.569,-146.13"/>
 </g>
-<!-- h1&#45;&gt;y2 -->
-<g id="edge22" class="edge"><title>h1&#45;&gt;y2</title>
+<!-- h1&#45;&gt;o2 -->
+<g id="edge22" class="edge"><title>h1&#45;&gt;o2</title>
 <path fill="none" stroke="black" d="M132.132,-164.064C147.073,-145.934 171.611,-116.157 188.722,-95.3939"/>
 <polygon fill="black" stroke="black" points="191.445,-97.5931 195.103,-87.65 186.043,-93.1414 191.445,-97.5931"/>
 </g>
-<!-- h2&#45;&gt;y1 -->
-<g id="edge23" class="edge"><title>h2&#45;&gt;y1</title>
+<!-- h2&#45;&gt;o1 -->
+<g id="edge23" class="edge"><title>h2&#45;&gt;o1</title>
 <path fill="none" stroke="black" d="M145.222,-126C153.551,-126 162.914,-126 171.816,-126"/>
 <polygon fill="black" stroke="black" points="171.966,-129.5 181.966,-126 171.966,-122.5 171.966,-129.5"/>
 </g>
-<!-- h2&#45;&gt;y2 -->
-<g id="edge24" class="edge"><title>h2&#45;&gt;y2</title>
+<!-- h2&#45;&gt;o2 -->
+<g id="edge24" class="edge"><title>h2&#45;&gt;o2</title>
 <path fill="none" stroke="black" d="M138.752,-114.016C150.735,-106.745 166.23,-97.3438 179.522,-89.2785"/>
 <polygon fill="black" stroke="black" points="181.569,-92.1305 188.303,-83.9508 177.938,-86.1459 181.569,-92.1305"/>
 </g>
@@ -200,11 +200,11 @@
 <text text-anchor="start" x="104" y="-223.8" font-family="Times,serif" font-size="14.00">layer</text>
 </g>
 <!-- lx&#45;&gt;la -->
-<!-- ly -->
-<g id="node13" class="node"><title>ly</title>
+<!-- lo -->
+<g id="node13" class="node"><title>lo</title>
 <text text-anchor="start" x="190" y="-238.8" font-family="Times,serif" font-size="14.00">Output</text>
 <text text-anchor="start" x="195" y="-223.8" font-family="Times,serif" font-size="14.00">layer</text>
 </g>
-<!-- la&#45;&gt;ly -->
+<!-- la&#45;&gt;lo -->
 </g>
 </svg>
