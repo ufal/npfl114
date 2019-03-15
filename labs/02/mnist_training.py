@@ -55,8 +55,8 @@ model = tf.keras.Sequential([
 # - for `polynomial`, use `tf.keras.optimizers.schedules.PolynomialDecay`
 #   using the given `args.learning_rate_final`;
 # - for `exponential`, use `tf.keras.optimizers.schedules.ExponentialDecay`
-#   and setting `decay_rate` appropriately to reach `args.learning_rate_final`
-#   just after the training.
+#   and set `decay_rate` appropriately to reach `args.learning_rate_final`
+#   just after the training (and keep the default `staircase=False`).
 # In both cases, `decay_steps` should be total number of training batches.
 # If a learning rate schedule is used, you can find out current learning rate
 # by using `model.optimizer.learning_rate(model.optimizer.iterations)`,
