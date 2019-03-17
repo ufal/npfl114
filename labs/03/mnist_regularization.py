@@ -14,13 +14,13 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--batch_size", default=50, type=int, help="Batch size.")
 parser.add_argument("--dropout", default=0, type=float, help="Dropout regularization.")
 parser.add_argument("--epochs", default=30, type=int, help="Number of epochs.")
+parser.add_argument("--hidden_layers", default="500", type=str, help="Hidden layer configuration.")
 parser.add_argument("--l2", default=0, type=float, help="L2 regularization.")
 parser.add_argument("--label_smoothing", default=0, type=float, help="Label smoothing.")
-parser.add_argument("--layer", default=500, type=int, help="Size of the hidden layer.")
-parser.add_argument("--layers", default=1, type=int, help="Number of layers.")
 parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 args = parser.parse_args()
+args.hidden_layers = [int(hidden_layer) for hidden_layer in args.hidden_layers.split(",") if hidden_layer]
 
 # Fix random seeds
 np.random.seed(42)
@@ -53,8 +53,8 @@ mnist = MNIST()
 # Create the model
 model = tf.keras.Sequential()
 model.add(tf.keras.layers.Flatten(input_shape=[MNIST.H, MNIST.W, MNIST.C]))
-for _ in range(args.layers):
-    model.add(tf.keras.layers.Dense(args.layer, activation=tf.nn.relu))
+for hidden_layer in args.hidden_layers:
+    model.add(tf.keras.layers.Dense(hidden_layer, activation=tf.nn.relu))
 model.add(tf.keras.layers.Dense(MNIST.LABELS))
 
 # TODO: Implement label smoothing.
