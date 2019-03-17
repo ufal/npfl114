@@ -21,12 +21,12 @@ mnist = MNIST()
 model = tf.keras.Sequential([
     tf.keras.layers.Flatten(input_shape=[MNIST.H, MNIST.W, MNIST.C]),
     tf.keras.layers.Dense(args.hidden_layer, activation=tf.nn.relu),
-    tf.keras.layers.Dense(MNIST.LABELS, activation=tf.nn.softmax),
+    tf.keras.layers.Dense(MNIST.LABELS),
 ])
 
 model.compile(
     optimizer=tf.keras.optimizers.Adam(),
-    loss=tf.keras.losses.SparseCategoricalCrossentropy(),
+    loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
     metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
 )
 
