@@ -23,6 +23,15 @@ tf.config.threading.set_intra_op_parallelism_threads(args.threads)
 # Load the model
 model = tf.keras.models.load_model(args.model, compile=False)
 
+# Choose output_mode
+output_mode = None
+if len(model.output_shape) == 2 and model.output_shape[-1] == 1:
+    output_mode = "sigmoid"
+if len(model.output_shape) == 2 and model.output_shape[-1] == 2:
+    output_mode = "softmax"
+if output_mode is None:
+    raise ValueError("Unknown model output_shape, only 1 or 2 outputs are supported")
+
 # Create the environment
 env = gym.make("CartPole-v1")
 env.seed(42)
@@ -35,7 +44,12 @@ for episode in range(args.episodes):
     for i in range(env.spec.timestep_limit):
         if args.render:
             env.render()
-        observation, reward, done, info = env.step(np.argmax(model.predict(observation[np.newaxis, ...])[0]))
+        if output_mode == "sigmoid":
+            action = model.predict(observation[np.newaxis, ...])[0, 0] >= 0.5
+        else:
+            action = np.argmax(model.predict(observation[np.newaxis, ...])[0])
+
+        observation, reward, done, info = env.step(action)
         score += reward
         if done:
             break

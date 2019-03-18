@@ -15,7 +15,8 @@ inputs. This evaluation is performed by running the
 [gym_cartpole_evaluate.py](https://github.com/ufal/npfl114/tree/master/labs/02/gym_cartpole_evaluate.py),
 which loads a model and then evaluates it on 100 random episodes (optionally
 rendering if `--render` option is provided). In order to pass, you must achieve
-an average reward of at least 475 on 100 episodes.
+an average reward of at least 475 on 100 episodes. Your model should have either
+one or two outputs (i.e., using either sigmoid of softmax output function).
 
 _The size of the training data is very small and you should consider
 it when designing the model._
