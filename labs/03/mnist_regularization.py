@@ -42,9 +42,9 @@ mnist = MNIST()
 
 # TODO: Implement L2 regularization.
 # If `args.l2` is nonzero, create a `tf.keras.regularizers.L1L2` regularizer
-# and use it for all kernels and biases of all Dense layers. Note that
-# because of a bug if `args.l2` is zero, use `None` instead of `L1L2` regularizer
-# with zero l2.
+# and use it for all kernels and biases of all Dense layers (except the last one).
+# Note that because of a bug if `args.l2` is zero, use `None` instead of `L1L2`
+# regularizer with zero l2.
 
 # TODO: Implement dropout.
 # Add a `tf.keras.layers.Dropout` with `args.dropout` rate after the Flatten
