@@ -1,4 +1,4 @@
-digraph G { rankdir=LR; splines=line;
+digraph G { rankdir=LR; splines=line; bgcolor=invis;
   x3 [ label=<x<sub><font point-size="10">3</font></sub>>]
   x4 [ label=<x<sub><font point-size="10">4</font></sub>>]
   x1 [ label=<x<sub><font point-size="10">1</font></sub>>]
