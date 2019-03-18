@@ -11,7 +11,7 @@ template and implement the following:
   output layer).
 - Allow using L2 regularization with weight `args.l2`. Use
   `tf.keras.regularizers.L1L2` as a regularizer for all kernels and biases
-  of all `Dense` layers (including the last one).
+  of all `Dense` layers (except the last one).
 - Allow using label smoothing with weight `args.label_smoothing`. Instead
   of `SparseCategoricalCrossentropy`, you will need to use
   `CategoricalCrossentropy` which offers `label_smoothing` argument.
