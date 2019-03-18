@@ -51,7 +51,7 @@ model = tf.keras.Sequential([
 # TODO: Use the required `args.optimizer` (either `SGD` or `Adam`).
 # For `SGD`, `args.momentum` can be specified. If `args.decay` is
 # not specified, pass the given `args.learning_rate` directly to the
-# optimizer. If `args.decay` is set, then
+# optimizer as a `learning_rate` argument. If `args.decay` is set, then
 # - for `polynomial`, use `tf.keras.optimizers.schedules.PolynomialDecay`
 #   using the given `args.learning_rate_final`;
 # - for `exponential`, use `tf.keras.optimizers.schedules.ExponentialDecay`
