@@ -49,18 +49,22 @@ model = tf.keras.Sequential([
 ])
 
 # TODO: Use the required `args.optimizer` (either `SGD` or `Adam`).
-# For `SGD`, `args.momentum` can be specified. If `args.decay` is
-# not specified, pass the given `args.learning_rate` directly to the
-# optimizer as a `learning_rate` argument. If `args.decay` is set, then
-# - for `polynomial`, use `tf.keras.optimizers.schedules.PolynomialDecay`
-#   using the given `args.learning_rate_final`;
-# - for `exponential`, use `tf.keras.optimizers.schedules.ExponentialDecay`
-#   and set `decay_rate` appropriately to reach `args.learning_rate_final`
-#   just after the training (and keep the default `staircase=False`).
-# In both cases, `decay_steps` should be total number of training batches.
-# If a learning rate schedule is used, you can find out current learning rate
-# by using `model.optimizer.learning_rate(model.optimizer.iterations)`,
-# so after training this value should be `args.learning_rate_final`.
+# For `SGD`, `args.momentum` can be specified.
+# - If `args.decay` is not specified, pass the given `args.learning_rate`
+#   directly to the optimizer as a `learning_rate` argument.
+# - If `args.decay` is set, then
+#   - for `polynomial`, use `tf.keras.optimizers.schedules.PolynomialDecay`
+#     using the given `args.learning_rate_final`;
+#   - for `exponential`, use `tf.keras.optimizers.schedules.ExponentialDecay`
+#     and set `decay_rate` appropriately to reach `args.learning_rate_final`
+#     just after the training (and keep the default `staircase=False`).
+#   In both cases, `decay_steps` should be total number of training batches
+#   and you should pass the created `{Polynomial,Exponential}Decay` to
+#   the optizer using the `learning_rate` argument.
+#
+#   If a learning rate schedule is used, you can find out current learning rate
+#   by using `model.optimizer.learning_rate(model.optimizer.iterations)`,
+#   so after training this value should be `args.learning_rate_final`.
 
 model.compile(
     optimizer=None,
