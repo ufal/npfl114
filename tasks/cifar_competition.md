@@ -13,8 +13,9 @@ only used to understand the approach you took, and to indicate teams).
 Explicitly, submit **exactly one .txt file** and **at least one .py file**.
 
 The task is also a _competition_. Everyone who submits a solution which achieves
-at least _50%_ accuracy will get 5 points; the rest 5 points will be distributed
-depending on relative ordering of your solutions.
+at least _50%_ test set accuracy will get 5 points; the rest 5 points will be distributed
+depending on relative ordering of your solutions. Note that my solutions usually
+need to achieve at least ~63% on the development set to score 50% on the test set.
 
 You may want to start with the
 [cifar_competition.py](https://github.com/ufal/npfl114/tree/master/labs/04/cifar_competition.py)
