@@ -4,7 +4,7 @@ import urllib.request
 
 import numpy as np
 
-class Cifar10:
+class CIFAR10:
     H, W, C = 32, 32, 3
     LABELS = 10
 
@@ -41,7 +41,7 @@ class Cifar10:
     def __init__(self):
         path = os.path.basename(self._URL)
         if not os.path.exists(path):
-            print("Downloading Cifar dataset...", file=sys.stderr)
+            print("Downloading CIFAR-10 dataset...", file=sys.stderr)
             urllib.request.urlretrieve(self._URL, filename=path)
 
         cifar = np.load(path)
