@@ -49,6 +49,7 @@ class Network(tf.keras.Model):
     def test(self, mnist, args):
         test_logs = self.evaluate(mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size)
         self.tb_callback.on_epoch_end(1, dict(("val_test_" + metric, value) for metric, value in zip(self.metrics_names, test_logs)))
+        return test_logs[self.metrics_names.index("accuracy")]
 
 
 if __name__ == "__main__":
@@ -84,7 +85,11 @@ if __name__ == "__main__":
     # Load the data
     mnist = MNIST()
 
-    # Create the network, train and evaluate
+    # Create the network and train
     network = Network(args)
     network.train(mnist, args)
-    network.test(mnist, args)
+
+    # Compute test set accuracy and print it
+    accuracy = network.test(mnist, args)
+    with open("mnist_cnn.out", "w") as out_file:
+        print("{:.2f}".format(100 * accuracy), file=out_file)
