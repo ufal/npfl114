@@ -23,7 +23,7 @@ argument, which contains comma-separated specifications of the following layers:
   Example: `R-[C-16-3-1-same,C-16-3-1-same]`
 - `F`: Flatten inputs. Must appear exactly once in the architecture.
 - `D-hidden_layer_size`: Add a dense layer with ReLU activation and specified
-  size. Example: `R-100`
+  size. Example: `D-100`
 
 An example architecture might be `--cnn=CB-16-5-2-same,M-3-2,F,D-100`.
 
