@@ -22,7 +22,7 @@ class Network(tf.keras.Model):
     def train(self, cifar, args):
         self.fit(
             cifar.train.data["images"], cifar.train.data["labels"],
-            batch_size=args.batch_size, epochs=1,
+            batch_size=args.batch_size, epochs=args.epochs,
             validation_data=(cifar.dev.data["images"], cifar.dev.data["labels"]),
             callbacks=[self.tb_callback],
         )
