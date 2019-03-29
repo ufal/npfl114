@@ -6,10 +6,10 @@ parser.add_argument("system", type=str, help="Path to system output.")
 parser.add_argument("gold", type=str, help="Path to gold data.")
 args = parser.parse_args()
 
-with open(args.system, "r", encoding="utf-8") as system_file:
+with open(args.system, "r", encoding="utf-8-sig") as system_file:
     system = system_file.read()
 
-with open(args.gold, "r", encoding="utf-8") as gold_file:
+with open(args.gold, "r", encoding="utf-8-sig") as gold_file:
     gold = gold_file.read()
 
 same = 0
