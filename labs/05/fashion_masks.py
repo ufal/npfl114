@@ -32,7 +32,6 @@ if __name__ == "__main__":
     np.random.seed(42)
     tf.random.set_seed(42)
     tf.config.threading.set_inter_op_parallelism_threads(args.threads)
-    tf.config.threading.set_intra_op_parallelism_threads(args.threads)
 
     # Create logdir name
     args.logdir = os.path.join("logs", "{}-{}-{}".format(
