@@ -3,6 +3,7 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1819/slides/?05
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1819/slides.pdf/npfl114-05.pdf,PDF Slides
 #### Video: https://slideslive.com/38906863/deep-learning-lecture-5-convolutional-networks-ii,2018 Video
+#### Lecture assignment: mnist_multiple
 #### Lecture assignment: fashion_masks
 
 - ResNet [[Kaiming He et al.: Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
