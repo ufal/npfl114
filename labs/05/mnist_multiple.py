@@ -39,7 +39,7 @@ class Network:
 
     def train(self, mnist, args):
         for epoch in range(args.epochs):
-            # TODO: Train for one epoch using `model.train_on_batches`.
+            # TODO: Train for one epoch using `model.train_on_batch` for each batch.
             for batch in self._prepare_batches(mnist.train.batches(args.batch_size)):
                 pass
 
