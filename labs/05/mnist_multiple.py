@@ -8,20 +8,21 @@ from mnist import MNIST
 class Network:
     def __init__(self, args):
         # TODO: Add a `self.model` which has two inputs, both images of size [MNIST.H, MNIST.W, MNIST.C].
-        # It then passes both through the same network (with shared weights), performing
+        # It then passes each input image through the same network (with shared weights), performing
         # - convolution with 10 filters, 3x3 kernel size, stride 2, "valid" padding, ReLU activation
         # - convolution with 20 filters, 3x3 kernel size, stride 2, "valid" padding, ReLU activation
         # - flattening layer
         # - fully connected layer with 200 neurons and ReLU activation
+        # obtaining a 200-dimensional feature representation of each image.
         #
         # Then, it produces three outputs:
         # - classify the computed representation of the first image using a densely connected layer
-        #   into 10 classes
+        #   into 10 classes;
         # - classify the computed representation of the second image using the
-        #   same connected layer (with shared weights) into 10 classes
+        #   same connected layer (with shared weights) into 10 classes;
         # - concatenate the two image representations, process them using another fully connected
         #   layer with 200 neurons and ReLU, and finally compute one output with tf.nn.sigmoid
-        #   activation; the goal is to predict if the first digit is larger than the second
+        #   activation (the goal is to predict if the first digit is larger than the second)
         #
         # Train the outputs using SparseCategoricalCrossentropy for the first two inputs
         # and BinaryCrossentropy for the third one, utilizing Adam with default arguments.
