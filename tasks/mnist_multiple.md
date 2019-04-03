@@ -2,8 +2,6 @@
 #### Date: Deadline: Apr 14, 23:59
 #### Points: 4 points
 
-**The assignment is not yet in ReCodEx, it will appear there soon.**
-
 In this assignment you will implement a model with multiple inputs, multiple
 outputs, manual batch preparation, and manual evaluation. Start with the
 [mnist_multiple.py](https://github.com/ufal/npfl114/tree/master/labs/05/mnist_multiple.py)

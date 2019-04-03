@@ -2,8 +2,6 @@
 #### Date: Deadline: Apr 14, 23:59
 #### Points: 5-11 points
 
-**The assignment is not yet in ReCodEx, it will appear there soon.**
-
 This assignment is a simple image segmentation task. The data for this task is
 available through the [fashion_masks_data.py](https://github.com/ufal/npfl114/tree/master/labs/05/fashion_masks_data.py)
 The inputs consist of 28×28 greyscale images of ten classes of clothing,
