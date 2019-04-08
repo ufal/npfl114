@@ -70,8 +70,6 @@ if __name__ == "__main__":
 
     # Load data
     caltech42 = Caltech42()
-    for dataset in [caltech42.train, caltech42.dev, caltech42.test]:
-        dataset.data["labels"] = tf.keras.utils.to_categorical(dataset.data["labels"])
 
     # Create the network and train
     network = Network(args)
