@@ -51,7 +51,7 @@ class Network:
         # a ReLU-activated fully connected layer with `args.hidden_layer` units.
 
         # TODO: Generate predictions using a fully connected layer
-        # wit one output and `tf.nn.sigmoid` activation.
+        # with one output and `tf.nn.sigmoid` activation.
         self.model = tf.keras.Model(inputs=sequences, outputs=predictions)
 
         # TODO: Create an Adam optimizer in self._optimizer
