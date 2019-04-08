@@ -1,9 +1,9 @@
 ### Assignment: sequence_classification
-#### Date: Deadline: Apr 14, 23:59
+#### Date: Deadline: Apr 21, 23:59
 #### Points: 6 points
 
 The goal of this assignment is to introduce recurrent neural networks, manual
-TensorBoard log collection, and manual gradient clippint. Considering recurrent
+TensorBoard log collection, and manual gradient clipping. Considering recurrent
 neural network, the assignment shows convergence speed and illustrates exploding
 gradient issue. The network should process sequences of 50 small integers and
 compute parity for each prefix of the sequence. The inputs are either 0/1, or
