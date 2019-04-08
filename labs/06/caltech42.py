@@ -5,6 +5,21 @@ import zipfile
 
 import numpy as np
 
+# Note: Because images have different size, the user
+# - can specify `image_processing` method to dataset construction, which
+#   is applied to every image during loading;
+# - and/or can specify `image_processing` method to `batches` call, which is
+#   applied to an image during batch construction.
+#
+# In any way, the batch images must be Numpy arrays with shape (224, 224, 3)
+# and type np.float32. (In order to convert tf.Tensor to Numpty array
+# use `tf.Tensor.numpy()` method.)
+#
+# If all images are of the above datatype after dataset construction
+# (i.e., `image_processing` passed to `Caltech42` already generates such images),
+# then `data["images"]` is a Numpy array with the images. Otherwise, it is
+# a Python list of images, and the Numpy array is constructed only in `batches` call.
+
 class Caltech42:
     labels = [
         "airplanes", "bonsai", "brain", "buddha", "butterfly",
