@@ -43,8 +43,8 @@ class Dataset:
 class Network:
     def __init__(self, args):
         sequences = tf.keras.layers.Input(shape=[args.sequence_length, args.sequence_dim])
-        # TODO: Process the sequence using the given `args.rnn_cell` RNN cell,
-        # with dimensionality `args.rnn_cell_dim`. Use `return_sequences=True`
+        # TODO: Process the sequence using a RNN with cell type `args.rnn_cell`
+        # and with dimensionality `args.rnn_cell_dim`. Use `return_sequences=True`
         # to get outputs for all sequence elements.
 
         # TODO: If `args.hidden_layer` is defined, process the result using
