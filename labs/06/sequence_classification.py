@@ -82,8 +82,8 @@ class Network:
         #   - reset each metric
         #   - for "loss" metric, apply currently computed `loss`
         #   - for other metrics, compute their value using the gold labels and predictions
-        #   - then, add a summary using `tf.summary.scalar("train/" + name, metric.result())`
-        # - Finall, add the gradient_norm using `tf.summary.scalar("train/gradient_norm", gradient_norm)`
+        #   - then, add a summary using `tf.summary.scalar("train/" + name, metric.result(), step=None)`
+        # - Finall, add the gradient_norm using `tf.summary.scalar("train/gradient_norm", gradient_norm, step=None)`
 
     def train_epoch(self, dataset, args):
         for batch in dataset.batches(args.batch_size):
@@ -108,7 +108,7 @@ class Network:
         # Finally, create a dictionary `metrics` with results, using names and values in `self._metrics`.
         with self._writer.as_default():
             for name, metric in metrics.items():
-                tf.summary.scalar("test/" + name, metric)
+                tf.summary.scalar("test/" + name, metric, step=None)
 
         return metrics
 
