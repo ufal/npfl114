@@ -46,6 +46,11 @@ class Network:
         # TODO: Process the sequence using a RNN with cell type `args.rnn_cell`
         # and with dimensionality `args.rnn_cell_dim`. Use `return_sequences=True`
         # to get outputs for all sequence elements.
+        #
+        # Prefer `tf.keras.layers.LSTM` (and analogously for `GRU` and
+        # `SimpleRNN`) to `tf.keras.layers.RNN` wrapper with
+        # `tf.keras.layers.LSTMCell` (the former can run transparently on a GPU
+        # and is also considerably faster on a CPU).
 
         # TODO: If `args.hidden_layer` is defined, process the result using
         # a ReLU-activated fully connected layer with `args.hidden_layer` units.
