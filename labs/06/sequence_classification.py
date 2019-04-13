@@ -124,7 +124,7 @@ if __name__ == "__main__":
     import re
 
 
-    def nullable(type): return lambda x: None if x is None or x == 'None' else type(x)
+    def nullable(type): return lambda x: None if x == 'None' else type(x)
 
     # Parse arguments
     parser = argparse.ArgumentParser()
