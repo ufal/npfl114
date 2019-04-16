@@ -52,7 +52,6 @@ class Network:
         self.model.reset_metrics()
 
         metrics = dict(zip(self.model.metrics_names, metrics))
-        tf.summary.experimental.set_step(self.model.optimizer.iterations)
         with self._writer.as_default():
             for name, value in metrics.items():
                 tf.summary.scalar("{}/{}".format(dataset_name, name), value)
@@ -70,7 +69,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", default=10, type=int, help="Batch size.")
     parser.add_argument("--epochs", default=10, type=int, help="Number of epochs.")
-    parser.add_argument("--max_sentences", default=None, type=int, help="Maximum number of sentences to load.")
+    parser.add_argument("--max_sentences", default=5000, type=int, help="Maximum number of sentences to load.")
     parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
     parser.add_argument("--rnn_cell", default="LSTM", type=str, help="RNN cell type.")
     parser.add_argument("--rnn_cell_dim", default=64, type=int, help="RNN cell dimension.")
@@ -84,6 +83,7 @@ if __name__ == "__main__":
     if args.recodex:
         tf.keras.utils.get_custom_objects()["glorot_uniform"] = lambda: tf.keras.initializers.glorot_uniform(seed=42)
         tf.keras.utils.get_custom_objects()["orthogonal"] = lambda: tf.keras.initializers.orthogonal(seed=42)
+        tf.keras.utils.get_custom_objects()["uniform"] = lambda: tf.initializers.RandomUniform(seed=42)
     tf.config.threading.set_inter_op_parallelism_threads(args.threads)
     tf.config.threading.set_intra_op_parallelism_threads(args.threads)
 
