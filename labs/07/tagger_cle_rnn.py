@@ -87,12 +87,10 @@ class Network:
                   # passing the tag mask as third argument.
 
     def evaluate(self, dataset, dataset_name, args):
-        # We assume that model metric are resetted at this point.
+        for metric in self._metrics.values():
+            metric.reset_states()
         for batch in dataset.batches(args.batch_size):
-            # TODO(we): Evaluate the given match, using the same inputs as in training.
-            # Additionally, pass `reset_metrics=False` to aggregate the metrics.
-            # Store the metrics of the last batch as `metrics`.
-        self.model.reset_metrics()
+            # TODO: Evaluate the given match, using the same inputs as in training.
 
         metrics = {name: metric.result() for name, metric in self._metrics.items()}
         with self._writer.as_default():
