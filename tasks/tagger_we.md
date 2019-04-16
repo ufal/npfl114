@@ -18,5 +18,4 @@ template and implement the following:
 Note that you need to properly handle sentences of different lengths in one
 batch using masking.
 
-After submitting the task to ReCodEx, continue with `tagger_cle_rnn` and/or
-`tagger_cle_cnn` assignment.
+After submitting the task to ReCodEx, continue with [`tagger_cle_rnn`](#tagger_cle_rnn) assignment.
