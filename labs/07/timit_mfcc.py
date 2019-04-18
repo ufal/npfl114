@@ -15,10 +15,8 @@ class TimitMFCC:
     class Dataset:
         def __init__(self, data, shuffle_batches, seed=42):
             self._data = {}
-            for key in ("mfcc", "letters"):
-                self._data[key] = []
-                for values in data[key]:
-                    self._data[key].append(values + 1)
+            self._data["mfcc"] = data["mfcc"]
+            self._data["letters"] = [letters + 1 for letters in data["letters"]]
             self._size = len(self._data["mfcc"])
 
             self._shuffler = np.random.RandomState(seed) if shuffle_batches else None
@@ -41,7 +39,7 @@ class TimitMFCC:
                 batch = {}
                 for key, values in self._data.items():
                     max_length = max(len(values[i]) for i in batch_perm)
-                    batch[key] = np.zeros([batch_size, max_length, *self._data[key].shape[1:]], values[0].dtype)
+                    batch[key] = np.zeros([batch_size, max_length, *values[batch_perm[0]].shape[1:]], values[batch_perm[0]].dtype)
                     batch[key + "_len"] = np.zeros([batch_size], dtype=np.int32)
 
                     for i, index in enumerate(batch_perm):
