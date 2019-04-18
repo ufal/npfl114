@@ -140,4 +140,4 @@ if __name__ == "__main__":
     if os.path.isdir(args.logdir): out_path = os.path.join(args.logdir, out_path)
     with open(out_path, "w", encoding="utf-8") as out_file:
         for sentence in network.predict(timit.test, args):
-            print(" ".join(timit.LETTERS[np.argmax(probs)] for probs in sentence), file=out_file)
+            print(" ".join(timit.LETTERS[letters] for letters in sentence), file=out_file)
