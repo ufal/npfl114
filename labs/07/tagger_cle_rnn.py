@@ -33,9 +33,9 @@ class Network:
 
         # TODO: Concatenate the WE and CLE embeddings (in this order).
 
-        # TODO(we): Create specified `args.rnn_cell` RNN cell with dimension `args.rnn_cell_dim`
-        # and apply it in a bidirectional way on the embedded words, concatenating
-        # opposite directions.
+        # todo(we): create specified `args.rnn_cell` rnn cell (lstm, gru) with
+        # dimension `args.rnn_cell_dim` and apply it in a bidirectional way on
+        # the embedded words, concatenating opposite directions.
 
         # TODO(we): Add a softmax classification layer into `num_tags` classes, storing
         # the outputs in `predictions`.

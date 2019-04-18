@@ -13,9 +13,9 @@ class Network:
         # TODO: Embed input words with dimensionality `args.we_dim`, using
         # `mask_zero=True`.
 
-        # TODO: Create specified `args.rnn_cell` RNN cell with dimension `args.rnn_cell_dim`
-        # and apply it in a bidirectional way on the embedded words, concatenating
-        # opposite directions.
+        # TODO: Create specified `args.rnn_cell` RNN cell (LSTM, GRU) with
+        # dimension `args.rnn_cell_dim` and apply it in a bidirectional way on
+        # the embedded words, concatenating opposite directions.
 
         # TODO: Add a softmax classification layer into `num_tags` classes, storing
         # the outputs in `predictions`.
