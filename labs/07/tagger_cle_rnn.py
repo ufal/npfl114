@@ -49,7 +49,8 @@ class Network:
         #  - "accuracy", which is suitable accuracy
         self._writer = tf.summary.create_file_writer(args.logdir, flush_millis=10 * 1000)
 
-    @tf.function
+    @tf.function(input_signature=[[tf.TensorSpec(shape=[None, None], dtype=tf.int32)] * 3,
+                                  tf.TensorSpec(shape=[None, None], dtype=tf.int32)])
     def train_batch(self, inputs, tags):
         # TODO: Generate a mask from `tags` containing ones in positions
         # where tags are nonzero (using `tf.not_equal`).
@@ -74,7 +75,8 @@ class Network:
             self.train_batch([batch[dataset.FORMS].word_ids, batch[dataset.FORMS].charseq_ids, batch[dataset.FORMS].charseqs],
                              batch[dataset.TAGS].word_ids)
 
-    @tf.function
+    @tf.function(input_signature=[[tf.TensorSpec(shape=[None, None], dtype=tf.int32)] * 3,
+                                  tf.TensorSpec(shape=[None, None], dtype=tf.int32)])
     def evaluate_batch(self, inputs, tags):
         # TODO: Again generate a mask from `tags` containing ones in positions
         # where tags are nonzero (using `tf.not_equal`).
