@@ -9,3 +9,4 @@
 #### Lecture assignment: tagger_we
 #### Lecture assignment: tagger_cle_rnn
 #### Lecture assignment: tagger_cle_cnn
+#### Lecture assignment: speech_recognition
