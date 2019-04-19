@@ -62,8 +62,8 @@ class Network:
             probabilities = self.model(inputs, training=True)
             # TODO(cle_rnn): Compute `loss` using `self._loss`, passing the generated
             # tag mask as third parameter.
-        gradients = tape.gradient(loss, self.model.variables)
-        self._optimizer.apply_gradients(zip(gradients, self.model.variables))
+            gradients = tape.gradient(loss, self.model.variables)
+            self._optimizer.apply_gradients(zip(gradients, self.model.variables))
 
         tf.summary.experimental.set_step(self._optimizer.iterations)
         with self._writer.as_default():

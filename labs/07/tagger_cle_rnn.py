@@ -33,7 +33,7 @@ class Network:
 
         # TODO: Concatenate the WE and CLE embeddings (in this order).
 
-        # todo(we): create specified `args.rnn_cell` rnn cell (lstm, gru) with
+        # TODO(we): create specified `args.rnn_cell` rnn cell (lstm, gru) with
         # dimension `args.rnn_cell_dim` and apply it in a bidirectional way on
         # the embedded words, concatenating opposite directions.
 
@@ -58,8 +58,8 @@ class Network:
             probabilities = self.model(inputs, training=True)
             # TODO: Compute `loss` using `self._loss`, passing the generated
             # tag mask as third parameter.
-        gradients = tape.gradient(loss, self.model.variables)
-        self._optimizer.apply_gradients(zip(gradients, self.model.variables))
+            gradients = tape.gradient(loss, self.model.variables)
+            self._optimizer.apply_gradients(zip(gradients, self.model.variables))
 
         tf.summary.experimental.set_step(self._optimizer.iterations)
         with self._writer.as_default():
