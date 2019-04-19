@@ -1,5 +1,5 @@
 ### Assignment: caltech42_competition
-#### Date: Deadline: Apr 21, 23:59
+#### Date: Deadline: ~~Apr 21, 23:59~~ Apr 22, 23:59
 #### Points: 5-10 points
 
 The goal of this assignment is to try transfer learning approach to train image
