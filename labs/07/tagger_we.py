@@ -13,9 +13,9 @@ class Network:
         # TODO: Embed input words with dimensionality `args.we_dim`, using
         # `mask_zero=True`.
 
-        # TODO: Create specified `args.rnn_cell` RNN cell with dimension `args.rnn_cell_dim`
-        # and apply it in a bidirectional way on the embedded words, concatenating
-        # opposite directions.
+        # TODO: Create specified `args.rnn_cell` RNN cell (LSTM, GRU) with
+        # dimension `args.rnn_cell_dim` and apply it in a bidirectional way on
+        # the embedded words, concatenating opposite directions.
 
         # TODO: Add a softmax classification layer into `num_tags` classes, storing
         # the outputs in `predictions`.
@@ -81,8 +81,8 @@ if __name__ == "__main__":
     np.random.seed(42)
     tf.random.set_seed(42)
     if args.recodex:
-        tf.keras.utils.get_custom_objects()["glorot_uniform"] = lambda: tf.keras.initializers.glorot_uniform(seed=42)
-        tf.keras.utils.get_custom_objects()["orthogonal"] = lambda: tf.keras.initializers.orthogonal(seed=42)
+        tf.keras.utils.get_custom_objects()["glorot_uniform"] = lambda: tf.initializers.glorot_uniform(seed=42)
+        tf.keras.utils.get_custom_objects()["orthogonal"] = lambda: tf.initializers.orthogonal(seed=42)
         tf.keras.utils.get_custom_objects()["uniform"] = lambda: tf.initializers.RandomUniform(seed=42)
     tf.config.threading.set_inter_op_parallelism_threads(args.threads)
     tf.config.threading.set_intra_op_parallelism_threads(args.threads)

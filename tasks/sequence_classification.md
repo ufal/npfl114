@@ -1,5 +1,5 @@
 ### Assignment: sequence_classification
-#### Date: Deadline: Apr 21, 23:59
+#### Date: Deadline: ~~Apr 21, 23:59~~ Apr 22, 23:59
 #### Points: 6 points
 
 The goal of this assignment is to introduce recurrent neural networks, manual

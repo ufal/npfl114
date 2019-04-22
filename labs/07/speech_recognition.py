@@ -87,7 +87,7 @@ class Network:
                                   tf.TensorSpec(shape=[None], dtype=tf.int32)])
     def predict_batch(self, mfcc, mfcc_lens):
         # TODO: Implement batch prediction, returning a tuple (dense_predictions, prediction_lens)
-        # produces by self._to_dense.
+        # produced by self._to_dense.
         pass
 
     def predict(self, dataset, args):

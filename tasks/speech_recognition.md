@@ -1,6 +1,6 @@
 ### Assignment: speech_recognition
 #### Date: Deadline: Apr 28, 23:59
-#### Points: 5-10 points
+#### Points: 7-12 points
 
 This assignment is a competition task in speech recognition area. Specifically,
 your goal is to predict a sequence of letters given a spoken utterance.
@@ -23,7 +23,7 @@ Explicitly, submit **exactly one .txt file** and **at least one .py file**.
 The task is also a _competition_. The evaluation is performed by computing edit
 distance to the gold letter sequence, normalized by its length (i.e., exactly as
 `tf.edit_distance`). Everyone who submits a solution which achieves
-at most _50%_ test set edit distance will get 5 points; the rest 5 points will be distributed
+at most _50%_ test set edit distance will get 7 points; the rest 5 points will be distributed
 depending on relative ordering of your solutions. An evaluation (using for example development data)
 can be performed by
 [speech_recognition_eval.py](https://github.com/ufal/npfl114/tree/master/labs/07/speech_recognition_eval.py).
