@@ -42,4 +42,4 @@ class MorphoAnalyzer:
                     self.analyses[columns[0]] = analyses
 
     def get(self, word):
-        return self.analyses.get(word, None)
+        return self.analyses.get(word, [])
