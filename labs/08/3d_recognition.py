@@ -37,7 +37,7 @@ if __name__ == "__main__":
     parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
     args = parser.parse_args()
 
-    # Fix random seeds
+    # Fix random seeds and number of threads
     np.random.seed(42)
     tf.random.set_seed(42)
     tf.config.threading.set_inter_op_parallelism_threads(args.threads)
@@ -50,7 +50,7 @@ if __name__ == "__main__":
         ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", key), value) for key, value in sorted(vars(args).items())))
     ))
 
-    # Load data
+    # Load the data
     modelnet = ModelNet(args.modelnet)
 
     # Create the network and train
