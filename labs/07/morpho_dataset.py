@@ -144,8 +144,8 @@ class MorphoDataset:
                     if not factor.characters: continue
 
                     batch[f].charseq_ids = np.zeros([batch_size, max_sentence_len], np.int32)
-                    charseqs_map = {}
-                    charseqs = []
+                    charseqs_map = {"<pad>": factor.PAD}
+                    charseqs = [factor.charseqs[factor.PAD]]
                     for i in range(batch_size):
                         for j, charseq_id in enumerate(factor.charseq_ids[batch_perm[i]]):
                             if charseq_id not in charseqs_map:
