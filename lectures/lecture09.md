@@ -8,3 +8,4 @@
 #### Video: https://slideslive.com/38910718/deep-learning-lecture-12-sequence-prediction-ii-reinforcement-learning-ii, 2018 Video IV
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn
+#### Lecture assignment: lemmatizer_competition
