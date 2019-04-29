@@ -16,7 +16,7 @@ class Network:
                 # - source_rnn as a bidirectional GRU with args.rnn_dim units, returning only the last state, summing opposite directions
 
                 # - target_embedding as an unmasked embedding layer of target chars into args.cle_dim dimensions
-                # - source_rnn_cell as a GRUCell with args.rnn_dim units
+                # - target_rnn_cell as a GRUCell with args.rnn_dim units
                 # - target_output_layer as a Dense layer into `num_target_chars`
 
         self._model = Model()
