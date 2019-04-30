@@ -80,8 +80,7 @@ class Network:
                 def initialize(self, layer_inputs, initial_state=None):
                     self._model, self._source_encoded, self._targets = layer_inputs
 
-                    # TODO(lemmatizer_noattn): Define `finished` as False when self._targets[:, 0] is nonzero
-                    # and as True when it is zero. BTW, do not use == or !=.
+                    # TODO(lemmatozer_noattn): Define `finished` as a vector of self.batch_size of `False` [see tf.fill].
                     # TODO(lemmatizer_noattn): Define `inputs` as a vector of self.batch_size MorphoDataset.Factor.BOW [see tf.fill],
                     # embedded using self._model.target_embedding
                     # TODO: Define `states` as the last words from self._source_encoded
@@ -152,7 +151,7 @@ class Network:
             def initialize(self, layer_inputs, initial_state=None):
                 self._model, self._source_encoded = layer_inputs
 
-                # TODO(lemmatizer_noattn): Define `finished` as a vector of self.batch_size containing Falses.
+                # TODO(lemmatizer_noattn)(train_batch): Define `finished` as a vector of self.batch_size of `False` [see tf.fill].
                 # TODO(lemmatizer_noattn)(train_batch): Define `inputs` as a vector of self.batch_size MorphoDataset.Factor.BOW [see tf.fill],
                 # embedded using self._model.target_embedding
                 # TODO(train_batch): Define `states` as the last words from self._source_encoded

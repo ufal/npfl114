@@ -57,8 +57,7 @@ class Network:
                 def initialize(self, layer_inputs, initial_state=None):
                     self._model, self._source_states, self._targets = layer_inputs
 
-                    # TODO: Define `finished` as False when self._targets[:, 0] is nonzero
-                    # and as True when it is zero. BTW, do not use == or !=.
+                    # TODO: Define `finished` as a vector of self.batch_size of `False` [see tf.fill].
                     # TODO: Define `inputs` as a vector of self.batch_size MorphoDataset.Factor.BOW [see tf.fill],
                     # embedded using self._model.target_embedding
                     # TODO: Define `states` as self._source_states
@@ -123,7 +122,7 @@ class Network:
             def initialize(self, layer_inputs, initial_state=None):
                 self._model, self._source_states = layer_inputs
 
-                # TODO: Define `finished` as a vector of self.batch_size containing Falses.
+                # TODO(train_batch): Define `finished` as a vector of self.batch_size of `False` [see tf.fill].
                 # TODO(train_batch): Define `inputs` as a vector of self.batch_size MorphoDataset.Factor.BOW [see tf.fill],
                 # embedded using self._model.target_embedding
                 # TODO(train_batch): Define `states` as self._source_states
