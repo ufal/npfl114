@@ -142,7 +142,6 @@ class Network:
             def output_size(self): raise NotImplemented() # TODO(lemmatizer_noattn): Return 1 because we are returning directly the predictions
             @property
             def output_dtype(self): return NotImplemented() # TODO(lemmatizer_noattn): Return tf.int32 because the predictions are integral
-            @property
 
             def _with_attention(self, inputs, states):
                 # TODO: A copy of _with_attention from train_batch; you can of course

@@ -117,7 +117,6 @@ class Network:
             def output_size(self): raise NotImplemented() # TODO: Return 1 because we are returning directly the predictions
             @property
             def output_dtype(self): return NotImplemented() # TODO: Return tf.int32 because the predictions are integral
-            @property
 
             def initialize(self, layer_inputs, initial_state=None):
                 self._model, self._source_states = layer_inputs
