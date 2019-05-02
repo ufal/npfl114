@@ -28,6 +28,9 @@ at least 92% label accuracy will get 5 points; the rest 5 points will be distrib
 depending on relative ordering of your solutions. Lastly, **3 bonus points**
 will be given to anyone surpassing pre-neural-network state-of-the-art
 of 95.89% from [Spoustová et al., 2009](http://www.aclweb.org/anthology/E09-1087).
+You can evaluate generated file against a golden text file using the
+[morpho_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/08/morpho_evaluator.py)
+module.
 
 You can start with the
 [tagger_competition.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_competition.py)

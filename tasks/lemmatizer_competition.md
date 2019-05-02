@@ -25,7 +25,9 @@ The task is also a _competition_. Everyone who submits a solution which achieves
 at least 92% accuracy will get 5 points; the rest 5 points will be distributed
 depending on relative ordering of your solutions. Lastly, **3 bonus points**
 will be given to anyone surpassing pre-neural-network state-of-the-art
-of 97.86%.
+of 97.86%. You can evaluate generated file against a golden text file using the
+[morpho_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/08/morpho_evaluator.py)
+module.
 
 You can start with the
 [lemmatizer_competition.py](https://github.com/ufal/npfl114/tree/master/labs/09/lemmatizer_competition.py)
