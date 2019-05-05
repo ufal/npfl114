@@ -8,7 +8,7 @@ class MNIST:
     H, W, C = 28, 28, 1
     LABELS = 10
 
-    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/1819/datasets/mnist.npz"
+    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/1819/datasets/"
 
     class Dataset:
         def __init__(self, data, shuffle_batches, seed=42):
@@ -38,11 +38,11 @@ class MNIST:
                     batch[key] = self._data[key][batch_perm]
                 yield batch
 
-    def __init__(self):
-        path = os.path.basename(self._URL)
+    def __init__(self, dataset="mnist"):
+        path = "{}.npz".format(dataset)
         if not os.path.exists(path):
-            print("Downloading MNIST dataset...", file=sys.stderr)
-            urllib.request.urlretrieve(self._URL, filename=path)
+            print("Downloading dataset {}...".format(dataset), file=sys.stderr)
+            urllib.request.urlretrieve("{}/{}".format(self._URL, path), filename=path)
 
         mnist = np.load(path)
         for dataset in ["train", "dev", "test"]:
