@@ -7,6 +7,17 @@ import numpy as np
 
 class NLIDataset:
     class Batch:
+        """ Batch data type.
+
+        Each batch is an object containing
+        - word_ids: batch of word_ids
+        - charseq_ids: batch of charseq_ids (the same shape as word_ids, but with the ids pointing into charseqs).
+        - charseqs: unique charseqs in the batch, indexable by charseq_ids; contain indices of characters from vocabulary('chars')
+        - tags: batch of tags (the same shape as word_ids)
+        - levels: batch of student levels
+        - prompts: batch of student prompts
+        - languages: batch of languages
+        """
         def __init__(self, word_ids, charseq_ids, charseqs, tags, levels, prompts, languages):
             self.word_ids, self.charseq_ids, self.charseqs, self.tags, self.levels, self.prompts, self.languages = \
                 word_ids, charseq_ids, charseqs, tags, levels, prompts, languages
@@ -121,18 +132,7 @@ class NLIDataset:
             return self._size
 
         def batches(self, size=None):
-            """ Generate the batches.
-
-            Each batch is an obect containing
-            - word_ids: batch of word_ids
-            - charseq_ids: batch of charseq_ids (the same shape as word_ids, but with the ids pointing into charseqs).
-            - charseqs: unique charseqs in the batch, indexable by charseq_ids;
-                contain indices of characters from vocabulary('chars')
-            - tags: batch of tags (the same shape as word_ids)
-            - levels: batch of student levels
-            - prompts: batch of student prompts
-            - languages: batch of languages
-            """
+            """ Generate the batches."""
             permutation = self._shuffler.permutation(self._size) if self._shuffler else np.arange(self._size)
             while len(permutation):
                 batch_size = min(size or np.inf, len(permutation))
