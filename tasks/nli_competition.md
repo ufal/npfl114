@@ -26,7 +26,7 @@ only used to understand the approach you took, and to indicate teams).
 Explicitly, submit **exactly one .txt file** and **at least one .py file**.
 **Note that all `.zip` files you submit will be extracted first.**
 
-The task is also a _competition_. If your test set accuracy surpasses 50%, you will be
+The task is also a _competition_. If your test set accuracy surpasses 60%, you will be
 awarded 6 points; the rest 4 points will be distributed depending on relative
 ordering of your solutions.
 
