@@ -60,7 +60,7 @@ class Network:
                 @property
                 def output_size(self): raise NotImplemented() # TODO(lemmatizer_noattn): Return number of the generated logits
                 @property
-                def output_dtype(self): return NotImplemented() # TODO(lemmatizer_noattn): Return the type of the generated logits
+                def output_dtype(self): raise NotImplemented() # TODO(lemmatizer_noattn): Return the type of the generated logits
 
                 def _with_attention(self, inputs, states):
                     # TODO: Compute the attention.

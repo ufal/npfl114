@@ -52,7 +52,7 @@ class Network:
                 @property
                 def output_size(self): raise NotImplemented() # TODO: Return number of the generated logits
                 @property
-                def output_dtype(self): return NotImplemented() # TODO: Return the type of the generated logits
+                def output_dtype(self): raise NotImplemented() # TODO: Return the type of the generated logits
 
                 def initialize(self, layer_inputs, initial_state=None):
                     self._model, self._source_states, self._targets = layer_inputs
