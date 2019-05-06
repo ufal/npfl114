@@ -58,7 +58,7 @@ class Network:
                     self._model, self._source_states, self._targets = layer_inputs
 
                     # TODO: Define `finished` as a vector of self.batch_size of `False` [see tf.fill].
-                    # TODO: Define `inputs` as a vector of self.batch_size MorphoDataset.Factor.BOW [see tf.fill],
+                    # TODO: Define `inputs` as a vector of self.batch_size of MorphoDataset.Factor.BOW [see tf.fill],
                     # embedded using self._model.target_embedding
                     # TODO: Define `states` as self._source_states
                     return finished, inputs, states
@@ -122,7 +122,7 @@ class Network:
                 self._model, self._source_states = layer_inputs
 
                 # TODO(train_batch): Define `finished` as a vector of self.batch_size of `False` [see tf.fill].
-                # TODO(train_batch): Define `inputs` as a vector of self.batch_size MorphoDataset.Factor.BOW [see tf.fill],
+                # TODO(train_batch): Define `inputs` as a vector of self.batch_size of MorphoDataset.Factor.BOW [see tf.fill],
                 # embedded using self._model.target_embedding
                 # TODO(train_batch): Define `states` as self._source_states
                 return finished, inputs, states
