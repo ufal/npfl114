@@ -73,8 +73,6 @@ if __name__ == "__main__":
                       num_target_chars=len(morpho.train.data[morpho.train.LEMMAS].alphabet))
     for epoch in range(args.epochs):
         network.train_epoch(morpho.train, args)
-        metrics = network.evaluate(morpho.dev, "dev", args)
-        print("Evaluation on {}, epoch {}: {}".format("dev", epoch + 1, metrics))
 
     # Generate test set annotations, but in args.logdir to allow parallel execution.
     out_path = "lemmatizer_competition_test.txt"
