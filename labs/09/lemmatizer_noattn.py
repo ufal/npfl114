@@ -49,11 +49,11 @@ class Network:
 
             class DecoderTraining(decoder.BaseDecoder):
                 @property
-                def batch_size(self): raise NotImplemented() # TODO: Return batch size of self._source_states, using tf.shape
+                def batch_size(self): raise NotImplemented() # TODO: Return the batch size of self._source_states, using tf.shape
                 @property
-                def output_size(self): raise NotImplemented() # TODO: Return number of the generated logits
+                def output_size(self): raise NotImplemented() # TODO: Return the number of logits per each output
                 @property
-                def output_dtype(self): raise NotImplemented() # TODO: Return the type of the generated logits
+                def output_dtype(self): raise NotImplemented() # TODO: Return the type of the logits
 
                 def initialize(self, layer_inputs, initial_state=None):
                     self._model, self._source_states, self._targets = layer_inputs
@@ -113,7 +113,7 @@ class Network:
 
         class DecoderPrediction(decoder.BaseDecoder):
             @property
-            def batch_size(self): raise NotImplemented() # TODO: Return batch size of self._source_states, using tf.shape
+            def batch_size(self): raise NotImplemented() # TODO(train_batch): Return the batch size of self._source_states, using tf.shape
             @property
             def output_size(self): raise NotImplemented() # TODO: Return 1 because we are returning directly the predictions
             @property
