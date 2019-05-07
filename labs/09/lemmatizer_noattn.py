@@ -13,7 +13,8 @@ class Network:
 
                 # TODO: Define
                 # - source_embeddings as a masked embedding layer of source chars into args.cle_dim dimensions
-                # - source_rnn as a bidirectional GRU with args.rnn_dim units, returning only the last state, summing opposite directions
+                # - source_rnn as a bidirectional GRU with args.rnn_dim units, returning only the last output
+                #   (i.e., return_sequences=False), summing opposite directions
 
                 # - target_embedding as an unmasked embedding layer of target chars into args.cle_dim dimensions
                 # - target_rnn_cell as a GRUCell with args.rnn_dim units
