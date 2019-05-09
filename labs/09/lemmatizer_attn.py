@@ -94,7 +94,7 @@ class Network:
                     # TODO(lemmatizer_noattn): Define `next_inputs` by embedding `time`-th words from `self._targets`.
                     # TODO(lemmatizer_noattn): Define `finished` as True if `time`-th word from `self._targets` is EOW, False otherwise.
                     # Again, no == or !=.
-                    # TODO: Pass `inputs` through `self._with_attention(inputs, states)`.
+                    # TODO: Pass `next_inputs` through `self._with_attention(inputs, states)`.
                     return outputs, states, next_inputs, finished
 
             output_layer, _, _ = DecoderTraining()([self._model, source_encoded, targets])
@@ -165,7 +165,7 @@ class Network:
                 # `output_type=tf.int32` parameter.
                 # TODO(lemmatizer_noattn): Define `next_inputs` by embedding the `outputs`
                 # TODO(lemmatizer_noattn): Define `finished` as True if `outputs` are EOW, False otherwise. [No == or !=].
-                # TODO: Pass `inputs` through `self._with_attention(inputs, states)`.
+                # TODO(train_batch): Pass `next_inputs` through `self._with_attention(inputs, states)`.
                 return outputs, states, next_inputs, finished
 
         predictions, _, _ = DecoderPrediction(maximum_iterations=tf.shape(source_charseqs)[1] + 10)([self._model, source_encoded])
