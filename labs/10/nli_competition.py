@@ -51,8 +51,7 @@ if __name__ == "__main__":
 
     # Create the network and train
     network = Network(args)
-    for epoch in range(args.epochs):
-        network.train_epoch(nli, args)
+    network.train(nli, args)
 
     # Generate test set annotations, but in args.logdir to allow parallel execution.
     out_path = "nli_competition_test.txt"
