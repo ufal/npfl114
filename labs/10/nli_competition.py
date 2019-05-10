@@ -5,7 +5,7 @@ import tensorflow as tf
 from nli_dataset import NLIDataset
 
 class Network:
-    def __init__(self, args):
+    def __init__(self, nli, args):
         # TODO: Define a suitable model.
 
         self._writer = tf.summary.create_file_writer(args.logdir, flush_millis=10 * 1000)
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     nli = NLIDataset()
 
     # Create the network and train
-    network = Network(args)
+    network = Network(nli, args)
     network.train(nli, args)
 
     # Generate test set annotations, but in args.logdir to allow parallel execution.
