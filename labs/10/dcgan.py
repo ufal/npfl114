@@ -38,7 +38,7 @@ class Network:
 
     def _sample_z(self, batch_size):
         """Sample random latent variable."""
-        return tf.random.uniform([batch_size, self._z_dim], -1, 1)
+        return tf.random.uniform([batch_size, self._z_dim], -1, 1, seed=42)
 
     @tf.function
     def train_batch(self, images):

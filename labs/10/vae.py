@@ -41,6 +41,7 @@ class Network:
             # TODO: Compute z_mean and z_log_variance of given images using `self.encoder`; do not forget about `training=True`.
 
             # TODO: Sample `z` from a Normal distribution with mean `z_mean` and variance `exp(z_log_variance)`.
+            # Use `tf.random.normal` and **pass argument `seed=42`**.
 
             # TODO: Decode images using `z`.
 
