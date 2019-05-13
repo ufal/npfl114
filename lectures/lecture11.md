@@ -7,3 +7,4 @@
 #### Lecture assignment: omr_competition
 #### Lecture assignment: monte_carlo
 #### Lecture assignment: reinforce
+#### Lecture assignment: reinforce_with_baseline
