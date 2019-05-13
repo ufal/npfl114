@@ -6,3 +6,4 @@
 #### Video: https://slideslive.com/38910718/deep-learning-lecture-12-sequence-prediction-ii-reinforcement-learning-ii, 2018 Video II
 #### Lecture assignment: omr_competition
 #### Lecture assignment: monte_carlo
+#### Lecture assignment: reinforce
