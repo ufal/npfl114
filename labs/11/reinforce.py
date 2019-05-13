@@ -10,7 +10,9 @@ class Network:
         # and the model should produce probabilities of `env.actions` actions.
         #
         # You can use for example one hidden layer with `args.hidden_layer`
-        # and some non-linear activation.
+        # and some non-linear activation. It is possible to use a `Sequential`
+        # model, and to use `compile`, `train_on_batch` and `predict_on_batch`
+        # methods.
         #
         # Use Adam optimizer with given `args.learning_rate`.
         raise NotImplementedError()
