@@ -2,7 +2,7 @@
 #### Date: May 06
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1819/slides/?10
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1819/slides.pdf/npfl114-10.pdf,PDF Slides
-#### Video: https://slideslive.com/38907563/deep-learning-lecture-10-deep-generative-models
+#### Video: https://slideslive.com/38907563/deep-learning-lecture-10-deep-generative-models, 2018 Video
 #### Lecture assignment: vae
 #### Lecture assignment: gan
 #### Lecture assignment: dcgan
