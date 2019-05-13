@@ -2,8 +2,7 @@
 #### Date: Deadline: May 26, 23:59
 #### Points: 2 points
 
-This is a continuation of [`reinforce`](#reinforce) or
-[`reinforce_with_baseline`](#reinforce_with_baseline) assignment.
+This is a continuation of [`reinforce`](#reinforce) or [`reinforce_baseline`](#reinforce_baseline) assignment.
 
 The supplied [cart_pole_pixels_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/cart_pole_pixels_evaluator.py)
 module (depending on [gym_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/gym_evaluator.py))
