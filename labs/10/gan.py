@@ -37,7 +37,8 @@ class Network:
     def train_batch(self, images):
         # TODO: Generator training. Using a Gradient tape:
         # - generate random images using a `generator`; do not forget about `training=True`
-        # - run discriminator on the generated images
+        # - run discriminator on the generated images, also using `training=True` (even if
+        #   not updating discriminator parameters, we want to perform possible BatchNorm in it)
         # - compute loss using `_loss_fn`, with target labels `tf.ones_like(discriminator_output)`
         # Then, compute the gradients with respect to generator trainable variables and update
         # generator trainable weights using self._generator_optimizer.
@@ -45,8 +46,9 @@ class Network:
         # TODO: Discriminator training. Using a Gradient tape:
         # - discriminate `images`, storing results in `discriminated_real`
         # - discriminate images generated in generator training, storing results in `discriminated_fake`
-        # - compute loss by using `_loss_fn` on both discriminated_real and discriminated_fake, with
-        #   suitable target labels (`tf.zeros_like` and `tf.ones_like` come handy).
+        # - compute loss by summing
+        #   - `_loss_fn` on discriminated_real with suitable target labes
+        #   - `_loss_fn` on discriminated_fake with suitable targets (`tf.{ones,zeros}_like` come handy).
         # Then, compute the gradients with respect to discriminator trainable variables and update
         # discriminator trainable weights using self._discriminator_optimizer.
 
