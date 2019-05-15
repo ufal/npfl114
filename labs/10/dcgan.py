@@ -107,15 +107,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", default=50, type=int, help="Batch size.")
     parser.add_argument("--dataset", default="mnist", type=str, help="MNIST-like dataset to use.")
-    parser.add_argument("--discriminator_layers", default="128", type=str, help="Discriminator layers.")
     parser.add_argument("--epochs", default=100, type=int, help="Number of epochs.")
-    parser.add_argument("--generator_layers", default="128", type=str, help="Generator layers.")
     parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
     parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
     parser.add_argument("--z_dim", default=100, type=int, help="Dimension of Z.")
     args = parser.parse_args()
-    args.discriminator_layers = [int(discriminator_layer) for discriminator_layer in args.discriminator_layers.split(",")]
-    args.generator_layers = [int(generator_layer) for generator_layer in args.generator_layers.split(",")]
 
     # Fix random seeds
     np.random.seed(42)
