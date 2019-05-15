@@ -52,7 +52,7 @@ class Network:
             # the `loss` should be weighted sum, not weighted average.
             pass
         # TODO: Compute gradients with respect to trainable variables of the encoder and the decoder.
-        # TODO: Apply the gradients to encoder and decoder trainable variables.
+        # TODO: Apply the gradients to encoder and decoder trainable variables (in one update).
 
         tf.summary.experimental.set_step(self._optimizer.iterations)
         with self._writer.as_default():
