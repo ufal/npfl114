@@ -177,7 +177,7 @@ class NLIDataset:
                 for i in range(len(charseqs)):
                     dense_charseqs[i, 0:len(charseqs[i])] = charseqs[i]
 
-                return NLIDataset.Batch(word_ids, charseq_ids, dense_charseqs, tags, levels, prompts, languages)
+                yield NLIDataset.Batch(word_ids, charseq_ids, dense_charseqs, tags, levels, prompts, languages)
 
 
     def __init__(self, path="nli_dataset.zip", add_bow_eow=False):
