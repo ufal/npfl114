@@ -22,10 +22,10 @@ class Network:
         # TODO: Define `self.discriminator` as a Model, which
         # - takes input images with shape [MNIST.H, MNIST.W, MNIST.C]
         # - computes batch normalized convolution with 32 filters, kernel size 5,
-        #   same padding, and ReLU activation (do not forget `use_bias` anywhere in the model)
+        #   same padding, and ReLU activation (do not forget `use_bias=False` where appropriate)
         # - max-pools with kernel size 2 and stride 2
         # - computes batch normalized convolution with 64 filters, kernel size 5,
-        #   same padding, and ReLU activation (do not forget `use_bias` anywhere in the model)
+        #   same padding, and ReLU activation
         # - max-pools with kernel size 2 and stride 2
         # - flattens the current representation
         # - applies batch normalized dense layer with 1024 uints and ReLU activation
