@@ -6,35 +6,23 @@ import cart_pole_evaluator
 
 class Network:
     def __init__(self, env, args):
-        # TODO: Define suitable model. The inputs have shape `env.state_shape`,
-        # and the model should:
-        # - pass input through a hidden layer of size `args.hidden_layer` and
-        #   non-linear activation, and generate probabilities of `env.actions`
-        #   using final output dense layer;
-        # - pass input through a hidden layer of size `args.hidden_layer` and
-        #   non-linear activation, and generate a baseline -- 1 output using
-        #   a dense layer without an activation.
+        # TODO: Define suitable model. Apart from the model defined in `reinforce`,
+        # define also another model `baseline`, which processes the input using
+        # a fully connected hidden layer with non-linear activation, and produces
+        # one output (using a dense layer without activation).
         #
-        # Compared to reinforce, you need to define the `Model` using a
-        # Functional API. Furthermore, you cannot use `compile` and associate
-        # methods, because the REINFORCE loss depends both on the probabilities
-        # and baseline.
-        #
-        # Use Adam optimizer with given `args.learning_rate`.
+        # Use Adam optimizer with given `args.learning_rate` for both models.
         raise NotImplementedError()
 
     def train(self, states, actions, returns):
         states, actions, returns = np.array(states), np.array(actions), np.array(returns)
 
         # TODO: Train the model using the states, actions and observed returns.
-        # You should use two losses:
-        # - sparse crossentropy loss of the predicted action probabilities and
-        #   the chosen actions, weighted by `returns - tf.stop_gradient(predicted_baseline)`.
-        #   The `tf.stop_gradient` is understood by the backpropagation algorithm
-        #   not to propagate gradients through the given node.
-        # - mean square error of the returns and predicted baseline
-        # You need to manually use a GradientTape because the first loss depends on
-        # both model outputs.
+        # You should:
+        # - compute the predicted baseline using the `baseline` model
+        # - train the policy model, using `returns - predicted_baseline` as weights
+        #   in the sparse crossentropy loss
+        # - train the `baseline` model to predict `returns`
         raise NotImplementedError()
 
     def predict(self, states):
