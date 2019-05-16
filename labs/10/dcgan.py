@@ -11,7 +11,7 @@ class Network:
 
         # TODO: Define `self.generator` as a Model, which
         # - takes vectors of [args.z_dim] shape on input
-        # - applies batch normalized dense layer with 1024 units and ReLU (do not forget about `use_bias=False` anywhere in the model)
+        # - applies batch normalized dense layer with 1024 units and ReLU (do not forget about `use_bias=False` in suitable places)
         # - applies batch normalized dense layer with MNIST.H // 4 * MNIST.W // 4 * 64 units and ReLU
         # - reshapes the current hidder output to [MNIST.H // 4, MNIST.W // 4, 64]
         # - applies batch normalized transposed convolution with 32 filters, kernel size 5,
