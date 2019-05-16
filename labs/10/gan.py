@@ -36,7 +36,7 @@ class Network:
     @tf.function
     def train_batch(self, images):
         # TODO: Generator training. Using a Gradient tape:
-        # - generate random images using a `generator`; do not forget about `training=True`
+        # - generate random images using a `generator`; do not forget about `training=True` where appropriate
         # - run discriminator on the generated images, also using `training=True` (even if
         #   not updating discriminator parameters, we want to perform possible BatchNorm in it)
         # - compute loss using `_loss_fn`, with target labels `tf.ones_like(discriminator_output)`
