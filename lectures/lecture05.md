@@ -6,11 +6,15 @@
 #### Lecture assignment: mnist_multiple
 #### Lecture assignment: fashion_masks
 
-- ResNet [[Kaiming He et al.: Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
-- *WideNet [[Wide Residual Network](https://arxiv.org/abs/1605.07146)]*
-- *ResNeXt [[Aggregated Residual Transformations for Deep Neural Networks](https://arxiv.org/abs/1611.05431)]*
+- Residual CNN Networks
+  - ResNet [[Kaiming He et al.: Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
+  - WideNet [[Wide Residual Network](https://arxiv.org/abs/1605.07146)]
+  - DenseNet [[Densely Connected Convolutional Networks](https://arxiv.org/abs/1608.06993)]
+  - PyramidNet [[Deep Pyramidal Residual Networks](https://arxiv.org/abs/1610.02915)]
+  - ResNeXt [[Aggregated Residual Transformations for Deep Neural Networks](https://arxiv.org/abs/1611.05431)]
+- Regularizing CNN Networks
+  - DropLayer [[Deep Networks with Stochastic Depth](https://arxiv.org/abs/1603.09382)]
+  - CutOut [[Improved Regularization of Convolutional Neural Networks with Cutout](https://arxiv.org/abs/1708.04552)]
+  - DropBlock [[DropBlock: A regularization method for convolutional networks](https://arxiv.org/abs/1810.12890)]
 - Object detection using Fast R-CNN [[Ross Girshick: **Fast R-CNN**](https://arxiv.org/abs/1504.08083)]
 - Proposing RoIs using Faster R-CNN [[Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun: **Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks**](https://arxiv.org/abs/1506.01497)]
-- Image segmentation [[Kaiming He, Georgia Gkioxari, Piotr Dollár, Ross Girshick: **Mask R-CNN**](https://arxiv.org/abs/1703.06870)]
-- Layer Normalization [[Jimmy Lei Ba, Jamie Ryan Kiros, Geoffrey E. Hinton: **Layer Normalization**](https://arxiv.org/abs/1607.06450)]
-- Group Normalization [[Yuxin Wu, Kaiming He: **Group Normalization**](https://arxiv.org/abs/1803.08494)]
