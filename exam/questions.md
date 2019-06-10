@@ -124,8 +124,7 @@
     character-level word embeddings.  Write down the exact equation computing
     the embedding, assuming that the input word consists of characters
     $\{x_1, \ldots, x_N\}$ represented by embeddings $\{e_1, \ldots, e_N\}$ for
-    $e_i \in \mathbb R^D$, and we use $f_i$ filters of width $w_i$
-    for $i \in \{1, \ldots, F\}$.
+    $e_i \in \mathbb R^D$, and we use $F$ filters of widths $w_1, \ldots, w_F$.
     Also explicitly count the number of parameters.
 
 - **Neural Machine Translation and BPE**  
@@ -142,7 +141,7 @@
 - **Generative Adversarial Networks**  
   Describe deep generative modelling using generative adversarial networks -- show GAN
   architecture and describe training procedure and training loss. Mention also
-  CGAN (conditional GAN) and sketch encoder and decoder architecture in a DCGAN.
+  CGAN (conditional GAN) and sketch generator and discriminator architecture in a DCGAN.
 
 - **Speech Synthesis**  
   Describe the WaveNet network (what a dilated convolution and gated activations
