@@ -145,7 +145,7 @@
 
 - **Speech Synthesis**  
   Describe the WaveNet network (what a dilated convolution and gated activations
-  are, how the residual block like, what the overall architecture is, and how
+  are, how the residual block looks like, what the overall architecture is, and how
   global and local conditioning work). Discuss parallelizability of training and
   inference, show how Parallel WaveNet can speedup inference, and sketch how it is
   trained.
