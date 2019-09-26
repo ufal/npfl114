@@ -49,8 +49,8 @@
   - Problems with saturating non-linearities (and again, why batch normalization
     helps; you can also discuss why NLL helps with saturating non-linearities
     on the output layer).
-  - Gradient clipping (and the difference between clipping individual weights
-    or the gradient as a whole).
+  - Gradient clipping (and the difference between clipping individual gradient
+    elements or the gradient as a whole).
 
 - **Convolution**  
   Write down equations of how convolution of a given image is computed. Assume the input
