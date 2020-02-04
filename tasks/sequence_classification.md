@@ -10,7 +10,7 @@ compute parity for each prefix of the sequence. The inputs are either 0/1, or
 vectors with one-hot representation of small integer.
 
 Your goal is to modify the
-[sequence_classification.py](https://github.com/ufal/npfl114/tree/master/labs/06/sequence_classification.py)
+[sequence_classification.py](https://github.com/ufal/npfl114/tree/past-1819/labs/06/sequence_classification.py)
 template and implement the following:
 - Use specified RNN cell type (`SimpleRNN`, `GRU` and `LSTM`) and dimensionality.
 - Process the sequence using the required RNN.

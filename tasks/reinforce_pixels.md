@@ -4,8 +4,8 @@
 
 This is a continuation of [`reinforce`](#reinforce) or [`reinforce_baseline`](#reinforce_baseline) assignment.
 
-The supplied [cart_pole_pixels_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/cart_pole_pixels_evaluator.py)
-module (depending on [gym_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/11/gym_evaluator.py))
+The supplied [cart_pole_pixels_evaluator.py](https://github.com/ufal/npfl114/tree/past-1819/labs/11/cart_pole_pixels_evaluator.py)
+module (depending on [gym_evaluator.py](https://github.com/ufal/npfl114/tree/past-1819/labs/11/gym_evaluator.py))
 generates a pixel representation of the `CartPole` environment
 as an $80×80$ image with three channels, with each channel representing one time step
 (i.e., the current observation and the two previous ones).
@@ -16,5 +16,5 @@ will be employed, and you need to reach the required return on all of them. Time
 limit for each test is 10 minutes.
 
 You can start with the
-[reinforce_pixels.py](https://github.com/ufal/npfl114/tree/master/labs/11/reinforce_pixels.py)
+[reinforce_pixels.py](https://github.com/ufal/npfl114/tree/past-1819/labs/11/reinforce_pixels.py)
 template using the correct environment.

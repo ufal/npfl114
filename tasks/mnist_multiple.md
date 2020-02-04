@@ -4,7 +4,7 @@
 
 In this assignment you will implement a model with multiple inputs, multiple
 outputs, manual batch preparation, and manual evaluation. Start with the
-[mnist_multiple.py](https://github.com/ufal/npfl114/tree/master/labs/05/mnist_multiple.py)
+[mnist_multiple.py](https://github.com/ufal/npfl114/tree/past-1819/labs/05/mnist_multiple.py)
 template and:
 - The goal is to create a model, which given two input MNIST images predicts if the
   digit on the first one is larger than on the second one.

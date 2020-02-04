@@ -17,4 +17,4 @@ Working in teams of size 2 (or at most 3) is encouraged. All members of the team
 must submit in ReCodEx individually, but can have exactly the same
 sources/models/results. **However, each such solution must explicitly list all
 members of the team to allow plagiarism detection using
-[this template](https://github.com/ufal/npfl114/tree/master/labs/team_description.py).**
+[this template](https://github.com/ufal/npfl114/tree/past-1819/labs/team_description.py).**

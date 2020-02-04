@@ -3,7 +3,7 @@
 #### Points: 3 points
 
 This task is a continuation of [`lemmatizer_noattn`](#lemmatizer_noattn) assignment. Using the
-[lemmatizer_attn.py](https://github.com/ufal/npfl114/tree/master/labs/09/lemmatizer_attn.py)
+[lemmatizer_attn.py](https://github.com/ufal/npfl114/tree/past-1819/labs/09/lemmatizer_attn.py)
 template, implement the following features in addition to [`lemmatizer_noattn`](#lemmatizer_noattn):
 - The bidirectional GRU encoder returns outputs for all input characters, not
   just the last.

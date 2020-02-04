@@ -4,7 +4,7 @@
 
 This is a continuation of [`reinforce`](#reinforce) assignment.
 
-Using the [reinforce_baseline.py](https://github.com/ufal/npfl114/tree/master/labs/11/reinforce_baseline.py)
+Using the [reinforce_baseline.py](https://github.com/ufal/npfl114/tree/past-1819/labs/11/reinforce_baseline.py)
 template, solve the [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)
 environment using the REINFORCE with baseline algorithm.
 

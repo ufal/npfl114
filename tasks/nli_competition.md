@@ -17,7 +17,7 @@ accuracy, while current state-of-the-art is at least 87.1% (Malmasi and Dras,
 
 Because the data is not publicly available, you can download it only through
 ReCodEx. Please do not distribute it. To load the dataset, use
-[nli_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/10/nli_dataset.py)
+[nli_dataset.py](https://github.com/ufal/npfl114/tree/past-1819/labs/10/nli_dataset.py)
 script.
 
 The assignment is again an _open-data task_, where you submit only the annotated test set
@@ -31,6 +31,6 @@ awarded 6 points; the rest 4 points will be distributed depending on relative
 ordering of your solutions.
 
 You can start with the
-[nli_competition.py](https://github.com/ufal/npfl114/tree/master/labs/10/nli_competition.py)
+[nli_competition.py](https://github.com/ufal/npfl114/tree/past-1819/labs/10/nli_competition.py)
 template, which loads the data and generates predictions in the required format
 (language of each essay on a line).

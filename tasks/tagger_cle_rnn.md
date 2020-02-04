@@ -3,7 +3,7 @@
 #### Points: 3 points
 
 This task is a continuation of [`tagger_we`](#tagger_we) assignment. Using the
-[tagger_cle_rnn.py](https://github.com/ufal/npfl114/tree/master/labs/07/tagger_cle_rnn.py)
+[tagger_cle_rnn.py](https://github.com/ufal/npfl114/tree/past-1819/labs/07/tagger_cle_rnn.py)
 template, implement the following features in addition to [`tagger_we`](#tagger_we):
 - Create character embeddings for training alphabet.
 - Process unique words with a bidirectional character-level RNN, concatenating

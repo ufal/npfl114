@@ -4,9 +4,9 @@
 
 The goal of this assignment is to try transfer learning approach to train image
 recognition on a small dataset with 42 classes. You can load the data using the
-[caltech42.py](https://github.com/ufal/npfl114/tree/master/labs/06/caltech42.py)
+[caltech42.py](https://github.com/ufal/npfl114/tree/past-1819/labs/06/caltech42.py)
 module. In addition to the training data, you should use a MobileNet v2
-pretrained network (details in [caltech42_competition.py](https://github.com/ufal/npfl114/tree/master/labs/06/caltech42_competition.py)).
+pretrained network (details in [caltech42_competition.py](https://github.com/ufal/npfl114/tree/past-1819/labs/06/caltech42_competition.py)).
 
 This is an _open-data task_, where you submit only the test set labels
 together with the training script (which will not be executed, it will be
@@ -18,5 +18,5 @@ at least _94%_ test set accuracy will get 5 points; the rest 5 points will be di
 depending on relative ordering of your solutions.
 
 You may want to start with the
-[caltech42_competition.py](https://github.com/ufal/npfl114/tree/master/labs/06/caltech42_competition.py)
+[caltech42_competition.py](https://github.com/ufal/npfl114/tree/past-1819/labs/06/caltech42_competition.py)
 template.
