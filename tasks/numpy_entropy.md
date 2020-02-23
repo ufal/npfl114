@@ -3,7 +3,7 @@
 #### Points: 3 points
 #### Examples: numpy_entropy_example
 
-The goal of this exercise is to famirialize with Python, NumPy and ReCodEx
+The goal of this exercise is to familiarize with Python, NumPy and ReCodEx
 submission system. Start with the
 [numpy_entropy.py](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy.py).
 
