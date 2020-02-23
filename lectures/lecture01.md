@@ -3,6 +3,7 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?01
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-01.pdf,PDF Slides
 #### Video: https://slideslive.com/38906857/deep-learning-lecture-1-introduction-to-deep-learning,2018 Video
+#### Lecture assignment: numpy_entropy
 
 - Random variables, probability distributions, expectation, variance, Bernoulli
   distribution, Categorical distribution [Sections 3.2, 3.3, 3.8, 3.9.1 and 3.9.2 of DLB]
