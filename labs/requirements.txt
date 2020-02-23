@@ -1,0 +1,5 @@
+tensorflow==2.1.0
+tensorflow-addons==0.8.1
+tensorflow-hub==0.7.0
+tensorflow-probability==0.9.0
+gym==0.15.4
