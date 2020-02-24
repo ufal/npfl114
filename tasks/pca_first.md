@@ -31,6 +31,6 @@ python3 pca_first.py --examples=1000 --iterations=100
 ```
 the output file `pca_first.out` should contain
 ```
-52.64 9.87
+51.59 9.93
 ```
 #### Examples End:
