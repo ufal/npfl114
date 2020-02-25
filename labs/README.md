@@ -17,7 +17,7 @@ Python supports virtual environments, which are directories containing
 independent sets of installed packages. You can create the virtual environment
 by running `python3 -m venv VENV_DIR` followed by
 `VENV_DIR/bin/pip3 install --upgrade pip setuptools` and
-`VENV_DIR/bin/pip3 install --user tensorflow==2.1.0 tensorflow-addons==0.8.1
+`VENV_DIR/bin/pip3 install tensorflow==2.1.0 tensorflow-addons==0.8.1
 tensorflow-hub==0.7.0 tensorflow-probability==0.9.0 gym==0.15.4`.
 
 ### Teamwork
