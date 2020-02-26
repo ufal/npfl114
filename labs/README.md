@@ -20,6 +20,14 @@ by running `python3 -m venv VENV_DIR` followed by
 `VENV_DIR/bin/pip3 install tensorflow==2.1.0 tensorflow-addons==0.8.1
 tensorflow-hub==0.7.0 tensorflow-probability==0.9.0 gym==0.15.4`.
 
+#### Problems With Executing tensorboard
+
+If `tensorboard` cannot be found, make sure the directory with pip installed
+packages is in your PATH (that directory is either in your virtual environment
+if you use a virtual environment, or it should be `~/.local/bin` on Linux
+and `%UserProfile%\AppData\Roaming\Python\Python3[5-7]` and
+`%UserProfile%\AppData\Roaming\Python\Python3[5-7]\Scripts` on Windows).
+
 ### Teamwork
 
 Solving assignments in teams of size 2 or 3 is encouraged, but everyone has to
