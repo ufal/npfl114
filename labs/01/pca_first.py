@@ -45,7 +45,7 @@ if __name__ == "__main__":
     mean = ...
 
     # TODO: Compute the covariance matrix. The covariance matrix is
-    #   (data - mean)^T * (data - mean)
+    #   (data - mean)^T * (data - mean) / data.shape[0]
     # where transpose can be computed using `tf.transpose` and matrix
     # multiplication using either Python operator @ or `tf.linalg.matmul`.
     cov = ...
