@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+
+output="$(dirname $0)"/deepnote_ngrok
+wget https://storage.googleapis.com/deepnote-ngrok/ngrok -O "$output"
+chmod a+x "$output"
