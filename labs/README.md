@@ -20,13 +20,24 @@ by running `python3 -m venv VENV_DIR` followed by
 `VENV_DIR/bin/pip3 install tensorflow==2.1.0 tensorflow-addons==0.8.1
 tensorflow-hub==0.7.0 tensorflow-probability==0.9.0 gym==0.15.4`.
 
-#### Problems With Executing tensorboard
+### Problems With the Environment
+
+#### Cannot Start tensorboard
 
 If `tensorboard` cannot be found, make sure the directory with pip installed
 packages is in your PATH (that directory is either in your virtual environment
 if you use a virtual environment, or it should be `~/.local/bin` on Linux
 and `%UserProfile%\AppData\Roaming\Python\Python3[5-7]` and
 `%UserProfile%\AppData\Roaming\Python\Python3[5-7]\Scripts` on Windows).
+
+#### On Windows, tensorboard Shows a Blank Page
+
+Some programs (even VS and VS code) errorneously change Windows system-wide MIME
+type of javascript files to `text/plain`, which causes problems for tensorboard.
+If you encounter the issue, the easiest is to uninstall tensorboard (`pip3
+uninstall tensorboard`) and then install a development version (`pip3 install
+[--user] tb-nightly`) which contains a fix. The development version is then
+started exactly as a stable one using a `tensorboard` command.
 
 ### Teamwork
 
