@@ -32,8 +32,8 @@ and `%UserProfile%\AppData\Roaming\Python\Python3[5-7]` and
 
 #### On Windows, tensorboard Shows a Blank Page
 
-Some programs (even VS and VS code) errorneously change Windows system-wide MIME
-type of javascript files to `text/plain`, which causes problems for tensorboard.
+Some programs (even VS and VS code) erroneously change Windows system-wide MIME
+type of Javascript files to `text/plain`, which causes problems for tensorboard.
 If you encounter the issue, the easiest is to uninstall tensorboard (`pip3
 uninstall tensorboard`) and then install a development version (`pip3 install
 [--user] tb-nightly`) which contains a fix. The development version is then
