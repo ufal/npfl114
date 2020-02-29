@@ -39,6 +39,12 @@ uninstall tensorboard`) and then install a development version (`pip3 install
 [--user] tb-nightly`) which contains a fix. The development version is then
 started exactly as a stable one using a `tensorboard` command.
 
+#### Warning About Missing libnvinfer, libnvinfer_plugin and TensorRT
+
+TensorFlow 2.1 eagerly checks for availability of TensorRT during the first
+`import tensorflow`. In case you do not have it, a three-line warning is printed.
+You can safely ignore the warning, both the CPU and the GPU backends work without TensorRT.
+
 ### Teamwork
 
 Solving assignments in teams of size 2 or 3 is encouraged, but everyone has to
