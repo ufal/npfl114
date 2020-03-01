@@ -5,6 +5,7 @@
 #### Video: https://slideslive.com/38906313/deep-learning-lecture-2-training-neural-networks,2018 Video
 #### Lecture assignment: sgd_backpropagation
 #### Lecture assignment: sgd_manual
+#### Lecture assignment: mnist_training
 
 - Capacity, overfitting, underfitting, regularization [Section 5.2 of DLB]
 - Hyperparameters and validation sets [Section 5.3 of DLB]
