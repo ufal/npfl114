@@ -3,6 +3,7 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?02
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-02.pdf,PDF Slides
 #### Video: https://slideslive.com/38906313/deep-learning-lecture-2-training-neural-networks,2018 Video
+#### Lecture assignment: sgd_backpropagation
 
 - Capacity, overfitting, underfitting, regularization [Section 5.2 of DLB]
 - Hyperparameters and validation sets [Section 5.3 of DLB]
