@@ -12,11 +12,14 @@ from mnist import MNIST
 if __name__ == "__main__":
     # Parse arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--activation", default="none", type=str, help="Activation function.")
     parser.add_argument("--batch_size", default=50, type=int, help="Batch size.")
+    parser.add_argument("--decay", default=None, type=str, help="Learning decay rate type")
     parser.add_argument("--epochs", default=10, type=int, help="Number of epochs.")
-    parser.add_argument("--hidden_layer", default=100, type=int, help="Size of the hidden layer.")
-    parser.add_argument("--layers", default=1, type=int, help="Number of layers.")
+    parser.add_argument("--hidden_layer", default=200, type=int, help="Size of the hidden layer.")
+    parser.add_argument("--learning_rate", default=0.01, type=float, help="Initial learning rate.")
+    parser.add_argument("--learning_rate_final", default=None, type=float, help="Final learning rate.")
+    parser.add_argument("--momentum", default=None, type=float, help="Momentum.")
+    parser.add_argument("--optimizer", default="SGD", type=str, help="Optimizer to use.")
     parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
     parser.add_argument("--seed", default=42, type=int, help="Random seed.")
     parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
@@ -48,20 +51,36 @@ if __name__ == "__main__":
     mnist = MNIST()
 
     # Create the model
-    model = tf.keras.Sequential()
-    model.add(tf.keras.layers.InputLayer([MNIST.H, MNIST.W, MNIST.C]))
-    # TODO: Finish the model. Namely add:
-    # - a `tf.keras.layers.Flatten()` layer
-    # - add `args.layers` number of fully connected hidden layers
-    #   `tf.keras.layers.Dense()` with  `args.hidden_layer` neurons, using activation
-    #   from `args.activation`, allowing "none", "relu", "tanh", "sigmoid".
-    # - finally, add a final fully connected layer with
-    #   `MNIST.LABELS` units and `tf.nn.softmax` activation.
+    model = tf.keras.Sequential([
+        tf.keras.layers.Flatten(input_shape=[MNIST.H, MNIST.W, MNIST.C]),
+        tf.keras.layers.Dense(args.hidden_layer, activation=tf.nn.relu),
+        tf.keras.layers.Dense(MNIST.LABELS, activation=tf.nn.softmax),
+    ])
+
+    # TODO: Use the required `args.optimizer` (either `SGD` or `Adam`).
+    # For `SGD`, `args.momentum` can be specified.
+    # - If `args.decay` is not specified, pass the given `args.learning_rate`
+    #   directly to the optimizer as a `learning_rate` argument.
+    # - If `args.decay` is set, then
+    #   - for `polynomial`, use `tf.optimizers.schedules.PolynomialDecay`
+    #     using the given `args.learning_rate_final`;
+    #   - for `exponential`, use `tf.optimizers.schedules.ExponentialDecay`
+    #     and set `decay_rate` appropriately to reach `args.learning_rate_final`
+    #     just after the training (and keep the default `staircase=False`).
+    #   In both cases, `decay_steps` should be total number of training batches
+    #   and you should pass the created `{Polynomial,Exponential}Decay` to
+    #   the optizer using the `learning_rate` constructor argument.
+    #   The size of the training MNIST dataset it `mnist.train.size` and you
+    #   can assume is it divisible by `args.batch_size`.
+    #
+    #   If a learning rate schedule is used, you can find out the current learning
+    #   rate by using `model.optimizer.learning_rate(model.optimizer.iterations)`,
+    #   so after training this value should be `args.learning_rate_final`.
 
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(),
-        loss=tf.keras.losses.SparseCategoricalCrossentropy(),
-        metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
+        optimizer=None,
+        loss=tf.losses.SparseCategoricalCrossentropy(),
+        metrics=[tf.metrics.SparseCategoricalAccuracy()],
     )
 
     tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=100, profile_batch=0)
@@ -78,5 +97,5 @@ if __name__ == "__main__":
     tb_callback.on_epoch_end(1, {"val_test_" + metric: value for metric, value in zip(model.metrics_names, test_logs)})
 
     # TODO: Write test accuracy as percentages rounded to two decimal places.
-    with open("mnist_layers_activations.out", "w") as out_file:
+    with open("mnist_training.out", "w") as out_file:
         print("{:.2f}".format(100 * accuracy), file=out_file)

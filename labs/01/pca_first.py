@@ -45,7 +45,7 @@ if __name__ == "__main__":
     mean = ...
 
     # TODO: Compute the covariance matrix. The covariance matrix is
-    #   (data - mean)^T * (data - mean)
+    #   (data - mean)^T * (data - mean) / data.shape[0]
     # where transpose can be computed using `tf.transpose` and matrix
     # multiplication using either Python operator @ or `tf.linalg.matmul`.
     cov = ...
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     for i in range(args.iterations):
         # TODO: In the power iteration algorithm, we compute
         # 1. v = cov * v
-        #    The matrix-vector multiplication can be computed using `tf.lingalg.matvec`.
+        #    The matrix-vector multiplication can be computed using `tf.linalg.matvec`.
         v = ...
         # 2. s = l2_norm(v)
         #    The l2_norm can be computed using `tf.linalg.norm`.

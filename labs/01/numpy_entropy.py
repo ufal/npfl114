@@ -6,7 +6,9 @@ if __name__ == "__main__":
     with open("numpy_entropy_data.txt", "r") as data:
         for line in data:
             line = line.rstrip("\n")
-            # TODO: process the line, aggregating using Python data structures
+            # TODO: Process the line, aggregating data with built-in Python
+            # data structures (not NumPy, which is not suitable for incremental
+            # addition and string mapping).
 
     # TODO: Create a NumPy array containing the data distribution. The
     # NumPy array should contain only data, not any mapping. If required,

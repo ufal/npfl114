@@ -1,4 +1,5 @@
 __pycache__/
 logs/
+/deepnote_ngrok
 *.npz
 *.zip
