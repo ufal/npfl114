@@ -22,6 +22,12 @@ tensorflow-hub==0.7.0 tensorflow-probability==0.9.0 gym==0.15.4`.
 
 ### Problems With the Environment
 
+#### Windows TensorFlow Fails with ImportError: DLL load failed
+
+If your Windows TensorFlow fails with `ImportError: DLL load failed`,
+you are probably missing
+[Visual C++ 2019 Redistributable](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+
 #### Cannot Start tensorboard
 
 If `tensorboard` cannot be found, make sure the directory with pip installed
