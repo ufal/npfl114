@@ -32,7 +32,7 @@ if __name__ == "__main__":
     tf.config.threading.set_inter_op_parallelism_threads(args.threads)
     tf.config.threading.set_intra_op_parallelism_threads(args.threads)
     if args.recodex:
-        tf.keras.utils.get_custom_objects()["glorot_uniform"] = tf.keras.initializers.GlorotUniform(seed=args.seed)
+        tf.keras.utils.get_custom_objects()["glorot_uniform"] = tf.initializers.GlorotUniform(seed=args.seed)
         tf.keras.utils.get_custom_objects()["orthogonal"] = tf.initializers.Orthogonal(seed=args.seed)
         tf.keras.utils.get_custom_objects()["uniform"] = tf.initializers.RandomUniform(seed=args.seed)
 
