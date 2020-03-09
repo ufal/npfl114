@@ -5,6 +5,7 @@
 #### Video: https://slideslive.com/38906435/deep-learning-lecture-3-training-neural-networks-ii,2018 Video
 #### Lecture assignment: mnist_regularization
 #### Lecture assignment: mnist_ensemble
+#### Lecture assignment: uppercase
 
 - *Training neural network with a single hidden layer*
 - Softmax with NLL (negative log likelihood) as a loss function [Section 6.2.2.3 of DLB, notably equation (6.30); plus slides 10-12]
