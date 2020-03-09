@@ -65,7 +65,7 @@ if __name__ == "__main__":
     # - Alternatively, you can use `tf.keras.layers.Embedding`, which is an efficient
     #   implementation of one-hot encoding followed by a Dense layer, and flatten afterwards.
 
-    with open("uppercase_test.txt", "w", encoding="utf-8") as out_file:
+    with open(os.path.join(args.logdir, "uppercase_test.txt"), "w", encoding="utf-8") as out_file:
         # TODO: Generate correctly capitalized test set.
         # Use `uppercase_data.test.text` as input, capitalize suitable characters,
         # and write the result to `uppercase_test.txt` file.
