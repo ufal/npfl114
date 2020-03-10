@@ -1,3 +1,5 @@
+####Questions@: ,Lecture 2 Questions
+
 <div style="float: right">
 #### Include: network.svg
 </div>
@@ -30,6 +32,8 @@
 - **Adam**  
   Write down the Adam algorithm and explain the bias-correction terms
   $(1-\beta^t)$.
+
+####Questions@: ,Lecture 3 Questions
 
 - **Regularization**  
   Define overfitting and sketch what a regularization is. Then describe

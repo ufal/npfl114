@@ -3,6 +3,7 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?02
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-02.pdf,PDF Slides
 #### Video: https://slideslive.com/38906313/deep-learning-lecture-2-training-neural-networks,2018 Video
+#### Questions: #lecture_2_questions
 #### Lecture assignment: sgd_backpropagation
 #### Lecture assignment: sgd_manual
 #### Lecture assignment: mnist_training
