@@ -15,7 +15,7 @@ GPU or on your CPU type._
 
 Running
 ```
-python3 mnist_ensemble_manual.py --batch_size=50 --epochs=10 --hidden_layers=200 --models=7 --threads=1
+python3 mnist_ensemble.py --batch_size=50 --epochs=10 --hidden_layers=200 --models=7 --threads=1
 ```
 should give you
 ```
