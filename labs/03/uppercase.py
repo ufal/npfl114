@@ -54,9 +54,9 @@ if __name__ == "__main__":
     # - Convert the character indices into _one-hot encoding_. There is no
     #   explicit Keras layer, but you can
     #   - use a Lambda layer which can encompass any function:
-    #       Sequential([
-    #         tf.layers.InputLayer(input_shape=[2 * args.window + 1], dtype=tf.int32),
-    #         tf.layers.Lambda(lambda x: tf.one_hot(x, len(uppercase_data.train.alphabet))),
+    #       tf.keras.Sequential([
+    #         tf.keras.layers.InputLayer(input_shape=[2 * args.window + 1], dtype=tf.int32),
+    #         tf.keras.layers.Lambda(lambda x: tf.one_hot(x, len(uppercase_data.train.alphabet))),
     #   - or use Functional API and then any TF function can be used
     #     as a Keras layer:
     #       inputs = tf.keras.layers.Input(shape=[2 * args.window + 1], dtype=tf.int32)
