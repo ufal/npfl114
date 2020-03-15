@@ -1,5 +1,5 @@
 ### Assignment: sgd_backpropagation
-#### Date: Deadline: Mar 15, 23:59
+#### Date: Deadline: Mar ~~15~~ 22, 23:59
 #### Points: 3 points
 #### Examples: sgd_backpropagation_example
 

@@ -1,5 +1,5 @@
 ### Assignment: gym_cartpole
-#### Date: Deadline: Mar 15, 23:59
+#### Date: Deadline: Mar ~~15~~ 22, 23:59
 #### Points: 3 points
 
 Solve the [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)

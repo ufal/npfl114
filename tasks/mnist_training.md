@@ -1,5 +1,5 @@
 ### Assignment: mnist_training
-#### Date: Deadline: Mar 15, 23:59
+#### Date: Deadline: Mar ~~15~~ 22, 23:59
 #### Points: 3 points
 
 This exercise should teach you using different optimizers, learning rates,

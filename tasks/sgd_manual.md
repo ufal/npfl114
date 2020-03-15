@@ -1,5 +1,5 @@
 ### Assignment: sgd_manual
-#### Date: Deadline: Mar 15, 23:59
+#### Date: Deadline: Mar ~~15~~ 22, 23:59
 #### Points: 2 points
 #### Examples: sgd_manual_example
 
