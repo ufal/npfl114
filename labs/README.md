@@ -51,6 +51,14 @@ TensorFlow 2.1 eagerly checks for availability of TensorRT during the first
 `import tensorflow`. In case you do not have it, a three-line warning is printed.
 You can safely ignore the warning, both the CPU and the GPU backends work without TensorRT.
 
+### Tunnelling Tensorboard in Deepnote
+
+To access Tensorboard in DeepNote, first make sure you have
+`labs/deepnote_ngrok` – if you do not, run `labs/deepnote_ngrok_get` script to
+download it. Then start Tensorboard and finally run `labs/deepnote_ngrok 6006`
+(or a different port on which you started tensorboard) to get a public
+URL you can open in another browser tab to access Tensorboard.
+
 ### Teamwork
 
 Solving assignments in teams of size 2 or 3 is encouraged, but everyone has to
