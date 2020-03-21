@@ -69,7 +69,7 @@ if __name__ == "__main__":
     #     just after the training (and keep the default `staircase=False`).
     #   In both cases, `decay_steps` should be total number of training batches
     #   and you should pass the created `{Polynomial,Exponential}Decay` to
-    #   the optizer using the `learning_rate` constructor argument.
+    #   the optimizer using the `learning_rate` constructor argument.
     #   The size of the training MNIST dataset it `mnist.train.size` and you
     #   can assume is it divisible by `args.batch_size`.
     #
