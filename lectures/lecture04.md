@@ -4,6 +4,7 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-04.pdf,PDF Slides
 #### Video: https://slideslive.com/38906635/deep-learning-lecture-4-convolutional-networks,2018 Video
 #### Lecture assignment: mnist_cnn
+#### Lecture assignment: cifar_competition
 
 - Introduction to convolutional networks [Chapter 9 and Sections 9.1-9.3 of DLB]
 - Convolution as operation on 4D tensors [Section 9.5 of DLB, notably Equations (9.7) and (9.8)]
