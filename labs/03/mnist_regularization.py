@@ -67,7 +67,7 @@ if __name__ == "__main__":
     # TODO: Implement label smoothing.
     # Apply the given smoothing. You will need to change the
     # `SparseCategorical{Crossentropy,Accuracy}` to `Categorical{Crossentropy,Accuracy}`
-    # because `label_smooting` is supported only by `CategoricalCrossentropy`.
+    # because `label_smoothing` is supported only by `CategoricalCrossentropy`.
     # That means you also need to modify the labels of all three datasets
     # (i.e., `mnist.{train,dev,test}.data["labels"]`) from indices of the gold class
     # to a full categorical distribution (you can use either NumPy or there is
