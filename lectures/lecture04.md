@@ -5,6 +5,8 @@
 #### Video: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/recordings/npfl114-04.mp4,2020 Video
 #### Video: https://slideslive.com/38906635/deep-learning-lecture-4-convolutional-networks,2018 Video
 #### Lecture assignment: mnist_cnn
+#### Lecture assignment: image_augmentation
+#### Lecture assignment: tf_dataset
 #### Lecture assignment: cifar_competition
 
 <video width="426" height="240" controls style="float: right">
