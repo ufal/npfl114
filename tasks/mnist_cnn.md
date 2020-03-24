@@ -72,4 +72,11 @@ Epoch 2/3 - train_accuracy: 0.9704 - val_accuracy: 0.9792
 Epoch 3/3 - train_accuracy: 0.9776 - val_accuracy: 0.9804
 Test accuracy: 0.9770
 ```
+- `python3 mnist_cnn.py --batch_size=50 --cnn=C-16-3-2-same,R-[C-16-3-1-same,C-16-3-1-same],M-3-2,F,H-100 --epochs=3 --seed=42 --threads=1`
+```
+Epoch 1/3 - train_accuracy: 0.9387 - val_accuracy: 0.9798
+Epoch 2/3 - train_accuracy: 0.9804 - val_accuracy: 0.9890
+Epoch 3/3 - train_accuracy: 0.9855 - val_accuracy: 0.9886
+Test accuracy: 0.9870
+```
 #### Examples End:
