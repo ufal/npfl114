@@ -20,7 +20,8 @@ argument, which contains comma-separated specifications of the following layers:
   Example: `M-3-2`
 - `R-[layers]`: Add a residual connection. The `layers` contain a specification
   of at least one convolutional layer (but not a recursive residual connection `R`).
-  The input to the specified layers is then added to their output.
+  The input to the specified layers is then added to their output (after the
+  ReLU nonlinearity of the last one).
   Example: `R-[C-16-3-1-same,C-16-3-1-same]`
 - `F`: Flatten inputs. Must appear exactly once in the architecture.
 - `H-hidden_layer_size`: Add a dense layer with ReLU activation and specified
