@@ -2,7 +2,7 @@
 #### Date: Mar 23
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?04
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-04.pdf,PDF Slides
-#### Video: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/recordings/npfl114-04.mp4,2020 Video
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-04.mp4,2020 Video
 #### Video: https://slideslive.com/38906635/deep-learning-lecture-4-convolutional-networks,2018 Video
 #### Lecture assignment: mnist_cnn
 #### Lecture assignment: image_augmentation
@@ -10,7 +10,7 @@
 #### Lecture assignment: cifar_competition
 
 <video width="426" height="240" controls style="float: right">
-  <source src="https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/recordings/npfl114-04.mp4" type="video/mp4">
+  <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-04.mp4" type="video/mp4">
 </video>
 
 - Introduction to convolutional networks [Chapter 9 and Sections 9.1-9.3 of DLB]
