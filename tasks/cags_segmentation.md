@@ -4,3 +4,7 @@
 
 The goal of this assignment is to use pretrained EfficientNet-B0 model to
 achieve best image segmentation IoU score on the CAGS dataset.
+The dataset and the EfficientNet-B0 is described in the `cags_classification`
+assignment.
+
+
