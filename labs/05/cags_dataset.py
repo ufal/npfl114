@@ -28,8 +28,8 @@ class CAGS:
             "image": tf.io.FixedLenFeature([], tf.string),
             "mask": tf.io.FixedLenFeature([], tf.string),
             "label": tf.io.FixedLenFeature([], tf.int64)})
-        example["image"] = tf.image.decode_jpeg(example["image"], channels=3)
-        example["mask"] = tf.image.decode_png(example["mask"])
+        example["image"] = tf.image.convert_image_dtype(tf.image.decode_jpeg(example["image"], channels=3), tf.float32)
+        example["mask"] = tf.image.convert_image_dtype(tf.image.decode_png(example["mask"], channels=1), tf.float32)
         return example
 
     def __init__(self):
