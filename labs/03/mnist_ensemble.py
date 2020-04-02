@@ -49,9 +49,9 @@ if __name__ == "__main__":
         ]))
 
         models[-1].compile(
-            optimizer=tf.keras.optimizers.Adam(),
-            loss=tf.keras.losses.SparseCategoricalCrossentropy(),
-            metrics=[tf.keras.metrics.SparseCategoricalAccuracy(name="accuracy")],
+            optimizer=tf.optimizers.Adam(),
+            loss=tf.losses.SparseCategoricalCrossentropy(),
+            metrics=[tf.metrics.SparseCategoricalAccuracy(name="accuracy")],
         )
 
         print("Training model {}: ".format(model + 1), end="", flush=True)
@@ -79,7 +79,7 @@ if __name__ == "__main__":
             #    you do not need to construct Keras ensemble model at all,
             #    and instead call `model.predict` on individual models and
             #    average the results. To measure accuracy, either do it completely
-            #    manually or use `tf.keras.metrics.SparseCategoricalAccuracy`.
+            #    manually or use `tf.metrics.SparseCategoricalAccuracy`.
             ensemble_accuracy = None
 
             # Print the results.

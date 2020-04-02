@@ -52,9 +52,9 @@ if __name__ == "__main__":
     model.summary()
 
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(),
-        loss=tf.keras.losses.SparseCategoricalCrossentropy(),
-        metrics=[tf.keras.metrics.SparseCategoricalAccuracy()],
+        optimizer=tf.optimizers.Adam(),
+        loss=tf.losses.SparseCategoricalCrossentropy(),
+        metrics=[tf.metrics.SparseCategoricalAccuracy()],
     )
 
     for epoch in range(args.epochs):
