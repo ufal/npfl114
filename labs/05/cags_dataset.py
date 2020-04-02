@@ -33,9 +33,9 @@ class CAGS:
         return example
 
     def __init__(self):
-        for dataset in ["train", "dev", "test"]:
+        for dataset, size in [("train", 57463494), ("dev", 8138328), ("test", None)]:
             path = "cags.{}.tfrecord".format(dataset)
-            if not os.path.exists(path):
+            if not os.path.exists(path) or (size is not None and os.path.getsize(path) != size):
                 print("Downloading file {}...".format(path), file=sys.stderr)
                 urllib.request.urlretrieve("{}/{}".format(self._URL, path), filename=path)
 
