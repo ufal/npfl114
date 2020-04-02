@@ -28,7 +28,7 @@ class CAGS:
             "image": tf.io.FixedLenFeature([], tf.string),
             "mask": tf.io.FixedLenFeature([], tf.string),
             "label": tf.io.FixedLenFeature([], tf.int64)})
-        example["image"] = tf.image.decode_jpeg(example["image"])
+        example["image"] = tf.image.decode_jpeg(example["image"], channels=3)
         example["mask"] = tf.image.decode_png(example["mask"])
         return example
 
