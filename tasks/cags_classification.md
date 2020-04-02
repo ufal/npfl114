@@ -43,3 +43,17 @@ training regime (neurons gets dropped in dropout, batch normalization computes
 estimates on the batch) or in inference regime. There is one exception though
 – if `trainable == False` on a batch normalization layer, it runs in the
 inference regime even when `training == True`._
+
+This is an _open-data task_, where you submit only the test set labels
+together with the training script (which will not be executed, it will be
+only used to understand the approach you took, and to indicate teams).
+Explicitly, submit **exactly one .txt file** and **at least one .py file**.
+
+The task is also a [_competition_](#competitions). Everyone who submits
+a solution which achieves at least _90%_ test set accuracy will get 6 points;
+the rest 5 points will be distributed depending on relative ordering of your
+solutions.
+
+You may want to start with the
+[cags_classification.py](https://github.com/ufal/npfl114/tree/master/labs/05/cags_classification.py)
+template which generates the test set annotation in the required format.
