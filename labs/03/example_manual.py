@@ -51,9 +51,9 @@ if __name__ == "__main__":
     model = tf.keras.Model(inputs=inputs, outputs=outputs)
     model.summary()
 
-    optimizer = tf.keras.optimizers.Adam()
-    loss_fn = tf.keras.losses.SparseCategoricalCrossentropy()
-    accuracy = tf.keras.metrics.SparseCategoricalAccuracy()
+    optimizer = tf.optimizers.Adam()
+    loss_fn = tf.losses.SparseCategoricalCrossentropy()
+    accuracy = tf.metrics.SparseCategoricalAccuracy()
 
     for epoch in range(args.epochs):
         accuracy.reset_states()
