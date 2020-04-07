@@ -29,7 +29,8 @@ module. Its method `pretrained_efficientnet_b0(include_top)`:
     - if `include_top == False`, the network will return image features (the result
       of the last global average pooling);
   - the rest of outputs are the intermediate results of the network just before
-    a convolution with $\textit{stride} > 1$ is performed.
+    a convolution with $\textit{stride} > 1$ is performed (denoted $C_5,
+    C_4, C_3, C_2, C_1$ in the Object Detection lecture).
 
 An example performing classification of given images is available in
 [image_classification.py](https://github.com/ufal/npfl114/tree/master/labs/05/image_classification.py).
