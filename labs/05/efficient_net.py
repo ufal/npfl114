@@ -497,7 +497,7 @@ def EfficientNetL2(
 setattr(EfficientNetL2, '__doc__', EfficientNet.__doc__)
 
 
-def pretrained_efficientnet_b0(include_top):
+def pretrained_efficientnet_b0(include_top, dynamic_shape=False):
     url = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/models/"
     path = "efficientnet-b0_noisy-student.h5"
 
@@ -505,4 +505,4 @@ def pretrained_efficientnet_b0(include_top):
         print("Downloading file {}...".format(path), file=sys.stderr)
         urllib.request.urlretrieve("{}/{}".format(url, path), filename=path)
 
-    return EfficientNetB0(include_top, weights="efficientnet-b0_noisy-student.h5")
+    return EfficientNetB0(include_top, weights="efficientnet-b0_noisy-student.h5", input_shape=[None, None, 3] if dynamic_shape else None)
