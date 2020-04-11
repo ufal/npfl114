@@ -5,7 +5,7 @@
 The goal of this assignment is to implement a system performing object
 recognition, optionally utilizing pretrained EfficientNet-B0 backbone.
 
-The [Street View House Numbers (SVHN) dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/demos/svhn.html)
+The [Street View House Numbers (SVHN) dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/demos/svhn_train.html)
 annotates for every photo all digits appearing on it, including their bounding
 boxes. The dataset can be loaded using the [svhn_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/06/svhn_dataset.py)
 module. Similarly to the `CAGS` dataset, it is stored in a
@@ -18,11 +18,18 @@ is a dictionary with the following keys:
 - `"bboxes"`: a `[num_digits, 4]` 2D tensor with bounding boxes of every
   digit in the image.
 
+Given that the dataset elements are each of possibly different size, it is
+quite tricky to use the `tf.data` API – converting the dataset to NumPy may
+make your life easier. _Also note that only `tf.` calls should be used the
+argument of `tf.data.Dataset.map`, so if you want to use `bboxes_training` directly
+with `tf.data.Dataset.map`, you need to use
+[tf.numpy_function](https://www.tensorflow.org/api_docs/python/tf/numpy_function)._
+
 Similarly to the `cags_classification`, you can load the EfficientNet-B0 using the provided
 [efficient_net.py](https://github.com/ufal/npfl114/tree/master/labs/06/efficient_net.py)
-module. Its method `pretrained_efficientnet_b0(include_top, dynamic_shape=False)` has been
-slightly modified and with `dynamic_shape=True` constructs a model capable of
-processing an input image of any size.
+module. Its method `pretrained_efficientnet_b0(include_top, dynamic_shape=False)` has gotten
+a new argument `dynamic_shape`, and with `dynamic_shape=True` it constructs
+a model capable of processing an input image of any size.
 
 This is an _open-data task_, where you submit only the test set annotations
 together with the training script (which will not be executed, it will be
@@ -30,15 +37,15 @@ only used to understand the approach you took, and to indicate teams).
 Explicitly, submit **exactly one .txt file** and **at least one .py file**.
 
 Each test set image annotation consists of a sequence of space separated
-five-tuples _label top left bottom right_ and the annotation is considered
+five-tuples _label top left bottom right_, and the annotation is considered
 correct, if exactly the gold digits are predicted, each with IoU at least 0.5.
 The whole test set score is then the prediction accuracy of individual images.
-An evaluation of a file with the predictions can be performed by
+An evaluation of a file with the predictions can be performed by the
 [svhn_eval.py](https://github.com/ufal/npfl114/tree/master/labs/06/svhn_eval.py)
 module.
 
-The task is also a [_competition_](#competitions). Everyone who submits
-a solution which achieves at least _20%_ test set accuracy will get 5 points;
+The task is also a [_competition_](#competitions). Everyone submitting
+a solution with at least _20%_ test set accuracy will get 5 points;
 the rest 5 points will be distributed depending on relative ordering of your
 solutions. Note that I usually need at least _35%_ development set accuracy
 to achieve the required test set performance.
