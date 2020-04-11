@@ -20,3 +20,5 @@
 - Focal Loss, RetinaNet [[Focal Loss for Dense Object Detection](https://arxiv.org/abs/1708.02002)]
 - EfficientDet [[EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/abs/1911.09070)]
 - Group Normalization [[Yuxin Wu, Kaiming He: **Group Normalization**](https://arxiv.org/abs/1803.08494)]
+
+<div style="clear: both"></div>

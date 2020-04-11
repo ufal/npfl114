@@ -24,3 +24,5 @@
   - DropBlock [[DropBlock: A regularization method for convolutional networks](https://arxiv.org/abs/1810.12890)]
 - SENet [[Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507)]
 - EfficientNet [[EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/abs/1905.11946)]
+
+<div style="clear: both"></div>

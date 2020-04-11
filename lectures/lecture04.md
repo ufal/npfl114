@@ -23,3 +23,5 @@
 - Batch normalization [Section 8.7.1 of DLB, *optionally the paper [Sergey Ioffe and Christian Szegedy: Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)*]
  *Inception v2 and v3 [[Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/abs/1512.00567)]*
 - ResNet [[Kaiming He et al.: Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
+
+<div style="clear: both"></div>
