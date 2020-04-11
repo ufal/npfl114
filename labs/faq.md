@@ -11,7 +11,7 @@
       print(entry)
   ```
 
-- How to use `tf.data.Dataset` with `model.fit` or `model.predict`?
+- How to use `tf.data.Dataset` with `model.fit` or `model.evaluate`?
 
   To use a `tf.data.Dataset` in Keras, the dataset elements should be pairs
   `(input_data, gold_labels)`, where `input_data` and `gold_labels` must be
