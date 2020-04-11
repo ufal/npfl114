@@ -6,6 +6,7 @@
 #### Video: https://slideslive.com/38906863/deep-learning-lecture-5-convolutional-networks-ii,2018 Video I (from 1h45m)
 #### Video: https://slideslive.com/38907052/deep-learning-lecture-7-object-detection-segmentation-recurrent-neural-networks,2018 Video II (to 0h57m)
 #### Lecture assignment: cnn_manual
+#### Lecture assignment: bboxes_utils
 
 <video width="426" height="240" controls style="float: right">
   <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-06.mp4" type="video/mp4">
