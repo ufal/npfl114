@@ -53,3 +53,12 @@ to achieve the required test set performance.
 You should start with the
 [svhn_competition.py](https://github.com/ufal/npfl114/tree/master/labs/06/svhn_competition.py)
 template, which generates the test set annotation in the required format.
+
+_A baseline solution can use RetinaNet-like single stage detector,
+using only a single level of convolutional features (no FPN)
+with single-scale and single-aspect anchors. Focal loss is available
+as [tfa.losses.SigmoidFocalCrossEntropy](https://www.tensorflow.org/addons/api_docs/python/tfa/losses/SigmoidFocalCrossEntropy)
+(using `reduction=tf.losses.Reduction.SUM_OVER_BATCH_SIZE` option is a good
+idea) and non-maximum suppression as
+[tf.image.non_max_suppression](https://www.tensorflow.org/api_docs/python/tf/image/non_max_suppression) or
+[tf.image.combined_non_max_suppression](https://www.tensorflow.org/api_docs/python/tf/image/combined_non_max_suppression)._
