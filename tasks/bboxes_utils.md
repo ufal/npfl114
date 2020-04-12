@@ -10,8 +10,9 @@ module. Notably, you need to implement the following methods:
   representation relative to a given anchor;
 - `bbox_from_fast_rcnn`: convert a Fast R-CNN-like representation relative to an
   anchor back to a bounding box;
-- `bboxes_training`: given a list of anchors and gold objects, assign gold objects to anchors and
-  generate suitable training data.
+- `bboxes_training`: given a list of anchors and gold objects, assign gold
+  objects to anchors and generate suitable training data (the exact algorithm
+  is described in the template).
 
 The [bboxes_utils.py](https://github.com/ufal/npfl114/tree/master/labs/06/bboxes_utils.py)
 contains simple unit tests, which are evaluated when executing the module,
