@@ -67,16 +67,23 @@ def bboxes_training(anchors, gold_classes, gold_bboxes, iou_threshold):
       `(center_y, center_x, height, width)` representing the gold bbox of
       a chosen object using parametrization of Fast R-CNN; zeros if not
       gold object was assigned to the anchor
+
+    Algorithm:
+    - First, gold objects are sequentially processed. For each gold object,
+      find the first unused anchor with largest IoU and if the IoU is > 0,
+      assign the object to the anchor.
+    - Second, anchors unassigned so far are sequentially processed. For each
+      anchor, find the first gold object with the largest IoU, and if the
+      IoU is >= threshold, assign the object to the anchor.
     """
 
     anchor_classes = np.zeros(len(anchors), np.int32)
     anchor_bboxes = np.zeros([len(anchors), 4], np.float32)
 
     # TODO: Sequentially for each gold object, find the first unused anchor
-    # with the largest IoU and assign the object to the anchor (is the IoU is
-    # nonzero; if it is zero, do nothing).
+    # with the largest IoU and if the IoU is > 0, assign the object to the anchor.
 
-    # TODO: Sequentially for each unassigned anchor, find first gold object
+    # TODO: Sequentially for each unassigned anchor, find the first gold object
     # with the largest IoU. If the IoU >= threshold, assign the object to the anchor.
 
     return anchor_classes, anchor_bboxes
