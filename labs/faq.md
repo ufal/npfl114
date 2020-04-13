@@ -1,6 +1,6 @@
 ### `tf.data.Dataset`
 
-- How to look what is in a `tf.data.Dataset`?
+- _How to look what is in a `tf.data.Dataset`?_
 
   The `tf.data.Dataset` is not just an array, but a description of a pipeline,
   which can produce data if requested. A simple way to run the pipeline is
@@ -11,7 +11,7 @@
       print(entry)
   ```
 
-- How to use `tf.data.Dataset` with `model.fit` or `model.evaluate`?
+- _How to use `tf.data.Dataset` with `model.fit` or `model.evaluate`?_
 
   To use a `tf.data.Dataset` in Keras, the dataset elements should be pairs
   `(input_data, gold_labels)`, where `input_data` and `gold_labels` must be
@@ -25,7 +25,7 @@
   train = train.batch(args.batch_size)
   ```
 
-- Is every iteration through a `tf.data.Dataset` the same?
+- _Is every iteration through a `tf.data.Dataset` the same?_
 
   No. Because the dataset is only a _pipeline_ generating data, it is called
   each time the dataset is iterated – therefore, every `.shuffle` is called
