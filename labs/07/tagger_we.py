@@ -34,7 +34,7 @@ class Network:
 
     def train_epoch(self, dataset, args):
         for batch in dataset.batches(args.batch_size):
-            # TODO: Train the given batch, using
+            # TODO: Train with the given batch, using `train_on_batch`, with
             # - batch[dataset.FORMS].word_ids as inputs
             # - batch[dataset.TAGS].word_ids as targets. Note that generally targets
             #   are expected to be the same shape as outputs, so you have to
@@ -53,9 +53,9 @@ class Network:
     def evaluate(self, dataset, dataset_name, args):
         # We assume that model metric are already resetted at this point.
         for batch in dataset.batches(args.batch_size):
-            # TODO: Evaluate the given match, using the same inputs as in training.
-            # Additionally, pass `reset_metrics=False` to aggregate the metrics.
-            # Store the metrics of the last batch as `metrics`.
+            # TODO: Evaluate the given batch with `test_on_batch`, using the
+            # same inputs as in training, but pass `reset_metrics=False` to
+            # aggregate the metrics. Store the metrics of the last batch as `metrics`.
         self.model.reset_metrics()
 
         metrics = dict(zip(self.model.metrics_names, metrics))
