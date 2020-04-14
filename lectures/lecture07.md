@@ -2,6 +2,7 @@
 #### Date: Apr 14
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?07
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-07.pdf,PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-07.mp4,2020 Video
 #### Video: https://slideslive.com/38907052/deep-learning-lecture-7-object-detection-segmentation-recurrent-neural-networks,2018 Video I
 #### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings, 2018 Video II
 
