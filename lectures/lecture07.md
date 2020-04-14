@@ -5,6 +5,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-07.mp4,2020 Video
 #### Video: https://slideslive.com/38907052/deep-learning-lecture-7-object-detection-segmentation-recurrent-neural-networks,2018 Video I
 #### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings, 2018 Video II
+#### Lecture assignment: 3d_recognition
 
 <video width="426" height="240" controls style="float: right">
   <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-07.mp4" type="video/mp4">
