@@ -60,6 +60,7 @@ class Network:
 
         metrics = dict(zip(self.model.metrics_names, metrics))
         with self._writer.as_default():
+            tf.summary.experimental.set_step(self.model.optimizer.iterations)
             for name, value in metrics.items():
                 tf.summary.scalar("{}/{}".format(dataset_name, name), value)
 
