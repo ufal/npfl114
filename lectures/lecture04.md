@@ -9,7 +9,7 @@
 #### Lecture assignment: tf_dataset
 #### Lecture assignment: cifar_competition
 
-<video width="426" height="240" controls style="float: right">
+<video width="355" height="200" controls style="float: right">
   <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-04.mp4" type="video/mp4">
 </video>
 
