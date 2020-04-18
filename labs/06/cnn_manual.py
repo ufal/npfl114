@@ -51,7 +51,8 @@ class Network:
         for layer in args.cnn.split(","):
             channels, kernel_size, stride = map(int, layer.split("-"))
             self._convolutions.append(Convolution(channels, kernel_size, stride, input_shape))
-            input_shape = [input_shape[0] // stride, input_shape[1] // stride, channels]
+            input_shape = [(input_shape[0] - kernel_size) // stride + 1,
+                           (input_shape[1] - kernel_size) // stride + 1, channels]
 
         # Create the classification head
         self._flatten = tf.keras.layers.Flatten(input_shape=input_shape)
