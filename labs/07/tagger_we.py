@@ -36,9 +36,7 @@ class Network:
         for batch in dataset.batches(args.batch_size):
             # TODO: Train with the given batch, using `train_on_batch`, with
             # - batch[dataset.FORMS].word_ids as inputs
-            # - batch[dataset.TAGS].word_ids as targets. Note that generally targets
-            #   are expected to be the same shape as outputs, so you have to
-            #   modify the gold indices to be vectors of size one.
+            # - batch[dataset.TAGS].word_ids as targets
             # Additionally, pass `reset_metrics=True`.
             #
             # Store the computed metrics in `metrics`.
