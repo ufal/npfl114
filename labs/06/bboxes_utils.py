@@ -70,21 +70,24 @@ def bboxes_training(anchors, gold_classes, gold_bboxes, iou_threshold):
 
     Algorithm:
     - First, gold objects are sequentially processed. For each gold object,
-      find the first unused anchor with largest IoU and if the IoU is > 0,
-      assign the object to the anchor.
+      find the unused anchor with the largest IoU (the first one if there are
+      several) and if the IoU is > 0, assign the object to the anchor.
     - Second, anchors unassigned so far are sequentially processed. For each
-      anchor, find the first gold object with the largest IoU, and if the
-      IoU is >= threshold, assign the object to the anchor.
+      anchor, find the gold object with the largest IoU (again the first one if
+      there are several), and if the IoU is >= threshold, assign the object to
+      the anchor.
     """
 
     anchor_classes = np.zeros(len(anchors), np.int32)
     anchor_bboxes = np.zeros([len(anchors), 4], np.float32)
 
-    # TODO: Sequentially for each gold object, find the first unused anchor
-    # with the largest IoU and if the IoU is > 0, assign the object to the anchor.
+    # TODO: Sequentially for each gold object, find the unused anchor
+    # with the largest IoU (the first one if there are several)
+    # and if the IoU is > 0, assign the object to the anchor.
 
-    # TODO: Sequentially for each unassigned anchor, find the first gold object
-    # with the largest IoU. If the IoU >= threshold, assign the object to the anchor.
+    # TODO: Sequentially for each unassigned anchor, find the gold object
+    # with the largest IoU (the first one if there are several).
+    # If the IoU >= threshold, assign the object to the anchor.
 
     return anchor_classes, anchor_bboxes
 
