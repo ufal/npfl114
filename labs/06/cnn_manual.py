@@ -17,9 +17,11 @@ class Convolution:
         self._channels = channels
         self._kernel_size = kernel_size
         self._stride = stride
-        # TODO: Create self._kernel and self._bias variables of suitable shape
-        self._kernel = tf.Variable(tf.initializers.GlorotUniform(seed=42)(KERNEL_SHAPE), trainable=True)
-        self._bias = tf.Variable(tf.initializers.Zeros()(BIAS_SHAPE), trainable=True)
+        # Here the kernel and bias variables are created
+        self._kernel = tf.Variable(
+            tf.initializers.GlorotUniform(seed=42)([self._kernel_size, self._kernel_size, input_shape[2], self._channels]),
+            trainable=True)
+        self._bias = tf.Variable(tf.initializers.Zeros()([self._channels]), trainable=True)
 
     def forward(self, inputs):
         # TODO: Compute the forward propagation through the convolution
