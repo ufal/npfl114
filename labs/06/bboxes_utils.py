@@ -62,10 +62,10 @@ def bboxes_training(anchors, gold_classes, gold_bboxes, iou_threshold):
     Returns:
     - `anchor_classes` contains for every anchor either 0 for background
       (if no gold object is assigned) or `1 + gold_class` if a gold object
-      with `gold_class` as assigned to it
+      with `gold_class` is assigned to it
     - `anchor_bboxes` contains for every anchor a four-tuple
       `(center_y, center_x, height, width)` representing the gold bbox of
-      a chosen object using parametrization of Fast R-CNN; zeros if not
+      a chosen object using parametrization of Fast R-CNN; zeros if no
       gold object was assigned to the anchor
 
     Algorithm:
