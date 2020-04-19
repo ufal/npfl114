@@ -13,7 +13,7 @@
 </video>
 
 - Residual CNN Networks
-  - ResNet [[Kaiming He et al.: Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
+  - ResNet [[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
   - WideNet [[Wide Residual Network](https://arxiv.org/abs/1605.07146)]
   - DenseNet [[Densely Connected Convolutional Networks](https://arxiv.org/abs/1608.06993)]
   - PyramidNet [[Deep Pyramidal Residual Networks](https://arxiv.org/abs/1610.02915)]
