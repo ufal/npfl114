@@ -2,8 +2,13 @@
 #### Date: Apr 20
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?08
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-08.pdf,PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-08.mp4,Video
 #### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings, 2018 Video I
 #### Video: https://slideslive.com/38907422/deep-learning-lecture-9-recurrent-neural-networks-iii-machine-translation, 2018 Video II
+
+<video width="355" height="200" controls style="float: right">
+  <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-08.mp4" type="video/mp4">
+</video>
 
 - Character-level embeddings using Recurrent neural networks [C2W model from [Finding Function in Form: Compositional Character Models for Open Vocabulary Word Representation](http://arxiv.org/abs/1508.02096)]
 - Character-level embeddings using Convolutional neural networks [CharCNN from [Character-Aware Neural Language Models](https://arxiv.org/abs/1508.06615)]
@@ -13,3 +18,5 @@
   - Hierarchical softmax [Section 12.4.3.2 of DLB or [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546)]
   - Negative sampling [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546)]
 - _Character-level embeddings using character n-grams [Described simultaneously in several papers as Charagram ([Charagram: Embedding Words and Sentences via Character n-grams](https://arxiv.org/abs/1607.02789)), Subword Information ([Enriching Word Vectors with Subword Information](https://arxiv.org/abs/1607.04606) or SubGram ([SubGram: Extending Skip-Gram Word Representation with Substrings](http://link.springer.com/chapter/10.1007/978-3-319-45510-5_21))]_
+
+<div style="clear: both"></div>
