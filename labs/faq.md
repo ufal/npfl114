@@ -31,6 +31,23 @@
   each time the dataset is iterated – therefore, every `.shuffle` is called
   in every iteration.
 
+- _How to use `ImageDataGenerator` in `tf.data.Dataset.map`?_
+
+  If you do not mind potentially large computation penalty, you can call
+  a Python function in `Dataset.map`:
+
+  ```python
+  train_generator = tf.keras.preprocessing.image.ImageDataGenerator(...)
+
+  def augment(image, label):
+      return tf.ensure_shape(
+          tf.numpy_function(train_generator.random_transform, [image], tf.float32),
+          image.shape
+      ), label
+
+  dataset.map(augment)
+  ```
+
   Similarly, if you use random numbers in a `augment` method and use it in
   a `.map(augment)`, it is called on each iteration and can modify the same image
   differently in different epochs.
