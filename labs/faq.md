@@ -31,6 +31,20 @@
   each time the dataset is iterated – therefore, every `.shuffle` is called
   in every iteration.
 
+- _TODO: Correctly describe how random number generation works in different epochs.
+  Originally the (incorrect) text was:_
+
+  Similarly, if you use random numbers in a `augment` method and use it in
+  a `.map(augment)`, it is called on each iteration and can modify the same image
+  differently in different epochs.
+
+  ```python
+  data = tf.data.Dataset.from_tensor_slices(tf.zeros(10, tf.int32))
+  data = data.map(lambda x: x + tf.random.uniform([], maxval=10, dtype=tf.int32))
+  for _ in range(3):
+      print(*[element.numpy() for element in data])
+  ```
+
 - _How to use `ImageDataGenerator` in `tf.data.Dataset.map`?_
 
   If you do not mind potentially large computation penalty, you can call
@@ -46,17 +60,6 @@
       ), label
 
   dataset.map(augment)
-  ```
-
-  Similarly, if you use random numbers in a `augment` method and use it in
-  a `.map(augment)`, it is called on each iteration and can modify the same image
-  differently in different epochs.
-
-  ```python
-  data = tf.data.Dataset.from_tensor_slices(tf.zeros(10, tf.int32))
-  data = data.map(lambda x: x + tf.random.uniform([], maxval=10, dtype=tf.int32))
-  for _ in range(3):
-      print(*[element.numpy() for element in data])
   ```
 
 ### Finetuning
