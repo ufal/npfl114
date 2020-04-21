@@ -1,5 +1,5 @@
 ### Assignment: tagger_crf
-#### Date: Deadline: May 03, 23:59
+#### Date: Deadline: May 10, 23:59
 #### Points: 2 points
 
 This assignment is an extension of `tagger_we` task.

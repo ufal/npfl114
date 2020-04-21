@@ -8,7 +8,6 @@
 #### Lecture assignment: mnist_multiple
 #### Lecture assignment: tagger_cle_rnn
 #### Lecture assignment: tagger_cle_cnn
-#### Lecture assignment: tagger_crf
 #### Lecture assignment: tagger_competition
 #### Lecture assignment: speech_recognition
 
