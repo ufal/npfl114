@@ -1,4 +1,4 @@
-## Assignment: mnist_multiple
+### Assignment: mnist_multiple
 #### Date: Deadline: May 03, 23:59
 #### Points: 2 points
 
