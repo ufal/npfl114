@@ -3,9 +3,9 @@
 #### Points: 2 points
 
 This assignment is a continuation of `tagger_we`. Using the
-`tagger_cle_rnn.py` template (to appear soon),
-implement character-level word embedding computation using
-a bidirectional character-level RNN.
+[tagger_cle_rnn.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_cle_rnn.py)
+template, implement character-level word embedding computation using
+a bidirectional character-level GRU.
 
 Once submitted to ReCodEx, you should experiment with the effect of CLEs
 compared to a plain `tagger_we`, and the influence of their dimensionality. Note
