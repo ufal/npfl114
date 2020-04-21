@@ -5,6 +5,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-08.mp4,Video
 #### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings, 2018 Video I
 #### Video: https://slideslive.com/38907422/deep-learning-lecture-9-recurrent-neural-networks-iii-machine-translation, 2018 Video II
+#### Lecture assignment: mnist_multiple
 #### Lecture assignment: tagger_cle_rnn
 #### Lecture assignment: tagger_cle_cnn
 #### Lecture assignment: tagger_crf
