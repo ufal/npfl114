@@ -18,12 +18,11 @@ is a dictionary with the following keys:
 - `"bboxes"`: a `[num_digits, 4]` 2D tensor with bounding boxes of every
   digit in the image.
 
-Given that the dataset elements are each of possibly different size, it is
-quite tricky to use the `tf.data` API – converting the dataset to NumPy may
-make your life easier. _Also note that only `tf.` calls should be used the
-argument of `tf.data.Dataset.map`, so if you want to use `bboxes_training` directly
-with `tf.data.Dataset.map`, you need to use
-[tf.numpy_function](https://www.tensorflow.org/api_docs/python/tf/numpy_function)._
+Given that the dataset elements are each of possibly different size and you
+want to preprocess them using a NumPy function `bboxes_training`, it might be
+more comfortable to convert the dataset to NumPy. Alternatively, you can
+call `bboxes_training` directly in `tf.data.Dataset.map` by using `tf.numpy_function`,
+see [FAQ](#faq).
 
 Similarly to the `cags_classification`, you can load the EfficientNet-B0 using the provided
 [efficient_net.py](https://github.com/ufal/npfl114/tree/master/labs/06/efficient_net.py)
