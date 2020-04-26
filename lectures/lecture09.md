@@ -2,6 +2,8 @@
 #### Date: Apr 27
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?09
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-09.pdf,PDF Slides
+#### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings, 2018 Video I
+#### Video: https://slideslive.com/38907422/deep-learning-lecture-9-recurrent-neural-networks-iii-machine-translation, 2018 Video II
 #### Lecture assignment: tensorboard_projector
 
 - `Word2vec` word embeddings, notably the CBOW and Skip-gram architectures [[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)]
