@@ -26,9 +26,10 @@ class Network:
         #   into 10 classes;
         # - classify the computed representation of the second image using the
         #   same connected layer (with shared weights) into 10 classes;
-        # - concatenate the two image representations, process them using another fully connected
-        #   layer with 200 neurons and ReLU, and finally compute one output with `tf.nn.sigmoid`
-        #   activation (the goal is to predict if the first digit is larger than the second)
+        # - concatenate the two 200-dimensional image representations, process
+        #   them using another fully connected layer with 200 neurons and ReLU,
+        #   and finally compute one output with `tf.nn.sigmoid` activation (the
+        #   goal is to predict if the first digit is larger than the second)
 
         # Train the outputs using SparseCategoricalCrossentropy for the first two inputs
         # and BinaryCrossentropy for the third one, utilizing Adam with default arguments.
