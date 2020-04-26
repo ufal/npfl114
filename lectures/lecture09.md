@@ -2,6 +2,7 @@
 #### Date: Apr 27
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?09
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-09.pdf,PDF Slides
+#### Lecture assignment: tensorboard_projector
 
 - `Word2vec` word embeddings, notably the CBOW and Skip-gram architectures [[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)]
   - Hierarchical softmax [Section 12.4.3.2 of DLB or [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546)]
