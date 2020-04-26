@@ -18,10 +18,7 @@ import numpy as np
 #   - words: Word_id -> string list.
 #   - alphabet_map: Character -> char_id map.
 #   - alphabet: Char_id -> character list.
-#   - charseq_ids: Character_sequence ids of the original words.
-#   - charseqs_map: String -> character_sequence_id map.
-#   - charseqs: Character_sequence_id -> [characters], where character is an index
-#       to the dataset alphabet.
+#   - charseqs: Sequences of characters of the original words.
 class MorphoDataset:
     _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/datasets/"
 
@@ -41,14 +38,11 @@ class MorphoDataset:
                 self.alphabet_map = train.alphabet_map if train else {
                     "<pad>": self.PAD, "<unk>": self.UNK, "<bow>": self.BOW, "<eow>": self.EOW}
                 self.alphabet = train.alphabet if train else ["<pad>", "<unk>", "<bow>", "<eow>"]
-                self.charseqs_map = {"<pad>": self.PAD, "<unk>": self.UNK}
-                self.charseqs = [[self.PAD], [self.UNK]]
-                self.charseq_ids = []
+                self.charseqs = []
 
     class FactorBatch:
-        def __init__(self, word_ids, charseq_ids=None, charseqs=None):
+        def __init__(self, word_ids, charseqs=None):
             self.word_ids = word_ids
-            self.charseq_ids = charseq_ids
             self.charseqs = charseqs
 
     class Dataset:
@@ -74,29 +68,27 @@ class MorphoDataset:
                             if len(factor.word_ids): factor.word_ids[-1] = np.array(factor.word_ids[-1], np.int32)
                             factor.word_ids.append([])
                             factor.word_strings.append([])
-                            if factor.characters: factor.charseq_ids.append([])
+                            if factor.characters:
+                                factor.charseqs.append([])
 
                         word = columns[f]
                         factor.word_strings[-1].append(word)
 
                         # Character-level information
                         if factor.characters:
-                            if word not in factor.charseqs_map:
-                                factor.charseqs_map[word] = len(factor.charseqs)
-                                factor.charseqs.append([])
-                                if add_bow_eow:
-                                    factor.charseqs[-1].append(MorphoDataset.Factor.BOW)
-                                for c in word:
-                                    if c not in factor.alphabet_map:
-                                        if train:
-                                            c = "<unk>"
-                                        else:
-                                            factor.alphabet_map[c] = len(factor.alphabet)
-                                            factor.alphabet.append(c)
-                                    factor.charseqs[-1].append(factor.alphabet_map[c])
-                                if add_bow_eow:
-                                    factor.charseqs[-1].append(MorphoDataset.Factor.EOW)
-                            factor.charseq_ids[-1].append(factor.charseqs_map[word])
+                            factor.charseqs[-1].append([])
+                            if add_bow_eow:
+                                factor.charseqs[-1][-1].append(MorphoDataset.Factor.BOW)
+                            for c in word:
+                                if c not in factor.alphabet_map:
+                                    if train:
+                                        c = "<unk>"
+                                    else:
+                                        factor.alphabet_map[c] = len(factor.alphabet)
+                                        factor.alphabet.append(c)
+                                factor.charseqs[-1][-1].append(factor.alphabet_map[c])
+                            if add_bow_eow:
+                                factor.charseqs[-1][-1].append(MorphoDataset.Factor.EOW)
 
                         # Word-level information
                         if word not in factor.words_map:
@@ -143,20 +135,12 @@ class MorphoDataset:
                 for f, factor in enumerate(self._data):
                     if not factor.characters: continue
 
-                    batch[f].charseq_ids = np.zeros([batch_size, max_sentence_len], np.int32)
-                    charseqs_map = {"<pad>": factor.PAD}
-                    charseqs = [factor.charseqs[factor.PAD]]
-                    for i in range(batch_size):
-                        for j, charseq_id in enumerate(factor.charseq_ids[batch_perm[i]]):
-                            if charseq_id not in charseqs_map:
-                                charseqs_map[charseq_id] = len(charseqs)
-                                charseqs.append(factor.charseqs[charseq_id])
-                            batch[f].charseq_ids[i, j] = charseqs_map[charseq_id]
+                    max_charseq_len = max(len(charseq) for i in batch_perm for charseq in factor.charseqs[i])
 
-                    max_charseq_len = max(len(charseq) for charseq in charseqs)
-                    batch[f].charseqs = np.zeros([len(charseqs), max_charseq_len], np.int32)
-                    for i in range(len(charseqs)):
-                        batch[f].charseqs[i, :len(charseqs[i])] = charseqs[i]
+                    batch[f].charseqs = np.zeros([batch_size, max_sentence_len, max_charseq_len], np.int32)
+                    for i in range(batch_size):
+                        for j, charseq in enumerate(factor.charseqs[batch_perm[i]]):
+                            batch[f].charseqs[i, j, :len(charseq)] = charseq
 
                 yield batch
 

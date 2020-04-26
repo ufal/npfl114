@@ -31,15 +31,60 @@
   each time the dataset is iterated – therefore, every `.shuffle` is called
   in every iteration.
 
-  Similarly, if you use random numbers in a `augment` method and use it in
-  a `.map(augment)`, it is called on each iteration and can modify the same image
-  differently in different epochs.
+- _How to generate different random numbers each epoch during `tf.data.Dataset.map`?_
+
+  When a global random seed is set, methods like `tf.random.uniform` generate
+  the same sequence of numbers on each iteration.
+
+  The easiest method I found is to create a Generator object and use it to
+  produce random numbers.
 
   ```python
+  generator = tf.random.experimental.Generator.from_seed(42)
   data = tf.data.Dataset.from_tensor_slices(tf.zeros(10, tf.int32))
-  data = data.map(lambda x: x + tf.random.uniform([], maxval=10, dtype=tf.int32))
+  data = data.map(lambda x: x + generator.uniform([], maxval=10, dtype=tf.int32))
   for _ in range(3):
       print(*[element.numpy() for element in data])
+  ```
+
+- _How to call numpy methods or other non-tf functions in `tf.data.Dataset.map`?_
+
+  You can use [tf.numpy_function](https://www.tensorflow.org/api_docs/python/tf/numpy_function)
+  to call a numpy function even in a computational graph. However, the results
+  have no static shape information and you need to set it manually – ideally
+  using [tf.ensure_shape](https://www.tensorflow.org/api_docs/python/tf/ensure_shape),
+  which both sets the static shape and verifies during execution that the real
+  shape mathes it.
+
+  For example, to use the `bboxes_training` method from
+  [bboxes_utils](#bboxes_utils), you could do something like:
+
+  ```python
+  anchors = np.array(...)
+
+  def prepare_data(example):
+      anchor_classes, anchor_bboxes = tf.numpy_function(
+          bboxes_utils.bboxes_training, [anchors, example["classes"], example["bboxes"], 0.5], (tf.int32, tf.float32))
+      anchor_classes = tf.ensure_shape(anchor_classes, [len(anchors)])
+      anchor_bboxes = tf.ensure_shape(anchor_bboxes, [len(anchors), 4])
+      ...
+  ```
+
+- _How to use `ImageDataGenerator` in `tf.data.Dataset.map`?_
+
+  The `ImageDataGenerator` offers a `.random_transform` method, so we can use
+  `tf.numpy_function` from the previous answer:
+
+  ```python
+  train_generator = tf.keras.preprocessing.image.ImageDataGenerator(...)
+
+  def augment(image, label):
+      return tf.ensure_shape(
+          tf.numpy_function(train_generator.random_transform, [image], tf.float32),
+          image.shape
+      ), label
+
+  dataset.map(augment)
   ```
 
 ### Finetuning

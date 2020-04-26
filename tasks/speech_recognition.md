@@ -35,7 +35,7 @@ template.
 - To perform speech recognition, you should use CTC loss for training and CTC
   beam search decoder for prediction. Both the CTC loss and CTC decoder employ
   sparse tensor – therefore, start by
-  [studying them](https://www.tensorflow.org/api_guides/python/sparse_ops).
+  [studying them](https://www.tensorflow.org/api_docs/python/tf/sparse/SparseTensor).
 - A basic architecture:
   - converts target letters into sparse representation,
   - use a bidirectional RNN and an output linear layer without activation,

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
-import sys
+
+from timit_mfcc import TimitMFCC
 
 def edit_distance(x, y):
     a = [[0] * (len(y) + 1) for _ in range(len(x) + 1)]
@@ -15,24 +16,25 @@ def edit_distance(x, y):
             )
     return a[-1][-1]
 
-parser = argparse.ArgumentParser()
-parser.add_argument("system", type=str, help="Path to system output.")
-parser.add_argument("gold", type=str, help="Path to gold data.")
-args = parser.parse_args()
+if __name__ == "__main__":
+    # Parse arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument("predictions", type=str, help="Path to predicted output.")
+    parser.add_argument("dataset", type=str, help="Which dataset to evaluate ('dev', 'test').")
+    args = parser.parse_args([] if "__file__" not in globals() else None)
 
-with open(args.system, "r", encoding="utf-8") as system_file:
-    system = [line.rstrip("\n") for line in system_file]
+    gold = getattr(TimitMFCC(), args.dataset).data["letters"]
 
-with open(args.gold, "r", encoding="utf-8") as gold_file:
-    gold = [line.rstrip("\n") for line in gold_file]
+    with open(args.predictions, "r", encoding="utf-8") as predictions_file:
+        predictions = [line.rstrip("\n") for line in predictions_file]
 
-if len(system) < len(gold):
-    raise RuntimeError("The system output is shorter than gold data: {} vs {}.".format(len(system), len(gold)))
+    if len(predictions) < len(gold):
+        raise RuntimeError("The predictions are shorter than gold data: {} vs {}.".format(len(predictions), len(gold)))
 
-score = 0
-for i in range(len(gold)):
-    gold_sentence = gold[i].split(" ")
-    system_sentence = system[i].split(" ")
-    score += edit_distance(gold_sentence, system_sentence) / len(gold_sentence)
+    score = 0
+    for i in range(len(gold)):
+        gold_sentence = [TimitMFCC.LETTERS[letter] for letter in gold[i]]
+        predicted_sentence = predictions[i].split(" ")
+        score += edit_distance(gold_sentence, predicted_sentence) / len(gold_sentence)
 
-print("Average normalized edit distance: {:.2f}%".format(100 * score / len(gold)))
+    print("Average normalized edit distance: {:.2f}%".format(100 * score / len(gold)))
