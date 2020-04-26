@@ -121,3 +121,33 @@
   - if `trainable == False`, the layer is always executed in inference regime;
   - if `trainable == True`, the training/inference regime is chosen according
     to the `training` option.
+
+### Masking
+
+- _How can sequences of different length be processed by a RNN?_
+
+  Keras employs [masking](https://www.tensorflow.org/guide/keras/masking_and_padding)
+  to indicate, which sequence elements are _valid_ and which are just _padding_.
+
+  Usually, a mask is created using
+  a [Embedding](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Embedding)
+  or [Masking](https://www.tensorflow.org/api_docs/python/tf/keras/layers/Masking) layer
+  and is then automatically propagated. If `model.compile` is used, it is also
+  automatically utilized in losses and metrics.
+
+  However, in order for the mask propagation to work, you can use only
+  `tf.keras.layers` to process the data, not raw TF operations like `tf.concat`
+  or even the `+` operator (see `tf.keras.layers.Concatenate/Add/...`).
+
+- _How to compute masked losses and masked metrics manually?_
+
+  When you want to compute the losses and metrics manually, pass the mask as the
+  third argument to their `__call__` method (each individual component of
+  loss/metric is then multiplied by the mask, zeroing out the ones for padding
+  elements).
+
+- _How to print output masks of a `tf.keras.Model`?_
+
+  When you call the model directly, like `model(input_batch)`, the mask of each
+  output is available in a private `._keras_mask` property, so for single-output
+  models you can print it with `print(model(input_batch)._keras_mask)`.
