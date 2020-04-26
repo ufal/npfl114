@@ -1,4 +1,4 @@
-### `tf.data.Dataset`
+### tf.data.Dataset
 
 - _How to look what is in a `tf.data.Dataset`?_
 
