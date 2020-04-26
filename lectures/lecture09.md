@@ -1,4 +1,4 @@
-### Lecture: 9. Word2Vec, Seq2seq, Transfromer
+### Lecture: 9. Word2Vec, Seq2seq, Transformer
 #### Date: Apr 27
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?09
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-09.pdf,PDF Slides
