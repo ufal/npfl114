@@ -1,5 +1,5 @@
 ### Assignment: speech_recognition
-#### Date: Deadline: May 03, 23:59
+#### Date: Deadline: ~~May 03, 23:59~~ May 10, 23:59
 #### Points: 6 points+5 bonus
 
 This assignment is a competition task in speech recognition area. Specifically,
