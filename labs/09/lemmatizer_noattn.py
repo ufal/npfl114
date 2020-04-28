@@ -43,7 +43,7 @@ class Network:
 
                 # TODO: Define `finished` as a vector of self.batch_size of `False` [see tf.fill].
                 # TODO: Define `inputs` as a vector of self.batch_size of MorphoDataset.Factor.BOW,
-                #   embedded using self.lremmatizer.target_embedding
+                #   embedded using self.lemmatizer.target_embedding
                 # TODO: Define `states` as self.source_states
                 return finished, inputs, states
 
