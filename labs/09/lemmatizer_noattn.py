@@ -144,15 +144,10 @@ class Network:
     def train_epoch(self, dataset, args):
         for batch in dataset.batches(args.batch_size):
             # TODO: Create `targets` by append EOW after target lemmas
-            targets = self.append_eow(batch[dataset.LEMMAS].charseqs)
 
             # TODO: Train the lemmatizer using `train_on_batch` method, storing
             # result metrics in `metrics`. You need to pass the `targets`
             # both on input and as gold labels.
-            metrics = self.lemmatizer.train_on_batch(
-                [batch[dataset.FORMS].charseqs, targets],
-                targets,
-            )
 
             # Generate the summaries each 10 steps
             iteration = int(self.lemmatizer.optimizer.iterations)
