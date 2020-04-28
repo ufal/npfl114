@@ -109,7 +109,7 @@ class Network:
                 # storing the first result in `output_layer` and the third result in `output_lens`.
                 pass
             else:
-                # TODO: Create a self.DecoderTraining by using:
+                # TODO: Create a self.DecoderPrediction by using:
                 # - `self` as first argument to its constructor
                 # - `maximum_iterations=tf.shape(source_charseqs)[1] + 10` as
                 #   another argument, which indicates that the longest prediction
