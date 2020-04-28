@@ -11,7 +11,7 @@ class Network:
             super().__init__()
 
             # TODO: Define
-            # - `source_embeddings` as a masked embedding layer of source chars into args.cle_dim dimensions
+            # - `source_embedding` as a masked embedding layer of source chars into args.cle_dim dimensions
             # - `source_rnn` as a bidirectional GRU with args.rnn_dim units, returning only the last output
             #   (i.e., return_sequences=False), summing opposite directions
 
