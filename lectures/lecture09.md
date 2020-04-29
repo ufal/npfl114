@@ -3,6 +3,7 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?09
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-09.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-09.mp4,Video
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-09.practicals.mp4,Video – Practicals
 #### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings, 2018 Video I
 #### Video: https://slideslive.com/38907422/deep-learning-lecture-9-recurrent-neural-networks-iii-machine-translation, 2018 Video II
 #### Lecture assignment: tensorboard_projector
@@ -10,9 +11,11 @@
 #### Lecture assignment: lemmatizer_attn
 #### Lecture assignment: lemmatizer_competition
 
-<video width="355" height="200" controls style="float: right">
-  <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-09.mp4" type="video/mp4">
-</video>
+<div style="float: right">
+  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-09.mp4" type="video/mp4"></video>
+  <br>
+  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-09.practicals.mp4" type="video/mp4"></video>
+</div>
 
 - `Word2vec` word embeddings, notably the CBOW and Skip-gram architectures [[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)]
   - Hierarchical softmax [Section 12.4.3.2 of DLB or [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546)]
