@@ -28,7 +28,6 @@ class Network:
 
 
 if __name__ == "__main__":
-
     # Parse arguments
     parser = argparse.ArgumentParser()
     # TODO: Define reasonable defaults and optionally more parameters
