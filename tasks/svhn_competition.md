@@ -1,5 +1,5 @@
 ### Assignment: svhn_competition
-#### Date: Deadline: ~~Apr 26, 23:59~~ May 05, 23:59
+#### Date: Deadline: ~~Apr 26, 23:59~~ May 03, 23:59
 #### Points: 5 points+5 bonus
 
 The goal of this assignment is to implement a system performing object
