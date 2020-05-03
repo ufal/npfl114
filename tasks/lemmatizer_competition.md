@@ -1,5 +1,5 @@
 ### Assignment: lemmatizer_competition
-#### Date: Deadline: May 10, 23:59
+#### Date: Deadline: ~~May 10, 23:59~~ May 17, 23:59
 #### Points: 5 points+5 bonus
 
 In this assignment, you should extend `lemmatizer_noattn` or `lemmatizer_attn`
