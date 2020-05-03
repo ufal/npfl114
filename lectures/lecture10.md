@@ -9,3 +9,4 @@
   - CGAN [[Conditional Generative Adversarial Nets](https://arxiv.org/abs/1411.1784)]
   - DCGAN [[Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/abs/1511.06434)]
   - _WGAN [[Wasserstein GAN](https://arxiv.org/abs/1701.07875)]_
+  - _BigGAN [[Large Scale Gan Training for High Fidelity Natural Image Synthesis](https://arxiv.org/abs/1809.11096)]_
