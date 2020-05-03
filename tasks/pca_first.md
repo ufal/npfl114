@@ -16,21 +16,18 @@ principal component – the template contains a detailed description of what
 you have to do.
 
 #### Examples Start: pca_first_example
-For command
-```
-python3 pca_first.py --examples=5 --iterations=10
-```
-the output file `pca_first.out` should contain
-```
-42.44 34.43
-```
----
-For command
-```
-python3 pca_first.py --examples=1000 --iterations=100
-```
-the output file `pca_first.out` should contain
-```
-51.59 9.93
-```
+_Note that the results might be slightly different, depending on your CPU type and whether you use GPU._
+
+- `python3 pca_first.py --examples=1024 --iterations=64 --seed=7 --threads=1`
+  ```
+  51.52 9.94
+  ```
+- `python3 pca_first.py --examples=8192 --iterations=128 --seed=7 --threads=1`
+  ```
+  52.58 10.20
+  ```
+- `python3 pca_first.py --examples=55000 --iterations=1024 --seed=7 --threads=1`
+  ```
+  52.74 9.71
+  ```
 #### Examples End:

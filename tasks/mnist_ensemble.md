@@ -10,24 +10,20 @@ an ensemble of the first model, first two models, first three models, …, all
 models, and evaluate their accuracy on the **development set**.
 
 #### Examples Start: mnist_ensemble_example
-_Note that the results might be slightly different, depending on whether you use
-GPU or on your CPU type._
+_Note that the results might be slightly different, depending on your CPU type and whether you use GPU._
 
-Running
-```
-python3 mnist_ensemble.py --batch_size=50 --epochs=10 --hidden_layers=200 --models=7 --threads=1
-```
-should give you
-```
-98.22 98.22
-98.04 98.28
-98.06 98.34
-98.02 98.48
-98.24 98.50
-98.24 98.60
-97.56 98.44
-```
-
-Note that how the averaged performance increases with the number of models. Also
-note that the seventh model with bad individual accuracy hurts the ensemble.
+- `python3 mnist_ensemble.py --recodex --seed=7 --threads=1 --epochs=2 --batch_size=50 --hidden_layers=20 --models=3`
+  ```
+  94.96 94.96
+  95.54 95.58
+  94.90 95.54
+  ```
+- `python3 mnist_ensemble.py --recodex --seed=7 --threads=1 --epochs=1 --batch_size=50 --hidden_layers=20 --models=5`
+  ```
+  94.08 94.08
+  94.36 94.34
+  93.94 94.20
+  94.02 94.20
+  93.94 94.16
+  ```
 #### Examples End:

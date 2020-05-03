@@ -19,22 +19,14 @@ template, you should:
 - perform the SGD update.
 
 #### Examples Start: sgd_backpropagation_example
-_Note that the results can be different when a GPU is used, or when more than one
-CPU thread is used. The results might be even different for a single-threaded CPU
-(depending on CPU type), so do not hesitate to submit to ReCodEx when you have
-similar but not exactly the same results._
+_Note that the results might be slightly different, depending on your CPU type and whether you use GPU._
 
-Running
-```
-python3 sgd_backpropagation.py --batch_size=50 --epochs=5 --hidden_layer=100 --learning_rate=0.2 --seed=42 --threads=1
-```
-should give you
-```
-Dev accuracy after epoch 1 is 95.46
-Dev accuracy after epoch 2 is 96.20
-Dev accuracy after epoch 3 is 96.90
-Dev accuracy after epoch 4 is 97.24
-Dev accuracy after epoch 5 is 97.32
-Test accuracy after epoch 5 is 96.99
-```
+- `python3 sgd_backpropagation.py --batch_size=64 --epochs=2 --hidden_layer=20 --learning_rate=0.1 --seed=7 --threads=1`
+  ```
+  92.38
+  ```
+- `python3 sgd_backpropagation.py --batch_size=100 --epochs=2 --hidden_layer=32 --learning_rate=0.2 --seed=7 --threads=1`
+  ```
+  93.77
+  ```
 #### Examples End:

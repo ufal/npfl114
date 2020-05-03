@@ -35,49 +35,30 @@ After a successful ReCodEx submission, you can try obtaining the best accuracy
 on MNIST and then advance to `cifar_competition`.
 
 #### Examples Start: mnist_cnn_example
-_Note that the results might be slightly different, depending on whether you use
-GPU or on your CPU type._
+_Note that the results might be slightly different, depending on your CPU type and whether you use GPU._
 
-- `python3 mnist_cnn.py --batch_size=50 --cnn=F --epochs=3 --seed=42 --threads=1`
-```
-Epoch 1/3 - train_accuracy: 0.8625 - val_accuracy: 0.9288
-Epoch 2/3 - train_accuracy: 0.9094 - val_accuracy: 0.9330
-Epoch 3/3 - train_accuracy: 0.9164 - val_accuracy: 0.9386
-Test accuracy: 0.9210
-```
-- `python3 mnist_cnn.py --batch_size=50 --cnn=F,H-100 --epochs=3 --seed=42 --threads=1`
-```
-Epoch 1/3 - train_accuracy: 0.9109 - val_accuracy: 0.9612
-Epoch 2/3 - train_accuracy: 0.9583 - val_accuracy: 0.9704
-Epoch 3/3 - train_accuracy: 0.9698 - val_accuracy: 0.9730
-Test accuracy: 0.9698
-```
-- `python3 mnist_cnn.py --batch_size=50 --cnn=F,H-200,D-0.5 --epochs=3 --seed=42 --threads=1`
-```
-Epoch 1/3 - train_accuracy: 0.8899 - val_accuracy: 0.9658
-Epoch 2/3 - train_accuracy: 0.9426 - val_accuracy: 0.9716
-Epoch 3/3 - train_accuracy: 0.9518 - val_accuracy: 0.9758
-Test accuracy: 0.9716
-```
-- `python3 mnist_cnn.py --batch_size=50 --cnn=C-16-3-2-same,M-3-2,F,H-100 --epochs=3 --seed=42 --threads=1`
-```
-Epoch 1/3 - train_accuracy: 0.9104 - val_accuracy: 0.9702
-Epoch 2/3 - train_accuracy: 0.9674 - val_accuracy: 0.9754
-Epoch 3/3 - train_accuracy: 0.9749 - val_accuracy: 0.9814
-Test accuracy: 0.9772
-```
-- `python3 mnist_cnn.py --batch_size=50 --cnn=CB-16-3-2-same,M-3-2,F,H-100 --epochs=3 --seed=42 --threads=1`
-```
-Epoch 1/3 - train_accuracy: 0.9179 - val_accuracy: 0.9744
-Epoch 2/3 - train_accuracy: 0.9704 - val_accuracy: 0.9792
-Epoch 3/3 - train_accuracy: 0.9776 - val_accuracy: 0.9804
-Test accuracy: 0.9770
-```
-- `python3 mnist_cnn.py --batch_size=50 --cnn=C-16-3-2-same,R-[C-16-3-1-same,C-16-3-1-same],M-3-2,F,H-100 --epochs=3 --seed=42 --threads=1`
-```
-Epoch 1/3 - train_accuracy: 0.9387 - val_accuracy: 0.9798
-Epoch 2/3 - train_accuracy: 0.9804 - val_accuracy: 0.9890
-Epoch 3/3 - train_accuracy: 0.9855 - val_accuracy: 0.9886
-Test accuracy: 0.9870
-```
+- `python3 mnist_cnn.py --seed=7 --recodex --threads=1 --epochs=1 --batch_size=50 --cnn=F,H-100`
+  ```
+  94.84
+  ```
+- `python3 mnist_cnn.py --seed=7 --recodex --threads=1 --epochs=1 --batch_size=50 --cnn=F,H-100,D-0.5`
+  ```
+  94.17
+  ```
+- `python3 mnist_cnn.py --seed=7 --recodex --threads=1 --epochs=1 --batch_size=50 --cnn=M-5-2,F,H-50`
+  ```
+  87.18
+  ```
+- `python3 mnist_cnn.py --seed=7 --recodex --threads=1 --epochs=1 --batch_size=50 --cnn=C-8-3-5-same,C-8-3-2-valid,F,H-50`
+  ```
+  86.18
+  ```
+- `python3 mnist_cnn.py --seed=7 --recodex --threads=1 --epochs=1 --batch_size=50 --cnn=CB-6-3-5-valid,F,H-32`
+  ```
+  90.23
+  ```
+- `python3 mnist_cnn.py --seed=7 --recodex --threads=1 --epochs=1 --batch_size=50 --cnn=C-8-3-5-valid,R-[C-8-3-1-same,C-8-3-1-same],F,H-50`
+  ```
+  91.15
+  ```
 #### Examples End:

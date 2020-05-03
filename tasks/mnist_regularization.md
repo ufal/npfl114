@@ -1,6 +1,7 @@
 ### Assignment: mnist_regularization
 #### Date: Deadline: Mar 22, 23:59
 #### Points: 6 points
+#### Examples: mnist_regularization_example
 
 You will learn how to implement three regularization methods in this assignment.
 Start with the
@@ -25,3 +26,20 @@ and test set accuracy and loss):
 - dropout rate `0`, `0.3`, `0.5`, `0.6`, `0.8`;
 - l2 regularization `0`, `0.001`, `0.0001`, `0.00001`;
 - label smoothing `0`, `0.1`, `0.3`, `0.5`.
+
+#### Examples Start: mnist_regularization_example
+_Note that the results might be slightly different, depending on your CPU type and whether you use GPU._
+
+- `python3 mnist_regularization.py --recodex --seed=7 --threads=1 --epochs=10 --batch_size=50 --hidden_layers=20 --dropout 0.2`
+  ```
+  90.00
+  ```
+- `python3 mnist_regularization.py --recodex --seed=7 --threads=1 --epochs=10 --batch_size=50 --hidden_layers=20 --l2 0.01`
+  ```
+  89.05
+  ```
+- `python3 mnist_regularization.py --recodex --seed=7 --threads=1 --epochs=10 --batch_size=50 --hidden_layers=20 --label_smoothing 0.2`
+  ```
+  91.09
+  ```
+#### Examples End:

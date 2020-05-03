@@ -1,6 +1,7 @@
 ### Assignment: mnist_training
 #### Date: Deadline: Mar ~~15~~ 22, 23:59
 #### Points: 3 points
+#### Examples: mnist_training_example
 
 This exercise should teach you using different optimizers, learning rates,
 and learning rate decays. Your goal is to modify the
@@ -24,3 +25,28 @@ variations and observe the results in TensorBoard:
 - `Adam` optimizer, `learning_rate` 0.01;
 - `Adam` optimizer, `exponential` decay, `learning_rate` 0.01 and `learning_rate_final` 0.001;
 - `Adam` optimizer, `polynomial` decay, `learning_rate` 0.01 and `learning_rate_final` 0.0001.
+
+#### Examples Start: mnist_training_example
+_Note that the results might be slightly different, depending on your CPU type and whether you use GPU._
+
+- `python3 mnist_training.py --recodex --threads=1 --seed=7 --epochs=1 --batch_size=100 --hidden_layer=50 --optimizer SGD --learning_rate 0.03`
+  ```
+  90.10
+  ```
+- `python3 mnist_training.py --recodex --threads=1 --seed=7 --epochs=1 --batch_size=100 --hidden_layer=50 --optimizer SGD --learning_rate 0.2 --momentum 0.9`
+  ```
+  94.42
+  ```
+- `python3 mnist_training.py --recodex --threads=1 --seed=7 --epochs=1 --batch_size=100 --hidden_layer=50 --optimizer Adam --learning_rate 0.007`
+  ```
+  94.90
+  ```
+- `python3 mnist_training.py --recodex --threads=1 --seed=7 --epochs=2 --batch_size=100 --hidden_layer=50 --optimizer SGD --learning_rate 0.09 --decay polynomial --learning_rate_final 0.005`
+  ```
+  92.53
+  ```
+- `python3 mnist_training.py --recodex --threads=1 --seed=7 --epochs=2 --batch_size=100 --hidden_layer=50 --optimizer Adam --learning_rate 0.02 --decay exponential --learning_rate_final 0.0005`
+  ```
+  96.37
+  ```
+#### Examples End:

@@ -16,35 +16,22 @@ implement the forward and backward pass using matrix multiplication and other
 operations) nor the `GradientTape` for gradient computation.
 
 #### Examples Start: cnn_manual_example
-_Note that the results might be slightly different, depending on whether you use
-GPU or on your CPU type._
+_Note that the results might be slightly different, depending on your CPU type and whether you use GPU._
 
-- `python3 cnn_manual.py --batch_size=64 --cnn=4-1-1 --epochs=3 --learning_rate=0.01 --seed=42 --threads=1`
-```
-Dev accuracy after epoch 1 is 91.54
-Dev accuracy after epoch 2 is 92.04
-Dev accuracy after epoch 3 is 92.00
-Test accuracy after epoch 3 is 89.70
-```
-- `python3 cnn_manual.py --batch_size=64 --cnn=4-3-1 --epochs=3 --learning_rate=0.01 --seed=42 --threads=1`
-```
-Dev accuracy after epoch 1 is 93.24
-Dev accuracy after epoch 2 is 93.04
-Dev accuracy after epoch 3 is 95.16
-Test accuracy after epoch 3 is 93.77
-```
-- `python3 cnn_manual.py --batch_size=64 --cnn=4-3-2 --epochs=3 --learning_rate=0.01 --seed=42 --threads=1`
-```
-Dev accuracy after epoch 1 is 92.52
-Dev accuracy after epoch 2 is 92.62
-Dev accuracy after epoch 3 is 94.14
-Test accuracy after epoch 3 is 92.42
-```
-- `python3 cnn_manual.py --batch_size=64 --cnn=4-3-2,8-3-2 --epochs=3 --learning_rate=0.01 --seed=42 --threads=1`
-```
-Dev accuracy after epoch 1 is 93.18
-Dev accuracy after epoch 2 is 94.22
-Dev accuracy after epoch 3 is 95.52
-Test accuracy after epoch 3 is 93.83
-```
+- `python3 cnn_manual.py --seed=7 --recodex --threads=1 --learning_rate=0.01 --epochs=1 --batch_size=50 --cnn=5-1-1`
+  ```
+  89.62
+  ```
+- `python3 cnn_manual.py --seed=7 --recodex --threads=1 --learning_rate=0.01 --epochs=1 --batch_size=50 --cnn=5-3-1`
+  ```
+  92.83
+  ```
+- `python3 cnn_manual.py --seed=7 --recodex --threads=1 --learning_rate=0.01 --epochs=1 --batch_size=50 --cnn=5-3-2`
+  ```
+  90.62
+  ```
+- `python3 cnn_manual.py --seed=7 --recodex --threads=1 --learning_rate=0.01 --epochs=1 --batch_size=50 --cnn=5-3-2,10-3-2`
+  ```
+  92.58
+  ```
 #### Examples End:
