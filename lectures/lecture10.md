@@ -1,5 +1,8 @@
-### Lecture: 10. (Preliminary) Deep Generative Models
+### Lecture: 10. Deep Generative Models
 #### Date: May 04
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?10
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-10.pdf,PDF Slides
+#### Video: https://slideslive.com/38907563/deep-learning-lecture-10-deep-generative-models, 2018 Video
 
 - Autoencoders (undercomplete, sparse, denoising) [Chapter 14, Sections 14-14.2.3 of DLB]
 - Deep Generative Models using Differentiable Generator Nets [Section 20.10.2 of DLB]
