@@ -83,8 +83,8 @@ class Network:
                 # TODO(lemmatizer_noattn): Pass `inputs` and `[states]` through self.lemmatizer.target_rnn_cell,
                 #   which returns `(outputs, [states])`.
                 # TODO(lemmatizer_noattn): Overwrite `outputs` by passing them through self.lemmatizer.target_output_layer,
-                # TODO(lemmatizer_noattn): Define `next_inputs` by embedding `time`-th words from `self.targets`.
-                # TODO(lemmatizer_noattn): Define `finished` as True if `time`-th word from `self.targets` is EOW, False otherwise.
+                # TODO(lemmatizer_noattn): Define `next_inputs` by embedding `time`-th chars from `self.targets`.
+                # TODO(lemmatizer_noattn): Define `finished` as True if `time`-th char from `self.targets` is EOW, False otherwise.
                 # TODO: Pass `next_inputs` through `self._with_attention(next_inputs, states)`.
                 return outputs, states, next_inputs, finished
 
