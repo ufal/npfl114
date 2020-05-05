@@ -29,7 +29,7 @@ class Network:
         #   i-th layer with args.decoder_layers[i] units
         # - applies output dense layer with MNIST.H * MNIST.W * MNIST.C units
         #   and a suitable output activation
-        # - reshapes the output (tf.keras.layers.Reshape) to [MNIST.H, MNIST.W, MNISt.C]
+        # - reshapes the output (tf.keras.layers.Reshape) to [MNIST.H, MNIST.W, MNIST.C]
 
         self._optimizer = tf.optimizers.Adam()
         self._reconstruction_loss_fn = tf.losses.BinaryCrossentropy()
