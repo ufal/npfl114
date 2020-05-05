@@ -35,6 +35,9 @@ class Network:
         self._reconstruction_loss_fn = tf.losses.BinaryCrossentropy()
         self._writer = tf.summary.create_file_writer(args.logdir, flush_millis=10 * 1000)
 
+    def _sample_z(self, batch_size):
+        return tf.random.normal(shape=[batch_size, self._z_dim], seed=self._seed)
+
     def _kl_divergence(self, a_mean, a_sd, b_mean, b_sd):
         """Method for computing KL divergence of two normal distributions."""
         a_sd_squared, b_sd_squared = a_sd ** 2, b_sd ** 2
@@ -63,22 +66,20 @@ class Network:
         # TODO: Compute gradients with respect to trainable variables of the encoder and the decoder.
         # TODO: Apply the gradients to encoder and decoder trainable variables (in one update).
 
-        tf.summary.experimental.set_step(self._optimizer.iterations)
-        with self._writer.as_default():
-            tf.summary.scalar("vae/reconstruction_loss", reconstruction_loss)
-            tf.summary.scalar("vae/latent_loss", latent_loss)
-            tf.summary.scalar("vae/loss", loss)
+        if self._optimizer.iterations % 100 == 0:
+            tf.summary.experimental.set_step(self._optimizer.iterations)
+            with self._writer.as_default():
+                tf.summary.scalar("vae/reconstruction_loss", reconstruction_loss)
+                tf.summary.scalar("vae/latent_loss", latent_loss)
+                tf.summary.scalar("vae/loss", loss)
 
         return loss
 
     def generate(self):
         GRID = 20
 
-        def sample_z(batch_size):
-            return tf.random.normal(shape=[batch_size, self._z_dim])
-
         # Generate GRIDxGRID images
-        random_images = self.decoder(sample_z(GRID * GRID))
+        random_images = self.decoder(self._sample_z(GRID * GRID))
 
         # Generate GRIDxGRID interpolated images
         if self._z_dim == 2:
@@ -87,7 +88,7 @@ class Network:
             ends = tf.stack([2 * tf.ones(GRID), tf.linspace(-2., 2., GRID)], -1)
         else:
             # Generate random Z
-            starts, ends = sample_z(GRID), sample_z(GRID)
+            starts, ends = self._sample_z(GRID), self._sample_z(GRID)
         interpolated_z = tf.concat(
             [starts[i] + (ends[i] - starts[i]) * tf.expand_dims(tf.linspace(0., 1., GRID), -1) for i in range(GRID)], axis=0)
         interpolated_images = self.decoder(interpolated_z)
