@@ -30,7 +30,8 @@ class Network:
         # TODO: Embed the characters in `cle` using embeddings of size
         # `args.cle_dim`, masking zero indices. Then, pass the embedded characters
         # through a bidirectional GRU with dimension `args.cle_dim`, concatenating
-        # results from forward and backward pass.
+        # results from forward and backward pass. Store the computed embeddings
+        # in `cle` variable.
 
         # Now we copy cle-s back to the original shape.
         cle = tf.scatter_nd(valid_words, cle, [tf.shape(charseqs)[0], tf.shape(charseqs)[1], cle.shape[-1]])

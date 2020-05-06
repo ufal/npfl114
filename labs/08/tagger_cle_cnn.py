@@ -28,7 +28,7 @@ class Network:
         valid_words = tf.where(word_ids != 0)
         cle = tf.gather_nd(charseqs, valid_words)
 
-        # TODO: Embed the characters in `charseqs` using embeddings of size
+        # TODO: Embed the characters in `cle` using embeddings of size
         # `args.cle_dim`, not masking zero indices.
 
         # TODO: Then, for each `width`
@@ -44,6 +44,7 @@ class Network:
         # - create a candidate output by using a Dense layer with relu activation;
         # - compute the result as the candidate output multiplied by the gate plus
         #   the input times one minus the gate.
+        # Store the results back in `cle` variable.
 
         # Now we copy cle-s back to the original shape.
         cle = tf.scatter_nd(valid_words, cle, [tf.shape(charseqs)[0], tf.shape(charseqs)[1], cle.shape[-1]])
