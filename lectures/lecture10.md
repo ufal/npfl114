@@ -3,14 +3,17 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?10
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-10.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.mp4,Video
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.practicals.mp4,Video – Practicals
 #### Video: https://slideslive.com/38907563/deep-learning-lecture-10-deep-generative-models, 2018 Video
 #### Lecture assignment: vae
 #### Lecture assignment: gan
 #### Lecture assignment: dcgan
 
-<video width="355" height="200" controls style="float: right">
-  <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.mp4" type="video/mp4">
-</video>
+<div style="float: right">
+  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.mp4" type="video/mp4"></video>
+  <br>
+  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.practicals.mp4" type="video/mp4"></video>
+</div>
 
 - Autoencoders (undercomplete, sparse, denoising) [Chapter 14, Sections 14-14.2.3 of DLB]
 - Deep Generative Models using Differentiable Generator Nets [Section 20.10.2 of DLB]

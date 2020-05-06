@@ -56,8 +56,8 @@ class Network:
                 # TODO: Pass `inputs` and `[states]` through self.lemmatizer.target_rnn_cell,
                 #   which returns `(outputs, [states])`.
                 # TODO: Overwrite `outputs` by passing them through self.lemmatizer.target_output_layer,
-                # TODO: Define `next_inputs` by embedding `time`-th words from `self.targets`.
-                # TODO: Define `finished` as True if `time`-th word from `self.targets` is EOW, False otherwise.
+                # TODO: Define `next_inputs` by embedding `time`-th chars from `self.targets`.
+                # TODO: Define `finished` as True if `time`-th char from `self.targets` is EOW, False otherwise.
                 return outputs, states, next_inputs, finished
 
         class DecoderPrediction(DecoderTraining):
