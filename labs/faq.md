@@ -159,11 +159,11 @@
 - _How to create TensorBoard logs manually?_
 
   Start by creating a [SummaryWriter](https://www.tensorflow.org/api_docs/python/tf/summary/SummaryWriter)
-  using for example
+  using for example:
   ```python
   writer = tf.summary.create_file_writer(args.logdir, flush_millis=10 * 1000)
   ```
-  and then you can generate logs using a `with writer.as_default()` block.
+  and then you can generate logs inside a `with writer.as_default()` block.
 
   You can either specify `step` manually in each call, or you can use
   `tf.summary.experimental.set_step(step)`. Also, during training you
@@ -181,17 +181,17 @@
     ```python
     tf.summary.scalar(name like "train/loss", value, [step])
     ```
-  - vectors values displayed as histograms or distributions:
+  - tensor values displayed as histograms or distributions:
     ```python
     tf.summary.histogram(name like "train/output_layer", tensor value castable to `tf.float64`, [step])
     ```
-  - images, as tensors with shape `[num_images, h, w, channels]`, where
+  - images as tensors with shape `[num_images, h, w, channels]`, where
     `channels` can be 1 (grayscale), 2 (grayscale + alpha), 3 (RGB), 4 (RGBA):
     ```python
     tf.summary.image(name like "train/samples", images, [step], [max_outputs=at most this many images])
     ```
   - possibly large amount of text (e.g., all hyperparameter values, sample
-    translations in MT) in Markdown format:
+    translations in MT, …) in Markdown format:
     ```python
     tf.summary.text(name like "hyperparameters", markdown, [step])
     ```
