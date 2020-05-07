@@ -57,9 +57,9 @@ class Network:
                 #   Because self.source_states does not change, you should in fact do it in `initialize`.
                 # - Pass `states` though self._model.attention_state_layer.
                 # - Sum the two outputs. However, the first has shape [a, b, c] and the second [a, c]. Therefore,
-                #   somehow expand the second to [a, b, c] first. (Hint: use broadcasting rules.)
-                # - Pass the sum through `tf.tanh`, then self._model.attention_weight_layer.
-                # - Then, run softmax on a suitable axis (the one corresponding to characters), generating `weights`.
+                #   expand the second to [a, b, c] or [a, 1, c] (the latter works because of broadcasting rules).
+                # - Pass the sum through `tf.tanh` and through the self._model.attention_weight_layer.
+                # - Then, run softmax on a suitable axis, generating `weights`.
                 # - Multiply `self.source_states` with `weights` and sum the result in the axis
                 #   corresponding to characters, generating `attention`. Therefore, `attention` is a a fixed-size
                 #   representation for every batch element, independently on how many characters had
