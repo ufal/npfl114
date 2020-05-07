@@ -1,6 +1,6 @@
 ### TOC: FAQ
 
-### FAQEntry: tf.data.Dataset
+### FAQEntry: tf.data
 
 - _How to look what is in a `tf.data.Dataset`?_
 
