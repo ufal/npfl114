@@ -186,7 +186,7 @@
     tf.summary.histogram(name like "train/output_layer", tensor value castable to `tf.float64`, [step])
     ```
   - images, as tensors with shape `[num_images, h, w, channels]`, where
-    `channels` can be 1 (grayscale), 2 (grayscale + alpha), 3 (RGB), 4 (RGB + alpha):
+    `channels` can be 1 (grayscale), 2 (grayscale + alpha), 3 (RGB), 4 (RGBA):
     ```python
     tf.summary.image(name like "train/samples", images, [step], [max_outputs=at most this many images])
     ```
