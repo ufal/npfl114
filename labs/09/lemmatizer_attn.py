@@ -64,7 +64,7 @@ class Network:
                 #   corresponding to characters, generating `attention`. Therefore, `attention` is a a fixed-size
                 #   representation for every batch element, independently on how many characters had
                 #   the corresponding input forms.
-                # - Finally concatenate `inputs` and `attention` and return the result.
+                # - Finally concatenate `inputs` and `attention` (in this order) and return the result.
                 raise NotImplementedError()
 
             def initialize(self, layer_inputs, initial_state=None, mask=None):
