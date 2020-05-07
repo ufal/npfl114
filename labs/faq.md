@@ -1,4 +1,6 @@
-### tf.data.Dataset
+### TOC: FAQ
+
+### FAQEntry: tf.data.Dataset
 
 - _How to look what is in a `tf.data.Dataset`?_
 
@@ -87,7 +89,7 @@
   dataset.map(augment)
   ```
 
-### Finetuning
+### FAQEntry: Finetuning
 
 - _How to make a part of the network frozen, so that its weights are not updated?_
 
@@ -122,7 +124,7 @@
   - if `trainable == True`, the training/inference regime is chosen according
     to the `training` option.
 
-### Masking
+### FAQEntry: Masking
 
 - _How can sequences of different length be processed by a RNN?_
 
@@ -151,3 +153,49 @@
   When you call the model directly, like `model(input_batch)`, the mask of each
   output is available in a private `._keras_mask` property, so for single-output
   models you can print it with `print(model(input_batch)._keras_mask)`.
+
+### FAQEntry: TensorBoard
+
+- _How to create TensorBoard logs manually?_
+
+  Start by creating a [SummaryWriter](https://www.tensorflow.org/api_docs/python/tf/summary/SummaryWriter)
+  using for example
+  ```python
+  writer = tf.summary.create_file_writer(args.logdir, flush_millis=10 * 1000)
+  ```
+  and then you can generate logs using a `with writer.as_default()` block.
+
+  You can either specify `step` manually in each call, or you can use
+  `tf.summary.experimental.set_step(step)`. Also, during training you
+  usually want to log only some batches, so the logging block during
+  training usually looks like:
+  ```python
+  if optimizer.iterations % 100 == 0:
+      tf.summary.experimental.set_step(optimizer.iterations)
+      with self._writer.as_default():
+          # logging
+  ```
+
+- _What can be logged in TensorBoard?_
+  - scalar values:
+    ```python
+    tf.summary.scalar(name like "train/loss", value, [step])
+    ```
+  - vectors values displayed as histograms or distributions:
+    ```python
+    tf.summary.histogram(name like "train/output_layer", tensor value castable to `tf.float64`, [step])
+    ```
+  - images, as tensors with shape `[num_images, h, w, channels]`, where
+    `channels` can be 1 (grayscale), 2 (grayscale + alpha), 3 (RGB), 4 (RGB + alpha):
+    ```python
+    tf.summary.image(name like "train/samples", images, [step], [max_outputs=at most this many images])
+    ```
+  - possibly large amount of text (e.g., all hyperparameter values, sample
+    translations in MT) in Markdown format:
+    ```python
+    tf.summary.text(name like "hyperparameters", markdown, [step])
+    ```
+  - audio as tensors with shape `[num_clips, samples, channels]` and values in $[-1,1]$ range:
+    ```python
+    tf.summary.audio(name like "train/samples", clips, sample_rate, [step], [max_outputs=at most this many clips])
+    ```
