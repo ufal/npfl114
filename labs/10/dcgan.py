@@ -115,11 +115,6 @@ class Network:
 
 
 if __name__ == "__main__":
-    import argparse
-    import datetime
-    import os
-    import re
-
     # Parse arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--batch_size", default=50, type=int, help="Batch size.")
