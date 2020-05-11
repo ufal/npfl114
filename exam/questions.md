@@ -195,7 +195,7 @@
   Carlo algorithm. Then, formulate and prove the policy gradient theorem
   and write down the REINFORCE algorithm.
 
-- **Reinforcement learning**  
+- **REINFORCE with baseline**  
   Describe the general reinforcement learning settings, formulate the
   policy gradient theorem and write down the REINFORCE algorithm.
   Then explain what is the baseline, show policy gradient theorem with the
