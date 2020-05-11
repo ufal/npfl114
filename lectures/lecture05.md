@@ -4,6 +4,7 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-05.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-05.mp4,Video
 #### Video: https://slideslive.com/38906863/deep-learning-lecture-5-convolutional-networks-ii,2018 Video
+#### Questions: #lecture_5_questions
 #### Lecture assignment: mnist_web
 #### Lecture assignment: cags_classification
 #### Lecture assignment: cags_segmentation

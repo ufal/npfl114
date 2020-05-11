@@ -55,3 +55,149 @@
     on the output layer).
   - Gradient clipping (and the difference between clipping individual gradient
     elements or the gradient as a whole).
+
+####Questions@: ,Lecture 4 Questions
+
+- **Convolution**  
+  Write down equations of how convolution of a given image is computed. Assume the input
+  is an image $I$ of size $H \times W$ with $C$ channels, the kernel $K$
+  has size $N \times M$, the stride is $T \times S$, the operation performed is
+  in fact cross-correlation (as usual in convolutional neural networks)
+  and that $O$ output channels are computed. Explain both
+  $\textit{SAME}$ and $\textit{VALID}$ padding schemes and write down output
+  size of the operation for both these padding schemes.
+
+- **Batch Normalization**  
+  Describe the batch normalization method and explain how it is used during
+  training and during inference. Explicitly write over what is being
+  normalized in case of fully connected layers, and in case of convolutional
+  layers. Compare batch normalization to layer normalization.
+
+####Questions@: ,Lecture 5 Questions
+
+- **VGG and ResNet**  
+  Describe overall architecture of VGG and ResNet (you do not need to remember
+  exact number of layers/filters, but you should know when a BatchNorm is
+  executed, when ReLU, and how residual connections work when the number of
+  channels increases). Then describe two ResNet extensions (WideNet, DenseNet,
+  PyramidNet, ResNeXt).
+
+- **CNN Regularization, SE, MBConv**  
+  Describe CNN regularization methods (networks with stochastic depth, Cutout,
+  DropBlock). Then show a Squeeze and excitation block for a ResNet
+  and finally sketch mobile inverted bottleneck with separable convolutions.
+
+- **Transposed Convolution**  
+  Write down equations of how convolution of a given image is computed. Assume the input
+  is an image $I$ of size $H \times W$ with $C$ channels, the kernel $K$
+  has size $N \times M$, the stride is $S$, the operation performed is
+  in fact cross-correlation (as usual in convolutional neural networks)
+  and that $O$ output channels are computed. Then write down the equation of
+  transposed convolution (or equivalently backpropagation through a convolution
+  to its inputs).
+
+####Questions@: ,Lecture 6 Questions
+
+- **Two-stage Object Detection**  
+  Define object detection task and describe Fast-RCNN and Faster-RCNN
+  architectures. Notably, show what the overall architectures of the networks
+  are, explain the RoI-pooling, show how the network parametrizes bounding
+  boxes, how do the losses looks like, how are RoI chosen during training,
+  how the objects are predicted, and what region proposal network does.
+
+- **Image Segmentation**  
+  Define object detection and image segmentation tasks, and sketch a Faster-RCNN
+  and Mask-RCNN architectures. Notably, show what the overall architecture of
+  the networks is, explain the RoI-pooling and RoI-align layer, show how the network
+  parametrizes bounding boxes, how do the losses looks like, how are RoI chosen
+  during training and how the objects are predicted.
+
+- **Single-stage Object Detection**  
+  Define object detection task and describe single-stage detector architecture.
+  Namely, show feature pyramid network, define focal loss and sketch RetinaNet
+  – the overall architecture including the convolutional classification and
+  bounding box prediction heads, overall loss, how the gold labels are
+  generated, and how the objects are predicted.
+
+####Questions@: ,Lecture 7 Questions
+
+- **LSTM**  
+  Write down how the Long Short-Term Memory cell operates.
+
+- **GRU and Highway Networks**  
+  Show a basic RNN cell (using just one hidden layer) and then write down
+  how it is extended using gating into the Gated Recurrent Unit.
+  Finally, describe highway networks and compare them to RNN.
+
+####Questions@: ,Lecture 8 Questions
+
+- **Character-level word embeddings**  
+  Describe why are character-level word embeddings useful. Then describe the
+  two following methods:
+  - RNN: using bidirectional recurrent neural networks
+  - CNN: describe how convolutional networks (CNNs) can be used to compute
+    character-level word embeddings.  Write down the exact equation computing
+    the embedding, assuming that the input word consists of characters
+    $\{x_1, \ldots, x_N\}$ represented by embeddings $\{e_1, \ldots, e_N\}$ for
+    $e_i \in \mathbb R^D$, and we use $F$ filters of widths $w_1, \ldots, w_F$.
+    Also explicitly count the number of parameters.
+
+- **Sequence classification and CRF**  
+  Describe how RNNs, bidirectional RNNs and multi-layer RNNs can be used to
+  classify every element of a given sequence (i.e., what the architecture of
+  a tagger might be; include also residual connections and suitable places
+  for dropout layers). Then, explain how a CRF layer works, define score
+  computation for a given sequence of inputs and sequence of labels,
+  describe the loss computation during training, and sketch the inference
+  algorithm.
+
+- **CTC Loss**  
+  Describe CTC loss and the whole settings which can be solved utilizing CTC
+  loss. Then show how CTC loss can be computed. Finally, describe greedy
+  and beam search CTC decoding.
+
+####Questions@: ,Lecture 9 Questions
+
+- **Word2vec and Hierarchical and Negative Sampling**  
+  Explain how can word embeddings be precomputed using the CBOW and Skip-gram
+  models. First start with the variants where full softmax is performed, and
+  then describe how hierarchical softmax and negative sampling is used to speedup
+  training of word embeddings.
+
+- **Neural Machine Translation and Attention**  
+  Draw/write how an encoder-decoder architecture is used for machine translation,
+  both during training and during inference. Then describe the architecture
+  of an attention module.
+
+- **Neural Machine Translation and Subwords**  
+  Draw/write how an encoder-decoder architecture is used for machine translation,
+  both during training and during inference (without attention). Furthermore,
+  elaborate on how subword units are used to reduce out-of-vocabulary problem and
+  sketch BPE algorithm and WordPieces algorithm for constructing fixed number of
+  subword units.
+
+####Questions@: ,Lecture 10 Questions
+
+- **Variational Autoencoders**  
+  Describe deep generative modelling using variational autoencoders – show VAE
+  architecture, devise training algorithm, write training loss, and propose sampling
+  procedure.
+
+- **Generative Adversarial Networks**  
+  Describe deep generative modelling using generative adversarial networks -- show GAN
+  architecture and describe training procedure and training loss. Mention also
+  CGAN (conditional GAN) and sketch generator and discriminator architecture in a DCGAN.
+
+####Questions@: ,Lecture 11 Questions
+
+- **Reinforcement learning**  
+  Describe the general reinforcement learning settings and formulate the Monte
+  Carlo algorithm. Then, formulate and prove the policy gradient theorem
+  and write down the REINFORCE algorithm.
+
+- **Reinforcement learning**  
+  Describe the general reinforcement learning settings, formulate the
+  policy gradient theorem and write down the REINFORCE algorithm.
+  Then explain what is the baseline, show policy gradient theorem with the
+  baseline (including the proof of why the baseline can be included),
+  and write down the REINFORCE with baseline algorithm.

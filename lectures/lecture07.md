@@ -6,6 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-07.practicals.mp4,Video – Practicals
 #### Video: https://slideslive.com/38907052/deep-learning-lecture-7-object-detection-segmentation-recurrent-neural-networks,2018 Video I
 #### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings, 2018 Video II
+#### Questions: #lecture_7_questions
 #### Lecture assignment: 3d_recognition
 #### Lecture assignment: sequence_classification
 #### Lecture assignment: tagger_we

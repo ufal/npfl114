@@ -5,6 +5,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.mp4,Video
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.practicals.mp4,Video – Practicals
 #### Video: https://slideslive.com/38907563/deep-learning-lecture-10-deep-generative-models, 2018 Video
+#### Questions: #lecture_10_questions
 #### Lecture assignment: vae
 #### Lecture assignment: gan
 #### Lecture assignment: dcgan
