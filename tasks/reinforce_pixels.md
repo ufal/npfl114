@@ -1,5 +1,5 @@
 ### Assignment: reinforce_pixels
-#### Date: Deadline: May 26, 23:59
+#### Date: Deadline: May 24, 23:59
 #### Points: 2 points
 
 This is a continuation of the `reinforce` or `reinforce_baseline` assignments.
