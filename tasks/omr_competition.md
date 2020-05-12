@@ -6,7 +6,7 @@ You should implement optical music recognition in your final competition
 assignment. The inputs are PNG images of monophonic scores starting with
 a clef, key signature, and a time signature, followed by several staves.
 The [dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/demos/omr_train.html)
-is loadable using the [omr_dataset.py (will be added soon)](https://github.com/ufal/npfl114/tree/master/labs/11/omr_dataset.py)
+is loadable using the [omr_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/11/omr_dataset.py)
 module and is downloaded automatically if missing (note that is has 185MB).
 No other data or pretrained models are allowed for training.
 
