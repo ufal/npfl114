@@ -53,10 +53,11 @@ if __name__ == "__main__":
     # Generate test set annotations, but in args.logdir to allow parallel execution.
     with open(os.path.join(args.logdir, "svhn_classification.txt"), "w", encoding="utf-8") as out_file:
         # TODO: Predict the digits and their bounding boxes on the test set.
-        for prediction in model.predict(...):
-            # Assume that for the given prediction we get its
-            # - `predicted_classes`: a 1D array with the predicted digits,
-            # - `predicted_bboxes`: a [len(predicted_classes), 4] array with bboxes;
+
+        # Assume that for a single test image we get
+        # - `predicted_classes`: a 1D array with the predicted digits,
+        # - `predicted_bboxes`: a [len(predicted_classes), 4] array with bboxes;
+        for predicted_classes, predicted_bboxes in ...:
             # We can then generate the required output by
             output = []
             for label, bbox in zip(predicted_classes, predicted_bboxes):
