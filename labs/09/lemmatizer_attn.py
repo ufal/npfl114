@@ -139,7 +139,7 @@ class Network:
             # Run the appropriate decoder
             if target_charseqs is not None:
                 # TODO(lemmatizer_noattn): Create a self.DecoderTraining by passing `self` to its constructor.
-                # Then run it on `source_states` and `target_charseqs` inputs,
+                # Then run it on `[source_states, target_charseqs]` input,
                 # storing the first result in `output_layer` and the third result in `output_lens`.
                 pass
             else:
