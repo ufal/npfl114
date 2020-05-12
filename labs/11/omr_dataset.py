@@ -8,7 +8,7 @@ import tensorflow as tf
 class OMRDataset:
     MARKS = None  # Set at the bottom of the script for readability
 
-    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/datasets/omr_dataset.pickle"
+    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/datasets/"
 
     @staticmethod
     def parse(example):
