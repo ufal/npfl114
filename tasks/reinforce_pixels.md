@@ -18,3 +18,5 @@ limit for each test is 10 minutes.
 You can start with the
 [reinforce_pixels.py](https://github.com/ufal/npfl114/tree/master/labs/11/reinforce_pixels.py)
 template using the correct environment.
+
+**Note that `gym_evaluator.py` and `cart_pole_pixels_evaluator.py` must not be submitted to ReCodEx.**
