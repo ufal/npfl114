@@ -11,12 +11,7 @@
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn
 #### Lecture assignment: lemmatizer_competition
-
-<div style="float: right">
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-09.mp4" type="video/mp4"></video>
-  <br>
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-09.practicals.mp4" type="video/mp4"></video>
-</div>
+#### VideoPlayer: npfl114-09.mp4,npfl114-09.practicals.mp4
 
 - `Word2vec` word embeddings, notably the CBOW and Skip-gram architectures [[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)]
   - Hierarchical softmax [Section 12.4.3.2 of DLB or [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546)]
@@ -26,5 +21,3 @@
 - Using Attention mechanism in Neural Machine Translation [Section 12.4.5.1 of DLB, [Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio: **Neural Machine Translation by Jointly Learning to Align and Translate**](https://arxiv.org/abs/1409.0473)]
 - Translating Subword Units [[Rico Sennrich, Barry Haddow, Alexandra Birch: **Neural Machine Translation of Rare Words with Subword Units**](https://arxiv.org/abs/1508.07909)]
 - _Google NMT [[Yonghui Wu et al.: Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation](https://arxiv.org/abs/1609.08144)]_
-
-<div style="clear: both"></div>

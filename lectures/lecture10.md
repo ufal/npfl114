@@ -9,12 +9,7 @@
 #### Lecture assignment: vae
 #### Lecture assignment: gan
 #### Lecture assignment: dcgan
-
-<div style="float: right">
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.mp4" type="video/mp4"></video>
-  <br>
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-10.practicals.mp4" type="video/mp4"></video>
-</div>
+#### VideoPlayer: npfl114-10.mp4,npfl114-10.practicals.mp4
 
 - Autoencoders (undercomplete, sparse, denoising) [Chapter 14, Sections 14-14.2.3 of DLB]
 - Deep Generative Models using Differentiable Generator Nets [Section 20.10.2 of DLB]
@@ -25,5 +20,3 @@
   - DCGAN [[Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/abs/1511.06434)]
   - _WGAN [[Wasserstein GAN](https://arxiv.org/abs/1701.07875)]_
   - _BigGAN [[Large Scale Gan Training for High Fidelity Natural Image Synthesis](https://arxiv.org/abs/1809.11096)]_
-
-<div style="clear: both"></div>

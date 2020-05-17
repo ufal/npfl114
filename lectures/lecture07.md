@@ -10,12 +10,7 @@
 #### Lecture assignment: 3d_recognition
 #### Lecture assignment: sequence_classification
 #### Lecture assignment: tagger_we
-
-<div style="float: right">
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-07.mp4" type="video/mp4"></video>
-  <br>
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-07.practicals.mp4" type="video/mp4"></video>
-</div>
+#### VideoPlayer: npfl114-07.mp4,npfl114-07.practicals.mp4
 
 - Sequence modelling using Recurrent Neural Networks (RNN) [Chapter 10 until Section 10.2.1 (excluding) of DLB]
 - The challenge of long-term dependencies [Section 10.7 of DLB]
@@ -27,5 +22,3 @@
   - Layer Normalization [[Layer Normalization](https://arxiv.org/abs/1607.06450)]
 - Bidirectional RNN [Section 10.3 of DLB]
 - Word Embeddings [Section 14.2.4 of DLB]
-
-<div style="clear: both"></div>

@@ -12,12 +12,7 @@
 #### Lecture assignment: reinforce
 #### Lecture assignment: reinforce_baseline
 #### Lecture assignment: reinforce_pixels
-
-<div style="float: right">
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-11.mp4" type="video/mp4"></video>
-  <br>
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-11.practicals.mp4" type="video/mp4"></video>
-</div>
+#### VideoPlayer: npfl114-11.mp4,npfl114-11.practicals.mp4
 
 Study material for Reinforcement Learning is the [Reinforcement Learning: An Introduction; second edition
 by Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/book/the-book-2nd.html)
@@ -31,5 +26,3 @@ by Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/book/the-bo
 - Policy Gradient Theorem [Section 13.2 of RLB]
 - REINFORCE algorithm [Section 13.3 of RLB]
 - REINFORCE with baseline algorithm [Section 13.4 of RLB]
-
-<div style="clear: both"></div>

@@ -8,10 +8,7 @@
 #### Lecture assignment: mnist_web
 #### Lecture assignment: cags_classification
 #### Lecture assignment: cags_segmentation
-
-<video width="355" height="200" controls style="float: right">
-  <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-05.mp4" type="video/mp4">
-</video>
+#### VideoPlayer: npfl114-05.mp4
 
 - Residual CNN Networks
   - ResNet [[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
@@ -25,5 +22,3 @@
   - DropBlock [[DropBlock: A regularization method for convolutional networks](https://arxiv.org/abs/1810.12890)]
 - SENet [[Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507)]
 - EfficientNet [[EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/abs/1905.11946)]
-
-<div style="clear: both"></div>

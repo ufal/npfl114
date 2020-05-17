@@ -12,16 +12,9 @@
 #### Lecture assignment: tagger_cle_cnn
 #### Lecture assignment: tagger_competition
 #### Lecture assignment: speech_recognition
-
-<div style="float: right">
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-08.mp4" type="video/mp4"></video>
-  <br>
-  <video width="266" height="150" controls><source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-08.practicals.mp4" type="video/mp4"></video>
-</div>
+#### VideoPlayer: npfl114-08.mp4,npfl114-08.practicals.mp4
 
 - Character-level embeddings using Recurrent neural networks [C2W model from [Finding Function in Form: Compositional Character Models for Open Vocabulary Word Representation](http://arxiv.org/abs/1508.02096)]
 - Character-level embeddings using Convolutional neural networks [CharCNN from [Character-Aware Neural Language Models](https://arxiv.org/abs/1508.06615)]
 - Conditional Random Fields (CRF) loss [Sections 3.4.2 and A.7 of [Natural Language Processing (Almost) from Scratch](http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf)]
 - Connectionist Temporal Classification (CTC) loss [[Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks](https://www.cs.toronto.edu/~graves/icml_2006.pdf)]
-
-<div style="clear: both"></div>

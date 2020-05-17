@@ -9,10 +9,7 @@
 #### Lecture assignment: image_augmentation
 #### Lecture assignment: tf_dataset
 #### Lecture assignment: cifar_competition
-
-<video width="355" height="200" controls style="float: right">
-  <source src="https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-04.mp4" type="video/mp4">
-</video>
+#### VideoPlayer: npfl114-04.mp4
 
 - Introduction to convolutional networks [Chapter 9 and Sections 9.1-9.3 of DLB]
 - Convolution as operation on 4D tensors [Section 9.5 of DLB, notably Equations (9.7) and (9.8)]
@@ -24,5 +21,3 @@
 - Batch normalization [Section 8.7.1 of DLB, *optionally the paper [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)*]
 - *Inception v2 and v3 [[Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/abs/1512.00567)]*
 - ResNet [[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
-
-<div style="clear: both"></div>
