@@ -1,6 +1,10 @@
-### Lecture: 12. (Preliminary) Speech Synthesis, External Memory Networks
+### Lecture: 12. Speech Synthesis, External Memory Networks
 #### Date: May 18
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?12
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-12.pdf,PDF Slides
+#### Video: https://slideslive.com/38907953/deep-learning-lecture-13-practical-methodology-tf-development-advanced-architectures, 2018 Video
 
+- NasNet [[Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/abs/1707.07012)]
 - WaveNet [[WaveNet: A Generative Model for Raw Audio](https://arxiv.org/abs/1609.03499)]
 - Parallel WaveNet [[Parallel WaveNet: Fast High-Fidelity Speech Synthesis](https://arxiv.org/abs/1711.10433)]
 - _Full speech synthesis pipeline Tacotron 2 [[Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions](https://arxiv.org/abs/1712.05884)]_
