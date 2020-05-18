@@ -24,7 +24,7 @@ the rest 5 points will be distributed
 depending on relative ordering of your solutions. Furthermore, **3 bonus points**
 will be given to anyone surpassing current state-of-the-art of 0.80%.
 An evaluation (using for example development data) can be performed by
-[speech_recognition_eval.py](https://github.com/ufal/npfl114/tree/master/labs/08/speech_recognition_eval.py).
+[omr_competition_eval.py](https://github.com/ufal/npfl114/tree/master/labs/11/omr_competition_eval.py).
 
 You can start with the
 [omr_competition.py](https://github.com/ufal/npfl114/tree/master/labs/11/omr_competition.py)
