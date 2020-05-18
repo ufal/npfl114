@@ -201,3 +201,19 @@
   Then explain what is the baseline, show policy gradient theorem with the
   baseline (including the proof of why the baseline can be included),
   and write down the REINFORCE with baseline algorithm.
+
+####Questions@: ,Lecture 12 Questions
+
+- **Speech Synthesis**  
+  Describe the WaveNet network (what a dilated convolution and gated activations
+  are, how the residual block looks like, what the overall architecture is, and how
+  global and local conditioning work). Discuss parallelizability of training and
+  inference, show how Parallel WaveNet can speedup inference, and sketch how it is
+  trained.
+
+- **Neural Turing Machines**  
+  Sketch an overall architecture of a Neural Turing Machine with an LSTM
+  controller, assuming $R$ reading heads and one write head. Describe the
+  addressing mechanism (content addressing and its combination with previous
+  weights, shifts, and sharpening) and reading and writing operations. Finally,
+  describe the inputs and the outputs of the controller.
