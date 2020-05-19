@@ -3,8 +3,9 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?12
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-12.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-12.mp4,Video
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-12.practicals.mp4,Video – Practicals
 #### Video: https://slideslive.com/38907953/deep-learning-lecture-13-practical-methodology-tf-development-advanced-architectures, 2018 Video
-#### VideoPlayer: npfl114-12.mp4
+#### VideoPlayer: npfl114-12.mp4,npfl114-12.practicals.mp4
 #### Questions: #lecture_12_questions
 
 - NasNet [[Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/abs/1707.07012)]
