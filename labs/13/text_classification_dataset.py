@@ -6,6 +6,9 @@ import zipfile
 import numpy as np
 
 # Loads a text classification dataset in a vertical format.
+#
+# During the construction a `tokenizer` callable taking a string
+# and returning a list/np.ndarray of integers must be given.
 class TextClassificationDataset:
     _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/datasets/"
 
@@ -61,6 +64,12 @@ class TextClassificationDataset:
 
 
     def __init__(self, dataset, tokenizer):
+        """Create the dataset of the given name.
+
+        The `tokenizer` should be a callable taking a string and returning
+        a list/np.ndarray of integers.
+        """
+
         path = "{}.zip".format(dataset)
         if not os.path.exists(path):
             print("Downloading dataset {}...".format(dataset), file=sys.stderr)
