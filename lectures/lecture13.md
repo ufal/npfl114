@@ -1,4 +1,4 @@
-### Lecture: 13. (Preliminary) Transformer, BERT
+### Lecture: 13. Transformer, BERT
 #### Date: May 25
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?13
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-13.pdf,PDF Slides
