@@ -2,7 +2,9 @@
 #### Date: May 25
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?13
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-13.pdf,PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-13.mp4,Video
 #### Lecture assignment: sentiment_analysis
+#### VideoPlayer: npfl114-13.mp4
 
 - Transformer architecture [[Attention Is All You Need](https://arxiv.org/abs/1706.03762)]
 - BERT [[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)]
