@@ -13,6 +13,8 @@ class TextClassificationDataset:
     _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/datasets/"
 
     class Dataset:
+        LABELS = None # Will be filled during Dataset construction
+
         def __init__(self, data_file, tokenizer, train=None, shuffle_batches=True, seed=42):
             # Create factors
             self._data = {
@@ -20,6 +22,7 @@ class TextClassificationDataset:
                 "labels": [],
             }
             self._label_map = train._label_map if train else {}
+            self.LABELS = train.LABELS if train else []
 
             for line in data_file:
                 line = line.decode("utf-8").rstrip("\r\n")
@@ -27,6 +30,7 @@ class TextClassificationDataset:
 
                 if not train and label not in self._label_map:
                     self._label_map[label] = len(self._label_map)
+                    self.LABELS.append(label)
                 label = self._label_map.get(label, -1)
 
                 self._data["tokens"].append(tokenizer(text))
