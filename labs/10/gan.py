@@ -21,7 +21,7 @@ class Network:
         #   i-th layer with args.generator_layers[i] units
         # - applies output dense layer with MNIST.H * MNIST.W * MNIST.C units
         #   and sigmoid activation
-        # - reshapes the output (tf.keras.layers.Reshape) to [MNIST.H, MNIST.W, MNISt.C]
+        # - reshapes the output (tf.keras.layers.Reshape) to [MNIST.H, MNIST.W, MNIST.C]
 
         # TODO: Define `self.discriminator` as a Model, which
         # - takes input images with shape [MNIST.H, MNIST.W, MNIST.C]
