@@ -15,7 +15,7 @@ you can install by `pip3 install [--user] transformers`. Start by looking at the
 example demonstrating loading, tokenizing and calling a BERT model, and you can
 also read [the documentation](https://huggingface.co/transformers/), specifically
 for the [tokenizer](https://huggingface.co/transformers/main_classes/tokenizer.html)
-and for [TFBertModel.__call__](https://huggingface.co/transformers/model_doc/bert.html#transformers.TFBertModel.call).
+and for [TFBertModel.call](https://huggingface.co/transformers/model_doc/bert.html#transformers.TFBertModel.call).
 
 The assignment is an _open-data task_, where you submit only the test set annotations
 together with the training script (which will not be executed, it will be
