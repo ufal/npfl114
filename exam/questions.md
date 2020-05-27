@@ -217,3 +217,18 @@
   addressing mechanism (content addressing and its combination with previous
   weights, shifts, and sharpening) and reading and writing operations. Finally,
   describe the inputs and the outputs of the controller.
+
+####Questions@: ,Lecture 13 Questions
+
+- **Transformer**  
+  Describe Transformer architecture, namely the self-attention layer, multi-head
+  self-attention layer, masked self-attention and overall architecture of an
+  encoder and a decoder. Describe positional embeddings, learning rate schedule
+  during training and parallelizability of training and inference.
+
+- **BERT**  
+  Describe the BERT model architecture (including multi-head self-attention layer)
+  and its pre-training – format of input and output data, masked language model
+  and next sentence prediction. Define GELU and describe how the BERT model
+  can be finetuned to perform POS tagging, sentiment analysis and paraphrase
+  detection (detect if two sentences have the same meaning).
