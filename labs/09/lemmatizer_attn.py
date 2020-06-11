@@ -55,10 +55,10 @@ class Network:
                 # TODO: Compute the attention.
                 # - Take self.source_states` and pass it through the self.lemmatizer.attention_source_layer.
                 #   Because self.source_states does not change, you should in fact do it in `initialize`.
-                # - Pass `states` though self._model.attention_state_layer.
+                # - Pass `states` though `self.lemmatizer.attention_state_layer`.
                 # - Sum the two outputs. However, the first has shape [a, b, c] and the second [a, c]. Therefore,
                 #   expand the second to [a, b, c] or [a, 1, c] (the latter works because of broadcasting rules).
-                # - Pass the sum through `tf.tanh` and through the self._model.attention_weight_layer.
+                # - Pass the sum through `tf.tanh` and through the `self.lemmatizer.attention_weight_layer`.
                 # - Then, run softmax on a suitable axis, generating `weights`.
                 # - Multiply `self.source_states` with `weights` and sum the result in the axis
                 #   corresponding to characters, generating `attention`. Therefore, `attention` is a a fixed-size
@@ -76,7 +76,7 @@ class Network:
                 # TODO: Define `states` as the representation of the first character
                 #   in `source_states`. The idea is that it is most relevant for generating
                 #   the first letter and contains all following characters via the backward RNN.
-                # TODO: Pass `inputs` through `self._with_attention(inputs, states)`.
+                # TODO: Pass `inputs` through `self.with_attention(inputs, states)`.
                 return finished, inputs, states
 
             def step(self, time, inputs, states, training):
@@ -85,7 +85,7 @@ class Network:
                 # TODO(lemmatizer_noattn): Overwrite `outputs` by passing them through self.lemmatizer.target_output_layer,
                 # TODO(lemmatizer_noattn): Define `next_inputs` by embedding `time`-th chars from `self.targets`.
                 # TODO(lemmatizer_noattn): Define `finished` as True if `time`-th char from `self.targets` is EOW, False otherwise.
-                # TODO: Pass `next_inputs` through `self._with_attention(next_inputs, states)`.
+                # TODO: Pass `next_inputs` through `self.with_attention(next_inputs, states)`.
                 return outputs, states, next_inputs, finished
 
         class DecoderPrediction(DecoderTraining):
@@ -113,7 +113,7 @@ class Network:
                 #   `output_type=tf.int32` parameter.
                 # TODO(lemmatizer_noattn): Define `next_inputs` by embedding the `outputs`
                 # TODO(lemmatizer_noattn): Define `finished` as True if `outputs` are EOW, False otherwise.
-                # TODO: Pass `next_inputs` through `self._with_attention(next_inputs, states)`.
+                # TODO: Pass `next_inputs` through `self.with_attention(next_inputs, states)`.
                 return outputs, states, next_inputs, finished
 
         def call(self, inputs):
