@@ -49,9 +49,9 @@
 - **Network Convergence**  
   Describe factors influencing network convergence, namely:
   - Parameter initialization strategies (explain also why batch normalization
-    helps with this issue).
+    helps with the initialization range).
   - Problems with saturating non-linearities (and again, why batch normalization
-    helps; you can also discuss why NLL helps with saturating non-linearities
+    helps; also discuss why NLL (compared to MSE) helps with saturating non-linearities
     on the output layer).
   - Gradient clipping (and the difference between clipping individual gradient
     elements or the gradient as a whole).
