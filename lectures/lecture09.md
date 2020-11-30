@@ -11,7 +11,7 @@
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn
 #### Lecture assignment: lemmatizer_competition
-#### VideoPlayer: npfl114-09.mp4,npfl114-09.practicals.mp4
+#### VideoPlayer: npfl114-09.mp4
 
 - `Word2vec` word embeddings, notably the CBOW and Skip-gram architectures [[Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)]
   - Hierarchical softmax [Section 12.4.3.2 of DLB or [Distributed Representations of Words and Phrases and their Compositionality](https://arxiv.org/abs/1310.4546)]

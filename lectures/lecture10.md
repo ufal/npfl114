@@ -9,7 +9,7 @@
 #### Lecture assignment: vae
 #### Lecture assignment: gan
 #### Lecture assignment: dcgan
-#### VideoPlayer: npfl114-10.mp4,npfl114-10.practicals.mp4
+#### VideoPlayer: npfl114-10.mp4
 
 - Autoencoders (undercomplete, sparse, denoising) [Chapter 14, Sections 14-14.2.3 of DLB]
 - Deep Generative Models using Differentiable Generator Nets [Section 20.10.2 of DLB]

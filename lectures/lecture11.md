@@ -12,7 +12,7 @@
 #### Lecture assignment: reinforce
 #### Lecture assignment: reinforce_baseline
 #### Lecture assignment: reinforce_pixels
-#### VideoPlayer: npfl114-11.mp4,npfl114-11.practicals.mp4
+#### VideoPlayer: npfl114-11.mp4
 
 Study material for Reinforcement Learning is the [Reinforcement Learning: An Introduction; second edition
 by Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/book/the-book-2nd.html)

@@ -10,7 +10,7 @@
 #### Lecture assignment: 3d_recognition
 #### Lecture assignment: sequence_classification
 #### Lecture assignment: tagger_we
-#### VideoPlayer: npfl114-07.mp4,npfl114-07.practicals.mp4
+#### VideoPlayer: npfl114-07.mp4
 
 - Sequence modelling using Recurrent Neural Networks (RNN) [Chapter 10 until Section 10.2.1 (excluding) of DLB]
 - The challenge of long-term dependencies [Section 10.7 of DLB]

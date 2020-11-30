@@ -12,7 +12,7 @@
 #### Lecture assignment: tagger_cle_cnn
 #### Lecture assignment: tagger_competition
 #### Lecture assignment: speech_recognition
-#### VideoPlayer: npfl114-08.mp4,npfl114-08.practicals.mp4
+#### VideoPlayer: npfl114-08.mp4
 
 - Character-level embeddings using Recurrent neural networks [C2W model from [Finding Function in Form: Compositional Character Models for Open Vocabulary Word Representation](http://arxiv.org/abs/1508.02096)]
 - Character-level embeddings using Convolutional neural networks [CharCNN from [Character-Aware Neural Language Models](https://arxiv.org/abs/1508.06615)]

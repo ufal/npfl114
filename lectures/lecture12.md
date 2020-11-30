@@ -6,7 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-12.practicals.mp4,Video – Practicals
 #### Video: https://slideslive.com/38907953/deep-learning-lecture-13-practical-methodology-tf-development-advanced-architectures, 2018 Video
 #### Questions: #lecture_12_questions
-#### VideoPlayer: npfl114-12.mp4,npfl114-12.practicals.mp4
+#### VideoPlayer: npfl114-12.mp4
 
 - NasNet [[Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/abs/1707.07012)]
 - WaveNet [[WaveNet: A Generative Model for Raw Audio](https://arxiv.org/abs/1609.03499)]
