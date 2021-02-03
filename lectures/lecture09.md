@@ -5,7 +5,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-09.mp4,Video
 #### Video: https://slideslive.com/38907189/deep-learning-lecture-8-recurrent-neural-networks-ii-word-embeddings, 2018 Video I
 #### Video: https://slideslive.com/38907422/deep-learning-lecture-9-recurrent-neural-networks-iii-machine-translation, 2018 Video II
-#### Questions: #lecture_999999999_questions
+#### Questions: #lecture_9_questions
 #### Lecture assignment: tensorboard_projector
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn
