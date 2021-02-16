@@ -4,7 +4,7 @@
 #### Examples: tagger_cle_cnn_example
 
 This task is a continuation of `tagger_cle_rnn` assignment. Using the
-[tagger_cle_cnn.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_cle_cnn.py)
+[tagger_cle_cnn.py](https://github.com/ufal/npfl114/tree/past-1920/labs/08/tagger_cle_cnn.py)
 template, instead of using RNNs to generate character-level embeddings,
 process character sequences with 1D convolutional filters with varying kernel
 sizes and obtain fixed-size representations using global max-pooling.

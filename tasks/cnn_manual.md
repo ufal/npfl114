@@ -5,7 +5,7 @@
 
 To pass this assignment, you need to manually implement the forward and backward
 pass through a 2D convolutional layer. Start with the
-[cnn_manual.py](https://github.com/ufal/npfl114/tree/master/labs/06/cnn_manual.py)
+[cnn_manual.py](https://github.com/ufal/npfl114/tree/past-1920/labs/06/cnn_manual.py)
 template, which construct a series of 2D convolutional layers with ReLU
 activation and `valid` padding, specified in the `args.cnn` option.
 The `args.cnn` contains comma separater layer specifications in the format

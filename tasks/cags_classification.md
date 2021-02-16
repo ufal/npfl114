@@ -8,7 +8,7 @@ achieve best accuracy in CAGS classification.
 The [CAGS dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/demos/cags_train.html) consists
 of images of **ca**ts and **do**gs of size $224×224$, each classified in one of
 the 34 breeds and each containing a mask indicating the presence of the animal.
-To load the dataset, use the [cags_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/05/cags_dataset.py)
+To load the dataset, use the [cags_dataset.py](https://github.com/ufal/npfl114/tree/past-1920/labs/05/cags_dataset.py)
 module. The dataset is stored in a
 [TFRecord file](https://www.tensorflow.org/api_docs/python/tf/data/TFRecordDataset)
 and each element is encoded as a
@@ -17,7 +17,7 @@ Therefore the dataset is loaded using `tf.data` API and each entry can be
 decoded using `.map(CAGS.parse)` call.
 
 To load the EfficientNet-B0, use the the provided
-[efficient_net.py](https://github.com/ufal/npfl114/tree/master/labs/05/efficient_net.py)
+[efficient_net.py](https://github.com/ufal/npfl114/tree/past-1920/labs/05/efficient_net.py)
 module. Its method `pretrained_efficientnet_b0(include_top)`:
 - downloads the pretrained weights if they are not found;
 - it returns a `tf.keras.Model` processing image of shape $(224, 224, 3)$ with
@@ -25,7 +25,7 @@ module. Its method `pretrained_efficientnet_b0(include_top)`:
   - the first value is the final network output:
     - if `include_top == True`, the network will include the final classification
       layer and produce a distribution on 1000 classes (whose names are in
-      [imagenet_classes.py](https://github.com/ufal/npfl114/tree/master/labs/05/imagenet_classes.py));
+      [imagenet_classes.py](https://github.com/ufal/npfl114/tree/past-1920/labs/05/imagenet_classes.py));
     - if `include_top == False`, the network will return image features (the result
       of the last global average pooling);
   - the rest of outputs are the intermediate results of the network just before
@@ -33,7 +33,7 @@ module. Its method `pretrained_efficientnet_b0(include_top)`:
     C_4, C_3, C_2, C_1$ in the Object Detection lecture).
 
 An example performing classification of given images is available in
-[image_classification.py](https://github.com/ufal/npfl114/tree/master/labs/05/image_classification.py).
+[image_classification.py](https://github.com/ufal/npfl114/tree/past-1920/labs/05/image_classification.py).
 
 _A note on finetuning: each `tf.keras.layers.Layer` has a mutable `trainable`
 property indicating whether its variables should be updated – however, after
@@ -56,5 +56,5 @@ the rest 5 points will be distributed depending on relative ordering of your
 solutions.
 
 You may want to start with the
-[cags_classification.py](https://github.com/ufal/npfl114/tree/master/labs/05/cags_classification.py)
+[cags_classification.py](https://github.com/ufal/npfl114/tree/past-1920/labs/05/cags_classification.py)
 template which generates the test set annotation in the required format.

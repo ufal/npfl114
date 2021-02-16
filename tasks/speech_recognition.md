@@ -8,12 +8,12 @@ We will be using TIMIT corpus, with input sound waves passed through the usual
 preprocessing – computing
 [Mel-frequency cepstral coefficients (MFCCs)](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum).
 You can repeat exactly this preprocessing on a given audio
-using the [timit_mfcc_preprocess.py](https://github.com/ufal/npfl114/tree/master/labs/08/timit_mfcc_preprocess.py)
+using the [timit_mfcc_preprocess.py](https://github.com/ufal/npfl114/tree/past-1920/labs/08/timit_mfcc_preprocess.py)
 script.
 
 Because the data is not publicly available, you can download it only through
 ReCodEx. Please do not distribute it. To load the dataset using the
-[timit_mfcc.py](https://github.com/ufal/npfl114/tree/master/labs/08/timit_mfcc.py) module.
+[timit_mfcc.py](https://github.com/ufal/npfl114/tree/past-1920/labs/08/timit_mfcc.py) module.
 
 This is an _open-data task_, where you submit only the test set annotations
 together with the training script (which will not be executed, it will be
@@ -27,10 +27,10 @@ by computing edit distance to the gold letter sequence, normalized by its length
 most _50%_ test set edit distance will get 6 points; the rest 5 points will be distributed
 depending on relative ordering of your solutions. An evaluation (using for example development data)
 can be performed by
-[speech_recognition_eval.py](https://github.com/ufal/npfl114/tree/master/labs/08/speech_recognition_eval.py).
+[speech_recognition_eval.py](https://github.com/ufal/npfl114/tree/past-1920/labs/08/speech_recognition_eval.py).
 
 You should start with the
-[speech_recognition.py](https://github.com/ufal/npfl114/tree/master/labs/08/speech_recognition.py)
+[speech_recognition.py](https://github.com/ufal/npfl114/tree/past-1920/labs/08/speech_recognition.py)
 template.
 - To perform speech recognition, you should use CTC loss for training and CTC
   beam search decoder for prediction. Both the CTC loss and CTC decoder employ

@@ -4,7 +4,7 @@
 
 In this assignment, you should extend `lemmatizer_noattn` or `lemmatizer_attn`
 into a real-world Czech lemmatizer. As in `tagger_competition`, we will use
-Czech PDT dataset loadable using the [morpho_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/09/morpho_dataset.py)
+Czech PDT dataset loadable using the [morpho_dataset.py](https://github.com/ufal/npfl114/tree/past-1920/labs/09/morpho_dataset.py)
 module.
 
 You can also use the following additional data as in the `tagger_competition`
@@ -21,9 +21,9 @@ a solution with at least 92% accuracy will get 5 points; the rest 5 points will 
 depending on relative ordering of your solutions. Lastly, **3 bonus points**
 will be given to anyone surpassing pre-neural-network state-of-the-art
 of 97.86%. You can evaluate a generated file using the
-[morpho_evaluator.py](https://github.com/ufal/npfl114/tree/master/labs/09/morpho_evaluator.py)
+[morpho_evaluator.py](https://github.com/ufal/npfl114/tree/past-1920/labs/09/morpho_evaluator.py)
 module.
 
 You can start with the
-[lemmatizer_competition.py](https://github.com/ufal/npfl114/tree/master/labs/09/lemmatizer_competition.py)
+[lemmatizer_competition.py](https://github.com/ufal/npfl114/tree/past-1920/labs/09/lemmatizer_competition.py)
 template, which among others generates test set annotations in the required format.

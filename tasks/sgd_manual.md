@@ -14,9 +14,9 @@ required to pass the course. Furthermore, we will compute the derivative of the
 output functions later on the Mar 9 lecture.
 
 Start with the
-[sgd_manual.py](https://github.com/ufal/npfl114/tree/master/labs/02/sgd_manual.py)
+[sgd_manual.py](https://github.com/ufal/npfl114/tree/past-1920/labs/02/sgd_manual.py)
 template, which is based on
-[sgd_backpropagation.py](https://github.com/ufal/npfl114/tree/master/labs/02/sgd_backpropagation.py)
+[sgd_backpropagation.py](https://github.com/ufal/npfl114/tree/past-1920/labs/02/sgd_backpropagation.py)
 one. Be aware that these templates generates each a different output file.
 
 In order to check that you do not use automatic differentiation, ReCodEx checks

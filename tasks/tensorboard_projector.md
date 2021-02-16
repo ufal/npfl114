@@ -8,5 +8,5 @@ and [English](https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/demos/en_lem
 `tensorboard --logdir dir_where_the_archive_is_extracted`.
 
 In order to use the Projector tab yourself, you can take inspiration from the
-[projector_export.py](https://github.com/ufal/npfl114/tree/master/labs/09/projector_export.py)
+[projector_export.py](https://github.com/ufal/npfl114/tree/past-1920/labs/09/projector_export.py)
 script, which was used to export the above pre-trained embeddings.

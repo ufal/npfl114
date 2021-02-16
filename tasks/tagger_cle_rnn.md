@@ -4,7 +4,7 @@
 #### Examples: tagger_cle_rnn_example
 
 This assignment is a continuation of `tagger_we`. Using the
-[tagger_cle_rnn.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_cle_rnn.py)
+[tagger_cle_rnn.py](https://github.com/ufal/npfl114/tree/past-1920/labs/08/tagger_cle_rnn.py)
 template, implement character-level word embedding computation using
 a bidirectional character-level GRU.
 

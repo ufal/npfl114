@@ -5,7 +5,7 @@
 
 In this assignment you will implement a simple Generative Adversarion Network
 for three datasets in the MNIST format. Your goal is to modify the
-[gan.py](https://github.com/ufal/npfl114/tree/master/labs/10/gan.py)
+[gan.py](https://github.com/ufal/npfl114/tree/past-1920/labs/10/gan.py)
 template and implement a GAN.
 
 After submitting the assignment to ReCodEx, you can experiment with the three

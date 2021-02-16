@@ -4,13 +4,13 @@
 #### Examples: mnist_layers_activations_example
 
 Before solving the assignment, start by playing with
-[example_keras_tensorboard.py](https://github.com/ufal/npfl114/tree/master/labs/01/example_keras_tensorboard.py),
+[example_keras_tensorboard.py](https://github.com/ufal/npfl114/tree/past-1920/labs/01/example_keras_tensorboard.py),
 in order to familiarize with TensorFlow and TensorBoard.
 Run it, and when it finishes, run TensorBoard using `tensorboard --logdir logs`.
 Then open <http://localhost:6006> in a browser and explore the active tabs.
 
 **Your goal** is to modify the
-[mnist_layers_activations.py](https://github.com/ufal/npfl114/tree/master/labs/01/mnist_layers_activations.py)
+[mnist_layers_activations.py](https://github.com/ufal/npfl114/tree/past-1920/labs/01/mnist_layers_activations.py)
 template and implement the following:
 - A number of hidden layers (including zero) can be specified on the command line
   using parameter `layers`.

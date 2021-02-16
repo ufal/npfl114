@@ -4,7 +4,7 @@
 
 The goal of this assignment is to devise the best possible model for CIFAR-10.
 You can load the data using the
-[cifar10.py](https://github.com/ufal/npfl114/tree/master/labs/04/cifar10.py)
+[cifar10.py](https://github.com/ufal/npfl114/tree/past-1920/labs/04/cifar10.py)
 module. Note that the test set is different than that of official CIFAR-10.
 
 This is an _open-data task_, where you submit only the test set labels
@@ -19,5 +19,5 @@ solutions. Note that my solutions usually need to achieve at least ~73% on the
 development set to score 60% on the test set.
 
 You may want to start with the
-[cifar_competition.py](https://github.com/ufal/npfl114/tree/master/labs/04/cifar_competition.py)
+[cifar_competition.py](https://github.com/ufal/npfl114/tree/past-1920/labs/04/cifar_competition.py)
 template which generates the test set annotation in the required format.

@@ -5,7 +5,7 @@
 
 This exercise should teach you using different optimizers, learning rates,
 and learning rate decays. Your goal is to modify the
-[mnist_training.py](https://github.com/ufal/npfl114/tree/master/labs/02/mnist_training.py)
+[mnist_training.py](https://github.com/ufal/npfl114/tree/past-1920/labs/02/mnist_training.py)
 template and implement the following:
 - Using specified optimizer (either `SGD` or `Adam`).
 - Optionally using momentum for the `SGD` optimizer.

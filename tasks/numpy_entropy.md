@@ -5,7 +5,7 @@
 
 The goal of this exercise is to familiarize with Python, NumPy and ReCodEx
 submission system. Start with the
-[numpy_entropy.py](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy.py).
+[numpy_entropy.py](https://github.com/ufal/npfl114/tree/past-1920/labs/01/numpy_entropy.py).
 
 Load a file `numpy_entropy_data.txt`, whose lines consist of data points of our
 dataset, and load `numpy_entropy_model.txt`, which describes a model probability distribution,
@@ -22,7 +22,7 @@ under the model distribution):
 Use natural logarithms to compute the entropies and the divergence.
 
 #### Examples Start: numpy_entropy_example
-For data distribution file [`numpy_entropy_data.txt`](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data.txt)
+For data distribution file [`numpy_entropy_data.txt`](https://github.com/ufal/npfl114/tree/past-1920/labs/01/numpy_entropy_data.txt)
 ```
 A
 BB
@@ -32,7 +32,7 @@ BB
 A
 CCC
 ```
-and model distribution file [`numpy_entropy_model.txt`](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model.txt)
+and model distribution file [`numpy_entropy_model.txt`](https://github.com/ufal/npfl114/tree/past-1920/labs/01/numpy_entropy_model.txt)
 ```
 A	0.5
 BB	0.3

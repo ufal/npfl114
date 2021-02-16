@@ -4,7 +4,7 @@
 
 This is a preparatory assignment for `svhn_competition`. The goal is to
 implement several bounding box manipulation routines in the
-[bboxes_utils.py](https://github.com/ufal/npfl114/tree/master/labs/06/bboxes_utils.py)
+[bboxes_utils.py](https://github.com/ufal/npfl114/tree/past-1920/labs/06/bboxes_utils.py)
 module. Notably, you need to implement the following methods:
 - `bbox_to_fast_rcnn`: convert a bounding box to a Fast R-CNN-like
   representation relative to a given anchor;
@@ -14,7 +14,7 @@ module. Notably, you need to implement the following methods:
   objects to anchors and generate suitable training data (the exact algorithm
   is described in the template).
 
-The [bboxes_utils.py](https://github.com/ufal/npfl114/tree/master/labs/06/bboxes_utils.py)
+The [bboxes_utils.py](https://github.com/ufal/npfl114/tree/past-1920/labs/06/bboxes_utils.py)
 contains simple unit tests, which are evaluated when executing the module,
 which you can use to check the validity of your implementation.
 
