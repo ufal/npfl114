@@ -16,13 +16,13 @@
   `VENV_DIR/bin/pip3 install --upgrade pip setuptools` followed by
   `VENV_DIR/bin/pip3 install tensorflow==2.4.1 tensorflow-addons==0.12.1 tensorflow-probability==0.12.1 tensorflow-hub==0.11.0 gym==0.18.0`.
 
-- _Windows TensorFlow Fails with ImportError: DLL load failed_
+- _Windows TensorFlow fails with ImportError: DLL load failed_
 
   If your Windows TensorFlow fails with `ImportError: DLL load failed`,
   you are probably missing
   [Visual C++ 2019 Redistributable](https://aka.ms/vs/16/release/vc_redist.x64.exe).
 
-- _Cannot Start tensorboard After Installation_
+- _Cannot start `tensorboard` after installation_
 
   If `tensorboard` cannot be found, make sure the directory with pip installed
   packages is in your PATH (that directory is either in your virtual environment
