@@ -22,7 +22,7 @@
   you are probably missing
   [Visual C++ 2019 Redistributable](https://aka.ms/vs/16/release/vc_redist.x64.exe).
 
-- _Cannot start `tensorboard` after installation_
+- _Cannot start TensorBoard after installation_
 
   If `tensorboard` cannot be found, make sure the directory with pip installed
   packages is in your PATH (that directory is either in your virtual environment
