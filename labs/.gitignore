@@ -1,6 +1,5 @@
 __pycache__/
 logs/
-/deepnote_ngrok
 *.h5
 *.npz
 *.tfrecord
