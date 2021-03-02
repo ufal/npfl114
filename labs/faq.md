@@ -29,3 +29,18 @@
   if you use a virtual environment, or it should be `~/.local/bin` on Linux
   and `%UserProfile%\AppData\Roaming\Python\Python3[5-7]` and
   `%UserProfile%\AppData\Roaming\Python\Python3[5-7]\Scripts` on Windows).
+
+### TOCEntry: GPU
+
+- _Requirements for using a GPU_
+
+  To use an NVIDIA GPU with TensorFlow 2.4, you need to install CUDA 11.0 and
+  cuDNN 8.0 – see [the details about GPU support](https://www.tensorflow.org/install/gpu).
+
+- _Errors when running with a GPU_
+
+  If you encounter errors when running with a GPU:
+  - if you are using the GPU also for displaying, try using the following
+    environment variable: `export TF_FORCE_GPU_ALLOW_GROWTH=true`
+  - you can rerun with `export TF_CPP_MIN_LOG_LEVEL=0` environmental variable,
+    which increases verbosity of the log messages.
