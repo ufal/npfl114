@@ -4,6 +4,7 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/slides.pdf/npfl114-01.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-01-czech.mp4,CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-01-english.mp4,EN Lecture
+#### Lecture assignment: mnist_layers_activations
 
 - Random variables, probability distributions, expectation, variance, Bernoulli
   distribution, Categorical distribution [Sections 3.2, 3.3, 3.8, 3.9.1 and 3.9.2 of DLB]
