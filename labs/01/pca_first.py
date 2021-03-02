@@ -62,6 +62,7 @@ def main(args):
         # 2. s = l2_norm(v)
         #    The l2_norm can be computed using `tf.linalg.norm`.
         # 3. v = v / s
+        pass
 
     # The `v` is now the eigenvector of the largest eigenvalue, `s`. We now
     # compute the explained variance, which is a ration of `s` and `total_variance`.
