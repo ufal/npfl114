@@ -52,7 +52,7 @@ def main(args):
         metrics=[tf.metrics.SparseCategoricalAccuracy("accuracy")],
     )
 
-    tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=100, profile_batch=0)
+    tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=100, profile_batch=0)
     tb_callback._close_writers = lambda: None # Ugly hack allowing to log also test data metrics.
     model.fit(
         mnist.train.data["images"], mnist.train.data["labels"],
