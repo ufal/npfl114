@@ -18,7 +18,8 @@ def main(args):
             # addition and string mapping).
 
     # TODO: Create a NumPy array containing the data distribution. The
-    # NumPy array should contain only data, not any mapping.
+    # NumPy array should contain only data, not any mapping. Alternatively,
+    # the NumPy array might be created after loading the model distribution.
 
     # TODO: Load model distribution, each line `string \t probability`.
     with open("numpy_entropy_model.txt", "r") as model:
@@ -34,9 +35,12 @@ def main(args):
     entropy = None
 
     # TODO: Compute cross-entropy H(data distribution, model distribution).
+    # When some data distribution elements are missing in the model distribution,
+    # return `np.inf`.
     crossentropy = None
 
-    # TODO: Compute KL-divergence D_KL(data distribution, model_distribution)
+    # TODO: Compute KL-divergence D_KL(data distribution, model_distribution),
+    # again using `np.inf` when needed.
     kl_divergence = None
 
     # Return the computed values for ReCodEx to validate
@@ -45,6 +49,6 @@ def main(args):
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)
     entropy, crossentropy, kl_divergence = main(args)
-    print("{:.2f}".format(entropy))
-    print("{:.2f}".format(crossentropy))
-    print("{:.2f}".format(crossentropy - entropy))
+    print("Entropy: {:.2f} nats".format(entropy))
+    print("Crossentropy: {:.2f} nats".format(crossentropy))
+    print("KL divergence: {:.2f} nats".format(kl_divergence))

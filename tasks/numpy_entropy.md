@@ -41,16 +41,16 @@ D	0.1
 ```
 the output should be
 ```
-0.96
-1.07
-0.11
+Entropy: 0.96 nats
+Crossentropy: 1.07 nats
+KL divergence: 0.11 nats
 ```
 ---
 If we remove the `CCC	0.1` line from the model distribution, the output should
 change to
 ```
-0.96
-inf
-inf
+Entropy: 0.96 nats
+Crossentropy: inf nats
+KL divergence: inf nats
 ```
 #### Examples End:
