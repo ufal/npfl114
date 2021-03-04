@@ -15,3 +15,12 @@ a solution created by other team members). All members of the team
 sources/models/results. **Each such solution must explicitly list all
 members of the team to allow plagiarism detection using
 [this template](https://github.com/ufal/npfl114/tree/master/labs/team_description.py).**
+
+### No Cheating
+
+Cheating is **strictly prohibited** and any student found cheating will be punished.
+The punishment can involve failing the whole course, or, in grave cases, being
+expelled from the faculty. While discussing assignments with any classmate is fine,
+each team must complete the assignments **by itself**, without using code it did not
+write (unless explicitly allowed). Of course, inside a team you are expected to
+share code and submit indentical solutions.
