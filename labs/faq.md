@@ -30,6 +30,15 @@
   and `%UserProfile%\AppData\Roaming\Python\Python3[5-7]` and
   `%UserProfile%\AppData\Roaming\Python\Python3[5-7]\Scripts` on Windows).
 
+### TOCEntry: ReCodEx
+
+- _What are the tests used by ReCodEx_
+
+  The tests used by ReCodEx correspond to the examples from the course website
+  (unless stated otherwise), but they use a different random seed (so the
+  results are not the same), and sometimes they use smaller number of
+  epochs/iterations to finish sooner.
+
 ### TOCEntry: GPU
 
 - _Requirements for using a GPU_
