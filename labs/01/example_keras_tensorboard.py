@@ -64,7 +64,7 @@ def main(args):
     test_logs = model.evaluate(
         mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size, return_dict=True,
     )
-    tb_callback.on_epoch_end(0, {"val_test_" + metric: value for metric, value in test_logs.items()})
+    tb_callback.on_epoch_end(args.epochs, {"val_test_" + metric: value for metric, value in test_logs.items()})
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)
