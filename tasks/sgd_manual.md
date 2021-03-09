@@ -20,7 +20,7 @@ template, which is based on
 one. Be aware that these templates generates each a different output file.
 
 In order to check that you do not use automatic differentiation, ReCodEx checks
-that there is no `GradientTape` string in your source (except in the comments).
+that you do not use `tf.GradientTape` in your solution.
 
 #### Examples Start: sgd_manual_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use GPU._
