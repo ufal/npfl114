@@ -116,6 +116,6 @@ Epoch  8/10 loss: 0.0112 - accuracy: 0.9962 - val_loss: 0.1135 - val_accuracy: 0
 Epoch  9/10 loss: 0.0051 - accuracy: 0.9986 - val_loss: 0.1074 - val_accuracy: 0.9800
 Epoch 10/10 loss: 0.0027 - accuracy: 0.9995 - val_loss: 0.1088 - val_accuracy: 0.9794
 loss: 0.0899 - accuracy: 0.9816
-Final learning rate: 1e-4
+Final learning rate: 0.0001
 ```
 #### Examples End:
