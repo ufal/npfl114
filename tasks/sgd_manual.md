@@ -4,7 +4,7 @@
 #### Examples: sgd_manual_examples
 
 The goal in this exercise is to extend your solution to the
-[sgd_backpropagation](#sgd_backpropagation) assignment by **manually**
+[sgd_backpropagation](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#sgd_backpropagation) assignment by **manually**
 computing the gradient.
 
 Note that this assignment is the only one where we will compute the gradient
