@@ -138,7 +138,7 @@ def main(args):
         tf.summary.scalar("test/accuracy", 100 * accuracy, step=epoch + 1)
 
     # Return test accuracy for ReCodEx to validate
-    return accuracy.numpy()
+    return accuracy
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)
