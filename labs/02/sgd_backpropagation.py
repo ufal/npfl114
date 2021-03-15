@@ -123,14 +123,14 @@ def main(args):
         # TODO: Evaluate the dev data using `evaluate` on `mnist.dev` dataset
         accuracy = ...
         print("Dev accuracy after epoch {} is {:.2f}".format(epoch + 1, 100 * accuracy), flush=True)
-        with writer.as_default():
-            tf.summary.scalar("dev/accuracy", 100 * accuracy, step=epoch + 1)
+        with writer.as_default(step=epoch + 1):
+            tf.summary.scalar("dev/accuracy", 100 * accuracy)
 
     # TODO: Evaluate the test data using `evaluate` on `mnist.test` dataset
     accuracy = ...
     print("Test accuracy after epoch {} is {:.2f}".format(epoch + 1, 100 * accuracy), flush=True)
-    with writer.as_default():
-        tf.summary.scalar("test/accuracy", 100 * accuracy, step=epoch + 1)
+    with writer.as_default(step=epoch + 1):
+        tf.summary.scalar("test/accuracy", 100 * accuracy)
 
     # Return test accuracy for ReCodEx to validate
     return accuracy
