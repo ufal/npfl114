@@ -14,15 +14,12 @@ from mnist import MNIST
 parser = argparse.ArgumentParser()
 parser.add_argument("--batch_size", default=50, type=int, help="Batch size.")
 parser.add_argument("--epochs", default=10, type=int, help="Number of epochs.")
-parser.add_argument("--hidden_layers", default="100", type=str, help="Hidden layer sizes separated by comma.")
+parser.add_argument("--hidden_layers", default=[100], nargs="*", type=int, help="Hidden layer sizes.")
 parser.add_argument("--model_type", default="sequential", type=str, help="Model type (sequential, functional, subclassing)")
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 
 def main(args):
-    # Post-process arguments
-    args.hidden_layers = [int(hidden_layer) for hidden_layer in args.hidden_layers.split(",") if hidden_layer]
-
     # Fix random seeds and threads
     np.random.seed(args.seed)
     tf.random.set_seed(args.seed)
