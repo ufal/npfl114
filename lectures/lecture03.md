@@ -6,3 +6,4 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-03-english.mp4,EN Lecture
 #### Lecture assignment: mnist_ensemble
 #### Lecture assignment: mnist_regularization
+#### Lecture assignment: uppercase
