@@ -68,7 +68,7 @@ def main(args):
     #   In both cases, `decay_steps` should be total number of training batches
     #   and you should pass the created `{Polynomial,Exponential}Decay` to
     #   the optimizer using the `learning_rate` constructor argument.
-    #   The size of the training MNIST dataset it `mnist.train.size` and you
+    #   The size of the training MNIST dataset is `mnist.train.size` and you
     #   can assume is it divisible by `args.batch_size`.
     #
     #   If a learning rate schedule is used, TensorBoard automatically logs the value of
