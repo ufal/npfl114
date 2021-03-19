@@ -15,11 +15,11 @@ only used to understand the approach you took, and to indicate teams).
 Explicitly, submit **exactly one .txt file** and **at least one .py file**.
 
 The task is also a [_competition_](#competitions). Everyone who submits
-a solution which achieves at least _98.0%_ accuracy will get 4 basic points; the
+a solution which achieves at least _98.5%_ accuracy will get 4 basic points; the
 5 bonus points will be distributed depending on relative ordering of your
 solutions. The accuracy is computed per-character and can be evaluated
-by [uppercase_eval.py](https://github.com/ufal/npfl114/tree/master/labs/03/uppercase_eval.py)
-script.
+by running [uppercase_data.py](https://github.com/ufal/npfl114/tree/master/labs/03/uppercase_data.py)
+with `--evaluate` argument, or using its `evaluate_file` method.
 
 You may want to start with the
 [uppercase.py](https://github.com/ufal/npfl114/tree/master/labs/03/uppercase.py)
