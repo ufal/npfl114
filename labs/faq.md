@@ -45,7 +45,7 @@
 
 - _How to clone the course repository_
 
-  To close the course repository, run
+  To clone the course repository, run
   ```
   git clone https://github.com/ufal/npfl114
   ```
