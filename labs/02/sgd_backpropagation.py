@@ -38,7 +38,7 @@ class Model(tf.Module):
         # TODO: Define the computation of the network. Notably:
         # - start by reshaping the inputs to shape [inputs.shape[0], -1].
         #   The -1 is a wildcard which is computed so that the number
-        #   of elements before and afte the reshape fits.
+        #   of elements before and after the reshape fits.
         # - then multiply the inputs by `self._W1` and then add `self._b1`
         # - apply `tf.nn.tanh`
         # - multiply the result by `self._W2` and then add `self._b2`
