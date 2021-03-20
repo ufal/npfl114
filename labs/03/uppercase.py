@@ -43,7 +43,7 @@ def main(args):
     #
     # The inputs are _windows_ of fixed size (`args.window` characters on left,
     # the character in question, and `args.window` characters on right), where
-    # each character is representedy by a `tf.int32` index. To suitably represent
+    # each character is represented by a `tf.int32` index. To suitably represent
     # the characters, you can:
     # - Convert the character indices into _one-hot encoding_. There is no
     #   explicit Keras layer, but you can
