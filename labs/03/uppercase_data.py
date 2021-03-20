@@ -54,7 +54,7 @@ class UppercaseData:
                     alphabet_map[char] = i
                     if alphabet and len(alphabet_map) >= alphabet: break
 
-            # Remap lowercased input characters uing the alphabet_map
+            # Remap lowercased input characters using the alphabet_map
             lcletters = np.zeros(self._size + 2 * window, np.int16)
             for i in range(self._size):
                 char = self._text[i].lower()
