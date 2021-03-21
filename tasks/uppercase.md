@@ -12,7 +12,7 @@ and the development sets are in correct case, the test set is lowercased.
 This is an _open-data task_, where you submit only the uppercased test set
 together with the training script (which will not be executed, it will be
 only used to understand the approach you took, and to indicate teams).
-Explicitly, submit **exactly one .txt file** and **at least one .py file**.
+Explicitly, submit **exactly one .txt file** and **at least one .py/ipynb file**.
 
 The task is also a [_competition_](#competitions). Everyone who submits
 a solution which achieves at least _98.5%_ accuracy will get 4 basic points; the
