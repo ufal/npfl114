@@ -127,7 +127,7 @@ class UppercaseData:
         gold = gold_dataset.text
 
         if len(predictions) < len(gold):
-            raise RuntimeError("The predictions are shorter than gold data: {} vs {}, aborting.".format(
+            raise RuntimeError("The predictions are shorter than gold data: {} vs {}.".format(
                 len(predictions), len(gold)))
 
         correct = 0
