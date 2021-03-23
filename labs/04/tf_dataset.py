@@ -91,6 +91,10 @@ def main(args):
     #   the given seed and a buffer of the size of the whole data
     # - call `.map(train_augment)` to perform the dataset augmentation
     # - finally call `.batch(args.batch_size)` to generate batches
+    # - optionally, you might want to add `.prefetch(tf.data.AUTOTUNE)` as
+    #   the last call -- it allows the pipeline to run in parallel with
+    #   the training process, dynamically adjusting the number of threads
+    #   to fully saturate the training process
     train = ...
 
     # TODO: Prepare the `dev` pipeline
