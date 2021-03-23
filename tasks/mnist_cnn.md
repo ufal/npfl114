@@ -16,7 +16,8 @@ argument, which contains comma-separated specifications of the following layers:
   In detail, start with a convolutional layer **without bias and activation**,
   then add batch normalization layer, and finally ReLU activation.
   Example: `CB-10-3-1-same`
-- `M-kernel_size-stride`: Add max pooling with specified size and stride.
+- `M-pool_size-stride`: Add max pooling with specified size and stride, using
+  the default `"valid"` padding.
   Example: `M-3-2`
 - `R-[layers]`: Add a residual connection. The `layers` contain a specification
   of at least one convolutional layer (but not a recursive residual connection `R`).

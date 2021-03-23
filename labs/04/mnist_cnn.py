@@ -34,7 +34,8 @@ class Network(tf.keras.Model):
         # - `CB-filters-kernel_size-stride-padding`: Same as `C`, but use batch normalization.
         #   In detail, start with a convolutional layer without bias and activation,
         #   then add batch normalization layer, and finally ReLU activation.
-        # - `M-kernel_size-stride`: Add max pooling with specified size and stride.
+        # - `M-pool_size-stride`: Add max pooling with specified size and stride, using
+        #   the default "valid" padding.
         # - `R-[layers]`: Add a residual connection. The `layers` contain a specification
         #   of at least one convolutional layer (but not a recursive residual connection `R`).
         #   The input to the specified layers is then added to their output
