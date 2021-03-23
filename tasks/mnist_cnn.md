@@ -1,6 +1,6 @@
 ### Assignment: mnist_cnn
 #### Date: Deadline: Apr 05, 23:59
-#### Points: 5 points
+#### Points: 4 points
 #### Examples: mnist_cnn_examples
 
 To pass this assignment, you will learn to construct basic convolutional

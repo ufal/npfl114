@@ -1,6 +1,6 @@
 ### Assignment: mnist_multiple
 #### Date: Deadline: Apr 05, 23:59
-#### Points: 2 points
+#### Points: 3 points
 #### Examples: mnist_multiple_examples
 
 In this assignment you will implement a model with multiple inputs and outputs.
