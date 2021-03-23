@@ -100,7 +100,7 @@ def main(args):
         if args.recodex:
             return model
         else:
-            score = evaluate_model(model, seed=args.seed, episodes=2, render=args.render, report_per_episode=True)
+            score = evaluate_model(model, seed=args.seed, render=args.render, report_per_episode=True)
             print("The average score was {}.".format(score))
 
 if __name__ == "__main__":
