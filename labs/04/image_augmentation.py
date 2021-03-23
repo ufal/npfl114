@@ -75,6 +75,8 @@ def main(args):
     # - first 5000 of cifar.train.data["labels"] as target
     # - batch_size of args.batch_size
     # - args.seed as random seed
+    logs = model.fit(
+        ...,
         shuffle=False, epochs=args.epochs,
         validation_data=(cifar.dev.data["images"], cifar.dev.data["labels"]),
         callbacks=[tb_callback],
