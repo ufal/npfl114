@@ -66,7 +66,9 @@ class Network(tf.keras.Model):
 
         # TODO: Train the model by computing appropriate losses of
         # direct_prediction, digit_1, digit_2. Regarding metrics, compute
-        # the accuracy of both the direct and indirect predictions.
+        # the accuracy of both the direct and indirect predictions; name both
+        # metrics "accuracy" (i.e., pass "accuracy" as the first argument of
+        # the metric object).
         self.compile(
             optimizer=tf.keras.optimizers.Adam(),
             loss={
