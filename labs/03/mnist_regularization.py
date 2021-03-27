@@ -46,7 +46,7 @@ def main(args):
 
     # TODO: Create the model and incorporate the L2 regularization and dropout:
     # - L2 regularization:
-    #   If `args.l2` is nonzero, create a `tf.keras.regularizers.L1L2` regularizer
+    #   If `args.l2` is nonzero, create a `tf.keras.regularizers.L2` regularizer
     #   and use it for all kernels (but not biases) of all Dense layers.
     # - Dropout:
     #   Add a `tf.keras.layers.Dropout` with `args.dropout` rate after the Flatten
