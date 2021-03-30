@@ -122,6 +122,7 @@ class UppercaseData:
                     shuffle_batches=dataset == "train",
                 ))
 
+    # Evaluation infrastructure.
     @staticmethod
     def evaluate(gold_dataset, predictions):
         gold = gold_dataset.text

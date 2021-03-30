@@ -50,6 +50,7 @@ class CIFAR10:
             data = dict((key[len(dataset) + 1:], cifar[key][:size.get(dataset, None)]) for key in cifar if key.startswith(dataset))
             setattr(self, dataset, self.Dataset(data, shuffle_batches=dataset == "train"))
 
+    # Evaluation infrastructure.
     @staticmethod
     def evaluate(gold_dataset, predictions):
         gold = gold_dataset.data["labels"]
