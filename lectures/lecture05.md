@@ -6,3 +6,4 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-05-english.mp4,EN Lecture
 #### Lecture assignment: mnist_web
 #### Lecture assignment: cnn_manual
+#### Lecture assignment: cags_classification
