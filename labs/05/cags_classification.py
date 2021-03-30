@@ -41,12 +41,12 @@ def main(args):
     model = ...
 
     # Generate test set annotations, but in args.logdir to allow parallel execution.
-    with open(os.path.join(args.logdir, "cags_classification.txt"), "w", encoding="utf-8") as out_file:
+    with open(os.path.join(args.logdir, "cags_classification.txt"), "w", encoding="utf-8") as predictions_file:
         # TODO: Predict the probabilities on the test set
         test_probabilities = model.predict(...)
 
         for probs in test_probabilities:
-            print(np.argmax(probs), file=out_file)
+            print(np.argmax(probs), file=predictions_file)
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)
