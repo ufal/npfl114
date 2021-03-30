@@ -129,8 +129,7 @@
   training data for `cags_classification` as (for development data, you would
   remove the `.shuffle`):
   ```python
-  train = cags.train.map(CAGS.parse)
-  train = train.map(lambda example: (example["image"], example["label"]))
+  train = cags.train.map(lambda example: (example["image"], example["label"]))
   train = train.shuffle(10000, seed=args.seed)
   train = train.batch(args.batch_size)
   ```
