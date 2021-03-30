@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>MNIST Web Demo</title>
+ <meta charset="utf-8">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+ <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.0/dist/tf.min.js"></script>
+</head>
+<body>
+ <div class="container-fluid" style="padding: 5px">
+  <div class="panel panel-success" style="margin-top: 3px">
+   <div class="panel-heading text-center" style="font-size: 350%; padding: 0px; margin-bottom: 7px">MNIST Web Demo</div>
+   <div class="panel-body text-center">
+
+    <canvas id="canvas" width="400" height="400" style="border: 1px solid black; user-select: none"></canvas>
+    <div>
+     <label class="checkbox-inline"><input type="checkbox" id="crop">MNIST Preprocessing</label>
+     <button class="btn btn-success" id="thinner">Thiner</button>
+     <button class="btn btn-success" id="thicker">Thicker</button>
+     <button class="btn btn-info" id="erase" data-toggle="button">Eraser</button>
+     <button class="btn btn-info" id="undo">Undo</button>
+     <button class="btn btn-info" id="clear">Clear</button>
+    </div>
+    <table id="results" class="table table-bordered">
+    </table>
+   </div>
+  </div>
+ </div>
+ <script>
+  var model = null;
+  tf.loadLayersModel("./mnist_web_model.json").then(result => model=result);
+
+  var context = $("#canvas")[0].getContext("2d");
+  function classify() {
+   var crop = $("#crop").prop("checked");
+   var predictions = tf.tidy(() => {
+    var image = tf.browser.fromPixels(context.canvas, 4);
+    image = image.slice([0, 0, 3]);
+    if (crop) {
+     var pixels = context.getImageData(0, 0, context.canvas.width, context.canvas.height);
+     var bound = { top: null, bottom: null, left: null, right: null };
+     for (var y = 0; y < context.canvas.height; y++)
+       for (var x = 0; x < context.canvas.width; x++)
+         if (pixels.data[4 * (y * context.canvas.width + x) + 3]) {
+          if (bound.top === null) bound.top = y;
+          bound.bottom = y;
+          if (bound.left === null || x < bound.left) bound.left = x;
+          if (bound.right === null || x > bound.right) bound.right = x;
+         }
+     if (bound.top !== null) {
+       var width = bound.right + 1 - bound.left;
+       var height = bound.bottom + 1 - bound.top;
+       image = image.slice([bound.top, bound.left], [height, width]);
+       if (height > width) image = image.pad([[0, 0], [Math.ceil((height - width) / 2), Math.floor((height - width) / 2)], [0, 0]])
+       else image = image.pad([[Math.ceil((width - height) / 2), Math.floor((width - height) / 2)], [0, 0], [0, 0]])
+
+       image = tf.image.resizeBilinear(image, [20, 20], 1);
+
+       var mask = tf.div(image.squeeze(2), 255);
+       var pads = tf.stack([tf.mul(mask, tf.range(0, 20).expandDims(1)), tf.mul(mask, tf.range(0, 20).expandDims(0))]);
+       pads = tf.div(tf.sum(pads, axis=[1,2]), tf.sum(mask)).toInt();
+       pads = tf.clipByValue(tf.sub(pads, 6), 0, 8).arraySync();
+       image = image.pad([[8 - pads[0], pads[0]], [8 - pads[1], pads[1]], [0, 0]]);
+     } else {
+       image = tf.image.resizeBilinear(image, [28, 28], 1);
+     }
+    } else {
+     image = tf.image.resizeBilinear(image, [28, 28], 1);
+    }
+    input = tf.div(image.toFloat(), 255);
+    return model.predictOnBatch(input.expandDims(0)).squeeze(0).arraySync();
+   });
+
+   var results = "<tr>";
+   for (var i = 0; i < 10; i++) results += "<td><b>" + i + "</b></td>";
+   results += "</tr><tr>";
+   for (var i = 0; i < 10; i++) {
+     var color = 255 - Math.round(255*predictions[i]);
+     results += "<td style='background-color: rgb(" + color + ",255," + color + ")'>" + predictions[i].toFixed(4) + "</td>";
+   }
+   $("#results").html(results);
+  }
+
+  var paint = false, width = 30;
+  var clicks = [], PEN = 0, CONT = 1, ERASER = 2;
+  $("#canvas").mousedown(function(e) {
+    e.preventDefault();
+    paint = true;
+    var rect = context.canvas.getBoundingClientRect();
+    addClick(e.pageX - rect.left, e.pageY - rect.top, $("#erase").hasClass("active") ? ERASER : PEN);
+    redraw();
+  });
+  $("#canvas").mousemove(function(e){
+    if(paint) {
+      var rect = context.canvas.getBoundingClientRect();
+      addClick(e.pageX - rect.left, e.pageY - rect.top, CONT);
+      redraw();
+    }
+  });
+  $("#canvas").on("mouseup mouseleave mouseout", function(e){
+    e.preventDefault();
+    if(paint) {
+      var rect = context.canvas.getBoundingClientRect();
+      addClick(e.pageX - rect.left, e.pageY - rect.top, CONT);
+      redraw();
+    }
+    paint = false;
+  });
+  function addClick(x, y, mode)
+  {
+   clicks.push({x:x - window.pageXOffset, y:y - window.pageYOffset, mode:mode});
+  }
+  function redraw(){
+   context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+   context.lineCap = context.lineJoin = "round";
+   context.strokeStyle = "#000000";
+
+   for (var i = 0; i < clicks.length; i++) {
+    if (clicks[i].mode == CONT) {
+     context.lineTo(clicks[i].x, clicks[i].y);
+    } else {
+     context.beginPath();
+     if (clicks[i].mode == PEN) {
+      context.globalCompositeOperation = "source-over";
+      context.lineWidth = width;
+     } else if (clicks[i].mode == ERASER) {
+      context.globalCompositeOperation = "destination-out";
+      context.lineWidth = width + 10;
+     }
+     context.moveTo(clicks[i].x, clicks[i].y);
+    }
+    if (i + 1 == clicks.length || clicks[i + 1].mode != CONT)
+     context.stroke();
+   }
+   context.globalCompositeOperation = "source-over";
+
+   classify();
+  }
+  $("#crop").click(function() { classify(); });
+  $("#thicker").click(function() { width += 5; redraw(); });
+  $("#thinner").click(function() { if (width > 5) width -= 5; redraw(); });
+  $("#undo").click(function() {
+    while (clicks.length > 0)
+     if (clicks.pop().mode != CONT)
+      break;
+    redraw();
+  });
+  $("#clear").click(function() { clicks = []; redraw(); });
+ </script>
+</body>
+</html>
+
