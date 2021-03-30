@@ -43,7 +43,7 @@ class CAGS:
 
     # Evaluation infrastructure.
     @staticmethod
-    def evaluate(gold_dataset, predictions):
+    def evaluate_classification(gold_dataset, predictions):
         gold = [int(example["label"]) for example in gold_dataset]
 
         if len(predictions) != len(gold):
@@ -54,9 +54,9 @@ class CAGS:
         return 100 * correct / len(gold)
 
     @staticmethod
-    def evaluate_file(gold_dataset, predictions_file):
+    def evaluate_classification_file(gold_dataset, predictions_file):
         predictions = [int(line) for line in predictions_file]
-        return CAGS.evaluate(gold_dataset, predictions)
+        return CAGS.evaluate_classification(gold_dataset, predictions)
 
 
 if __name__ == "__main__":
@@ -64,9 +64,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--evaluate", default=None, type=str, help="Prediction file to evaluate")
     parser.add_argument("--dataset", default="dev", type=str, help="Gold dataset to evaluate")
+    parser.add_argument("--task", default="classification", type=str, help="Task to evaluate")
     args = parser.parse_args()
 
     if args.evaluate:
-        with open(args.evaluate, "r", encoding="utf-8-sig") as predictions_file:
-            accuracy = CAGS.evaluate_file(getattr(CAGS(), args.dataset), predictions_file)
-        print("CAGS accuracy: {:.2f}%".format(accuracy))
+        if args.task == "classification":
+            with open(args.evaluate, "r", encoding="utf-8-sig") as predictions_file:
+                accuracy = CAGS.evaluate_classification_file(getattr(CAGS(), args.dataset), predictions_file)
+            print("CAGS accuracy: {:.2f}%".format(accuracy))
