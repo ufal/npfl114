@@ -28,14 +28,15 @@ class Network(tf.keras.Model):
             tf.keras.layers.Input(shape=[MNIST.H, MNIST.W, MNIST.C]),
         )
 
-        # TODO: The model passes each input image through the same network (with shared weights), performing
-        # - convolution with 10 filters, 3x3 kernel size, stride 2, "valid" padding, ReLU activation
-        # - convolution with 20 filters, 3x3 kernel size, stride 2, "valid" padding, ReLU activation
-        # - flattening layer
-        # - fully connected layer with 200 neurons and ReLU activation
+        # TODO: The model starts by passing each input image through the same
+        # subnetwork (with shared weights), which should perform
+        # - convolution with 10 filters, 3x3 kernel size, stride 2, "valid" padding, ReLU activation,
+        # - convolution with 20 filters, 3x3 kernel size, stride 2, "valid" padding, ReLU activation,
+        # - flattening layer,
+        # - fully connected layer with 200 neurons and ReLU activation,
         # obtaining a 200-dimensional feature representation of each image.
 
-        # TODO: Then, it should produce four outputs:
+        # TODO: Using the computed representations, it should produce four outputs:
         # - first, compute _direct prediction_ whether the first digit is
         #   greater than the second, by
         #   - concatenating the two 200-dimensional image representations,
