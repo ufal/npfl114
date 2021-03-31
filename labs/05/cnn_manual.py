@@ -25,10 +25,10 @@ class Convolution:
     def __init__(self, channels, kernel_size, stride, input_shape):
         # Create convolutional layer with the given arguments
         # and given input shape (e.g., [28, 28, 1]).
-
         self._channels = channels
         self._kernel_size = kernel_size
         self._stride = stride
+
         # Here the kernel and bias variables are created
         self._kernel = tf.Variable(
             tf.initializers.GlorotUniform(seed=42)([self._kernel_size, self._kernel_size, input_shape[2], self._channels]),
