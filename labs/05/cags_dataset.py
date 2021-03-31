@@ -1,6 +1,7 @@
 import os
 import sys
 import urllib.request
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
 
 import tensorflow as tf
 
