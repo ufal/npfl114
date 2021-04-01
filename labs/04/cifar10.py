@@ -20,7 +20,7 @@ class CIFAR10:
             self._shuffler = np.random.RandomState(seed) if shuffle_batches else None
 
         @property
-        def data(self):
+        def data(self) -> dict[str, np.ndarray]:
             return self._data
 
         @property
@@ -49,6 +49,10 @@ class CIFAR10:
         for dataset in ["train", "dev", "test"]:
             data = dict((key[len(dataset) + 1:], cifar[key][:size.get(dataset, None)]) for key in cifar if key.startswith(dataset))
             setattr(self, dataset, self.Dataset(data, shuffle_batches=dataset == "train"))
+
+    test: Dataset
+    dev: Dataset
+    train: Dataset
 
     # Evaluation infrastructure.
     @staticmethod
