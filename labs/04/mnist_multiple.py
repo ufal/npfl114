@@ -41,7 +41,7 @@ class Network(tf.keras.Model):
         #   greater than the second, by
         #   - concatenating the two 200-dimensional image representations,
         #   - processing them using another 200-neuron ReLU dense layer
-        #   - computing one output with `tf.nn.sigmoid` activation
+        #   - computing one output using a dense layer with `tf.nn.sigmoid` activation
         # - then, classify the computed representation of the first image using
         #   a densely connected softmax layer into 10 classes;
         # - then, classify the computed representation of the second image using
