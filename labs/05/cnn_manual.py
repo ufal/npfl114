@@ -50,11 +50,11 @@ class Convolution:
         # (computed in forward pass) and the gradient of the loss
         # with respect to layer outputs, return a list with the
         # following three elements:
-        # - gradient of inputs with respect to the loss
+        # - gradient of the loss with respect to inputs
         # - list of variables in the layer, e.g.,
         #     [self._kernel, self._bias]
-        # - list of gradients of the layer variables with respect
-        #   to the loss (in the same order as the previous argument)
+        # - list of gradients of the loss with respect to the layer
+        #   variables (in the same order as the previous argument)
         raise NotImplementedError()
 
 class Network:
