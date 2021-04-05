@@ -39,7 +39,7 @@
   var context = $("#canvas")[0].getContext("2d");
   function classify() {
    var crop = $("#crop").prop("checked");
-   var predictions = tf.tidy(() => {
+   var outputs = tf.tidy(() => {
     var image = tf.browser.fromPixels(context.canvas, 4);
     image = image.slice([0, 0, 3]);
     if (crop) {
@@ -71,18 +71,20 @@
     } else {
      image = tf.image.resizeBilinear(image, [28, 28], 1);
     }
-    input = tf.div(image.toFloat(), 255);
-    return model.predictOnBatch(input.expandDims(0)).squeeze(0).arraySync();
+    var canvas_image = tf.pad(image.toInt(), [[0, 0], [0, 0], [3, 0]]);
+    return [canvas_image.dataSync(), model.predictOnBatch(image.div(255).expandDims(0)).squeeze(0).arraySync()];
    });
+   var image = outputs[0], predictions = outputs[1];
 
-   var results = "<tr>";
+   var results = "<tr><td><b>Image";
    for (var i = 0; i < 10; i++) results += "<td><b>" + i + "</b></td>";
-   results += "</tr><tr>";
+   results += "</tr><tr><td><canvas id='preview' width='28' height='28' style='border: 1px solid black; user-select: none'></canvas>";
    for (var i = 0; i < 10; i++) {
      var color = 255 - Math.round(255*predictions[i]);
      results += "<td style='background-color: rgb(" + color + ",255," + color + ")'>" + predictions[i].toFixed(4) + "</td>";
    }
    $("#results").html(results);
+   $("#preview")[0].getContext("2d").putImageData(new ImageData(new Uint8ClampedArray(image), 28, 28), 0, 0);
   }
 
   var paint = false, width = 30;
