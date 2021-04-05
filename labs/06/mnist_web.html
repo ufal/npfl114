@@ -43,17 +43,17 @@
     var image = tf.browser.fromPixels(context.canvas, 4);
     image = image.slice([0, 0, 3]);
     if (crop) {
-     var pixels = context.getImageData(0, 0, context.canvas.width, context.canvas.height);
-     var bound = { top: null, bottom: null, left: null, right: null };
-     for (var y = 0; y < context.canvas.height; y++)
-       for (var x = 0; x < context.canvas.width; x++)
-         if (pixels.data[4 * (y * context.canvas.width + x) + 3]) {
-          if (bound.top === null) bound.top = y;
-          bound.bottom = y;
-          if (bound.left === null || x < bound.left) bound.left = x;
-          if (bound.right === null || x > bound.right) bound.right = x;
-         }
-     if (bound.top !== null) {
+     var empty = tf.equal(image, 0);
+     empty = tf.stack([tf.all(empty, [1, 2]), cols = tf.all(empty, [0, 2])]).arraySync();
+     for (var top = 0; top < empty[0].length && empty[0][top]; top++) ;
+     if (top == empty[0].length) {
+       image = tf.image.resizeBilinear(image, [28, 28], 1);
+     } else {
+       var bound = {top: top};
+       for (bound.bottom = empty[0].length - 1; bound.bottom > 0 && empty[0][bound.bottom]; bound.bottom--) ;
+       for (bound.left = 0; bound.left < empty[1].length && empty[1][bound.left]; bound.left++) ;
+       for (bound.right = empty[1].length - 1; bound.right > 0 && empty[1][bound.right]; bound.right--) ;
+
        var width = bound.right + 1 - bound.left;
        var height = bound.bottom + 1 - bound.top;
        image = image.slice([bound.top, bound.left], [height, width]);
@@ -67,8 +67,6 @@
        pads = tf.div(tf.sum(pads, axis=[1,2]), tf.sum(mask)).toInt();
        pads = tf.clipByValue(tf.sub(pads, 6), 0, 8).arraySync();
        image = image.pad([[8 - pads[0], pads[0]], [8 - pads[1], pads[1]], [0, 0]]);
-     } else {
-       image = tf.image.resizeBilinear(image, [28, 28], 1);
      }
     } else {
      image = tf.image.resizeBilinear(image, [28, 28], 1);
