@@ -16,6 +16,24 @@
   `VENV_DIR/bin/pip3 install --upgrade pip setuptools` followed by
   `VENV_DIR/bin/pip3 install tensorflow==2.4.1 tensorflow-addons==0.12.1 tensorflow-probability==0.12.1 tensorflow-hub==0.11.0 gym==0.18.0`.
 
+- _Installing to MetaCentrum_
+
+  As of Apr 2021, the minimum CUDA version across MetaCentrum is 10.2, and the
+  highest officially available CUDA+cuDNN is also 10.2. Therefore, I have build
+  TensorFlow 2.4.1 for CUDA 10.2 and cuDNN 7.6 to use on MetaCentrum.
+
+  During installation, start by using official Python 3.6 and CUDA+cuDNN
+  packages via `module add python-3.6.2-gcc cuda/cuda-10.2.89-gcc-6.3.0-34gtciz
+  cudnn/cudnn-7.6.5.32-10.2-linux-x64-gcc-6.3.0-xqx4s5f`. Note that this command
+  must be always executed before using the installed TensorFlow.
+
+  Then create a virtual environment by `python3 -m venv VENV_DIR` and
+  install the required packages with `VENV_DIR/bin/pip3 install --upgrade pip setuptools` followed by
+  `VENV_DIR/bin/pip3 install
+  https://ufal.mff.cuni.cz/~straka/packages/tf/2.4/metacentrum/tensorflow-2.4.1-cp36-cp36m-linux_x86_64.whl
+  https://ufal.mff.cuni.cz/~straka/packages/tf/2.4/metacentrum/tensorflow_addons-0.12.1-cp36-cp36m-linux_x86_64.whl
+  tensorflow-probability==0.12.1 tensorflow-hub==0.11.0 gym==0.18.0`.
+
 - _Windows TensorFlow fails with ImportError: DLL load failed_
 
   If your Windows TensorFlow fails with `ImportError: DLL load failed`,
