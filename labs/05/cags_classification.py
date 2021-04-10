@@ -42,6 +42,7 @@ def main(args):
     model = ...
 
     # Generate test set annotations, but in args.logdir to allow parallel execution.
+    os.makedirs(args.logdir, exist_ok=True)
     with open(os.path.join(args.logdir, "cags_classification.txt"), "w", encoding="utf-8") as predictions_file:
         # TODO: Predict the probabilities on the test set
         test_probabilities = model.predict(...)

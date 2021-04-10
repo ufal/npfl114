@@ -63,6 +63,7 @@ def main(args):
     # Use `uppercase_data.test.text` as input, capitalize suitable characters,
     # and write the result to predictions_file (which is
     # `uppercase_test.txt` in the `args.logdir` directory).
+    os.makedirs(args.logdir, exist_ok=True)
     with open(os.path.join(args.logdir, "uppercase_test.txt"), "w", encoding="utf-8") as predictions_file:
         ...
 
