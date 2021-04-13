@@ -6,9 +6,9 @@ This is a preparatory assignment for `svhn_competition`. The goal is to
 implement several bounding box manipulation routines in the
 [bboxes_utils.py](https://github.com/ufal/npfl114/tree/master/labs/07/bboxes_utils.py)
 module. Notably, you need to implement the following methods:
-- `bbox_to_fast_rcnn`: convert given bounding boxes to a Fast R-CNN-like
+- `bboxes_to_fast_rcnn`: convert given bounding boxes to a Fast R-CNN-like
   representation relative to the given anchors;
-- `bbox_from_fast_rcnn`: convert Fast R-CNN-like representations relative to
+- `bboxes_from_fast_rcnn`: convert Fast R-CNN-like representations relative to
   given anchors back to bounding boxes;
 - `bboxes_training`: given a list of anchors and gold objects, assign gold
   objects to anchors and generate suitable training data (the exact algorithm
@@ -19,6 +19,6 @@ contains simple unit tests, which are evaluated when executing the module,
 which you can use to check the validity of your implementation.
 
 When submitting to ReCodEx, the method `main` is executed, returning the
-implemented `bbox_to_fast_rcnn`, `bbox_to_fast_rcnn` and `bboxes_training`
+implemented `bboxes_to_fast_rcnn`, `bboxes_to_fast_rcnn` and `bboxes_training`
 methods. These methods are then executed and compared to the reference
 implementation.
