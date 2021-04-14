@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 import numpy as np
 
-from svhn_dataset import SVHN
-
 BACKEND = np # or you can use `tf` for TensorFlow implementation
+
+TOP, LEFT, BOTTOM, RIGHT = range(4)
 
 def bboxes_area(bboxes):
     """ Compute area of given set of bboxes.
@@ -13,8 +13,8 @@ def bboxes_area(bboxes):
 
     If the bboxes.shape is [..., 4], the output shape is bboxes.shape[:-1].
     """
-    return BACKEND.maximum(bboxes[..., SVHN.BOTTOM] - bboxes[..., SVHN.TOP], 0) \
-        * BACKEND.maximum(bboxes[..., SVHN.RIGHT] - bboxes[..., SVHN.LEFT], 0)
+    return BACKEND.maximum(bboxes[..., BOTTOM] - bboxes[..., TOP], 0) \
+        * BACKEND.maximum(bboxes[..., RIGHT] - bboxes[..., LEFT], 0)
 
 def bboxes_iou(xs, ys):
     """ Compute IoU of corresponding pairs from two sets of bboxes xs and ys.
@@ -28,10 +28,10 @@ def bboxes_iou(xs, ys):
     xs and ys. Formally, the output shape is np.broadcast(xs, ys).shape[:-1].
     """
     intersections = BACKEND.stack([
-        BACKEND.maximum(xs[..., SVHN.TOP], ys[..., SVHN.TOP]),
-        BACKEND.maximum(xs[..., SVHN.LEFT], ys[..., SVHN.LEFT]),
-        BACKEND.minimum(xs[..., SVHN.BOTTOM], ys[..., SVHN.BOTTOM]),
-        BACKEND.minimum(xs[..., SVHN.RIGHT], ys[..., SVHN.RIGHT]),
+        BACKEND.maximum(xs[..., TOP], ys[..., TOP]),
+        BACKEND.maximum(xs[..., LEFT], ys[..., LEFT]),
+        BACKEND.minimum(xs[..., BOTTOM], ys[..., BOTTOM]),
+        BACKEND.minimum(xs[..., RIGHT], ys[..., RIGHT]),
     ], axis=-1)
 
     xs_area, ys_area, intersections_area = bboxes_area(xs), bboxes_area(ys), bboxes_area(intersections)
@@ -42,7 +42,8 @@ def bboxes_to_fast_rcnn(anchors, bboxes):
     """ Convert `bboxes` to a Fast-R-CNN-like representation relative to `anchors`.
 
     The `anchors` and `bboxes` are arrays of four-tuples (top, left, bottom, right);
-    you can use SVNH.{TOP, LEFT, BOTTOM, RIGHT} as indices of the respective coordinates.
+    you can use the TOP, LEFT, BOTTOM, RIGHT constants as indices of the
+    respective coordinates.
 
     The resulting representation of a single bbox is a four-tuple with:
     - (bbox_y_center - anchor_y_center) / anchor_height
