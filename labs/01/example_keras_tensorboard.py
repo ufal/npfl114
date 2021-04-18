@@ -37,7 +37,7 @@ def main(args):
 
     # Create the model
     model = tf.keras.Sequential([
-        tf.keras.layers.InputLayer([MNIST.H, MNIST.W, MNIST.C], name="input_images"),
+        tf.keras.layers.Input([MNIST.H, MNIST.W, MNIST.C], name="input_images"),
         tf.keras.layers.Flatten(name="flatten"),
         tf.keras.layers.Dense(args.hidden_layer, activation=tf.nn.relu, name="hidden_1"),
         tf.keras.layers.Dense(args.hidden_layer, activation=tf.nn.relu, name="hidden_2"),

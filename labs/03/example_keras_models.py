@@ -39,7 +39,7 @@ def main(args):
     # Create the model
     if args.model_type == "sequential":
         model = tf.keras.Sequential()
-        model.add(tf.keras.layers.InputLayer([MNIST.H, MNIST.W, MNIST.C]))
+        model.add(tf.keras.layers.Input([MNIST.H, MNIST.W, MNIST.C]))
         model.add(tf.keras.layers.Flatten())
         for hidden_layer in args.hidden_layers:
             model.add(tf.keras.layers.Dense(hidden_layer, activation=tf.nn.relu))
