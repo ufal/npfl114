@@ -1,6 +1,6 @@
 ### Assignment: sequence_classification
 #### Date: Deadline: May 03, 23:59
-#### Points: 4 points
+#### Points: 3 points
 #### Examples: sequence_classification_examples
 
 The goal of this assignment is to introduce recurrent neural networks.
