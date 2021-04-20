@@ -104,8 +104,8 @@ def main(args):
         raise NotImplementedError()
 
     train = morpho.train.dataset.map(tagging_dataset).apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
-    dev = morpho.train.dataset.map(tagging_dataset).apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
-    test = morpho.train.dataset.map(tagging_dataset).apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
+    dev = morpho.dev.dataset.map(tagging_dataset).apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
+    test = morpho.test.dataset.map(tagging_dataset).apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
 
     network.fit(train, epochs=args.epochs, validation_data=dev, callbacks=[network.tb_callback])
 
