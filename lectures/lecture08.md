@@ -6,3 +6,4 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-08-english.mp4,EN Lecture
 #### Lecture assignment: sequence_classification
 #### Lecture assignment: tagger_we
+#### Lecture assignment: tagger_cle
