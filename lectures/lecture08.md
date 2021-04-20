@@ -7,3 +7,4 @@
 #### Lecture assignment: sequence_classification
 #### Lecture assignment: tagger_we
 #### Lecture assignment: tagger_cle
+#### Lecture assignment: tagger_competition
