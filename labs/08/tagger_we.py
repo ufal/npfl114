@@ -45,7 +45,7 @@ class Network(tf.keras.Model):
 
         super().__init__(inputs=words, outputs=predictions)
         self.compile(optimizer=tf.optimizers.Adam(),
-                     loss=tf.losses.SparseCategoricalCrossentropy(reduction=tf.losses.Reduction.SUM),
+                     loss=tf.losses.SparseCategoricalCrossentropy(),
                      metrics=[tf.metrics.SparseCategoricalAccuracy(name="accuracy")])
 
         self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, update_freq=100, profile_batch=0)
@@ -59,7 +59,7 @@ class Network(tf.keras.Model):
         x, y = data
         with tf.GradientTape() as tape:
             y_pred = self(x, training=True)
-            loss = self.compiled_loss(y.values, y_pred.values) / tf.cast(y_pred.bounding_shape(0), tf.float32)
+            loss = self.compiled_loss(y.values, y_pred.values)
         self.optimizer.minimize(loss, self.trainable_variables, tape=tape)
         self.compiled_metrics.update_state(y.values, y_pred.values)
         return {m.name: m.result() for m in self.metrics}
@@ -68,7 +68,7 @@ class Network(tf.keras.Model):
     def test_step(self, data):
         x, y = data
         y_pred = self(x, training=False)
-        loss = self.compiled_loss(y.values, y_pred.values) / tf.cast(y_pred.bounding_shape(0), tf.float32)
+        loss = self.compiled_loss(y.values, y_pred.values)
         self.compiled_metrics.update_state(y.values, y_pred.values)
         return {m.name: m.result() for m in self.metrics}
 
