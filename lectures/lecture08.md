@@ -6,6 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-08-english.mp4,EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-08-czech.practicals.mp4,CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-08-english.practicals.mp4,EN Practicals
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-08-english.consultations.mp4,EN Consultations
 #### Lecture assignment: sequence_classification
 #### Lecture assignment: tagger_we
 #### Lecture assignment: tagger_cle
