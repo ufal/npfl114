@@ -35,10 +35,10 @@ class MorphoDataset:
                 self.word_mapping = train.word_mapping
                 self.char_mapping = train.char_mapping
             else:
-                self.word_mapping = tf.keras.layers.experimental.preprocessing.StringLookup()
+                self.word_mapping = tf.keras.layers.experimental.preprocessing.StringLookup(mask_token=None)
                 self.word_mapping.adapt(sorted(set(string for sentence in self.strings for string in sentence)))
 
-                self.char_mapping = tf.keras.layers.experimental.preprocessing.StringLookup()
+                self.char_mapping = tf.keras.layers.experimental.preprocessing.StringLookup(mask_token=None)
                 self.char_mapping.adapt(sorted(set(char for sentence in self.strings for string in sentence for char in string)))
 
     class Dataset:
