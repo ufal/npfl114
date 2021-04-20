@@ -34,11 +34,12 @@ class Network(tf.keras.Model):
         # TODO(tagger_we): Map strings in `words` to indices by using the `word_mapping` of `train.forms`.
 
         # TODO: With a probability of `args.word_masking`, replace the input word by an
-        # unknown word (it has index 0).
+        # unknown word (which has index 0).
         #
         # Use a `tf.keras.layers.Dropout` to achieve this, even if it is a bit
-        # hacky -- use `tf.ones_like` to create a list of float32 ones in the same
-        # shape of `hidden`, pass them through a dropout layer with `args.word_masking`
+        # hacky, because Dropout cannot process integral inputs. One way is to
+        # use `tf.ones_like` to create a ragged tensor of float32 ones with the same
+        # shape as `hidden`, pass them through a dropout layer with `args.word_masking`
         # rate, and finally set the input word ids to 0 where the result of dropout is zero.
 
         # TODO(tagger_we): Embed input words with dimensionality `args.we_dim`. Note that the `word_mapping`
