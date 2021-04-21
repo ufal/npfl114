@@ -67,7 +67,8 @@ class Network(tf.keras.Model):
         # TODO: Then, convert the flattened list into a RaggedTensor of the same shape
         # as `words` using `words.with_values` call.
 
-        # TODO: Concatenate the word-level embeddings the the computed character-level WEs.
+        # TODO: Concatenate the word-level embeddings and the computed character-level WEs
+        # (in this order).
 
         # TODO(tagger_we): Create specified `args.rnn_cell` RNN cell (LSTM, GRU) with
         # dimension `args.rnn_cell_dim` and apply it in a bidirectional way on
