@@ -16,7 +16,7 @@ module, which can also evaluate your predictions (either by running with
 `--task=segmentation --evaluate=path` arguments, or using its
 `evaluate_segmentation_file` method).
 
-The task is a [_competition_](#competitions). Everyone who submits a solution
+The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#competitions). Everyone who submits a solution
 which achieves at least _87%_ test set IoU gets 5 points; the rest
 5 points will be distributed depending on relative ordering of your solutions.
 

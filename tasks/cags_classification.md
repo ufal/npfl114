@@ -44,7 +44,7 @@ estimates on the batch) or in inference regime. There is one exception though
 – if `trainable == False` on a batch normalization layer, it runs in the
 inference regime even when `training == True`._
 
-The task is a [_competition_](#competitions). Everyone who submits a solution
+The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#competitions). Everyone who submits a solution
 which achieves at least _90%_ test set accuracy will get 5 points; the rest
 5 points will be distributed depending on relative ordering of your solutions.
 

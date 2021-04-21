@@ -15,7 +15,7 @@ The official dataset offers only train and test sets, with the **test set having
 a different distributions of labels**. Our dataset contains also a development
 set, which has **nearly the same** label distribution as the test set.
 
-The task is a [_competition_](#competitions). Everyone who submits a solution
+The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#competitions). Everyone who submits a solution
 which achieves at least _87%_ test set accuracy gets 5 points; the rest
 5 points will be distributed depending on relative ordering of your solutions.
 

@@ -14,7 +14,7 @@ together with the training script (which will not be executed, it will be
 only used to understand the approach you took, and to indicate teams).
 Explicitly, submit **exactly one .txt file** and **at least one .py/ipynb file**.
 
-The task is also a [_competition_](#competitions). Everyone who submits
+The task is also a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#competitions). Everyone who submits
 a solution which achieves at least _98.5%_ accuracy will get 4 basic points; the
 5 bonus points will be distributed depending on relative ordering of your
 solutions. The accuracy is computed per-character and can be evaluated

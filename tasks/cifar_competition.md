@@ -7,7 +7,7 @@ You can load the data using the
 [cifar10.py](https://github.com/ufal/npfl114/tree/master/labs/04/cifar10.py)
 module. Note that the test set is different than that of official CIFAR-10.
 
-The task is a [_competition_](#competitions). Everyone who submits a solution
+The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#competitions). Everyone who submits a solution
 which achieves at least _60%_ test set accuracy will get 5 points; the rest
 5 points will be distributed depending on relative ordering of your solutions.
 Note that my solutions usually need to achieve at least ~73% on the development

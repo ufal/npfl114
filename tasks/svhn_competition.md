@@ -22,7 +22,7 @@ to preprocess them using `bboxes_training`, it might be more comfortable to
 convert the dataset to NumPy. Alternatively, you can implement `bboxes_training`
 using TensorFlow operations or call Numpy implementation of `bboxes_training`
 directly in `tf.data.Dataset.map` by using `tf.numpy_function`,
-see [FAQ](#faq_tf_data).
+see [FAQ](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#faq_tf_data).
 
 Similarly to the `cags_classification`, you can load the EfficientNet-B0 using the provided
 [efficient_net.py](https://github.com/ufal/npfl114/tree/master/labs/07/efficient_net.py)
@@ -38,7 +38,7 @@ You can again evaluate your predictions using the
 module, either by running with `--evaluate=path` arguments, or using its
 `evaluate_file` method.
 
-The task is a [_competition_](#competitions). Everyone who submits a solution
+The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#competitions). Everyone who submits a solution
 which achieves at least _20%_ test set IoU gets 5 points; the rest
 5 points will be distributed depending on relative ordering of your solutions.
 Note that I usually need at least _35%_ development set accuracy to achieve the
