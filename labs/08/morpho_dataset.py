@@ -94,3 +94,60 @@ class MorphoDataset:
                     setattr(self, dataset, self.Dataset(dataset_file,
                                                         train=self.train if dataset != "train" else None,
                                                         max_sentences=max_sentences))
+
+    # Evaluation infrastructure.
+    @staticmethod
+    def evaluate(gold_dataset, predictions):
+        gold_sentences = gold_dataset.strings
+
+        predicted_sentences, in_sentence = [], False
+        for line in predictions:
+            line = line.rstrip("\n")
+            if not line:
+                in_sentence = False
+            else:
+                if not in_sentence:
+                    predicted_sentences.append([])
+                    in_sentence = True
+                predicted_sentences[-1].append(line)
+
+        if len(predicted_sentences) != len(gold_sentences):
+            raise RuntimeError("The predictions contain different number of sentences than gold data: {} vs {}".format(
+                len(predicted_sentences), len(gold_sentences)))
+
+        correct, total = 0, 0
+        for i, (predicted_sentence, gold_sentence) in enumerate(zip(predicted_sentences, gold_sentences)):
+            if len(predicted_sentence) != len(gold_sentence):
+                raise RuntimeError("Predicted sentence {} contains different number of words than gold data: {} vs {}".format(
+                    i + 1, len(predicted_sentence), len(gold_sentence)))
+            correct += sum(predicted == gold for predicted, gold in zip(predicted_sentence, gold_sentence))
+            total += len(predicted_sentence)
+
+        return 100 * correct / total
+
+    @staticmethod
+    def evaluate_file(gold_dataset, predictions_file):
+        predictions = predictions_file.readlines()
+        return MorphoDataset.evaluate(gold_dataset, predictions)
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--evaluate", default=None, type=str, help="Prediction file to evaluate")
+    parser.add_argument("--corpus", default="czech_pdt", type=str, help="The corpus to evaluate")
+    parser.add_argument("--dataset", default="dev", type=str, help="The dataset to evaluate (dev/test)")
+    parser.add_argument("--task", default="tagger", type=str, help="Task to evaluate (tagger/lemmatizer)")
+    args = parser.parse_args()
+
+    gold = getattr(MorphoDataset(args.corpus), args.dataset)
+    if args.evaluate:
+        if args.task == "tagger":
+            gold = gold.tags
+        elif args.task == "lemmatizer":
+            gold = gold.lemmas
+        else:
+            raise ValueError("Unknown task '{}', valid values are only 'tagger' or 'lemmatizer'".format(args.task))
+
+        with open(args.evaluate, "r", encoding="utf-8-sig") as predictions_file:
+            accuracy = MorphoDataset.evaluate_file(gold, predictions_file)
+        print("{} accuracy: {:.2f}%".format(args.task.title(), accuracy))
