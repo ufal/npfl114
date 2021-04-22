@@ -180,7 +180,7 @@
   have no static shape information and you need to set it manually – ideally
   using [tf.ensure_shape](https://www.tensorflow.org/api_docs/python/tf/ensure_shape),
   which both sets the static shape and verifies during execution that the real
-  shape mathes it; see the next question for an example.
+  shape matches it; see the next question for an example.
 
 - _How to use `ImageDataGenerator` in `tf.data.Dataset.map`?_
 
