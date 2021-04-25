@@ -25,15 +25,15 @@ import numpy as np
 #          the corresponding input in `windows` is lowercased/uppercased
 #   - text: the original text (of course lowercased in case of the test set)
 #   - alphabet: an alphabet used by `windows`
-#   - batches(size): a generator producing a single epoch of batches of a given
-#       size; the batches are dictionaries with keys "windows" and "labels"
+#   - dataset: a TensorFlow tf.data.Dataset producing as examples dictionaries
+#       with keys "windows" and "labels"
 class UppercaseData:
     LABELS = 2
 
     _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/datasets/uppercase_data.zip"
 
     class Dataset:
-        def __init__(self, data, window, alphabet, shuffle_batches, seed=42):
+        def __init__(self, data, window, alphabet, seed=42):
             self._window = window
             self._text = data
             self._size = len(self._text)
@@ -61,7 +61,7 @@ class UppercaseData:
                 if char not in alphabet_map: char = "<unk>"
                 lcletters[i + window] = alphabet_map[char]
 
-            # Generate batches data
+            # Generate input batches
             windows = np.zeros([self._size, 2 * window + 1], np.int16)
             labels = np.zeros(self._size, np.uint8)
             for i in range(self._size):
@@ -73,8 +73,6 @@ class UppercaseData:
             self._alphabet = [None] * len(alphabet_map)
             for key, value in alphabet_map.items():
                 self._alphabet[value] = key
-
-            self._shuffler = np.random.RandomState(seed) if shuffle_batches else None
 
         @property
         def alphabet(self):
@@ -92,18 +90,10 @@ class UppercaseData:
         def size(self):
             return self._size
 
-        def batches(self, size=None):
-            permutation = self._shuffler.permutation(self._size) if self._shuffler else np.arange(self._size)
-            while len(permutation):
-                batch_size = min(size or np.inf, len(permutation))
-                batch_perm = permutation[:batch_size]
-                permutation = permutation[batch_size:]
-
-                batch = {}
-                for key in self._data:
-                    batch[key] = self._data[key][batch_perm]
-                yield batch
-
+        @property
+        def dataset(self):
+            import tensorflow as tf
+            return tf.data.Dataset.from_tensor_slices(self._data)
 
     def __init__(self, window, alphabet_size=0):
         path = os.path.basename(self._URL)
@@ -119,7 +109,6 @@ class UppercaseData:
                     data,
                     window,
                     alphabet=alphabet_size if dataset == "train" else self.train.alphabet,
-                    shuffle_batches=dataset == "train",
                 ))
 
     # Evaluation infrastructure.

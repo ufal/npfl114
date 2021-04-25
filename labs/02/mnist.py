@@ -38,6 +38,11 @@ class MNIST:
                     batch[key] = self._data[key][batch_perm]
                 yield batch
 
+        @property
+        def dataset(self):
+            import tensorflow as tf
+            return tf.data.Dataset.from_tensor_slices(self._data)
+
     def __init__(self, dataset="mnist"):
         path = "{}.npz".format(dataset)
         if not os.path.exists(path):

@@ -25,13 +25,14 @@ class SVHN:
         return example
 
     def __init__(self):
-        for dataset in ["train", "dev", "test"]:
+        for dataset, size in [("train", 10000), ("dev", 1267), ("test", 4535)]:
             path = "svhn.{}.tfrecord".format(dataset)
             if not os.path.exists(path):
                 print("Downloading file {}...".format(path), file=sys.stderr)
                 urllib.request.urlretrieve("{}/{}".format(self._URL, path), filename=path)
 
-            setattr(self, dataset, tf.data.TFRecordDataset(path).map(SVHN.parse))
+            setattr(self, dataset,
+                    tf.data.TFRecordDataset(path).map(SVHN.parse).apply(tf.data.experimental.assert_cardinality(size)))
 
     # Evaluation infrastructure.
     @staticmethod

@@ -16,11 +16,9 @@ class ModelNet:
     _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/datasets/modelnet{}.npz"
 
     class Dataset:
-        def __init__(self, data, shuffle_batches, seed=42):
+        def __init__(self, data, seed=42):
             self._data = data
             self._size = len(self._data["voxels"])
-
-            self._shuffler = np.random.RandomState(seed) if shuffle_batches else None
 
         @property
         def data(self):
@@ -30,17 +28,11 @@ class ModelNet:
         def size(self):
             return self._size
 
-        def batches(self, size=None):
-            permutation = self._shuffler.permutation(self._size) if self._shuffler else np.arange(self._size)
-            while len(permutation):
-                batch_size = min(size or np.inf, len(permutation))
-                batch_perm = permutation[:batch_size]
-                permutation = permutation[batch_size:]
+        @property
+        def dataset(self):
+            import tensorflow as tf
+            return tf.data.Dataset.from_tensor_slices(self._data)
 
-                batch = {}
-                for key in self._data:
-                    batch[key] = self._data[key][batch_perm]
-                yield batch
 
     # The resolution parameter can be either 20 or 32.
     def __init__(self, resolution):
@@ -57,7 +49,7 @@ class ModelNet:
         modelnet = np.load(path)
         for dataset in ["train", "dev", "test"]:
             data = dict((key[len(dataset) + 1:], modelnet[key]) for key in modelnet if key.startswith(dataset))
-            setattr(self, dataset, self.Dataset(data, shuffle_batches=dataset == "train"))
+            setattr(self, dataset, self.Dataset(data))
 
     # Evaluation infrastructure.
     @staticmethod

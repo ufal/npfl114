@@ -35,13 +35,14 @@ class CAGS:
         return example
 
     def __init__(self):
-        for dataset in ["train", "dev", "test"]:
+        for dataset, size in [("train", 2142), ("dev", 306), ("test", 612)]:
             path = "cags.{}.tfrecord".format(dataset)
             if not os.path.exists(path):
                 print("Downloading file {}...".format(path), file=sys.stderr)
                 urllib.request.urlretrieve("{}/{}".format(self._URL, path), filename=path)
 
-            setattr(self, dataset, tf.data.TFRecordDataset(path).map(CAGS.parse))
+            setattr(self, dataset,
+                    tf.data.TFRecordDataset(path).map(CAGS.parse).apply(tf.data.experimental.assert_cardinality(size)))
 
     # Keras IoU metric
     class MaskIoUMetric(tf.metrics.Mean):

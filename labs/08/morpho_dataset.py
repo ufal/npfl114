@@ -1,7 +1,9 @@
+import itertools
 import os
 import sys
 import urllib.request
 import zipfile
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
 
 import tensorflow as tf
 
@@ -44,42 +46,58 @@ class MorphoDataset:
     class Dataset:
         def __init__(self, data_file, train=None, max_sentences=None):
             # Create factors
-            self.forms = MorphoDataset.Factor()
-            self.lemmas = MorphoDataset.Factor()
-            self.tags = MorphoDataset.Factor()
-            factors = [self.forms, self.lemmas, self.tags]
+            self._factors = (MorphoDataset.Factor(), MorphoDataset.Factor(), MorphoDataset.Factor())
+            self._factors_tensors = None
 
             # Load the data
-            self.size = 0
+            self._size = 0
             in_sentence = False
             for line in data_file:
                 line = line.decode("utf-8").rstrip("\r\n")
                 if line:
                     if not in_sentence:
-                        for factor in factors:
+                        for factor in self._factors:
                             factor.strings.append([])
-                        self.size += 1
+                        self._size += 1
 
                     columns = line.split("\t")
-                    assert len(columns) == len(factors)
-                    for column, factor in zip(columns, factors):
+                    assert len(columns) == len(self._factors)
+                    for column, factor in zip(columns, self._factors):
                         factor.strings[-1].append(column)
 
                     in_sentence = True
                 else:
                     in_sentence = False
-                    if max_sentences is not None and self.size >= max_sentences:
+                    if max_sentences is not None and self._size >= max_sentences:
                         break
 
             # Finalize the mappings
-            for factor, train_factor in zip(factors, [train.forms, train.lemmas, train.tags] if train else [None] * 3):
-                factor.finalize(train_factor)
+            for i, factor in enumerate(self._factors):
+                factor.finalize(train._factors[i] if train else None)
 
-            # Create the dataset
-            self.dataset = tf.data.Dataset.from_generator(
-                lambda: (tuple(factor.strings[i] for factor in factors) for i in range(self.size)),
-                output_signature=(tf.TensorSpec([None], tf.string),) * 3,
-            ).cache()
+        @property
+        def size(self):
+            return self._size
+
+        @property
+        def forms(self):
+            return self._factors[0]
+
+        @property
+        def lemmas(self):
+            return self._factors[1]
+
+        @property
+        def tags(self):
+            return self._factors[2]
+
+        @property
+        def dataset(self):
+            if self._factors_tensors is None:
+                self._factors_tensors = tuple(
+                    tf.RaggedTensor.from_row_lengths(list(itertools.chain(*factor.strings)), list(map(len, factor.strings)))
+                    for factor in self._factors)
+            return tf.data.Dataset.from_tensor_slices(self._factors_tensors)
 
     def __init__(self, dataset, max_sentences=None):
 
