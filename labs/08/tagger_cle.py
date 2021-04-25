@@ -70,8 +70,9 @@ class Network(tf.keras.Model):
         # TODO: Concatenate the word-level embeddings and the computed character-level WEs
         # (in this order).
 
-        # TODO(tagger_we): Create specified `args.rnn_cell` RNN cell (LSTM, GRU) with
-        # dimension `args.rnn_cell_dim` and apply it in a bidirectional way on
+        # TODO(tagger_we): Create the specified `args.rnn_cell` RNN cell (LSTM, GRU) with
+        # dimension `args.rnn_cell_dim`. The cell should produce an output for every
+        # sequence element. Then apply it in a bidirectional way on
         # the word representations, **summing** the outputs of forward and backward RNNs.
 
         # TODO(tagge_we): Add a softmax classification layer into as many classes as there are unique

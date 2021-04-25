@@ -35,7 +35,8 @@ class Network(tf.keras.Model):
         # provides a `vocab_size()` call returning the number of unique words in the mapping.
 
         # TODO: Create the specified `args.rnn_cell` RNN cell (LSTM, GRU) with
-        # dimension `args.rnn_cell_dim` and apply it in a bidirectional way on
+        # dimension `args.rnn_cell_dim`. The cell should produce an output for every
+        # sequence element. Then apply it in a bidirectional way on
         # the embedded words, **summing** the outputs of forward and backward RNNs.
 
         # TODO: Add a softmax classification layer into as many classes as there are unique
