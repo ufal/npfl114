@@ -60,7 +60,7 @@ class Network(tf.keras.Model):
         x, y = data
         with tf.GradientTape() as tape:
             y_pred = self(x, training=True)
-            loss = self.compiled_loss(y.values, y_pred.values)
+            loss = self.compiled_loss(y.values, y_pred.values, regularization_losses=self.losses)
         self.optimizer.minimize(loss, self.trainable_variables, tape=tape)
         self.compiled_metrics.update_state(y.values, y_pred.values)
         return {m.name: m.result() for m in self.metrics}
@@ -69,7 +69,7 @@ class Network(tf.keras.Model):
     def test_step(self, data):
         x, y = data
         y_pred = self(x, training=False)
-        loss = self.compiled_loss(y.values, y_pred.values)
+        loss = self.compiled_loss(y.values, y_pred.values, regularization_losses=self.losses)
         self.compiled_metrics.update_state(y.values, y_pred.values)
         return {m.name: m.result() for m in self.metrics}
 
