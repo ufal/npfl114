@@ -23,3 +23,4 @@
   - Output activation functions [Section 6.2.2 of DLB, excluding Section 6.2.2.4]
   - Hidden activation functions [Section 6.3 of DLB, excluding Section 6.3.3]
   - Basic network architectures [Section 6.4 of DLB, excluding Section 6.4.2]
+- Universal approximation theorem
