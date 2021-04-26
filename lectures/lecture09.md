@@ -2,6 +2,7 @@
 #### Date: Apr 26
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/slides/?09
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/slides.pdf/npfl114-09.pdf,PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-09-czech.mp4,CZ Lecture
 
 - Conditional Random Fields (CRF) loss [Sections 3.4.2 and A.7 of [Natural Language Processing (Almost) from Scratch](http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf)]
 - Connectionist Temporal Classification (CTC) loss [[Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks](https://www.cs.toronto.edu/~graves/icml_2006.pdf)]
