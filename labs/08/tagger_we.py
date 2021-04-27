@@ -106,9 +106,13 @@ def main(args):
     def tagging_dataset(forms, lemmas, tags):
         raise NotImplementedError()
 
-    train = morpho.train.dataset.map(tagging_dataset).apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
-    dev = morpho.dev.dataset.map(tagging_dataset).apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
-    test = morpho.test.dataset.map(tagging_dataset).apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
+    def create_dataset(name):
+        dataset = getattr(morpho, name).dataset
+        dataset = dataset.map(tagging_dataset)
+        dataset = dataset.shuffle(len(dataset), seed=args.seed) if name == "train" else dataset
+        dataset = dataset.apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
+        return dataset
+    train, dev, test = create_dataset("train"), create_dataset("dev"), create_dataset("test")
 
     network.fit(train, epochs=args.epochs, validation_data=dev, callbacks=[network.tb_callback])
 

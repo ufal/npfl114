@@ -23,20 +23,20 @@ batch using [tf.RaggedTensor](https://www.tensorflow.org/guide/ragged_tensor)s.
 _Note that your results may be slightly different, depending on your CPU type and whether you use GPU._
 - `python3 tagger_we.py --rnn_cell=LSTM --rnn_cell_dim=16`
 ```
-Epoch 1/5 loss: 2.2169 - accuracy: 0.3791 - val_loss: 1.0367 - val_accuracy: 0.7134
-Epoch 2/5 loss: 0.7663 - accuracy: 0.8024 - val_loss: 0.5674 - val_accuracy: 0.8317
-Epoch 3/5 loss: 0.2492 - accuracy: 0.9591 - val_loss: 0.4647 - val_accuracy: 0.8536
-Epoch 4/5 loss: 0.1090 - accuracy: 0.9877 - val_loss: 0.4350 - val_accuracy: 0.8522
-Epoch 5/5 loss: 0.0613 - accuracy: 0.9929 - val_loss: 0.4249 - val_accuracy: 0.8549
-loss: 0.4313 - accuracy: 0.8561
+Epoch 1/5 loss: 2.1814 - accuracy: 0.3864 - val_loss: 0.9151 - val_accuracy: 0.7349
+Epoch 2/5 loss: 0.5976 - accuracy: 0.8584 - val_loss: 0.4956 - val_accuracy: 0.8476
+Epoch 3/5 loss: 0.1757 - accuracy: 0.9760 - val_loss: 0.4173 - val_accuracy: 0.8599
+Epoch 4/5 loss: 0.0828 - accuracy: 0.9878 - val_loss: 0.4051 - val_accuracy: 0.8612
+Epoch 5/5 loss: 0.0556 - accuracy: 0.9902 - val_loss: 0.4099 - val_accuracy: 0.8624
+loss: 0.4245 - accuracy: 0.8609
 ```
 - `python3 tagger_we.py --rnn_cell=GRU --rnn_cell_dim=16`
 ```
-Epoch 1/5 loss: 1.9589 - accuracy: 0.4997 - val_loss: 0.5859 - val_accuracy: 0.8221
-Epoch 2/5 loss: 0.3239 - accuracy: 0.9230 - val_loss: 0.3844 - val_accuracy: 0.8455
-Epoch 3/5 loss: 0.0672 - accuracy: 0.9884 - val_loss: 0.3782 - val_accuracy: 0.8485
-Epoch 4/5 loss: 0.0383 - accuracy: 0.9922 - val_loss: 0.3822 - val_accuracy: 0.8517
-Epoch 5/5 loss: 0.0281 - accuracy: 0.9934 - val_loss: 0.3891 - val_accuracy: 0.8570
-loss: 0.4329 - accuracy: 0.8457
+Epoch 1/5 loss: 1.8776 - accuracy: 0.5072 - val_loss: 0.5367 - val_accuracy: 0.8179
+Epoch 2/5 loss: 0.2400 - accuracy: 0.9546 - val_loss: 0.3917 - val_accuracy: 0.8402
+Epoch 3/5 loss: 0.0646 - accuracy: 0.9883 - val_loss: 0.4043 - val_accuracy: 0.8424
+Epoch 4/5 loss: 0.0409 - accuracy: 0.9906 - val_loss: 0.4060 - val_accuracy: 0.8438
+Epoch 5/5 loss: 0.0343 - accuracy: 0.9910 - val_loss: 0.4015 - val_accuracy: 0.8499
+loss: 0.4541 - accuracy: 0.8325
 ```
 #### Examples End:
