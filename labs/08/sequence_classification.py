@@ -28,7 +28,7 @@ parser.add_argument("--train_sequences", default=10000, type=int, help="Number o
 # Dataset for generating sequences, with labels predicting whether the cumulative sum
 # is odd/even.
 class Dataset:
-    def __init__(self, sequences_num, sequence_length, sequence_dim, seed, shuffle_batches=True):
+    def __init__(self, sequences_num, sequence_length, sequence_dim, seed):
         sequences = np.zeros([sequences_num, sequence_length, sequence_dim], np.int32)
         labels = np.zeros([sequences_num, sequence_length, 1], np.bool)
         generator = np.random.RandomState(seed)
@@ -97,8 +97,8 @@ def main(args):
     ))
 
     # Create the data
-    train = Dataset(args.train_sequences, args.sequence_length, args.sequence_dim, seed=42, shuffle_batches=True)
-    test = Dataset(args.test_sequences, args.sequence_length, args.sequence_dim, seed=43, shuffle_batches=False)
+    train = Dataset(args.train_sequences, args.sequence_length, args.sequence_dim, seed=42)
+    test = Dataset(args.test_sequences, args.sequence_length, args.sequence_dim, seed=43)
 
     # Create the network and train
     network = Network(args)
