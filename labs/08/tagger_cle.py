@@ -72,7 +72,7 @@ class Network(tf.keras.Model):
 
         # TODO(tagger_we): Create the specified `args.rnn_cell` RNN cell (LSTM, GRU) with
         # dimension `args.rnn_cell_dim`. The cell should produce an output for every
-        # sequence element. Then apply it in a bidirectional way on
+        # sequence element (so a 3D output). Then apply it in a bidirectional way on
         # the word representations, **summing** the outputs of forward and backward RNNs.
 
         # TODO(tagge_we): Add a softmax classification layer into as many classes as there are unique
@@ -80,6 +80,8 @@ class Network(tf.keras.Model):
         # the Dense layer to a ragged tensor, we need to wrap the Dense layer in
         # a tf.keras.layers.TimeDistributed.
 
+        # Check that the created predictions are a 3D tensor.
+        assert predictions.shape.rank == 3
         super().__init__(inputs=words, outputs=predictions)
         self.compile(optimizer=tf.optimizers.Adam(),
                      loss=tf.losses.SparseCategoricalCrossentropy(),
@@ -134,8 +136,8 @@ def main(args):
     network = Network(args, morpho.train)
 
     # TODO(tagger_we): Construct dataset for training, which should contain pairs of
-    # - ragged tensor of string words (forms) as input
-    # - ragged tensor of integral tag ids as targets.
+    # - tensor of string words (forms) as input
+    # - tensor of integral tag ids as targets.
     # To create the identifiers, use the `word_mapping` of `morpho.train.tags`.
     def tagging_dataset(forms, lemmas, tags):
         raise NotImplementedError()
