@@ -62,6 +62,8 @@ class Network(tf.keras.Model):
         x, y = data
         with tf.GradientTape() as tape:
             y_pred = self(x, training=True)
+            # Check that both the gold data and predictions are RaggedTensors.
+            assert isinstance(y_pred, tf.RaggedTensor) and isinstance(y, tf.RaggedTensor)
             loss = self.compiled_loss(y.values, y_pred.values, regularization_losses=self.losses)
         self.optimizer.minimize(loss, self.trainable_variables, tape=tape)
         self.compiled_metrics.update_state(y.values, y_pred.values)
