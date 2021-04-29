@@ -53,7 +53,7 @@ def main(args):
         for predicted_classes, predicted_bboxes in ...:
             output = []
             for label, bbox in zip(predicted_classes, predicted_bboxes):
-                output += [label] + bbox
+                output += [label] + list(bbox)
             print(*output, file=predictions_file)
 
 if __name__ == "__main__":
