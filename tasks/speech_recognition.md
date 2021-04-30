@@ -30,4 +30,6 @@ you can evaluate the predictions as usual using the [common_voice_cs.py](https:/
 module, either by running with `--evaluate=path` arguments, or using its
 `evaluate_file` method.
 
-The template will appear soon.
+Start with the [speech_recognition.py](https://github.com/ufal/npfl114/tree/master/labs/09/speech_recognition.py)
+template which contains instructions for using the CTC loss and generates the
+test set annotation in the required format.
