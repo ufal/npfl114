@@ -47,6 +47,8 @@ class CAGS:
     # Keras IoU metric
     class MaskIoUMetric(tf.metrics.Mean):
         """MaskIoUMetric computes IoU for CAGS dataset masks predicted by binary classification"""
+        def __init__(self, name="iou", dtype=None):
+            super().__init__(name, dtype)
 
         def update_state(self, y_true, y_pred, sample_weight=None):
             y_true_mask = tf.reshape(tf.math.round(y_true) == 1, [-1, CAGS.H * CAGS.W])
