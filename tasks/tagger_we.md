@@ -21,7 +21,7 @@ batch using [tf.RaggedTensor](https://www.tensorflow.org/guide/ragged_tensor)s.
 
 #### Examples Start: tagger_we_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use GPU._
-- `python3 tagger_we.py --rnn_cell=LSTM --rnn_cell_dim=16`
+- `python3 tagger_we.py --max_sentences=5000 --rnn_cell=LSTM --rnn_cell_dim=16`
 ```
 Epoch 1/5 loss: 2.1814 - accuracy: 0.3864 - val_loss: 0.9151 - val_accuracy: 0.7349
 Epoch 2/5 loss: 0.5976 - accuracy: 0.8584 - val_loss: 0.4956 - val_accuracy: 0.8476
@@ -30,7 +30,7 @@ Epoch 4/5 loss: 0.0828 - accuracy: 0.9878 - val_loss: 0.4051 - val_accuracy: 0.8
 Epoch 5/5 loss: 0.0556 - accuracy: 0.9902 - val_loss: 0.4099 - val_accuracy: 0.8624
 loss: 0.4245 - accuracy: 0.8609
 ```
-- `python3 tagger_we.py --rnn_cell=GRU --rnn_cell_dim=16`
+- `python3 tagger_we.py --max_sentences=5000 --rnn_cell=GRU --rnn_cell_dim=16`
 ```
 Epoch 1/5 loss: 1.8776 - accuracy: 0.5072 - val_loss: 0.5367 - val_accuracy: 0.8179
 Epoch 2/5 loss: 0.2400 - accuracy: 0.9546 - val_loss: 0.3917 - val_accuracy: 0.8402

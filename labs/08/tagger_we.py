@@ -14,7 +14,7 @@ parser = argparse.ArgumentParser()
 # These arguments will be set appropriately by ReCodEx, even if you change them.
 parser.add_argument("--batch_size", default=10, type=int, help="Batch size.")
 parser.add_argument("--epochs", default=5, type=int, help="Number of epochs.")
-parser.add_argument("--max_sentences", default=5000, type=int, help="Maximum number of sentences to load.")
+parser.add_argument("--max_sentences", default=None, type=int, help="Maximum number of sentences to load.")
 parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
 parser.add_argument("--rnn_cell", default="LSTM", type=str, help="RNN cell type.")
 parser.add_argument("--rnn_cell_dim", default=64, type=int, help="RNN cell dimension.")
