@@ -126,6 +126,18 @@
   - you can rerun with `export TF_CPP_MIN_LOG_LEVEL=0` environmental variable,
     which increases verbosity of the log messages.
 
+- _Slow RNNs when using RaggedTensors_
+
+  Unfortunately, the current LSTM/GRU implementation
+  [does not use cuDNN acceleration when processing RaggedTensors](https://github.com/tensorflow/tensorflow/issues/48838).
+  However, you can get around it by manually converting the RaggedTensors to
+  dense before/after the layer, so if `inputs` are `tf.RaggedTensor` and `rnn`
+  a LSTM/GRU layer, you can use the following workaround:
+  ```python
+  outputs = rnn(inputs.to_tensor(), mask=tf.sequence_mask(inputs.row_lengths()))
+  outputs = tf.RaggedTensor.from_tensor(outputs, inputs.row_lengths())
+  ```
+
 ### TOCEntry: tf.data
 
 - _How to look what is in a `tf.data.Dataset`?_
