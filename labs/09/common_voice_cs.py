@@ -7,6 +7,8 @@ import numpy as np
 import tensorflow as tf
 
 class CommonVoiceCs:
+    MFCC_DIM = 13
+
     LETTERS = [
         "[UNK]", " ", "a", "á", "ä", "b", "c", "č", "d", "ď", "e", "é", "è",
         "ě", "f", "g", "h", "i", "í", "ï", "j", "k", "l", "m", "n", "ň", "o",
@@ -21,7 +23,7 @@ class CommonVoiceCs:
         example = tf.io.parse_single_example(example, {
             "mfccs": tf.io.VarLenFeature(tf.float32),
             "sentence": tf.io.FixedLenFeature([], tf.string)})
-        example["mfccs"] = tf.reshape(tf.cast(tf.sparse.to_dense(example["mfccs"]), tf.float32), [-1, 13])
+        example["mfccs"] = tf.reshape(tf.cast(tf.sparse.to_dense(example["mfccs"]), tf.float32), [-1, self.MFCC_DIM])
         return example
 
     def __init__(self):
@@ -64,8 +66,8 @@ class CommonVoiceCs:
         # Compute a stabilized log to get log-magnitude mel-scale spectrograms.
         log_mel_spectrograms = tf.math.log(mel_spectrograms + 1e-6)
 
-        # Compute MFCCs from log_mel_spectrograms and take the first 13.
-        mfccs = tf.signal.mfccs_from_log_mel_spectrograms(log_mel_spectrograms)[:, :13]
+        # Compute MFCCs from log_mel_spectrograms and take the first `CommonVoiceCs.MFCC_DIM`s.
+        mfccs = tf.signal.mfccs_from_log_mel_spectrograms(log_mel_spectrograms)[:, :CommonVoiceCs.MFCC_DIM]
 
         return mfccs
 
