@@ -26,6 +26,23 @@ parser.add_argument("--word_masking", default=0.0, type=float, help="Mask words 
 # If you add more arguments, ReCodEx will keep them with your default values.
 
 class Network(tf.keras.Model):
+    # A layer setting given rate of elements to zero.
+    class MaskElements(tf.keras.layers.Layer):
+        def __init__(self, rate):
+            super().__init__()
+            self._rate = rate
+        def get_config(self):
+            return {"rate": self._rate}
+        def call(self, inputs, training):
+            if training:
+                # TODO: Generate as many random uniform numbers in range [0, 1) as there are
+                # values in `tf.RaggedTensor` `inputs` using a single `tf.random.uniform` call.
+                # Then, set the values in `inputs` to zero if the corresponding generated
+                # random number is less than `self._rate`.
+                raise NotImplementedError()
+            else:
+                return inputs
+
     def __init__(self, args, train):
         # Implement a one-layer RNN network. The input `words` is
         # a RaggedTensor of strings, each batch example being a list of words.
@@ -36,11 +53,14 @@ class Network(tf.keras.Model):
         # TODO: With a probability of `args.word_masking`, replace the input word by an
         # unknown word (which has index 0).
         #
-        # Use a `tf.keras.layers.Dropout` to achieve this, even if it is a bit
-        # hacky, because Dropout cannot process integral inputs. One way is to
-        # use `tf.ones_like` to create a ragged tensor of float32 ones with the same
-        # shape as `hidden`, pass them through a dropout layer with `args.word_masking`
-        # rate, and finally set the input word ids to 0 where the result of dropout is zero.
+        # There are two approaches you can use:
+        # 1) use the above defined `MaskElements` layer, in which you need to implement
+        #    one TODO note. If you do not want to implement it, you can instead
+        # 2) use a `tf.keras.layers.Dropout` to achieve this, even if it is a bit
+        #    hacky, because Dropout cannot process integral inputs. Start by using
+        #    `tf.ones_like` to create a ragged tensor of float32 ones with the same
+        #    structre as `hidden`, pass them through a dropout layer with `args.word_masking`
+        #    rate, and finally set the input word ids to 0 where the result of dropout is zero.
 
         # TODO(tagger_we): Embed input words with dimensionality `args.we_dim`. Note that the `word_mapping`
         # provides a `vocab_size()` call returning the number of unique words in the mapping.
