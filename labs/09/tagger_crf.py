@@ -127,8 +127,8 @@ class Network(tf.keras.Model):
 
         def classify_spans(self, y_true, y_pred, sentence_limits):
             sentence_limits = set(sentence_limits)
-            gold_spans, prediction_spans = set(), set()
-            for spans, labels in [(gold_spans, y_true), (prediction_spans, y_pred)]:
+            spans_true, spans_pred = set(), set()
+            for spans, labels in [(spans_true, y_true), (spans_pred, y_pred)]:
                 span = None
                 for i, label in enumerate(self._tags[label] for label in labels):
                     if span and (label.startswith(("O", "B")) or i in sentence_limits):
@@ -138,7 +138,7 @@ class Network(tf.keras.Model):
                         span, start = label[2:], i
                 if span:
                     spans.add((start, len(labels), span))
-            return np.array([len(gold_spans & prediction_spans), len(prediction_spans - gold_spans), len(gold_spans - prediction_spans)])
+            return np.array([len(spans_true & spans_pred), len(spans_pred - spans_true), len(spans_true - spans_pred)], np.int64)
 
         def update_state(self, y_true, y_pred, sample_weight=None):
             assert isinstance(y_true, tf.RaggedTensor) and isinstance(y_pred, tf.RaggedTensor)
