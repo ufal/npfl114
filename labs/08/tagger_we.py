@@ -40,7 +40,7 @@ class Network(tf.keras.Model):
         # the embedded words, **summing** the outputs of forward and backward RNNs.
 
         # TODO: Add a softmax classification layer into as many classes as there are unique
-        # tags in the `word_mapping` of `train tags`. However, because we are applying the
+        # tags in the `word_mapping` of `train.tags`. However, because we are applying the
         # the Dense layer to a ragged tensor, we need to wrap the Dense layer in
         # a tf.keras.layers.TimeDistributed.
 
