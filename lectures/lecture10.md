@@ -6,3 +6,4 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-10-english.mp4,EN Lecture
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn
+#### Lecture assignment: lemmatizer_competition
