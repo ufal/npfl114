@@ -104,8 +104,8 @@ class Network(tf.keras.Model):
             # embedded using self.lemmatizer.target_embedding
 
             # TODO: Define `states` as the representation of the first character
-            #   in `source_states`. The idea is that it is most relevant for generating
-            #   the first letter and contains all following characters via the backward RNN.
+            # in `source_states`. The idea is that it is most relevant for generating
+            # the first letter and contains all following characters via the backward RNN.
 
             # TODO: Pass `inputs` through `self.with_attention(inputs, states)`.
 
@@ -145,12 +145,12 @@ class Network(tf.keras.Model):
 
         def step(self, time, inputs, states, training):
             # TODO(lemmatizer_noattn): Pass `inputs` and `[states]` through self.lemmatizer.target_rnn_cell,
-            #   which returns `(outputs, [states])`.
+            # which returns `(outputs, [states])`.
 
             # TODO(lemmatizer_noattn): Overwrite `outputs` by passing them through self.lemmatizer.target_output_layer,
 
             # TODO(lemmatizer_noattn): Overwrite `outputs` by passing them through `tf.argmax` on suitable axis and with
-            #   `output_type=tf.int32` parameter.
+            # `output_type=tf.int32` parameter.
 
             # TODO(lemmatizer_noattn): Define `next_inputs` by embedding the `outputs`
 

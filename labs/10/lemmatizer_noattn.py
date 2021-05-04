@@ -115,12 +115,12 @@ class Network(tf.keras.Model):
 
         def step(self, time, inputs, states, training):
             # TODO(DecoderTraining): Pass `inputs` and `[states]` through self.lemmatizer.target_rnn_cell,
-            #   which returns `(outputs, [states])`.
+            # which returns `(outputs, [states])`.
 
             # TODO(DecoderTraining): Overwrite `outputs` by passing them through self.lemmatizer.target_output_layer,
 
             # TODO: Overwrite `outputs` by passing them through `tf.argmax` on suitable axis and with
-            #   `output_type=tf.int32` parameter.
+            # `output_type=tf.int32` parameter.
 
             # TODO: Define `next_inputs` by embedding the `outputs`
 
