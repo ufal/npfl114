@@ -28,10 +28,11 @@ class MorphoDataset:
     _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/datasets/"
 
     class Factor:
+        BOW, EOW = 1, 2
         def __init__(self):
             self.strings = []
 
-        def finalize(self, train=None):
+        def finalize(self, train=None, add_bow_eow=False):
             # Create mappings
             if train:
                 self.word_mapping = train.word_mapping
@@ -41,10 +42,14 @@ class MorphoDataset:
                 self.word_mapping.adapt(sorted(set(string for sentence in self.strings for string in sentence)))
 
                 self.char_mapping = tf.keras.layers.experimental.preprocessing.StringLookup(mask_token=None)
-                self.char_mapping.adapt(sorted(set(char for sentence in self.strings for string in sentence for char in string)))
+                if add_bow_eow:
+                    self.char_mapping.set_vocabulary(
+                        ["[BOW]", "[EOW]"] + sorted(set(char for sentence in self.strings for string in sentence for char in string)))
+                else:
+                    self.char_mapping.adapt(sorted(set(char for sentence in self.strings for string in sentence for char in string)))
 
     class Dataset:
-        def __init__(self, data_file, train=None, max_sentences=None):
+        def __init__(self, data_file, train=None, max_sentences=None, add_bow_eow=False):
             # Create factors
             self._factors = (MorphoDataset.Factor(), MorphoDataset.Factor(), MorphoDataset.Factor())
             self._factors_tensors = None
@@ -73,7 +78,7 @@ class MorphoDataset:
 
             # Finalize the mappings
             for i, factor in enumerate(self._factors):
-                factor.finalize(train._factors[i] if train else None)
+                factor.finalize(train._factors[i] if train else None, add_bow_eow)
 
         @property
         def size(self):
@@ -99,7 +104,7 @@ class MorphoDataset:
                     for factor in self._factors)
             return tf.data.Dataset.from_tensor_slices(self._factors_tensors)
 
-    def __init__(self, dataset, max_sentences=None):
+    def __init__(self, dataset, max_sentences=None, add_bow_eow=False):
 
         path = "{}.zip".format(dataset)
         if not os.path.exists(path):
@@ -111,7 +116,7 @@ class MorphoDataset:
                 with zip_file.open("{}_{}.txt".format(os.path.splitext(path)[0], dataset), "r") as dataset_file:
                     setattr(self, dataset, self.Dataset(dataset_file,
                                                         train=self.train if dataset != "train" else None,
-                                                        max_sentences=max_sentences))
+                                                        max_sentences=max_sentences, add_bow_eow=add_bow_eow))
 
     # Evaluation infrastructure.
     @staticmethod
