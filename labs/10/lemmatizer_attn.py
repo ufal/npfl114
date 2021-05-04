@@ -137,11 +137,8 @@ class Network(tf.keras.Model):
             raise NotImplementedError()
 
         def initialize(self, layer_inputs, initial_state=None, mask=None):
-            self.source_states = layer_inputs
-
-            # TODO(DecoderTraining): Use the same initialization as in DecoderTraining.
-
-            return finished, inputs, states
+            # Use `initialize` from the DecoderTraining, passing None as targets
+            return super().initialize([layer_inputs, None], initial_state)
 
         def step(self, time, inputs, states, training):
             # TODO(lemmatizer_noattn): Pass `inputs` and `[states]` through self.lemmatizer.target_rnn_cell,
