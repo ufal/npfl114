@@ -17,7 +17,7 @@ will be distributed depending on relative ordering of your solutions. Lastly,
 state-of-the-art of **97.86%**.
 
 You can start with the
-[lemmatizer_competition.py](https://github.com/ufal/npfl114/tree/master/labs/08/lemmatizer_competition.py)
+[lemmatizer_competition.py](https://github.com/ufal/npfl114/tree/master/labs/10/lemmatizer_competition.py)
 template, which among others generates test set annotations in the required format. Note that
 you can evaluate the predictions as usual using the [morpho_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/10/morpho_dataset.py)
 module, either by running with `--task=lemmatizer --evaluate=path` arguments, or using its
