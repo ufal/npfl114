@@ -119,7 +119,8 @@ class Network(tf.keras.Model):
 
             # TODO(lemmatizer_noattn): Define `next_inputs` by embedding `time`-th chars from `self.targets`.
 
-            # TODO(lemmatizer_noattn): Define `finished` as True if `time`-th char from `self.targets` is EOW, False otherwise.
+            # TODO(lemmatizer_noattn): Define `finished` as True if `time`-th char from `self.targets` is
+            # `MorphoDataset.Factor.EOW`, False otherwise.
 
             # TODO: Pass `next_inputs` through `self.with_attention(next_inputs, states)`.
 
@@ -151,7 +152,7 @@ class Network(tf.keras.Model):
 
             # TODO(lemmatizer_noattn): Define `next_inputs` by embedding the `outputs`
 
-            # TODO(lemmatizer_noattn): Define `finished` as True if `outputs` are EOW, False otherwise.
+            # TODO(lemmatizer_noattn): Define `finished` as True if `outputs are `MorphoDataset.Factor.EOW`, False otherwise.
 
             # TODO(DecoderTraining): Pass `next_inputs` through `self.with_attention(next_inputs, states)`.
 
@@ -191,7 +192,7 @@ class Network(tf.keras.Model):
             #   must be at most 10 characters longer than the longest input.
             # Then run it on `source_states`, storing the first result
             # in `output_layer` and the third result in `output_lens`.
-            # Finally, because we do not want to return the [EOW] symbols,
+            # Finally, because we do not want to return the `[EOW]` symbols,
             # decrease `output_lens` by one.
             raise NotImplementedError()
 

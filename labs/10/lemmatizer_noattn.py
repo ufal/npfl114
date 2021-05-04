@@ -91,7 +91,8 @@ class Network(tf.keras.Model):
 
             # TODO: Define `next_inputs` by embedding `time`-th chars from `self.targets`.
 
-            # TODO: Define `finished` as True if `time`-th char from `self.targets` is EOW, False otherwise.
+            # TODO: Define `finished` as True if `time`-th char from `self.targets` is
+            # `MorphoDataset.Factor.EOW`, False otherwise.
 
             return outputs, states, next_inputs, finished
 
@@ -121,7 +122,7 @@ class Network(tf.keras.Model):
 
             # TODO: Define `next_inputs` by embedding the `outputs`
 
-            # TODO: Define `finished` as True if `outputs` are EOW, False otherwise.
+            # TODO: Define `finished` as True if `outputs are `MorphoDataset.Factor.EOW`, False otherwise.
 
             return outputs, states, next_inputs, finished
 
@@ -156,7 +157,7 @@ class Network(tf.keras.Model):
             #   must be at most 10 characters longer than the longest input.
             # Then run it on `source_states`, storing the first result
             # in `output_layer` and the third result in `output_lens`.
-            # Finally, because we do not want to return the [EOW] symbols,
+            # Finally, because we do not want to return the `[EOW]` symbols,
             # decrease `output_lens` by one.
             raise NotImplementedError()
 
