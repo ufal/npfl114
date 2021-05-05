@@ -212,7 +212,21 @@
   have no static shape information and you need to set it manually – ideally
   using [tf.ensure_shape](https://www.tensorflow.org/api_docs/python/tf/ensure_shape),
   which both sets the static shape and verifies during execution that the real
-  shape matches it; see the next question for an example.
+  shape mathes it.
+
+  For example, to use the `bboxes_training` method from
+  [bboxes_utils](#bboxes_utils), you could proceed as follows:
+
+  ```python
+  anchors = np.array(...)
+
+  def prepare_data(example):
+      anchor_classes, anchor_bboxes = tf.numpy_function(
+          bboxes_utils.bboxes_training, [anchors, example["classes"], example["bboxes"], 0.5], (tf.int32, tf.float32))
+      anchor_classes = tf.ensure_shape(anchor_classes, [len(anchors)])
+      anchor_bboxes = tf.ensure_shape(anchor_bboxes, [len(anchors), 4])
+      ...
+  ```
 
 - _How to use `ImageDataGenerator` in `tf.data.Dataset.map`?_
 
@@ -227,7 +241,6 @@
           tf.numpy_function(train_generator.random_transform, [image], tf.float32),
           image.shape
       ), label
-
   dataset.map(augment)
   ```
 
