@@ -94,7 +94,7 @@ class Network(tf.keras.Model):
         #     tf.RaggedTensor.from_tensor(gold_labels.to_tensor()[:, 1:], gold_labels.row_lengths() - 1)
         #
         # - To index (even ragged) tensors, `tf.gather` and `tf.gather_nd` can be used.
-        #   If is useful fo pay attetion to the `batch_dims` argument of these calls.
+        #   If is useful fo pay attention to the `batch_dims` argument of these calls.
         raise NotImplementedError()
 
     def crf_decode(self, logits):
