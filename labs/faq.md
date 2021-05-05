@@ -126,17 +126,37 @@
   - you can rerun with `export TF_CPP_MIN_LOG_LEVEL=0` environmental variable,
     which increases verbosity of the log messages.
 
-- _Slow RNNs when using RaggedTensors_
+### TOCEntry: tf.ragged
+
+- _Bug when RaggedTensors are used in backward/bidirectional direction and
+  whole sequence is returned_
+
+  In TF 2.4, **RaggedTensors processed by backward (and therefore also by
+  bidirectional) RNNs produce bad results when whole sequences are returned**.
+  (Producing only the last output or processing in forward direction is fine.)
+  The problem has been [fixed in the master branch](https://github.com/tensorflow/tensorflow/commit/da96383680c0a320c9551e020c26132ae5ebb024)
+  and [also in the TF 2.5 branch](https://github.com/tensorflow/tensorflow/pull/48887).
+
+  A workaround is to use the manual to/from dense tensor conversion described
+  in the next point.
+
+- _Slow RNNs when using RaggedTensors on GPU_
 
   Unfortunately, the current LSTM/GRU implementation
   [does not use cuDNN acceleration when processing RaggedTensors](https://github.com/tensorflow/tensorflow/issues/48838).
   However, you can get around it by manually converting the RaggedTensors to
-  dense before/after the layer, so if `inputs` are `tf.RaggedTensor` and `rnn`
-  a LSTM/GRU layer, you can use the following workaround:
-  ```python
-  outputs = rnn(inputs.to_tensor(), mask=tf.sequence_mask(inputs.row_lengths()))
-  outputs = tf.RaggedTensor.from_tensor(outputs, inputs.row_lengths())
-  ```
+  dense before/after the layer, so when `inputs` is a `tf.RaggedTensor`,
+  - if `rnn` is a `tf.keras.layers.LSTM/GRU/RNN/Bidirectional` layer producing
+    a **single output**, you can use the following workaround:
+    ```python
+    outputs = rnn(inputs.to_tensor(), mask=tf.sequence_mask(inputs.row_lengths()))
+    ```
+  - if `rnn` is a `tf.keras.layers.LSTM/GRU/RNN/Bidirectional` layer producing
+    a **whole sequence**, in addition to the above line you also need to convert
+    the dense result back to a RaggedTensor via for example:
+    ```python
+    outputs = tf.RaggedTensor.from_tensor(outputs, inputs.row_lengths())
+    ```
 
 ### TOCEntry: tf.data
 
