@@ -147,7 +147,7 @@ class Network(tf.keras.Model):
         if targets is not None:
             # TODO: Create a self.DecoderTraining by passing `self` to its constructor.
             # Then run it on `[source_states, target_charseqs]` input,
-            # storing the first result in `output_layer` and the third result in `output_lens`.
+            # storing the first result in `output` and the third result in `output_lens`.
             raise NotImplementedError()
         else:
             # TODO: Create a self.DecoderPrediction by using:
@@ -155,10 +155,10 @@ class Network(tf.keras.Model):
             # - `maximum_iterations=tf.cast(source_charseqs.bounding_shape(1) + 10, tf.int32)`
             #   as another argument, which indicates that the longest prediction
             #   must be at most 10 characters longer than the longest input.
-            # Then run it on `source_states`, storing the first result
-            # in `output_layer` and the third result in `output_lens`.
-            # Finally, because we do not want to return the `[EOW]` symbols,
-            # decrease `output_lens` by one.
+            #
+            # Then run it on `source_states`, storing the first result in `output`
+            # and the third result in `output_lens`. Finally, because we do not want
+            # to return the `[EOW]` symbols, decrease `output_lens` by one.
             raise NotImplementedError()
 
         # Reshape the output to the original matrix of lemmas
