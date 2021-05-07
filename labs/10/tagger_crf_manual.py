@@ -88,13 +88,16 @@ class Network(tf.keras.Model):
         #   specify a different initial state then all zeros, pass it as `initial_state` argument
         #   along with the inputs.
         #
-        # - RaggedTensors cannot be directly sliced in the ragged dimension. To do it anyway, convert
-        #   them to/from a dense tensor. For example, to skip the first word in gold_labels, you can call
+        # - RaggedTensors cannot be directly indexed in the ragged dimension, but they can be sliced.
+        #   For example, to skip the first word in gold_labels, you can call
+        #     gold_labels[:, 1:]
+        #   but to get the first word in gold_labels, you cannot use
+        #     gold_labels[:, 0]
+        #   If you really require indexing in the ragged dimension, convert them to dense tensors.
         #
-        #     tf.RaggedTensor.from_tensor(gold_labels.to_tensor()[:, 1:], gold_labels.row_lengths() - 1)
-        #
-        # - To index (even ragged) tensors, `tf.gather` and `tf.gather_nd` can be used.
-        #   If is useful fo pay attention to the `batch_dims` argument of these calls.
+        # - To index a (possible ragged) tensor with another (possible ragged) tensor,
+        #   `tf.gather` and `tf.gather_nd` can be used. If is useful fo pay attention
+        #   to the `batch_dims` argument of these calls.
         raise NotImplementedError()
 
     def crf_decode(self, logits):
