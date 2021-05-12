@@ -6,10 +6,11 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by de
 import numpy as np
 import transformers # transformers >= 4 is required
 
-import electra_czech_small_lc
+from electra_czech_small_lc import ElectraCzechSmallLc
 
-tokenizer = transformers.AutoTokenizer.from_pretrained("electra_czech_small_lc")
-model = transformers.TFAutoModel.from_pretrained("electra_czech_small_lc", output_hidden_states=True)
+electra = ElectraCzechSmallLc()
+tokenizer = electra.create_tokenizer()
+model = electra.create_model(output_hidden_states=True)
 
 dataset = [
     "Podmínkou koexistence jedince druhu Homo sapiens a společenství druhu Canis lupus je sjednocení akustické signální soustavy.",
