@@ -124,7 +124,7 @@ class Network(tf.keras.Model):
         # - when calling the layer, convert the ragged tensor `hidden` to a dense one,
         #   and also pass the following argument as a mask:
         #     `mask=tf.sequence_mask(hidden.row_lengths())`
-        # - finally, convert the result back to a dense tensor.
+        # - finally, convert the result back to a ragged tensor.
 
         # TODO(tagge_we): Add a softmax classification layer into as many classes as there are unique
         # tags in the `word_mapping` of `train.tags`. However, because we are applying the
