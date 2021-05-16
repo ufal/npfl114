@@ -103,9 +103,12 @@ class Network(tf.keras.Model):
 
             # TODO: Add the positional embeddings to the `inputs` and then
             # perform the given number of transformer layer, composed of
-            # a self-attention sub-layer followed by a FFN sub-layer. In each
-            # sub-layer, compute the corresponding operation followed by dropout,
-            # add the original sub-layer input and pass the result through LayerNorm.
+            # - a self-attention sub-layer, followed by
+            # - a FFN sub-layer.
+            # In each sub-layer, compute the corresponding operation followed
+            # by dropout, add the original sub-layer input and pass the result
+            # through LayerNorm. Note that the given `mask` should be passed
+            # to the self-attention operation to ignore the padding words.
             raise NotImplementedError()
 
     def __init__(self, args, train):
