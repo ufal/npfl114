@@ -59,8 +59,9 @@ class Network(tf.keras.Model):
         # 2) use a `tf.keras.layers.Dropout` to achieve this, even if it is a bit
         #    hacky, because Dropout cannot process integral inputs. Start by using
         #    `tf.ones_like` to create a ragged tensor of float32 ones with the same
-        #    structre as `hidden`, pass them through a dropout layer with `args.word_masking`
-        #    rate, and finally set the input word ids to 0 where the result of dropout is zero.
+        #    structure as the indices of the input words, pass them through a dropout layer
+        #    with `args.word_masking` rate, and finally set the input word ids to 0 where
+        #    the result of dropout is zero.
 
         # TODO(tagger_we): Embed input words with dimensionality `args.we_dim`. Note that the `word_mapping`
         # provides a `vocab_size()` call returning the number of unique words in the mapping.
