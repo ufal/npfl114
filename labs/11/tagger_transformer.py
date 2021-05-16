@@ -121,9 +121,9 @@ class Network(tf.keras.Model):
         # TODO: Call the Transformer layer:
         # - create a `Network.Transformer` layer, using suitable options from `args`
         #   (using `args.we_dim` for the `dim` argument),
-        # - when calling the layer, convert the ragged tensor `hidden` to a dense one,
-        #   and also pass the following argument as a mask:
-        #     `mask=tf.sequence_mask(hidden.row_lengths())`
+        # - when calling the layer, convert the ragged tensor with the input words embedding
+        #   to a dense one, and also pass the following argument as a mask:
+        #     `mask=tf.sequence_mask(ragged_tensor_with_input_words_embeddings.row_lengths())`
         # - finally, convert the result back to a ragged tensor.
 
         # TODO(tagge_we): Add a softmax classification layer into as many classes as there are unique
