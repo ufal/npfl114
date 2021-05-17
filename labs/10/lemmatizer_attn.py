@@ -119,8 +119,8 @@ class Network(tf.keras.Model):
 
             # TODO(lemmatizer_noattn): Define `next_inputs` by embedding `time`-th chars from `self.targets`.
 
-            # TODO(lemmatizer_noattn): Define `finished` as True if `time`-th char from `self.targets` is
-            # `MorphoDataset.Factor.EOW`, False otherwise.
+            # TODO(lemmatizer_noattn): Define `finished` as a vector of booleans; True if the corresponding
+            # `time`-th char from `self.targets` is `MorphoDataset.Factor.EOW`, False otherwise.
 
             # TODO: Pass `next_inputs` through `self.with_attention(next_inputs, states)`.
 
@@ -152,7 +152,8 @@ class Network(tf.keras.Model):
 
             # TODO(lemmatizer_noattn): Define `next_inputs` by embedding the `outputs`
 
-            # TODO(lemmatizer_noattn): Define `finished` as True if `outputs are `MorphoDataset.Factor.EOW`, False otherwise.
+            # TODO(lemmatizer_noattn): Define `finished` as a vector of booleans; True if the corresponding
+            # prediction in `outputs` is `MorphoDataset.Factor.EOW`, False otherwise.
 
             # TODO(DecoderTraining): Pass `next_inputs` through `self.with_attention(next_inputs, states)`.
 

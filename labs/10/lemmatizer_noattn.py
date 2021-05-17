@@ -91,8 +91,8 @@ class Network(tf.keras.Model):
 
             # TODO: Define `next_inputs` by embedding `time`-th chars from `self.targets`.
 
-            # TODO: Define `finished` as True if `time`-th char from `self.targets` is
-            # `MorphoDataset.Factor.EOW`, False otherwise.
+            # TODO: Define `finished` as a vector of booleans; True if the corresponding
+            # `time`-th char from `self.targets` is `MorphoDataset.Factor.EOW`, False otherwise.
 
             return outputs, states, next_inputs, finished
 
@@ -122,7 +122,8 @@ class Network(tf.keras.Model):
 
             # TODO: Define `next_inputs` by embedding the `outputs`
 
-            # TODO: Define `finished` as True if `outputs are `MorphoDataset.Factor.EOW`, False otherwise.
+            # TODO: Define `finished` as a vector of booleans; True if the corresponding
+            # prediction in `outputs` is `MorphoDataset.Factor.EOW`, False otherwise.
 
             return outputs, states, next_inputs, finished
 
