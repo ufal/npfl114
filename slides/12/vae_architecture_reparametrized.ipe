@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.9">
-<info created="D:20200503215042" modified="D:20210516213318"/>
+<info created="D:20200503215042" modified="D:20210517195938"/>
 <preamble>\usepackage{bm}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
@@ -322,8 +322,8 @@ sample $\bm z$</text>
 </path>
 <text matrix="1 0 0 1 228 -76" transformations="translations" pos="64 748" stroke="black" type="minipage" width="64" height="8.465" depth="3.49" valign="top" size="large" style="center">$P_{\bm\theta}(\bm x | \bm z)$</text>
 <text matrix="1 0 0 1 228 -76" transformations="translations" pos="64 748" stroke="black" type="minipage" width="64" height="8.465" depth="3.49" valign="top" size="large" style="center">$P_{\bm\theta}(\bm x | \bm z)$</text>
-<text matrix="1 0 0 1 136 -64" transformations="translations" pos="64 748" stroke="black" type="minipage" width="64" height="16.028" depth="11.07" valign="top" size="large" style="center">$\bm\varepsilon \sim \mathcal{N}(0, \bm I)$\\
-\strut $\bm z = \bm \varepsilon \bm \sigma + \mu$</text>
+<text matrix="1 0 0 1 136 -64" transformations="translations" pos="64 748" stroke="black" type="minipage" width="64" height="16.028" depth="11.07" valign="top" size="large" style="center">$\bm\epsilon \sim \mathcal{N}(\bm 0, \bm I)$\\
+\strut $\bm z = \bm \epsilon \bm \sigma + \bm\mu$</text>
 <text matrix="1 0 0 1 236 -100" transformations="translations" pos="64 748" stroke="black" type="minipage" width="56" height="6.642" depth="1.66" valign="top" size="large" style="center">decoder</text>
 <text matrix="1 0 0 1 44 -100" transformations="translations" pos="64 748" stroke="black" type="minipage" width="56" height="6.642" depth="1.66" valign="top" size="large" style="center">encoder</text>
 </page>
