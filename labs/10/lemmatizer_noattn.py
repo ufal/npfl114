@@ -238,7 +238,9 @@ def main(args):
         def on_train_batch_end(self, batch, logs=None):
             if network.optimizer.iterations % 10 == 0:
                 forms, lemmas = next(self._iterator)
-                tf.print(network.optimizer.iterations, forms[0, 0], lemmas[0, 0], network.predict_on_batch(forms[:1, :1])[0, 0])
+                print(network.optimizer.iterations.numpy(),
+                      *[repr(strings[0, 0].numpy().decode("utf-8"))
+                        for strings in [forms, lemmas, network.predict_on_batch(forms[:1, :1])]])
 
     network.fit(train, epochs=args.epochs, validation_data=dev, verbose=2,
                 callbacks=[ShowIntermediateResults(dev), network.tb_callback])
