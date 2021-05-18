@@ -59,16 +59,19 @@ class Network(tf.keras.Model):
 
         @property
         def batch_size(self):
-            # TODO: Return the batch size of self.source_states, using tf.shape
+            # TODO: Return the batch size of `self.source_states` as a *scalar* number;
+            # use `tf.shape` to get the full shape and then extract the batch size.
             raise NotImplementedError()
         @property
         def output_size(self):
-            # TODO: Return `tf.TensorShape(number of logits per each output element)`
-            # By output element we mean characters.
+            # TODO: Describe the size of a single decoder output (batch size and the
+            # sequence length are not included) by returning
+            #   tf.TensorShape(number of logits of each output element [lemma character])
             raise NotImplementedError()
         @property
         def output_dtype(self):
-            # TODO: Return the type of the logits
+            # TODO: Return the type of the decoder output (so the type of the
+            # produced logits).
             raise NotImplementedError()
 
         def initialize(self, layer_inputs, initial_state=None):
@@ -99,12 +102,14 @@ class Network(tf.keras.Model):
     class DecoderPrediction(DecoderTraining):
         @property
         def output_size(self):
-            # TODO: Return `tf.TensorShape()` describing a scalar element,
-            # because we are generating scalar predictions now.
+            # TODO: Describe the size of a single decoder output (batch size and the
+            # sequence length are not included) by returning a suitable
+            # `tf.TensorShape` representing a *scalar* element, because we are producing
+            # lemma character indices during prediction.
             raise NotImplementedError()
         @property
         def output_dtype(self):
-            # TODO: Return the type of the generated predictions
+            # TODO: Return the type of the decoder output (i.e., target lemma character indices).
             raise NotImplementedError()
 
         def initialize(self, layer_inputs, initial_state=None):
@@ -144,7 +149,8 @@ class Network(tf.keras.Model):
 
         # TODO: Run source_rnn on the embedded sequences, returning outputs in `source_states`.
 
-        # Run the appropriate decoder
+        # Run the appropriate decoder. Note that the outputs of the decoders
+        # are exactly the outputs of `tfa.seq2seq.dynamic_decode`.
         if targets is not None:
             # TODO: Create a self.DecoderTraining by passing `self` to its constructor.
             # Then run it on `[source_states, target_charseqs]` input,
