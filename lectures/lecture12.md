@@ -4,6 +4,9 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/slides.pdf/npfl114-12.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-12-czech.mp4,CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-12-english.mp4,EN Lecture
+#### Lecture assignment: vae
+#### Lecture assignment: gan
+#### Lecture assignment: dcgan
 
 - Autoencoders (undercomplete, sparse, denoising) [Chapter 14, Sections 14-14.2.3 of DLB]
 - Deep Generative Models using Differentiable Generator Nets [Section 20.10.2 of DLB]
