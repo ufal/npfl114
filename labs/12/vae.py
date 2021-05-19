@@ -24,8 +24,8 @@ parser.add_argument("--threads", default=1, type=int, help="Maximum number of th
 parser.add_argument("--z_dim", default=100, type=int, help="Dimension of Z.")
 # If you add more arguments, ReCodEx will keep them with your default values.
 
-# The neural network model
-class Network(tf.keras.Model):
+# The VAE model
+class VAE(tf.keras.Model):
     def __init__(self, args):
         super().__init__()
 
@@ -127,7 +127,7 @@ def main(args):
     mnist = MNIST(args.dataset)
 
     # Create the network and train
-    network = Network(args)
+    network = VAE(args)
     network.compile(optimizer=tf.optimizers.Adam(), loss=tf.losses.BinaryCrossentropy())
     logs = network.fit(
         mnist.train.dataset.map(lambda example: example["images"]).batch(args.batch_size),
