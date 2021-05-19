@@ -130,7 +130,7 @@ def main(args):
     network = VAE(args)
     network.compile(optimizer=tf.optimizers.Adam(), loss=tf.losses.BinaryCrossentropy())
     logs = network.fit(
-        mnist.train.dataset.map(lambda example: example["images"]).batch(args.batch_size),
+        mnist.train.dataset.map(lambda example: example["images"]).shuffle(mnist.train.size, args.seed).batch(args.batch_size),
         epochs=args.epochs,
         callbacks=[
             tf.keras.callbacks.LambdaCallback(on_epoch_end=network.generate),
