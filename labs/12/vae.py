@@ -54,6 +54,7 @@ class VAE(tf.keras.Model):
     def train_step(self, images):
         with tf.GradientTape() as tape:
             # TODO: Compute z_mean and z_log_variance of given images using `self.encoder`.
+            # Note that you should pass `training=True` to the `self.encoder`.
 
             # TODO: Sample `z` from a Normal distribution with mean `z_mean` and
             # standard deviation `exp(z_log_variance / 2)`. Start by creating
@@ -65,7 +66,7 @@ class VAE(tf.keras.Model):
             # For a given distribution, you can use the `reparameterization_type` member
             # to check if it is reparametrized or not.
 
-            # TODO: Decode images using `z`.
+            # TODO: Decode images using `z` (also passing `training=True` to the `self.decoder`).
 
             # TODO: Define `reconstruction_loss` using `self.compiled_loss`
 
@@ -83,7 +84,7 @@ class VAE(tf.keras.Model):
         GRID = 20
 
         # Generate GRIDxGRID images
-        random_images = self.decoder(self._z_prior.sample(GRID * GRID, seed=self._seed))
+        random_images = self.decoder(self._z_prior.sample(GRID * GRID, seed=self._seed), training=False)
 
         # Generate GRIDxGRID interpolated images
         if self._z_dim == 2:
@@ -95,7 +96,7 @@ class VAE(tf.keras.Model):
             starts, ends = self._z_prior.sample(GRID, seed=self._seed), self._z_prior.sample(GRID, seed=self._seed)
         interpolated_z = tf.concat(
             [starts[i] + (ends[i] - starts[i]) * tf.expand_dims(tf.linspace(0., 1., GRID), -1) for i in range(GRID)], axis=0)
-        interpolated_images = self.decoder(interpolated_z)
+        interpolated_images = self.decoder(interpolated_z, training=False)
 
         # Stack the random images, then an empty row, and finally interpolated imates
         image = tf.concat(
