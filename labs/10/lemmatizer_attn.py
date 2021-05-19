@@ -162,13 +162,18 @@ class Network(tf.keras.Model):
     # If `targets` is given, we are in the teacher forcing mode.
     # Otherwise, we run in autoregressive mode.
     def call(self, inputs, targets=None):
-        # FIX: Get indices of valid lemmas and reshape the `source_charseqs`
-        # so that it is a list of valid sequences, instead of a
-        # matrix of sequences, some of them padding ones.
+        # Forget about sentence boundaries and instead consider
+        # all valid form-lemma pairs as independent batch examples.
+        #
+        # Then, split the given forms into character sequences and map then
+        # to their indices.
         source_charseqs = inputs.values
         source_charseqs = tf.strings.unicode_split(source_charseqs, "UTF-8")
         source_charseqs = self.source_mapping(source_charseqs)
         if targets is not None:
+            # The targets are already mapped sequences of characters, so only
+            # drop the sentence boundaries, and convert to a dense tensor
+            # (the EOW correctly indicate end of lemma).
             target_charseqs = targets.values
             target_charseqs = target_charseqs.to_tensor()
 
