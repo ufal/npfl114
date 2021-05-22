@@ -106,12 +106,12 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--evaluate", default=None, type=str, help="Prediction file to evaluate")
+    parser.add_argument("--corpus", default="czech_facebook", type=str, help="Text classification corpus")
     parser.add_argument("--dataset", default="dev", type=str, help="Gold dataset to evaluate")
-    parser.add_argument("--name", default="czech_facebook", type=str, help="Text classification dataset name")
     args = parser.parse_args()
 
     if args.evaluate:
         with open(args.evaluate, "r", encoding="utf-8-sig") as predictions_file:
             accuracy = TextClassificationDataset.evaluate_file(
-                getattr(TextClassificationDataset(args.name), args.dataset), predictions_file)
+                getattr(TextClassificationDataset(args.corpus), args.dataset), predictions_file)
         print("Text classification accuracy: {:.2f}%".format(accuracy))
