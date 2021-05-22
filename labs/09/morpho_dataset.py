@@ -162,8 +162,8 @@ if __name__ == "__main__":
     parser.add_argument("--task", default="tagger", type=str, help="Task to evaluate (tagger/lemmatizer)")
     args = parser.parse_args()
 
-    gold = getattr(MorphoDataset(args.corpus), args.dataset)
     if args.evaluate:
+        gold = getattr(MorphoDataset(args.corpus), args.dataset)
         if args.task == "tagger":
             gold = gold.tags
         elif args.task == "lemmatizer":
