@@ -8,6 +8,7 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by de
 import numpy as np
 import tensorflow as tf
 
+from electra_czech_small_lc import ElectraCzechSmallLc
 from reading_comprehension_dataset import ReadingComprehensionDataset
 
 # TODO: Define reasonable defaults and optionally more parameters
@@ -30,6 +31,9 @@ def main(args):
         datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S"),
         ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", key), value) for key, value in sorted(vars(args).items())))
     ))
+
+    # Load the Electra Czech small lowercased
+    electra = ElectraCzechSmallLc()
 
     # Load the data.
     dataset = ReadingComprehensionDataset()
