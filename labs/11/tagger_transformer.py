@@ -97,7 +97,7 @@ class Network(tf.keras.Model):
             # - for `i < dim / 2`, the value on index `[pos, i]` should be
             #     `sin(pos / 10000 ** (2 * i / dim))`
             # - the value on index `[pos, dim / 2 + i]` should be
-            #     `cos(pos / 10000 ** 2 * i / dim))`
+            #     `cos(pos / 10000 ** (2 * i / dim))`
             # This order is the same as in the visualization on the slides, but
             # different from the original paper where `sin` and `cos` interleave.
 
