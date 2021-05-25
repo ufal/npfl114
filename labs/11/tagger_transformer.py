@@ -47,8 +47,8 @@ class Network(tf.keras.Model):
             super().__init__(*args, **kwargs)
             self.dim, self.heads = dim, heads
             # TODO: Create weight matrices W_Q, W_K, W_V and W_O using `self.add_weight`,
-            # each with shape `[dim, dim]`; otherwise, default arguments should be used,
-            # which mean trainable float32 matrices initialized with "glorot_uniform".
+            # each with shape `[dim, dim]`; for other arguments, default values should be
+            # used, which mean trainable float32 matrices initialized with "glorot_uniform".
             raise NotImplementedError()
 
         def get_config(self):
@@ -129,7 +129,7 @@ class Network(tf.keras.Model):
         #     `mask=tf.sequence_mask(ragged_tensor_with_input_words_embeddings.row_lengths())`
         # - finally, convert the result back to a ragged tensor.
 
-        # TODO(tagge_we): Add a softmax classification layer into as many classes as there are unique
+        # TODO(tagger_we): Add a softmax classification layer into as many classes as there are unique
         # tags in the `word_mapping` of `train.tags`. However, because we are applying the
         # the Dense layer to a ragged tensor, we need to wrap the Dense layer in
         # a tf.keras.layers.TimeDistributed.
