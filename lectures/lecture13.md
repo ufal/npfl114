@@ -4,6 +4,10 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/slides.pdf/npfl114-13.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-13-czech.mp4,CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-13-english.mp4,EN Lecture
+#### Lecture assignment: monte_carlo
+#### Lecture assignment: reinforce
+#### Lecture assignment: reinforce_baseline
+#### Lecture assignment: reinforce_pixels
 
 Study material for Reinforcement Learning is the [Reinforcement Learning: An Introduction; second edition
 by Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/book/the-book-2nd.html)
