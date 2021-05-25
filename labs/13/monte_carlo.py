@@ -34,8 +34,8 @@ def main(env, args):
                 env.render()
 
             # TODO: Compute `action` using epsilon-greedy policy. Therefore,
-            # with probability of args.epsilon, use a random actions (there are env.actions of them),
-            # otherwise, choose and action with maximum Q[state, action].
+            # with probability of args.epsilon, use a random action,
+            # otherwise choose and action with maximum Q[state, action].
             action = None
 
             next_state, reward, done, _ = env.step(action)
