@@ -131,7 +131,10 @@ def typed_np_function(*types):
     and passes the result through `np.array` before returning (while keeping
     original tuples, lists and dictionaries).
     """
-    def check_typed_np_function(wrapped, args):
+    def check_typed_np_function(wrapped, args, kwargs):
+        if kwargs:
+            while hasattr(wrapped, "__wrapped__"): wrapped = wrapped.__wrapped__
+            raise AssertionError("The typed_np_function decorator for {} supports only positional arguments".format(wrapped))
         if len(types) != len(args):
             while hasattr(wrapped, "__wrapped__"): wrapped = wrapped.__wrapped__
             raise AssertionError("The typed_np_function decorator for {} expected {} arguments, but got {}".format(wrapped, len(types), len(args)))
@@ -149,14 +152,14 @@ def typed_np_function(*types):
         def __init__(self, instance, func):
             self._instance, self.__wrapped__ = instance, func
         def __call__(self, *args, **kwargs):
-            check_typed_np_function(self.__wrapped__, args)
+            check_typed_np_function(self.__wrapped__, args, kwargs)
             return structural_map(np.array, self.__wrapped__(*[np.asarray(arg, typ) for arg, typ in zip(args, types)], **kwargs))
 
     class TypedNpFunctionWrapper:
         def __init__(self, func):
             self.__wrapped__ = func
         def __call__(self, *args, **kwargs):
-            check_typed_np_function(self.__wrapped__, args)
+            check_typed_np_function(self.__wrapped__, args, kwargs)
             return structural_map(np.array, self.__wrapped__(*[np.asarray(arg, typ) for arg, typ in zip(args, types)], **kwargs))
         def __get__(self, instance, cls):
             return TypedNpFunctionWrapperMethod(instance, self.__wrapped__.__get__(instance, cls))
