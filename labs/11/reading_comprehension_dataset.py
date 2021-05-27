@@ -59,20 +59,22 @@ class ReadingComprehensionDataset:
 
     # Evaluation infrastructure.
     @staticmethod
-    def evaluate(gold_dataset, predictions):
+    def evaluate(gold_dataset, predictions, skip_empty=True):
         gold = [qa["answers"] for paragraph in gold_dataset.paragraphs for qa in paragraph["qas"]]
         if len(predictions) != len(gold):
             raise RuntimeError("The predictions contain different number of answers than gold data: {} vs {}".format(
                 len(predictions), len(gold)))
 
-        correct = 0
+        correct, total = 0, 0
         for prediction, gold_answers in zip(predictions, gold):
             if len(gold_answers):
                 correct += any(prediction == gold_answer["text"] for gold_answer in gold_answers)
-            else:
+                total += 1
+            elif not skip_empty:
                 correct += not prediction
+                total += 1
 
-        return 100 * correct / len(gold)
+        return 100 * correct / total
 
     @staticmethod
     def evaluate_file(gold_dataset, predictions_file):
