@@ -3,7 +3,7 @@
 #### Points: 5 points+5 bonus
 
 **May 27 Update**: _The evaluation was changed and is now performed only on
-non-empty answers. In other words, you do not need to decide if the answer is or
+**non-empty** answers. In other words, you do not need to decide if the answer is or
 is not in the context, but just to provide a best non-empty answer. However,
 the data was not modified, so you should ignore training data questions without
 answers during training (for development and test sets, provide predictions on
