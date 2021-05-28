@@ -37,9 +37,9 @@ module, either by running with `--evaluate=path` arguments, or using its
 `evaluate_file` method.
 
 The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2021-summer#competitions). Everyone who submits a solution
-a solution with at least **50%** answer accuracy gets 5 points; the rest 5 points
+a solution with at least **49%** answer accuracy gets 5 points; the rest 5 points
 will be distributed depending on relative ordering of your solutions. Note that
-usually achieving **45%** on the `dev` set is enough to get 50% on the `test`
+usually achieving **47%** on the `dev` set is enough to get 49% on the `test`
 set (because of multiple references in the `test` set).
 
 You can start with the
