@@ -74,7 +74,8 @@ class Network(tf.keras.Model):
             #   boolean argument `mask` indicating the valid (True) or padding (False) elements.
 
             # TODO: Finally,
-            # - take a weighted combination of values V according to the computed attention,
+            # - take a weighted combination of values V according to the computed attention
+            #   (using a suitable matrix multiplication),
             # - transpose the result to [batch_size, max_sentence_len, heads, dim // heads],
             # - reshape to [batch_size, max_sentence_len, dim],
             # - multiply the result by the W_O matrix.
