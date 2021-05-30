@@ -6,6 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-01-english.mp4,EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-01-czech.practicals.mp4,CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-01-english.practicals.mp4,EN Practicals
+#### Questions: #lecture_1_questions
 #### Lecture assignment: numpy_entropy
 #### Lecture assignment: pca_first
 #### Lecture assignment: mnist_layers_activations

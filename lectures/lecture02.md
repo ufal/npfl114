@@ -6,6 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-02-english.mp4,EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-02-czech.practicals.mp4,CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-02-english.practicals.mp4,EN Practicals
+#### Questions: #lecture_2_questions
 #### Lecture assignment: sgd_backpropagation
 #### Lecture assignment: sgd_manual
 #### Lecture assignment: mnist_training
