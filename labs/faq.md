@@ -111,6 +111,30 @@
   results are not the same), and sometimes they use smaller number of
   epochs/iterations to finish sooner.
 
+### TOCEntry: Debugging
+
+- _How to debug problems “inside” computation graphs with weird stack traces?_
+
+  At the beginning of your program, run
+  ```python
+  tf.config.run_functions_eagerly(True)
+  ```
+  The `tf.funcion`s (with the exception of the ones used in `tf.data` pipelines)
+  are then not traced (i.e., no computation graphs are created) and the pure
+  Python code is executed instead.
+
+- _How to debug problems “inside” `tf.data` pipelines with weird stack traces?_
+
+  Unfortunately, the solution above does not affect tracing in `tf.data`
+  pipelines (for example in `tf.data.Dataset.map`). However, since TF 2.5, the
+  command
+  ```python
+  tf.data.experimental.enable_debug_mode()
+  ```
+  should disable any asynchrony, parallelism, or non-determinism and forces
+  Python execution (as opposed to trace-compiled graph execution) of
+  user-defined functions passed into transformations such as `tf.data.Dataset.map`.
+
 ### TOCEntry: GPU
 
 - _Requirements for using a GPU_
