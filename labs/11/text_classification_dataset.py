@@ -69,7 +69,7 @@ class TextClassificationDataset:
     def __init__(self, name, tokenizer=None):
         """Create the dataset from the given filename.
 
-        If given, tThe `tokenizer` should be a callable taking a string and
+        If given, the `tokenizer` should be a callable taking a string and
         returning a list/np.ndarray of integers.
         """
 
