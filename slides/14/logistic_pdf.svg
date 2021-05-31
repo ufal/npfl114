@@ -1,0 +1,2063 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg771"
+   viewBox="0 0 384 327"
+   version="1.1"
+   height="327pt"
+   width="384pt">
+  <metadata
+     id="metadata775">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <filter
+     id="filter4">
+    <feComposite
+       id="feComposite2"
+       operator="arithmetic"
+       k3="1"
+       k2="1"
+       in2="BackgroundImage"
+       in="SourceGraphic" />
+  </filter>
+  <defs
+     id="defs13">
+    <clipPath
+       id="e">
+      <rect
+         id="rect10"
+         height="288"
+         width="334.8"
+         y="15.339"
+         x="32.3" />
+    </clipPath>
+  </defs>
+  <path
+     id="path15"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#00f"
+     fill="none"
+     clip-path="url(#e)"
+     d="m32.3 300.15 3.3818-0.42294 3.3818-0.47801 3.3818-0.53998 3.3818-0.60962 3.3818-0.68778 3.3818-0.77538 3.3818-0.8734 3.3818-0.98286 3.3818-1.1048 3.3818-1.2404 3.3818-1.3907 3.3818-1.5566 3.3818-1.7393 3.3818-1.9395 3.3818-2.1578 3.3818-2.3944 3.3818-2.6492 3.3818-2.9215 3.3818-3.2098 3.3818-3.5117 3.3818-3.8239 3.3818-4.1416 3.3818-4.4587 3.3818-4.7675 3.3818-5.0588 3.3818-5.3215 3.3818-5.5432 3.3818-5.7102 3.3818-5.8082 3.3818-5.8226 3.3818-5.7399 3.3818-5.5483 3.3818-5.2391 3.3818-4.8077 3.3818-4.2546 3.3818-3.5862 3.3818-2.8151 3.3818-1.9598 3.3818-1.0441 3.3818-0.095521 3.3818 0.85605 3.3818 1.7807 3.3818 2.6501 3.3818 3.4397 3.3818 4.1298 3.3818 4.7067 3.3818 5.1627 3.3818 5.4961 3.3818 5.7106 3.3818 5.8143 3.3818 5.8182 3.3818 5.7358 3.3818 5.5814 3.3818 5.3696 3.3818 5.114 3.3818 4.8275 3.3818 4.5214 3.3818 4.2053 3.3818 3.8872 3.3818 3.5735 3.3818 3.2692 3.3818 2.978 3.3818 2.7023 3.3818 2.4439 3.3818 2.2036 3.3818 1.9817 3.3818 1.7779 3.3818 1.5918 3.3818 1.4226 3.3818 1.2692 3.3818 1.1308 3.3818 1.0062 3.3818 0.89434 3.3818 0.79412 3.3818 0.70452 3.3818 0.62454 3.3818 0.55326 3.3818 0.48983 3.3818 0.43344 3.3818 0.38336 3.3818 0.33893 3.3818 0.29954 3.3818 0.26464 3.3818 0.23374 3.3818 0.2064 3.3818 0.18221 3.3818 0.16083 3.3818 0.14194 3.3818 0.12524 3.3818 0.11049 3.3818 0.097473 3.3818 0.085976 3.3818 0.075829 3.3818 0.066875 3.3818 0.058973 3.3818 0.052002 3.3818 0.045853 3.3818 0.040428 3.3818 0.035644" />
+  <path
+     id="path17"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#008000"
+     fill="none"
+     clip-path="url(#e)"
+     d="m32.3 300.39 3.3818-0.25411 3.3818-0.27548 3.3818-0.29856 3.3818-0.32346 3.3818-0.35032 3.3818-0.37926 3.3818-0.41042 3.3818-0.44394 3.3818-0.47996 3.3818-0.51862 3.3818-0.56008 3.3818-0.60446 3.3818-0.65192 3.3818-0.70258 3.3818-0.75656 3.3818-0.81397 3.3818-0.87491 3.3818-0.93943 3.3818-1.0076 3.3818-1.0794 3.3818-1.1547 3.3818-1.2336 3.3818-1.3158 3.3818-1.4011 3.3818-1.4893 3.3818-1.5799 3.3818-1.6723 3.3818-1.7662 3.3818-1.8605 3.3818-1.9546 3.3818-2.0474 3.3818-2.1378 3.3818-2.2244 3.3818-2.3059 3.3818-2.3806 3.3818-2.4468 3.3818-2.5028 3.3818-2.5467 3.3818-2.5765 3.3818-2.5904 3.3818-2.5864 3.3818-2.5629 3.3818-2.5182 3.3818-2.4511 3.3818-2.3605 3.3818-2.2458 3.3818-2.1068 3.3818-1.9438 3.3818-1.7576 3.3818-1.5495 3.3818-1.3215 3.3818-1.0761 3.3818-0.81599 3.3818-0.54465 3.3818-0.2657 3.3818 0.016995 3.3818 0.29945 3.3818 0.57769 3.3818 0.84786 3.3818 1.1063 3.3818 1.3499 3.3818 1.5756 3.3818 1.7811 3.3818 1.9646 3.3818 2.1248 3.3818 2.2609 3.3818 2.3727 3.3818 2.4604 3.3818 2.5248 3.3818 2.5668 3.3818 2.5879 3.3818 2.5896 3.3818 2.5738 3.3818 2.5421 3.3818 2.4967 3.3818 2.4394 3.3818 2.372 3.3818 2.2964 3.3818 2.2143 3.3818 2.1271 3.3818 2.0364 3.3818 1.9434 3.3818 1.8492 3.3818 1.7548 3.3818 1.6612 3.3818 1.5689 3.3818 1.4786 3.3818 1.3908 3.3818 1.3058 3.3818 1.224 3.3818 1.1455 3.3818 1.0706 3.3818 0.99921 3.3818 0.9315 3.3818 0.86741 3.3818 0.8069 3.3818 0.7499 3.3818 0.69632 3.3818 0.64606" />
+  <path
+     id="path19"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#f00"
+     fill="none"
+     clip-path="url(#e)"
+     d="m32.3 296.51 3.3818-0.4173 3.3818-0.44095 3.3818-0.4657 3.3818-0.49157 3.3818-0.51858 3.3818-0.54673 3.3818-0.57603 3.3818-0.60649 3.3818-0.63808 3.3818-0.67078 3.3818-0.70457 3.3818-0.73941 3.3818-0.77523 3.3818-0.81198 3.3818-0.84956 3.3818-0.88788 3.3818-0.92681 3.3818-0.96621 3.3818-1.0059 3.3818-1.0458 3.3818-1.0855 3.3818-1.1249 3.3818-1.1638 3.3818-1.2018 3.3818-1.2386 3.3818-1.2739 3.3818-1.3074 3.3818-1.3386 3.3818-1.3671 3.3818-1.3925 3.3818-1.4144 3.3818-1.4323 3.3818-1.4458 3.3818-1.4544 3.3818-1.4577 3.3818-1.4552 3.3818-1.4465 3.3818-1.4312 3.3818-1.409 3.3818-1.3797 3.3818-1.3429 3.3818-1.2985 3.3818-1.2464 3.3818-1.1866 3.3818-1.1192 3.3818-1.0444 3.3818-0.96242 3.3818-0.87365 3.3818-0.77855 3.3818-0.67769 3.3818-0.57172 3.3818-0.46135 3.3818-0.34741 3.3818-0.23073 3.3818-0.11222 3.3818 0.007172 3.3818 0.12651 3.3818 0.24484 3.3818 0.36124 3.3818 0.4748 3.3818 0.58468 3.3818 0.69008 3.3818 0.79028 3.3818 0.88465 3.3818 0.97263 3.3818 1.0538 3.3818 1.1277 3.3818 1.1942 3.3818 1.253 3.3818 1.3042 3.3818 1.3477 3.3818 1.3836 3.3818 1.4121 3.3818 1.4334 3.3818 1.4479 3.3818 1.4558 3.3818 1.4576 3.3818 1.4537 3.3818 1.4445 3.3818 1.4304 3.3818 1.412 3.3818 1.3896 3.3818 1.3638 3.3818 1.335 3.3818 1.3035 3.3818 1.2698 3.3818 1.2343 3.3818 1.1973 3.3818 1.1592 3.3818 1.1202 3.3818 1.0808 3.3818 1.041 3.3818 1.0011 3.3818 0.96146 3.3818 0.92211 3.3818 0.88324 3.3818 0.84501 3.3818 0.80752 3.3818 0.77088" />
+  <path
+     id="path21"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#00bfbf"
+     fill="none"
+     clip-path="url(#e)"
+     d="m32.3 301.39 3.3818-0.25944 3.3818-0.29366 3.3818-0.3323 3.3818-0.37589 3.3818-0.42502 3.3818-0.48036 3.3818-0.54261 3.3818-0.61257 3.3818-0.6911 3.3818-0.7791 3.3818-0.87755 3.3818-0.98749 3.3818-1.11 3.3818-1.2461 3.3818-1.397 3.3818-1.5636 3.3818-1.747 3.3818-1.9479 3.3818-2.1669 3.3818-2.4043 3.3818-2.6598 3.3818-2.9328 3.3818-3.2216 3.3818-3.524 3.3818-3.8365 3.3818-4.1543 3.3818-4.4713 3.3818-4.7796 3.3818-5.0699 3.3818-5.3313 3.3818-5.551 3.3818-5.7156 3.3818-5.8105 3.3818-5.8213 3.3818-5.7344 3.3818-5.5383 3.3818-5.2242 3.3818-4.7879 3.3818-4.23 3.3818-3.5572 3.3818-2.7824 3.3818-1.9242 3.3818-1.0066 3.3818-0.057315 3.3818 0.89375 3.3818 1.8167 3.3818 2.6833 3.3818 3.4693 3.3818 4.1552 3.3818 4.7273 3.3818 5.1784 3.3818 5.5069 3.3818 5.7168 3.3818 5.8162 3.3818 5.8165 3.3818 5.7309 3.3818 5.574 3.3818 5.3601 3.3818 5.1031 3.3818 4.8156 3.3818 4.5089 3.3818 4.1925 3.3818 3.8745 3.3818 3.5611 3.3818 3.2573 3.3818 2.9666 3.3818 2.6917 3.3818 2.434 3.3818 2.1944 3.3818 1.9732 3.3818 1.7702 3.3818 1.5847 3.3818 1.4161 3.3818 1.2634 3.3818 1.1256 3.3818 1.0015 3.3818 0.89012 3.3818 0.79034 3.3818 0.70114 3.3818 0.62153 3.3818 0.55058 3.3818 0.48744 3.3818 0.43132 3.3818 0.38148 3.3818 0.33726 3.3818 0.29806 3.3818 0.26333 3.3818 0.23258 3.3818 0.20537 3.3818 0.18131 3.3818 0.16003 3.3818 0.14123 3.3818 0.12461 3.3818 0.10994 3.3818 0.096984 3.3818 0.085545 3.3818 0.07545 3.3818 0.066539 3.3818 0.058677" />
+  <path
+     id="path23"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#bf00bf"
+     fill="none"
+     clip-path="url(#e)"
+     d="m32.3 302.47 3.3818-0.25043 3.3818-0.32199 3.3818-0.41385 3.3818-0.53168 3.3818-0.68268 3.3818-0.8759 3.3818-1.1228 3.3818-1.4375 3.3818-1.8375 3.3818-2.3442 3.3818-2.983 3.3818-3.7832 3.3818-4.778 3.3818-6.0017 3.3818-7.4867 3.3818-9.2567 3.3818-11.317 3.3818-13.637 3.3818-16.134 3.3818-18.649 3.3818-20.926 3.3818-22.61 3.3818-23.265 3.3818-22.448 3.3818-19.811 3.3818-15.249 3.3818-9 3.3818-1.6729 3.3818 5.8615 3.3818 12.679 3.3818 18.036 3.3818 21.525 3.3818 23.111 3.3818 23.052 3.3818 21.765 3.3818 19.699 3.3818 17.251 3.3818 14.721 3.3818 12.309 3.3818 10.128 3.3818 8.2295 3.3818 6.6212 3.3818 5.2862 3.3818 4.1949 3.3818 3.3133 3.3818 2.6073 3.3818 2.0459 3.3818 1.6018 3.3818 1.2519 3.3818 0.97715 3.3818 0.76188 3.3818 0.59354 3.3818 0.46211 3.3818 0.3596 3.3818 0.27973 3.3818 0.21753 3.3818 0.16912 3.3818 0.13146 3.3818 0.10217 3.3818 0.079403 3.3818 0.061701 3.3818 0.047942 3.3818 0.03725 3.3818 0.028941 3.3818 0.022485 3.3818 0.017469 3.3818 0.013571 3.3818 0.010543 3.3818 0.008191 3.3818 0.006363 3.3818 0.004943 3.3818 0.00384 3.3818 0.002983 3.3818 0.002317 3.3818 0.001801 3.3818 0.001398 3.3818 0.001087 3.3818 8.44e-4 6.7636 0.001165 64.255 0.001758" />
+  <defs
+     id="defs35">
+    <path
+       d="m32.3-23.878v-288"
+       id="ad" />
+    <path
+       d="m99.26-23.878v-288"
+       id="ac" />
+    <path
+       d="m166.22-23.878v-288"
+       id="ab" />
+    <path
+       d="m233.18-23.878v-288"
+       id="aa" />
+    <path
+       d="m300.14-23.878v-288"
+       id="z" />
+    <path
+       d="m367.1-23.878v-288"
+       id="y" />
+    <path
+       d="m32.3-23.878h334.8"
+       id="x" />
+    <path
+       d="m32.3-119.88h334.8"
+       id="w" />
+    <path
+       d="m32.3-215.88h334.8"
+       id="v" />
+    <path
+       d="m32.3-311.88h334.8"
+       id="u" />
+  </defs>
+  <g
+     id="g39"
+     clip-path="url(#e)">
+    <use
+       id="use37"
+       xlink:href="#ad"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g43"
+     clip-path="url(#e)">
+    <use
+       id="use41"
+       xlink:href="#ac"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g47"
+     clip-path="url(#e)">
+    <use
+       id="use45"
+       xlink:href="#ab"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g51"
+     clip-path="url(#e)">
+    <use
+       id="use49"
+       xlink:href="#aa"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g55"
+     clip-path="url(#e)">
+    <use
+       id="use53"
+       xlink:href="#z"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g59"
+     clip-path="url(#e)">
+    <use
+       id="use57"
+       xlink:href="#y"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g63"
+     clip-path="url(#e)">
+    <use
+       id="use61"
+       xlink:href="#x"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g67"
+     clip-path="url(#e)">
+    <use
+       id="use65"
+       xlink:href="#w"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g71"
+     clip-path="url(#e)">
+    <use
+       id="use69"
+       xlink:href="#v"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <g
+     id="g75"
+     clip-path="url(#e)">
+    <use
+       id="use73"
+       xlink:href="#u"
+       stroke-width=".5"
+       stroke-linejoin="round"
+       stroke-dasharray="1.000000,3.000000"
+       stroke="#000000"
+       fill="none"
+       y="327.217188" />
+  </g>
+  <path
+     id="path77"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#000"
+     fill="none"
+     d="m367.1 303.34v-288" />
+  <defs
+     id="defs80">
+    <path
+       d="m0 0h-4"
+       id="i" />
+  </defs>
+  <g
+     id="g86"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use82"
+       xlink:href="#i"
+       y="303.339063"
+       x="367.100000" />
+    <use
+       id="use84"
+       xlink:href="#i"
+       y="303.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g92"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use88"
+       xlink:href="#i"
+       y="207.339063"
+       x="367.100000" />
+    <use
+       id="use90"
+       xlink:href="#i"
+       y="207.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g98"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use94"
+       xlink:href="#i"
+       y="111.339063"
+       x="367.100000" />
+    <use
+       id="use96"
+       xlink:href="#i"
+       y="111.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g104"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use100"
+       xlink:href="#i"
+       y="15.339063"
+       x="367.100000" />
+    <use
+       id="use102"
+       xlink:href="#i"
+       y="15.339063"
+       x="367.100000" />
+  </g>
+  <defs
+     id="defs107">
+    <path
+       d="m0 0h-2"
+       id="c" />
+  </defs>
+  <g
+     id="g113"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use109"
+       xlink:href="#c"
+       y="279.339063"
+       x="367.100000" />
+    <use
+       id="use111"
+       xlink:href="#c"
+       y="279.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g119"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use115"
+       xlink:href="#c"
+       y="255.339063"
+       x="367.100000" />
+    <use
+       id="use117"
+       xlink:href="#c"
+       y="255.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g125"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use121"
+       xlink:href="#c"
+       y="231.339063"
+       x="367.100000" />
+    <use
+       id="use123"
+       xlink:href="#c"
+       y="231.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g131"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use127"
+       xlink:href="#c"
+       y="183.339063"
+       x="367.100000" />
+    <use
+       id="use129"
+       xlink:href="#c"
+       y="183.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g137"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use133"
+       xlink:href="#c"
+       y="159.339063"
+       x="367.100000" />
+    <use
+       id="use135"
+       xlink:href="#c"
+       y="159.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g143"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use139"
+       xlink:href="#c"
+       y="135.339063"
+       x="367.100000" />
+    <use
+       id="use141"
+       xlink:href="#c"
+       y="135.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g149"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use145"
+       xlink:href="#c"
+       y="87.339063"
+       x="367.100000" />
+    <use
+       id="use147"
+       xlink:href="#c"
+       y="87.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g155"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use151"
+       xlink:href="#c"
+       y="63.339063"
+       x="367.100000" />
+    <use
+       id="use153"
+       xlink:href="#c"
+       y="63.339063"
+       x="367.100000" />
+  </g>
+  <g
+     id="g161"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use157"
+       xlink:href="#c"
+       y="39.339063"
+       x="367.100000" />
+    <use
+       id="use159"
+       xlink:href="#c"
+       y="39.339063"
+       x="367.100000" />
+  </g>
+  <path
+     id="path163"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#000"
+     fill="none"
+     d="m32.3 303.34h334.8" />
+  <defs
+     id="defs166">
+    <path
+       d="m0 0v-4"
+       id="g" />
+  </defs>
+  <g
+     id="g172"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use168"
+       xlink:href="#g"
+       y="303.339063"
+       x="32.300000" />
+    <use
+       id="use170"
+       xlink:href="#g"
+       y="303.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g178"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use174"
+       xlink:href="#g"
+       y="303.339063"
+       x="99.260000" />
+    <use
+       id="use176"
+       xlink:href="#g"
+       y="303.339063"
+       x="99.260000" />
+  </g>
+  <g
+     id="g184"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use180"
+       xlink:href="#g"
+       y="303.339063"
+       x="166.220000" />
+    <use
+       id="use182"
+       xlink:href="#g"
+       y="303.339063"
+       x="166.220000" />
+  </g>
+  <g
+     id="g190"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use186"
+       xlink:href="#g"
+       y="303.339063"
+       x="233.180000" />
+    <use
+       id="use188"
+       xlink:href="#g"
+       y="303.339063"
+       x="233.180000" />
+  </g>
+  <g
+     id="g196"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use192"
+       xlink:href="#g"
+       y="303.339063"
+       x="300.140000" />
+    <use
+       id="use194"
+       xlink:href="#g"
+       y="303.339063"
+       x="300.140000" />
+  </g>
+  <g
+     id="g202"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use198"
+       xlink:href="#g"
+       y="303.339063"
+       x="367.100000" />
+    <use
+       id="use200"
+       xlink:href="#g"
+       y="303.339063"
+       x="367.100000" />
+  </g>
+  <defs
+     id="defs206">
+    <path
+       d="m10.594-35.5h62.594v8.2969h-62.594z"
+       id="ah" />
+    <path
+       d="m10.797-72.906h38.719v8.3125h-29.688v17.859q2.1406-0.73438 4.2812-1.0938 2.1562-0.35938 4.3125-0.35938 12.203 0 19.328 6.6875 7.1406 6.6875 7.1406 18.109 0 11.766-7.3281 18.297-7.3281 6.5156-20.656 6.5156-4.5938 0-9.3594-0.78125-4.75-0.78125-9.8281-2.3438v-9.9219q4.3906 2.3906 9.0781 3.5625t9.9062 1.1719q8.4531 0 13.375-4.4375 4.9375-4.4375 4.9375-12.062 0-7.6094-4.9375-12.047-4.9219-4.4531-13.375-4.4531-3.9531 0-7.8906 0.875-3.9219 0.875-8.0156 2.7344z"
+       id="q" />
+  </defs>
+  <g
+     id="g212"
+     transform="translate(24.605 316.25) scale(.12)">
+    <use
+       id="use208"
+       xlink:href="#ah" />
+    <use
+       id="use210"
+       xlink:href="#q"
+       x="83.789062" />
+  </g>
+  <defs
+     id="defs215">
+    <path
+       d="m31.781-66.406q-7.6094 0-11.453 7.5-3.8281 7.4844-3.8281 22.531 0 14.984 3.8281 22.484 3.8438 7.5 11.453 7.5 7.6719 0 11.5-7.5 3.8438-7.5 3.8438-22.484 0-15.047-3.8438-22.531-3.8281-7.5-11.5-7.5m0-7.8125q12.266 0 18.734 9.7031 6.4688 9.6875 6.4688 28.141 0 18.406-6.4688 28.109-6.4688 9.6875-18.734 9.6875-12.25 0-18.719-9.6875-6.4688-9.7031-6.4688-28.109 0-18.453 6.4688-28.141 6.4688-9.7031 18.719-9.7031"
+       id="k" />
+  </defs>
+  <g
+     id="g219"
+     transform="translate(96.237 316.25) scale(.12)">
+    <use
+       id="use217"
+       xlink:href="#k" />
+  </g>
+  <g
+     id="g223"
+     transform="translate(163.38 316.25) scale(.12)">
+    <use
+       id="use221"
+       xlink:href="#q" />
+  </g>
+  <defs
+     id="defs226">
+    <path
+       d="m12.406-8.2969h16.109v-55.625l-17.531 3.5156v-8.9844l17.438-3.5156h9.8594v64.609h16.109v8.2969h-41.984z"
+       id="p" />
+  </defs>
+  <g
+     id="g232"
+     transform="translate(226.59 316.25) scale(.12)">
+    <use
+       id="use228"
+       xlink:href="#p" />
+    <use
+       id="use230"
+       xlink:href="#k"
+       x="63.623047" />
+  </g>
+  <g
+     id="g238"
+     transform="translate(293.68 316.25) scale(.12)">
+    <use
+       id="use234"
+       xlink:href="#p" />
+    <use
+       id="use236"
+       xlink:href="#q"
+       x="63.623047" />
+  </g>
+  <defs
+     id="defs241">
+    <path
+       d="m19.188-8.2969h34.422v8.2969h-46.281v-8.2969q5.6094-5.8125 15.297-15.594 9.7031-9.7969 12.188-12.641 4.7344-5.3125 6.6094-9 1.8906-3.6875 1.8906-7.25 0-5.8125-4.0781-9.4688-4.0781-3.6719-10.625-3.6719-4.6406 0-9.7969 1.6094-5.1406 1.6094-11 4.8906v-9.9688q5.9531-2.3906 11.125-3.6094 5.1875-1.2188 9.4844-1.2188 11.328 0 18.062 5.6719 6.7344 5.6562 6.7344 15.125 0 4.5-1.6875 8.5312-1.6719 4.0156-6.125 9.4844-1.2188 1.4219-7.7656 8.1875-6.5312 6.7656-18.453 18.922"
+       id="s" />
+  </defs>
+  <g
+     id="g247"
+     transform="translate(360.3 316.25) scale(.12)">
+    <use
+       id="use243"
+       xlink:href="#s" />
+    <use
+       id="use245"
+       xlink:href="#k"
+       x="63.623047" />
+  </g>
+  <defs
+     id="defs250">
+    <path
+       d="m0 0v-2"
+       id="b" />
+  </defs>
+  <g
+     id="g256"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use252"
+       xlink:href="#b"
+       y="303.339063"
+       x="45.692000" />
+    <use
+       id="use254"
+       xlink:href="#b"
+       y="303.339063"
+       x="45.692000" />
+  </g>
+  <g
+     id="g262"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use258"
+       xlink:href="#b"
+       y="303.339063"
+       x="59.084000" />
+    <use
+       id="use260"
+       xlink:href="#b"
+       y="303.339063"
+       x="59.084000" />
+  </g>
+  <g
+     id="g268"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use264"
+       xlink:href="#b"
+       y="303.339063"
+       x="72.476000" />
+    <use
+       id="use266"
+       xlink:href="#b"
+       y="303.339063"
+       x="72.476000" />
+  </g>
+  <g
+     id="g274"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use270"
+       xlink:href="#b"
+       y="303.339063"
+       x="85.868000" />
+    <use
+       id="use272"
+       xlink:href="#b"
+       y="303.339063"
+       x="85.868000" />
+  </g>
+  <g
+     id="g280"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use276"
+       xlink:href="#b"
+       y="303.339063"
+       x="112.652000" />
+    <use
+       id="use278"
+       xlink:href="#b"
+       y="303.339063"
+       x="112.652000" />
+  </g>
+  <g
+     id="g286"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use282"
+       xlink:href="#b"
+       y="303.339063"
+       x="126.044000" />
+    <use
+       id="use284"
+       xlink:href="#b"
+       y="303.339063"
+       x="126.044000" />
+  </g>
+  <g
+     id="g292"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use288"
+       xlink:href="#b"
+       y="303.339063"
+       x="139.436000" />
+    <use
+       id="use290"
+       xlink:href="#b"
+       y="303.339063"
+       x="139.436000" />
+  </g>
+  <g
+     id="g298"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use294"
+       xlink:href="#b"
+       y="303.339063"
+       x="152.828000" />
+    <use
+       id="use296"
+       xlink:href="#b"
+       y="303.339063"
+       x="152.828000" />
+  </g>
+  <g
+     id="g304"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use300"
+       xlink:href="#b"
+       y="303.339063"
+       x="179.612000" />
+    <use
+       id="use302"
+       xlink:href="#b"
+       y="303.339063"
+       x="179.612000" />
+  </g>
+  <g
+     id="g310"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use306"
+       xlink:href="#b"
+       y="303.339063"
+       x="193.004000" />
+    <use
+       id="use308"
+       xlink:href="#b"
+       y="303.339063"
+       x="193.004000" />
+  </g>
+  <g
+     id="g316"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use312"
+       xlink:href="#b"
+       y="303.339063"
+       x="206.396000" />
+    <use
+       id="use314"
+       xlink:href="#b"
+       y="303.339063"
+       x="206.396000" />
+  </g>
+  <g
+     id="g322"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use318"
+       xlink:href="#b"
+       y="303.339063"
+       x="219.788000" />
+    <use
+       id="use320"
+       xlink:href="#b"
+       y="303.339063"
+       x="219.788000" />
+  </g>
+  <g
+     id="g328"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use324"
+       xlink:href="#b"
+       y="303.339063"
+       x="246.572000" />
+    <use
+       id="use326"
+       xlink:href="#b"
+       y="303.339063"
+       x="246.572000" />
+  </g>
+  <g
+     id="g334"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use330"
+       xlink:href="#b"
+       y="303.339063"
+       x="259.964000" />
+    <use
+       id="use332"
+       xlink:href="#b"
+       y="303.339063"
+       x="259.964000" />
+  </g>
+  <g
+     id="g340"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use336"
+       xlink:href="#b"
+       y="303.339063"
+       x="273.356000" />
+    <use
+       id="use338"
+       xlink:href="#b"
+       y="303.339063"
+       x="273.356000" />
+  </g>
+  <g
+     id="g346"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use342"
+       xlink:href="#b"
+       y="303.339063"
+       x="286.748000" />
+    <use
+       id="use344"
+       xlink:href="#b"
+       y="303.339063"
+       x="286.748000" />
+  </g>
+  <g
+     id="g352"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use348"
+       xlink:href="#b"
+       y="303.339063"
+       x="313.532000" />
+    <use
+       id="use350"
+       xlink:href="#b"
+       y="303.339063"
+       x="313.532000" />
+  </g>
+  <g
+     id="g358"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use354"
+       xlink:href="#b"
+       y="303.339063"
+       x="326.924000" />
+    <use
+       id="use356"
+       xlink:href="#b"
+       y="303.339063"
+       x="326.924000" />
+  </g>
+  <g
+     id="g364"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use360"
+       xlink:href="#b"
+       y="303.339063"
+       x="340.316000" />
+    <use
+       id="use362"
+       xlink:href="#b"
+       y="303.339063"
+       x="340.316000" />
+  </g>
+  <g
+     id="g370"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use366"
+       xlink:href="#b"
+       y="303.339063"
+       x="353.708000" />
+    <use
+       id="use368"
+       xlink:href="#b"
+       y="303.339063"
+       x="353.708000" />
+  </g>
+  <path
+     id="path372"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#000"
+     fill="none"
+     d="m32.3 15.339h334.8" />
+  <defs
+     id="defs375">
+    <path
+       d="m0 0v4"
+       id="f" />
+  </defs>
+  <g
+     id="g381"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use377"
+       xlink:href="#f"
+       y="15.339063"
+       x="32.300000" />
+    <use
+       id="use379"
+       xlink:href="#f"
+       y="15.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g387"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use383"
+       xlink:href="#f"
+       y="15.339063"
+       x="99.260000" />
+    <use
+       id="use385"
+       xlink:href="#f"
+       y="15.339063"
+       x="99.260000" />
+  </g>
+  <g
+     id="g393"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use389"
+       xlink:href="#f"
+       y="15.339063"
+       x="166.220000" />
+    <use
+       id="use391"
+       xlink:href="#f"
+       y="15.339063"
+       x="166.220000" />
+  </g>
+  <g
+     id="g399"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use395"
+       xlink:href="#f"
+       y="15.339063"
+       x="233.180000" />
+    <use
+       id="use397"
+       xlink:href="#f"
+       y="15.339063"
+       x="233.180000" />
+  </g>
+  <g
+     id="g405"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use401"
+       xlink:href="#f"
+       y="15.339063"
+       x="300.140000" />
+    <use
+       id="use403"
+       xlink:href="#f"
+       y="15.339063"
+       x="300.140000" />
+  </g>
+  <g
+     id="g411"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use407"
+       xlink:href="#f"
+       y="15.339063"
+       x="367.100000" />
+    <use
+       id="use409"
+       xlink:href="#f"
+       y="15.339063"
+       x="367.100000" />
+  </g>
+  <defs
+     id="defs414">
+    <path
+       d="m0 0v2"
+       id="a" />
+  </defs>
+  <g
+     id="g420"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use416"
+       xlink:href="#a"
+       y="15.339063"
+       x="45.692000" />
+    <use
+       id="use418"
+       xlink:href="#a"
+       y="15.339063"
+       x="45.692000" />
+  </g>
+  <g
+     id="g426"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use422"
+       xlink:href="#a"
+       y="15.339063"
+       x="59.084000" />
+    <use
+       id="use424"
+       xlink:href="#a"
+       y="15.339063"
+       x="59.084000" />
+  </g>
+  <g
+     id="g432"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use428"
+       xlink:href="#a"
+       y="15.339063"
+       x="72.476000" />
+    <use
+       id="use430"
+       xlink:href="#a"
+       y="15.339063"
+       x="72.476000" />
+  </g>
+  <g
+     id="g438"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use434"
+       xlink:href="#a"
+       y="15.339063"
+       x="85.868000" />
+    <use
+       id="use436"
+       xlink:href="#a"
+       y="15.339063"
+       x="85.868000" />
+  </g>
+  <g
+     id="g444"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use440"
+       xlink:href="#a"
+       y="15.339063"
+       x="112.652000" />
+    <use
+       id="use442"
+       xlink:href="#a"
+       y="15.339063"
+       x="112.652000" />
+  </g>
+  <g
+     id="g450"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use446"
+       xlink:href="#a"
+       y="15.339063"
+       x="126.044000" />
+    <use
+       id="use448"
+       xlink:href="#a"
+       y="15.339063"
+       x="126.044000" />
+  </g>
+  <g
+     id="g456"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use452"
+       xlink:href="#a"
+       y="15.339063"
+       x="139.436000" />
+    <use
+       id="use454"
+       xlink:href="#a"
+       y="15.339063"
+       x="139.436000" />
+  </g>
+  <g
+     id="g462"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use458"
+       xlink:href="#a"
+       y="15.339063"
+       x="152.828000" />
+    <use
+       id="use460"
+       xlink:href="#a"
+       y="15.339063"
+       x="152.828000" />
+  </g>
+  <g
+     id="g468"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use464"
+       xlink:href="#a"
+       y="15.339063"
+       x="179.612000" />
+    <use
+       id="use466"
+       xlink:href="#a"
+       y="15.339063"
+       x="179.612000" />
+  </g>
+  <g
+     id="g474"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use470"
+       xlink:href="#a"
+       y="15.339063"
+       x="193.004000" />
+    <use
+       id="use472"
+       xlink:href="#a"
+       y="15.339063"
+       x="193.004000" />
+  </g>
+  <g
+     id="g480"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use476"
+       xlink:href="#a"
+       y="15.339063"
+       x="206.396000" />
+    <use
+       id="use478"
+       xlink:href="#a"
+       y="15.339063"
+       x="206.396000" />
+  </g>
+  <g
+     id="g486"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use482"
+       xlink:href="#a"
+       y="15.339063"
+       x="219.788000" />
+    <use
+       id="use484"
+       xlink:href="#a"
+       y="15.339063"
+       x="219.788000" />
+  </g>
+  <g
+     id="g492"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use488"
+       xlink:href="#a"
+       y="15.339063"
+       x="246.572000" />
+    <use
+       id="use490"
+       xlink:href="#a"
+       y="15.339063"
+       x="246.572000" />
+  </g>
+  <g
+     id="g498"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use494"
+       xlink:href="#a"
+       y="15.339063"
+       x="259.964000" />
+    <use
+       id="use496"
+       xlink:href="#a"
+       y="15.339063"
+       x="259.964000" />
+  </g>
+  <g
+     id="g504"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use500"
+       xlink:href="#a"
+       y="15.339063"
+       x="273.356000" />
+    <use
+       id="use502"
+       xlink:href="#a"
+       y="15.339063"
+       x="273.356000" />
+  </g>
+  <g
+     id="g510"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use506"
+       xlink:href="#a"
+       y="15.339063"
+       x="286.748000" />
+    <use
+       id="use508"
+       xlink:href="#a"
+       y="15.339063"
+       x="286.748000" />
+  </g>
+  <g
+     id="g516"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use512"
+       xlink:href="#a"
+       y="15.339063"
+       x="313.532000" />
+    <use
+       id="use514"
+       xlink:href="#a"
+       y="15.339063"
+       x="313.532000" />
+  </g>
+  <g
+     id="g522"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use518"
+       xlink:href="#a"
+       y="15.339063"
+       x="326.924000" />
+    <use
+       id="use520"
+       xlink:href="#a"
+       y="15.339063"
+       x="326.924000" />
+  </g>
+  <g
+     id="g528"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use524"
+       xlink:href="#a"
+       y="15.339063"
+       x="340.316000" />
+    <use
+       id="use526"
+       xlink:href="#a"
+       y="15.339063"
+       x="340.316000" />
+  </g>
+  <g
+     id="g534"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use530"
+       xlink:href="#a"
+       y="15.339063"
+       x="353.708000" />
+    <use
+       id="use532"
+       xlink:href="#a"
+       y="15.339063"
+       x="353.708000" />
+  </g>
+  <path
+     id="path536"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#000"
+     fill="none"
+     d="m32.3 303.34v-288" />
+  <defs
+     id="defs539">
+    <path
+       d="m0 0h4"
+       id="j" />
+  </defs>
+  <g
+     id="g545"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use541"
+       xlink:href="#j"
+       y="303.339063"
+       x="32.300000" />
+    <use
+       id="use543"
+       xlink:href="#j"
+       y="303.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g551"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use547"
+       xlink:href="#j"
+       y="207.339063"
+       x="32.300000" />
+    <use
+       id="use549"
+       xlink:href="#j"
+       y="207.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g557"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use553"
+       xlink:href="#j"
+       y="111.339063"
+       x="32.300000" />
+    <use
+       id="use555"
+       xlink:href="#j"
+       y="111.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g563"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use559"
+       xlink:href="#j"
+       y="15.339063"
+       x="32.300000" />
+    <use
+       id="use561"
+       xlink:href="#j"
+       y="15.339063"
+       x="32.300000" />
+  </g>
+  <defs
+     id="defs566">
+    <path
+       d="m10.688-12.406h10.312v12.406h-10.312z"
+       id="o" />
+  </defs>
+  <g
+     id="g574"
+     transform="translate(10.8 307.71) scale(.12)">
+    <use
+       id="use568"
+       xlink:href="#k" />
+    <use
+       id="use570"
+       xlink:href="#o"
+       x="63.623047" />
+    <use
+       id="use572"
+       xlink:href="#k"
+       x="95.410156" />
+  </g>
+  <g
+     id="g582"
+     transform="translate(11.112 211.71) scale(.12)">
+    <use
+       id="use576"
+       xlink:href="#k" />
+    <use
+       id="use578"
+       xlink:href="#o"
+       x="63.623047" />
+    <use
+       id="use580"
+       xlink:href="#p"
+       x="95.410156" />
+  </g>
+  <g
+     id="g590"
+     transform="translate(11.206 115.71) scale(.12)">
+    <use
+       id="use584"
+       xlink:href="#k" />
+    <use
+       id="use586"
+       xlink:href="#o"
+       x="63.623047" />
+    <use
+       id="use588"
+       xlink:href="#s"
+       x="95.410156" />
+  </g>
+  <defs
+     id="defs593">
+    <path
+       d="m40.578-39.312q7.0781 1.5156 11.047 6.3125 3.9844 4.7812 3.9844 11.812 0 10.781-7.4219 16.703-7.4219 5.9062-21.094 5.9062-4.5781 0-9.4375-0.90625t-10.031-2.7188v-9.5156q4.0938 2.3906 8.9688 3.6094 4.8906 1.2188 10.219 1.2188 9.2656 0 14.125-3.6562t4.8594-10.641q0-6.4531-4.5156-10.078-4.5156-3.6406-12.562-3.6406h-8.5v-8.1094h8.8906q7.2656 0 11.125-2.9062t3.8594-8.375q0-5.6094-3.9844-8.6094-3.9688-3.0156-11.391-3.0156-4.0625 0-8.7031 0.89062-4.6406 0.875-10.203 2.7188v-8.7812q5.625-1.5625 10.531-2.3438t9.25-0.78125q11.234 0 17.766 5.1094 6.5469 5.0938 6.5469 13.781 0 6.0625-3.4688 10.234t-9.8594 5.7812"
+       id="aj" />
+  </defs>
+  <g
+     id="g601"
+     transform="translate(10.972 19.706) scale(.12)">
+    <use
+       id="use595"
+       xlink:href="#k" />
+    <use
+       id="use597"
+       xlink:href="#o"
+       x="63.623047" />
+    <use
+       id="use599"
+       xlink:href="#aj"
+       x="95.410156" />
+  </g>
+  <defs
+     id="defs604">
+    <path
+       d="m0 0h2"
+       id="d" />
+  </defs>
+  <g
+     id="g610"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use606"
+       xlink:href="#d"
+       y="279.339063"
+       x="32.300000" />
+    <use
+       id="use608"
+       xlink:href="#d"
+       y="279.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g616"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use612"
+       xlink:href="#d"
+       y="255.339063"
+       x="32.300000" />
+    <use
+       id="use614"
+       xlink:href="#d"
+       y="255.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g622"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use618"
+       xlink:href="#d"
+       y="231.339063"
+       x="32.300000" />
+    <use
+       id="use620"
+       xlink:href="#d"
+       y="231.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g628"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use624"
+       xlink:href="#d"
+       y="183.339063"
+       x="32.300000" />
+    <use
+       id="use626"
+       xlink:href="#d"
+       y="183.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g634"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use630"
+       xlink:href="#d"
+       y="159.339063"
+       x="32.300000" />
+    <use
+       id="use632"
+       xlink:href="#d"
+       y="159.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g640"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use636"
+       xlink:href="#d"
+       y="135.339063"
+       x="32.300000" />
+    <use
+       id="use638"
+       xlink:href="#d"
+       y="135.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g646"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use642"
+       xlink:href="#d"
+       y="87.339063"
+       x="32.300000" />
+    <use
+       id="use644"
+       xlink:href="#d"
+       y="87.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g652"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use648"
+       xlink:href="#d"
+       y="63.339063"
+       x="32.300000" />
+    <use
+       id="use650"
+       xlink:href="#d"
+       y="63.339063"
+       x="32.300000" />
+  </g>
+  <g
+     id="g658"
+     stroke-width=".5"
+     stroke-linejoin="round"
+     stroke="#000000"
+     fill="none">
+    <use
+       id="use654"
+       xlink:href="#d"
+       y="39.339063"
+       x="32.300000" />
+    <use
+       id="use656"
+       xlink:href="#d"
+       y="39.339063"
+       x="32.300000" />
+  </g>
+  <path
+     id="path660"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#00f"
+     fill="none"
+     d="m249.14 33.9h20.16" />
+  <defs
+     id="defs668">
+    <path
+       d="m2.7812 18.797q0-0.57812 0.09375-0.78125l14.703-59.031q0.4375-1.4219 1.5781-2.2969 1.1562-0.875 2.625-0.875 1.2656 0 2.1406 0.76562 0.89062 0.75 0.89062 2.0156 0 0.29688-0.03125 0.46875t-0.078125 0.35938l-5.9062 23.391q-0.96875 4.1562-0.96875 7.1719 0 3.7188 1.75 6.1094 1.7656 2.3906 5.3281 2.3906 7.2656 0 12.797-9.0781 0.046875-0.09375 0.0625-0.14062 0.03125-0.0625 0.03125-0.15625l7.2188-29q0.34375-1.3281 1.5625-2.2656 1.2188-0.95312 2.6406-0.95312 1.1719 0 2.0781 0.78125t0.90625 2.0469q0 0.57812-0.10938 0.78125l-7.1719 28.812q-0.73438 2.8281-0.73438 4.875 0 4.2969 2.9375 4.2969 3.125 0 4.7031-3.8594 1.5938-3.8594 2.7656-9.3281 0.1875-0.57812 0.82812-0.57812h1.1719q0.39062 0 0.65625 0.3125t0.26562 0.65625q-1.75 6.9844-3.8281 11.219-2.0781 4.2188-6.7656 4.2188-3.3125 0-5.875-1.9062t-3.3438-5.125q-2.5 3.125-5.8438 5.0781t-7.0469 1.9531q-6.25 0-9.8281-2.9375l-5.0781 20.219q-0.28125 1.4219-1.4531 2.2969t-2.6406 0.875q-1.2188 0-2.125-0.76562-0.90625-0.75-0.90625-2.0156"
+       id="m" />
+    <path
+       d="m7.5156-13.281q-0.82812 0-1.375-0.625-0.53125-0.64062-0.53125-1.375 0-0.82812 0.53125-1.4062 0.54688-0.59375 1.375-0.59375h62.797q0.73438 0 1.2656 0.59375 0.54688 0.57812 0.54688 1.4062 0 0.73438-0.54688 1.375-0.53125 0.625-1.2656 0.625zm0-19.438q-0.82812 0-1.375-0.57812-0.53125-0.59375-0.53125-1.4219 0-0.73438 0.53125-1.3594 0.54688-0.64062 1.375-0.64062h62.797q0.73438 0 1.2656 0.64062 0.54688 0.625 0.54688 1.3594 0 0.82812-0.54688 1.4219-0.53125 0.57812-1.2656 0.57812z"
+       id="h" />
+    <path
+       d="m8.6875-11.375q1.0312 2.9219 3.1562 5.3281 2.125 2.3906 5.0312 3.7344 2.9062 1.3281 6.0312 1.3281 7.2188 0 9.9531-5.6094t2.7344-13.625q0-3.4688-0.125-5.8281-0.10938-2.375-0.65625-4.5625-0.92188-3.5156-3.25-6.1562-2.3125-2.6406-5.6875-2.6406-3.3594 0-5.7812 1.0312-2.4219 1.0156-3.9375 2.3906-1.5 1.3594-2.6719 2.875t-1.4688 1.6094h-1.125q-0.25 0-0.625-0.3125-0.35938-0.3125-0.35938-0.60938v-33.406q0-0.23438 0.3125-0.5 0.32812-0.28125 0.67188-0.28125h0.29688q6.7344 3.2344 14.297 3.2344 7.4219 0 14.312-3.2344h0.29688q0.34375 0 0.625 0.25 0.29688 0.25 0.29688 0.53125v0.9375q0 0.48438-0.1875 0.48438-3.4219 4.5469-8.5781 7.0938-5.1562 2.5312-10.672 2.5312-4 0-8.2031-1.125v18.891q3.3281-2.6875 5.9375-3.8281 2.6094-1.1562 6.6719-1.1562 5.5156 0 9.875 3.1875 4.375 3.1719 6.7188 8.2812 2.3438 5.0938 2.3438 10.406 0 6.0156-2.9531 11.141t-8.0312 8.1562-11.031 3.0312q-4.9375 0-9.0625-2.5312-4.125-2.5469-6.5-6.8438-2.3594-4.2969-2.3594-9.1406 0-2.25 1.4531-3.6562 1.4688-1.4219 3.6719-1.4219t3.6875 1.4531q1.4844 1.4375 1.4844 3.625 0 2.1562-1.4844 3.6406t-3.6875 1.4844q-0.34375 0-0.78125-0.0625-0.4375-0.078125-0.64062-0.125"
+       id="ag" />
+    <path
+       d="m9.9062 18.016q0-0.4375 0.39062-0.82812 3.625-3.4688 5.625-8.0156 2-4.5312 2-9.5625v-1.2188q-1.6094 1.6094-4 1.6094-2.2969 0-3.9062-1.6094t-1.6094-3.9062q0-2.3438 1.6094-3.9062t3.9062-1.5625q3.5625 0 5.0781 3.2969t1.5156 7.2969q0 5.5625-2.2344 10.562-2.2188 5.0156-6.2656 9.0156-0.39062 0.20312-0.64062 0.20312-0.48438 0-0.98438-0.45312-0.48438-0.4375-0.48438-0.92188"
+       id="n" />
+    <path
+       d="m8.6875-6.1094q2.6875 4.5938 10.797 4.5938 3.5156 0 6.6875-1.1875 3.1719-1.2031 5.25-3.5938t2.0781-5.8125q0-2.5938-1.8594-4.25t-4.5469-2.25l-5.4062-1.0625q-3.7188-0.9375-6.1094-3.4688-2.3906-2.5469-2.3906-6.1562 0-4.4375 2.4062-7.8594 2.4219-3.4219 6.375-5.2188 3.9531-1.8125 8.2031-1.8125 4.5469 0 8.125 2.1719 3.5938 2.1719 3.5938 6.4219 0 2.2969-1.2969 4.0625-1.2812 1.75-3.5781 1.75-1.3281 0-2.2812-0.85938-0.9375-0.85938-0.9375-2.1719 0-1.1719 0.65625-2.2656 0.65625-1.1094 1.75-1.7656 1.1094-0.65625 2.2812-0.65625-0.89062-2.1562-3.3125-3.125-2.4062-0.98438-5.1875-0.98438-2.5469 0-5.0938 1.0312-2.5312 1.0312-4.0781 3.0156-1.5312 1.9688-1.5312 4.6562 0 1.7969 1.2656 3.1719 1.2812 1.3594 3.1406 1.9531l5.8125 1.1719q2.7812 0.57812 5.0938 2.0781 2.3281 1.4844 3.6562 3.7656 1.3438 2.2656 1.3438 5.1875 0 3.7188-2.0781 7.3281-2.0625 3.6094-5.0938 5.7656-5.3281 3.6094-13.031 3.6094-5.3281 0-9.7812-2.4375-4.4375-2.4531-4.4375-7.2812 0-2.7344 1.5781-4.75 1.5938-2.0312 4.3281-2.0312 1.625 0 2.7188 0.98438 1.0938 0.96875 1.0938 2.5781 0 2.2969-1.7188 4-1.7031 1.7031-3.9844 1.7031z"
+       id="l" />
+    <path
+       d="m4.9844-0v-2.6875q0-0.25 0.1875-0.53125l15.531-17.188q3.5156-3.8125 5.7031-6.3906 2.2031-2.5938 4.3438-5.9688 2.1562-3.375 3.4062-6.8594t1.25-7.3906q0-4.1094-1.5156-7.8438t-4.5156-5.9844-7.25-2.25q-4.3438 0-7.8125 2.625-3.4688 2.6094-4.8906 6.75 0.39062-0.09375 1.0781-0.09375 2.25 0 3.8281 1.5156 1.5938 1.5156 1.5938 3.9062 0 2.2969-1.5938 3.8906-1.5781 1.5781-3.8281 1.5781-2.3438 0-3.9375-1.625-1.5781-1.6406-1.5781-3.8438 0-3.7656 1.4062-7.0469 1.4219-3.2969 4.0781-5.8594 2.6719-2.5781 6.0156-3.9375 3.3438-1.375 7.0938-1.375 5.7188 0 10.641 2.4219 4.9375 2.4219 7.8125 6.8438 2.8906 4.4062 2.8906 10.328 0 4.3438-1.9062 8.25t-4.8906 7.1094q-2.9688 3.1875-7.6094 7.25-4.6406 4.0469-6.0938 5.4062l-11.328 10.891h9.6094q7.0781 0 11.844-0.10938 4.7656-0.125 5.0469-0.375 1.1719-1.2656 2.4062-9.2344h2.9219l-2.8281 17.828z"
+       id="r" />
+  </defs>
+  <g
+     id="g684"
+     transform="translate(285.14 42.94)">
+    <use
+       id="use670"
+       xlink:href="#m"
+       transform="translate(0 -4.4219) scale(.144)" />
+    <use
+       id="use672"
+       xlink:href="#h"
+       transform="translate(11.191 -4.4219) scale(.144)" />
+    <use
+       id="use674"
+       xlink:href="#ag"
+       transform="translate(23.28 -4.4219) scale(.144)" />
+    <use
+       id="use676"
+       xlink:href="#n"
+       transform="translate(30.475 -4.4219) scale(.144)" />
+    <use
+       id="use678"
+       xlink:href="#l"
+       transform="translate(39.79 -4.4219) scale(.144)" />
+    <use
+       id="use680"
+       xlink:href="#h"
+       transform="translate(49.048 -4.4219) scale(.144)" />
+    <use
+       id="use682"
+       xlink:href="#r"
+       transform="translate(61.138 -4.4219) scale(.144)" />
+  </g>
+  <path
+     id="path686"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#008000"
+     fill="none"
+     d="m249.14 55.74h20.16" />
+  <defs
+     id="defs690">
+    <path
+       d="m11.281-4.2031q2.7344 3.2188 9.5156 3.2188 3.8125 0 7.1094-2.5781 3.2969-2.5938 5.1094-6.3438 2.0938-4.25 2.6719-9.0625 0.59375-4.8125 0.59375-11.938-1.7031 4.0469-4.9062 6.6406-3.2031 2.5781-7.3438 2.5781-5.8125 0-10.391-3.1406-4.5625-3.1562-7-8.2969-2.4375-5.1562-2.4375-10.969 0-6 2.7344-11.203t7.5625-8.25q4.8438-3.0625 10.984-3.0625 6.0625 0 10.141 3.2969t6.2188 8.5q2.1562 5.2031 3 11.016 0.85938 5.8125 0.85938 11.469 0 7.7188-2.8281 15.75t-8.4688 13.406-13.609 5.375q-5.9062 0-10.016-2.7812-4.0938-2.7969-4.0938-8.4062 0-2.0469 1.3906-3.4375t3.4531-1.3906q2 0 3.3906 1.3906t1.3906 3.4375q0 1.9531-1.4219 3.375-1.4062 1.4062-3.3594 1.4062zm13.141-20.109q4.0938 0 6.7031-2.75 2.6094-2.7656 3.7812-6.8594 1.1719-4.1094 1.1719-8.1719v-1.9062-0.39062q0-7.5156-2.2031-13.422-2.1875-5.9062-8.3906-5.9062-3.9531 0-6.4219 1.7344-2.4531 1.7344-3.625 4.6094t-1.5 6.1562q-0.3125 3.2656-0.3125 7.125 0 5.6719 0.53125 9.6719 0.54688 4 2.9375 7.0625 2.3906 3.0469 7.3281 3.0469"
+       id="t" />
+    <path
+       d="m9.5156-7.7188q2.3438 3.4219 6.2969 5.0781 3.9688 1.6562 8.5 1.6562 5.8125 0 8.25-4.9531 2.4531-4.9531 2.4531-11.25 0-2.8281-0.51562-5.6562-0.51562-2.8438-1.7344-5.2812t-3.3438-3.9062-5.2031-1.4688h-6.6406q-0.875 0-0.875-0.92188v-0.875q0-0.78125 0.875-0.78125l5.5156-0.45312q3.5156 0 5.8281-2.625 2.3281-2.6406 3.4062-6.4219t1.0781-7.2031q0-4.7812-2.25-7.8594t-6.8438-3.0781q-3.7969 0-7.2656 1.4375t-5.5156 4.375q0.1875-0.046875 0.32812-0.078125 0.15625-0.03125 0.34375-0.03125 2.25 0 3.7656 1.5625t1.5156 3.7656q0 2.1562-1.5156 3.7188t-3.7656 1.5625q-2.1875 0-3.75-1.5625t-1.5625-3.7188q0-4.2969 2.5781-7.4688 2.5938-3.1719 6.6719-4.8125t8.1719-1.6406q3.0312 0 6.3906 0.90625 3.375 0.90625 6.1094 2.5938t4.4688 4.3281q1.7344 2.625 1.7344 6 0 4.2031-1.875 7.7656t-5.1562 6.1562q-3.2656 2.5781-7.1719 3.8438 4.3438 0.82812 8.25 3.2812 3.9062 2.4375 6.2656 6.25 2.375 3.7969 2.375 8.2031 0 5.5156-3.0312 9.9844-3.0156 4.4688-7.9531 6.9844t-10.406 2.5156q-4.6875 0-9.4062-1.7969-4.7031-1.7812-7.7031-5.3438t-3-8.5469q0-2.4844 1.6562-4.1406t4.1562-1.6562q1.6094 0 2.9531 0.75t2.0938 2.125q0.76562 1.3594 0.76562 2.9219 0 2.4531-1.7188 4.1094-1.7031 1.6562-4.0938 1.6562z"
+       id="ai" />
+  </defs>
+  <g
+     id="g706"
+     transform="translate(285.14 64.78)">
+    <use
+       id="use692"
+       xlink:href="#m"
+       transform="translate(0 -4.4219) scale(.144)" />
+    <use
+       id="use694"
+       xlink:href="#h"
+       transform="translate(11.191 -4.4219) scale(.144)" />
+    <use
+       id="use696"
+       xlink:href="#t"
+       transform="translate(23.28 -4.4219) scale(.144)" />
+    <use
+       id="use698"
+       xlink:href="#n"
+       transform="translate(30.475 -4.4219) scale(.144)" />
+    <use
+       id="use700"
+       xlink:href="#l"
+       transform="translate(39.79 -4.4219) scale(.144)" />
+    <use
+       id="use702"
+       xlink:href="#h"
+       transform="translate(49.048 -4.4219) scale(.144)" />
+    <use
+       id="use704"
+       xlink:href="#ai"
+       transform="translate(61.138 -4.4219) scale(.144)" />
+  </g>
+  <path
+     id="path708"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#f00"
+     fill="none"
+     d="m249.14 77.581h20.16" />
+  <defs
+     id="defs711">
+    <path
+       d="m2.7812-16.5v-3.5156l30.906-46.094q0.34375-0.5 1.0312-0.5h1.4688q1.125 0 1.125 1.125v45.469h9.8125v3.5156h-9.8125v9.8125q0 2.0469 2.9219 2.6094 2.9375 0.5625 6.7812 0.5625v3.5156h-27.531v-3.5156q3.8594 0 6.7812-0.5625 2.9375-0.5625 2.9375-2.6094v-9.8125zm3.3281-3.5156h23.672v-35.406z"
+       id="ae" />
+  </defs>
+  <g
+     id="g727"
+     transform="translate(285.14 86.621)">
+    <use
+       id="use713"
+       xlink:href="#m"
+       transform="translate(0 -4.4219) scale(.144)" />
+    <use
+       id="use715"
+       xlink:href="#h"
+       transform="translate(11.191 -4.4219) scale(.144)" />
+    <use
+       id="use717"
+       xlink:href="#t"
+       transform="translate(23.28 -4.4219) scale(.144)" />
+    <use
+       id="use719"
+       xlink:href="#n"
+       transform="translate(30.475 -4.4219) scale(.144)" />
+    <use
+       id="use721"
+       xlink:href="#l"
+       transform="translate(39.79 -4.4219) scale(.144)" />
+    <use
+       id="use723"
+       xlink:href="#h"
+       transform="translate(49.048 -4.4219) scale(.144)" />
+    <use
+       id="use725"
+       xlink:href="#ae"
+       transform="translate(61.138 -4.4219) scale(.144)" />
+  </g>
+  <path
+     id="path729"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#00bfbf"
+     fill="none"
+     d="m249.14 99.422h20.16" />
+  <defs
+     id="defs732">
+    <path
+       d="m25 2.2031q-6.2031 0-10.359-3.2969-4.1406-3.2969-6.4219-8.5469-2.2656-5.25-3.1406-11.016t-0.875-11.672q0-7.9062 3.0781-15.859 3.0781-7.9688 9.0469-13.188 5.9844-5.2344 14.188-5.2344 3.4219 0 6.375 1.2969t4.6406 3.8125 1.6875 6.0781q0 2.0469-1.3906 3.4375t-3.4531 1.3906q-1.9531 0-3.375-1.4062-1.4062-1.4219-1.4062-3.4219 0-1.9531 1.4062-3.3594 1.4219-1.4219 3.375-1.4219h0.54688q-1.2812-1.8125-3.5938-2.6562-2.3125-0.85938-4.8125-0.85938-3.0312 0-5.5938 1.3281-2.5625 1.3125-4.6094 3.5625-2.0469 2.2344-3.4219 4.9531-1.3594 2.7031-2.125 6.1719-0.75 3.4688-0.95312 6.5-0.1875 3.0156-0.1875 7.6094 1.75-4.1094 4.9688-6.7188 3.2344-2.6094 7.2812-2.6094 4.4531 0 8.1094 1.8125 3.6562 1.7969 6.2969 5t4.0312 7.3125q1.3906 4.0938 1.3906 8.2812 0 5.8594-2.6094 11.172-2.6094 5.2969-7.3594 8.4219-4.7344 3.125-10.734 3.125m0-3.1875q3.8594 0 6.2031-1.75 2.3438-1.7656 3.4375-4.6562 1.1094-2.9062 1.375-5.8594 0.26562-2.9688 0.26562-7.2656 0-5.6562-0.54688-9.6562-0.53125-4.0156-2.9219-7.0625t-7.3281-3.0469q-4.0469 0-6.6562 2.7344t-3.8125 6.9062-1.2031 8.0312q0 1.3125 0.10938 2 0 0.15625-0.03125 0.25-0.015625 0.09375-0.078125 0.23438 0 4.2969 0.875 8.7031 0.89062 4.3906 3.375 7.4219 2.5 3.0156 6.9375 3.0156"
+       id="af" />
+  </defs>
+  <g
+     id="g748"
+     transform="translate(285.14 108.46)">
+    <use
+       id="use734"
+       xlink:href="#m"
+       transform="translate(0 -4.4219) scale(.144)" />
+    <use
+       id="use736"
+       xlink:href="#h"
+       transform="translate(11.191 -4.4219) scale(.144)" />
+    <use
+       id="use738"
+       xlink:href="#af"
+       transform="translate(23.28 -4.4219) scale(.144)" />
+    <use
+       id="use740"
+       xlink:href="#n"
+       transform="translate(30.475 -4.4219) scale(.144)" />
+    <use
+       id="use742"
+       xlink:href="#l"
+       transform="translate(39.79 -4.4219) scale(.144)" />
+    <use
+       id="use744"
+       xlink:href="#h"
+       transform="translate(49.048 -4.4219) scale(.144)" />
+    <use
+       id="use746"
+       xlink:href="#r"
+       transform="translate(61.138 -4.4219) scale(.144)" />
+  </g>
+  <path
+     id="path750"
+     stroke-width="1.5"
+     stroke-linejoin="round"
+     stroke-linecap="square"
+     stroke="#bf00bf"
+     fill="none"
+     d="m249.14 121.26h20.16" />
+  <defs
+     id="defs753">
+    <path
+       d="m9.2812-0v-3.5156q12.5 0 12.5-3.1719v-52.5q-5.1719 2.5-13.094 2.5v-3.5156q12.266 0 18.516-6.4062h1.4062q0.34375 0 0.65625 0.28125 0.32812 0.26562 0.32812 0.60938v59.031q0 3.1719 12.5 3.1719v3.5156z"
+       id="ak" />
+  </defs>
+  <g
+     id="g769"
+     transform="translate(285.14 130.3)">
+    <use
+       id="use755"
+       xlink:href="#m"
+       transform="translate(0 -4.4219) scale(.144)" />
+    <use
+       id="use757"
+       xlink:href="#h"
+       transform="translate(11.191 -4.4219) scale(.144)" />
+    <use
+       id="use759"
+       xlink:href="#r"
+       transform="translate(23.28 -4.4219) scale(.144)" />
+    <use
+       id="use761"
+       xlink:href="#n"
+       transform="translate(30.475 -4.4219) scale(.144)" />
+    <use
+       id="use763"
+       xlink:href="#l"
+       transform="translate(39.79 -4.4219) scale(.144)" />
+    <use
+       id="use765"
+       xlink:href="#h"
+       transform="translate(49.048 -4.4219) scale(.144)" />
+    <use
+       id="use767"
+       xlink:href="#ak"
+       transform="translate(61.138 -4.4219) scale(.144)" />
+  </g>
+</svg>
