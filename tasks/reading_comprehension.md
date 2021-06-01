@@ -42,6 +42,9 @@ will be distributed depending on relative ordering of your solutions. Note that
 usually achieving **47%** on the `dev` set is enough to get 49% on the `test`
 set (because of multiple references in the `test` set).
 
+Note that contrary to working with EfficientNet, you **need** to **finetune**
+the Electra model in order to achieve the required accuracy.
+
 You can start with the
 [reading_comprehension.py](https://github.com/ufal/npfl114/tree/master/labs/11/reading_comprehension.py)
 template, which among others (down)loads the data and Czech Electra small model, and describes

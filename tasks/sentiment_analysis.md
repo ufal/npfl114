@@ -16,6 +16,9 @@ predictions using the [text_classification_dataset.py](https://github.com/ufal/n
 module, either by running with `--evaluate=path` arguments, or using its
 `evaluate_file` method.
 
+Note that contrary to working with EfficientNet, you **need** to **finetune**
+the Electra model in order to achieve the required accuracy.
+
 You can start with the
 [sentiment_analysis.py](https://github.com/ufal/npfl114/tree/master/labs/11/sentiment_analysis.py)
 template, which among others loads the Electra Czech model and generates test
