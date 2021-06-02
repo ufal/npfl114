@@ -125,7 +125,7 @@
 - Considering a Fast-RCNN architecture, draw overall network architecture,
   explain what a RoI-pooling layer is, show how the network parametrizes
   bounding boxes and write down the loss. Finally, describe non-maximum
-  suppresion and how is the Fast-RCNN prediction performed. [10]
+  suppression and how is the Fast-RCNN prediction performed. [10]
 
 - Considering a Faster-RCNN architecture, describe the region proposal network
   (its architecture, what are anchors, what does the loss look like). [5]
