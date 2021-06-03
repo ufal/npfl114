@@ -6,6 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-10-english.mp4,EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-10-czech.practicals.mp4,CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-10-english.practicals.mp4,EN Practicals
+#### Questions: #lecture_10_questions
 #### Lecture assignment: tagger_crf_manual
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn

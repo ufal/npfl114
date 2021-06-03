@@ -190,3 +190,57 @@
 - Describe the hierarchical softmax used in `word2vec`. [5]
 
 - Describe the negative sampling proposed in `word2vec`. [5]
+
+####Questions@: ,Lecture 10 Questions
+- Draw a sequence-to-sequence architecture for machine translation, both during
+  training and during inference (without attention). [5]
+
+- Draw a sequence-to-sequence architecture for machine translation used during
+  training, including the attention. Then write down how exactly is the attention
+  computed. [10]
+
+- Explain how can word embeddings tying be used in a sequence-to-sequence
+  architecture. [5]
+
+- Write down why are subword units used in text processing, and describe the BPE
+  algorithm for constructing a subword dictionary from a large corpus. [5]
+
+- Write down why are subword units used in text processing, and describe the
+  WordPieces algorithm for constructing a subword dictionary from a large
+  corpus. [5]
+
+- Pinpoint the differences between the BPE and WordPieces algorithms, both
+  during dictionary construction and during inference. [5]
+
+####Questions@: ,Lecture 11 Questions
+- Describe the Transformer encoder architecture, including the description of
+  self-attention (but you do not need to describe multi-head attention). [10]
+
+- Write down the formula of Transformer self-attention, and then describe
+  multi-head self-attention in detail. [10]
+
+- Describe the Transformer decoder architecture, including the description of
+  self-attention and masked self-attention (but you do not need to describe
+  multi-head attention). [10]
+
+- Why are positional embeddings needed in Transformer architecture? Write down
+  the sinusoidal positional embeddings used in the Transformer. [5]
+
+- Compare RNN to Transformer – what are the strengths and weaknesses of these
+  architectures? [5]
+
+- Explain how are ELMo embeddings trained and how are they used in downstream
+  applications. [5]
+
+- Describe the BERT architecture (you do not need to describe the (multi-head)
+  self-attention operation). Elaborate also on what positional embeddings
+  are used and what are the GELU activations. [10]
+
+- Describe the GELU activations and explain why are they a combination of ReLUs
+  and Dropout. [5]
+
+- Elaborate on BERT training process (what are the two objectives used and how
+  exactly are the corresponding losses computed).
+
+- What alternatives to `Next Sentence Prediction` are proposed in RoBERTa and
+  in ALBERT? [5]
