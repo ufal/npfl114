@@ -240,7 +240,7 @@
   and Dropout. [5]
 
 - Elaborate on BERT training process (what are the two objectives used and how
-  exactly are the corresponding losses computed).
+  exactly are the corresponding losses computed). [10]
 
 - What alternatives to `Next Sentence Prediction` are proposed in RoBERTa and
   in ALBERT? [5]
