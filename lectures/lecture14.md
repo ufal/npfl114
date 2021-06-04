@@ -6,6 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-14-english.mp4,EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-14-czech.practicals.mp4,CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-14-english.practicals.mp4,EN Practicals
+#### Questions: #lecture_14_questions
 #### Lecture assignment: learning_to_learn
 
 - NasNet [[Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/abs/1707.07012)]
