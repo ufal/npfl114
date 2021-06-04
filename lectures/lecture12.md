@@ -6,6 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-12-english.mp4,EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-12-czech.practicals.mp4,CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2021/npfl114-12-english.practicals.mp4,EN Practicals
+#### Questions: #lecture_12_questions
 #### Lecture assignment: vae
 #### Lecture assignment: gan
 #### Lecture assignment: dcgan
