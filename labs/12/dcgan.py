@@ -36,7 +36,7 @@ class GAN(tf.keras.Model):
         # TODO: Define `self.generator` as a Model, which
         # - takes vectors of [args.z_dim] shape on input
         # - applies batch normalized dense layer with 1024 units and ReLU
-        #   (do not forget about `use_bias=False` in suitable places)
+        #   (do not forget about `use_bias=False` before every batch normalization)
         # - applies batch normalized dense layer with MNIST.H // 4 * MNIST.W // 4 * 64 units and ReLU
         # - reshapes the current hidden output to [MNIST.H // 4, MNIST.W // 4, 64]
         # - applies batch normalized transposed convolution with 32 filters, kernel size 5,
@@ -47,13 +47,14 @@ class GAN(tf.keras.Model):
         # TODO: Define `self.discriminator` as a Model, which
         # - takes input images with shape [MNIST.H, MNIST.W, MNIST.C]
         # - computes batch normalized convolution with 32 filters, kernel size 5,
-        #   same padding, and ReLU activation (do not forget `use_bias=False` where appropriate)
+        #   same padding, and ReLU activation (again, do not forget about
+        #   `use_bias=False` before every batch normalization).
         # - max-pools with kernel size 2 and stride 2
         # - computes batch normalized convolution with 64 filters, kernel size 5,
-        #   same padding, and ReLU activation (again `use_bias=False`)
+        #   same padding, and ReLU activation
         # - max-pools with kernel size 2 and stride 2
         # - flattens the current representation
-        # - applies batch normalized dense layer with 1024 units and ReLU activation (`use_bias`)
+        # - applies batch normalized dense layer with 1024 units and ReLU activation
         # - applies output dense layer with one output and a suitable activation function
 
         self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, update_freq="epoch", profile_batch=0)
