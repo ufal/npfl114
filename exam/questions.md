@@ -110,9 +110,9 @@
 
 - Describe Squeeze and Excitation applied to a ResNet block. [5]
 
-- Define the Mobile inverted bottleneck block (including separable convolutions
-  and the exact positions of BatchNorms and ReLUs, but without describing
-  Squeeze and excitation bocks). [5]
+- Draw the Mobile inverted bottleneck block (including explanation of separable
+  convolutions, the expansion factor, exact positions of BatchNorms and ReLUs,
+  but without describing Squeeze and excitation bocks). [5]
 
 - Assume an input image $I$ of size $H \times W$ with $C$ channels, and
   a convolutional kernel $K$ with size $N \times M$, stride $S$ and $O$ output
@@ -145,9 +145,11 @@
   convolutions, BatchNorms and ReLUs. [5]
 
 ####Questions@: ,Lecture 8 Questions
-- Write down how the Long Short-Term Memory cell operates. [10]
+- Write down how the Long Short-Term Memory (LSTM) cell operates, including
+  the explicit formulas. Also mention the forget gate bias. [10]
 
-- Write down how the Gated Recurrent Unit operates. [10]
+- Write down how the Gated Recurrent Unit (GRU) operates, including
+  the explicit formulas. [10]
 
 - Describe Highway network computation. [5]
 
@@ -252,9 +254,10 @@
   Jensen's inequality if you want). [10]
 
 - Draw an architecture of a variational autoencoder (VAE). Pay attention to the
-  parametrization of the distribution from the encoder, and show how to perform
-  latent variable sampling so that it is differentiable with respect to the
-  encoder parameters (the reparametrization trick). [10]
+  parametrization of the distribution from the encoder (including the used
+  activation functions), and show how to perform latent variable sampling so
+  that it is differentiable with respect to the encoder parameters (the
+  reparametrization trick). [10]
 
 - Write down the min-max formulation of generative adversarial network (GAN)
   objective. Then describe what loss is actually used for training the generator
