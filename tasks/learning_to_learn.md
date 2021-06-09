@@ -11,7 +11,21 @@ module, the goal is to learn to classify a
 [sequence of images using a custom hierarchy](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/demos/learning_to_learn_demo.html)
 by employing external memory.
 
-Details to appear later.
+The inputs image sequences consists of `args.classes` random chosen Omniglot
+classes, each class being assigned a randomly chosen label. For every chosen
+class, `args.images_per_class` images are randomly selected. Apart from the
+images, the input contain the random labels one step after the corresponding
+images (with the first label being -1). The gold outputs are also the labels,
+but without the one-step offset.
+
+The input images should be passed through a CNN feature extraction module
+and then processed using memory augmented LSTM controller; the external memory
+contains enough memory cells, each with `args.cell_size` units. In each step,
+the controller emits:
+- `args.read_heads` read keys, each used to perform a read from memory as
+  a weighted combination of cells according to the softmax of cosine
+  similarities of the read key and the memory cells;
+- a write value, which is prepended to the memory (dropping the last cell).
 
 #### Tests Start: learning_to_learn_tests
 _These tests are identical to the ones in ReCodEx, apart from a different random seed.
