@@ -120,15 +120,30 @@ class Network(tf.keras.Model):
 
             # TODO: Pass the `controller_output` through the `self._parameters` layer, obtaining
             # the parameters for interacting with the external memory (in this order):
-            # - `write_value` is a value of `self._cell_size` units;
-            # - `read_keys` is a list of `self._read_heads` keys, each of size `self._cell_size`.
-            write_value, read_keys = ...
+            # - the first `self._cell_size` elements of every batch are the `write_value`
+            # - the rest of the elements, reshaped to `[batch_size, self._read_heads, self._cell_size]`,
+            #   form the `read_keys`
+            write_value = ...
+            read_keys = ...
 
-            # TODO: Read the memory. For every predicted read key:
-            # - compute cosine similarities between the key and memory cells;
+            # TODO: Read the memory. For every predicted read key, the goal is to
+            # - compute cosine similarities between the key and all memory cells;
             # - compute cell distribution as a softmax of the computed cosine similarities;
             # - the read value is the sum of the memory cells weighted by the above distribution.
-            # Finally, concatenate all read values into `read_value` (respecting the order from `read_keys`).
+            #
+            # However, implement the reading process in a vectorized way (for all read keys in parallel):
+            # - compute L2 normalized copy of `memory` and `read_keys`, using `tf.math.l2_normalize`,
+            #   so that every cell vector has norm 1;
+            # - compute self-attention between the L2-normalized copy of `read_keys` and `memory`.
+            #   The resulting self-attention weights must be computed using a single matrix multiplication
+            #   and have shape `[batch_size, self._read_heads, self._memory_cells]`. You will need to
+            #   transpose one of the matrices -- do not transpose it manually, but use `tf.linalg.matmul`
+            #   capable of transposing the matrices to be multiplied (see `transpose_a` and `transpose_b`).
+            # - apply softmax, resulting in a distribution over the memory cells for every read key
+            # - compute weighted sum of the original (non-L2-normalized) `memory` according to the
+            #   obtained distribution. Compute it using a single matrix multiplication, producing
+            #   a value with shape `[batch_size, self._read_heads, self._cell_size]`.
+            # Finally, reshape the result into `read_value` of shape `[batch_size, self._read_heads * self._cell_size]`
             read_value = ...
 
             # TODO: Write to the memory by prepending the `write_value` as the first cell (row);
@@ -155,6 +170,14 @@ class Network(tf.keras.Model):
         # - convolutional layer with 16 filters, 3x3 kernel, stride 2, valid padding; BatchNorm; ReLU;
         # - convolutional layer with 32 filters, 3x3 kernel, stride 2, valid padding; BatchNorm; ReLU;
         # - finally, flatten each image into a vector.
+        #
+        # In order for your implementation to pass in ReCodEx, make sure that
+        # - the BatchNormalization operation processes 4D inputs (not 5D; such inputs use
+        #   a different BN implementation, which is slower and has slightly different results)
+        # - TimeDistributed layer is not used on a Model/Sequential (I discovered an internal
+        #   TF bug causing the BatchNorm to be called twice in such a case)
+        # Therefore, you need to either use TimeDistributed directly on a layer, or you can
+        # use a Model/Sequential, but you need to reshape the inputs to 4D and then back manually.
 
         # TODO: To create the input for the MemoryAugmentedLSTM, concatenate (in this order)
         # each computed image representation with the one-hot representation of the
