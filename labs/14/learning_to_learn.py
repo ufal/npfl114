@@ -134,11 +134,11 @@ class Network(tf.keras.Model):
             # However, implement the reading process in a vectorized way (for all read keys in parallel):
             # - compute L2 normalized copy of `memory` and `read_keys`, using `tf.math.l2_normalize`,
             #   so that every cell vector has norm 1;
-            # - compute self-attention between the L2-normalized copy of `read_keys` and `memory`.
-            #   The resulting self-attention weights must be computed using a single matrix multiplication
-            #   and have shape `[batch_size, self._read_heads, self._memory_cells]`. You will need to
-            #   transpose one of the matrices -- do not transpose it manually, but use `tf.linalg.matmul`
-            #   capable of transposing the matrices to be multiplied (see `transpose_a` and `transpose_b`).
+            # - compute the self-attention between the L2-normalized copy of `read_keys` and `memory`
+            #   with a single matrix multiplication, obtaining a tensor with shape
+            #   `[batch_size, self._read_heads, self._memory_cells]`. You will need to transpose one
+            #   of the matrices -- do not transpose it manually, but use `tf.linalg.matmul` capable of
+            #   transposing the matrices to be multiplied (see parameters `transpose_a` and `transpose_b`).
             # - apply softmax, resulting in a distribution over the memory cells for every read key
             # - compute weighted sum of the original (non-L2-normalized) `memory` according to the
             #   obtained distribution. Compute it using a single matrix multiplication, producing
