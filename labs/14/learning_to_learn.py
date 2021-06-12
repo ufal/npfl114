@@ -170,14 +170,6 @@ class Network(tf.keras.Model):
         # - convolutional layer with 16 filters, 3x3 kernel, stride 2, valid padding; BatchNorm; ReLU;
         # - convolutional layer with 32 filters, 3x3 kernel, stride 2, valid padding; BatchNorm; ReLU;
         # - finally, flatten each image into a vector.
-        #
-        # In order for your implementation to pass in ReCodEx, make sure that
-        # - the BatchNormalization operation processes 4D inputs (not 5D; such inputs use
-        #   a different BN implementation, which is slower and has slightly different results)
-        # - TimeDistributed layer is not used on a Model/Sequential (I discovered an internal
-        #   TF bug causing the BatchNorm to be called twice in such a case)
-        # Therefore, you need to either use TimeDistributed directly on a layer, or you can
-        # use a Model/Sequential, but you need to reshape the inputs to 4D and then back manually.
 
         # TODO: To create the input for the MemoryAugmentedLSTM, concatenate (in this order)
         # each computed image representation with the one-hot representation of the
