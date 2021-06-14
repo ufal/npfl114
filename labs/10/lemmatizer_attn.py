@@ -80,17 +80,18 @@ class Network(tf.keras.Model):
 
         def with_attention(self, inputs, states):
             # TODO: Compute the attention.
-            # - Take self.source_states` and pass it through the self.lemmatizer.attention_source_layer.
-            #   Because self.source_states does not change, you should in fact do it in `initialize`.
-            # - Pass `states` though `self.lemmatizer.attention_state_layer`.
-            # - Sum the two outputs. However, the first has shape [a, b, c] and the second [a, c]. Therefore,
+            # - Compute projected source states by passing `self.source_states` through the
+            #   `self.lemmatizer.attention_source_layer`. Because `self.source_states` do not change,
+            #   you should in fact precompute the projected source states once in `initialize`.
+            # - Compute projected decoder state by passing `states` though `self.lemmatizer.attention_state_layer`.
+            # - Sum the two projections. However, the first has shape [a, b, c] and the second [a, c]. Therefore,
             #   expand the second to [a, b, c] or [a, 1, c] (the latter works because of broadcasting rules).
             # - Pass the sum through `tf.tanh` and through the `self.lemmatizer.attention_weight_layer`.
             # - Then, run softmax on a suitable axis, generating `weights`.
-            # - Multiply `self.source_states` with `weights` and sum the result in the axis
-            #   corresponding to characters, generating `attention`. Therefore, `attention` is a a fixed-size
-            #   representation for every batch element, independently on how many characters had
-            #   the corresponding input forms.
+            # - Multiply the original (non-projected) `self.source_states` with `weights` and sum the result
+            #   in the axis corresponding to characters, generating `attention`. Therefore, `attention` is
+            #   a fixed-size representation for every batch element, independently on how many characters
+            #   the corresponding input forms had.
             # - Finally concatenate `inputs` and `attention` (in this order) and return the result.
 
             return tf.concat([inputs, attention], axis=1)
