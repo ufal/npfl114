@@ -82,7 +82,7 @@
 
 - Explain both `SAME` and `VALID` padding schemes and write down the output
   size of a convolutional operation with an $N \times M$ kernel on image
-  of size $H \times W$ for both these padding schemes. [5]
+  of size $H \times W$ for both these padding schemes (stride is 1). [5]
 
 - Describe batch normalization and write down an algorithm how it is used during
   training and an algorithm how it is used during inference. Be sure to
@@ -98,8 +98,8 @@
   the applications of BatchNorms and ReLUs) and state how residual connections
   work when the number of channels increases. [10]
 
-- Draw the original ResNet block and also the improved variant with full
-  pre-activation. [5]
+- Draw the original ResNet block (including the exact positions of BatchNorms
+  and ReLUs) and also the improved variant with full pre-activation. [5]
 
 - Compare the bottleneck block of ResNet and ResNeXt architectures (draw the
   latter using convolutions only, i.e., do not use grouped convolutions). [5]
