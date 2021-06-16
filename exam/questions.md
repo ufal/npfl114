@@ -116,7 +116,7 @@
 
 - Assume an input image $I$ of size $H \times W$ with $C$ channels, and
   a convolutional kernel $K$ with size $N \times M$, stride $S$ and $O$ output
-  channels. Then write down (or derive) the equation of transposed convolution
+  channels. Write down (or derive) the equation of transposed convolution
   (or equivalently backpropagation through a convolution to its inputs). [5]
 
 ####Questions@: ,Lecture 7 Questions
