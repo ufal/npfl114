@@ -89,11 +89,11 @@
   explicitly write over what is being normalized in case of fully connected
   layers, and in case of convolutional layers. [10]
 
-- Describe overall architecture of VGG-19 (you do not need to remember exact
+- Describe overall architecture of VGG-19 (you do not need to remember the exact
   number of layers/filters, but you should describe which layers are used). [5]
 
 ####Questions@: ,Lecture 5 Questions
-- Describe overall architecture of ResNet. You do not need to remember exact
+- Describe overall architecture of ResNet. You do not need to remember the exact
   number of layers/filters, but you should draw a bottleneck block (including
   the applications of BatchNorms and ReLUs) and state how residual connections
   work when the number of channels increases. [10]
