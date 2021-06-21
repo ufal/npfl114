@@ -160,7 +160,7 @@
   training and an algorithm how it is used during inference. [5]
 
 - Sketch a tagger architecture utilizing word embeddings, recurrent
-  character-level word embeddings and two sentence-level RNNs with
+  character-level word embeddings and two sentence-level bidirectional RNNs with
   a residual connection. [10]
 
 ####Questions@: ,Lecture 9 Questions
