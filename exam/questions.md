@@ -224,7 +224,8 @@
 
 - Describe the Transformer decoder architecture, including the description of
   self-attention and masked self-attention (but you do not need to describe
-  multi-head attention). [10]
+  multi-head attention). Also discuss the difference between training and
+  prediction regimes. [10]
 
 - Why are positional embeddings needed in Transformer architecture? Write down
   the sinusoidal positional embeddings used in the Transformer. [5]
