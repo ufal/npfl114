@@ -49,10 +49,10 @@ class GAN(tf.keras.Model):
         # - computes batch normalized convolution with 32 filters, kernel size 5,
         #   same padding, and ReLU activation (again, do not forget about
         #   `use_bias=False` before every batch normalization).
-        # - max-pools with kernel size 2 and stride 2
+        # - max-pools with pool size 2 and stride 2
         # - computes batch normalized convolution with 64 filters, kernel size 5,
         #   same padding, and ReLU activation
-        # - max-pools with kernel size 2 and stride 2
+        # - max-pools with pool size 2 and stride 2
         # - flattens the current representation
         # - applies batch normalized dense layer with 1024 units and ReLU activation
         # - applies output dense layer with one output and a suitable activation function
