@@ -191,7 +191,8 @@
 
 - Describe the hierarchical softmax used in `word2vec`. [5]
 
-- Describe the negative sampling proposed in `word2vec`. [5]
+- Describe the negative sampling proposed in `word2vec`, including
+  the choice of distribution of negative samples. [5]
 
 ####Questions@: ,Lecture 10 Questions
 - Draw a sequence-to-sequence architecture for machine translation, both during
