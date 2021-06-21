@@ -283,18 +283,18 @@
 - Describe multi-arm bandits and write down the $\epsilon$-greedy algorithm
   for solving it. [5]
 
-- Define a Markov Decision Process, including the definition of a return. [5]
+- Define the Markov Decision Process, including the definition of the return. [5]
 
-- Define a value function, such that all expectations are over simple random
+- Define the value function, such that all expectations are over simple random
   variables (actions, states, rewards), not trajectories. [5]
 
-- Define an action-value function, such that all expectations are over simple
+- Define the action-value function, such that all expectations are over simple
   random variables (actions, states, rewards), not trajectories. [5]
 
-- Express a value function using an action-value function, and express an
-  action-value function using a value function. [5]
+- Express the value function using the action-value function, and express the
+  action-value function using the value function. [5]
 
-- Define optimal value function and optimal action-value function. Then define
+- Define the optimal value function and the optimal action-value function. Then define
   optimal policy in such a way that its existence is guaranteed. [5]
 
 - Write down the Monte-Carlo on-policy every-visit $\epsilon$-soft algorithm. [10]
