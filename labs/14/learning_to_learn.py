@@ -120,9 +120,9 @@ class Network(tf.keras.Model):
 
             # TODO: Pass the `controller_output` through the `self._parameters` layer, obtaining
             # the parameters for interacting with the external memory (in this order):
-            # - the first `self._cell_size` elements of every batch are the `write_value`
-            # - the rest of the elements, reshaped to `[batch_size, self._read_heads, self._cell_size]`,
-            #   form the `read_keys`
+            # - `write_value` is the first `self._cell_size` elements of every batch example;
+            # - `read_keys` is the rest of the elements of every batch example, reshaped to
+            #   `[batch_size, self._read_heads, self._cell_size]`.
             write_value = ...
             read_keys = ...
 
