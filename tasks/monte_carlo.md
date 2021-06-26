@@ -1,5 +1,5 @@
 ### Assignment: monte_carlo
-#### Date: Deadline: Jun 30, 23:59
+#### Date: Deadline: ~~Jun 30~~ Jul 7, 23:59
 #### Points: 2 points
 
 Solve the discretized [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)

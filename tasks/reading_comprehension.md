@@ -1,5 +1,5 @@
 ### Assignment: reading_comprehension
-#### Date: Deadline: May 31, 23:59; non-competition part extended to Jun 30
+#### Date: Deadline: May 31, 23:59; non-competition part extended to ~~Jun 30~~ Jul 7
 #### Points: 5 points+5 bonus
 
 **May 27 Update**: _The evaluation was changed and is now performed only on
