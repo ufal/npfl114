@@ -70,6 +70,7 @@ class GAN(tf.keras.Model):
         # - compute `generator_loss` using `self.compiled_loss`, with ones as target labels
         #   (`tf.ones_like` might come handy).
         # Then, run an optimizer step with respect to generator trainable variables.
+        # Do not forget that we created generator_optimizer in the `compile` override.
 
         # TODO: Discriminator training. Using a Gradient tape:
         # - discriminate `images` with `training=True`, storing
@@ -80,6 +81,7 @@ class GAN(tf.keras.Model):
         #   - `self.compiled_loss` on `discriminated_real` with suitable targets,
         #   - `self.compiled_loss` on `discriminated_fake` with suitable targets.
         # Then, run an optimizer step with respect to discriminator trainable variables.
+        # Do not forget that we created discriminator_optimizer in the `compile` override.
 
         # TODO: Update the discriminator accuracy metric -- call the
         # `self.compiled_metrics.update_state` twice, with the same arguments
