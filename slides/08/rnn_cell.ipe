@@ -1,5 +1,7 @@
-<ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20180409075511" modified="D:20180409075946"/>
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70206" creator="Ipe 7.2.9">
+<info created="D:20180409075511" modified="D:20210701125804"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -253,26 +255,99 @@ h
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
 <path layer="alpha" stroke="black">
-32 -0 0 32 192 672 e
+32 0 0 32 192 672 e
 </path>
-<text matrix="1 0 0 1 24 0" transformations="translations" pos="184 728" stroke="black" type="label" width="37.874" height="11.158" depth="3.35" valign="baseline" size="LARGE" style="math">\textit{input}</text>
+<text matrix="1 0 0 1 12 8" transformations="translations" pos="184 728" stroke="black" type="label" width="37.874" height="11.158" depth="3.35" valign="baseline" size="LARGE" style="math">\textit{input}</text>
 <path stroke="black" arrow="normal/large">
 192 752 m
 192 704 l
 </path>
 <path stroke="black" arrow="normal/large">
 192 640 m
-192 592 l
+192 584 l
 </path>
-<text matrix="1 0 0 1 24 -120" transformations="translations" pos="184 728" stroke="black" type="label" width="46.482" height="10.586" depth="3.35" valign="baseline" size="LARGE" style="math">\textit{output}</text>
+<text matrix="1 0 0 1 12 -128" transformations="translations" pos="184 728" stroke="black" type="label" width="46.482" height="10.586" depth="3.35" valign="baseline" size="LARGE" style="math">\textit{output}</text>
 <path stroke="black" arrow="normal/large">
-224 672 m
+236 672 m
 256 672
-256 624
-128 624
-128 672
+256 628
+128 628
+124 672
 160 672 c
 </path>
 <text matrix="1 0 0 1 56 -48" transformations="translations" pos="184 728" stroke="black" type="label" width="34.431" height="10.589" depth="0" valign="baseline" size="LARGE" style="math">\textit{state}</text>
+<path stroke="black">
+216 728 m
+216 720 l
+168 720 l
+168 728 l
+h
+</path>
+<path stroke="black">
+176 728 m
+176 720 l
+</path>
+<path stroke="black">
+184 728 m
+184 720 l
+</path>
+<path stroke="black">
+200 728 m
+200 720 l
+</path>
+<path stroke="black">
+208 728 m
+208 720 l
+</path>
+<path matrix="1 0 0 1 0 -104" stroke="black">
+216 728 m
+216 720 l
+168 720 l
+168 728 l
+h
+</path>
+<path matrix="1 0 0 1 0 -104" stroke="black">
+176 728 m
+176 720 l
+</path>
+<path matrix="1 0 0 1 0 -104" stroke="black">
+184 728 m
+184 720 l
+</path>
+<path matrix="1 0 0 1 0 -104" stroke="black">
+200 728 m
+200 720 l
+</path>
+<path matrix="1 0 0 1 0 -104" stroke="black">
+208 728 m
+208 720 l
+</path>
+<path matrix="0 1 -1 0 956 480" stroke="black">
+216 728 m
+216 720 l
+168 720 l
+168 728 l
+h
+</path>
+<path matrix="0 1 -1 0 956 480" stroke="black">
+176 728 m
+176 720 l
+</path>
+<path matrix="0 1 -1 0 956 480" stroke="black">
+184 728 m
+184 720 l
+</path>
+<path matrix="0 1 -1 0 956 480" stroke="black">
+200 728 m
+200 720 l
+</path>
+<path matrix="0 1 -1 0 956 480" stroke="black">
+208 728 m
+208 720 l
+</path>
+<path stroke="black">
+224 672 m
+236 672 l
+</path>
 </page>
 </ipe>
