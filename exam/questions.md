@@ -218,15 +218,16 @@
 
 ####Questions@: ,Lecture 11 Questions
 - Describe the Transformer encoder architecture, including the description of
-  self-attention (but you do not need to describe multi-head attention). [10]
+  self-attention (but you do not need to describe multi-head attention), FFN
+  and positions of LNs and dropouts. [10]
 
 - Write down the formula of Transformer self-attention, and then describe
   multi-head self-attention in detail. [10]
 
 - Describe the Transformer decoder architecture, including the description of
   self-attention and masked self-attention (but you do not need to describe
-  multi-head attention). Also discuss the difference between training and
-  prediction regimes. [10]
+  multi-head attention), FFN and positions of LNs and dropouts. Also discuss the
+  difference between training and prediction regimes. [10]
 
 - Why are positional embeddings needed in Transformer architecture? Write down
   the sinusoidal positional embeddings used in the Transformer. [5]
