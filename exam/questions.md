@@ -128,7 +128,8 @@
   suppression and how is the Fast-RCNN prediction performed. [10]
 
 - Considering a Faster-RCNN architecture, describe the region proposal network
-  (its architecture, what are anchors, what does the loss look like). [5]
+  (what are anchors, architecture including both heads, what does the loss
+  look like). [5]
 
 - Considering Mask-RCNN architecture, describe the additions to a Faster-RCNN
   architecture (the RoI-Align layer, the new mask-producing head). [5]
