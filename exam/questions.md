@@ -143,7 +143,8 @@
   their output size). [5]
 
 - Draw the BiFPN block architecture, including the positions of all
-  convolutions, BatchNorms and ReLUs. [5]
+  convolutions (and what kind of CNN is used), BatchNorms and ReLUs.
+  Finally describe how is downscaling and upscaling performed. [5]
 
 ####Questions@: ,Lecture 8 Questions
 - Write down how the Long Short-Term Memory (LSTM) cell operates, including
