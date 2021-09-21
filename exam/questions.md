@@ -129,7 +129,7 @@
 
 - Considering a Faster-RCNN architecture, describe the region proposal network
   (what are anchors, architecture including both heads, what does the loss
-  look like). [5]
+  look like). [10]
 
 - Considering Mask-RCNN architecture, describe the additions to a Faster-RCNN
   architecture (the RoI-Align layer, the new mask-producing head). [5]
