@@ -41,7 +41,7 @@
 - Considering a neural network with $D$ input neurons, a single ReLU hidden
   layer with $H$ units and softmax output layer with $K$ units, write down the
   formulas of the gradient of all the MLP parameters (two weight matrices and
-  two bias vectors), assuming input $\boldsymbol x$, target $t$ and negative log
+  two bias vectors), assuming input $\boldsymbol x$, target $g$ and negative log
   likelihood loss. [10]
 
 - Assume a network with MSE loss generated a single output $o \in \mathbb{R}$,
