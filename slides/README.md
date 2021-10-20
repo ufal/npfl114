@@ -7,14 +7,14 @@ Firefox (but in Firefox you need to manually specify page size as 297mm and
 
 Several key shortcuts are available:
 - `h` toggles handout mode, where only complete slides are kept;
-- `b` toggles background visiblity.
+- `b` toggles background visibility.
 
 You can see the slides either [on-line at ÚFAL](https://ufal.mff.cuni.cz/courses/npfl14), or locally – in that case:
 1. Make sure the `slimd` submodule is updated by running:
    ```
    git submodule update --init
    ```
-1. Start a simple local webserver, which is required for the AJAX requests and SVGZ images to work:
+1. Start a simple local web server, which is required for the AJAX requests and SVGZ images to work:
    ```
    python3 server.py [port]
    ```
