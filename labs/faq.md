@@ -50,18 +50,22 @@
 
 ### TOCEntry: Git
 
-- _Is it possible to keep the solutions in a Git repository_
+- _Is it possible to keep the solutions in a Git repository?_
 
-  Definitely, keeping the solutions in a branch of your repository,
+  Definitely. Keeping the solutions in a branch of your repository,
   where you merge it with the course repository, is probably a good idea.
   However, please keep the cloned repository with your solutions **private**.
 
-- _Do not create a **public** fork of the repository on Github_
+- _On GitHub, do not create a **public** fork with your solutions_
 
-  On Github, please do not create a clone of the repository by using the Fork
-  button – this way, the cloned repository would be **public**.
+  If you keep your solutions in a GitHub repository, please do not create
+  a clone of the repository by using the Fork button – this way, the cloned
+  repository would be **public**.
 
-- _How to clone the course repository_
+  Of course, if you just want to create a pull request, GitHub requires a public
+  fork and that is fine – just do not store your solutions in it.
+
+- _How to clone the course repository?_
 
   To clone the course repository, run
   ```
@@ -70,8 +74,12 @@
   This creates the repository in `npfl114` subdirectory; if you want a different
   name, add it as a last parameter.
 
-  If you want to store the repository just in a local branch of your existing
-  repository, you can run the following command while in it:
+  To update the repository, run `git pull` inside the repository directory.
+
+- _How to keep the course repository as a branch in your repository?_
+
+  If you want to store the course repository just in a local branch of your
+  existing repository, you can run the following command while in it:
   ```
   git remote add upstream https://github.com/ufal/npfl114
   git fetch upstream
@@ -82,7 +90,7 @@
 
   In both cases, you can update your checkout by running `git pull` while in it.
 
-- _How to merge the course repository with your modifications_
+- _How to merge the course repository with your modifications?_
 
   If you want to store your solutions in a branch merged with the course
   repository, you should start by
@@ -93,11 +101,11 @@
   which creates a branch `master`; if you want a different name,
   change the last argument to `master:BRANCH_NAME`.
 
-  You can then commit to this branch and push it to some central repository.
+  You can then commit to this branch and push it to your repository.
 
   To merge the current course repository with your branch, run
   ```
-  git merge ustream master
+  git merge upstream master
   ```
   while in your branch. Of course, it might be necessary to resolve conflicts
   if both you and I modified the same place in the templates.
