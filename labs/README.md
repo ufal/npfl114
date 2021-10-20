@@ -8,7 +8,7 @@ Gym 0.18.0. You should
 
 ### Teamwork
 
-Solving assignments in teams of size 2 or 3 is encouraged, but **everyone has to
+Solving assignments in teams (of size at most 3) is encouraged, but **everyone has to
 participate** (it is forbidden not to work on an assignment and then submit
 a solution created by other team members). All members of the team
 **must** submit in ReCodEx **individually**, but can have exactly the same
@@ -21,6 +21,6 @@ members of the team to allow plagiarism detection using
 Cheating is **strictly prohibited** and any student found cheating will be punished.
 The punishment can involve failing the whole course, or, in grave cases, being
 expelled from the faculty. While discussing assignments with any classmate is fine,
-each team must complete the assignments **by itself**, without using code it did not
+each team must complete the assignments **themselves**, without using code they did not
 write (unless explicitly allowed). Of course, inside a team you are expected to
-share code and submit indentical solutions.
+share code and submit identical solutions.
