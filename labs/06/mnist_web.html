@@ -11,11 +11,12 @@
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.0/dist/tf.min.js"></script>
+ <style>.btn:focus,.btn:active {outline: none !important; box-shadow: none} .btn-info.active {background-color: darkblue !important} </style>
 </head>
 <body>
  <div class="container-fluid" style="padding: 5px">
   <div class="panel panel-success" style="margin-top: 3px">
-   <div class="panel-heading text-center" style="font-size: 350%; padding: 0px; margin-bottom: 7px">MNIST Web Demo</div>
+   <div class="panel-heading text-center" style="font-size: 350%; padding: 0px">MNIST Web Demo</div>
    <div class="panel-body text-center">
 
     <canvas id="canvas" width="400" height="400" style="border: 1px solid black; user-select: none"></canvas>
@@ -23,11 +24,11 @@
      <label class="checkbox-inline"><input type="checkbox" id="crop" checked>MNIST Preprocessing</label>
      <button class="btn btn-success" id="thinner">Thiner</button>
      <button class="btn btn-success" id="thicker">Thicker</button>
-     <button class="btn btn-info" id="erase" data-toggle="button">Eraser</button>
-     <button class="btn btn-info" id="undo">Undo</button>
+     <button class="btn btn-info" id="erase" data-toggle="button">White Stroke</button>
+     <button class="btn btn-info" id="undo">Undo Stroke</button>
      <button class="btn btn-info" id="clear">Clear</button>
     </div>
-    <table id="results" class="table table-bordered">
+    <table id="results" class="table table-bordered" style="margin-top: 10px; margin-bottom: 0">
     </table>
    </div>
   </div>
