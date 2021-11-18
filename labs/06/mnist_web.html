@@ -26,7 +26,7 @@
      <button class="btn btn-success" id="thicker">Thicker Black</button>
      <button class="btn btn-info" id="erase" data-toggle="button">White Stroke</button>
      <button class="btn btn-info" id="undo">Undo Stroke</button>
-     <button class="btn btn-info" id="clear">Clear</button>
+     <button class="btn btn-info" id="clear">Reset</button>
     </div>
     <table id="results" class="table table-bordered" style="margin-top: 10px; margin-bottom: 0">
     </table>
@@ -152,7 +152,7 @@
       break;
     redraw();
   });
-  $("#clear").click(function() { clicks = []; redraw(); });
+  $("#clear").click(function() { clicks = []; $("#erase").removeClass("active"); width = 30; redraw(); });
  </script>
 </body>
 </html>
