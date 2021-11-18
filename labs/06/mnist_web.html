@@ -132,7 +132,7 @@
       context.lineWidth = width;
      } else if (clicks[i].mode == ERASER) {
       context.globalCompositeOperation = "destination-out";
-      context.lineWidth = width + 10;
+      context.lineWidth = 40; //width + 10;
      }
      context.moveTo(clicks[i].x, clicks[i].y);
     }
