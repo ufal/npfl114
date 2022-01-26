@@ -64,7 +64,7 @@
 - Define $L_2$ regularization and describe its effect both on the value of the
   loss function and on the value of the loss function gradient. [5]
 
-- Describe the dropout method and write down exactly how is it used during training and
+- Describe the dropout method and write down exactly how it is used during training and
   during inference. [5]
 
 - Describe how label smoothing works for cross-entropy loss, both for sigmoid
@@ -120,12 +120,12 @@
   (or equivalently backpropagation through a convolution to its inputs). [5]
 
 ####Questions@: ,Lecture 7 Questions
-- Write down how is $\mathit{AP}_{50}$ computed. [5]
+- Write down how $\mathit{AP}_{50}$ is computed. [5]
 
 - Considering a Fast-RCNN architecture, draw overall network architecture,
   explain what a RoI-pooling layer is, show how the network parametrizes
   bounding boxes and write down the loss. Finally, describe non-maximum
-  suppression and how is the Fast-RCNN prediction performed. [10]
+  suppression and how the Fast-RCNN prediction is performed. [10]
 
 - Considering a Faster-RCNN architecture, describe the region proposal network
   (what are anchors, architecture including both heads, how are the coordinates
@@ -144,7 +144,7 @@
 
 - Draw the BiFPN block architecture, including the positions of all
   convolutions (and what kind of CNN is used), BatchNorms and ReLUs.
-  Finally describe how is downscaling and upscaling performed. [5]
+  Finally describe how downscaling and upscaling is performed. [5]
 
 ####Questions@: ,Lecture 8 Questions
 - Write down how the Long Short-Term Memory (LSTM) cell operates, including
@@ -273,7 +273,7 @@
   to use the version of generator loss which avoids vanishing gradients at the
   beginning of the training. [10]
 
-- Explain how is the class label used when training a conditional generative
+- Explain how the class label is used when training a conditional generative
   adversarial network (CGAN). [5]
 
 - Illustrate that alternating SGD steps are not guaranteed to converge for
@@ -332,8 +332,8 @@
   likelihood of the data. [5]
 
 - Describe the changes in the Student model of Parallel WaveNet, which allow
-  efficient sampling (how does the latent prior look like, how is the output
-  data distribution modeled in a single iteration and then after multiple
+  efficient sampling (how does the latent prior look like, how the output
+  data distribution is modeled in a single iteration and then after multiple
   iterations). [5]
 
 - Describe the addressing mechanism used in Neural Turing Machines – show the
@@ -343,8 +343,8 @@
 
 - Explain the overall architecture of a Neural Turing Machine with an LSTM
   controller, assuming $R$ reading heads and one write head. Describe the
-  inputs and outputs of the LSTM controller itself, then how is the memory read
-  from and written to, and how is the final output computed. You do not
+  inputs and outputs of the LSTM controller itself, then how the memory is read
+  from and written to, and how the final output is computed. You do not
   need to write down the implementation of the addressing mechanism (you can
   assume it is a function which gets parameters, memory and previous
   distribution, and computes a new distribution over memory cells). [10]
