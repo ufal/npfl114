@@ -15,7 +15,7 @@ a translated version of the SQuAD 2.0 dataset, utilizing the provided
 pre-trained Czech Electra small.
 
 The dataset can be loaded using the
-[reading_comprehension_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/11/reading_comprehension_dataset.py)
+[reading_comprehension_dataset.py](https://github.com/ufal/npfl114/tree/past-2021/labs/11/reading_comprehension_dataset.py)
 module. The loaded dataset is the direct reprentation of the data and not yet
 ready to be directly trained on. Each of the `train`, `dev` and `test` datasets
 are composed of a list of paragraphs, each consisting of:
@@ -32,7 +32,7 @@ at most one answer, while in the `test` set there might be several answers.
 We evaluate the reading comprehension task using _accuracy_, where an answer is
 considered correct if its text is exactly equal to some correct answer.
 You can evaluate your predictions as usual with the
-[reading_comprehension_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/11/reading_comprehension_dataset.py)
+[reading_comprehension_dataset.py](https://github.com/ufal/npfl114/tree/past-2021/labs/11/reading_comprehension_dataset.py)
 module, either by running with `--evaluate=path` arguments, or using its
 `evaluate_file` method.
 
@@ -46,6 +46,6 @@ Note that contrary to working with EfficientNet, you **need** to **finetune**
 the Electra model in order to achieve the required accuracy.
 
 You can start with the
-[reading_comprehension.py](https://github.com/ufal/npfl114/tree/master/labs/11/reading_comprehension.py)
+[reading_comprehension.py](https://github.com/ufal/npfl114/tree/past-2021/labs/11/reading_comprehension.py)
 template, which among others (down)loads the data and Czech Electra small model, and describes
 the format of the required test set annotations.

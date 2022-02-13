@@ -4,7 +4,7 @@
 #### Examples: lemmatizer_attn_examples
 
 This task is a continuation of the `lemmatizer_noattn` assignment. Using the
-[lemmatizer_attn.py](https://github.com/ufal/npfl114/tree/master/labs/10/lemmatizer_attn.py)
+[lemmatizer_attn.py](https://github.com/ufal/npfl114/tree/past-2021/labs/10/lemmatizer_attn.py)
 template, implement the following features in addition to `lemmatizer_noattn`:
 - The bidirectional GRU encoder returns outputs for all input characters, not
   just the last.

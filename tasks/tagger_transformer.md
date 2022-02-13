@@ -4,7 +4,7 @@
 #### Examples: tagger_transformer_examples
 
 This assignment is a continuation of `tagger_we`. Using the
-[tagger_transformer.py](https://github.com/ufal/npfl114/tree/master/labs/11/tagger_transformer.py)
+[tagger_transformer.py](https://github.com/ufal/npfl114/tree/past-2021/labs/11/tagger_transformer.py)
 template, implement a Transformer encoder.
 
 #### Examples Start: tagger_transformer_examples

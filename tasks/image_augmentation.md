@@ -3,7 +3,7 @@
 #### Points: 1 points
 #### Examples: image_augmentation_examples
 
-The template [image_augmentation.py](https://github.com/ufal/npfl114/tree/master/labs/04/image_augmentation.py)
+The template [image_augmentation.py](https://github.com/ufal/npfl114/tree/past-2021/labs/04/image_augmentation.py)
 creates a simple convolutional network for classifying CIFAR-10.
 Your goal is to perform image data augmentation
 operations using

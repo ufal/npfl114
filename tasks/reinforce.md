@@ -9,7 +9,7 @@ that the states are vectors of real-valued observations with shape
 `env.observation_space.shape`.
 
 Your goal is to reach an average return of 475 during 100 evaluation episodes.
-Start with the [reinforce.py](https://github.com/ufal/npfl114/tree/master/labs/13/reinforce.py)
+Start with the [reinforce.py](https://github.com/ufal/npfl114/tree/past-2021/labs/13/reinforce.py)
 template.
 
 During evaluation in ReCodEx, two different random seeds will be employed, and
