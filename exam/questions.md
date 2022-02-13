@@ -1,4 +1,4 @@
-####Questions@: ,Lecture 1 Questions
+#### Questions@:, Lecture 1 Questions
 - Considering a neural network with $D$ input neurons, a single hidden layer
   with $H$ neurons, $K$ output neurons, hidden activation $f$ and output
   activation $a$, list its parameters (including their size) and write down how
@@ -11,7 +11,7 @@
 
 - Formulate the Universal approximation theorem. [5]
 
-####Questions@: ,Lecture 2 Questions
+#### Questions@:, Lecture 2 Questions
 - Describe maximum likelihood estimation, as minimizing NLL, cross-entropy and
   KL divergence. [10]
 
@@ -37,7 +37,7 @@
   $(1-\beta^t)$ make the estimation of the first and second moment unbiased.
   [10]
 
-####Questions@: ,Lecture 3 Questions
+#### Questions@:, Lecture 3 Questions
 - Considering a neural network with $D$ input neurons, a single ReLU hidden
   layer with $H$ units and softmax output layer with $K$ units, write down the
   formulas of the gradient of all the MLP parameters (two weight matrices and
@@ -73,7 +73,7 @@
 - How are weights and biases initialized using the default Glorot
   initialization? [5]
 
-####Questions@: ,Lecture 4 Questions
+#### Questions@:, Lecture 4 Questions
 - Write down the equation of how convolution of a given image is computed.
   Assume the input is an image $I$ of size $H \times W$ with $C$ channels, the
   kernel $K$ has size $N \times M$, the stride is $T \times S$, the operation
@@ -92,7 +92,7 @@
 - Describe overall architecture of VGG-19 (you do not need to remember the exact
   number of layers/filters, but you should describe which layers are used). [5]
 
-####Questions@: ,Lecture 5 Questions
+#### Questions@:, Lecture 5 Questions
 - Describe overall architecture of ResNet. You do not need to remember the exact
   number of layers/filters, but you should draw a bottleneck block (including
   the applications of BatchNorms and ReLUs) and state how residual connections
@@ -119,7 +119,7 @@
   channels. Write down (or derive) the equation of transposed convolution
   (or equivalently backpropagation through a convolution to its inputs). [5]
 
-####Questions@: ,Lecture 7 Questions
+#### Questions@:, Lecture 7 Questions
 - Write down how $\mathit{AP}_{50}$ is computed. [5]
 
 - Considering a Fast-RCNN architecture, draw overall network architecture,
@@ -146,7 +146,7 @@
   convolutions (and what kind of CNN is used), BatchNorms and ReLUs.
   Finally describe how downscaling and upscaling is performed. [5]
 
-####Questions@: ,Lecture 8 Questions
+#### Questions@:, Lecture 8 Questions
 - Write down how the Long Short-Term Memory (LSTM) cell operates, including
   the explicit formulas. Also mention the forget gate bias. [10]
 
@@ -165,7 +165,7 @@
   character-level word embeddings and two sentence-level bidirectional RNNs with
   a residual connection. [10]
 
-####Questions@: ,Lecture 9 Questions
+#### Questions@:, Lecture 9 Questions
 - Considering a linear-chain CRF, write down how a score of a label sequence
   $\boldsymbol y$ is defined, and how can a log probability be computed
   using the label sequence scores. [5]
@@ -196,7 +196,7 @@
 - Describe the negative sampling proposed in `word2vec`, including
   the choice of distribution of negative samples. [5]
 
-####Questions@: ,Lecture 10 Questions
+#### Questions@:, Lecture 10 Questions
 - Draw a sequence-to-sequence architecture for machine translation, both during
   training and during inference (without attention). [5]
 
@@ -217,7 +217,7 @@
 - Pinpoint the differences between the BPE and WordPieces algorithms, both
   during dictionary construction and during inference. [5]
 
-####Questions@: ,Lecture 11 Questions
+#### Questions@:, Lecture 11 Questions
 - Describe the Transformer encoder architecture, including the description of
   self-attention (but you do not need to describe multi-head attention), FFN
   and positions of LNs and dropouts. [10]
@@ -252,7 +252,7 @@
 - What alternatives to `Next Sentence Prediction` are proposed in RoBERTa and
   in ALBERT? [5]
 
-####Questions@: ,Lecture 12 Questions
+#### Questions@:, Lecture 12 Questions
 - Write down the variational lower bound (ELBO) in the form of a reconstruction
   error minus the KL divergence between the encoder and the prior. Then prove it
   is actually a lower bound on probability $\log P(\boldsymbol x)$ (you can use
@@ -279,7 +279,7 @@
 - Illustrate that alternating SGD steps are not guaranteed to converge for
   a min-max problem. [5]
 
-####Questions@: ,Lecture 13 Questions
+#### Questions@:, Lecture 13 Questions
 - Show how to incrementally update a running average (how to compute
   an average of $N$ numbers using the average of the first $N-1$ numbers). [5]
 
@@ -318,7 +318,7 @@
 
 - Write down the REINFORCE with baseline algorithm. [10]
 
-####Questions@: ,Lecture 14 Questions
+#### Questions@:, Lecture 14 Questions
 - Sketch the overall structure and training procedure of the Neural Architecture
   Search. You do not need to describe how exactly is the block produced by the
   controller. [5]
