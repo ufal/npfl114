@@ -101,7 +101,7 @@ class Network:
 
             # Backpropagate the gradient throug the convolutions
             for convolution, inputs, outputs in reversed(list(zip(self._convolutions, convolution_values[:-1], convolution_values[1:]))):
-                hidden_gradient, convolution_variables, convolution_gradients =convolution.backward(inputs, outputs, hidden_gradient)
+                hidden_gradient, convolution_variables, convolution_gradients = convolution.backward(inputs, outputs, hidden_gradient)
                 variables.extend(convolution_variables)
                 gradients.extend(convolution_gradients)
 
