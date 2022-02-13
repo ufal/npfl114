@@ -5,34 +5,14 @@
 - _Installing to central user packages repository_
 
   You can install all required packages to central user packages repository using
-  `pip3 install --user --upgrade pip setuptools` followed by
-  `pip3 install --user tensorflow==2.4.1 tensorflow-addons==0.12.1 tensorflow-probability==0.12.1 tensorflow-hub==0.11.0 gym==0.18.0`.
+  `pip3 install --user tensorflow==2.8.0 gym==0.20.0`.
 
 - _Installing to a virtual environment_
 
   Python supports virtual environments, which are directories containing
   independent sets of installed packages. You can create a virtual environment
-  by running `python3 -m venv VENV_DIR` and then install the required packages with
-  `VENV_DIR/bin/pip3 install --upgrade pip setuptools` followed by
-  `VENV_DIR/bin/pip3 install tensorflow==2.4.1 tensorflow-addons==0.12.1 tensorflow-probability==0.12.1 tensorflow-hub==0.11.0 gym==0.18.0`.
-
-- _Installing to MetaCentrum_
-
-  As of Apr 2021, the minimum CUDA version across MetaCentrum is 10.2, and the
-  highest officially available CUDA+cuDNN is also 10.2. Therefore, I have build
-  TensorFlow 2.4.1 for CUDA 10.2 and cuDNN 7.6 to use on MetaCentrum.
-
-  During installation, start by using official Python 3.6 and CUDA+cuDNN
-  packages via `module add python-3.6.2-gcc cuda/cuda-10.2.89-gcc-6.3.0-34gtciz
-  cudnn/cudnn-7.6.5.32-10.2-linux-x64-gcc-6.3.0-xqx4s5f`. Note that this command
-  must be always executed before using the installed TensorFlow.
-
-  Then create a virtual environment by `python3 -m venv VENV_DIR` and
-  install the required packages with `VENV_DIR/bin/pip3 install --upgrade pip setuptools` followed by
-  `VENV_DIR/bin/pip3 install
-  https://ufal.mff.cuni.cz/~straka/packages/tf/2.4/metacentrum/tensorflow-2.4.1-cp36-cp36m-linux_x86_64.whl
-  https://ufal.mff.cuni.cz/~straka/packages/tf/2.4/metacentrum/tensorflow_addons-0.12.1-cp36-cp36m-linux_x86_64.whl
-  tensorflow-probability==0.12.1 tensorflow-hub==0.11.0 gym==0.18.0`.
+  by running `python3 -m venv VENV_DIR` followed by
+  `VENV_DIR/bin/pip3 install tensorflow==2.8.0 gym==0.20.0`.
 
 - _Windows TensorFlow fails with ImportError: DLL load failed_
 
@@ -45,8 +25,8 @@
   If `tensorboard` cannot be found, make sure the directory with pip installed
   packages is in your PATH (that directory is either in your virtual environment
   if you use a virtual environment, or it should be `~/.local/bin` on Linux
-  and `%UserProfile%\AppData\Roaming\Python\Python3[5-7]` and
-  `%UserProfile%\AppData\Roaming\Python\Python3[5-7]\Scripts` on Windows).
+  and `%UserProfile%\AppData\Roaming\Python\Python3[7-9]` and
+  `%UserProfile%\AppData\Roaming\Python\Python3[7-9]\Scripts` on Windows).
 
 ### TOCEntry: Git
 
@@ -112,12 +92,26 @@
 
 ### TOCEntry: ReCodEx
 
-- _What are the tests used by ReCodEx_
+- _What files can be submitted to ReCodEx?_
 
-  The tests used by ReCodEx correspond to the examples from the course website
-  (unless stated otherwise), but they use a different random seed (so the
-  results are not the same), and sometimes they use smaller number of
-  epochs/iterations to finish sooner.
+  You can submit multiple files of any type to ReCodEx. There is a limit of
+  **20** files per submission, with a total size of **20MB**.
+
+- _What file does ReCodEx execute and what arguments does it use?_
+
+  Exactly one file with `py` suffix must contain a line starting with `def main(`.
+  Such a file is imported by ReCodEx and the `main` method is executed
+  (during the import, `__name__ == "__recodex__"`).
+
+  The file must also export an argument parser called `parser`. ReCodEx uses its
+  arguments and default values, but it overwrites some of the arguments
+  depending on the test being executed – the template should always indicate which
+  arguments are set by ReCodEx and which are left intact.
+
+- _What are the time and memory limits?_
+
+  The memory limit during evaluation is **1.5GB**. The time limit varies, but it should
+  be at least 10 seconds and at least twice the running time of my solution.
 
 ### TOCEntry: Debugging
 
@@ -147,8 +141,8 @@
 
 - _Requirements for using a GPU_
 
-  To use an NVIDIA GPU with TensorFlow 2.4, you need to install CUDA 11.0 and
-  cuDNN 8.0 – see [the details about GPU support](https://www.tensorflow.org/install/gpu).
+  To use an NVIDIA GPU with TensorFlow 2.8, you need to install CUDA 11.2 and
+  cuDNN 8.1 – see [the details about GPU support](https://www.tensorflow.org/install/gpu).
 
 - _Errors when running with a GPU_
 
@@ -157,38 +151,6 @@
     environment variable: `export TF_FORCE_GPU_ALLOW_GROWTH=true`
   - you can rerun with `export TF_CPP_MIN_LOG_LEVEL=0` environmental variable,
     which increases verbosity of the log messages.
-
-### TOCEntry: tf.ragged
-
-- _Bug when RaggedTensors are used in backward/bidirectional direction and
-  whole sequence is returned_
-
-  In TF 2.4, **RaggedTensors processed by backward (and therefore also by
-  bidirectional) RNNs produce bad results when whole sequences are returned**.
-  (Producing only the last output or processing in forward direction is fine.)
-  The problem has been [fixed in the master branch](https://github.com/tensorflow/tensorflow/commit/da96383680c0a320c9551e020c26132ae5ebb024)
-  and [also in the TF 2.5 branch](https://github.com/tensorflow/tensorflow/pull/48887).
-
-  A workaround is to use the manual to/from dense tensor conversion described
-  in the next point.
-
-- _Slow RNNs when using RaggedTensors on GPU_
-
-  Unfortunately, the current LSTM/GRU implementation
-  [does not use cuDNN acceleration when processing RaggedTensors](https://github.com/tensorflow/tensorflow/issues/48838).
-  However, you can get around it by manually converting the RaggedTensors to
-  dense before/after the layer, so when `inputs` is a `tf.RaggedTensor`,
-  - if `rnn` is a `tf.keras.layers.LSTM/GRU/RNN/Bidirectional` layer producing
-    a **single output**, you can use the following workaround:
-    ```python
-    outputs = rnn(inputs.to_tensor(), mask=tf.sequence_mask(inputs.row_lengths()))
-    ```
-  - if `rnn` is a `tf.keras.layers.LSTM/GRU/RNN/Bidirectional` layer producing
-    a **whole sequence**, in addition to the above line you also need to convert
-    the dense result back to a RaggedTensor via for example:
-    ```python
-    outputs = tf.RaggedTensor.from_tensor(outputs, inputs.row_lengths())
-    ```
 
 ### TOCEntry: tf.data
 
@@ -310,7 +272,6 @@
   - if `trainable == False`, the layer is always executed in inference regime;
   - if `trainable == True`, the training/inference regime is chosen according
     to the `training` option.
-
 
 ### TOCEntry: TensorBoard
 

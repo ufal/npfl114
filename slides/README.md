@@ -1,9 +1,6 @@
 # NPFL114 (Deep Learning) Slides
 
-The NPFL114 (Deep Learning) slides can be viewed in any modern browser (with
-Chrome and Firefox tested). The slides can be printed into PDF in Chrome and
-Firefox (but in Firefox you need to manually specify page size as 297mm and
-167mm).
+The NPFL114 (Deep Learning) slides can be viewed in any modern browser (with Chrome and Firefox tested). The slides can be printed into PDF in Chrome and Firefox (but in Firefox you need to manually specify page size as 297mm and 167mm).
 
 Several key shortcuts are available:
 - `h` toggles handout mode, where only complete slides are kept;
