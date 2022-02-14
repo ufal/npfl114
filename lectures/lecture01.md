@@ -5,6 +5,7 @@
 #### Questions: #lecture_1_questions
 #### Lecture assignment: numpy_entropy
 #### Lecture assignment: pca_first
+#### Lecture assignment: mnist_layers_activations
 
 - Random variables, probability distributions, expectation, variance, Bernoulli
   distribution, Categorical distribution [Sections 3.2, 3.3, 3.8, 3.9.1 and 3.9.2 of DLB]
