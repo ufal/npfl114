@@ -1,17 +1,21 @@
 import os
 import sys
+from typing import Iterator, Optional
 import urllib.request
 
 import numpy as np
+import tensorflow as tf
 
 class MNIST:
-    H, W, C = 28, 28, 1
-    LABELS = 10
+    H: int = 28
+    W: int = 28
+    C: int = 1
+    LABELS: int = 10
 
-    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
+    _URL: str = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
 
     class Dataset:
-        def __init__(self, data, shuffle_batches, seed=42):
+        def __init__(self, data: dict[str, np.ndarray], shuffle_batches: bool, seed:int = 42) -> None:
             self._data = data
             self._data["images"] = self._data["images"].astype(np.float32) / 255
             self._size = len(self._data["images"])
@@ -19,14 +23,14 @@ class MNIST:
             self._shuffler = np.random.RandomState(seed) if shuffle_batches else None
 
         @property
-        def data(self):
+        def data(self) -> dict[str, np.ndarray]:
             return self._data
 
         @property
-        def size(self):
+        def size(self) -> int:
             return self._size
 
-        def batches(self, size=None):
+        def batches(self, size:Optional[int] = None) -> Iterator[dict[str, np.ndarray]]:
             permutation = self._shuffler.permutation(self._size) if self._shuffler else np.arange(self._size)
             while len(permutation):
                 batch_size = min(size or np.inf, len(permutation))
@@ -39,11 +43,10 @@ class MNIST:
                 yield batch
 
         @property
-        def dataset(self):
-            import tensorflow as tf
+        def dataset(self) -> tf.data.Dataset:
             return tf.data.Dataset.from_tensor_slices(self._data)
 
-    def __init__(self, dataset="mnist", size={}):
+    def __init__(self, dataset:str = "mnist", size:dict[str, int] = {}) -> None:
         path = "{}.npz".format(dataset)
         if not os.path.exists(path):
             print("Downloading dataset {}...".format(dataset), file=sys.stderr)
