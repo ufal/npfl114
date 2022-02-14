@@ -24,6 +24,7 @@ template and implement the following:
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 mnist_layers_activations.py --hidden_layers=0 --activation=none`
 ```
+Epoch  1/10 loss: 0.5383 - accuracy: 0.8613 - val_loss: 0.2755 - val_accuracy: 0.9308
 Epoch  5/10 loss: 0.2783 - accuracy: 0.9220 - val_loss: 0.2202 - val_accuracy: 0.9430
 Epoch 10/10 loss: 0.2595 - accuracy: 0.9273 - val_loss: 0.2146 - val_accuracy: 0.9434
 loss: 0.2637 - accuracy: 0.9259
