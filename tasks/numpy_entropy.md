@@ -1,5 +1,5 @@
 ### Assignment: numpy_entropy
-#### Date: Deadline: Feb 28, 8:00
+#### Date: Deadline: Feb 28, 7:59 a.m.
 #### Points: 3 points
 #### Examples: numpy_entropy_examples
 #### Tests: numpy_entropy_tests
