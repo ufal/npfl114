@@ -12,7 +12,13 @@
   Python supports virtual environments, which are directories containing
   independent sets of installed packages. You can create a virtual environment
   by running `python3 -m venv VENV_DIR` followed by
-  `VENV_DIR/bin/pip3 install tensorflow==2.8.0 gym==0.20.0`.
+  `VENV_DIR/bin/pip3 install tensorflow==2.8.0 gym==0.20.0` (or
+  `VENV_DIR/Scripts/pip3` on Windows).
+
+  On Windows, it can happen that `python3` is not in PATH, while `py` command is
+  – in that case you can use `py -m venv VENV_DIR`, which uses the newest
+  Python available, or for example `py -3.9 -m venv VENV_DIR`, which uses
+  Python version 3.9.
 
 - _Windows TensorFlow fails with ImportError: DLL load failed_
 
