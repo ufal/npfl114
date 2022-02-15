@@ -1,5 +1,5 @@
 ### Assignment: mnist_layers_activations
-#### Date: Deadline: Feb 28, 7:59 a.m.
+#### Date: Deadline: Mar 07, 7:59 a.m.
 #### Points: 2 points
 #### Examples: mnist_layers_activations_examples
 #### Tests: mnist_layers_activations_tests
