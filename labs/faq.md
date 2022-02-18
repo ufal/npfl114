@@ -15,24 +15,57 @@
   `VENV_DIR/bin/pip3 install tensorflow==2.8.0 tensorflow-addons==0.16.1 tensorflow-probability==0.16.0 tensorflow-hub==0.12.0 gym==0.20.0`
   (or `VENV_DIR/Scripts/pip3` on Windows).
 
-  On Windows, it can happen that `python3` is not in PATH, while `py` command is
-  – in that case you can use `py -m venv VENV_DIR`, which uses the newest
-  Python available, or for example `py -3.9 -m venv VENV_DIR`, which uses
-  Python version 3.9.
+- _**Windows** installation_
 
-- _Windows TensorFlow fails with ImportError: DLL load failed_
+  - On Windows, it can happen that `python3` is not in PATH, while `py` command
+    is – in that case you can use `py -m venv VENV_DIR`, which uses the newest
+    Python available, or for example `py -3.9 -m venv VENV_DIR`, which uses
+    Python version 3.9.
 
-  If your Windows TensorFlow fails with `ImportError: DLL load failed`,
-  you are probably missing
-  [Visual C++ 2019 Redistributable](https://aka.ms/vs/16/release/vc_redist.x64.exe).
+  - If your Windows TensorFlow fails with `ImportError: DLL load failed`,
+    you are probably missing
+    [Visual C++ 2019 Redistributable](https://aka.ms/vs/16/release/vc_redist.x64.exe).
 
-- _Cannot start TensorBoard after installation_
+- _**macOS** installation_
 
-  If `tensorboard` cannot be found, make sure the directory with pip installed
-  packages is in your PATH (that directory is either in your virtual environment
-  if you use a virtual environment, or it should be `~/.local/bin` on Linux
-  and `%UserProfile%\AppData\Roaming\Python\Python3[7-9]` and
-  `%UserProfile%\AppData\Roaming\Python\Python3[7-9]\Scripts` on Windows).
+  - With an **Intel** processor, you should not need anything special.
+
+  - If you have **Apple Silicon**, the installation is a bit more involved,
+    because some Python packages do not yet have an official Arm64 binary build.
+    The easiest workaround is to use Conda, which contains all the required
+    dependencies.
+
+    - Download [Conda env](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh).
+
+    - Install it and activate it.
+      ```
+      chmod +x ~/Downloads/Miniforge3-MacOSX-arm64.sh
+      sh ~/Downloads/Miniforge3-MacOSX-arm64.sh
+      source ~/miniforge3/bin/activate
+      ```
+
+    - Install the Arm64 TensorFlow dependencies.
+      ```
+      conda install -c apple tensorflow-deps==2.8.0
+      ```
+
+    - Install the Arm64 build of TensorFlow.
+      ```
+      python -m pip install tensorflow-macos==2.8.0
+      ```
+
+- _**GPU** support on Linux and Windows_
+
+  TensorFlow 2.8 supports NVIDIA GPU out of the box, but you need to install
+  CUDA 11.2 and cuDNN 8.1 libraries yourself.
+
+- _**GPU** support on macOS_
+
+  The AMD and Apple Silicon GPUs can be used by installing
+  a plugin providing the GPU acceleration using:
+  ```
+  python -m pip install tensorflow-metal
+  ```
 
 ### TOCEntry: Git
 
@@ -144,11 +177,6 @@
   user-defined functions passed into transformations such as `tf.data.Dataset.map`.
 
 ### TOCEntry: GPU
-
-- _Requirements for using a GPU_
-
-  To use an NVIDIA GPU with TensorFlow 2.8, you need to install CUDA 11.2 and
-  cuDNN 8.1 – see [the details about GPU support](https://www.tensorflow.org/install/gpu).
 
 - _Errors when running with a GPU_
 
@@ -280,6 +308,14 @@
     to the `training` option.
 
 ### TOCEntry: TensorBoard
+
+- _Cannot start TensorBoard after installation_
+
+  If `tensorboard` executable cannot be found, make sure the directory with pip installed
+  packages is in your PATH (that directory is either in your virtual environment
+  if you use a virtual environment, or it should be `~/.local/bin` on Linux
+  and `%UserProfile%\AppData\Roaming\Python\Python3[7-9]` and
+  `%UserProfile%\AppData\Roaming\Python\Python3[7-9]\Scripts` on Windows).
 
 - _How to create TensorBoard logs manually?_
 
