@@ -11,7 +11,7 @@ template and implement the following:
 - Optionally using momentum for the `SGD` optimizer.
 - Using specified learning rate for the optimizer.
 - Optionally use a given learning rate schedule. The schedule can be either
-  `exponential` or `polynomial` (with degree 1, so inverse time decay).
+  `exponential` or `linear` (with degree 1, so linear time decay).
   Additionally, the final learning rate is given and the decay should gradually
   decrease the learning rate to reach the final learning rate just after the
   training.
@@ -103,7 +103,7 @@ Epoch 10/10 loss: 0.0029 - accuracy: 0.9994 - val_loss: 0.1052 - val_accuracy: 0
 loss: 0.0880 - accuracy: 0.9797
 Final learning rate: 0.001
 ```
-- `python3 mnist_training.py --optimizer=Adam --learning_rate=0.01 --decay=polynomial --learning_rate_final=0.0001`
+- `python3 mnist_training.py --optimizer=Adam --learning_rate=0.01 --decay=linear --learning_rate_final=0.0001`
 ```
 Epoch  1/10 loss: 0.3428 - accuracy: 0.8944 - val_loss: 0.1176 - val_accuracy: 0.9634
 Epoch  2/10 loss: 0.1229 - accuracy: 0.9632 - val_loss: 0.1303 - val_accuracy: 0.9642
