@@ -4,6 +4,8 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/slides.pdf/npfl114-02.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-czech.mp4, CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-english.mp4, EN Lecture
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-czech.adam.mp4, CZ Practicals Adam
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-czech.practicals.mp4, CZ Practicals
 #### Questions: #lecture_2_questions
 #### Lecture assignment: sgd_backpropagation
 #### Lecture assignment: sgd_manual
