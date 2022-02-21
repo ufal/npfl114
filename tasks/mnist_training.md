@@ -1,5 +1,5 @@
 ### Assignment: mnist_training
-#### Date: Deadline: Mar 07, 7:59 a.m.
+#### Date: Deadline: Mar 14, 7:59 a.m.
 #### Points: 3 points
 #### Examples: mnist_training_examples
 

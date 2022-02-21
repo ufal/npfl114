@@ -5,7 +5,6 @@
 #### Questions: #lecture_2_questions
 #### Lecture assignment: sgd_backpropagation
 #### Lecture assignment: sgd_manual
-#### Lecture assignment: mnist_training
 #### Lecture assignment: gym_cartpole
 
 - Capacity, overfitting, underfitting, regularization [Section 5.2 of DLB]
