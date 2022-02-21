@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.23">
-<info created="D:20220221071238" modified="D:20220221071427"/>
+<info created="D:20220221071238" modified="D:20220221080324"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -312,7 +312,7 @@ h
 <page>
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
-<path layer="alpha" matrix="1 0 0 1 80 0" stroke="black">
+<path layer="alpha" matrix="1 0 0 1 80 0" stroke="black" pen="fat">
 384 688 m
 384 512 l
 432 512 l
@@ -320,7 +320,7 @@ h
 h
 </path>
 <text matrix="1 0 0 1 76 -12" transformations="translations" pos="396 708" stroke="black" type="label" width="31.067" height="7.473" depth="2.49" valign="baseline" style="math">(1-\beta)</text>
-<path matrix="1 0 0 1 80 0" stroke="black">
+<path matrix="1 0 0 1 80 0" stroke="black" pen="fat">
 336 652 m
 336 512 l
 384 512 l
@@ -328,7 +328,7 @@ h
 h
 </path>
 <text matrix="1 0 0 1 24 -48" transformations="translations" pos="396 708" stroke="black" type="label" width="41.698" height="8.11" depth="2.49" valign="baseline" style="math">(1-\beta)\beta^1</text>
-<path matrix="1 0 0 1 80 0" stroke="black">
+<path matrix="1 0 0 1 80 0" stroke="black" pen="fat">
 288 628 m
 288 512 l
 336 512 l
@@ -336,7 +336,7 @@ h
 h
 </path>
 <text matrix="1 0 0 1 -24 -72" transformations="translations" pos="396 708" stroke="black" type="label" width="41.698" height="8.11" depth="2.49" valign="baseline" style="math">(1-\beta)\beta^2</text>
-<path matrix="1 0 0 1 80 0" stroke="black">
+<path matrix="1 0 0 1 80 0" stroke="black" pen="fat">
 240 600 m
 240 512 l
 288 512 l
@@ -344,7 +344,7 @@ h
 h
 </path>
 <text matrix="1 0 0 1 -72 -100" transformations="translations" pos="396 708" stroke="black" type="label" width="41.698" height="8.11" depth="2.49" valign="baseline" style="math">(1-\beta)\beta^3</text>
-<path matrix="1 0 0 1 80 0" stroke="black">
+<path matrix="1 0 0 1 80 0" stroke="black" pen="fat">
 192 584 m
 192 512 l
 240 512 l
@@ -352,7 +352,7 @@ h
 h
 </path>
 <text matrix="1 0 0 1 -120 -116" transformations="translations" pos="396 708" stroke="black" type="label" width="41.698" height="8.11" depth="2.49" valign="baseline" style="math">(1-\beta)\beta^4</text>
-<path matrix="1 0 0 1 80 0" stroke="black">
+<path matrix="1 0 0 1 80 0" stroke="black" pen="fat">
 144 568 m
 144 512 l
 192 512 l
@@ -360,7 +360,7 @@ h
 h
 </path>
 <text matrix="1 0 0 1 -168 -132" transformations="translations" pos="396 708" stroke="black" type="label" width="41.698" height="8.11" depth="2.49" valign="baseline" style="math">(1-\beta)\beta^5</text>
-<path matrix="1 0 0 1 80 0" stroke="black">
+<path matrix="1 0 0 1 80 0" stroke="black" pen="fat">
 96 556 m
 96 512 l
 144 512 l
@@ -368,7 +368,7 @@ h
 h
 </path>
 <text matrix="1 0 0 1 -216 -144" transformations="translations" pos="396 708" stroke="black" type="label" width="41.698" height="8.11" depth="2.49" valign="baseline" style="math">(1-\beta)\beta^6</text>
-<path matrix="1 0 0 1 80 0" stroke="black">
+<path matrix="1 0 0 1 80 0" stroke="black" pen="fat">
 48 548 m
 48 512 l
 96 512 l
@@ -376,7 +376,7 @@ h
 h
 </path>
 <text matrix="1 0 0 1 -264 -152" transformations="translations" pos="396 708" stroke="black" type="label" width="41.698" height="8.11" depth="2.49" valign="baseline" style="math">(1-\beta)\beta^7</text>
-<path stroke="black">
+<path stroke="black" pen="fat">
 80 540 m
 80 512 l
 128 512 l
@@ -388,7 +388,7 @@ h
 80 512 m
 48 512 l
 </path>
-<path matrix="1 0 0 1 0 24" stroke="black" dash="dashed">
+<path matrix="1 0 0 1 0 24" stroke="black" dash="dashed" pen="fat">
 80 512 m
 48 512 l
 </path>
