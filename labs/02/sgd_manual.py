@@ -66,10 +66,12 @@ class Model(tf.Module):
             # of the batch images using `self.predict`.
 
             # TODO: Compute the gradient of the loss with respect to all
-            # variables. Note that the loss is computed as:
-            # - for every batch example, it is the categorical crossentropy of the
-            #   predicted probabilities and gold batch label
-            # - finally, the individual batch example losses are averaged
+            # variables. Note that the loss is computed as in `sgd_backpropagation`:
+            # - For every batch example, the loss is the categorical crossentropy of the
+            #   predicted probabilities and the gold label. To compute the crossentropy, you can
+            #   - either use `tf.one_hot` to obtain one-hot encoded gold labels, or
+            #   - or use `tf.gather` with `batch_dims=1` to "index" the predicted probabilities.
+            # - Finally, compute the average across the batch examples.
             #
             # During the gradient computation, you will need to compute
             # a so-called outer product
