@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+from typing import Tuple
 
 import numpy as np
 
@@ -10,7 +11,7 @@ parser.add_argument("--model_path", default="numpy_entropy_model.txt", type=str,
 parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
 # If you add more arguments, ReCodEx will keep them with your default values.
 
-def main(args: argparse.Namespace) -> tuple[float, float, float]:
+def main(args: argparse.Namespace) -> Tuple[float, float, float]:
     # TODO: Load data distribution, each line containing a datapoint -- a string.
     with open(args.data_path, "r") as data:
         for line in data:
