@@ -7,6 +7,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-czech.adam.mp4, CZ Practicals Adam
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-czech.practicals.mp4, CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-english.practicals.mp4, EN Practicals
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-english.cartpole.mp4, EN CartPole
 #### Questions: #lecture_2_questions
 #### Lecture assignment: sgd_backpropagation
 #### Lecture assignment: sgd_manual

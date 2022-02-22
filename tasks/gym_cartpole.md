@@ -1,6 +1,7 @@
 ### Assignment: gym_cartpole
 #### Date: Deadline: Mar 07, 7:59 a.m.
 #### Points: 3 points
+#### Video@: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-english.cartpole.mp4, EN Description
 
 Solve the [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)
 from the [OpenAI Gym](https://gym.openai.com/), utilizing only provided supervised
