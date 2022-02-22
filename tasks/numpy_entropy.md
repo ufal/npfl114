@@ -62,7 +62,10 @@ Entropy: 0.96 nats
 Crossentropy: inf nats
 KL divergence: inf nats
 ```
-- `python3 numpy_entropy.py --data_path=recodex_numpy_entropy_data_3.txt --model_path=recodex_numpy_entropy_model_3.txt`
-- `python3 numpy_entropy.py --data_path=recodex_numpy_entropy_data_4.txt --model_path=recodex_numpy_entropy_model_4.txt`
-- `python3 numpy_entropy.py --data_path=recodex_numpy_entropy_data_5.txt --model_path=recodex_numpy_entropy_model_5.txt`
+- The last three tests use data available only in ReCodEx. They are quite
+  similar to the [numpy_entropy_data_3.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_3.txt)
+  [numpy_entropy_model_3.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_3.txt)
+  and [numpy_entropy_data_4.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_4.txt)
+  [numpy_entropy_model_4.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_4.txt),
+  but are generated with a different random seed.
 #### Tests End:
