@@ -44,10 +44,10 @@ def main(args: argparse.Namespace) -> float:
     model.add(tf.keras.layers.Input([MNIST.H, MNIST.W, MNIST.C]))
     # TODO: Finish the model. Namely add:
     # - a `tf.keras.layers.Flatten()` layer
-    # - add `args.hidden_layers` number of fully connected hidden layers
+    # - `args.hidden_layers` number of fully connected hidden layers
     #   `tf.keras.layers.Dense()` with  `args.hidden_layer` neurons, using activation
     #   from `args.activation`, allowing "none", "relu", "tanh", "sigmoid".
-    # - finally, add a final fully connected layer with
+    # - finally, a final fully connected layer with
     #   `MNIST.LABELS` units and `tf.nn.softmax` activation.
 
     model.compile(
