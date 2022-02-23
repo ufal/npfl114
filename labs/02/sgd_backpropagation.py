@@ -61,7 +61,7 @@ class Model(tf.Module):
                 # TODO: Manually compute the loss:
                 # - For every batch example, the loss is the categorical crossentropy of the
                 #   predicted probabilities and the gold label. To compute the crossentropy, you can
-                #   - either use `tf.one_hot` to obtain one-hot encoded gold labels, or
+                #   - either use `tf.one_hot` to obtain one-hot encoded gold labels,
                 #   - or use `tf.gather` with `batch_dims=1` to "index" the predicted probabilities.
                 # - Finally, compute the average across the batch examples.
                 loss = ...
