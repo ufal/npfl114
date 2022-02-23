@@ -11,7 +11,7 @@ assignment by **manually** computing the gradient.
 While in this assignment we compute the gradient manually, we will nearly always
 use the automatic differentiation. Therefore, the assignment is more of
 a mathematical exercise than a real-world application. Furthermore, we will
-compute the derivatives together on the Mar 16 practicals.
+compute the derivatives together on the Feb 28 practicals.
 
 Start with the
 [sgd_manual.py](https://github.com/ufal/npfl114/tree/master/labs/02/sgd_manual.py)
