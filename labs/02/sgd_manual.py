@@ -69,7 +69,7 @@ class Model(tf.Module):
             # variables. Note that the loss is computed as in `sgd_backpropagation`:
             # - For every batch example, the loss is the categorical crossentropy of the
             #   predicted probabilities and the gold label. To compute the crossentropy, you can
-            #   - either use `tf.one_hot` to obtain one-hot encoded gold labels, or
+            #   - either use `tf.one_hot` to obtain one-hot encoded gold labels,
             #   - or use `tf.gather` with `batch_dims=1` to "index" the predicted probabilities.
             # - Finally, compute the average across the batch examples.
             #
