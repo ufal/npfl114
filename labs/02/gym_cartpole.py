@@ -32,7 +32,7 @@ def evaluate_model(
 
             prediction = model(observation[np.newaxis, ...])[0].numpy()
             if len(prediction) == 1:
-                action = 1 if prediction[0] >= 0.5 else 0
+                action = 1 if prediction[0] > 0.5 else 0
             elif len(prediction) == 2:
                 action = np.argmax(prediction)
             else:
