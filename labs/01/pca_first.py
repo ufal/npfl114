@@ -61,7 +61,7 @@ def main(args: argparse.Namespace) -> Tuple[float, float]:
         # 1. v = cov * v
         #    The matrix-vector multiplication can be computed using `tf.linalg.matvec`.
         # 2. s = l2_norm(v)
-        #    The l2_norm can be computed using `tf.linalg.norm`.
+        #    The l2_norm can be computed using `tf.norm`.
         # 3. v = v / s
         pass
 
