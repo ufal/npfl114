@@ -6,7 +6,7 @@ Several key shortcuts are available:
 - `h` toggles handout mode, where only complete slides are kept;
 - `b` toggles background visibility.
 
-You can see the slides either [on-line at ÚFAL](https://ufal.mff.cuni.cz/courses/npfl14), or locally – in that case:
+You can see the slides either [on-line at ÚFAL](https://ufal.mff.cuni.cz/courses/npfl114), or locally – in that case:
 1. Make sure the `slimd` submodule is updated by running:
    ```
    git submodule update --init
