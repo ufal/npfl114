@@ -3,6 +3,7 @@ import argparse
 import datetime
 import os
 import re
+from typing import Tuple
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
 
 import numpy as np
@@ -34,7 +35,7 @@ class Model(tf.Module):
         # - _b2, which is a trainable Variable of size [MNIST.LABELS] initialized to zeros
         ...
 
-    def predict(self, inputs: tf.Tensor) -> tf.Tensor:
+    def predict(self, inputs: tf.Tensor) -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
         # TODO(sgd_backpropagation): Define the computation of the network. Notably:
         # - start by reshaping the inputs to shape [inputs.shape[0], -1].
         #   The -1 is a wildcard which is computed so that the number
