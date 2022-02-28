@@ -54,10 +54,10 @@ def main(args: argparse.Namespace) -> float:
     # - If `args.decay` is not specified, pass the given `args.learning_rate`
     #   directly to the optimizer as a `learning_rate` argument.
     # - If `args.decay` is set, then
-    #   - for `linear`, use `tf.optimizers.schedules.PolynomialDecay` with defaul power=1.0
+    #   - for `linear`, use `tf.keras.optimizers.schedules.PolynomialDecay` with defaul power=1.0
     #     using the given `args.learning_rate_final`;
     #     https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay
-    #   - for `exponential`, use `tf.optimizers.schedules.ExponentialDecay`
+    #   - for `exponential`, use `tf.keras.optimizers.schedules.ExponentialDecay`
     #     and set `decay_rate` appropriately to reach `args.learning_rate_final`
     #     just after the training (and keep the default `staircase=False`).
     #     https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay
