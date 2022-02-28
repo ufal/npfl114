@@ -86,7 +86,7 @@ def main(args: argparse.Namespace) -> None:
     def evaluate_test(epoch, logs):
         if epoch + 1 == args.epochs:
             test_logs = model.evaluate(
-                mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size, return_dict=True,
+                mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size, return_dict=True, verbose=0,
             )
             logs.update({"val_test_" + name: value for name, value in test_logs.items()})
 
