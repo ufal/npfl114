@@ -67,6 +67,54 @@
   python -m pip install tensorflow-metal
   ```
 
+### TOCEntry: MetaCentrum
+
+- _How to install TensorFlow dependencies on MetaCentrum?_
+
+  To install CUDA, cuDNN and Python 3.8 on MetaCentrum, it is enough to run
+  in every session the following command:
+  ```
+  module add python/3.8.0-gcc-rab6t cuda/cuda-11.2.0-intel-19.0.4-tn4edsz cudnn/cudnn-8.1.0.77-11.2-linux-x64-intel-19.0.4-wx22b5t
+  ```
+
+- _How to run a GPU computation on MetaCentrum?_
+
+  First, read the official MetaCentrum documentation:
+  [Beginners guide](https://wiki.metacentrum.cz/wiki/Beginners_guide),
+  [GPU clusters](https://wiki.metacentrum.cz/wiki/GPU_clusters).
+
+  TL;DR: To run an interactive GPU job with 1 CPU, 1 GPU, 64GB RAM, and 32GB scatch
+  space, run:
+  ```
+  qsub -q gpu -l select=1:ncpus=1:ngpus=1:mem=64gb:scratch_local=32gb -I
+  ```
+
+  More details to appear.
+
+### TOCEntry: AIC
+
+- _How to install TensorFlow dependencies on [AIC](https://aic.ufal.mff.cuni.cz)?_
+
+  To install CUDA, cuDNN and Python 3.9 on AIC, you should add the following to
+  your `.profile`:
+  ```
+  export PATH="/lnet/aic/data/python/3.9.9/bin:$PATH"
+  export LD_LIBRARY_PATH="/lnet/aic/opt/cuda/cuda-11.2/lib64:/lnet/aic/opt/cuda/cuda-11.2/cudnn/8.1.1/lib64:/lnet/aic/opt/cuda/cuda-11.2/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
+  ```
+
+- _How to run a GPU computation on AIC?_
+
+  First, read the official AIC documentation:
+  [Submissing CPU Jobs](https://aic.ufal.mff.cuni.cz/index.php/Submitting_CPU_Jobs),
+  [Submissing GPU Jobs](https://aic.ufal.mff.cuni.cz/index.php/Submitting_GPU_Jobs).
+
+  TL;DR: To run an interactive GPU job with 1 CPU, 1 GPU, and 32GB RAM, run:
+  ```
+  qrsh -q gpu.q -l gpu=1,mem_free=32G,h_data=32G -pty yes bash -l
+  ```
+
+  More details to appear.
+
 ### TOCEntry: Git
 
 - _Is it possible to keep the solutions in a Git repository?_
