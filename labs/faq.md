@@ -105,8 +105,8 @@
 - _How to run a GPU computation on AIC?_
 
   First, read the official AIC documentation:
-  [Submissing CPU Jobs](https://aic.ufal.mff.cuni.cz/index.php/Submitting_CPU_Jobs),
-  [Submissing GPU Jobs](https://aic.ufal.mff.cuni.cz/index.php/Submitting_GPU_Jobs).
+  [Submitting CPU Jobs](https://aic.ufal.mff.cuni.cz/index.php/Submitting_CPU_Jobs),
+  [Submitting GPU Jobs](https://aic.ufal.mff.cuni.cz/index.php/Submitting_GPU_Jobs).
 
   TL;DR: To run an interactive GPU job with 1 CPU, 1 GPU, and 32GB RAM, run:
   ```
