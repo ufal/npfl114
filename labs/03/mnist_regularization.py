@@ -40,7 +40,7 @@ def main(args: argparse.Namespace) -> float:
     # Load data
     mnist = MNIST(size={"train": 5000})
 
-    # TODO: Create the model and incorporate the L2 regularization and dropout:
+    # TODO: Create the model and incorporate L2 regularization and dropout:
     # - L2 regularization:
     #   If `args.l2` is nonzero, create a `tf.keras.regularizers.L2` regularizer
     #   and use it for all kernels (but not biases) of all Dense layers.
@@ -61,7 +61,7 @@ def main(args: argparse.Namespace) -> float:
     # That means you also need to modify the labels of all three datasets
     # (i.e., `mnist.{train,dev,test}.data["labels"]`) from indices of the gold class
     # to a full categorical distribution (you can use either NumPy or there is
-    # a helper method also in the `tf.keras.utils`).
+    # a helper method also in the `tf.keras.utils` API).
 
     model.compile(
         optimizer=tf.optimizers.Adam(),

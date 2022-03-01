@@ -65,7 +65,7 @@ def main(args: argparse.Namespace) -> Tuple[List[float], List[float]]:
         # Generally you can choose one of the following approaches:
         # 1) Use Keras Functional API and construct a `tf.keras.Model`
         #    which averages the models in the ensemble (using for example
-        #    `tf.keras.layers.Average` of manually with `tf.math.reduce_mean`).
+        #    `tf.keras.layers.Average` or manually with `tf.math.reduce_mean`).
         #    Then you can compile the model with the required metric (without
         #    an optimizer and a loss) and use `model.evaluate`.
         # 2) Manually perform the averaging (using TF or NumPy). In this case
