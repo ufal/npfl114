@@ -61,7 +61,7 @@ def main(args: argparse.Namespace) -> float:
     # That means you also need to modify the labels of all three datasets
     # (i.e., `mnist.{train,dev,test}.data["labels"]`) from indices of the gold class
     # to a full categorical distribution (you can use either NumPy or there is
-    # a helper method also in the `tf.keras.utils` API).
+    # a helper method also in the `tf.keras.utils` module).
 
     model.compile(
         optimizer=tf.optimizers.Adam(),
