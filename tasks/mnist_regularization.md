@@ -11,7 +11,7 @@ template and implement the following:
   first `Flatten` and also after all `Dense` hidden layers (but not after the
   output layer).
 - Allow using L2 regularization with weight `args.l2`. Use
-  `tf.keras.regularizers.L1L2` as a regularizer for all kernels (but not
+  `tf.keras.regularizers.L2` as a regularizer for all kernels (but not
   biases) of all `Dense` layers (including the last one).
 - Allow using label smoothing with weight `args.label_smoothing`. Instead
   of `SparseCategoricalCrossentropy`, you will need to use
