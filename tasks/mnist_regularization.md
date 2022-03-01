@@ -17,7 +17,7 @@ template and implement the following:
   of `SparseCategoricalCrossentropy`, you will need to use
   `CategoricalCrossentropy` which offers `label_smoothing` argument.
 
-In ReCodEx, there will be six tests tests (two for each regularization methods) and
+In ReCodEx, there will be six tests (two for each regularization methods) and
 you will get half a point for passing each one.
 
 In addition to submitting the task in ReCodEx, also run the following
