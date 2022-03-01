@@ -54,7 +54,7 @@ def main(args: argparse.Namespace) -> float:
     # - If `args.decay` is not specified, pass the given `args.learning_rate`
     #   directly to the optimizer as a `learning_rate` argument.
     # - If `args.decay` is set, then
-    #   - for `linear`, use `tf.optimizers.schedules.PolynomialDecay` with defaul power=1.0
+    #   - for `linear`, use `tf.optimizers.schedules.PolynomialDecay` with default power=1.0
     #     using the given `args.learning_rate_final`;
     #     https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay
     #   - for `exponential`, use `tf.optimizers.schedules.ExponentialDecay`
@@ -65,12 +65,12 @@ def main(args: argparse.Namespace) -> float:
     #   and you should pass the created `{Polynomial,Exponential}Decay` to
     #   the optimizer using the `learning_rate` constructor argument.
     #   The size of the training MNIST dataset is `mnist.train.size` and you
-    #   can assume is it divisible by `args.batch_size`.
+    #   can assume it is divisible by `args.batch_size`.
     #
-    #   If a learning rate schedule is used, TensorBoard automatically logs the value of
+    #   If a learning rate schedule is used, TensorBoard automatically logs the value of the
     #   learning rate after every epoch. Additionally, you can find out the current learning
     #   rate manually by using `model.optimizer.learning_rate(model.optimizer.iterations)`,
-    #   so after training this value should be `args.learning_rate_final`.
+    #   so after training, this value should be `args.learning_rate_final`.
 
     model.compile(
         optimizer=...,
