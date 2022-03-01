@@ -1,9 +1,11 @@
 import os
 import sys
+from typing import Dict, List, TextIO, Union
 import urllib.request
 import zipfile
 
 import numpy as np
+import tensorflow as tf
 
 # Loads the Uppercase data.
 # - The data consists of three Datasets
@@ -13,7 +15,7 @@ import numpy as np
 # - When loading, maximum number of alphabet characters can be specified,
 #   in which case that many most frequent characters will be used, and all
 #   other will be remapped to "<unk>".
-# - Batches are generated using a sliding window of given size,
+# - Features are generated using a sliding window of given size,
 #   i.e., for a character, we include left `window` characters, the character
 #   itself and right `window` characters, `2 * window + 1` in total.
 # - Each dataset (train/dev/test) has the following members:
@@ -28,12 +30,12 @@ import numpy as np
 #   - dataset: a TensorFlow tf.data.Dataset producing as examples dictionaries
 #       with keys "windows" and "labels"
 class UppercaseData:
-    LABELS = 2
+    LABELS: int = 2
 
-    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/uppercase_data.zip"
+    _URL: str = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/uppercase_data.zip"
 
     class Dataset:
-        def __init__(self, data, window, alphabet, seed=42):
+        def __init__(self, data: str, window: int, alphabet: Union[int, List[str]], seed: int = 42) -> None:
             self._window = window
             self._text = data
             self._size = len(self._text)
@@ -75,27 +77,26 @@ class UppercaseData:
                 self._alphabet[value] = key
 
         @property
-        def alphabet(self):
+        def alphabet(self) -> List[str]:
             return self._alphabet
 
         @property
-        def text(self):
+        def text(self) -> str:
             return self._text
 
         @property
-        def data(self):
+        def data(self) -> Dict[str, np.ndarray]:
             return self._data
 
         @property
-        def size(self):
+        def size(self) -> int:
             return self._size
 
         @property
-        def dataset(self):
-            import tensorflow as tf
+        def dataset(self) -> tf.data.Dataset:
             return tf.data.Dataset.from_tensor_slices(self._data)
 
-    def __init__(self, window, alphabet_size=0):
+    def __init__(self, window: int, alphabet_size: int = 0):
         path = os.path.basename(self._URL)
         if not os.path.exists(path):
             print("Downloading dataset {}...".format(path), file=sys.stderr)
@@ -111,9 +112,13 @@ class UppercaseData:
                     alphabet=alphabet_size if dataset == "train" else self.train.alphabet,
                 ))
 
+    train: Dataset
+    dev: Dataset
+    test: Dataset
+
     # Evaluation infrastructure.
     @staticmethod
-    def evaluate(gold_dataset, predictions):
+    def evaluate(gold_dataset: Dataset, predictions: str) -> float:
         gold = gold_dataset.text
 
         if len(predictions) < len(gold):
@@ -130,7 +135,7 @@ class UppercaseData:
         return 100 * correct / len(gold)
 
     @staticmethod
-    def evaluate_file(gold_dataset, predictions_file):
+    def evaluate_file(gold_dataset: Dataset, predictions_file: TextIO) -> float:
         predictions = predictions_file.read()
         return UppercaseData.evaluate(gold_dataset, predictions)
 
