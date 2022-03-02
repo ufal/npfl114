@@ -133,12 +133,16 @@ loss: 0.2699 - accuracy: 0.9231 - val_loss: 0.1166 - val_accuracy: 0.9686 - val_
 ```
 loss: 0.2354 - accuracy: 0.9290 - val_loss: 0.1425 - val_accuracy: 0.9576 - val_test_loss: 0.1692 - val_test_accuracy: 0.9469
 ```
-- `python3 mnist_training.py --epochs=1 --optimizer=Adam --learning_rate=0.01 --decay=exponential --learning_rate_final=0.001`
+- `python3 mnist_training.py --epochs=2 --optimizer=Adam --learning_rate=0.01 --decay=exponential --learning_rate_final=0.001`
 ```
-loss: 0.1834 - accuracy: 0.9439 - val_loss: 0.0808 - val_accuracy: 0.9768 - val_test_loss: 0.0891 - val_test_accuracy: 0.9731
+Epoch 1/2 loss: 0.1961 - accuracy: 0.9400 - val_loss: 0.0890 - val_accuracy: 0.9728
+Epoch 2/2 loss: 0.0663 - accuracy: 0.9792 - val_loss: 0.0675 - val_accuracy: 0.9790 - val_test_loss: 0.0721 - val_test_accuracy: 0.9773
+Final learning rate: 0.001
 ```
-- `python3 mnist_training.py --epochs=1 --optimizer=Adam --learning_rate=0.01 --decay=linear --learning_rate_final=0.0001`
+- `python3 mnist_training.py --epochs=2 --optimizer=Adam --learning_rate=0.01 --decay=linear --learning_rate_final=0.0001`
 ```
-loss: 0.1886 - accuracy: 0.9423 - val_loss: 0.0814 - val_accuracy: 0.9760 - val_test_loss: 0.0891 - val_test_accuracy: 0.9727
+Epoch 1/2 loss: 0.2111 - accuracy: 0.9356 - val_loss: 0.1017 - val_accuracy: 0.9690
+Epoch 2/2 loss: 0.0701 - accuracy: 0.9781 - val_loss: 0.0708 - val_accuracy: 0.9790 - val_test_loss: 0.0693 - val_test_accuracy: 0.9779
+Final learning rate: 0.0001
 ```
 #### Tests End:
