@@ -60,9 +60,10 @@ def main(args: argparse.Namespace) -> float:
     #     and set `decay_rate` appropriately to reach `args.learning_rate_final`
     #     just after the training (and keep the default `staircase=False`).
     #     https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay
-    #   In both cases, `decay_steps` should be total number of training batches
     #   and you should pass the created `{Polynomial,Exponential}Decay` to
     #   the optimizer using the `learning_rate` constructor argument.
+    #   In both cases, `decay_steps` should be total number of optimizer
+    #   updates, i.e., the total number of training batches in all epochs.
     #   The size of the training MNIST dataset is `mnist.train.size` and you
     #   can assume it is divisible by `args.batch_size`.
     #
