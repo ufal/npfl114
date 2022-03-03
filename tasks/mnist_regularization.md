@@ -21,8 +21,9 @@ In ReCodEx, there will be six tests (two for each regularization methods) and
 you will get half a point for passing each one.
 
 In addition to submitting the task in ReCodEx, also run the following
-variations and observe the results in TensorBoard (notably training, development
-and test set accuracy and loss):
+variations and observe the results in TensorBoard
+(or [online here](https://tensorboard.dev/experiment/9lu5xlnvTYODHPs2UkS5Jw/)),
+notably the training, development and test set accuracy and loss:
 - dropout rate `0`, `0.3`, `0.5`, `0.6`, `0.8`;
 - l2 regularization `0`, `0.001`, `0.0001`, `0.00001`;
 - label smoothing `0`, `0.1`, `0.3`, `0.5`.
