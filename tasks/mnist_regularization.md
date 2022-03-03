@@ -34,9 +34,9 @@ _Note that your results may be slightly different, depending on your CPU type an
 ```
 loss: 0.7987 - accuracy: 0.7616 - val_loss: 0.3175 - val_accuracy: 0.9110 - val_test_loss: 0.3825 - val_test_accuracy: 0.8882
 ```
-- `python3 mnist_regularization.py --epochs=1 --dropout=0.5`
+- `python3 mnist_regularization.py --epochs=1 --dropout=0.5 --hidden_layers 300 300`
 ```
-loss: 1.0807 - accuracy: 0.6528 - val_loss: 0.3719 - val_accuracy: 0.8972 - val_test_loss: 0.4476 - val_test_accuracy: 0.8743
+loss: 1.4363 - accuracy: 0.5090 - val_loss: 0.4447 - val_accuracy: 0.8862 - val_test_loss: 0.5256 - val_test_accuracy: 0.8537
 ```
 - `python3 mnist_regularization.py --epochs=1 --l2=0.001`
 ```
