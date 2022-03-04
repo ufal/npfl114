@@ -85,6 +85,33 @@
   module add python/3.8.0-gcc-rab6t cuda/cuda-11.2.0-intel-19.0.4-tn4edsz cudnn/cudnn-8.1.0.77-11.2-linux-x64-intel-19.0.4-wx22b5t
   ```
 
+- _How to install TensorFlow on MetaCentrum?_
+
+  Once you have the required dependencies, you can create a virtual environment
+  and install TensorFlow in it. However, note that by default the MetaCentrum
+  jobs have a little disk space, so read about
+  [how to ask for scratch storage](https://wiki.metacentrum.cz/wiki/Scratch_storage)
+  when submitting a job.
+
+  TL;DR:
+  - Run an interactive CPU job, asking for 16GB scratch space:
+    ```
+    qsub -l select=1:ncpus=1:mem=8gb:scratch_local=16gb -I
+    ```
+
+  - In the job, use the allocated scratch space as a temporary directory:
+    ```
+    export TMPDIR=$SCRATCHDIR
+    ```
+
+  - Finally, create the virtual environment and install TensorFlow in it:
+    ```
+    module add python/3.8.0-gcc-rab6t cuda/cuda-11.2.0-intel-19.0.4-tn4edsz cudnn/cudnn-8.1.0.77-11.2-linux-x64-intel-19.0.4-wx22b5t
+    python3 -m venv CHOSEN_VENV_DIR
+    CHOSEN_VENV_DIR/bin/pip install --no-cache-dir --upgrade pip setuptools
+    CHOSEN_VENV_DIR/bin/pip install --no-cache-dir tensorflow==2.8.0 tensorflow-addons==0.16.1 tensorflow-probability==0.16.0 tensorflow-hub==0.12.0 gym==0.20.0
+    ```
+
 - _How to run a GPU computation on MetaCentrum?_
 
   First, read the official MetaCentrum documentation:
