@@ -91,7 +91,7 @@
   and install TensorFlow in it. However, note that by default the MetaCentrum
   jobs have a little disk space, so read about
   [how to ask for scratch storage](https://wiki.metacentrum.cz/wiki/Scratch_storage)
-  when submitting a job.
+  when submitting a job, and about [quotas](https://wiki.metacentrum.cz/wiki/Quotas),
 
   TL;DR:
   - Run an interactive CPU job, asking for 16GB scratch space:
