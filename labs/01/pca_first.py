@@ -2,7 +2,7 @@
 import argparse
 import os
 from typing import Tuple
-os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
@@ -17,6 +17,7 @@ parser.add_argument("--recodex", default=False, action="store_true", help="Evalu
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 # If you add more arguments, ReCodEx will keep them with your default values.
+
 
 def main(args: argparse.Namespace) -> Tuple[float, float]:
     # Fix random seeds and threads
@@ -71,6 +72,7 @@ def main(args: argparse.Namespace) -> Tuple[float, float]:
 
     # Return the total and explained variance for ReCodEx to validate
     return total_variance, 100 * explained_variance
+
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)

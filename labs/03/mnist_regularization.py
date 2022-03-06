@@ -3,7 +3,7 @@ import argparse
 import datetime
 import os
 import re
-os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
@@ -23,6 +23,7 @@ parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 # If you add more arguments, ReCodEx will keep them with your default values.
 
+
 def main(args: argparse.Namespace) -> float:
     # Fix random seeds and threads
     tf.keras.utils.set_random_seed(args.seed)
@@ -33,7 +34,7 @@ def main(args: argparse.Namespace) -> float:
     args.logdir = os.path.join("logs", "{}-{}-{}".format(
         os.path.basename(globals().get("__file__", "notebook")),
         datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S"),
-        ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", key), value) for key, value in sorted(vars(args).items())))
+        ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", k), v) for k, v in sorted(vars(args).items())))
     ))
 
     # Load data
@@ -73,7 +74,7 @@ def main(args: argparse.Namespace) -> float:
     def evaluate_test(epoch, logs):
         if epoch + 1 == args.epochs:
             test_logs = model.evaluate(
-                mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size, return_dict=True, verbose=0,
+                mnist.test.data["images"], mnist.test.data["labels"], args.batch_size, return_dict=True, verbose=0,
             )
             logs.update({"val_test_" + name: value for name, value in test_logs.items()})
 
@@ -86,6 +87,7 @@ def main(args: argparse.Namespace) -> float:
 
     # Return test accuracy for ReCodEx to validate
     return logs.history["val_test_accuracy"][-1]
+
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)

@@ -3,7 +3,7 @@ import argparse
 import os
 import sys
 from typing import List, Tuple
-os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
@@ -20,6 +20,7 @@ parser.add_argument("--recodex", default=False, action="store_true", help="Evalu
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 # If you add more arguments, ReCodEx will keep them with your default values.
+
 
 def main(args: argparse.Namespace) -> Tuple[List[float], List[float]]:
     # Fix random seeds and threads
@@ -78,6 +79,7 @@ def main(args: argparse.Namespace) -> Tuple[List[float], List[float]]:
         individual_accuracies.append(individual_accuracy)
         ensemble_accuracies.append(ensemble_accuracy)
     return individual_accuracies, ensemble_accuracies
+
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)

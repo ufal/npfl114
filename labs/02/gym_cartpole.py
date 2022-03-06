@@ -4,13 +4,14 @@ import datetime
 import os
 import re
 from typing import Optional
-os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
 
+
 def evaluate_model(
-    model: tf.keras.Model, seed:int = 42, episodes:int = 100, render:bool = False, report_per_episode:bool = False
+    model: tf.keras.Model, seed: int = 42, episodes: int = 100, render: bool = False, report_per_episode: bool = False
 ) -> float:
     """Evaluate the given model on CartPole-v1 environment.
 
@@ -46,6 +47,7 @@ def evaluate_model(
             print("The episode {} finished with score {}.".format(episode + 1, score))
     return total_score / episodes
 
+
 parser = argparse.ArgumentParser()
 # These arguments will be set appropriately by ReCodEx, even if you change them.
 parser.add_argument("--evaluate", default=False, action="store_true", help="Evaluate the given model")
@@ -57,6 +59,7 @@ parser.add_argument("--threads", default=1, type=int, help="Maximum number of th
 parser.add_argument("--batch_size", default=None, type=int, help="Batch size.")
 parser.add_argument("--epochs", default=None, type=int, help="Number of epochs.")
 parser.add_argument("--model", default="gym_cartpole_model.h5", type=str, help="Output model path.")
+
 
 def main(args: argparse.Namespace) -> Optional[tf.keras.Model]:
     # Fix random seeds and threads
@@ -70,7 +73,7 @@ def main(args: argparse.Namespace) -> Optional[tf.keras.Model]:
         args.logdir = os.path.join("logs", "{}-{}-{}".format(
             os.path.basename(globals().get("__file__", "notebook")),
             datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S"),
-            ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", key), value) for key, value in sorted(vars(args).items())))
+            ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", k), v) for k, v in sorted(vars(args).items())))
         ))
 
         # Load the data
@@ -86,7 +89,7 @@ def main(args: argparse.Namespace) -> Optional[tf.keras.Model]:
         # TODO: Prepare the model for training using the `model.compile` method.
         model.compile(...)
 
-        tb_callback=tf.keras.callbacks.TensorBoard(args.logdir, update_freq=100, profile_batch=0)
+        tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, update_freq=100, profile_batch=0)
         model.fit(
             observations, labels,
             batch_size=args.batch_size, epochs=args.epochs,
@@ -105,6 +108,7 @@ def main(args: argparse.Namespace) -> Optional[tf.keras.Model]:
         else:
             score = evaluate_model(model, seed=args.seed, render=args.render, report_per_episode=True)
             print("The average score was {}.".format(score))
+
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)

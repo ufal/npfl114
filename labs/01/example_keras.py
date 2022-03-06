@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import os
-os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
@@ -15,6 +15,7 @@ parser.add_argument("--epochs", default=10, type=int, help="Number of epochs.")
 parser.add_argument("--hidden_layer", default=100, type=int, help="Size of the hidden layer.")
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
+
 
 def main(args: argparse.Namespace) -> None:
     # Fix random seeds and threads
@@ -50,6 +51,7 @@ def main(args: argparse.Namespace) -> None:
     model.evaluate(
         mnist.test.data["images"], mnist.test.data["labels"], batch_size=args.batch_size,
     )
+
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)

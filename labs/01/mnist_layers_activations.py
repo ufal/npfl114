@@ -3,7 +3,7 @@ import argparse
 import datetime
 import os
 import re
-os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
@@ -22,6 +22,7 @@ parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 # If you add more arguments, ReCodEx will keep them with your default values.
 
+
 def main(args: argparse.Namespace) -> float:
     # Fix random seeds and threads
     np.random.seed(args.seed)
@@ -33,7 +34,7 @@ def main(args: argparse.Namespace) -> float:
     args.logdir = os.path.join("logs", "{}-{}-{}".format(
         os.path.basename(globals().get("__file__", "notebook")),
         datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S"),
-        ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", key), value) for key, value in sorted(vars(args).items())))
+        ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", k), v) for k, v in sorted(vars(args).items())))
     ))
 
     # Load data
@@ -57,7 +58,7 @@ def main(args: argparse.Namespace) -> float:
     )
 
     tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=100, profile_batch=0)
-    tb_callback._close_writers = lambda: None # A hack allowing to keep the writers open.
+    tb_callback._close_writers = lambda: None  # A hack allowing to keep the writers open.
     model.fit(
         mnist.train.data["images"], mnist.train.data["labels"],
         batch_size=args.batch_size, epochs=args.epochs,
@@ -72,6 +73,7 @@ def main(args: argparse.Namespace) -> float:
 
     # Return test accuracy for ReCodEx to validate
     return test_logs["accuracy"]
+
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)

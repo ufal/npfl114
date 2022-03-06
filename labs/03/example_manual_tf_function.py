@@ -3,7 +3,7 @@ import argparse
 import datetime
 import os
 import re
-os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
@@ -18,6 +18,7 @@ parser.add_argument("--hidden_layers", default=[100], nargs="*", type=int, help=
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 
+
 def main(args: argparse.Namespace) -> None:
     # Fix random seeds and threads
     np.random.seed(args.seed)
@@ -29,7 +30,7 @@ def main(args: argparse.Namespace) -> None:
     args.logdir = os.path.join("logs", "{}-{}-{}".format(
         os.path.basename(globals().get("__file__", "notebook")),
         datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S"),
-        ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", key), value) for key, value in sorted(vars(args).items())))
+        ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", k), v) for k, v in sorted(vars(args).items())))
     ))
 
     # Load data
@@ -78,6 +79,7 @@ def main(args: argparse.Namespace) -> None:
         evaluate_batch(batch)
     test = accuracy.result()
     print("Test: {}".format(test))
+
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)

@@ -11,6 +11,7 @@ parser.add_argument("--model_path", default="numpy_entropy_model.txt", type=str,
 parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
 # If you add more arguments, ReCodEx will keep them with your default values.
 
+
 def main(args: argparse.Namespace) -> Tuple[float, float, float]:
     # TODO: Load data distribution, each line containing a datapoint -- a string.
     with open(args.data_path, "r") as data:
@@ -48,6 +49,7 @@ def main(args: argparse.Namespace) -> Tuple[float, float, float]:
 
     # Return the computed values for ReCodEx to validate
     return entropy, crossentropy, kl_divergence
+
 
 if __name__ == "__main__":
     args = parser.parse_args([] if "__file__" not in globals() else None)
