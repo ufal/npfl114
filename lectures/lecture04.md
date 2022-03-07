@@ -2,6 +2,7 @@
 #### Date: Mar 07
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides/?04
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-04.pdf,PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-04-english.mp4, EN Lecture
 #### Questions: #lecture_4_questions
 
 - Introduction to convolutional networks [Chapter 9 and Sections 9.1-9.3 of DLB]
