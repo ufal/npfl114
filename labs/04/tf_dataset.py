@@ -87,7 +87,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
         return image, label
 
     # TODO: Now prepare the training pipeline.
-    # - first use `.take(5000)` method to utilize only the first 5000 examples
+    # - first, use the `.take(5000)` method to utilize only the first 5000 examples
     # - call `.shuffle(5000, seed=args.seed)` to shuffle the data using
     #   the given seed and a buffer of the size of the whole data
     # - call `.map(train_augment)` to perform the dataset augmentation

@@ -25,17 +25,17 @@ parser.add_argument("--threads", default=1, type=int, help="Maximum number of th
 # The neural network model
 class Model(tf.keras.Model):
     def __init__(self, args: argparse.Namespace) -> None:
-        # TODO: Create the model. The template uses functional API, but
+        # TODO: Create the model. The template uses the functional API, but
         # feel free to use subclassing if you want.
         inputs = tf.keras.layers.Input(shape=[MNIST.H, MNIST.W, MNIST.C])
 
         # TODO: Add CNN layers specified by `args.cnn`, which contains
-        # comma-separated list of the following layers:
+        # a comma-separated list of the following layers:
         # - `C-filters-kernel_size-stride-padding`: Add a convolutional layer with ReLU
         #   activation and specified number of filters, kernel size, stride and padding.
         # - `CB-filters-kernel_size-stride-padding`: Same as `C`, but use batch normalization.
         #   In detail, start with a convolutional layer without bias and activation,
-        #   then add batch normalization layer, and finally ReLU activation.
+        #   then add a batch normalization layer, and finally the ReLU activation.
         # - `M-pool_size-stride`: Add max pooling with specified size and stride, using
         #   the default "valid" padding.
         # - `R-[layers]`: Add a residual connection. The `layers` contain a specification
@@ -44,11 +44,11 @@ class Model(tf.keras.Model):
         #   produced output (after the ReLU nonlinearty of the last layer) should be added
         #   to the input (of this `R` layer).
         # - `F`: Flatten inputs. Must appear exactly once in the architecture.
-        # - `H-hidden_layer_size`: Add a dense layer with ReLU activation and specified size.
+        # - `H-hidden_layer_size`: Add a dense layer with ReLU activation and the specified size.
         # - `D-dropout_rate`: Apply dropout with the given dropout rate.
         # You can assume the resulting network is valid; it is fine to crash if it is not.
         #
-        # Produce the results in variable `hidden`.
+        # Produce the results in the variable `hidden`.
         hidden = ...
 
         # Add the final output layer

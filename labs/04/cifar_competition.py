@@ -37,7 +37,7 @@ def main(args: argparse.Namespace) -> None:
     # TODO: Create the model and train it
     model = ...
 
-    # Generate test set annotations, but in args.logdir to allow parallel execution.
+    # Generate test set annotations, but in `args.logdir` to allow parallel execution.
     os.makedirs(args.logdir, exist_ok=True)
     with open(os.path.join(args.logdir, "cifar_competition_test.txt"), "w", encoding="utf-8") as predictions_file:
         for probs in model.predict(cifar.test.data["images"], batch_size=args.batch_size):
