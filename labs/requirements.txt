@@ -3,3 +3,4 @@ tensorflow-addons==0.16.1
 tensorflow-probability==0.16.0
 tensorflow-hub==0.12.0
 gym==0.20.0
+scipy
