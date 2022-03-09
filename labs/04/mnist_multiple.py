@@ -133,7 +133,6 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # Construct suitable datasets from the MNIST data.
     train = model.create_dataset(mnist.train, args, training=True)
     dev = model.create_dataset(mnist.dev, args)
-    test = model.create_dataset(mnist.test, args)
 
     # Train
     logs = model.fit(train, epochs=args.epochs, validation_data=dev, callbacks=[model.tb_callback])
