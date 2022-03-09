@@ -68,7 +68,10 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     dev = ...
 
     # Simple data augmentation
-    generator = tf.random.Generator.from_seed(args.seed)
+    with tf.device("/cpu:0"):
+        # We explicitly create the generator on a CPU, because macOS
+        # fails to use a generator on a CPU when it was created on a GPU.
+        generator = tf.random.Generator.from_seed(args.seed)
 
     def train_augment(image: tf.Tensor, label: tf.Tensor) -> Tuple[tf.Tensor, tf.Tensor]:
         if generator.uniform([]) >= 0.5:
