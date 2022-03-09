@@ -316,6 +316,9 @@
       print(*[element.numpy() for element in data])
   ```
 
+  When a GPU is visible, you should create the `generator` explicitly on a CPU
+  using a `with tf.device("/cpu:0"):` block (on macOS, it will crash otherwise).
+
 - _How to call numpy methods or other non-tf functions in `tf.data.Dataset.map`?_
 
   You can use [tf.numpy_function](https://www.tensorflow.org/api_docs/python/tf/numpy_function)
