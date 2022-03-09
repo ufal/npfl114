@@ -26,6 +26,12 @@
     you are probably missing
     [Visual C++ 2019 Redistributable](https://aka.ms/vs/16/release/vc_redist.x64.exe).
 
+  - If you encounter a problem creating the logs in the `args.logdir` directory,
+    a possible cause is that the path is longer than 260 characters, which is
+    the default maximum length of a complete path on Windows. However, you can
+    increase this limit on Windows 10, version 1607 or later, by following
+    the [instructions](https://docs.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation).
+
 - _**macOS** installation_
 
   - With an **Intel** processor, you should not need anything special.
