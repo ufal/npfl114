@@ -70,8 +70,8 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # `train_generator.flow` and specify:
     # - cifar.train.data["images"] as inputs
     # - cifar.train.data["labels"] as target
-    # - batch_size of args.batch_size
-    # - args.seed as random seed
+    # - batch_size of `args.batch_size`
+    # - `args.seed` as random seed
     logs = model.fit(
         ...,
         shuffle=False, epochs=args.epochs,
