@@ -71,7 +71,7 @@ class Model(tf.Module):
                 loss = ...
 
             # We create a list of all variables. Note that a `tf.Module` automatically
-            # tracks owned variables, so we could also used `self.trainable_variables`
+            # tracks owned variables, so we could also use `self.trainable_variables`
             # (or even `self.variables`, which is useful for loading/saving).
             variables = [self._W1, self._b1, self._W2, self._b2]
 
