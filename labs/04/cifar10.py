@@ -1,6 +1,6 @@
 import os
 import sys
-from typing import Dict, Sequence, TextIO
+from typing import Dict, List, Sequence, TextIO
 import urllib.request
 
 import numpy as np
@@ -12,6 +12,7 @@ class CIFAR10:
     W: int = 32
     C: int = 3
     LABELS: int = 10
+    LABEL_NAMES: List[str] = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"]
 
     _URL: str = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/cifar10_competition.npz"
 
