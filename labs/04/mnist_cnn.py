@@ -60,7 +60,7 @@ class Model(tf.keras.Model):
             loss=tf.losses.SparseCategoricalCrossentropy(),
             metrics=[tf.metrics.SparseCategoricalAccuracy(name="accuracy")],
         )
-        self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1)
+        self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
 
 
 def main(args: argparse.Namespace) -> Dict[str, float]:

@@ -69,7 +69,7 @@ def main(args: argparse.Namespace) -> float:
         metrics=[tf.metrics.SparseCategoricalAccuracy(name="accuracy")],
     )
 
-    tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1, update_freq=100, profile_batch=0)
+    tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1)
 
     def evaluate_test(epoch, logs):
         if epoch + 1 == args.epochs:

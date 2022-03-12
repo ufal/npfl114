@@ -84,7 +84,7 @@ class Model(tf.keras.Model):
                 "indirect_prediction": [...],
             },
         )
-        self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1)
+        self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
 
     # Create an appropriate dataset using the MNIST data.
     def create_dataset(

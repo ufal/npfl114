@@ -56,7 +56,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
         loss=tf.losses.SparseCategoricalCrossentropy(),
         metrics=[tf.metrics.SparseCategoricalAccuracy(name="accuracy")],
     )
-    tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1)
+    tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
 
     # TODO: Create `train` and `dev` datasets by using
     # `tf.data.Dataset.from_tensor_slices` on cifar.train and cifar.dev.

@@ -89,7 +89,7 @@ def main(args: argparse.Namespace) -> Optional[tf.keras.Model]:
         # TODO: Prepare the model for training using the `model.compile` method.
         model.compile(...)
 
-        tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, update_freq=100, profile_batch=0)
+        tb_callback = tf.keras.callbacks.TensorBoard(args.logdir, histogram_freq=1)
         model.fit(
             observations, labels,
             batch_size=args.batch_size, epochs=args.epochs,
