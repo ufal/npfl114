@@ -41,7 +41,7 @@ class Model(tf.keras.Model):
         # - `R-[layers]`: Add a residual connection. The `layers` contain a specification
         #   of at least one convolutional layer (but not a recursive residual connection `R`).
         #   The input to the `R` layer should be processed sequentially by `layers`, and the
-        #   produced output (after the ReLU nonlinearty of the last layer) should be added
+        #   produced output (after the ReLU nonlinearity of the last layer) should be added
         #   to the input (of this `R` layer).
         # - `F`: Flatten inputs. Must appear exactly once in the architecture.
         # - `H-hidden_layer_size`: Add a dense layer with ReLU activation and the specified size.
