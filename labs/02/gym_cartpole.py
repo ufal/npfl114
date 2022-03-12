@@ -101,7 +101,7 @@ def main(args: argparse.Namespace) -> Optional[tf.keras.Model]:
 
     else:
         # Evaluating, either manually or in ReCodEx
-        model = tf.keras.models.load_model(args.model)
+        model = tf.keras.models.load_model(args.model, compile=False)
 
         if args.recodex:
             return model
