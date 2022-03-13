@@ -49,7 +49,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     hidden = tf.keras.layers.Dense(200, activation=tf.nn.relu)(hidden)
     outputs = tf.keras.layers.Dense(CIFAR10.LABELS, activation=tf.nn.softmax)(hidden)
 
-    # Train the model
+    # Compile the model
     model = tf.keras.Model(inputs=inputs, outputs=outputs)
     model.compile(
         optimizer=tf.optimizers.Adam(),
