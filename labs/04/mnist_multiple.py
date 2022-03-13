@@ -67,11 +67,11 @@ class Model(tf.keras.Model):
         # the keys of the `outputs` dictionary.
         self.output_names = sorted(outputs.keys())
 
-        # TODO: Compile the model by computing appropriate losses of
-        # "direct_prediction", "digit_1", "digit_2". Regarding metrics, compute
-        # the accuracy of both the direct and indirect predictions; name both
-        # metrics "accuracy" (i.e., pass "accuracy" as the first argument of
-        # the metric object).
+        # TODO: Define the appropriate losses for the model outputs
+        # "direct_prediction", "digit_1", "digit_2". Regarding metrics,
+        # the accuracy of both the direct and indirect predictions should be
+        # computed; name both metrics "accuracy" (i.e., pass "accuracy" as the
+        # first argument of the metric object).
         self.compile(
             optimizer=tf.keras.optimizers.Adam(),
             loss={
