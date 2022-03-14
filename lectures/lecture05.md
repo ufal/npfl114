@@ -4,6 +4,9 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-05.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-05-english.mp4, EN Lecture
 #### Questions: #lecture_5_questions
+#### Lecture assignment: cnn_manual
+#### Lecture assignment: cags_classification
+#### Lecture assignment: cags_segmentation
 
 - Residual CNN Networks
   - ResNet [[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)]
