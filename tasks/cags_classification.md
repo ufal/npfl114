@@ -45,7 +45,7 @@ estimates on the batch) or in inference regime. There is one exception though
 inference regime even when `training == True`._
 
 The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2122-summer#competitions). Everyone who submits a solution
-which achieves at least _90%_ test set accuracy will get 5 points; the rest
+which achieves at least _90%_ test set accuracy will get 4 points; the rest
 5 points will be distributed depending on relative ordering of your solutions.
 
 You may want to start with the
