@@ -23,7 +23,7 @@ class CAGS:
         "wheaten_terrier", "yorkshire_terrier",
     ]
 
-    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/datasets/"
+    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
 
     @staticmethod
     def parse(example):
