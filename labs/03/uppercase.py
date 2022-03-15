@@ -50,6 +50,8 @@ def main(args: argparse.Namespace) -> None:
     #       tf.keras.Sequential([
     #         tf.keras.layers.Input(shape=[2 * args.window + 1], dtype=tf.int32),
     #         tf.keras.layers.Lambda(lambda x: tf.one_hot(x, len(uppercase_data.train.alphabet))),
+    #         ...
+    #       ])
     #   - or use Functional API and then any TF function can be used
     #     as a Keras layer:
     #       inputs = tf.keras.layers.Input(shape=[2 * args.window + 1], dtype=tf.int32)
