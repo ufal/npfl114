@@ -31,12 +31,12 @@ class Model(tf.keras.Model):
 
         # TODO: Add CNN layers specified by `args.cnn`, which contains
         # a comma-separated list of the following layers:
-        # - `C-filters-kernel_size-stride-padding`: Add a convolutional layer with ReLU
+        # - `C-filters-kernel_size-strides-padding`: Add a convolutional layer with ReLU
         #   activation and specified number of filters, kernel size, stride and padding.
-        # - `CB-filters-kernel_size-stride-padding`: Same as `C`, but use batch normalization.
+        # - `CB-filters-kernel_size-strides-padding`: Same as `C`, but use batch normalization.
         #   In detail, start with a convolutional layer without bias and activation,
         #   then add a batch normalization layer, and finally the ReLU activation.
-        # - `M-pool_size-stride`: Add max pooling with specified size and stride, using
+        # - `M-pool_size-strides`: Add max pooling with specified size and stride, using
         #   the default "valid" padding.
         # - `R-[layers]`: Add a residual connection. The `layers` contain a specification
         #   of at least one convolutional layer (but not a recursive residual connection `R`).
