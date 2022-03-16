@@ -1,5 +1,6 @@
 import os
 import sys
+from typing import Dict, List, Optional, Sequence, TextIO
 import urllib.request
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
@@ -8,8 +9,10 @@ import tensorflow as tf
 
 
 class CAGS:
-    H, W, C = 224, 224, 3
-    LABELS = [
+    H: int = 228
+    W: int = 228
+    C: int = 3
+    LABELS: List[str] = [
         # Cats
         "Abyssinian", "Bengal", "Bombay", "British_Shorthair", "Egyptian_Mau",
         "Maine_Coon", "Russian_Blue", "Siamese", "Sphynx",
@@ -23,10 +26,10 @@ class CAGS:
         "wheaten_terrier", "yorkshire_terrier",
     ]
 
-    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
+    _URL: str = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
 
     @staticmethod
-    def parse(example):
+    def parse(example: tf.Tensor) -> Dict[str, tf.Tensor]:
         example = tf.io.parse_single_example(example, {
             "image": tf.io.FixedLenFeature([], tf.string),
             "mask": tf.io.FixedLenFeature([], tf.string),
@@ -35,7 +38,7 @@ class CAGS:
         example["mask"] = tf.image.convert_image_dtype(tf.image.decode_png(example["mask"], channels=1), tf.float32)
         return example
 
-    def __init__(self):
+    def __init__(self) -> None:
         for dataset, size in [("train", 2142), ("dev", 306), ("test", 612)]:
             path = "cags.{}.tfrecord".format(dataset)
             if not os.path.exists(path):
@@ -48,10 +51,12 @@ class CAGS:
     # Keras IoU metric
     class MaskIoUMetric(tf.metrics.Mean):
         """MaskIoUMetric computes IoU for CAGS dataset masks predicted by binary classification"""
-        def __init__(self, name="iou", dtype=None):
+        def __init__(self, name: str = "iou", dtype: Optional[tf.DType] = None) -> None:
             super().__init__(name, dtype)
 
-        def update_state(self, y_true, y_pred, sample_weight=None):
+        def update_state(
+            self, y_true: tf.Tensor, y_pred: tf.Tensor, sample_weight: Optional[tf.Tensor] = None
+        ) -> None:
             y_true_mask = tf.reshape(tf.math.round(y_true) == 1, [-1, CAGS.H * CAGS.W])
             y_pred_mask = tf.reshape(tf.math.round(y_pred) == 1, [-1, CAGS.H * CAGS.W])
 
@@ -66,7 +71,7 @@ class CAGS:
 
     # Evaluation infrastructure.
     @staticmethod
-    def evaluate_classification(gold_dataset, predictions):
+    def evaluate_classification(gold_dataset: tf.data.Dataset, predictions: Sequence[int]) -> float:
         gold = [int(example["label"]) for example in gold_dataset]
 
         if len(predictions) != len(gold):
@@ -77,12 +82,12 @@ class CAGS:
         return 100 * correct / len(gold)
 
     @staticmethod
-    def evaluate_classification_file(gold_dataset, predictions_file):
+    def evaluate_classification_file(gold_dataset: tf.data.Dataset, predictions_file: TextIO) -> float:
         predictions = [int(line) for line in predictions_file]
         return CAGS.evaluate_classification(gold_dataset, predictions)
 
     @staticmethod
-    def evaluate_segmentation(gold_dataset, predictions):
+    def evaluate_segmentation(gold_dataset: tf.data.Dataset, predictions: Sequence[tf.Tensor]) -> float:
         gold = [example["mask"] for example in gold_dataset]
 
         if len(predictions) != len(gold):
@@ -96,7 +101,7 @@ class CAGS:
         return 100 * iou.result()
 
     @staticmethod
-    def evaluate_segmentation_file(gold_dataset, predictions_file):
+    def evaluate_segmentation_file(gold_dataset: tf.data.Dataset, predictions_file: TextIO) -> float:
         predictions = []
         for line in predictions_file:
             runs = [int(run) for run in line.split()]
@@ -124,6 +129,7 @@ if __name__ == "__main__":
             with open(args.evaluate, "r", encoding="utf-8-sig") as predictions_file:
                 accuracy = CAGS.evaluate_classification_file(getattr(CAGS(), args.dataset), predictions_file)
             print("CAGS accuracy: {:.2f}%".format(accuracy))
+
         if args.task == "segmentation":
             with open(args.evaluate, "r", encoding="utf-8-sig") as predictions_file:
                 iou = CAGS.evaluate_segmentation_file(getattr(CAGS(), args.dataset), predictions_file)
