@@ -26,7 +26,7 @@ parser.add_argument("--verify", default=False, action="store_true", help="Verify
 
 class Convolution:
     def __init__(self, filters: int, kernel_size: int, stride: int, input_shape: List[int], verify: bool) -> None:
-        # Create convolutional layer with the given arguments
+        # Create a convolutional layer with the given arguments
         # and given input shape (e.g., [28, 28, 1]).
         self._filters = filters
         self._kernel_size = kernel_size
@@ -61,9 +61,9 @@ class Convolution:
         # TODO: Given this layer's inputs, this layer's outputs,
         # and the gradient with respect to the layer's outputs,
         # compute the derivatives of the loss with respect to
-        # - the layer inputs,
-        # - the self._kernel,
-        # - the self._bias.
+        # - the `inputs` layer,
+        # - `self._kernel`,
+        # - `self._bias`.
         inputs_gradient, kernel_gradient, bias_gradient = None, None, None
 
         # If requested, verify that the three computed gradients are correct.
@@ -120,7 +120,7 @@ class Model:
             gradients = [tf.reduce_sum(d_logits, 0), tf.tensordot(hidden_flat, d_logits, axes=[0, 0])]
             hidden_gradient = tf.reshape(tf.linalg.matvec(self._classifier.kernel, d_logits), hidden.shape)
 
-            # Backpropagate the gradient throug the convolutions
+            # Backpropagate the gradient through the convolutions
             for conv, inputs, outputs in reversed(list(zip(self._convs, conv_values[:-1], conv_values[1:]))):
                 hidden_gradient, conv_variables, conv_gradients = conv.backward(inputs, outputs, hidden_gradient)
                 variables.extend(conv_variables)
