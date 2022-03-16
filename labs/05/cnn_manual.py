@@ -120,7 +120,7 @@ class Model:
             gradients = [tf.reduce_sum(d_logits, 0), tf.tensordot(hidden_flat, d_logits, axes=[0, 0])]
             hidden_gradient = tf.reshape(tf.linalg.matvec(self._classifier.kernel, d_logits), hidden.shape)
 
-            # Backpropagate the gradient throug the convolutions
+            # Backpropagate the gradient through the convolutions
             for conv, inputs, outputs in reversed(list(zip(self._convs, conv_values[:-1], conv_values[1:]))):
                 hidden_gradient, conv_variables, conv_gradients = conv.backward(inputs, outputs, hidden_gradient)
                 variables.extend(conv_variables)
