@@ -9,8 +9,8 @@ import tensorflow as tf
 
 
 class CAGS:
-    H: int = 228
-    W: int = 228
+    H: int = 224
+    W: int = 224
     C: int = 3
     LABELS: List[str] = [
         # Cats
