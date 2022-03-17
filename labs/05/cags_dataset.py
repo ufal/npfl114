@@ -48,6 +48,10 @@ class CAGS:
             setattr(self, dataset,
                     tf.data.TFRecordDataset(path).map(CAGS.parse).apply(tf.data.experimental.assert_cardinality(size)))
 
+    train: tf.data.Dataset
+    dev: tf.data.Dataset
+    test: tf.data.Dataset
+
     # Keras IoU metric
     class MaskIoUMetric(tf.metrics.Mean):
         """MaskIoUMetric computes IoU for CAGS dataset masks predicted by binary classification"""
