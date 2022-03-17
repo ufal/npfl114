@@ -47,7 +47,7 @@ class Model(tf.keras.Model):
         # - then, classify the computed representation FI of the first image using
         #   a densely connected softmax layer into 10 classes;
         # - then, classify the computed representation FI of the second image using
-        #   the same connected layer (with shared weights) into 10 classes;
+        #   the same layer (identical, i.e., with shared weights) into 10 classes;
         # - finally, compute _indirect prediction_ whether the first digit
         #   is greater than second, by comparing the predictions from the above
         #   two outputs.
