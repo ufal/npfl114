@@ -16,7 +16,7 @@ implement the forward and backward pass using matrix multiplication and other
 operations), nor the `tf.GradientTape` for gradient computation.
 
 To make debugging easier, the template supports a `--verify` option, which
-allows comparing the forward pass and the thee gradients you compute in the
+allows comparing the forward pass and the three gradients you compute in the
 backward pass to correct values.
 
 #### Tests Start: cnn_manual_tests
