@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 import argparse
-import datetime
 import os
-import re
 from typing import List, Tuple
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
