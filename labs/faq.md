@@ -332,7 +332,7 @@
   have no static shape information and you need to set it manually – ideally
   using [tf.ensure_shape](https://www.tensorflow.org/api_docs/python/tf/ensure_shape),
   which both sets the static shape and verifies during execution that the real
-  shape mathes it.
+  shape matches it.
 
   For example, to use the `bboxes_training` method from
   [bboxes_utils](#bboxes_utils), you could proceed as follows:
