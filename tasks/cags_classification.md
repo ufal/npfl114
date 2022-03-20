@@ -15,7 +15,7 @@ and each element is encoded as a
 [tf.train.Example](https://www.tensorflow.org/api_docs/python/tf/train/Example),
 which is decoded using the `CAGS.parse` method.
 
-To load the EfficientNet-B0, use the the provided
+To load the EfficientNet-B0, use the provided
 [efficient_net.py](https://github.com/ufal/npfl114/tree/master/labs/05/efficient_net.py)
 module. Its method `pretrained_efficientnet_b0(include_top, dynamic_input_shape=False)`:
 - downloads the pretrained weights if they are not found;
