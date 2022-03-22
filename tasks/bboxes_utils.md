@@ -2,9 +2,6 @@
 #### Date: Deadline: Apr 4, 7:59
 #### Points: 2 points
 
-**The template is not yet in the repository, it will be published during
-Tuesday.**
-
 This is a preparatory assignment for `svhn_competition`. The goal is to
 implement several bounding box manipulation routines in the
 [bboxes_utils.py](https://github.com/ufal/npfl114/tree/master/labs/06/bboxes_utils.py)
@@ -19,7 +16,9 @@ module. Notably, you need to implement the following methods:
 
 The [bboxes_utils.py](https://github.com/ufal/npfl114/tree/master/labs/06/bboxes_utils.py)
 contains simple unit tests, which are evaluated when executing the module,
-which you can use to check the validity of your implementation.
+which you can use to check the validity of your implementation. Note that
+the template does not contain type annotations because Python typing system is
+not flexible enough to describe the tensor shape changes.
 
 When submitting to ReCodEx, the method `main` is executed, returning the
 implemented `bboxes_to_fast_rcnn`, `bboxes_to_fast_rcnn` and `bboxes_training`
