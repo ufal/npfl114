@@ -2,7 +2,7 @@
 - Considering a neural network with $D$ input neurons, a single hidden layer
   with $H$ neurons, $K$ output neurons, hidden activation $f$ and output
   activation $a$, list its parameters (including their size) and write down how
-  is the output computed. [5]
+  the output is computed. [5]
 
 - List the definitions of frequently used MLP output layer activations (the ones
   producing parameters of a Bernoulli distribution and a categorical distribution).
