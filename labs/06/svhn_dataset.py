@@ -14,7 +14,7 @@ class SVHN:
     # Type alias for a bounding box -- a list of floats.
     BBox = List[float]
 
-    # Coordinates of the bounding box coordinates.
+    # The indices of the bounding box coordinates.
     TOP: int = 0
     LEFT: int = 1
     BOTTOM: int = 2
