@@ -2,6 +2,9 @@
 #### Date: Deadline: Apr 4, 7:59
 #### Points: 2 points
 
+**The template is not yet in the repository, it will be published during
+Tuesday.**
+
 This is a preparatory assignment for `svhn_competition`. The goal is to
 implement several bounding box manipulation routines in the
 [bboxes_utils.py](https://github.com/ufal/npfl114/tree/master/labs/06/bboxes_utils.py)
