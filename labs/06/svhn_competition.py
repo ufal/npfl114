@@ -7,7 +7,6 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by d
 
 import numpy as np
 import tensorflow as tf
-import tensorflow_addons as tfa
 
 import bboxes_utils
 import efficient_net
