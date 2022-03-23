@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
+import argparse
+from typing import Callable, Tuple
 import unittest
 
 import numpy as np
 
 BACKEND = np  # or you can use `tf` for TensorFlow implementation
 
+# Bounding boxes and anchors are expected to be Numpy/TensorFlow tensors,
+# where the last dimension has size 4.
+Tensor = np.ndarray  # or use `tf.Tensor` if you use TensorFlow backend
+
+# For bounding boxes in pixel coordinates, the 4 values correspond to:
 TOP: int = 0
 LEFT: int = 1
 BOTTOM: int = 2
 RIGHT: int = 3
 
 
-def bboxes_area(bboxes):
+def bboxes_area(bboxes: Tensor) -> Tensor:
     """ Compute area of given set of bboxes.
 
     The computation can be performed either using Numpy or TensorFlow.
@@ -23,7 +30,7 @@ def bboxes_area(bboxes):
         * BACKEND.maximum(bboxes[..., RIGHT] - bboxes[..., LEFT], 0)
 
 
-def bboxes_iou(xs, ys):
+def bboxes_iou(xs: Tensor, ys: Tensor) -> Tensor:
     """ Compute IoU of corresponding pairs from two sets of bboxes xs and ys.
 
     The computation can be performed either using Numpy or TensorFlow.
@@ -46,7 +53,7 @@ def bboxes_iou(xs, ys):
     return intersections_area / (xs_area + ys_area - intersections_area)
 
 
-def bboxes_to_fast_rcnn(anchors, bboxes):
+def bboxes_to_fast_rcnn(anchors: Tensor, bboxes: Tensor) -> Tensor:
     """ Convert `bboxes` to a Fast-R-CNN-like representation relative to `anchors`.
 
     The `anchors` and `bboxes` are arrays of four-tuples (top, left, bottom, right);
@@ -67,7 +74,7 @@ def bboxes_to_fast_rcnn(anchors, bboxes):
     raise NotImplementedError()
 
 
-def bboxes_from_fast_rcnn(anchors, fast_rcnns):
+def bboxes_from_fast_rcnn(anchors: Tensor, fast_rcnns: Tensor) -> Tensor:
     """ Convert Fast-R-CNN-like representation relative to `anchor` to a `bbox`.
 
     The anchors.shape is [anchors_len, 4], fast_rcnns.shape is [anchors_len, 4],
@@ -78,7 +85,9 @@ def bboxes_from_fast_rcnn(anchors, fast_rcnns):
     raise NotImplementedError()
 
 
-def bboxes_training(anchors, gold_classes, gold_bboxes, iou_threshold):
+def bboxes_training(
+    anchors: Tensor, gold_classes: Tensor, gold_bboxes: Tensor, iou_threshold: float
+) -> Tuple[Tensor, Tensor]:
     """ Compute training data for object detection.
 
     Arguments:
@@ -119,7 +128,7 @@ def bboxes_training(anchors, gold_classes, gold_bboxes, iou_threshold):
     return anchor_classes, anchor_bboxes
 
 
-def main(args):
+def main(args: argparse.Namespace) -> Tuple[Callable, Callable, Callable]:
     return bboxes_to_fast_rcnn, bboxes_from_fast_rcnn, bboxes_training
 
 
