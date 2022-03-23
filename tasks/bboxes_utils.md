@@ -21,6 +21,6 @@ the template does not contain type annotations because Python typing system is
 not flexible enough to describe the tensor shape changes.
 
 When submitting to ReCodEx, the method `main` is executed, returning the
-implemented `bboxes_to_fast_rcnn`, `bboxes_to_fast_rcnn` and `bboxes_training`
+implemented `bboxes_to_fast_rcnn`, `bboxes_from_fast_rcnn` and `bboxes_training`
 methods. These methods are then executed and compared to the reference
 implementation.
