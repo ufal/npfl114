@@ -1,3 +1,5 @@
+title: Manual Convolution
+section: Forward Pass
 # Convolution – Forward Computation
 
 Let
@@ -47,6 +49,7 @@ $$⇶R_{i, j} = →b +∑_{m=0}^{k-1} ∑_{n=0}^{k-1} ⇶I_{i + m, j + n} ⇶K_{
 Finally, for stride $s$, we only modify the image indices to $⇶I_{m:m+H-(k-1):s, n:n+W-(k-1):s}$.
 
 ---
+section: Backward Pass
 # Convolution – Backward Computation
 
 Now assume we got $⇶G = \frac{∂L}{∂⇶R}$, which is of size $\big[\lceil\frac{H-(k-1)}{s}\rceil, \lceil\frac{W-(k-1)}{s}\rceil, O\big]$.
@@ -95,6 +98,7 @@ $$\frac{∂L}{∂⇶I_{i',j'}} = ∑_{m'=0}^{k-1} ∑_{n'=0}^{k-1} ⇶K_{k-1-m',
 which is obviously a convolution, but with a point-reflected kernel (i.e., rotated by 180°).
 
 ---
+section: Stride>1
 # Convolution – Backward Computation
 
 Finally, consider a stride $s>1$. During forward pass, we usually keep
