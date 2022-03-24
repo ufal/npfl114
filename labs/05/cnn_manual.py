@@ -49,7 +49,7 @@ class Convolution:
         # If requested, verify that `output` contains a correct value.
         if self._verify:
             reference = tf.nn.relu(tf.nn.convolution(inputs, self._kernel, self._stride) + self._bias)
-            np.testing.assert_allclose(output, reference, atol=1e-5, err_msg="Forward pass differs!")
+            np.testing.assert_allclose(output, reference, atol=1e-4, err_msg="Forward pass differs!")
 
         return output
 
@@ -72,7 +72,7 @@ class Convolution:
             for name, computed, reference in zip(
                     ["Inputs", "Kernel", "Bias"], [inputs_gradient, kernel_gradient, bias_gradient],
                     tape.gradient(reference, [inputs, self._kernel, self._bias], outputs_gradient)):
-                np.testing.assert_allclose(computed, reference, atol=1e-5, err_msg=name + " gradient differs!")
+                np.testing.assert_allclose(computed, reference, atol=1e-4, err_msg=name + " gradient differs!")
 
         # Return the inputs gradient, the layer variables, and their gradients.
         return inputs_gradient, [self._kernel, self._bias], [kernel_gradient, bias_gradient]
