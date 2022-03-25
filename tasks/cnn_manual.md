@@ -8,9 +8,9 @@
 To pass this assignment, you need to manually implement the forward and backward
 pass through a 2D convolutional layer. Start with the
 [cnn_manual.py](https://github.com/ufal/npfl114/tree/master/labs/05/cnn_manual.py)
-template, which construct a series of 2D convolutional layers with ReLU
+template, which constructs a series of 2D convolutional layers with ReLU
 activation and `valid` padding, specified in the `args.cnn` option.
-The `args.cnn` contains comma separater layer specifications in the format
+The `args.cnn` contains comma separated layer specifications in the format
 `filters-kernel_size-stride`.
 
 Of course, you cannot use any TensorFlow convolutional operation (instead,
