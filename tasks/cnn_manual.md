@@ -10,7 +10,7 @@ pass through a 2D convolutional layer. Start with the
 [cnn_manual.py](https://github.com/ufal/npfl114/tree/master/labs/05/cnn_manual.py)
 template, which constructs a series of 2D convolutional layers with ReLU
 activation and `valid` padding, specified in the `args.cnn` option.
-The `args.cnn` contains comma separated layer specifications in the format
+The `args.cnn` contains comma-separated layer specifications in the format
 `filters-kernel_size-stride`.
 
 Of course, you cannot use any TensorFlow convolutional operation (instead,
