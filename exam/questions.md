@@ -145,3 +145,22 @@
 - Draw the BiFPN block architecture, including the positions of all
   convolutions (and what kind of CNN is used), BatchNorms and ReLUs.
   Finally describe how downscaling and upscaling is performed. [5]
+
+#### Questions@:, Lecture 7 Questions
+- Write down how the Long Short-Term Memory (LSTM) cell operates, including
+  the explicit formulas. Also mention the forget gate bias. [10]
+
+- Write down how the Gated Recurrent Unit (GRU) operates, including
+  the explicit formulas. [10]
+
+- Describe Highway network computation. [5]
+
+- Why the usual dropout cannot be used on recurrent state? Describe
+  how can the problem be alleviated with variational dropout. [5]
+
+- Describe layer normalization and write down an algorithm how it is used during
+  training and an algorithm how it is used during inference. [5]
+
+- Sketch a tagger architecture utilizing word embeddings, recurrent
+  character-level word embeddings and two sentence-level bidirectional RNNs with
+  a residual connection. [10]
