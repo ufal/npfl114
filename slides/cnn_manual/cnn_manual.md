@@ -86,7 +86,7 @@ Now assume we got $⇶G = \frac{∂L}{∂⇶R}$, which is of size $\big[\lceil\f
 $$\frac{∂L}{∂⇶I_{i',j'}} = ∑_{m=0}^{k-1} ∑_{n=0}^{k-1} ⇶K_{m,n} ⇶G_{i'-m,j'-n}$$
 
 We can compute the above analogously to the forward pass of a convolution, but
-we must be careful about the indices. Notably, many of the $i'-m$, $j-n$ are
+we must be careful about the indices. Notably, many of the $i'-m$, $j'-n$ are
 outside of $⇶G$: the indices can be up to $k-1$ from the left/top edge of $⇶G$,
 and they can be up to $k-1$ from the right/bottom edge of $⇶G$, so the easiest
 is to pad $⇶G$ with $k-1$ on both sides.
