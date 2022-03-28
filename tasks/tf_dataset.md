@@ -1,5 +1,5 @@
 ### Assignment: tf_dataset
-#### Date: Deadline: Mar 21, 7:59
+#### Date: Deadline: Mar 21, 7:59 a.m.
 #### Points: 2 points
 #### Tests: tf_dataset_tests
 

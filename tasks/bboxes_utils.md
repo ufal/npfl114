@@ -1,5 +1,5 @@
 ### Assignment: bboxes_utils
-#### Date: Deadline: Apr 4, 7:59
+#### Date: Deadline: Apr 4, 7:59 a.m.
 #### Points: 2 points
 
 This is a preparatory assignment for `svhn_competition`. The goal is to

@@ -1,5 +1,5 @@
 ### Assignment: image_augmentation
-#### Date: Deadline: Mar 21, 7:59
+#### Date: Deadline: Mar 21, 7:59 a.m.
 #### Points: 1 points
 #### Tests: image_augmentation_tests
 

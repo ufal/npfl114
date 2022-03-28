@@ -1,5 +1,5 @@
 ### Assignment: cags_segmentation
-#### Date: Deadline: Mar 28, 7:59
+#### Date: Deadline: Mar 28, 7:59 a.m.
 #### Points: 4 points+5 bonus
 
 The goal of this assignment is to use pretrained EfficientNet-B0 model to
