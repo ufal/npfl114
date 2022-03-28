@@ -33,12 +33,15 @@ class Model(tf.keras.Model):
         def __init__(self, rate):
             super().__init__()
             self._rate = rate
+
         def get_config(self):
             return {"rate": self._rate}
+
         def call(self, inputs, training):
             if training:
                 # TODO: Generate as many random uniform numbers in range [0, 1) as there are
-                # values in `tf.RaggedTensor` `inputs` using a single `tf.random.uniform` call.
+                # values in `tf.RaggedTensor` `inputs` using a single `tf.random.uniform` call
+                # (without setting seed in any way, so with just a single parameter `shape`).
                 # Then, set the values in `inputs` to zero if the corresponding generated
                 # random number is less than `self._rate`.
                 raise NotImplementedError()
