@@ -42,9 +42,9 @@ class Model(tf.keras.Model):
         # the embedded words, **summing** the outputs of forward and backward RNNs.
 
         # TODO: Add a softmax classification layer into as many classes as there are unique
-        # tags in the `word_mapping` of `train.tags`. Because we are applying the Dense layer
-        # to a ragged tensor, we previously had to wrap it in a tf.keras.layers.TimeDistributed,
-        # but that is not longer needed in current TensorFlow.
+        # tags in the `word_mapping` of `train.tags`. Note that the Dense layer can process
+        # a RaggedTensor without any problem.
+        predictions = None
 
         # Check that the created predictions are a 3D tensor.
         assert predictions.shape.rank == 3
