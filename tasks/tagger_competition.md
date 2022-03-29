@@ -32,6 +32,3 @@ template, which among others generates test set annotations in the required form
 you can evaluate the predictions as usual using the [morpho_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/07/morpho_dataset.py)
 module, either by running with `--task=tagger --evaluate=path` arguments, or using its
 `evaluate_file` method.
-
-**Note that no additional data (not even plain texts) are allowed in this
-competition.**
