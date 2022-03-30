@@ -31,15 +31,15 @@ def bboxes_area(bboxes: Tensor) -> Tensor:
 
 
 def bboxes_iou(xs: Tensor, ys: Tensor) -> Tensor:
-    """ Compute IoU of corresponding pairs from two sets of bboxes xs and ys.
+    """ Compute IoU of corresponding pairs from two sets of bboxes `xs` and `ys`.
 
     The computation can be performed either using Numpy or TensorFlow.
     Each bbox is parametrized as a four-tuple (top, left, bottom, right).
 
     Note that broadcasting is supported, so passing inputs with
-    xs.shape=[num_xs, 1, 4] and ys.shape=[1, num_ys, 4] will produce output
-    with shape [num_xs, num_ys], computing IoU for all pairs of bboxes from
-    xs and ys. Formally, the output shape is np.broadcast(xs, ys).shape[:-1].
+    `xs.shape=[num_xs, 1, 4]` and `ys.shape=[1, num_ys, 4]` will produce output
+    with shape `[num_xs, num_ys]`, computing IoU for all pairs of bboxes from
+    xs and ys. Formally, the output shape is `np.broadcast(xs, ys).shape[:-1]`.
     """
     intersections = BACKEND.stack([
         BACKEND.maximum(xs[..., TOP], ys[..., TOP]),
@@ -66,8 +66,8 @@ def bboxes_to_fast_rcnn(anchors: Tensor, bboxes: Tensor) -> Tensor:
     - log(bbox_height / anchor_height)
     - log(bbox_width / anchor_width)
 
-    If the anchors.shape is [anchors_len, 4], bboxes.shape is [anchors_len, 4],
-    the output shape is [anchors_len, 4].
+    If the `anchors.shape` is `[anchors_len, 4]` and `bboxes.shape` is `[anchors_len, 4]`,
+    the output shape is `[anchors_len, 4]`.
     """
 
     # TODO: Implement according to the docstring.
@@ -77,8 +77,8 @@ def bboxes_to_fast_rcnn(anchors: Tensor, bboxes: Tensor) -> Tensor:
 def bboxes_from_fast_rcnn(anchors: Tensor, fast_rcnns: Tensor) -> Tensor:
     """ Convert Fast-R-CNN-like representation relative to `anchor` to a `bbox`.
 
-    The anchors.shape is [anchors_len, 4], fast_rcnns.shape is [anchors_len, 4],
-    the output shape is [anchors_len, 4].
+    The `anchors.shape` is `[anchors_len, 4]`, `fast_rcnns.shape` is `[anchors_len, 4]`,
+    the output shape is `[anchors_len, 4]`.
     """
 
     # TODO: Implement according to the docstring.
