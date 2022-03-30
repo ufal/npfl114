@@ -2,8 +2,6 @@
 #### Date: Deadline: Apr 11, 7:59 a.m.
 #### Points: 4 points+5 bonus
 
-**The data and the templates will be available soon.**
-
 In this assignment, you should extend `tagger_cle`
 into a real-world Czech part-of-speech tagger. We will use
 Czech PDT dataset loadable using the [morpho_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/07/morpho_dataset.py)
