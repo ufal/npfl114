@@ -156,7 +156,7 @@
 - Describe Highway network computation. [5]
 
 - Why the usual dropout cannot be used on recurrent state? Describe
-  how can the problem be alleviated with variational dropout. [5]
+  how the problem can be alleviated with variational dropout. [5]
 
 - Describe layer normalization and write down an algorithm how it is used during
   training and an algorithm how it is used during inference. [5]
