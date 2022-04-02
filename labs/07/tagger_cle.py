@@ -3,7 +3,7 @@ import argparse
 import datetime
 import os
 import re
-from typing import Dict
+from typing import Any, Dict
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
@@ -30,14 +30,14 @@ parser.add_argument("--word_masking", default=0.0, type=float, help="Mask words 
 class Model(tf.keras.Model):
     # A layer setting given rate of elements to zero.
     class MaskElements(tf.keras.layers.Layer):
-        def __init__(self, rate):
+        def __init__(self, rate: float) -> None:
             super().__init__()
             self._rate = rate
 
-        def get_config(self):
+        def get_config(self) -> Dict[str, Any]:
             return {"rate": self._rate}
 
-        def call(self, inputs, training):
+        def call(self, inputs: tf.RaggedTensor, training: bool) -> tf.RaggedTensor:
             if training:
                 # TODO: Generate as many random uniform numbers in range [0, 1) as there are
                 # values in `tf.RaggedTensor` `inputs` using a single `tf.random.uniform` call
