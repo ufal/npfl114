@@ -50,7 +50,7 @@ class Model(tf.keras.Model):
         assert predictions.shape.rank == 3
         super().__init__(inputs=words, outputs=predictions)
         self.compile(optimizer=tf.optimizers.Adam(),
-                     loss=tf.losses.SparseCategoricalCrossentropy(),
+                     loss=lambda yt, yp: tf.losses.SparseCategoricalCrossentropy()(yt.values, yp.values),
                      metrics=[tf.metrics.SparseCategoricalAccuracy(name="accuracy")])
 
         self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
