@@ -4,8 +4,6 @@ from typing import List
 import urllib.request
 import zipfile
 
-import numpy as np
-
 
 class MorphoAnalyzer:
     """ Loads a morphological analyses in a vertical format.
