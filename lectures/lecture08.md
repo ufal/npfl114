@@ -6,6 +6,9 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-08-english.mp4, EN Lecture
 #### Questions: #lecture_8_questions
 #### Lecture assignment: tensorboard_projector
+#### Lecture assignment: tagger_crf
+#### Lecture assignment: tagger_crf_manual
+#### Lecture assignment: speech_recognition
 
 - Conditional Random Fields (CRF) loss [Sections 3.4.2 and A.7 of [Natural Language Processing (Almost) from Scratch](http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf)]
 - Connectionist Temporal Classification (CTC) loss [[Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks](https://www.cs.toronto.edu/~graves/icml_2006.pdf)]
