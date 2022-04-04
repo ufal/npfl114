@@ -1,10 +1,11 @@
 import os
 import sys
 import urllib.request
-os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2") # Report only TF errors by default
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
+
 
 class CommonVoiceCs:
     MFCC_DIM = 13
@@ -16,7 +17,7 @@ class CommonVoiceCs:
         "v", "w", "x", "y", "ý", "z", "ž",
     ]
 
-    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/datasets/"
+    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
 
     @staticmethod
     def parse(example):
@@ -60,7 +61,7 @@ class CommonVoiceCs:
         # Warp the linear scale spectrograms into the mel-scale.
         num_spectrogram_bins, lower_edge_hertz, upper_edge_hertz, num_mel_bins = 513, 80.0, 7600.0, 80
         linear_to_mel_weight_matrix = tf.signal.linear_to_mel_weight_matrix(
-              num_mel_bins, num_spectrogram_bins, sample_rate, lower_edge_hertz, upper_edge_hertz)
+            num_mel_bins, num_spectrogram_bins, sample_rate, lower_edge_hertz, upper_edge_hertz)
         mel_spectrograms = tf.linalg.matmul(spectrograms, linear_to_mel_weight_matrix)
 
         # Compute a stabilized log to get log-magnitude mel-scale spectrograms.
@@ -107,6 +108,7 @@ class CommonVoiceCs:
         for line in predictions_file:
             predictions.append(line.rstrip("\n"))
         return CommonVoiceCs.evaluate(gold_dataset, predictions)
+
 
 if __name__ == "__main__":
     import argparse
