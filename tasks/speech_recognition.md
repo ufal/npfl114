@@ -12,7 +12,7 @@ You can repeat this preprocessing on a given audio using the `wav_decode` and
 [common_voice_cs.py](https://github.com/ufal/npfl114/tree/master/labs/08/common_voice_cs.py) module.
 This module can also load the dataset, downloading it when necessary (note that
 it has 200MB, so it might take a while). Furthermore, you can listen to the
-[development portion of the dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/demos/common_voice_cs/).
+[development portion of the dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/demos/common_voice_cs_dev.html).
 
 This is an _open-data task_, where you submit only the test set annotations
 together with the training script (which will not be executed, it will be
