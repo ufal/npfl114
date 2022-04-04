@@ -27,7 +27,7 @@ import tensorflow as tf
 #     - char_mapping: a tf.keras.layers.StringLookup object capable of
 #         mapping characters to indices. It is constructed on the train set
 #         and shared by the dev and test sets.
-#   - dataset: a tf.data.Dataset containing a dictionary with "forms", "lemmas", "keys".
+#   - dataset: a tf.data.Dataset containing a dictionary with "forms", "lemmas", "tags".
 class MorphoDataset:
     _URL: str = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
 
