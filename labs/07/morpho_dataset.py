@@ -37,7 +37,6 @@ class MorphoDataset:
         word_mapping: tf.keras.layers.StringLookup
         char_mapping: tf.keras.layers.StringLookup
 
-
         def __init__(self) -> None:
             self.strings = []
 
