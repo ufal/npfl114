@@ -21,13 +21,13 @@ import tensorflow as tf
 #   - forms, lemmas, tags: objects containing the following fields:
 #     - strings: a Python list containing input sentences, each being
 #         a list of strings (forms/lemmas/tags)
-#     - word_mapping: a tf.keras.layers.StringLookup object capable of
+#     - word_mapping: a `tf.keras.layers.StringLookup` object capable of
 #         mapping words to indices. It is constructed on the train set and
 #         shared by the dev and test sets.
-#     - char_mapping: a tf.keras.layers.StringLookup object capable of
+#     - char_mapping: a `tf.keras.layers.StringLookup` object capable of
 #         mapping characters to indices. It is constructed on the train set
 #         and shared by the dev and test sets.
-#   - dataset: a tf.data.Dataset containing a dictionary with "forms", "lemmas", "tags".
+#   - dataset: a `tf.data.Dataset` containing a dictionary with "forms", "lemmas", "tags".
 class MorphoDataset:
     _URL: str = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
 
