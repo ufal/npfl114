@@ -34,6 +34,9 @@ class MorphoDataset:
     class Factor:
         BOW: int = 1
         EOW: int = 1
+        word_mapping: tf.keras.layers.StringLookup
+        char_mapping: tf.keras.layers.StringLookup
+
 
         def __init__(self) -> None:
             self.strings = []
@@ -125,9 +128,9 @@ class MorphoDataset:
                                                         train=self.train if dataset != "train" else None,
                                                         max_sentences=max_sentences, add_bow_eow=add_bow_eow))
 
-    train: tf.data.Dataset
-    dev: tf.data.Dataset
-    test: tf.data.Dataset
+    train: Dataset
+    dev: Dataset
+    test: Dataset
 
     # Evaluation infrastructure.
     @staticmethod
