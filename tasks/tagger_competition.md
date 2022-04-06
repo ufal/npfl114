@@ -18,11 +18,11 @@ You can use the following additional data in this assignment:
   and also any pre-trained word embeddings (assuming they were trained on plain
   texts).
 
-The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2122-summer#competitions). Everyone who submits a solution
-with at least 92.5% label accuracy gets 4 points; the rest 5 points
-will be distributed depending on relative ordering of your solutions. Lastly,
-**3 bonus points** will be given to anyone surpassing pre-neural-network
-state-of-the-art of **96.35%**.
+The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2122-summer#competitions).
+Everyone who submits a solution with at least 92.5% label accuracy gets
+4 points; the rest 5 points will be distributed depending on relative ordering
+of your solutions. Lastly, **3 bonus points** will be given to anyone surpassing
+pre-neural-network state-of-the-art of **96.35%**.
 
 You can start with the
 [tagger_competition.py](https://github.com/ufal/npfl114/tree/master/labs/07/tagger_competition.py)
