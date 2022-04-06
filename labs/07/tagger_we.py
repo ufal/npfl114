@@ -28,7 +28,7 @@ parser.add_argument("--we_dim", default=128, type=int, help="Word embedding dime
 class Model(tf.keras.Model):
     def __init__(self, args: argparse.Namespace, train: MorphoDataset.Dataset) -> None:
         # Implement a one-layer RNN network. The input `words` is
-        # a RaggedTensor of strings, each batch example being a list of words.
+        # a `RaggedTensor` of strings, each batch example being a list of words.
         words = tf.keras.layers.Input(shape=[None], dtype=tf.string, ragged=True)
 
         # TODO: Map strings in `words` to indices by using the `word_mapping` of `train.forms`.
@@ -43,7 +43,7 @@ class Model(tf.keras.Model):
 
         # TODO: Add a softmax classification layer into as many classes as there are unique
         # tags in the `word_mapping` of `train.tags`. Note that the Dense layer can process
-        # a RaggedTensor without any problem.
+        # a `RaggedTensor` without any problem.
         predictions = None
 
         # Check that the created predictions are a 3D tensor.
@@ -75,7 +75,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # Create the model and train
     model = Model(args, morpho.train)
 
-    # TODO: Construct dataset for training, which should contain pairs of
+    # TODO: Construct the dataset for training, which should contain pairs of
     # - tensor of string words (forms) as input
     # - tensor of integral tag ids as targets.
     # To create the identifiers, use the `word_mapping` of `morpho.train.tags`.

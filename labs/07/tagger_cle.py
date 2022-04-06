@@ -50,7 +50,7 @@ class Model(tf.keras.Model):
 
     def __init__(self, args: argparse.Namespace, train: MorphoDataset.Dataset) -> None:
         # Implement a one-layer RNN network. The input `words` is
-        # a RaggedTensor of strings, each batch example being a list of words.
+        # a `RaggedTensor` of strings, each batch example being a list of words.
         words = tf.keras.layers.Input(shape=[None], dtype=tf.string, ragged=True)
 
         # TODO(tagger_we): Map strings in `words` to indices by using the `word_mapping` of `train.forms`.
