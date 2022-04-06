@@ -29,7 +29,7 @@ parser.add_argument("--we_dim", default=128, type=int, help="Word embedding dime
 class Model(tf.keras.Model):
     def __init__(self, args: argparse.Namespace, train: MorphoDataset.Dataset) -> None:
         # Implement a one-layer RNN network. The input `words` is
-        # a RaggedTensor of strings, each batch example being a list of words.
+        # a `RaggedTensor` of strings, each batch example being a list of words.
         words = tf.keras.layers.Input(shape=[None], dtype=tf.string, ragged=True)
 
         # TODO(tagger_we): Map strings in `words` to indices by using the `word_mapping` of `train.forms`.
@@ -167,7 +167,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # Create the model and train
     model = Model(args, morpho.train)
 
-    # TODO(tagger_we): Construct dataset for training, which should contain pairs of
+    # TODO(tagger_we): Construct the dataset for training, which should contain pairs of
     # - tensor of string words (forms) as input
     # - tensor of integral tag ids as targets.
     # To create the identifiers, use the `word_mapping` of `morpho.train.tags`.

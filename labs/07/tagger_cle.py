@@ -103,7 +103,7 @@ class Model(tf.keras.Model):
 
         # TODO(tagger_we): Add a softmax classification layer into as many classes as there are unique
         # tags in the `word_mapping` of `train.tags`. Note that the Dense layer can process
-        # a RaggedTensor without any problem.
+        # a `RaggedTensor` without any problem.
         predictions = None
 
         # Check that the created predictions are a 3D tensor.
@@ -135,7 +135,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # Create the model and train
     model = Model(args, morpho.train)
 
-    # TODO(tagger_we): Construct dataset for training, which should contain pairs of
+    # TODO(tagger_we): Construct the dataset for training, which should contain pairs of
     # - tensor of string words (forms) as input
     # - tensor of integral tag ids as targets.
     # To create the identifiers, use the `word_mapping` of `morpho.train.tags`.
