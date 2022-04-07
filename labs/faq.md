@@ -251,29 +251,37 @@
   The memory limit during evaluation is **1.5GB**. The time limit varies, but it should
   be at least 10 seconds and at least twice the running time of my solution.
 
-### TOCEntry: Debugging
+### TOCEntry: Tensors
 
-- _How to debug problems “inside” computation graphs with weird stack traces?_
+- _How to work with the usual `tf.Tensor`s?_
 
-  At the beginning of your program, run
-  ```python
-  tf.config.run_functions_eagerly(True)
-  ```
-  The `tf.funcion`s (with the exception of the ones used in `tf.data` pipelines)
-  are then not traced (i.e., no computation graphs are created) and the pure
-  Python code is executed instead.
+  Read the [TensorFlow Tensor guide](https://www.tensorflow.org/guide/tensor)
+  and also the [TensorFlow tensor indexing guide](https://www.tensorflow.org/guide/tensor_slicing).
 
-- _How to debug problems “inside” `tf.data` pipelines with weird stack traces?_
+- _How to work with the `tf.RaggedTensor`s?_
 
-  Unfortunately, the solution above does not affect tracing in `tf.data`
-  pipelines (for example in `tf.data.Dataset.map`). However, since TF 2.5, the
-  command
-  ```python
-  tf.data.experimental.enable_debug_mode()
-  ```
-  should disable any asynchrony, parallelism, or non-determinism and forces
-  Python execution (as opposed to trace-compiled graph execution) of
-  user-defined functions passed into transformations such as `tf.data.Dataset.map`.
+  Read the [TensorFlow RaggedTensor guide](https://www.tensorflow.org/guide/ragged_tensor).
+
+- _How to convert the `tf.RaggedTensor` to a `tf.Tensor` and back?_
+
+  Often, you might want to convert a `tf.RaggedTensor` to a `tf.Tensor` and then
+  back.
+
+  - To obtain just the valid elements (so the rank of the resulting
+    `tf.Tensor` is smaller by one):
+    ```python
+    tensor_with_valid_elements = ragged_tensor.values
+    ...
+    new_ragged_tensor = ragged_tensor.with_values(new_tensor_with_valid_elements)
+    ```
+
+  - To obtain a `tf.Tensor` with the corresponding shape (so padding elements
+    are added where needed):
+    ```python
+    tensor_with_padding = ragged_tensor.to_tensor()
+    ...
+    new_ragged_tensor = tf.RaggedTensor.from_tensor(new_tensor_with_padding, ragged_tensor.row_lengths())
+    ```
 
 ### TOCEntry: tf.data
 
@@ -363,6 +371,30 @@
       ), label
   dataset.map(augment)
   ```
+
+### TOCEntry: Debugging
+
+- _How to debug problems “inside” computation graphs with weird stack traces?_
+
+  At the beginning of your program, run
+  ```python
+  tf.config.run_functions_eagerly(True)
+  ```
+  The `tf.funcion`s (with the exception of the ones used in `tf.data` pipelines)
+  are then not traced (i.e., no computation graphs are created) and the pure
+  Python code is executed instead.
+
+- _How to debug problems “inside” `tf.data` pipelines with weird stack traces?_
+
+  Unfortunately, the solution above does not affect tracing in `tf.data`
+  pipelines (for example in `tf.data.Dataset.map`). However, since TF 2.5, the
+  command
+  ```python
+  tf.data.experimental.enable_debug_mode()
+  ```
+  should disable any asynchrony, parallelism, or non-determinism and forces
+  Python execution (as opposed to trace-compiled graph execution) of
+  user-defined functions passed into transformations such as `tf.data.Dataset.map`.
 
 ### TOCEntry: Finetuning
 
