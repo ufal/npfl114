@@ -17,6 +17,9 @@ It is fine if you are not familiar with terms like covariance matrix or
 principal component – the template contains a detailed description of what
 you have to do.
 
+Finally, it is a good idea to read the
+[TensorFlow guide about `tf.Tensor`s](https://www.tensorflow.org/guide/tensor).
+
 #### Tests Start: pca_first_tests
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 pca_first.py --examples=1024 --iterations=64`

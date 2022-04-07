@@ -21,6 +21,9 @@ To make debugging easier, the template supports a `--verify` option, which
 allows comparing the forward pass and the three gradients you compute in the
 backward pass to correct values.
 
+Finally, it is a good idea to read the
+[TensorFlow guide about tensor slicing](https://www.tensorflow.org/guide/tensor_slicing).
+
 #### Tests Start: cnn_manual_tests
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 cnn_manual.py --epochs=1 --cnn=5-1-1`
