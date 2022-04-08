@@ -57,7 +57,7 @@ class Model(tf.keras.Model):
                      metrics=[self.SpanLabelingF1Metric(train.tags.word_mapping.get_vocabulary(), name="f1")])
 
         # TODO(tagger_crf): Create `self._crf_weights`, a trainable zero-initialized tf.float32 matrix variable
-        # of size [number of unique train tags, number of unique train.tags], using `self.add_weight`.
+        # of size [number of unique train tags, number of unique train tags], using `self.add_weight`.
         self._crf_weights = self.add_weight(...)
 
         self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
