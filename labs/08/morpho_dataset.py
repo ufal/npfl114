@@ -133,7 +133,7 @@ class MorphoDataset:
 
     # Evaluation infrastructure.
     @staticmethod
-    def evaluate(gold_dataset: tf.data.Dataset, predictions: Sequence[str]) -> float:
+    def evaluate(gold_dataset: MorphoDataset.Factor, predictions: Sequence[str]) -> float:
         gold_sentences = gold_dataset.strings
 
         predicted_sentences, in_sentence = [], False
@@ -162,7 +162,7 @@ class MorphoDataset:
         return 100 * correct / total
 
     @staticmethod
-    def evaluate_file(gold_dataset: tf.data.Dataset, predictions_file: TextIO) -> float:
+    def evaluate_file(gold_dataset: MorphoDataset.Factor, predictions_file: TextIO) -> float:
         predictions = predictions_file.readlines()
         return MorphoDataset.evaluate(gold_dataset, predictions)
 
