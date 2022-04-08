@@ -1,5 +1,6 @@
 import os
 import sys
+from typing import Dict, List, Optional, Sequence, TextIO, Tuple
 import urllib.request
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
@@ -8,26 +9,26 @@ import tensorflow as tf
 
 
 class CommonVoiceCs:
-    MFCC_DIM = 13
+    MFCC_DIM: int = 13
 
-    LETTERS = [
+    LETTERS: List[str] = [
         "[UNK]", " ", "a", "á", "ä", "b", "c", "č", "d", "ď", "e", "é", "è",
         "ě", "f", "g", "h", "i", "í", "ï", "j", "k", "l", "m", "n", "ň", "o",
         "ó", "ö", "p", "q", "r", "ř", "s", "š", "t", "ť", "u", "ú", "ů", "ü",
         "v", "w", "x", "y", "ý", "z", "ž",
     ]
 
-    _URL = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
+    _URL: str = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/datasets/"
 
     @staticmethod
-    def parse(example):
+    def parse(example: tf.Tensor) -> Dict[str, tf.Tensor]:
         example = tf.io.parse_single_example(example, {
             "mfccs": tf.io.VarLenFeature(tf.float32),
             "sentence": tf.io.FixedLenFeature([], tf.string)})
         example["mfccs"] = tf.reshape(tf.cast(tf.sparse.to_dense(example["mfccs"]), tf.float32), [-1, CommonVoiceCs.MFCC_DIM])
         return example
 
-    def __init__(self):
+    def __init__(self) -> None:
         for dataset, size in [("train", 9773), ("dev", 904), ("test", 3240)]:
             path = "common_voice_cs.{}.tfrecord".format(dataset)
             if not os.path.exists(path):
@@ -37,21 +38,24 @@ class CommonVoiceCs:
             setattr(self, dataset,
                     tf.data.TFRecordDataset(path).map(CommonVoiceCs.parse).apply(tf.data.experimental.assert_cardinality(size)))
 
-        self._letters_mapping = tf.keras.layers.experimental.preprocessing.StringLookup(mask_token=None)
-        self._letters_mapping.set_vocabulary(self.LETTERS[1:])
+        self._letters_mapping = tf.keras.layers.StringLookup(vocabulary=self.LETTERS[1:])
+
+    train: tf.data.Dataset
+    dev: tf.data.Dataset
+    test: tf.data.Dataset
 
     @property
-    def letters_mapping(self):
+    def letters_mapping(self) -> tf.keras.layers.StringLookup:
         return self._letters_mapping
 
     # Methods for generating mfccs.
     @staticmethod
-    def wav_decode(wav):
+    def wav_decode(wav: tf.Tensor) -> Tuple[tf.Tensor, tf.Tensor]:
         audio, sample_rate = tf.audio.decode_wav(wav, desired_channels=1)
         return audio[:, 0], sample_rate
 
     @staticmethod
-    def mfcc_extract(audio, sample_rate=16000):
+    def mfcc_extract(audio: tf.Tensor, sample_rate: int =16000) -> tf.Tensor:
         assert sample_rate == 16000, "Only 16k sample rate is supported"
 
         # A 1024-point STFT with frames of 64 ms and 75% overlap.
@@ -74,10 +78,12 @@ class CommonVoiceCs:
 
     # Edit distance computation as Keras metric
     class EditDistanceMetric(tf.metrics.Mean):
-        def __init__(self, name="edit_distance", dtype=None):
+        def __init__(self, name: str = "edit_distance", dtype: Optional[tf.DType] = None) -> None:
             super().__init__(name, dtype)
 
-        def update_state(self, y_true, y_pred, sample_weight=None):
+        def update_state(
+                self, y_true: tf.RaggedTensor, y_pred: tf.RaggedTensor, sample_weight: Optional[tf.Tensor] = None
+        ) -> None:
             """Computes edit distance for two RaggedTensors"""
             assert isinstance(y_true, tf.RaggedTensor) and isinstance(y_pred, tf.RaggedTensor)
 
@@ -86,7 +92,7 @@ class CommonVoiceCs:
 
     # Evaluation infrastructure
     @staticmethod
-    def evaluate(gold_dataset, predictions):
+    def evaluate(gold_dataset: tf.data.Dataset, predictions: Sequence[str]):
         gold = [np.array(example["sentence"]).item().decode("utf-8") for example in gold_dataset]
 
         if len(predictions) != len(gold):
@@ -103,7 +109,7 @@ class CommonVoiceCs:
         return 100 * edit_distance.result()
 
     @staticmethod
-    def evaluate_file(gold_dataset, predictions_file):
+    def evaluate_file(gold_dataset: tf.data.Dataset, predictions_file: TextIO) -> float:
         predictions = []
         for line in predictions_file:
             predictions.append(line.rstrip("\n"))
