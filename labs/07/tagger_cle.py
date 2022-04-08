@@ -135,16 +135,16 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # Create the model and train
     model = Model(args, morpho.train)
 
-    # TODO(tagger_we): Construct the dataset for training, which should contain pairs of
-    # - tensor of string words (forms) as input
-    # - tensor of integral tag ids as targets.
-    # To create the identifiers, use the `word_mapping` of `morpho.train.tags`.
-    def tagging_dataset(example):
+    # TODO(tagger_we): Construct the data for the model, each consisting of the following pair:
+    # - a tensor of string words (forms) as input,
+    # - a tensor of integral tag ids as targets.
+    # To create the tag ids, use the `word_mapping` of `morpho.train.tags`.
+    def extract_tagging_data(example):
         raise NotImplementedError()
 
     def create_dataset(name):
         dataset = getattr(morpho, name).dataset
-        dataset = dataset.map(tagging_dataset)
+        dataset = dataset.map(extract_tagging_data)
         dataset = dataset.shuffle(len(dataset), seed=args.seed) if name == "train" else dataset
         dataset = dataset.apply(tf.data.experimental.dense_to_ragged_batch(args.batch_size))
         return dataset
