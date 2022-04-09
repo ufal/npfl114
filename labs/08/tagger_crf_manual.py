@@ -82,7 +82,7 @@ class Model(tf.keras.Model):
         #             # Return state dimensionality as either a scalar number or a vector
         #         def call(self, inputs, states):
         #             # Given inputs from the current timestep and states from the previous one,
-        #             # return an (outputs, new_states) pair. Note that `states` and `new_states`
+        #             # return an (outputs, new_states) pair. Note that `outputs` and `new_states`
         #             # must always be a tuple of tensors, even if there is only a single state.
         #
         #   Such a cell can then be used by the `tf.keras.layers.RNN` layer. If you want to
