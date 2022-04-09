@@ -56,7 +56,7 @@ class Model(tf.keras.Model):
         # - Use `logits.row_lengths()` method to obtain the `logit_length`
         # - Use the last class (the one with the highest index) as the `blank_index`.
         #
-        # The `tc.nn.ctc_loss` returns a value for a single batch example, so average
+        # The `tf.nn.ctc_loss` returns a value for a single batch example, so average
         # them to produce a single value and return it.
         raise NotImplementedError()
 
