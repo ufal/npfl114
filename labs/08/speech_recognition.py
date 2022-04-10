@@ -20,8 +20,6 @@ parser.add_argument("--threads", default=1, type=int, help="Maximum number of th
 
 class Model(tf.keras.Model):
     def __init__(self, args: argparse.Namespace) -> None:
-        # self._ctc_beam = args.ctc_beam
-
         inputs = tf.keras.layers.Input(shape=[None, CommonVoiceCs.MFCC_DIM], dtype=tf.float32, ragged=True)
 
         # TODO: Create a suitable model. You should:
