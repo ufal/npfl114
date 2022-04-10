@@ -102,7 +102,7 @@ class Model(tf.keras.Model):
         raise NotImplementedError()
 
     def crf_decode(self, logits: tf.RaggedTensor) -> tf.RaggedTensor:
-        assert isinstance(logits, tf.RaggedTensor), "Logits given to CTC predict must be RaggedTensors"
+        assert isinstance(logits, tf.RaggedTensor), "Logits given to CRF decoding must be RaggedTensors"
 
         # TODO(tagger_crf): Perform CRF decoding using `tfa.text.crf_decode`. Convert the
         # logits analogously as in `crf_loss`. Finally, convert the result
