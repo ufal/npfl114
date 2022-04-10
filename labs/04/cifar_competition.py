@@ -10,7 +10,8 @@ import tensorflow as tf
 
 from cifar10 import CIFAR10
 
-# TODO: Define reasonable defaults and optionally more parameters
+# TODO: Define reasonable defaults and optionally more parameters.
+# Also, you can set the number of the threads 0 to use all your CPU cores.
 parser = argparse.ArgumentParser()
 parser.add_argument("--batch_size", default=None, type=int, help="Batch size.")
 parser.add_argument("--epochs", default=None, type=int, help="Number of epochs.")

@@ -10,8 +10,9 @@ import tensorflow as tf
 
 from uppercase_data import UppercaseData
 
-# TODO: Set reasonable values for the hyperparameters, notably
-# for `alphabet_size` and `window` and others.
+# TODO: Set reasonable values for the hyperparameters, especially for
+# `alphabet_size`, `batch_size`, `epochs`, and `windows`.
+# Also, you can set the number of the threads 0 to use all your CPU cores.
 parser = argparse.ArgumentParser()
 parser.add_argument("--alphabet_size", default=None, type=int, help="If given, use this many most frequent chars.")
 parser.add_argument("--batch_size", default=None, type=int, help="Batch size.")
