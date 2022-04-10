@@ -498,7 +498,7 @@ setattr(EfficientNetL2, '__doc__', EfficientNet.__doc__)
 
 
 def pretrained_efficientnet_b0(include_top, dynamic_input_shape=False):
-    url = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2021/models/"
+    url = "https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/models/"
     path = "efficientnet-b0_noisy-student.h5"
 
     if not os.path.exists(path):
