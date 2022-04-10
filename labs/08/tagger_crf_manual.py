@@ -66,12 +66,12 @@ class Model(tf.keras.Model):
         assert isinstance(gold_labels, tf.RaggedTensor), "Gold labels given to CRF loss must be RaggedTensors"
         assert isinstance(logits, tf.RaggedTensor), "Logits given to CRF loss must be RaggedTensors"
 
-        # TODO: Implement the CRF loss computation manually, without using the `tfa.text` methods.
+        # TODO: Implement the CRF loss computation manually, without using `tfa.text` methods.
         # You can count on the fact that all training sentences contain at least 2 words.
         #
         # The following remarks might come handy:
-        # - Custom RNN cells can be implemented by deriving from tf.keras.layers.AbstractRNNCell
-        #   and definining at least `state_size`, `output_size` and `call`:
+        # - Custom RNN cells can be implemented by deriving from `tf.keras.layers.AbstractRNNCell`
+        #   and defining at least `state_size`, `output_size` and `call`:
         #
         #     class CRFCell(tf.keras.layers.AbstractRNNCell):
         #         @property
@@ -81,12 +81,12 @@ class Model(tf.keras.Model):
         #         def state_size(self):
         #             # Return state dimensionality as either a scalar number or a vector
         #         def call(self, inputs, states):
-        #             # Given inputs from the current timestep and states from the previous one,
-        #             # return an (outputs, new_states) pair. Note that `states` and `new_states`
+        #             # Given the inputs from the current timestep and states from the previous one,
+        #             # return an `(outputs, new_states)` pair. Note that `states` and `new_states`
         #             # must always be a tuple of tensors, even if there is only a single state.
         #
         #   Such a cell can then be used by the `tf.keras.layers.RNN` layer. If you want to
-        #   specify a different initial state then all zeros, pass it as `initial_state` argument
+        #   specify a different initial state than all zeros, pass it as the `initial_state` argument
         #   along with the inputs.
         #
         # - RaggedTensors cannot be directly indexed in the ragged dimension, but they can be sliced.
@@ -96,8 +96,8 @@ class Model(tf.keras.Model):
         #     gold_labels[:, 0]
         #   If you really require indexing in the ragged dimension, convert them to dense tensors.
         #
-        # - To index a (possible ragged) tensor with another (possible ragged) tensor,
-        #   `tf.gather` and `tf.gather_nd` can be used. If is useful fo pay attention
+        # - To index a (possibly ragged) tensor with another (possibly ragged) tensor,
+        #   `tf.gather` and `tf.gather_nd` can be used. It is useful to pay attention
         #   to the `batch_dims` argument of these calls.
         raise NotImplementedError()
 
