@@ -20,7 +20,7 @@ parser.add_argument("--threads", default=1, type=int, help="Maximum number of th
 
 class Model(tf.keras.Model):
     def __init__(self, args: argparse.Namespace) -> None:
-        self._ctc_beam = args.ctc_beam
+        # self._ctc_beam = args.ctc_beam
 
         inputs = tf.keras.layers.Input(shape=[None, CommonVoiceCs.MFCC_DIM], dtype=tf.float32, ragged=True)
 
@@ -56,7 +56,7 @@ class Model(tf.keras.Model):
         # - Use `logits.row_lengths()` method to obtain the `logit_length`
         # - Use the last class (the one with the highest index) as the `blank_index`.
         #
-        # The `tc.nn.ctc_loss` returns a value for a single batch example, so average
+        # The `tf.nn.ctc_loss` returns a value for a single batch example, so average
         # them to produce a single value and return it.
         raise NotImplementedError()
 
