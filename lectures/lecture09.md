@@ -4,6 +4,9 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-09.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-09-english.mp4, EN Lecture
 #### Questions: #lecture_09_questions
+#### Lecture assignment: lemmatizer_noattn
+#### Lecture assignment: lemmatizer_attn
+#### Lecture assignment: lemmatizer_competition
 
 - Neural Machine Translation using Encoder-Decoder or Sequence-to-Sequence architecture [Section 12.5.4 of DLB, [Ilya Sutskever, Oriol Vinyals, Quoc V. Le: **Sequence to Sequence Learning with Neural Networks**](https://arxiv.org/abs/1409.3215) and [Kyunghyun Cho et al.: **Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation**](https://arxiv.org/abs/1406.1078)]
 - Using Attention mechanism in Neural Machine Translation [Section 12.4.5.1 of DLB, [Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio: **Neural Machine Translation by Jointly Learning to Align and Translate**](https://arxiv.org/abs/1409.0473)]
