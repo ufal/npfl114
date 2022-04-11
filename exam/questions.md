@@ -195,3 +195,24 @@
 
 - Describe the negative sampling proposed in `word2vec`, including
   the choice of distribution of negative samples. [5]
+
+#### Questions@:, Lecture 9 Questions
+- Draw a sequence-to-sequence architecture for machine translation, both during
+  training and during inference (without attention). [5]
+
+- Draw a sequence-to-sequence architecture for machine translation used during
+  training, including the attention. Then write down how exactly is the attention
+  computed. [10]
+
+- Explain how can word embeddings tying be used in a sequence-to-sequence
+  architecture. [5]
+
+- Write down why are subword units used in text processing, and describe the BPE
+  algorithm for constructing a subword dictionary from a large corpus. [5]
+
+- Write down why are subword units used in text processing, and describe the
+  WordPieces algorithm for constructing a subword dictionary from a large
+  corpus. [5]
+
+- Pinpoint the differences between the BPE and WordPieces algorithms, both
+  during dictionary construction and during inference. [5]
