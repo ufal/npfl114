@@ -2,8 +2,6 @@
 #### Date: Deadline: Apr 25, 7:59 a.m.
 #### Points: 4 points+5 bonus
 
-**Template to appear soon**
-
 In this assignment, you should extend `lemmatizer_noattn` or `lemmatizer_attn`
 into a real-world Czech lemmatizer. As in `tagger_competition`, we will use
 Czech PDT dataset loadable using the [morpho_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/09/morpho_dataset.py)
