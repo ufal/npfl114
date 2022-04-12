@@ -14,10 +14,11 @@ This module can also load the dataset, downloading it when necessary (note that
 it has 200MB, so it might take a while). Furthermore, you can listen to the
 [development portion of the dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/demos/common_voice_cs_dev.html).
 
-This is an _open-data task_, where you submit only the test set annotations
-together with the training script (which will not be executed, it will be
-only used to understand the approach you took, and to indicate teams).
-Explicitly, submit **exactly one .txt file** and **at least one .py file**.
+Additional following data can be utilized in this assignment:
+- You can use any _unannotated_ text data (Wikipedia, Czech National Corpus, …),
+  and also any pre-trained word embeddings or language models (assuming they
+  were trained on plain texts).
+- You can use any _unannotated_ speech data.
 
 The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2122-summer#competitions).
 The evaluation is performed by computing the edit distance to the gold letter
