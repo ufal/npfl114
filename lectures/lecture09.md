@@ -4,6 +4,8 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-09.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-09-czech.mp4, CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-09-english.mp4, EN Lecture
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-09-czech.practicals.mp4, CZ Practicals
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-09-english.practicals.mp4, EN Practicals
 #### Questions: #lecture_09_questions
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn
