@@ -9,7 +9,7 @@ into a real-world Czech lemmatizer. As in `tagger_competition`, we will use
 Czech PDT dataset loadable using the [morpho_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/09/morpho_dataset.py)
 module.
 
-You can also use the following additional data as in the `tagger_competition`
+You can also use the same additional data as in the `tagger_competition`
 assignment.
 
 The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2122-summer#competitions). Everyone who submits a solution
