@@ -80,18 +80,18 @@ class Model(tf.keras.Model):
 
             # TODO: Define `finished` as a vector of self.batch_size of `False` [see tf.fill].
 
-            # TODO: Define `inputs` as a vector of self.batch_size of MorphoDataset.Factor.BOW,
-            # embedded using self.lemmatizer.target_embedding
+            # TODO: Define `inputs` as a vector of `self.batch_size` of `MorphoDataset.Factor.BOW`,
+            # embedded using `self.lemmatizer.target_embedding`.
 
-            # TODO: Define `states` as self.source_states
+            # TODO: Define `states` as `self.source_states`.
 
             return finished, inputs, states
 
         def step(self, time, inputs, states, training):
-            # TODO: Pass `inputs` and `[states]` through self.lemmatizer.target_rnn_cell,
+            # TODO: Pass `inputs` and `[states]` through `self.lemmatizer.target_rnn_cell`,
             # which returns `(outputs, [states])`.
 
-            # TODO: Overwrite `outputs` by passing them through self.lemmatizer.target_output_layer,
+            # TODO: Overwrite `outputs` by passing them through `self.lemmatizer.target_output_layer`.
 
             # TODO: Define `next_inputs` by embedding `time`-th chars from `self.targets`.
 
@@ -114,19 +114,19 @@ class Model(tf.keras.Model):
             raise NotImplementedError()
 
         def initialize(self, layer_inputs, initial_state=None):
-            # Use `initialize` from the DecoderTraining, passing None as targets
+            # Use `initialize` from the `DecoderTraining`, passing None as `targets`.
             return super().initialize([layer_inputs, None], initial_state)
 
         def step(self, time, inputs, states, training):
-            # TODO(DecoderTraining): Pass `inputs` and `[states]` through self.lemmatizer.target_rnn_cell,
+            # TODO(DecoderTraining): Pass `inputs` and `[states]` through `self.lemmatizer.target_rnn_cell`,
             # which returns `(outputs, [states])`.
 
-            # TODO(DecoderTraining): Overwrite `outputs` by passing them through self.lemmatizer.target_output_layer,
+            # TODO(DecoderTraining): Overwrite `outputs` by passing them through `self.lemmatizer.target_output_layer`.
 
             # TODO: Overwrite `outputs` by passing them through `tf.argmax` on suitable axis and with
             # `output_type=tf.int32` parameter.
 
-            # TODO: Define `next_inputs` by embedding the `outputs`
+            # TODO: Define `next_inputs` by embedding the `outputs`.
 
             # TODO: Define `finished` as a vector of booleans; True if the corresponding
             # prediction in `outputs` is `MorphoDataset.Factor.EOW`, False otherwise.
@@ -151,7 +151,7 @@ class Model(tf.keras.Model):
             target_charseqs = targets.values
             target_charseqs = target_charseqs.to_tensor()
 
-        # TODO: Embed source_charseqs using `source_embedding`
+        # TODO: Embed source_charseqs using `source_embedding`.
 
         # TODO: Run source_rnn on the embedded sequences, returning outputs in `source_states`.
         sources_states = None
@@ -172,7 +172,7 @@ class Model(tf.keras.Model):
             #
             # Then run it on `source_states`, storing the first result in `output`
             # and the third result in `output_lens`. Finally, because we do not want
-            # to return the `[EOW]` symbols, decrease `output_lens` by one.
+            # to return the `[EOW]` symbols, subtract one from `output_lens`.
             raise NotImplementedError()
 
         # Reshape the output to the original matrix of lemmas

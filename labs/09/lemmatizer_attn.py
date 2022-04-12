@@ -134,18 +134,18 @@ class Model(tf.keras.Model):
     class DecoderPrediction(DecoderTraining):
         @property
         def output_size(self):
-            # TODO: Describe the size of a single decoder output (batch size and the
+            # TODO(lemmatizer_noattn): Describe the size of a single decoder output (batch size and the
             # sequence length are not included) by returning a suitable
             # `tf.TensorShape` representing a *scalar* element, because we are producing
             # lemma character indices during prediction.
             raise NotImplementedError()
         @property
         def output_dtype(self):
-            # TODO: Return the type of the generated predictions
+            # TODO(lemmatizer_noattn): Return the type of the decoder output (i.e., target lemma character indices).
             raise NotImplementedError()
 
         def initialize(self, layer_inputs, initial_state=None, mask=None):
-            # Use `initialize` from the DecoderTraining, passing None as targets
+            # Use `initialize` from the `DecoderTraining`, passing None as `targets`.
             return super().initialize([layer_inputs, None], initial_state)
 
         def step(self, time, inputs, states, training):
