@@ -6,7 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-09-english.mp4, EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-09-czech.practicals.mp4, CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-09-english.practicals.mp4, EN Practicals
-#### Questions: #lecture_09_questions
+#### Questions: #lecture_9_questions
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn
 #### Lecture assignment: lemmatizer_competition
