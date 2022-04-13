@@ -37,7 +37,6 @@ class Model(tf.keras.Model):
         super().__init__(inputs=inputs, outputs=logits)
 
         # We compile the model with the CTC loss and EditDistance metric.
-        # the `selt.ctc_loss` method.
         self.compile(optimizer=...,
                      loss=self.ctc_loss,
                      metrics=[CommonVoiceCs.EditDistanceMetric()])
