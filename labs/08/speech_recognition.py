@@ -48,7 +48,7 @@ class Model(tf.keras.Model):
         assert isinstance(logits, tf.RaggedTensor), "Logits given to CTC loss must be RaggedTensors"
 
         # TODO: Use tf.nn.ctc_loss to compute the CTC loss.
-        # - Convert the gold_labels to SparseTensor and pass `None` as `label_length`.
+        # - Convert the `gold_labels` to SparseTensor and pass `None` as `label_length`.
         # - Convert `logits` to a dense Tensor and then either transpose the
         #   logits to `[max_audio_length, batch, dim]` or set `logits_time_major=False`
         # - Use `logits.row_lengths()` method to obtain the `logit_length`
@@ -56,6 +56,9 @@ class Model(tf.keras.Model):
         #
         # The `tf.nn.ctc_loss` returns a value for a single batch example, so average
         # them to produce a single value and return it.
+        #
+        # Remark: To perform on GPU, instead of to SparseTensor, convert the `gold_labels`
+        # to dense Tensor and pass `gold_labels.row_lengths()` as `label_length`.
         raise NotImplementedError()
 
     def ctc_decode(self, logits: tf.RaggedTensor) -> tf.RaggedTensor:
