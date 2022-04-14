@@ -21,10 +21,10 @@ the attention, and the influence of RNN dimensionality on network performance.
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 lemmatizer_attn.py --epochs=1 --max_sentences=1000 --batch_size=2 --cle_dim=24 --rnn_dim=24`
 ```
-500/500 - 33s - loss: 2.8881 - val_accuracy: 0.1451 - 33s/epoch - 66ms/step
+500/500 - 39s - loss: 2.8889 - val_accuracy: 0.1451 - 39s/epoch - 78ms/step
 ```
 - `python3 lemmatizer_attn.py --epochs=1 --max_sentences=500 --batch_size=2 --cle_dim=32 --rnn_dim=32`
 ```
-250/250 - 29s - loss: 3.0441 - val_accuracy: 0.1471 - 29s/epoch - 114ms/step
+250/250 - 29s - loss: 3.0417 - val_accuracy: 0.1471 - 29s/epoch - 114ms/step
 ```
 #### Tests End:
