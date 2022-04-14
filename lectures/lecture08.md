@@ -1,4 +1,4 @@
-### Lecture: 8. CRF, CRC, Word2Vec
+### Lecture: 8. CRF, CTC, Word2Vec
 #### Date: Apr 04
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides/?08
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-08.pdf,PDF Slides
