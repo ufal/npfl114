@@ -68,7 +68,7 @@ class Model(tf.keras.Model):
 
         # TODO: Use `tfa.text.crf_log_likelihood` to compute the CRF log likelihood.
         # You will have to convert both logits and gold_labels to dense Tensors and
-        # use `gold_labels.row_lengths()` as `sequence_length`. Use the `self._crf_weights`
+        # use `gold_labels.row_lengths()` as `sequence_lengths`. Use the `self._crf_weights`
         # as the transition weights.
         #
         # Finally, compute the loss using the computed log likelihoods, averaging the
