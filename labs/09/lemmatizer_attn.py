@@ -87,7 +87,7 @@ class Model(tf.keras.Model):
             # - Compute projected source states by passing `self.source_states` through the
             #   `self.lemmatizer.attention_source_layer`. Because `self.source_states` do not change,
             #   you should in fact precompute the projected source states once in `initialize`.
-            # - Compute projected decoder state by passing `states` though `self.lemmatizer.attention_state_layer`.
+            # - Compute projected decoder state by passing `states` through `self.lemmatizer.attention_state_layer`.
             # - Sum the two projections. However, the first has shape [a, b, c] and the second [a, c]. Therefore,
             #   expand the second to [a, b, c] or [a, 1, c] (the latter works because of broadcasting rules).
             # - Pass the sum through `tf.tanh` and through the `self.lemmatizer.attention_weight_layer`.
