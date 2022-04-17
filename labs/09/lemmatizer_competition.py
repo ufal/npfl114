@@ -44,7 +44,7 @@ def main(args: argparse.Namespace) -> None:
     os.makedirs(args.logdir, exist_ok=True)
     with open(os.path.join(args.logdir, "lemmatizer_competition.txt"), "w", encoding="utf-8") as predictions_file:
         # Predict the tags on the test set; update the following prediction
-        # command if you use other output structre than in lemmatizer_noattn.
+        # command if you use other output structure than in lemmatizer_noattn.
         predictions = model.predict(test)
         for sentence in predictions:
             for word in sentence:
