@@ -195,7 +195,7 @@ class Model(tf.keras.Model):
 
         with tf.GradientTape() as tape:
             y_pred = self(x, targets=y_targets, training=True)
-            loss = self.compute_loss(x, y_targets.values, y_pred.values)
+            loss = self.compute_loss(x, y_targets.flat_values, y_pred.flat_values)
         self.optimizer.minimize(loss, self.trainable_variables, tape=tape)
         return {"loss": metric.result() for metric in self.metrics if metric.name == "loss"}
 

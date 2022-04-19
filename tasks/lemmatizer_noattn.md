@@ -22,10 +22,10 @@ template and implement the following:
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 lemmatizer_noattn.py --epochs=1 --max_sentences=1000 --batch_size=2 --cle_dim=24 --rnn_dim=24`
 ```
-500/500 - 29s - loss: 2.9655 - val_accuracy: 0.1311 - 29s/epoch - 58ms/step
+500/500 - 23s - loss: 2.9663 - val_accuracy: 0.1311 - 23s/epoch - 46ms/step
 ```
 - `python3 lemmatizer_noattn.py --epochs=1 --max_sentences=500 --batch_size=2 --cle_dim=32 --rnn_dim=32`
 ```
-250/250 - 17s - loss: 3.0641 - val_accuracy: 0.0043 - 17s/epoch - 69ms/step
+250/250 - 19s - loss: 3.0615 - val_accuracy: 0.0043 - 19s/epoch - 77ms/step
 ```
 #### Tests End:
