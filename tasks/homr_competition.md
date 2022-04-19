@@ -4,7 +4,7 @@
 
 **The data and the template will be available shortly.**
 
-Tackle hand-written optical music recognition in this assignment. The inputs are
+Tackle **h**andwritten **o**ptical **m**usic **r**ecognition in this assignment. The inputs are
 grayscale images of monophonic scores starting with a clef, key signature, and a time
 signature, followed by several staves. The
 [dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/demos/homr_train.html)
