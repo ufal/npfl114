@@ -1,4 +1,4 @@
-### Assignment: homr_recognition
+### Assignment: homr_competition
 #### Date: Deadline: May 02, 7:59 a.m.
 #### Points: 3 points+5 bonus
 
