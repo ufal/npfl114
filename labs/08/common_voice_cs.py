@@ -25,7 +25,7 @@ class CommonVoiceCs:
         example = tf.io.parse_single_example(example, {
             "mfccs": tf.io.VarLenFeature(tf.float32),
             "sentence": tf.io.FixedLenFeature([], tf.string)})
-        example["mfccs"] = tf.reshape(tf.cast(tf.sparse.to_dense(example["mfccs"]), tf.float32), [-1, CommonVoiceCs.MFCC_DIM])
+        example["mfccs"] = tf.reshape(tf.sparse.to_dense(example["mfccs"]), [-1, CommonVoiceCs.MFCC_DIM])
         return example
 
     def __init__(self) -> None:
