@@ -1,8 +1,6 @@
 ### Assignment: homr_competition
-#### Date: Deadline: May 02, 7:59 a.m.
+#### Date: Deadline: ~~May 02~~ May 09, 7:59 a.m.
 #### Points: 3 points+5 bonus
-
-**The data and the template will be available shortly.**
 
 Tackle **h**andwritten **o**ptical **m**usic **r**ecognition in this assignment. The inputs are
 grayscale images of monophonic scores starting with a clef, key signature, and a time
@@ -20,7 +18,7 @@ computing edit distance to the gold sequence, normalized by its length (the
 `EditDistanceMetric` is again provided by the
 [homr_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/10/homr_dataset.py)).
 Everyone who submits a solution with at most
-_**TODO**%_ test set edit distance will get 3 points; the rest 5 points will be
+_3%_ test set edit distance will get 3 points; the rest 5 points will be
 distributed depending on relative ordering of your solutions.
 You can evaluate the predictions as usual using the
 [homr_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/10/homr_dataset.py)
