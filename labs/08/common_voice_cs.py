@@ -55,7 +55,7 @@ class CommonVoiceCs:
         return audio[:, 0], sample_rate
 
     @staticmethod
-    def mfcc_extract(audio: tf.Tensor, sample_rate: int =16000) -> tf.Tensor:
+    def mfcc_extract(audio: tf.Tensor, sample_rate: int = 16000) -> tf.Tensor:
         assert sample_rate == 16000, "Only 16k sample rate is supported"
 
         # A 1024-point STFT with frames of 64 ms and 75% overlap.
@@ -102,8 +102,8 @@ class CommonVoiceCs:
         edit_distance = CommonVoiceCs.EditDistanceMetric()
         for i in range(0, len(gold), 16):
             edit_distance(
-                tf.ragged.constant([list(sentence) for sentence in gold[i:i+16]], tf.string),
-                tf.ragged.constant([list(sentence) for sentence in predictions[i:i+16]], tf.string),
+                tf.ragged.constant([list(sentence) for sentence in gold[i:i + 16]], tf.string),
+                tf.ragged.constant([list(sentence) for sentence in predictions[i:i + 16]], tf.string),
             )
 
         return 100 * edit_distance.result()
