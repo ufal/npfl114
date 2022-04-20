@@ -209,8 +209,7 @@ class Model(tf.keras.Model):
     def test_step(self, data):
         x, y = data
         y_pred = self.predict_step(x)
-        self.compiled_metrics.update_state(
-            tf.ones_like(y.values, dtype=tf.int32), tf.cast(y_pred.values == y.values, tf.int32))
+        self.compiled_metrics.update_state(tf.ones_like(y, dtype=tf.int32), tf.cast(y_pred == y, tf.int32))
         return {m.name: m.result() for m in self.metrics if m.name != "loss"}
 
 
