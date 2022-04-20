@@ -35,8 +35,8 @@ class CommonVoiceCs:
                 print("Downloading file {}...".format(path), file=sys.stderr)
                 urllib.request.urlretrieve("{}/{}".format(self._URL, path), filename=path)
 
-            setattr(self, dataset,
-                    tf.data.TFRecordDataset(path).map(CommonVoiceCs.parse).apply(tf.data.experimental.assert_cardinality(size)))
+            setattr(self, dataset, tf.data.TFRecordDataset(path).map(CommonVoiceCs.parse).apply(
+                tf.data.experimental.assert_cardinality(size)))
 
         self._letters_mapping = tf.keras.layers.StringLookup(vocabulary=self.LETTERS[1:])
 
