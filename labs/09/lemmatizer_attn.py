@@ -208,7 +208,7 @@ class Model(tf.keras.Model):
             #
             # Then run it on `source_states`, storing the first result in `output`
             # and the third result in `output_lens`. Finally, because we do not want
-            # to return the `[EOW]` symbols, decrease `output_lens` by one.
+            # to return the `[EOW]` symbols, subtract one from `output_lens`.
             raise NotImplementedError()
 
         # Reshape the output to the original matrix of lemmas
