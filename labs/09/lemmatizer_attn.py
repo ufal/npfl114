@@ -190,7 +190,7 @@ class Model(tf.keras.Model):
         # However, convert the embedded sequences from a RaggedTensor to a dense Tensor first,
         # i.e., call the `source_rnn` with
         #   (source_embedded.to_tensor(), mask=tf.sequence_mask(source_embedded.row_lengths()))
-        sources_states = None
+        source_states = None
 
         # Run the appropriate decoder. Note that the outputs of the decoders
         # are exactly the outputs of `tfa.seq2seq.dynamic_decode`.
