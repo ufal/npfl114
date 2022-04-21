@@ -154,7 +154,7 @@ class Model(tf.keras.Model):
         # TODO: Embed source_charseqs using `source_embedding`.
 
         # TODO: Run source_rnn on the embedded sequences, returning outputs in `source_states`.
-        sources_states = None
+        source_states = None
 
         # Run the appropriate decoder. Note that the outputs of the decoders
         # are exactly the outputs of `tfa.seq2seq.dynamic_decode`.
