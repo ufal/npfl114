@@ -33,6 +33,10 @@ class MorphoDataset:
 
     class Factor:
         BOW: int = 1
+        # The following is an error, it should be 2. Luckily, it does not cause worse
+        # results in the lemmatizer_* assignments, where the BOW/EOW are used.
+        # However, setting EOW=2 changes the lemmatizer_* results slightly because of
+        # different random initialization, so I will change it after the end of semester.
         EOW: int = 1
         word_mapping: tf.keras.layers.StringLookup
         char_mapping: tf.keras.layers.StringLookup
