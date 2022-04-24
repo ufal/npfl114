@@ -192,8 +192,9 @@ class Model(tf.keras.Model):
         #   (source_embedded.to_tensor(), mask=tf.sequence_mask(source_embedded.row_lengths()))
         source_states = None
 
-        # Run the appropriate decoder. Note that the outputs of the decoders
-        # are exactly the outputs of `tfa.seq2seq.dynamic_decode`.
+        # Run the appropriate decoder. The decoder is called as any other layer, and internally
+        # uses `tfa.seq2seq.dynamic_decode` to run the decoding step as many times as required.
+        # The result of the decoder call is exactly the result of the `tfa.seq2seq.dynamic_decode`.
         if targets is not None:
             # TODO(lemmatizer_noattn): Create a self.DecoderTraining by passing `self` to its constructor.
             # Then run it on `[source_states, target_charseqs]` input,
