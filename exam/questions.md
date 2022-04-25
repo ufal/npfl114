@@ -216,3 +216,35 @@
 
 - Pinpoint the differences between the BPE and WordPieces algorithms, both
   during dictionary construction and during inference. [5]
+
+#### Questions@:, Lecture 11 Questions
+- Describe the Transformer encoder architecture, including the description of
+  self-attention (but you do not need to describe multi-head attention), FFN
+  and positions of LNs and dropouts. [10]
+
+- Write down the formula of Transformer self-attention, and then describe
+  multi-head self-attention in detail. [10]
+
+- Describe the Transformer decoder architecture, including the description of
+  self-attention and masked self-attention (but you do not need to describe
+  multi-head attention), FFN and positions of LNs and dropouts. Also discuss the
+  difference between training and prediction regimes. [10]
+
+- Why are positional embeddings needed in Transformer architecture? Write down
+  the sinusoidal positional embeddings used in the Transformer. [5]
+
+- Compare RNN to Transformer – what are the strengths and weaknesses of these
+  architectures? [5]
+
+- Explain how are ELMo embeddings trained and how are they used in downstream
+  applications. [5]
+
+- Describe the BERT architecture (you do not need to describe the (multi-head)
+  self-attention operation). Elaborate also on what positional embeddings
+  are used and what are the GELU activations. [10]
+
+- Describe the GELU activations and explain why are they a combination of ReLUs
+  and Dropout. [5]
+
+- Elaborate on BERT training process (what are the two objectives used and how
+  exactly are the corresponding losses computed). [10]
