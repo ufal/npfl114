@@ -2,8 +2,6 @@
 #### Date: Deadline: May 16, 7:59 a.m.
 #### Points: 4 points+5 bonus
 
-**The data for download will be available shortly.**
-
 Implement the best possible model for reading comprehension task using
 a translated version of the SQuAD 1.1 dataset, utilizing a provided
 Czech RoBERTa model [`ufal/robeczech-base`](https://huggingface.co/ufal/robeczech-base).
