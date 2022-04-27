@@ -97,10 +97,11 @@ class Model(tf.keras.Model):
         def call(self, inputs, mask):
             # TODO: Start by computing the sinusoidal positional embeddings.
             # They have a shape `[max_sentence_len, dim]` and
-            # - for `i < dim / 2`, the value on index `[pos, i]` should be
+            # - for `0 <= i < dim / 2`, the value on index `[pos, i]` should be
             #     `sin(pos / 10000 ** (2 * i / dim))`
             # - the value on index `[pos, i]` for `i >= dim / 2` should be
             #     `cos(pos / 10000 ** (2 * (i - dim/2) / dim))`
+            # - the `0 <= pos < max_sentence_len` is a sentence index.
             # This order is the same as in the visualization on the slides, but
             # different from the original paper where `sin` and `cos` interleave.
 
