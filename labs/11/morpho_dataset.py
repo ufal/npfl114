@@ -186,6 +186,9 @@ if __name__ == "__main__":
             gold = gold.tags
         elif args.task == "lemmatizer":
             gold = gold.lemmas
+            if args.corpus != "czech_pdt_lemmas":
+                print("Warning: You are evaluating a lemmatizer on a corpus different than `czech_pdt_lemmas`.\n" +
+                      "Consider passing `--corpus=czech_pdt_lemmas` to evaluate on the competition dataset.")
         else:
             raise ValueError("Unknown task '{}', valid values are only 'tagger' or 'lemmatizer'".format(args.task))
 
