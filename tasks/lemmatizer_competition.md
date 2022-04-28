@@ -20,5 +20,5 @@ You can start with the
 [lemmatizer_competition.py](https://github.com/ufal/npfl114/tree/master/labs/09/lemmatizer_competition.py)
 template, which among others generates test set annotations in the required format. Note that
 you can evaluate the predictions as usual using the [morpho_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/09/morpho_dataset.py)
-module, either by running with `--task=lemmatizer --evaluate=path` arguments, or using its
+module, either by running with `--task=lemmatizer --corpus=czech_pdt_lemmas --evaluate=path` arguments, or using its
 `evaluate_file` method.
