@@ -85,6 +85,9 @@ class Model(tf.keras.Model):
 
     class Transformer(tf.keras.layers.Layer):
         def __init__(self, layers, dim, expansion, heads, dropout, *args, **kwargs):
+            # Make sure `dim` is even.
+            assert dim % 2 == 0
+
             super().__init__(*args, **kwargs)
             self.layers, self.dim, self.expansion, self.heads, self.dropout = layers, dim, expansion, heads, dropout
             # TODO: Create the required number of transformer layers, each consisting of
@@ -96,7 +99,7 @@ class Model(tf.keras.Model):
 
         def call(self, inputs, mask):
             # TODO: Start by computing the sinusoidal positional embeddings.
-            # They have a shape `[max_sentence_len, dim]` and
+            # They have a shape `[max_sentence_len, dim]`, where `dim` is even and
             # - for `0 <= i < dim / 2`, the value on index `[pos, i]` should be
             #     `sin(pos / 10000 ** (2 * i / dim))`
             # - the value on index `[pos, i]` for `i >= dim / 2` should be
