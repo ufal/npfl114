@@ -248,3 +248,30 @@
 
 - Elaborate on BERT training process (what are the two objectives used and how
   exactly are the corresponding losses computed). [10]
+
+#### Questions@:, Lecture 12 Questions
+- Write down the variational lower bound (ELBO) in the form of a reconstruction
+  error minus the KL divergence between the encoder and the prior. Then prove it
+  is actually a lower bound on probability $\log P(\boldsymbol x)$ (you can use
+  Jensen's inequality if you want). [10]
+
+- Draw an architecture of a variational autoencoder (VAE). Pay attention to the
+  parametrization of the distribution from the encoder (including the used
+  activation functions), and show how to perform latent variable sampling so
+  that it is differentiable with respect to the encoder parameters (the
+  reparametrization trick). [10]
+
+- Write down the min-max formulation of generative adversarial network (GAN)
+  objective. Then describe what loss is actually used for training the generator
+  in order to avoid vanishing gradients at the beginning of the training. [5]
+
+- Write down the training algorithm of generative adversarial networks (GAN),
+  including the losses minimized by the discriminator and the generator. Be sure
+  to use the version of generator loss which avoids vanishing gradients at the
+  beginning of the training. [10]
+
+- Explain how the class label is used when training a conditional generative
+  adversarial network (CGAN). [5]
+
+- Illustrate that alternating SGD steps are not guaranteed to converge for
+  a min-max problem. [5]
