@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.23">
-<info created="D:20180416065930" modified="D:20220327215339"/>
+<info created="D:20180416065930" modified="D:20220504150041"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -325,7 +325,7 @@ h
 <text matrix="1 0 0 1 -148 0" transformations="translations" pos="244 456" stroke="darkorange" type="minipage" width="84" height="6.035" depth="1.05" valign="top" size="footnote">For example 512 values</text>
 <text matrix="1 0 0 1 -92 36" transformations="translations" pos="244 456" stroke="darkorange" type="minipage" width="100" height="6.035" depth="1.05" valign="top" size="footnote">For example 2048 values</text>
 <text matrix="1 0 0 1 -92 84" transformations="translations" pos="244 456" stroke="darkorange" type="minipage" width="100" height="6.035" depth="1.05" valign="top" size="footnote">For example 512 values</text>
-<text matrix="1 0 0 1 -276.131 81.0584" transformations="translations" pos="324 528" stroke="black" type="minipage" width="168" height="6.926" depth="1.93" valign="top" style="center">\bf Original Configuration</text>
+<text matrix="1 0 0 1 -284.131 81.0584" transformations="translations" pos="324 528" stroke="black" type="minipage" width="168" height="6.926" depth="1.93" valign="top" style="center">\bf Original ``Post-LN&apos;&apos; configuration</text>
 <path matrix="1 0 0 1 56 24" stroke="black" arrow="normal/small">
 292 532 m
 236 548 l
@@ -385,7 +385,7 @@ h
 <text matrix="1 0 0 1 52 0" transformations="translations" pos="244 456" stroke="darkorange" type="minipage" width="84" height="6.035" depth="1.05" valign="top" size="footnote">For example 512 values</text>
 <text matrix="1 0 0 1 108 60" transformations="translations" pos="244 456" stroke="darkorange" type="minipage" width="100" height="6.035" depth="1.05" valign="top" size="footnote">For example 2048 values</text>
 <text matrix="1 0 0 1 108 108" transformations="translations" pos="244 456" stroke="darkorange" type="minipage" width="100" height="6.035" depth="1.05" valign="top" size="footnote">For example 512 values</text>
-<text matrix="1 0 0 1 -76.131 81.0584" transformations="translations" pos="324 528" stroke="black" type="minipage" width="192" height="6.926" depth="1.93" valign="top" style="center">\bf Improved Configuration since 2020</text>
+<text matrix="1 0 0 1 -92.131 81.0584" transformations="translations" pos="324 528" stroke="black" type="minipage" width="224" height="6.926" depth="1.93" valign="top" style="center">\bf Improved ``Pre-LN`` configuration since 2020</text>
 <path matrix="1 0 0 1 56 -48" stroke="black">
 248 532 m
 248 520 l
