@@ -109,7 +109,7 @@ class Model(tf.keras.Model):
             # different from the original paper where `sin` and `cos` interleave.
 
             # TODO: Add the positional embeddings to the `inputs` and then
-            # perform the given number of transformer layer, composed of
+            # perform the given number of transformer layers, composed of
             # - a self-attention sub-layer, followed by
             # - a FFN sub-layer.
             # In each sub-layer, pass the input through LayerNorm, then compute
