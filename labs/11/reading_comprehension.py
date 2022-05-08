@@ -33,7 +33,7 @@ def main(args: argparse.Namespace) -> None:
         ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", k), v) for k, v in sorted(vars(args).items())))
     ))
 
-    # Load the RobeCzech
+    # Load the pre-trained RobeCzech model
     tokenizer = transformers.AutoTokenizer.from_pretrained("ufal/robeczech-base")
     robeczech = transformers.TFAutoModel.from_pretrained("ufal/robeczech-base")
 
