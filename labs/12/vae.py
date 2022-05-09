@@ -109,7 +109,7 @@ class VAE(tf.keras.Model):
             axis=0)
         interpolated_images = self.decoder(interpolated_z, training=False)
 
-        # Stack the random images, then an empty row, and finally interpolated imates
+        # Stack the random images, then an empty row, and finally interpolated images
         image = tf.concat(
             [tf.concat(list(images), axis=1) for images in tf.split(random_images, GRID)] +
             [tf.zeros([MNIST.H, MNIST.W * GRID, MNIST.C])] +
