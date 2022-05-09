@@ -64,7 +64,8 @@ class Agent:
 
 def main(env: wrappers.EvaluationEnv, args: argparse.Namespace) -> None:
     # Fix random seeds and threads
-    tf.keras.utils.set_random_seed(args.seed)
+    np.random.seed(args.seed)
+    tf.random.set_seed(args.seed)
     tf.config.threading.set_inter_op_parallelism_threads(args.threads)
     tf.config.threading.set_intra_op_parallelism_threads(args.threads)
 
