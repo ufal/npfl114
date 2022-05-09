@@ -3,8 +3,6 @@
 #### Points: 2 points
 #### Tests: gan_tests
 
-**Template to appear soon**.
-
 In this assignment you will implement a simple Generative Adversarion Network
 for three datasets in the MNIST format. Your goal is to modify the
 [gan.py](https://github.com/ufal/npfl114/tree/master/labs/12/gan.py)
