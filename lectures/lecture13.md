@@ -2,6 +2,7 @@
 #### Date: May 09
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides/?13
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-13.pdf,PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-13-czech.mp4, CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-13-english.mp4, EN Lecture
 #### Questions: #lecture_13_questions
 #### Lecture assignment: monte_carlo
