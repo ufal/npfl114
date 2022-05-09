@@ -3,6 +3,10 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides/?13
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-13.pdf,PDF Slides
 #### Questions: #lecture_13_questions
+#### Lecture assignment: monte_carlo
+#### Lecture assignment: reinforce
+#### Lecture assignment: reinforce_baseline
+#### Lecture assignment: reinforce_pixels
 
 Study material for Reinforcement Learning is the [Reinforcement Learning: An Introduction; second edition
 by Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/book/the-book-2nd.html)
