@@ -2,6 +2,10 @@
 #### Date: Deadline: May 16, 7:59 a.m.
 #### Points: 4 points+5 bonus
 
+**Wed May 11, 14:45: Unfortunately, several contexts in the initial version of
+the dataset were incorrect (not belonging to the questions). The dataset has
+been fixed just now, so please _redownload_ it. More details in Piazza.**
+
 Implement the best possible model for reading comprehension task using
 a translated version of the SQuAD 1.1 dataset, utilizing a provided
 Czech RoBERTa model [`ufal/robeczech-base`](https://huggingface.co/ufal/robeczech-base).
