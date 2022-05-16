@@ -4,6 +4,7 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-14.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-14-english.mp4, EN Lecture
 #### Questions: #lecture_14_questions
+#### Lecture assignment: learning_to_learn
 
 - NasNet [[Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/abs/1707.07012)]
 - EfficientNet [[EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/abs/1905.11946)]
