@@ -314,3 +314,34 @@
   gradient theorem. [5]
 
 - Write down the REINFORCE with baseline algorithm. [10]
+
+#### Questions@:, Lecture 14 Questions
+- Sketch the overall structure and training procedure of the Neural Architecture
+  Search. You do not need to describe how exactly is the block produced by the
+  controller. [5]
+
+- Draw the WaveNet architecture (show the overall architecture, explain dilated
+  convolutions, write down the gated activations, describe global and local
+  conditioning). [10]
+
+- Define the Mixture of Logistic distribution used in the Teacher model of
+  Parallel WaveNet, including the explicit formula of computing the
+  likelihood of the data. [5]
+
+- Describe the changes in the Student model of Parallel WaveNet, which allow
+  efficient sampling (how does the latent prior look like, how the output
+  data distribution is modeled in a single iteration and then after multiple
+  iterations). [5]
+
+- Describe the addressing mechanism used in Neural Turing Machines – show the
+  overall structure including the required parameters, and explain content
+  addressing, interpolation with location addressing, shifting and sharpening.
+  [10]
+
+- Explain the overall architecture of a Neural Turing Machine with an LSTM
+  controller, assuming $R$ reading heads and one write head. Describe the
+  inputs and outputs of the LSTM controller itself, then how the memory is read
+  from and written to, and how the final output is computed. You do not
+  need to write down the implementation of the addressing mechanism (you can
+  assume it is a function which gets parameters, memory and previous
+  distribution, and computes a new distribution over memory cells). [10]
