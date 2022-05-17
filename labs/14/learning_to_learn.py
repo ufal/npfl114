@@ -3,7 +3,7 @@ import argparse
 import datetime
 import os
 import re
-from typing import Dict
+from typing import Dict, Iterable, List, Optional, Tuple
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
@@ -30,7 +30,7 @@ parser.add_argument("--train_episodes", default=10000, type=int, help="Number of
 
 class EpisodeGenerator():
     """Python generator of episodes."""
-    def __init__(self, dataset, args, seed):
+    def __init__(self, dataset: Omniglot.Dataset, args: argparse.Namespace, seed: int) -> None:
         self._dataset = dataset
         self._args = args
 
@@ -43,7 +43,7 @@ class EpisodeGenerator():
         for i, label in enumerate(dataset.data["labels"]):
             self._label_indices.setdefault(label, []).append(i)
 
-    def __call__(self):
+    def __call__(self) -> Iterable[Tuple[Tuple[np.ndarray, np.ndarray], np.ndarray]]:
         """Generate infinite number of episodes.
 
         Every episode contains `self._args.classes` randomly chosen Omniglot
@@ -72,11 +72,11 @@ class EpisodeGenerator():
 class Model(tf.keras.Model):
     class NthOccurenceAccuracy(tf.keras.metrics.SparseCategoricalAccuracy):
         """A sparse categorical accuracy computed only for `nth` occurrence of every element."""
-        def __init__(self, nth, *args, **kwargs):
+        def __init__(self, nth: int, *args, **kwargs) -> None:
             super().__init__(*args, **kwargs)
             self._nth = nth
 
-        def update_state(self, y_true, y_pred, sample_weight):
+        def update_state(self, y_true: tf.Tensor, y_pred: tf.Tensor, sample_weight: Optional[tf.Tensor]) -> None:
             assert sample_weight is None
             one_hot = tf.one_hot(y_true, tf.reduce_max(y_true) + 1)
             nth = tf.math.reduce_sum(tf.math.cumsum(one_hot, axis=-2) * one_hot, axis=-1)
@@ -90,7 +90,7 @@ class Model(tf.keras.Model):
         of `memory_cells` cells, each being a vector of `cell_size` elements.
         The controller has `read_heads` read head and one write head.
         """
-        def __init__(self, units, memory_cells, cell_size, read_heads, **kwargs):
+        def __init__(self, units: int, memory_cells: int, cell_size: int, read_heads: int, **kwargs) -> None:
             super().__init__(**kwargs)
             self._memory_cells = memory_cells
             self._cell_size = cell_size
@@ -102,7 +102,7 @@ class Model(tf.keras.Model):
             # - self._output_layer is a `tanh`-activated dense layer with `units` units.
 
         @property
-        def state_size(self):
+        def state_size(self) -> List[tf.TensorShape]:
             # TODO: Return the description of the state size as a list containing
             # sizes of individual state tensors. The state is a list consisting
             # of the following elements (in this order):
@@ -114,7 +114,7 @@ class Model(tf.keras.Model):
             #   `self._memory_cells` cells as rows, each of length `self._cell_size`.
             raise NotImplementedError()
 
-        def call(self, inputs, states):
+        def call(self, inputs: tf.Tensor, states: List[tf.Tensor]) -> Tuple[tf.Tensor, List[tf.Tensor]]:
             # TODO: Decompose `states` into `controller_state`, `read_value` and `memory`
             # (see `state_size` describing the `states` structure).
             controller_state, read_value, memory = ...
@@ -164,7 +164,7 @@ class Model(tf.keras.Model):
             # `controller_state`, `read_value` and `memory` as state.
             raise NotImplementedError()
 
-    def __init__(self, args):
+    def __init__(self, args: argparse.Namespace) -> None:
         # Construct the model. The inputs are:
         # - a sequence of `images`;
         # - a sequence of labels of the previous images.
@@ -217,7 +217,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
 
     # Create the data
     omniglot = Omniglot()
-    def create_dataset(data, seed):
+    def create_dataset(data: Omniglot.Dataset, seed: int) -> tf.data.Dataset:
         dataset = tf.data.Dataset.from_generator(
             EpisodeGenerator(data, args, seed=seed),
             output_signature=(
