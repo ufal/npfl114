@@ -30,25 +30,27 @@ the controller emits:
 
 #### Examples Start: learning_to_learn_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 learning_to_learn.py --epochs=20 --classes=2`
+- `python3 learning_to_learn.py --epochs=50 --classes=2`
 ```
-Epoch  1/20 loss: 0.6107 - acc: 0.6307 - acc1: 0.6829 - acc2: 0.6447 - acc5: 0.6230 - acc10: 0.6136 - val_loss: 0.5053 - val_acc: 0.7350 - val_acc1: 0.5465 - val_acc2: 0.6985 - val_acc5: 0.7460 - val_acc10: 0.7995
-Epoch  2/20 loss: 0.2924 - acc: 0.8600 - acc1: 0.6087 - acc2: 0.8235 - acc5: 0.8940 - acc10: 0.9068 - val_loss: 0.2914 - val_acc: 0.8624 - val_acc1: 0.6440 - val_acc2: 0.8235 - val_acc5: 0.9000 - val_acc10: 0.9105
-Epoch  3/20 loss: 0.1927 - acc: 0.9100 - acc1: 0.6423 - acc2: 0.8874 - acc5: 0.9475 - acc10: 0.9516 - val_loss: 0.2666 - val_acc: 0.8838 - val_acc1: 0.6420 - val_acc2: 0.8535 - val_acc5: 0.9210 - val_acc10: 0.9315
-Epoch  4/20 loss: 0.1559 - acc: 0.9263 - acc1: 0.6564 - acc2: 0.9074 - acc5: 0.9633 - acc10: 0.9687 - val_loss: 0.2087 - val_acc: 0.9049 - val_acc1: 0.6270 - val_acc2: 0.8730 - val_acc5: 0.9390 - val_acc10: 0.9545
-Epoch  5/20 loss: 0.1349 - acc: 0.9356 - acc1: 0.6691 - acc2: 0.9237 - acc5: 0.9683 - acc10: 0.9761 - val_loss: 0.2170 - val_acc: 0.9061 - val_acc1: 0.6530 - val_acc2: 0.8920 - val_acc5: 0.9355 - val_acc10: 0.9575
-Epoch 10/20 loss: 0.0964 - acc: 0.9518 - acc1: 0.6959 - acc2: 0.9554 - acc5: 0.9836 - acc10: 0.9862 - val_loss: 0.1561 - val_acc: 0.9305 - val_acc1: 0.6665 - val_acc2: 0.9220 - val_acc5: 0.9690 - val_acc10: 0.9755
-Epoch 15/20 loss: 0.0837 - acc: 0.9565 - acc1: 0.7030 - acc2: 0.9637 - acc5: 0.9864 - acc10: 0.9888 - val_loss: 0.1485 - val_acc: 0.9334 - val_acc1: 0.6695 - val_acc2: 0.9320 - val_acc5: 0.9700 - val_acc10: 0.9745
-Epoch 20/20 loss: 0.0745 - acc: 0.9609 - acc1: 0.7139 - acc2: 0.9711 - acc5: 0.9902 - acc10: 0.9924 - val_loss: 0.1971 - val_acc: 0.9196 - val_acc1: 0.6915 - val_acc2: 0.8970 - val_acc5: 0.9455 - val_acc10: 0.9660
+Epoch  1/50 loss: 0.5964 - acc: 0.6422 - acc1: 0.6768 - acc2: 0.6529 - acc5: 0.6360 - acc10: 0.6299 - val_loss: 0.4335 - val_acc: 0.7825 - val_acc1: 0.5195 - val_acc2: 0.7460 - val_acc5: 0.8010 - val_acc10: 0.8725
+Epoch  2/50 loss: 0.2660 - acc: 0.8759 - acc1: 0.6137 - acc2: 0.8349 - acc5: 0.9097 - acc10: 0.9272 - val_loss: 0.2693 - val_acc: 0.8744 - val_acc1: 0.6390 - val_acc2: 0.8225 - val_acc5: 0.9135 - val_acc10: 0.9275
+Epoch  3/50 loss: 0.1792 - acc: 0.9164 - acc1: 0.6364 - acc2: 0.8870 - acc5: 0.9550 - acc10: 0.9609 - val_loss: 0.2980 - val_acc: 0.8770 - val_acc1: 0.6250 - val_acc2: 0.8460 - val_acc5: 0.9130 - val_acc10: 0.9260
+Epoch  4/50 loss: 0.1504 - acc: 0.9296 - acc1: 0.6544 - acc2: 0.9133 - acc5: 0.9643 - acc10: 0.9725 - val_loss: 0.2037 - val_acc: 0.9083 - val_acc1: 0.6390 - val_acc2: 0.8860 - val_acc5: 0.9420 - val_acc10: 0.9555
+Epoch  5/50 loss: 0.1326 - acc: 0.9369 - acc1: 0.6741 - acc2: 0.9261 - acc5: 0.9686 - acc10: 0.9772 - val_loss: 0.1829 - val_acc: 0.9168 - val_acc1: 0.6485 - val_acc2: 0.9025 - val_acc5: 0.9560 - val_acc10: 0.9600
+Epoch 10/50 loss: 0.0952 - acc: 0.9525 - acc1: 0.6985 - acc2: 0.9542 - acc5: 0.9825 - acc10: 0.9880 - val_loss: 0.1709 - val_acc: 0.9240 - val_acc1: 0.6280 - val_acc2: 0.9140 - val_acc5: 0.9655 - val_acc10: 0.9685
+Epoch 20/50 loss: 0.0729 - acc: 0.9613 - acc1: 0.7106 - acc2: 0.9732 - acc5: 0.9916 - acc10: 0.9937 - val_loss: 0.1401 - val_acc: 0.9383 - val_acc1: 0.6845 - val_acc2: 0.9310 - val_acc5: 0.9690 - val_acc10: 0.9805
+Epoch 50/50 loss: 0.0579 - acc: 0.9668 - acc1: 0.7243 - acc2: 0.9833 - acc5: 0.9948 - acc10: 0.9961 - val_loss: 0.1271 - val_acc: 0.9444 - val_acc1: 0.7110 - val_acc2: 0.9385 - val_acc5: 0.9760 - val_acc10: 0.9835
 ```
-- `python3 learning_to_learn.py --epochs=20 --read_heads=2 --classes=5`
+- `python3 learning_to_learn.py --epochs=50 --read_heads=2 --classes=5`
 ```
-Epoch  1/20 loss: 1.5197 - acc: 0.2864 - acc1: 0.3585 - acc2: 0.2902 - acc5: 0.2742 - acc10: 0.2761 - val_loss: 1.2766 - val_acc: 0.4328 - val_acc1: 0.3390 - val_acc2: 0.3828 - val_acc5: 0.4374 - val_acc10: 0.5014
-Epoch  2/20 loss: 0.8115 - acc: 0.6533 - acc1: 0.2820 - acc2: 0.5126 - acc5: 0.7086 - acc10: 0.7579 - val_loss: 0.8253 - val_acc: 0.6546 - val_acc1: 0.2262 - val_acc2: 0.5100 - val_acc5: 0.7132 - val_acc10: 0.7656
-Epoch  3/20 loss: 0.5530 - acc: 0.7705 - acc1: 0.2573 - acc2: 0.6250 - acc5: 0.8561 - acc10: 0.8755 - val_loss: 0.7181 - val_acc: 0.7108 - val_acc1: 0.2364 - val_acc2: 0.5494 - val_acc5: 0.7848 - val_acc10: 0.8302
-Epoch  5/20 loss: 0.4474 - acc: 0.8171 - acc1: 0.2783 - acc2: 0.7003 - acc5: 0.9011 - acc10: 0.9188 - val_loss: 0.5924 - val_acc: 0.7648 - val_acc1: 0.2682 - val_acc2: 0.6552 - val_acc5: 0.8434 - val_acc10: 0.8568
-Epoch 10/20 loss: 0.3356 - acc: 0.8611 - acc1: 0.3086 - acc2: 0.7996 - acc5: 0.9382 - acc10: 0.9466 - val_loss: 0.6684 - val_acc: 0.7719 - val_acc1: 0.3100 - val_acc2: 0.6982 - val_acc5: 0.8192 - val_acc10: 0.8752
-Epoch 20/20 loss: 0.2499 - acc: 0.8953 - acc1: 0.3398 - acc2: 0.8851 - acc5: 0.9635 - acc10: 0.9741 - val_loss: 0.5017 - val_acc: 0.8230 - val_acc1: 0.3202 - val_acc2: 0.7908 - val_acc5: 0.8802 - val_acc10: 0.9178
+Epoch  1/50 loss: 1.5479 - acc: 0.2698 - acc1: 0.3502 - acc2: 0.2777 - acc5: 0.2588 - acc10: 0.2571 - val_loss: 1.4092 - val_acc: 0.3719 - val_acc1: 0.3176 - val_acc2: 0.3430 - val_acc5: 0.3568 - val_acc10: 0.4202
+Epoch  2/50 loss: 0.8753 - acc: 0.6209 - acc1: 0.2889 - acc2: 0.4895 - acc5: 0.6703 - acc10: 0.7216 - val_loss: 0.7641 - val_acc: 0.6890 - val_acc1: 0.2538 - val_acc2: 0.5340 - val_acc5: 0.7508 - val_acc10: 0.8050
+Epoch  3/50 loss: 0.5346 - acc: 0.7813 - acc1: 0.2553 - acc2: 0.6352 - acc5: 0.8657 - acc10: 0.8919 - val_loss: 0.6430 - val_acc: 0.7511 - val_acc1: 0.2608 - val_acc2: 0.6134 - val_acc5: 0.8286 - val_acc10: 0.8614
+Epoch  4/50 loss: 0.4314 - acc: 0.8231 - acc1: 0.2716 - acc2: 0.6970 - acc5: 0.9090 - acc10: 0.9250 - val_loss: 0.5841 - val_acc: 0.7696 - val_acc1: 0.2796 - val_acc2: 0.6414 - val_acc5: 0.8390 - val_acc10: 0.8760
+Epoch  5/50 loss: 0.3852 - acc: 0.8410 - acc1: 0.2851 - acc2: 0.7280 - acc5: 0.9260 - acc10: 0.9400 - val_loss: 0.7275 - val_acc: 0.7390 - val_acc1: 0.2836 - val_acc2: 0.6138 - val_acc5: 0.8024 - val_acc10: 0.8456
+Epoch 10/50 loss: 0.2885 - acc: 0.8799 - acc1: 0.3195 - acc2: 0.8274 - acc5: 0.9569 - acc10: 0.9656 - val_loss: 0.8520 - val_acc: 0.7335 - val_acc1: 0.2994 - val_acc2: 0.6314 - val_acc5: 0.7852 - val_acc10: 0.8416
+Epoch 20/50 loss: 0.2252 - acc: 0.9049 - acc1: 0.3511 - acc2: 0.9009 - acc5: 0.9750 - acc10: 0.9805 - val_loss: 0.5483 - val_acc: 0.8216 - val_acc1: 0.3182 - val_acc2: 0.7828 - val_acc5: 0.8828 - val_acc10: 0.9152
+Epoch 50/50 loss: 0.1720 - acc: 0.9233 - acc1: 0.3859 - acc2: 0.9518 - acc5: 0.9870 - acc10: 0.9895 - val_loss: 0.5175 - val_acc: 0.8478 - val_acc1: 0.3636 - val_acc2: 0.8288 - val_acc5: 0.9006 - val_acc10: 0.9324
 ```
 #### Examples End:
 #### Tests Start: learning_to_learn_tests
