@@ -30,7 +30,7 @@ template, which parses several useful parameters, creates the environment
 and illustrates the overall usage.
 
 You will also need the [wrappers.py](https://github.com/ufal/npfl114/blob/master/labs/13/wrappers.py)
-script, which wraps the standard gym API with above-mentioned added features we use.
+module, which wraps the standard `gym` API with the above-mentioned added features we use.
 
 During evaluation in ReCodEx, three different random seeds will be employed, and
 you need to reach the required return on all of them. Time limit for each test
