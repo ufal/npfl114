@@ -38,8 +38,9 @@ class Agent:
 
     # Define a training method.
     #
-    # Note that we need to use @tf.function for efficiency (using `train_on_batch`
-    # on extremely small batches/networks has considerable overhead).
+    # Note that we need to use @tf.function and manual `tf.GradientTape`
+    # for efficiency (using `fit` or `train_on_batch` on extremely small
+    # batches has considerable overhead).
     #
     # The `wrappers.typed_np_function` automatically converts input arguments
     # to NumPy arrays of given type, and converts the result to a NumPy array.
