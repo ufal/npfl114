@@ -85,7 +85,8 @@ class VAE(tf.keras.Model):
             # of pixels in an image) and the `latent_loss` (multiplied by self._z_dim).
             loss = None
 
-        # TODO: Run an optimizer step with respect to trainable variables of both the encoder and the decoder.
+        # TODO: Perform a single optimizer step, with respect to trainable variables
+        # of both the encoder and the decoder.
 
         return {"reconstruction_loss": reconstruction_loss, "latent_loss": latent_loss, "loss": loss}
 
