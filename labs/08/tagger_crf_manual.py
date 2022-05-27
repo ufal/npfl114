@@ -75,9 +75,6 @@ class Model(tf.keras.Model):
         #
         #     class CRFCell(tf.keras.layers.AbstractRNNCell):
         #         @property
-        #         def output_size(self):
-        #             # Return output dimensionality as a scalar number
-        #         @property
         #         def state_size(self):
         #             # Return state dimensionality as either a scalar number or a vector
         #         def call(self, inputs, states):
