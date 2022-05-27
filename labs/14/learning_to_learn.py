@@ -178,8 +178,8 @@ class Model(tf.keras.Model):
         # - finally, flatten each image into a vector.
 
         # TODO: To create the input for the MemoryAugmentedLSTM, concatenate (in this order)
-        # each computed image representation with the one-hot representation of the
-        # label of the previous image from `previous_labels`.
+        # each computed image representation with the one-hot representation (with `args.classes` classes)
+        # of the label of the previous image from `previous_labels`.
 
         # TODO: Create the MemoryAugmentedLSTM cell, using
         # - `args.lstm_dim` units;
