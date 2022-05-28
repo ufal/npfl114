@@ -19,20 +19,20 @@ You can also continue with `dcgan` assignment.
 
 #### Tests Start: gan_tests
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 gan.py --dataset=mnist --train_size=500 --epochs=5 --z_dim=2`
+- `python3 gan.py --dataset=mnist --train_size=490 --epochs=5 --z_dim=2`
 ```
-Epoch 1/5 discriminator_loss: 0.4951 - generator_loss: 3.2264 - loss: 1.2253 - discriminator_accuracy: 0.8430
-Epoch 2/5 discriminator_loss: 0.0333 - generator_loss: 4.9075 - loss: 1.6380 - discriminator_accuracy: 1.0000
-Epoch 3/5 discriminator_loss: 0.0138 - generator_loss: 5.3446 - loss: 1.7884 - discriminator_accuracy: 1.0000
-Epoch 4/5 discriminator_loss: 0.0227 - generator_loss: 5.4980 - loss: 1.8305 - discriminator_accuracy: 0.9980
-Epoch 5/5 discriminator_loss: 0.0197 - generator_loss: 6.4010 - loss: 2.1313 - discriminator_accuracy: 0.9990
+Epoch 1/5 discriminator_loss: 0.4933 - generator_loss: 3.2423 - loss: 1.2273 - discriminator_accuracy: 0.8306
+Epoch 2/5 discriminator_loss: 0.0334 - generator_loss: 4.8349 - loss: 1.6104 - discriminator_accuracy: 1.0000
+Epoch 3/5 discriminator_loss: 0.0131 - generator_loss: 5.3357 - loss: 1.7719 - discriminator_accuracy: 1.0000
+Epoch 4/5 discriminator_loss: 0.0323 - generator_loss: 5.5625 - loss: 1.8544 - discriminator_accuracy: 0.9980
+Epoch 5/5 discriminator_loss: 0.0152 - generator_loss: 6.4666 - loss: 2.1581 - discriminator_accuracy: 0.9990
 ```
-- `python3 gan.py --dataset=mnist --train_size=500 --epochs=5 --z_dim=100`
+- `python3 gan.py --dataset=mnist --train_size=490 --epochs=5 --z_dim=100`
 ```
-Epoch 1/5 discriminator_loss: 0.5091 - generator_loss: 2.8825 - loss: 1.1305 - discriminator_accuracy: 0.8390
-Epoch 2/5 discriminator_loss: 0.0589 - generator_loss: 3.7375 - loss: 1.2639 - discriminator_accuracy: 1.0000
-Epoch 3/5 discriminator_loss: 0.0411 - generator_loss: 4.3670 - loss: 1.4598 - discriminator_accuracy: 0.9990
-Epoch 4/5 discriminator_loss: 0.0551 - generator_loss: 4.9373 - loss: 1.6529 - discriminator_accuracy: 0.9960
-Epoch 5/5 discriminator_loss: 0.0835 - generator_loss: 5.0300 - loss: 1.7187 - discriminator_accuracy: 0.9940
+Epoch 1/5 discriminator_loss: 0.5071 - generator_loss: 2.8793 - loss: 1.1304 - discriminator_accuracy: 0.8286
+Epoch 2/5 discriminator_loss: 0.0562 - generator_loss: 3.8137 - loss: 1.2801 - discriminator_accuracy: 1.0000
+Epoch 3/5 discriminator_loss: 0.0451 - generator_loss: 4.1467 - loss: 1.3939 - discriminator_accuracy: 1.0000
+Epoch 4/5 discriminator_loss: 0.0436 - generator_loss: 5.1381 - loss: 1.7160 - discriminator_accuracy: 0.9980
+Epoch 5/5 discriminator_loss: 0.0865 - generator_loss: 4.8655 - loss: 1.6472 - discriminator_accuracy: 0.9918
 ```
 #### Tests End:

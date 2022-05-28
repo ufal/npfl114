@@ -21,14 +21,14 @@ reference solution can be watched
 
 #### Tests Start: dcgan_tests
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 dcgan.py --dataset=mnist --train_size=500 --epochs=2 --z_dim=2`
+- `python3 dcgan.py --dataset=mnist --train_size=490 --epochs=2 --z_dim=2`
 ```
-Epoch 1/2 discriminator_loss: 2.1213 - generator_loss: 1.2216 - loss: 1.1444 - discriminator_accuracy: 0.5320
-Epoch 2/2 discriminator_loss: 1.2995 - generator_loss: 0.8622 - loss: 0.7222 - discriminator_accuracy: 0.6130
+Epoch 1/2 discriminator_loss: 2.0305 - generator_loss: 1.1844 - loss: 1.1044 - discriminator_accuracy: 0.5469
+Epoch 2/2 discriminator_loss: 1.1953 - generator_loss: 0.9264 - loss: 0.7119 - discriminator_accuracy: 0.7082
 ```
-- `python3 dcgan.py --dataset=mnist --train_size=500 --epochs=2 --z_dim=100`
+- `python3 dcgan.py --dataset=mnist --train_size=490 --epochs=2 --z_dim=100`
 ```
-Epoch 1/2 discriminator_loss: 1.7333 - generator_loss: 0.9222 - loss: 0.8909 - discriminator_accuracy: 0.5450
-Epoch 2/2 discriminator_loss: 1.4466 - generator_loss: 1.0135 - loss: 0.8158 - discriminator_accuracy: 0.6020
+Epoch 1/2 discriminator_loss: 1.8414 - generator_loss: 0.9347 - loss: 0.9271 - discriminator_accuracy: 0.5418
+Epoch 2/2 discriminator_loss: 1.4439 - generator_loss: 0.9677 - loss: 0.8049 - discriminator_accuracy: 0.5816
 ```
 #### Tests End:
