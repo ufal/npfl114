@@ -74,7 +74,7 @@ class GAN(tf.keras.Model):
 
     def train_step(self, images: tf.Tensor) -> Dict[str, tf.Tensor]:
         # TODO(gan): Generator training. With a Gradient tape:
-        # - generate as many random latent samples as there are images by a single call
+        # - generate as many random latent samples as there are `images`, by a single call
         #   to `self._z_prior.sample`; also pass `seed=self._seed` for replicability;
         # - pass the samples through a generator; do not forget about `training=True`
         # - run discriminator on the generated images, also using `training=True` (even if
