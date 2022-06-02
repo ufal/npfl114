@@ -43,7 +43,7 @@ class GAN(tf.keras.Model):
         # - applies batch normalized transposed convolution with 32 filters, kernel size 4,
         #   stride 2, same padding, and ReLU activation (again `use_bias=False`)
         # - applies transposed convolution with 1 filter, kernel size 4,
-        #   stride 2, same padding, and sigmoid activation
+        #   stride 2, same padding, and a suitable output activation
 
         # TODO: Define `self.discriminator` as a `tf.keras.Model`, which
         # - takes input images with shape `[MNIST.H, MNIST.W, MNIST.C]`

@@ -41,7 +41,7 @@ class GAN(tf.keras.Model):
         # - applies len(args.generator_layers) dense layers with ReLU activation,
         #   i-th layer with args.generator_layers[i] units
         # - applies output dense layer with MNIST.H * MNIST.W * MNIST.C units
-        #   and sigmoid activation
+        #   and a suitable output activation
         # - reshapes the output (tf.keras.layers.Reshape) to [MNIST.H, MNIST.W, MNIST.C]
 
         # TODO: Define `self.discriminator` as a Model, which
