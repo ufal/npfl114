@@ -51,7 +51,7 @@ class VAE(tf.keras.Model):
         # - applies `len(args.decoder_layers)` dense layers with ReLU activation,
         #   i-th layer with `args.decoder_layers[i]` units
         # - applies output dense layer with `MNIST.H * MNIST.W * MNIST.C` units
-        #   and a suitable output activation
+        #   and a sigmoid output activation
         # - reshapes the output (`tf.keras.layers.Reshape`) to `[MNIST.H, MNIST.W, MNIST.C]`
         self.decoder = None
 
