@@ -43,8 +43,9 @@ class Agent:
     def train(self, states: np.ndarray, actions: np.ndarray, returns: np.ndarray) -> None:
         # TODO: Perform training, using the loss from the REINFORCE algorithm.
         # The easiest approach is to use the `sample_weight` argument of
-        # tf.losses.Loss.__call__, but you can also construct the Loss object
-        # with tf.losses.Reduction.NONE and perform the weighting manually.
+        # the `__call__` method of a suitable subclass of `tf.losses.Loss`,
+        # but you can also construct a loss instance with `reduction=tf.losses.Reduction.NONE`
+        # and perform the weighting manually.
         raise NotImplementedError()
 
     # Predict method, again with manual @tf.function for efficiency.
