@@ -38,7 +38,7 @@ def main(env: wrappers.EvaluationEnv, args: argparse.Namespace):
 
             # TODO: Compute `action` using epsilon-greedy policy. Therefore,
             # with probability of `args.epsilon`, use a random action,
-            # otherwise choose and action with maximum `Q[state, action]`.
+            # otherwise choose an action with maximum `Q[state, action]`.
             action = None
 
             # Perform the action.

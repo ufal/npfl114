@@ -50,7 +50,7 @@ class EpisodeGenerator():
         classes, each class being assigned a randomly chosen label. For every
         chosen class, `self._args.images_per_class` images are randomly selected.
 
-        Apart from the images, the input contain the random labels one step
+        Apart from the images, the input contains the random labels one step
         after the corresponding images (with the first label being -1).
         The gold outputs are also the labels, but without the one-step offset.
         """
