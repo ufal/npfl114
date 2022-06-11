@@ -107,7 +107,7 @@
 
 - Describe the CNN regularization method of networks with stochastic depth. [5]
 
-- Compare Cutout and BlockDrop. [5]
+- Compare Cutout and DropBlock. [5]
 
 - Describe Squeeze and Excitation applied to a ResNet block. [5]
 
