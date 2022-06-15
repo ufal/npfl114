@@ -161,7 +161,7 @@
 
 - Describe layer normalization, and write down how it is computed
   (be sure to explicitly state over what is being normalized in
-  case of fully connected layers and convlutinonal layers). [5]
+  case of fully connected layers and convolutional layers). [5]
 
 - Sketch a tagger architecture utilizing word embeddings, recurrent
   character-level word embeddings and two sentence-level bidirectional RNNs with
