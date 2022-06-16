@@ -42,7 +42,7 @@ class GAN(tf.keras.Model):
         # - reshapes the current hidden output to `[MNIST.H // 4, MNIST.W // 4, 64]`
         # - applies batch normalized transposed convolution with 32 filters, kernel size 4,
         #   stride 2, same padding, and ReLU activation (again `use_bias=False`)
-        # - applies transposed convolution with 1 filter, kernel size 4,
+        # - applies transposed convolution with `MNIST.C` filters, kernel size 4,
         #   stride 2, same padding, and a suitable output activation
 
         # TODO: Define `self.discriminator` as a `tf.keras.Model`, which
