@@ -50,7 +50,7 @@ class Model(tf.keras.Model):
             self.dim, self.heads = dim, heads
             # TODO: Create weight matrices W_Q, W_K, W_V and W_O using `self.add_weight`,
             # each with shape `[dim, dim]`; for other arguments, keep the default values
-            # (which mean trainable float32 matrices initialized with `"glorot_uniform"`).
+            # (which means trainable float32 matrices initialized with `"glorot_uniform"`).
             raise NotImplementedError()
 
         def get_config(self):
