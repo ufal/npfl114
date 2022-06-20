@@ -108,7 +108,7 @@ class Model(tf.keras.Model):
             # of the following elements (in this order):
             # - first the state tensors of the `self._controller` itself; note that
             #   the `self._controller` also has `state_size` property;
-            # - then the values of memory cells read by `self._read_heads` head
+            # - then the values of memory cells read by `self._read_heads` heads
             #   in the previous time step;
             # - finally the external memory itself, which is a matrix containing
             #   `self._memory_cells` cells as rows, each of length `self._cell_size`.
