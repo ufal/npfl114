@@ -2,8 +2,8 @@
 #### Date: Deadline: Jun 30, 23:59
 #### Points: 2 points
 
-Solve the continuous [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)
-environment from the [OpenAI Gym](https://gym.openai.com/) using the REINFORCE
+Solve the continuous [CartPole-v1 environment](https://www.gymlibrary.ml/environments/classic_control/cart_pole/)
+environment from the [Gym library](https://www.gymlibrary.ml/) using the REINFORCE
 algorithm. The continuous environment is very similar to the discrete one, except
 that the states are vectors of real-valued observations with shape
 `env.observation_space.shape`.

@@ -3,8 +3,8 @@
 #### Points: 3 points
 #### Video@: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-english.cartpole.mp4, EN Description
 
-Solve the [CartPole-v1 environment](https://gym.openai.com/envs/CartPole-v1)
-from the [OpenAI Gym](https://gym.openai.com/), utilizing only provided supervised
+Solve the [CartPole-v1 environment](https://www.gymlibrary.ml/environments/classic_control/cart_pole/)
+from the [Gym library](https://www.gymlibrary.ml/), utilizing only provided supervised
 training data. The data is available in
 [gym_cartpole_data.txt](https://github.com/ufal/npfl114/tree/master/labs/02/gym_cartpole_data.txt)
 file, each line containing one observation (four space separated floats) and
