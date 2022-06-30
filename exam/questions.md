@@ -159,8 +159,8 @@
 - Why the usual dropout cannot be used on recurrent state? Describe
   how the problem can be alleviated with variational dropout. [5]
 
-- Describe layer normalization, and write down how it is computed
-  (be sure to explicitly state over what is being normalized in
+- Describe layer normalization including all its parameters, and write down how
+  it is computed (be sure to explicitly state over what is being normalized in
   case of fully connected layers and convolutional layers). [5]
 
 - Sketch a tagger architecture utilizing word embeddings, recurrent
