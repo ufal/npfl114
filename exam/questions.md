@@ -49,13 +49,13 @@
   and what is the explicit formula of the gradient of the loss function with
   respect to $o$? [5]
 
-- Assume a network with cross-entropy loss generated a single output
+- Assume a binary-classification network with cross-entropy loss generated a single output
   $z \in \mathbb{R}$, which is passed through the sigmoid output activation
   function, producing $o = \sigma(z)$. If the target output is $g$, what is the value
   of the loss function itself, and what is the explicit formula of the gradient
   of the loss function with respect to $z$? [5]
 
-- Assume a network with cross-entropy loss generated a k-element output
+- Assume a $K$-class-classification network with cross-entropy loss generated a $K$-element output
   $\boldsymbol z \in \mathbb{R}^K$, which is passed through the softmax output
   activation function, producing $\boldsymbol o=\operatorname{softmax}(\boldsymbol z)$.
   If the target distribution is $\boldsymbol g$, what is the value of the loss
