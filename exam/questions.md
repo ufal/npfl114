@@ -113,7 +113,7 @@
 
 - Draw the Mobile inverted bottleneck block (including explanation of separable
   convolutions, the expansion factor, exact positions of BatchNorms and ReLUs,
-  but without describing Squeeze and excitation bocks). [5]
+  but without describing Squeeze and excitation blocks). [5]
 
 - Assume an input image $I$ of size $H \times W$ with $C$ channels, and
   a convolutional kernel $K$ with size $N \times M$, stride $S$ and $O$ output
