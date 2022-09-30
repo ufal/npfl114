@@ -14,10 +14,10 @@ from morpho_dataset import MorphoDataset
 # TODO: Define reasonable defaults and optionally more parameters.
 # Also, you can set the number of the threads 0 to use all your CPU cores.
 parser = argparse.ArgumentParser()
-parser.add_argument("--batch_size", default=None, type=int, help="Batch size.")
-parser.add_argument("--epochs", default=None, type=int, help="Number of epochs.")
-parser.add_argument("--seed", default=42, type=int, help="Random seed.")
-parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
+parser.add_argument("--batch_size", default=None, type=int, help="Batch size")
+parser.add_argument("--epochs", default=None, type=int, help="Number of epochs")
+parser.add_argument("--seed", default=42, type=int, help="Random seed")
+parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use")
 
 
 def main(args: argparse.Namespace) -> None:
