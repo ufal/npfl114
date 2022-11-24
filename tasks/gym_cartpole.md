@@ -1,7 +1,6 @@
 ### Assignment: gym_cartpole
 #### Date: Deadline: Mar 07, 7:59 a.m.
 #### Points: 3 points
-#### Video@: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-02-english.cartpole.mp4, EN Description
 
 Solve the [CartPole-v1 environment](https://www.gymlibrary.ml/environments/classic_control/cart_pole/)
 from the [Gym library](https://www.gymlibrary.ml/), utilizing only provided supervised
