@@ -4,8 +4,6 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-01.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-01-czech.mp4, CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-01-english.mp4, EN Lecture
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-01-czech.practicals.mp4, CZ Practicals [last 10 mins will be repeated on next practicals]
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-01-english.practicals.mp4, EN Practicals
 #### Questions: #lecture_1_questions
 #### Lecture assignment: numpy_entropy
 #### Lecture assignment: pca_first
