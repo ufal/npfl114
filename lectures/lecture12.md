@@ -1,7 +1,7 @@
 ### Lecture: 12. Deep Generative Models
 #### Date: May 02
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides/?12
-#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-12.pdf,PDF Slides
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-2122-12.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-2122-12-czech.mp4, CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-2122-12-english.mp4, EN Lecture
 #### Questions: #lecture_12_questions

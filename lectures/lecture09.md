@@ -1,7 +1,7 @@
 ### Lecture: 9. Seq2seq, NMT, Transformer
 #### Date: Apr 11
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides/?09
-#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-09.pdf,PDF Slides
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-2122-09.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-2122-09-czech.mp4, CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-2122-09-english.mp4, EN Lecture
 #### Questions: #lecture_9_questions
