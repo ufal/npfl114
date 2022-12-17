@@ -2,14 +2,14 @@
 #### Date: Mar 23
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?04
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-04.pdf,PDF Slides
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-04.mp4,Video
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-1920-04.mp4,Video
 #### Video: https://slideslive.com/38906635/deep-learning-lecture-4-convolutional-networks,2018 Video
 #### Questions: #lecture_4_questions
 #### Lecture assignment: mnist_cnn
 #### Lecture assignment: image_augmentation
 #### Lecture assignment: tf_dataset
 #### Lecture assignment: cifar_competition
-#### VideoPlayer: npfl114-04.mp4
+#### VideoPlayer: npfl114-1920-04.mp4
 
 - Introduction to convolutional networks [Chapter 9 and Sections 9.1-9.3 of DLB]
 - Convolution as operation on 4D tensors [Section 9.5 of DLB, notably Equations (9.7) and (9.8)]
