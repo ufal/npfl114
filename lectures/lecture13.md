@@ -1,7 +1,7 @@
 ### Lecture: 13. Transformer, BERT
 #### Date: May 25
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?13
-#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-13.pdf,PDF Slides
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-1920-13.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-1920-13.mp4,Video
 #### Questions: #lecture_13_questions
 #### Lecture assignment: sentiment_analysis

@@ -1,7 +1,7 @@
 ### Lecture: 3. Training Neural Networks II
 #### Date: Mar 9
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?03
-#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-03.pdf,PDF Slides
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-1920-03.pdf,PDF Slides
 #### Video: https://slideslive.com/38906435/deep-learning-lecture-3-training-neural-networks-ii,2018 Video
 #### Questions: #lecture_3_questions
 #### Lecture assignment: explore_examples

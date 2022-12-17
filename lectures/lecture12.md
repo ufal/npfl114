@@ -1,7 +1,7 @@
 ### Lecture: 12. Speech Synthesis, External Memory Networks
 #### Date: May 18
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?12
-#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-12.pdf,PDF Slides
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-1920-12.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-1920-12.mp4,Video
 #### Video: https://slideslive.com/38907953/deep-learning-lecture-13-practical-methodology-tf-development-advanced-architectures, 2018 Video
 #### Questions: #lecture_12_questions

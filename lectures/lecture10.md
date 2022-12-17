@@ -1,7 +1,7 @@
 ### Lecture: 10. Deep Generative Models
 #### Date: May 04
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides/?10
-#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-10.pdf,PDF Slides
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/1920/slides.pdf/npfl114-1920-10.pdf,PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/1920/npfl114-1920-10.mp4,Video
 #### Video: https://slideslive.com/38907563/deep-learning-lecture-10-deep-generative-models, 2018 Video
 #### Questions: #lecture_10_questions
