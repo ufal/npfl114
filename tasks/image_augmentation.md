@@ -3,7 +3,7 @@
 #### Points: 1 points
 #### Tests: image_augmentation_tests
 
-The template [image_augmentation.py](https://github.com/ufal/npfl114/tree/master/labs/04/image_augmentation.py)
+The template [image_augmentation.py](https://github.com/ufal/npfl114/tree/past-2122/labs/04/image_augmentation.py)
 creates a simple convolutional network for classifying CIFAR-10.
 Your goal is to perform image data augmentation operations using
 [ImageDataGenerator](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/image/ImageDataGenerator)

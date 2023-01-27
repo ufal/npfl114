@@ -10,7 +10,7 @@ or [reference API manual](https://www.tensorflow.org/api_docs/python/tf/data).
 
 The goal of this assignment is to implement image augmentation preprocessing
 similar to `image_augmentation`, but with `tf.data`. Start with the
-[tf_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/04/tf_dataset.py)
+[tf_dataset.py](https://github.com/ufal/npfl114/tree/past-2122/labs/04/tf_dataset.py)
 template and implement the input pipelines employing the `tf.data.Dataset`.
 
 #### Tests Start: tf_dataset_tests

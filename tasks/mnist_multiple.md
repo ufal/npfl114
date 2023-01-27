@@ -4,7 +4,7 @@
 #### Tests: mnist_multiple_tests
 
 In this assignment you will implement a model with multiple inputs and outputs.
-Start with the [mnist_multiple.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_multiple.py)
+Start with the [mnist_multiple.py](https://github.com/ufal/npfl114/tree/past-2122/labs/04/mnist_multiple.py)
 template and:
 - The goal is to create a model, which given two input MNIST images predicts, if the
   digit on the first one is larger than on the second one.

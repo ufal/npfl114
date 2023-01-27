@@ -10,7 +10,7 @@ that the states are vectors of real-valued observations with shape
 
 Your goal is to reach an average return of 475 during 100 evaluation episodes.
 
-Start with the [reinforce.py](https://github.com/ufal/npfl114/tree/master/labs/13/reinforce.py)
+Start with the [reinforce.py](https://github.com/ufal/npfl114/tree/past-2122/labs/13/reinforce.py)
 template, which provides a simple network implementation in TensorFlow. However,
 feel free to use PyTorch instead, if you like.
 

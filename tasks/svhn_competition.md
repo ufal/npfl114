@@ -7,7 +7,7 @@ recognition, optionally utilizing pretrained EfficientNet-B0 backbone.
 
 The [Street View House Numbers (SVHN) dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/demos/svhn_train.html)
 annotates for every photo all digits appearing on it, including their bounding
-boxes. The dataset can be loaded using the [svhn_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/06/svhn_dataset.py)
+boxes. The dataset can be loaded using the [svhn_dataset.py](https://github.com/ufal/npfl114/tree/past-2122/labs/06/svhn_dataset.py)
 module. Similarly to the `CAGS` dataset, it is stored in a
 [TFRecord file](https://www.tensorflow.org/api_docs/python/tf/data/TFRecordDataset)
 with [tf.train.Example](https://www.tensorflow.org/api_docs/python/tf/train/Example)
@@ -25,7 +25,7 @@ directly in `tf.data.Dataset.map` by using `tf.numpy_function`,
 see [FAQ](https://ufal.mff.cuni.cz/courses/npfl114/2122-summer#faq_tf_data).
 
 Similarly to the `cags_classification`, you can load the EfficientNet-B0 using the provided
-[efficient_net.py](https://github.com/ufal/npfl114/tree/master/labs/06/efficient_net.py)
+[efficient_net.py](https://github.com/ufal/npfl114/tree/past-2122/labs/06/efficient_net.py)
 module. Note that the `dynamic_input_shape=True` argument creates
 a model capable of processing an input image of any size.
 
@@ -34,7 +34,7 @@ five-tuples _label top left bottom right_, and the annotation is considered
 correct, if exactly the gold digits are predicted, each with IoU at least 0.5.
 The whole test set score is then the prediction accuracy of individual images.
 You can again evaluate your predictions using the
-[svhn_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/06/svhn_dataset.py)
+[svhn_dataset.py](https://github.com/ufal/npfl114/tree/past-2122/labs/06/svhn_dataset.py)
 module, either by running with `--evaluate=path` arguments, or using its
 `evaluate_file` method.
 
@@ -45,7 +45,7 @@ of your solutions. Note that I usually need at least _35%_ development set
 accuracy to achieve the required test set performance.
 
 You should start with the
-[svhn_competition.py](https://github.com/ufal/npfl114/tree/master/labs/06/svhn_competition.py)
+[svhn_competition.py](https://github.com/ufal/npfl114/tree/past-2122/labs/06/svhn_competition.py)
 template, which generates the test set annotation in the required format.
 
 _A baseline solution can use RetinaNet-like single stage detector,

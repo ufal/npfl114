@@ -5,7 +5,7 @@
 #### Tests: tagger_crf_tests
 
 This assignment is an extension of `tagger_we` task. Using the
-[tagger_crf.py](https://github.com/ufal/npfl114/tree/master/labs/08/tagger_crf.py)
+[tagger_crf.py](https://github.com/ufal/npfl114/tree/past-2122/labs/08/tagger_crf.py)
 template, implement named entity recognition using CRF loss and CRF decoding
 from the `tensorflow_addons` package.
 

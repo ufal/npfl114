@@ -5,9 +5,9 @@
 #### Tests: learning_to_learn_tests
 
 Implement a simple variant of learning-to-learn architecture using the
-[learning_to_learn.py](https://github.com/ufal/npfl114/tree/master/labs/14/learning_to_learn.py)
+[learning_to_learn.py](https://github.com/ufal/npfl114/tree/past-2122/labs/14/learning_to_learn.py)
 template. Utilizing the [Omniglot dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/demos/omniglot_demo.html)
-loadable using the [omniglot_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/14/omniglot_dataset.py)
+loadable using the [omniglot_dataset.py](https://github.com/ufal/npfl114/tree/past-2122/labs/14/omniglot_dataset.py)
 module, the goal is to learn to classify a
 [sequence of images using a custom hierarchy](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/demos/learning_to_learn_demo.html)
 by employing external memory.

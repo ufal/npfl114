@@ -5,7 +5,7 @@
 #### Tests: tagger_cle_tests
 
 This assignment is a continuation of `tagger_we`. Using the
-[tagger_cle.py](https://github.com/ufal/npfl114/tree/master/labs/07/tagger_cle.py)
+[tagger_cle.py](https://github.com/ufal/npfl114/tree/past-2122/labs/07/tagger_cle.py)
 template, implement character-level word embedding computation using
 a bidirectional character-level GRU.
 

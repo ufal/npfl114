@@ -25,7 +25,7 @@ to `reset`), your goal is to reach an average return of 475 during 100
 evaluation episodes. Note that the environment prints your 100-episode
 average return each 10 episodes even during training.
 
-Start with the [monte_carlo.py](https://github.com/ufal/npfl114/tree/master/labs/13/monte_carlo.py)
+Start with the [monte_carlo.py](https://github.com/ufal/npfl114/tree/past-2122/labs/13/monte_carlo.py)
 template, which parses several useful parameters, creates the environment
 and illustrates the overall usage.
 

@@ -5,8 +5,8 @@
 
 The goal of this exercise is to familiarize with TensorFlow `tf.Tensor`s,
 shapes and basic tensor manipulation methods. Start with the
-[pca_first.py](https://github.com/ufal/npfl114/tree/master/labs/01/pca_first.py)
-(and you will also need the [mnist.py](https://github.com/ufal/npfl114/tree/master/labs/01/mnist.py)
+[pca_first.py](https://github.com/ufal/npfl114/tree/past-2122/labs/01/pca_first.py)
+(and you will also need the [mnist.py](https://github.com/ufal/npfl114/tree/past-2122/labs/01/mnist.py)
 module).
 
 In this assignment, you will compute the covariance matrix of several examples
