@@ -5,15 +5,15 @@
 - _Installing to central user packages repository_
 
   You can install all required packages to central user packages repository using
-  `pip3 install --user tensorflow==2.8.0 tensorflow-addons==0.16.1 tensorflow-probability==0.16.0 tensorflow-hub==0.12.0 gym==0.20.0 scipy transformers==4.18.0 protobuf~=3.20.1`.
+  `python3 -m pip install --user tensorflow~=2.11.0 tensorflow-addons~=0.19.0 tensorflow-probability~=0.19.0 tensorflow-hub~=0.12.0 scipy~=1.10.0 transformers~=4.26.0 gymnasium~=0.27.1 pygame~=2.1.3.dev8`.
 
 - _Installing to a virtual environment_
 
   Python supports virtual environments, which are directories containing
   independent sets of installed packages. You can create a virtual environment
   by running `python3 -m venv VENV_DIR` followed by
-  `VENV_DIR/bin/pip3 install tensorflow==2.8.0 tensorflow-addons==0.16.1 tensorflow-probability==0.16.0 tensorflow-hub==0.12.0 gym==0.20.0 scipy transformers==4.18.0 protobuf~=3.20.1`
-  (or `VENV_DIR/Scripts/pip3` on Windows).
+  `VENV_DIR/bin/pip install tensorflow~=2.11.0 tensorflow-addons~=0.19.0 tensorflow-probability~=0.19.0 tensorflow-hub~=0.12.0 scipy~=1.10.0 transformers~=4.26.0 gymnasium~=0.27.1 pygame~=2.1.3.dev8`.
+  (or `VENV_DIR/Scripts/pip` on Windows).
 
 - _**Windows** installation_
 
@@ -34,43 +34,28 @@
 
 - _**macOS** installation_
 
-  - With an **Intel** processor, you should not need anything special.
+  - With an **Intel** processor, you do not need anything special.
 
-  - If you have **Apple Silicon**, the installation is a bit more involved,
-    because some Python packages do not yet have an official Arm64 binary build.
-    The easiest workaround is to use Conda, which contains all the required
-    dependencies.
+  - If you have **Apple Silicon**, you need to replace the `tensorflow~=2.11.0` package
+    by `tensorflow-macos~=2.11.0 grpcio~=1.52.0rc1`.
 
-    - Download [Conda env](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh).
-
-    - Install it and activate it.
-      ```
-      chmod +x ~/Downloads/Miniforge3-MacOSX-arm64.sh
-      sh ~/Downloads/Miniforge3-MacOSX-arm64.sh
-      source ~/miniforge3/bin/activate
-      ```
-
-    - Install the Arm64 TensorFlow dependencies.
-      ```
-      conda install -c apple tensorflow-deps==2.8.0
-      ```
-
-    - Install the Arm64 build of TensorFlow.
-      ```
-      python -m pip install tensorflow-macos==2.8.0
-      ```
+    - The `grpcio` currently needs to be added because versions prior to `1.52`
+      are not compiled for Apple Silicon, and the version `1.52.0rc1` is
+      a pre-release version and so you must explicitly ask for it. Once the
+      version `1.52` is officially released, the `grpcio` package can be omitted
+      from the installation list.
 
 - _**GPU** support on Linux and Windows_
 
-  TensorFlow 2.8 supports NVIDIA GPU out of the box, but you need to install
+  TensorFlow 2.11 supports NVIDIA GPU out of the box, but you need to install
   CUDA 11.2 and cuDNN 8.1 libraries yourself.
 
 - _**GPU** support on macOS_
 
   The AMD and Apple Silicon GPUs can be used by installing
-  a plugin providing the GPU acceleration using:
+  a plugin providing the GPU acceleration using the following command:
   ```
-  python -m pip install tensorflow-metal
+  python3 -m pip install tensorflow-metal==0.7.0
   ```
 
 - _Errors when running with a GPU_
@@ -112,10 +97,10 @@
 
   - Finally, create the virtual environment and install TensorFlow in it:
     ```
-    module add python/3.8.0-gcc-rab6t cuda/cuda-11.2.0-intel-19.0.4-tn4edsz cudnn/cudnn-8.1.0.77-11.2-linux-x64-intel-19.0.4-wx22b5t
+    module add python/python-3.10.4-intel-19.0.4-sc7snnf cuda/cuda-11.2.0-intel-19.0.4-tn4edsz cudnn/cudnn-8.1.0.77-11.2-linux-x64-intel-19.0.4-wx22b5t
     python3 -m venv CHOSEN_VENV_DIR
     CHOSEN_VENV_DIR/bin/pip install --no-cache-dir --upgrade pip setuptools
-    CHOSEN_VENV_DIR/bin/pip install --no-cache-dir tensorflow==2.8.0 tensorflow-addons==0.16.1 tensorflow-probability==0.16.0 tensorflow-hub==0.12.0 gym==0.20.0 scipy
+    CHOSEN_VENV_DIR/bin/pip install --no-cache-dir tensorflow~=2.11.0 tensorflow-addons~=0.19.0 tensorflow-probability~=0.19.0 tensorflow-hub~=0.12.0 scipy~=1.10.0 transformers~=4.26.0 gymnasium~=0.27.1 pygame~=2.1.3.dev8
     ```
 
 - _How to run a GPU computation on MetaCentrum?_
@@ -140,10 +125,11 @@
 
 - _How to install TensorFlow dependencies on [AIC](https://aic.ufal.mff.cuni.cz)?_
 
-  To install CUDA, cuDNN and Python 3.9 on AIC, you should add the following to
-  your `.profile`:
+  To enable CUDA 11.2 and cuDNN 8.1 on AIC, you can either use `modules` as described in
+  the section “CUDA modules” at https://aic.ufal.mff.cuni.cz/index.php/Submitting_GPU_Jobs,
+  or you can add the following to your `.profile`:
   ```
-  export PATH="/lnet/aic/data/python/3.9.9/bin:$PATH"
+  export PATH="/lnet/aic/opt/cuda/cuda-11.2/bin:$PATH"
   export LD_LIBRARY_PATH="/lnet/aic/opt/cuda/cuda-11.2/lib64:/lnet/aic/opt/cuda/cuda-11.2/cudnn/8.1.1/lib64:/lnet/aic/opt/cuda/cuda-11.2/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
   ```
 
@@ -155,15 +141,15 @@
 
   TL;DR: To run an interactive GPU job with 1 CPU, 1 GPU, and 16GB RAM, run:
   ```
-  qrsh -q gpu.q -l gpu=1,mem_free=16G,h_data=16G -pty yes bash -l
+  srun -p gpu -c1 --gpus=1 --mem=16G --pty bash
   ```
 
-  To run a script requiring a GPU in a non-interactive way, use
+  To run a shell script requiring a GPU in a non-interactive way, use
   ```
-  qsub -q gpu.q -l gpu=1,mem_free=16G,h_data=16G -cwd -b y SCRIPT_PATH
+  sbatch -p gpu -c1 --gpus=1 --mem=16G SCRIPT_PATH
   ```
 
-  If you want to run a CPU-only computation, remove the `-q gpu.q` and `gpu=1,`
+  If you want to run a CPU-only computation, remove the `-p gpu` and `--gpus=1`
   from the above commands.
 
 ### TOCEntry: Git
@@ -371,30 +357,6 @@
       ), label
   dataset.map(augment)
   ```
-
-### TOCEntry: Debugging
-
-- _How to debug problems “inside” computation graphs with weird stack traces?_
-
-  At the beginning of your program, run
-  ```python
-  tf.config.run_functions_eagerly(True)
-  ```
-  The `tf.funcion`s (with the exception of the ones used in `tf.data` pipelines)
-  are then not traced (i.e., no computation graphs are created) and the pure
-  Python code is executed instead.
-
-- _How to debug problems “inside” `tf.data` pipelines with weird stack traces?_
-
-  Unfortunately, the solution above does not affect tracing in `tf.data`
-  pipelines (for example in `tf.data.Dataset.map`). However, since TF 2.5, the
-  command
-  ```python
-  tf.data.experimental.enable_debug_mode()
-  ```
-  should disable any asynchrony, parallelism, or non-determinism and forces
-  Python execution (as opposed to trace-compiled graph execution) of
-  user-defined functions passed into transformations such as `tf.data.Dataset.map`.
 
 ### TOCEntry: Finetuning
 

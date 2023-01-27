@@ -1,13 +1,8 @@
 ### Lecture: 1. Introduction to Deep Learning
-#### Date: Feb 14
-#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides/?01
-#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2122/slides.pdf/npfl114-2122-01.pdf,PDF Slides
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-2122-01-czech.mp4, CZ Lecture
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2122/npfl114-2122-01-english.mp4, EN Lecture
+#### Date: Feb 13
+#### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?01
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2122-01.pdf,PDF Slides
 #### Questions: #lecture_1_questions
-#### Lecture assignment: numpy_entropy
-#### Lecture assignment: pca_first
-#### Lecture assignment: mnist_layers_activations
 
 - Random variables, probability distributions, expectation, variance, Bernoulli
   distribution, Categorical distribution [Sections 3.2, 3.3, 3.8, 3.9.1 and 3.9.2 of DLB]

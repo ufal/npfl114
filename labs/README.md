@@ -1,9 +1,9 @@
 The tasks are evaluated automatically using the
 [ReCodEx Code Examiner](https://recodex.mff.cuni.cz/).
 
-The evaluation is performed using Python 3.9, TensorFlow 2.8.0, TensorFlow
-Addons 0.16, TensorFlow Probability 0.12.1, TensorFlow Hub 0.11.0, and OpenAI
-Gym 0.20.0. You should
+The evaluation is performed using Python 3.9, TensorFlow 2.11.0, TensorFlow
+Addons 0.19.0, TensorFlow Probability 0.19.0, TensorFlow Hub 0.12.0, HF Transformers
+4.26.0, and Gymnasium 0.27.1. You should
 [install the exact version of these packages yourselves](#faq_install).
 
 ### Teamwork
