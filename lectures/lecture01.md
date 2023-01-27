@@ -1,7 +1,7 @@
 ### Lecture: 1. Introduction to Deep Learning
 #### Date: Feb 13
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?01
-#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2122-01.pdf,PDF Slides
+#### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-01.pdf,PDF Slides
 #### Questions: #lecture_1_questions
 
 - Random variables, probability distributions, expectation, variance, Bernoulli
