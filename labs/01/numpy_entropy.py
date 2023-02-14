@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import argparse
-from typing import Tuple
 
 import numpy as np
 
@@ -12,7 +11,7 @@ parser.add_argument("--recodex", default=False, action="store_true", help="Evalu
 # If you add more arguments, ReCodEx will keep them with your default values.
 
 
-def main(args: argparse.Namespace) -> Tuple[float, float, float]:
+def main(args: argparse.Namespace) -> tuple[float, float, float]:
     # TODO: Load data distribution, each line containing a datapoint -- a string.
     with open(args.data_path, "r") as data:
         for line in data:
@@ -29,7 +28,7 @@ def main(args: argparse.Namespace) -> Tuple[float, float, float]:
     with open(args.model_path, "r") as model:
         for line in model:
             line = line.rstrip("\n")
-            # TODO: process the line, aggregating using Python data structures
+            # TODO: Process the line, aggregating using Python data structures
 
     # TODO: Create a NumPy array containing the model distribution.
 
