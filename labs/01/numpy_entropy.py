@@ -29,7 +29,7 @@ def main(args: argparse.Namespace) -> Tuple[float, float, float]:
     with open(args.model_path, "r") as model:
         for line in model:
             line = line.rstrip("\n")
-            # TODO: process the line, aggregating using Python data structures
+            # TODO: Process the line, aggregating using Python data structures.
 
     # TODO: Create a NumPy array containing the model distribution.
 
