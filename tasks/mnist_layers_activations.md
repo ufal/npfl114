@@ -97,12 +97,4 @@ loss: 0.4905 - accuracy: 0.8771 - val_loss: 0.2123 - val_accuracy: 0.9452
 ```
 loss: 0.2727 - accuracy: 0.9185 - val_loss: 0.1180 - val_accuracy: 0.9644
 ```
-- `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=10 --activation=relu`
-```
-loss: 0.3648 - accuracy: 0.8872 - val_loss: 0.1340 - val_accuracy: 0.9642
-```
-- `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=10 --activation=sigmoid`
-```
-loss: 2.2465 - accuracy: 0.1236 - val_loss: 1.9748 - val_accuracy: 0.1996
-```
 #### Tests End:
