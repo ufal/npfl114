@@ -45,10 +45,17 @@
       version `1.52` is officially released, the `grpcio` package can be omitted
       from the installation list.
 
-- _**GPU** support on Linux and Windows_
+- _**GPU** support on Linux_
 
   TensorFlow 2.11 supports NVIDIA GPU out of the box, but you need to install
   CUDA 11.2 and cuDNN 8.1 libraries yourself.
+
+- _**GPU** support on Windows_
+
+  TensorFlow 2.11 dropped NVIDIA GPU support for Windows native builds, and
+  supports GPUs on Windows only via WSL2 – see the [detailed instructions
+  how to install official TensorFlow 2.11 packages with GPU support
+  in WSL2](https://www.tensorflow.org/install/pip#windows-wsl2_1).
 
 - _**GPU** support on macOS_
 
