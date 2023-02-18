@@ -54,8 +54,8 @@
 
   TensorFlow 2.11 dropped NVIDIA GPU support for Windows native builds, and
   supports GPUs on Windows only via WSL2 – see the [detailed instructions
-  how to install official TensorFlow 2.11 packages with GPU support
-  in WSL2](https://www.tensorflow.org/install/pip#windows-wsl2_1).
+  how to install official TensorFlow packages with GPU support in
+  WSL2](https://www.tensorflow.org/install/pip#windows-wsl2_1).
 
 - _**GPU** support on macOS_
 
