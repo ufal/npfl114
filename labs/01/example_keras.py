@@ -19,7 +19,7 @@ parser.add_argument("--threads", default=1, type=int, help="Maximum number of th
 
 
 def main(args: argparse.Namespace) -> None:
-    # Fix random seeds and threads
+    # Set the random seed and the number of threads.
     tf.keras.utils.set_random_seed(args.seed)
     tf.config.threading.set_inter_op_parallelism_threads(args.threads)
     tf.config.threading.set_intra_op_parallelism_threads(args.threads)
