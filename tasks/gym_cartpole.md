@@ -2,8 +2,8 @@
 #### Date: Deadline: Mar 6, 7:59 a.m.
 #### Points: 3 points
 
-Solve the [CartPole-v1 environment](https://www.gymlibrary.ml/environments/classic_control/cart_pole/)
-from the [Gym library](https://www.gymlibrary.ml/), utilizing only provided supervised
+Solve the [CartPole-v1 environment](https://gymnasium.farama.org/environments/classic_control/cart_pole/)
+from the [Gymnasium library](https://gymnasium.farama.org/), utilizing only provided supervised
 training data. The data is available in
 [gym_cartpole_data.txt](https://github.com/ufal/npfl114/tree/master/labs/02/gym_cartpole_data.txt)
 file, each line containing one observation (four space separated floats) and
