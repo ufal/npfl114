@@ -3,6 +3,10 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?02
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-02.pdf,PDF Slides
 #### Questions: #lecture_2_questions
+#### Lecture assignment: sgd_backpropagation
+#### Lecture assignment: sgd_manual
+#### Lecture assignment: mnist_training
+#### Lecture assignment: gym_cartpole
 
 - Capacity, overfitting, underfitting, regularization [Section 5.2 of DLB]
 - Hyperparameters and validation sets [Section 5.3 of DLB]
