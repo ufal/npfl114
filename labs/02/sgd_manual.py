@@ -145,7 +145,7 @@ def main(args: argparse.Namespace) -> Tuple[float, float]:
     test_accuracy = ...
     print("Test accuracy after epoch {} is {:.2f}".format(epoch + 1, 100 * test_accuracy), flush=True)
     with writer.as_default(step=epoch + 1):
-        tf.summary.scalar("test/accuracy", 100 * accuracy)
+        tf.summary.scalar("test/accuracy", 100 * test_accuracy)
 
     # Return dev and test accuracies for ReCodEx to validate.
     return accuracy, test_accuracy
