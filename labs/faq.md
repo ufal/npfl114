@@ -37,13 +37,7 @@
   - With an **Intel** processor, you do not need anything special.
 
   - If you have **Apple Silicon**, you need to replace the `tensorflow~=2.11.0` package
-    by `tensorflow-macos~=2.11.0 grpcio~=1.52.0rc1`.
-
-    - The `grpcio` currently needs to be added because versions prior to `1.52`
-      are not compiled for Apple Silicon, and the version `1.52.0rc1` is
-      a pre-release version and so you must explicitly ask for it. Once the
-      version `1.52` is officially released, the `grpcio` package can be omitted
-      from the installation list.
+    by `tensorflow-macos~=2.11.0`.
 
 - _**GPU** support on Linux_
 
