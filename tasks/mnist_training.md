@@ -12,9 +12,10 @@ template and implement the following:
 - Optionally using momentum for the `SGD` optimizer.
 - Using specified learning rate for the optimizer.
 - Optionally use a given learning rate schedule. The schedule can be either
-  `linear`, `exponential`, or `cosine`. Additionally, the final learning rate is
-  given and the decay should gradually decrease the learning rate to reach the
-  final learning rate just after the training.
+  `linear`, `exponential`, or `cosine`. If a schedule is specified, you also
+  get a final learning rate, and the learning rate should be gradually decresed
+  during training to reach the final learning rate just after the training
+  (i.e., the first update after the training would use exactly the final learning rate).
 
 #### Examples Start: mnist_training_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._

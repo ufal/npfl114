@@ -59,29 +59,31 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # - If `args.decay` is not specified, pass the given `args.learning_rate`
     #   directly to the optimizer as a `learning_rate` argument.
     # - If `args.decay` is set, then
-    #   - for `linear`, use `tf.optimizers.schedules.PolynomialDecay` with default `power=1.0`
-    #     using the given `args.learning_rate_final`;
+    #   - for `linear`, use `tf.optimizers.schedules.PolynomialDecay` with the
+    #     default `power=1.0`, and set `end_learning_rate` appropriately;
     #     https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/PolynomialDecay
-    #   - for `exponential`, use `tf.optimizers.schedules.ExponentialDecay`
-    #     and set `decay_rate` appropriately to reach `args.learning_rate_final`
-    #     just after the training (and keep the default `staircase=False`).
+    #   - for `exponential`, use `tf.optimizers.schedules.ExponentialDecay`,
+    #     and set `decay_rate` appropriately (keep the default `staircase=False`);
     #     https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/ExponentialDecay
-    #   - for `cosine`, use `tf.optimizers.schedules.CosineDecay`
-    #     and set `alpha` appropriately to reach `args.learning_rate_final`
-    #     just after the training.
+    #   - for `cosine`, use `tf.optimizers.schedules.CosineDecay`,
+    #     and set `alpha` appropriately;
     #     https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/schedules/CosineDecay
-    #   and pass the created `{Polynomial,Exponential,Cosine}Decay` to the optimizer
+    #   - in all cases, you should reach the `args.learning_rate_final` just after the
+    #     training, i.e., the first update after the training should use exactly the
+    #     given `args.learning_rate_final`;
+    #   - in all cases, `decay_steps` must be **the total number of optimizer updates**,
+    #     i.e., the total number of training batches in all epochs. The size of
+    #     the training MNIST dataset is `mnist.train.size`, and you can assume it
+    #     is exactly divisible by `args.batch_size`.
+    #   Pass the created `{Polynomial,Exponential,Cosine}Decay` to the optimizer
     #   using the `learning_rate` constructor argument.
-    #   In all cases, `decay_steps` must be **the total number of optimizer updates**,
-    #   i.e., the total number of training batches in all epochs. The size of
-    #   the training MNIST dataset is `mnist.train.size`, and you can assume it
-    #   is divisible by `args.batch_size`.
     #
     #   If a learning rate schedule is used, TensorBoard automatically logs the last used learning
     #   rate value in every epoch. Additionally, you can find out the last used learning
     #   rate by printing `model.optimizer.learning_rate` (the original schedule is available
     #   in `model.optimizer._learning_rate` if needed), so after training, the learning rate
-    #   should be close to `args.learning_rate_final`.
+    #   should be close to `args.learning_rate_final` (not equal, because
+    #   `model.optimizer.learning_rate` returns the last learning rate used during training).
 
     model.compile(
         optimizer=...,
