@@ -6,8 +6,8 @@ import numpy as np
 
 parser = argparse.ArgumentParser()
 # These arguments will be set appropriately by ReCodEx, even if you change them.
-parser.add_argument("--data_path", default="numpy_entropy_data.txt", type=str, help="Data distribution path.")
-parser.add_argument("--model_path", default="numpy_entropy_model.txt", type=str, help="Model distribution path.")
+parser.add_argument("--data_path", default="numpy_entropy_data_1.txt", type=str, help="Data distribution path.")
+parser.add_argument("--model_path", default="numpy_entropy_model_1.txt", type=str, help="Model distribution path.")
 parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
 # If you add more arguments, ReCodEx will keep them with your default values.
 
