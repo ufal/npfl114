@@ -5,9 +5,11 @@
 #### Tests: sgd_backpropagation_tests
 
 In this exercise you will learn how to compute gradients using the so-called
-**automatic differentiation**, which is implemented by an automated
-backpropagation algorithm in TensorFlow. You will then perform training
-by running manually implemented minibatch stochastic gradient descent.
+**automatic differentiation**, which allows to automatically run backpropagation
+algorithm for a given computation. You can read the [guide on automatic
+differentiation in TensorFlow](https://www.tensorflow.org/guide/autodiff) if
+interested. After computing the gradient, you should then perform training by
+running manually implemented minibatch stochastic gradient descent.
 
 Starting with the
 [sgd_backpropagation.py](https://github.com/ufal/npfl114/tree/master/labs/02/sgd_backpropagation.py)
