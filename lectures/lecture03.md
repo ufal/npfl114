@@ -3,6 +3,9 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?03
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-03.pdf,PDF Slides
 #### Questions: #lecture_3_questions
+#### Lecture assignment: mnist_regularization
+#### Lecture assignment: mnist_ensemble
+#### Lecture assignment: uppercase
 
 - Softmax with NLL (negative log likelihood) as a loss function [Section 6.2.2.3 of DLB, notably equation (6.30); plus slides 10-12]
 - Regularization [Chapter 7 until Section 7.1 of DLB]
