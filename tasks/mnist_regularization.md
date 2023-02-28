@@ -17,7 +17,8 @@ template and implement the following:
   `CategoricalCrossentropy` which offers `label_smoothing` argument.
 
 In addition to submitting the task in ReCodEx, also run the following
-variations and observe the results in TensorBoard,
+variations and observe the results in TensorBoard
+(or [online here](https://tensorboard.dev/experiment/EK3HQIbuQU2CXyT1Cm5wbg/)),
 notably the training, development and test set accuracy and loss:
 - dropout rate `0`, `0.3`, `0.5`, `0.6`, `0.8`;
 - weight decay `0`, `0.1`, `0.3`, `0.5`, `0.1`;
