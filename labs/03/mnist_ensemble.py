@@ -63,7 +63,7 @@ def main(args: argparse.Namespace) -> Tuple[List[float], List[float]]:
         individual_accuracy = ...
 
         # TODO: Compute the accuracy on the dev set for
-        # the ensemble `models[0:model+1].
+        # the ensemble `models[0:model+1]`.
         #
         # Generally you can choose one of the following approaches:
         # 1) Use Keras Functional API and construct a `tf.keras.Model` averaging the models
