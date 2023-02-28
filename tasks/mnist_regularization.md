@@ -10,16 +10,14 @@ template and implement the following:
 - Allow using dropout with rate `args.dropout`. Add a dropout layer after the
   first `Flatten` and also after all `Dense` hidden layers (but not after the
   output layer).
-- Allow using L2 regularization with weight `args.l2`. Use
-  `tf.keras.regularizers.L2` as a regularizer for all kernels (but not
-  biases) of all `Dense` layers (including the last one).
+- Allow using AdamW with weight decay with strength of `args.weight_decay`,
+  making sure the weight decay is not applied on bias.
 - Allow using label smoothing with weight `args.label_smoothing`. Instead
   of `SparseCategoricalCrossentropy`, you will need to use
   `CategoricalCrossentropy` which offers `label_smoothing` argument.
 
 In addition to submitting the task in ReCodEx, also run the following
-variations and observe the results in TensorBoard
-(or [online here](https://tensorboard.dev/experiment/9lu5xlnvTYODHPs2UkS5Jw/)),
+variations and observe the results in TensorBoard,
 notably the training, development and test set accuracy and loss:
 - dropout rate `0`, `0.3`, `0.5`, `0.6`, `0.8`;
 - weight decay `0`, `0.1`, `0.3`, `0.5`, `0.1`;
