@@ -4,6 +4,8 @@
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-03.pdf, PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-03-czech.mp4, CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-03-czech.practicals.mp4, CZ Practicals
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-03-english.mp4, EN Lecture
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-03-english.practicals.mp4, EN Practicals
 #### Questions: #lecture_3_questions
 #### Lecture assignment: mnist_regularization
 #### Lecture assignment: mnist_ensemble
