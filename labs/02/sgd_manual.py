@@ -97,7 +97,7 @@ class Model(tf.Module):
         # Compute the accuracy of the model prediction
         correct = 0
         for batch in dataset.batches(self._args.batch_size):
-            # TODO(sgd_backpropagation): Compute the probabilities of the batch images
+            # TODO: Compute the probabilities of the batch images
             probabilities = ...
 
             # TODO(sgd_backpropagation): Evaluate how many batch examples were predicted
