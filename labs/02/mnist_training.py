@@ -84,6 +84,10 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     #   in `model.optimizer._learning_rate` if needed), so after training, the learning rate
     #   should be close to `args.learning_rate_final` (not equal, because
     #   `model.optimizer.learning_rate` returns the last learning rate used during training).
+    #
+    # Note that since TF 2.11, all optimizers from `tf.optimizers` module perform JIT compilation
+    # on a GPU using XLA. However, that requires XLA to be configured properly. You can avoid
+    # the JIT compilation by passing `jit_compile=False` to the optimizer constructor.
 
     model.compile(
         optimizer=...,
