@@ -11,7 +11,7 @@ import tensorflow as tf
 from cifar10 import CIFAR10
 
 # TODO: Define reasonable defaults and optionally more parameters.
-# Also, you can set the number of the threads 0 to use all your CPU cores.
+# Also, you can set the number of threads to 0 to use all your CPU cores.
 parser = argparse.ArgumentParser()
 parser.add_argument("--batch_size", default=None, type=int, help="Batch size.")
 parser.add_argument("--debug", default=False, action="store_true", help="If given, run functions eagerly.")
