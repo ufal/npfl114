@@ -107,7 +107,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # - Call `.map(image_to_float)` to convert images from tf.uint8 to tf.float32.
     #   Note that you want to do it after shuffling to minimize the buffer size.
     # - If `args.augment` is set, perform dataset augmentation via a call to either
-    #   - `.map(train_augment_tf_layers)`, if `args.augment == "tf_image"`, or
+    #   - `.map(train_augment_tf_image)`, if `args.augment == "tf_image"`, or
     #   - `.map(train_augment_layers)`, if `args.augment == "layers"`.
     # - Finally, call `.batch(args.batch_size)` to generate batches.
     # - Optionally, you might want to add `.prefetch(tf.data.AUTOTUNE)` as
