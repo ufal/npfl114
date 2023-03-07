@@ -59,13 +59,34 @@
   python3 -m pip install tensorflow-metal==0.7.0
   ```
 
-- _Errors when running with a GPU_
+- _Common errors when running on a **GPU**_
 
-  If you encounter errors when running with a GPU:
-  - if you are using the GPU also for displaying, try using the following
-    environment variable: `export TF_FORCE_GPU_ALLOW_GROWTH=true`
-  - you can rerun with `export TF_CPP_MIN_LOG_LEVEL=0` environmental variable,
-    which increases verbosity of the log messages.
+  When your program crashes when using a GPU:
+  - If you are using the GPU also for displaying, you usually encounter
+    memory or initialization errors. In that case, try using the
+    following environment variable: `export TF_FORCE_GPU_ALLOW_GROWTH=true`.
+  - If you encounter XLA errors, usually one of the following:
+    ```
+    Can't find libdevice directory ${CUDA_DIR}/nvvm/libdevice.
+    ...
+    Couldn't invoke ptxas --version
+    ...
+    InternalError: libdevice not found at ./libdevice.10.bc [Op:__some_op]
+    ```
+    then TensorFlow is trying to JIT compile a computation graph using XLA
+    which is not properly configured. This happens by default only if you do not
+    pass `jit_compile=False` to an optimizer – you can either pass it (all our
+    templates explicitly constructing an optimizer do), or you can configure
+    XLA properly:
+    - For official instructions, see the _Ubuntu 22.04 section_ of
+      [the install guide](https://www.tensorflow.org/install/pip#linux_1).
+    - For manual configuration:
+      - Use enfironmental variable `export XLA_FLAGS=--xla_gpu_cuda_data_dir=CUDA_DIR`
+        and make sure that the `CUDA_DIR` contains `nvvm/libdevice/libdevice.10.bc`.
+      - Make sure `ptxas` is in the `PATH`.
+  - In case of other errors, you can rerun your program with `export
+    TF_CPP_MIN_LOG_LEVEL=0` environmental variable, which increases verbosity of
+    the log messages.
 
 ### TOCEntry: MetaCentrum
 
