@@ -119,7 +119,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     if args.show_images:
         summary_writer = tf.summary.create_file_writer(os.path.join(args.logdir, "images"))
         with summary_writer.as_default(step=0):
-            for images, _ in train.unbatch().batch(100).take(1):
+            for images, _ in train.rebatch(100).take(1):
                 images = tf.transpose(tf.reshape(images, [10, 10 * images.shape[1]] + images.shape[2:]), [0, 2, 1, 3])
                 images = tf.transpose(tf.reshape(images, [1, 10 * images.shape[1]] + images.shape[2:]), [0, 2, 1, 3])
                 tf.summary.image("train/batch", images)
