@@ -12,7 +12,7 @@ from uppercase_data import UppercaseData
 
 # TODO: Set reasonable values for the hyperparameters, especially for
 # `alphabet_size`, `batch_size`, `epochs`, and `windows`.
-# Also, you can set the number of the threads 0 to use all your CPU cores.
+# Also, you can set the number of the threads to 0 to use all your CPU cores.
 parser = argparse.ArgumentParser()
 parser.add_argument("--alphabet_size", default=None, type=int, help="If given, use this many most frequent chars.")
 parser.add_argument("--batch_size", default=None, type=int, help="Batch size.")
@@ -45,8 +45,8 @@ def main(args: argparse.Namespace) -> None:
     # TODO: Implement a suitable model, optionally including regularization, select
     # good hyperparameters and train the model.
     #
-    # The inputs are _windows_ of fixed size (`args.window` characters on left,
-    # the character in question, and `args.window` characters on right), where
+    # The inputs are _windows_ of fixed size (`args.window` characters on the left,
+    # the character in question, and `args.window` characters on the right), where
     # each character is represented by a `tf.int32` index. To suitably represent
     # the characters, you can:
     # - Convert the character indices into _one-hot encoding_. There is no
