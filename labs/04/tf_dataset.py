@@ -19,7 +19,7 @@ parser.add_argument("--debug", default=False, action="store_true", help="If give
 parser.add_argument("--epochs", default=5, type=int, help="Number of epochs.")
 parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
-parser.add_argument("--show_images", default=True, action="store_true", help="Show augmented images.")
+parser.add_argument("--show_images", default=False, action="store_true", help="Show augmented images.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 # If you add more arguments, ReCodEx will keep them with your default values.
 
