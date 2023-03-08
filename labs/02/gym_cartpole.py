@@ -18,8 +18,8 @@ parser.add_argument("--render", default=False, action="store_true", help="Render
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
 # If you add more arguments, ReCodEx will keep them with your default values.
-parser.add_argument("--batch_size", default=None, type=int, help="Batch size.")
-parser.add_argument("--epochs", default=None, type=int, help="Number of epochs.")
+parser.add_argument("--batch_size", default=..., type=int, help="Batch size.")
+parser.add_argument("--epochs", default=..., type=int, help="Number of epochs.")
 parser.add_argument("--model", default="gym_cartpole_model.h5", type=str, help="Output model path.")
 
 

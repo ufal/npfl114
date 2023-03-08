@@ -14,13 +14,13 @@ from uppercase_data import UppercaseData
 # `alphabet_size`, `batch_size`, `epochs`, and `window`.
 # Also, you can set the number of threads to 0 to use all your CPU cores.
 parser = argparse.ArgumentParser()
-parser.add_argument("--alphabet_size", default=None, type=int, help="If given, use this many most frequent chars.")
-parser.add_argument("--batch_size", default=None, type=int, help="Batch size.")
+parser.add_argument("--alphabet_size", default=..., type=int, help="If given, use this many most frequent chars.")
+parser.add_argument("--batch_size", default=..., type=int, help="Batch size.")
 parser.add_argument("--debug", default=False, action="store_true", help="If given, run functions eagerly.")
-parser.add_argument("--epochs", default=None, type=int, help="Number of epochs.")
+parser.add_argument("--epochs", default=..., type=int, help="Number of epochs.")
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
-parser.add_argument("--window", default=None, type=int, help="Window size to use.")
+parser.add_argument("--window", default=..., type=int, help="Window size to use.")
 
 
 def main(args: argparse.Namespace) -> None:
