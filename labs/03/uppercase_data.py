@@ -10,25 +10,26 @@ import tensorflow as tf
 
 # Loads the Uppercase data.
 # - The data consists of three Datasets
-#   - train
-#   - dev
-#   - test [all in lowercase]
-# - When loading, maximum number of alphabet characters can be specified,
-#   in which case that many most frequent characters will be used, and all
-#   other will be remapped to "<unk>".
+#   - `train`
+#   - `dev`
+#   - `test` [all in lowercase]
+# - When loading, you need to specify `window` and `alphabet_size`. If
+#   `alphabet_size` is nonzero, it specifies the maximum number of alphabet
+#   characters, in which case that many most frequent characters will be used,
+#   and all other will be remapped to "<unk>".
 # - Features are generated using a sliding window of given size,
 #   i.e., for a character, we include left `window` characters, the character
 #   itself and right `window` characters, `2 * window + 1` in total.
 # - Each dataset (train/dev/test) has the following members:
-#   - size: the length of the text
-#   - data: a dictionary with keys
-#       "windows": input examples with shape [size, 2 * window_size + 1],
-#          corresponding to indices of input lowercased characters
-#       "labels": input labels with shape [size], each a 0/1 value whether
-#          the corresponding input in `windows` is lowercased/uppercased
-#   - text: the original text (of course lowercased in case of the test set)
-#   - alphabet: an alphabet used by `windows`
-#   - dataset: a TensorFlow tf.data.Dataset producing as examples dictionaries
+#   - `size`: the length of the text
+#   - `data`: a dictionary with keys
+#       - "windows": input examples with shape `[size, 2 * window_size + 1]`,
+#            corresponding to indices of input lowercased characters
+#       - "labels": input labels with shape `[size]`, each a 0/1 value whether
+#            the corresponding input in `windows` is lowercased/uppercased
+#   - `text`: the original text (of course lowercased in case of the test set)
+#   - `alphabet`: an alphabet used by `windows`
+#   - `dataset`: a TensorFlow `tf.data.Dataset` producing as examples dictionaries
 #       with keys "windows" and "labels"
 class UppercaseData:
     LABELS: int = 2
