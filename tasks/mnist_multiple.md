@@ -8,11 +8,14 @@ Start with the [mnist_multiple.py](https://github.com/ufal/npfl114/tree/master/l
 template and:
 - The goal is to create a model, which given two input MNIST images compares, if the
   digit on the first one is larger than on the second one.
+- We perform this this comparison in two different ways:
+  - first by directly predicting the comparison by the network (_direct comparison_),
+  - then by first classifying the images into digits and then comparing these predictions (_indirect comparison_).
 - The model has four outputs:
-  - direct comparison whether the first digit is larger than the second one,
+  - _direct comparison_ whether the first digit is larger than the second one,
   - digit classification for the first image,
   - digit classification for the second image,
-  - indirect comparison comparing the digits predicted by the above two outputs.
+  - _indirect comparison_ comparing the digits predicted by the above two outputs.
 - You need to implement:
   - the model, using multiple inputs, outputs, losses and metrics;
   - construction of two-image dataset examples using regular MNIST data via the `tf.data` API.
