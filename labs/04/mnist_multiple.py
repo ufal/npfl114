@@ -93,7 +93,7 @@ class Model(tf.keras.Model):
         # Start by using the original MNIST data
         dataset = tf.data.Dataset.from_tensor_slices((mnist_dataset.data["images"], mnist_dataset.data["labels"]))
 
-        # TODO: If `training`, shuffle the data with `buffer_size=10000` and `seed=args.seed`.
+        # TODO: If `training`, shuffle the data with `buffer_size=10_000` and `seed=args.seed`.
 
         # TODO: Combine pairs of examples by creating batches of size exactly 2.
 

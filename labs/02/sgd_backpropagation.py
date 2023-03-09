@@ -122,7 +122,7 @@ def main(args: argparse.Namespace) -> Tuple[float, float]:
     mnist = MNIST()
 
     # Create the TensorBoard writer
-    writer = tf.summary.create_file_writer(args.logdir, flush_millis=10 * 1000)
+    writer = tf.summary.create_file_writer(args.logdir, flush_millis=10_000)
 
     # Create the model
     model = Model(args)

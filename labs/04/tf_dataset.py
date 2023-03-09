@@ -41,7 +41,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     ))
 
     # Load the data
-    cifar = CIFAR10(size={"dev": 1000})
+    cifar = CIFAR10(size={"dev": 1_000})
 
     # Create the model
     inputs = tf.keras.layers.Input(shape=[CIFAR10.H, CIFAR10.W, CIFAR10.C])
@@ -101,8 +101,8 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
         return image, label
 
     # TODO: Now prepare the training pipeline.
-    # - First, use the `.take(5000)` method to utilize only the first 5000 examples.
-    # - Call `.shuffle(5000, seed=args.seed)` to shuffle the data using
+    # - First, use the `.take(5_000)` method to utilize only the first 5 000 examples.
+    # - Call `.shuffle(5_000, seed=args.seed)` to shuffle the data using
     #   the given seed and a buffer of the size of the whole data.
     # - Call `.map(image_to_float)` to convert images from tf.uint8 to tf.float32.
     #   Note that you want to do it after shuffling to minimize the buffer size.

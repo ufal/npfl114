@@ -43,7 +43,7 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     ))
 
     # Load data
-    mnist = MNIST(size={"train": 5000})
+    mnist = MNIST(size={"train": 5_000})
 
     # TODO: Incorporate dropout to the model below. Namely, add
     #   a `tf.keras.layers.Dropout` layer with `args.dropout` rate after
