@@ -95,7 +95,8 @@ class Model(tf.keras.Model):
 
         # TODO: If `training`, shuffle the data with `buffer_size=10_000` and `seed=args.seed`.
 
-        # TODO: Combine pairs of examples by creating batches of size exactly 2.
+        # TODO: Combine pairs of examples by creating batches of size exactly 2 (you would throw
+        # away the last example if the original dataset size were odd; but in MNIST it is even).
 
         # TODO: Map pairs of images to elements suitable for our model. Notably,
         # the elements should be pairs `(input, output)`, with
