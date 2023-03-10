@@ -1,8 +1,8 @@
 ### Assignment: mnist_layers_activations
 #### Date: Deadline: Feb 27, 7:59 a.m.
 #### Points: 2 points
-#### Examples: mnist_layers_activations_examples
 #### Tests: mnist_layers_activations_tests
+#### Examples: mnist_layers_activations_examples
 
 Before solving the assignment, start by playing with
 [example_keras_tensorboard.py](https://github.com/ufal/npfl114/tree/master/labs/01/example_keras_tensorboard.py),
@@ -20,6 +20,33 @@ template and implement the following:
   and `sigmoid`.
 - Print the final accuracy on the test set.
 
+#### Tests Start: mnist_layers_activations_tests
+_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
+1. `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=0 --activation=none`
+```
+loss: 0.5390 - accuracy: 0.8607 - val_loss: 0.2745 - val_accuracy: 0.9288
+```
+2. `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=1 --activation=none`
+```
+loss: 0.3809 - accuracy: 0.8915 - val_loss: 0.2403 - val_accuracy: 0.9344
+```
+3. `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=1 --activation=relu`
+```
+loss: 0.3093 - accuracy: 0.9130 - val_loss: 0.1374 - val_accuracy: 0.9624
+```
+4. `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=1 --activation=tanh`
+```
+loss: 0.3304 - accuracy: 0.9067 - val_loss: 0.1601 - val_accuracy: 0.9580
+```
+5. `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=1 --activation=sigmoid`
+```
+loss: 0.4905 - accuracy: 0.8771 - val_loss: 0.2123 - val_accuracy: 0.9452
+```
+6. `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=3 --activation=relu`
+```
+loss: 0.2727 - accuracy: 0.9185 - val_loss: 0.1180 - val_accuracy: 0.9644
+```
+#### Tests End:
 #### Examples Start: mnist_layers_activations_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 mnist_layers_activations.py --hidden_layers=0 --activation=none`
@@ -71,30 +98,3 @@ Epoch  5/10 loss: 0.5975 - accuracy: 0.8113 - val_loss: 0.4746 - val_accuracy: 0
 Epoch 10/10 loss: 0.3410 - accuracy: 0.9216 - val_loss: 0.3415 - val_accuracy: 0.9198
 ```
 #### Examples End:
-#### Tests Start: mnist_layers_activations_tests
-_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=0 --activation=none`
-```
-loss: 0.5390 - accuracy: 0.8607 - val_loss: 0.2745 - val_accuracy: 0.9288
-```
-- `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=1 --activation=none`
-```
-loss: 0.3809 - accuracy: 0.8915 - val_loss: 0.2403 - val_accuracy: 0.9344
-```
-- `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=1 --activation=relu`
-```
-loss: 0.3093 - accuracy: 0.9130 - val_loss: 0.1374 - val_accuracy: 0.9624
-```
-- `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=1 --activation=tanh`
-```
-loss: 0.3304 - accuracy: 0.9067 - val_loss: 0.1601 - val_accuracy: 0.9580
-```
-- `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=1 --activation=sigmoid`
-```
-loss: 0.4905 - accuracy: 0.8771 - val_loss: 0.2123 - val_accuracy: 0.9452
-```
-- `python3 mnist_layers_activations.py --epochs=1 --hidden_layers=3 --activation=relu`
-```
-loss: 0.2727 - accuracy: 0.9185 - val_loss: 0.1180 - val_accuracy: 0.9644
-```
-#### Tests End:

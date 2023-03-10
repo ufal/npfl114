@@ -1,8 +1,8 @@
 ### Assignment: mnist_cnn
 #### Date: Deadline: Mar 20, 7:59 a.m.
 #### Points: 3 points
-#### Examples: mnist_cnn_examples
 #### Tests: mnist_cnn_tests
+#### Examples: mnist_cnn_examples
 
 To pass this assignment, you will learn to construct basic convolutional
 neural network layers. Start with the
@@ -37,6 +37,33 @@ You can assume the resulting network is valid; it is fine to crash if it is not.
 After a successful ReCodEx submission, you can try obtaining the best accuracy
 on MNIST and then advance to `cifar_competition`.
 
+#### Tests Start: mnist_cnn_tests
+_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
+1. `python3 mnist_cnn.py --epochs=1 --cnn=F,H-100`
+```
+loss: 0.3093 - accuracy: 0.9130 - val_loss: 0.1374 - val_accuracy: 0.9624
+```
+2. `python3 mnist_cnn.py --epochs=1 --cnn=F,H-100,D-0.5`
+```
+loss: 0.4770 - accuracy: 0.8594 - val_loss: 0.1624 - val_accuracy: 0.9552
+```
+3. `python3 mnist_cnn.py --epochs=1 --cnn=M-5-2,F,H-50`
+```
+loss: 0.7365 - accuracy: 0.7773 - val_loss: 0.3899 - val_accuracy: 0.8800
+```
+4. `python3 mnist_cnn.py --epochs=1 --cnn=C-8-3-5-same,C-8-3-2-valid,F,H-50`
+```
+loss: 0.8051 - accuracy: 0.7453 - val_loss: 0.3693 - val_accuracy: 0.8868
+```
+5. `python3 mnist_cnn.py --epochs=1 --cnn=CB-6-3-5-valid,F,H-32`
+```
+loss: 0.5878 - accuracy: 0.8189 - val_loss: 0.2638 - val_accuracy: 0.9246
+```
+6. `python3 mnist_cnn.py --epochs=1 --cnn=CB-8-3-5-valid,R-[CB-8-3-1-same,CB-8-3-1-same],F,H-50`
+```
+loss: 0.4186 - accuracy: 0.8674 - val_loss: 0.1729 - val_accuracy: 0.9456
+```
+#### Tests End:
 #### Examples Start: mnist_cnn_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 mnist_cnn.py --cnn=F,H-100`
@@ -105,30 +132,3 @@ Epoch  9/10 loss: 0.0178 - accuracy: 0.9940 - val_loss: 0.0447 - val_accuracy: 0
 Epoch 10/10 loss: 0.0140 - accuracy: 0.9953 - val_loss: 0.0269 - val_accuracy: 0.9930
 ```
 #### Examples End:
-#### Tests Start: mnist_cnn_tests
-_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 mnist_cnn.py --epochs=1 --cnn=F,H-100`
-```
-loss: 0.3093 - accuracy: 0.9130 - val_loss: 0.1374 - val_accuracy: 0.9624
-```
-- `python3 mnist_cnn.py --epochs=1 --cnn=F,H-100,D-0.5`
-```
-loss: 0.4770 - accuracy: 0.8594 - val_loss: 0.1624 - val_accuracy: 0.9552
-```
-- `python3 mnist_cnn.py --epochs=1 --cnn=M-5-2,F,H-50`
-```
-loss: 0.7365 - accuracy: 0.7773 - val_loss: 0.3899 - val_accuracy: 0.8800
-```
-- `python3 mnist_cnn.py --epochs=1 --cnn=C-8-3-5-same,C-8-3-2-valid,F,H-50`
-```
-loss: 0.8051 - accuracy: 0.7453 - val_loss: 0.3693 - val_accuracy: 0.8868
-```
-- `python3 mnist_cnn.py --epochs=1 --cnn=CB-6-3-5-valid,F,H-32`
-```
-loss: 0.5878 - accuracy: 0.8189 - val_loss: 0.2638 - val_accuracy: 0.9246
-```
-- `python3 mnist_cnn.py --epochs=1 --cnn=CB-8-3-5-valid,R-[CB-8-3-1-same,CB-8-3-1-same],F,H-50`
-```
-loss: 0.4186 - accuracy: 0.8675 - val_loss: 0.1724 - val_accuracy: 0.9456
-```
-#### Tests End:

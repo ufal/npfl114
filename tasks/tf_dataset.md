@@ -15,15 +15,15 @@ template and implement the input pipelines employing the `tf.data.Dataset`.
 
 #### Tests Start: tf_dataset_tests
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 tf_dataset.py --epochs=1 --batch_size=100`
+1. `python3 tf_dataset.py --epochs=1 --batch_size=100`
 ```
 loss: 2.1809 - accuracy: 0.1772 - val_loss: 1.9773 - val_accuracy: 0.2630
 ```
-- `python3 tf_dataset.py --epochs=1 --batch_size=50 --augment=tf_image`
+2. `python3 tf_dataset.py --epochs=1 --batch_size=50 --augment=tf_image`
 ```
 loss: 2.1008 - accuracy: 0.2052 - val_loss: 1.8225 - val_accuracy: 0.3070
 ```
-- `python3 tf_dataset.py --epochs=1 --batch_size=50 --augment=layers`
+3. `python3 tf_dataset.py --epochs=1 --batch_size=50 --augment=layers`
 ```
 loss: 2.1820 - accuracy: 0.1664 - val_loss: 2.0104 - val_accuracy: 0.2330
 ```

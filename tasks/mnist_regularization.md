@@ -26,27 +26,27 @@ notably the training, development and test set accuracy and loss:
 
 #### Tests Start: mnist_regularization_tests
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 mnist_regularization.py --epochs=1 --dropout=0.3`
+1. `python3 mnist_regularization.py --epochs=1 --dropout=0.3`
 ```
 loss: 0.7988 - accuracy: 0.7646 - val_loss: 0.3164 - val_accuracy: 0.9116
 ```
-- `python3 mnist_regularization.py --epochs=1 --dropout=0.5 --hidden_layers 300 300`
+2. `python3 mnist_regularization.py --epochs=1 --dropout=0.5 --hidden_layers 300 300`
 ```
 loss: 1.4830 - accuracy: 0.4910 - val_loss: 0.4659 - val_accuracy: 0.8766
 ```
-- `python3 mnist_regularization.py --epochs=1 --weight_decay=0.1`
+3. `python3 mnist_regularization.py --epochs=1 --weight_decay=0.1`
 ```
 loss: 0.6040 - accuracy: 0.8386 - val_loss: 0.2718 - val_accuracy: 0.9236
 ```
-- `python3 mnist_regularization.py --epochs=1 --weight_decay=0.3`
+4. `python3 mnist_regularization.py --epochs=1 --weight_decay=0.3`
 ```
 loss: 0.6062 - accuracy: 0.8384 - val_loss: 0.2744 - val_accuracy: 0.9222
 ```
-- `python3 mnist_regularization.py --epochs=1 --label_smoothing=0.1`
+5. `python3 mnist_regularization.py --epochs=1 --label_smoothing=0.1`
 ```
 loss: 0.9926 - accuracy: 0.8414 - val_loss: 0.7720 - val_accuracy: 0.9222
 ```
-- `python3 mnist_regularization.py --epochs=1 --label_smoothing=0.3`
+6. `python3 mnist_regularization.py --epochs=1 --label_smoothing=0.3`
 ```
 loss: 1.5080 - accuracy: 0.8456 - val_loss: 1.3738 - val_accuracy: 0.9260
 ```

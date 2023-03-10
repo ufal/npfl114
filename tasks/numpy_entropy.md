@@ -1,8 +1,8 @@
 ### Assignment: numpy_entropy
 #### Date: Deadline: Feb 27, 7:59 a.m.
 #### Points: 3 points
-#### Examples: numpy_entropy_examples
 #### Tests: numpy_entropy_tests
+#### Examples: numpy_entropy_examples
 
 The goal of this exercise is to familiarize with Python, NumPy and ReCodEx
 submission system. Start with the
@@ -22,6 +22,26 @@ under the model distribution):
 
 Use natural logarithms to compute the entropies and the divergence.
 
+#### Tests Start: numpy_entropy_tests
+1. `python3 numpy_entropy.py --data_path` [numpy_entropy_data_1.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_1.txt) `--model_path` [numpy_entropy_model_1.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_1.txt)
+```
+Entropy: 0.96 nats
+Crossentropy: 1.07 nats
+KL divergence: 0.11 nats
+```
+2. `python3 numpy_entropy.py --data_path` [numpy_entropy_data_2.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_2.txt) `--model_path` [numpy_entropy_model_2.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_2.txt)
+```
+Entropy: 0.96 nats
+Crossentropy: inf nats
+KL divergence: inf nats
+```
+- The last three tests use data available only in ReCodEx. They are quite
+  similar to the [numpy_entropy_data_3.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_3.txt)
+  [numpy_entropy_model_3.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_3.txt)
+  and [numpy_entropy_data_4.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_4.txt)
+  [numpy_entropy_model_4.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_4.txt),
+  but are generated with a different random seed.
+#### Tests End:
 #### Examples Start: numpy_entropy_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 numpy_entropy.py --data_path` [numpy_entropy_data_1.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_1.txt) `--model_path` [numpy_entropy_model_1.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_1.txt)
@@ -49,23 +69,3 @@ Crossentropy: 5.03 nats
 KL divergence: 0.04 nats
 ```
 #### Examples End:
-#### Tests Start: numpy_entropy_tests
-- `python3 numpy_entropy.py --data_path` [numpy_entropy_data_1.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_1.txt) `--model_path` [numpy_entropy_model_1.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_1.txt)
-```
-Entropy: 0.96 nats
-Crossentropy: 1.07 nats
-KL divergence: 0.11 nats
-```
-- `python3 numpy_entropy.py --data_path` [numpy_entropy_data_2.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_2.txt) `--model_path` [numpy_entropy_model_2.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_2.txt)
-```
-Entropy: 0.96 nats
-Crossentropy: inf nats
-KL divergence: inf nats
-```
-- The last three tests use data available only in ReCodEx. They are quite
-  similar to the [numpy_entropy_data_3.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_3.txt)
-  [numpy_entropy_model_3.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_3.txt)
-  and [numpy_entropy_data_4.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_data_4.txt)
-  [numpy_entropy_model_4.txt](https://github.com/ufal/npfl114/tree/master/labs/01/numpy_entropy_model_4.txt),
-  but are generated with a different random seed.
-#### Tests End:

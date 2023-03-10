@@ -1,8 +1,8 @@
 ### Assignment: mnist_training
 #### Date: Deadline: Mar 6, 7:59 a.m.
 #### Points: 2 points
-#### Examples: mnist_training_examples
 #### Tests: mnist_training_tests
+#### Examples: mnist_training_examples
 
 This exercise should teach you using different optimizers, learning rates,
 and learning rate decays. Your goal is to modify the
@@ -17,6 +17,47 @@ template and implement the following:
   during training to reach the final learning rate just after the training
   (i.e., the first update after the training would use exactly the final learning rate).
 
+#### Tests Start: mnist_training_tests
+_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
+1. `python3 mnist_training.py --epochs=1 --optimizer=SGD --learning_rate=0.01`
+```
+loss: 0.8214 - accuracy: 0.7996 - val_loss: 0.3673 - val_accuracy: 0.9096
+```
+2. `python3 mnist_training.py --epochs=1 --optimizer=SGD --learning_rate=0.01 --momentum=0.9`
+```
+loss: 0.3626 - accuracy: 0.8976 - val_loss: 0.1689 - val_accuracy: 0.9556
+```
+3. `python3 mnist_training.py --epochs=1 --optimizer=SGD --learning_rate=0.1`
+```
+loss: 0.3515 - accuracy: 0.9008 - val_loss: 0.1660 - val_accuracy: 0.9564
+```
+4. `python3 mnist_training.py --epochs=1 --optimizer=Adam --learning_rate=0.001`
+```
+loss: 0.2732 - accuracy: 0.9221 - val_loss: 0.1186 - val_accuracy: 0.9674
+```
+5. `python3 mnist_training.py --epochs=1 --optimizer=Adam --learning_rate=0.01`
+```
+loss: 0.2312 - accuracy: 0.9309 - val_loss: 0.1286 - val_accuracy: 0.9648
+```
+6. `python3 mnist_training.py --epochs=2 --optimizer=Adam --learning_rate=0.01 --decay=exponential --learning_rate_final=0.001`
+```
+Epoch 1/2 loss: 0.1962 - accuracy: 0.9398 - val_loss: 0.1026 - val_accuracy: 0.9728
+Epoch 2/2 loss: 0.0672 - accuracy: 0.9788 - val_loss: 0.0735 - val_accuracy: 0.9788
+Next learning rate to be used: 0.001
+```
+7. `python3 mnist_training.py --epochs=2 --optimizer=Adam --learning_rate=0.01 --decay=linear --learning_rate_final=0.0001`
+```
+Epoch 1/2 loss: 0.2106 - accuracy: 0.9369 - val_loss: 0.1174 - val_accuracy: 0.9664
+Epoch 2/2 loss: 0.0715 - accuracy: 0.9775 - val_loss: 0.0745 - val_accuracy: 0.9778
+Next learning rate to be used: 0.0001
+```
+8. `python3 mnist_training.py --epochs=2 --optimizer=Adam --learning_rate=0.01 --decay=cosine --learning_rate_final=0.0001`
+```
+Epoch 1/2 loss: 0.2158 - accuracy: 0.9346 - val_loss: 0.1231 - val_accuracy: 0.9670
+Epoch 2/2 loss: 0.0694 - accuracy: 0.9781 - val_loss: 0.0746 - val_accuracy: 0.9786
+Next learning rate to be used: 0.0001
+```
+#### Tests End:
 #### Examples Start: mnist_training_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 - `python3 mnist_training.py --optimizer=SGD --learning_rate=0.01`
@@ -127,44 +168,3 @@ Epoch 10/10 loss: 0.0036 - accuracy: 0.9992 - val_loss: 0.0965 - val_accuracy: 0
 Next learning rate to be used: 0.0001
 ```
 #### Examples End:
-#### Tests Start: mnist_training_tests
-_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 mnist_training.py --epochs=1 --optimizer=SGD --learning_rate=0.01`
-```
-loss: 0.8214 - accuracy: 0.7996 - val_loss: 0.3673 - val_accuracy: 0.9096
-```
-- `python3 mnist_training.py --epochs=1 --optimizer=SGD --learning_rate=0.01 --momentum=0.9`
-```
-loss: 0.3626 - accuracy: 0.8976 - val_loss: 0.1689 - val_accuracy: 0.9556
-```
-- `python3 mnist_training.py --epochs=1 --optimizer=SGD --learning_rate=0.1`
-```
-loss: 0.3515 - accuracy: 0.9008 - val_loss: 0.1660 - val_accuracy: 0.9564
-```
-- `python3 mnist_training.py --epochs=1 --optimizer=Adam --learning_rate=0.001`
-```
-loss: 0.2732 - accuracy: 0.9221 - val_loss: 0.1186 - val_accuracy: 0.9674
-```
-- `python3 mnist_training.py --epochs=1 --optimizer=Adam --learning_rate=0.01`
-```
-loss: 0.2312 - accuracy: 0.9309 - val_loss: 0.1286 - val_accuracy: 0.9648
-```
-- `python3 mnist_training.py --epochs=2 --optimizer=Adam --learning_rate=0.01 --decay=exponential --learning_rate_final=0.001`
-```
-Epoch 1/2 loss: 0.1962 - accuracy: 0.9398 - val_loss: 0.1026 - val_accuracy: 0.9728
-Epoch 2/2 loss: 0.0672 - accuracy: 0.9788 - val_loss: 0.0735 - val_accuracy: 0.9788
-Next learning rate to be used: 0.001
-```
-- `python3 mnist_training.py --epochs=2 --optimizer=Adam --learning_rate=0.01 --decay=linear --learning_rate_final=0.0001`
-```
-Epoch 1/2 loss: 0.2106 - accuracy: 0.9369 - val_loss: 0.1174 - val_accuracy: 0.9664
-Epoch 2/2 loss: 0.0715 - accuracy: 0.9775 - val_loss: 0.0745 - val_accuracy: 0.9778
-Next learning rate to be used: 0.0001
-```
-- `python3 mnist_training.py --epochs=2 --optimizer=Adam --learning_rate=0.01 --decay=cosine --learning_rate_final=0.0001`
-```
-Epoch 1/2 loss: 0.2158 - accuracy: 0.9346 - val_loss: 0.1231 - val_accuracy: 0.9670
-Epoch 2/2 loss: 0.0694 - accuracy: 0.9781 - val_loss: 0.0746 - val_accuracy: 0.9786
-Next learning rate to be used: 0.0001
-```
-#### Tests End:
