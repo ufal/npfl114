@@ -153,6 +153,7 @@
   ```
   export PATH="/lnet/aic/opt/cuda/cuda-11.2/bin:$PATH"
   export LD_LIBRARY_PATH="/lnet/aic/opt/cuda/cuda-11.2/lib64:/lnet/aic/opt/cuda/cuda-11.2/cudnn/8.1.1/lib64:/lnet/aic/opt/cuda/cuda-11.2/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
+  export XLA_FLAGS=--xla_gpu_cuda_data_dir=/lnet/aic/opt/cuda/cuda-11.2 # XLA configuration
   ```
 
 - _How to run a GPU computation on AIC?_
