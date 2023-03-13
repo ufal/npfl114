@@ -2,6 +2,7 @@
 #### Date: Mar 13
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?05
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-05.pdf, PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-05-czech.mp4, CZ Lecture
 #### Questions: #lecture_5_questions
 #### Lecture assignment: cnn_manual
 #### Lecture assignment: cags_classification
