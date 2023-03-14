@@ -2,10 +2,11 @@
 #### Date: Deadline: Mar 27, 7:59 a.m.
 #### Points: 4 points+5 bonus
 
-The goal of this assignment is to use pretrained EfficientNetV2-B0 model to
-achieve best image segmentation IoU score on the CAGS dataset.
-The dataset and the EfficientNetV2-B0 is described in the `cags_classification`
-assignment.
+The goal of this assignment is to use a pretrained model, for example the
+EfficientNetV2-B0, to achieve best image segmentation IoU score on the CAGS
+dataset. The dataset and the EfficientNetV2-B0 is described in the
+`cags_classification` assignment. Nevertheless, you can again use **any** model
+from `tf.keras.applications` in this assignment.
 
 A mask is evaluated using _intersection over union_ (IoU) metric, which is the
 intersection of the gold and predicted mask divided by their union, and the

@@ -2,8 +2,8 @@
 #### Date: Deadline: Mar 27, 7:59 a.m.
 #### Points: 4 points+5 bonus
 
-The goal of this assignment is to use pretrained EfficientNetV2-B0 model to
-achieve best accuracy in CAGS classification.
+The goal of this assignment is to use a pretrained model, for example the
+EfficientNetV2-B0, to achieve best accuracy in CAGS classification.
 
 The [CAGS dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/cags_train.html) consists
 of images of **ca**ts and do**gs** of size $224×224$, each classified in one of
@@ -18,6 +18,8 @@ which is decoded using the `CAGS.parse` method.
 To load the EfficientNetV2-B0, use the
 [tf.keras.applications.efficientnet_v2.EfficientNetV2B0](https://www.tensorflow.org/api_docs/python/tf/keras/applications/efficientnet_v2/EfficientNetV2B0)
 class, which constructs a Keras model, downloading the weights automatically.
+However, you can use **any** model from `tf.keras.applications` in this
+assignment.
 
 An example performing classification of given images is available in
 [image_classification.py](https://github.com/ufal/npfl114/tree/master/labs/05/image_classification.py).
