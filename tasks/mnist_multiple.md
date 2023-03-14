@@ -6,13 +6,13 @@
 In this assignment you will implement a model with multiple inputs and outputs.
 Start with the [mnist_multiple.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_multiple.py)
 template and:
-- The goal is to create a model, which given two input MNIST images compares, if the
-  digit on the first one is larger than on the second one.
+- The goal is to create a model, which given two input MNIST images, compares if the
+  digit on the first one is greater than on the second one.
 - We perform this this comparison in two different ways:
   - first by directly predicting the comparison by the network (_direct comparison_),
   - then by first classifying the images into digits and then comparing these predictions (_indirect comparison_).
 - The model has four outputs:
-  - _direct comparison_ whether the first digit is larger than the second one,
+  - _direct comparison_ whether the first digit is greater than the second one,
   - digit classification for the first image,
   - digit classification for the second image,
   - _indirect comparison_ comparing the digits predicted by the above two outputs.
