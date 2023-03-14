@@ -32,11 +32,17 @@ def main(args: argparse.Namespace) -> None:
         ",".join(("{}={}".format(re.sub("(.)[^_]*_?", r"\1", k), v) for k, v in sorted(vars(args).items())))
     ))
 
-    # Load the data
+    # Load the data. Note that both the "image" and the "mask" images
+    # are represented using `tf.uint8`s in [0-255] range.
     cags = CAGS()
 
-    # Load the EfficientNetV2-B0 model
+    # Load the EfficientNetV2-B0 model. It assumes the input images are
+    # represented in [0-255] range using either `tf.uint8` or `tf.float32` type.
     backbone = tf.keras.applications.EfficientNetV2B0(include_top=False)
+
+    # Extract features of different resolution. Assuming 224x224 input images
+    # (you can set this explicitly via `input_shape` of the above constructor),
+    # the below model returns five outputs with resolution 7x7, 14x14, 28x28, 56x56, 112x112.
     backbone = tf.keras.Model(
         inputs=backbone.input,
         outputs=[backbone.get_layer(layer).output for layer in [
