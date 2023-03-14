@@ -17,7 +17,7 @@ module, which can also evaluate your predictions (either by running with
 `evaluate_segmentation_file` method).
 
 The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2223-summer#competitions). Everyone who submits a solution
-which achieves at least _TO BE SET LATER_ test set IoU gets 4 points; the rest
+which achieves at least _87%_ test set IoU gets 4 points; the rest
 5 points will be distributed depending on relative ordering of your solutions.
 
 You may want to start with the
