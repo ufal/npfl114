@@ -40,7 +40,7 @@ def main(args: argparse.Namespace) -> None:
     backbone = tf.keras.Model(
         inputs=backbone.input,
         outputs=[backbone.get_layer(layer).output for layer in [
-             "top_activation", "block5e_add", "block3b_add", "block2b_add", "stem_activation"]]
+             "top_activation", "block5e_add", "block3b_add", "block2b_add", "block1a_project_activation"]]
     )
 
     # TODO: Create the model and train it

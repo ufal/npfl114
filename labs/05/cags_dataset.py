@@ -35,7 +35,7 @@ class CAGS:
             "mask": tf.io.FixedLenFeature([], tf.string),
             "label": tf.io.FixedLenFeature([], tf.int64)})
         example["image"] = tf.image.decode_jpeg(example["image"], channels=3)
-        example["mask"] = tf.image.convert_image_dtype(tf.image.decode_png(example["mask"], channels=1), tf.float32)
+        example["mask"] = tf.image.decode_png(example["mask"], channels=1)
         return example
 
     def __init__(self) -> None:
@@ -61,8 +61,8 @@ class CAGS:
         def update_state(
             self, y_true: tf.Tensor, y_pred: tf.Tensor, sample_weight: Optional[tf.Tensor] = None
         ) -> None:
-            y_true_mask = tf.reshape(tf.math.round(y_true) == 1, [-1, CAGS.H * CAGS.W])
-            y_pred_mask = tf.reshape(tf.math.round(y_pred) == 1, [-1, CAGS.H * CAGS.W])
+            y_true_mask = tf.reshape(tf.image.convert_image_dtype(y_true, tf.float32) >= 0.5, [-1, CAGS.H * CAGS.W])
+            y_pred_mask = tf.reshape(tf.image.convert_image_dtype(y_pred, tf.float32) >= 0.5, [-1, CAGS.H * CAGS.W])
 
             intersection_mask = tf.math.logical_and(y_true_mask, y_pred_mask)
             union_mask = tf.math.logical_or(y_true_mask, y_pred_mask)
@@ -112,7 +112,7 @@ class CAGS:
             assert sum(runs) == CAGS.H * CAGS.W
 
             offset = 0
-            predictions.append(np.zeros([CAGS.H * CAGS.W], np.int32))
+            predictions.append(np.zeros([CAGS.H * CAGS.W], np.float32))
             for i, run in enumerate(runs):
                 predictions[-1][offset:offset + run] = i % 2
                 offset += run
