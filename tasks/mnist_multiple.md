@@ -3,6 +3,8 @@
 #### Points: 3 points
 #### Tests: mnist_multiple_tests
 
+![mnist_multiple](//ufal.mff.cuni.cz/~straka/courses/npfl114/2223/tasks/figures/mnist_multiple.svgz)
+
 In this assignment you will implement a model with multiple inputs and outputs.
 Start with the [mnist_multiple.py](https://github.com/ufal/npfl114/tree/master/labs/04/mnist_multiple.py)
 template and:
