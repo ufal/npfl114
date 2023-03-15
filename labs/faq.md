@@ -314,7 +314,7 @@
   remove the `.shuffle`):
   ```python
   train = cags.train.map(lambda example: (example["image"], example["label"]))
-  train = train.shuffle(10000, seed=args.seed)
+  train = train.shuffle(10_000, seed=args.seed)
   train = train.batch(args.batch_size)
   ```
 
@@ -329,7 +329,7 @@
   When a global random seed is set, methods like `tf.random.uniform` generate
   the same sequence of numbers on each iteration.
 
-  Instead, create a `Generator` object and use it to produce random numbers.
+  Instead, create a `tf.random.Generator` object and use it to produce random numbers.
 
   ```python
   generator = tf.random.Generator.from_seed(42)
@@ -338,9 +338,6 @@
   for _ in range(3):
       print(*[element.numpy() for element in data])
   ```
-
-  When a GPU is visible, you should create the `generator` explicitly on a CPU
-  using a `with tf.device("/cpu:0"):` block (on macOS, it will crash otherwise).
 
 - _How to call numpy methods or other non-tf functions in `tf.data.Dataset.map`?_
 
