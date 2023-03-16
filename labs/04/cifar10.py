@@ -37,7 +37,8 @@ class CIFAR10:
         path = os.path.basename(self._URL)
         if not os.path.exists(path):
             print("Downloading CIFAR-10 dataset...", file=sys.stderr)
-            urllib.request.urlretrieve(self._URL, filename=path)
+            urllib.request.urlretrieve(self._URL, filename="{}.tmp".format(path))
+            os.rename("{}.tmp".format(path), path)
 
         cifar = np.load(path)
         for dataset in ["train", "dev", "test"]:

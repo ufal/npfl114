@@ -43,7 +43,8 @@ class CAGS:
             path = "cags.{}.tfrecord".format(dataset)
             if not os.path.exists(path):
                 print("Downloading file {}...".format(path), file=sys.stderr)
-                urllib.request.urlretrieve("{}/{}".format(self._URL, path), filename=path)
+                urllib.request.urlretrieve("{}/{}".format(self._URL, path), filename="{}.tmp".format(path))
+                os.rename("{}.tmp".format(path), path)
 
             setattr(self, dataset,
                     tf.data.TFRecordDataset(path).map(CAGS.parse).apply(tf.data.experimental.assert_cardinality(size)))

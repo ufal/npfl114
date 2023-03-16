@@ -104,7 +104,8 @@ class UppercaseData:
         path = os.path.basename(self._URL)
         if not os.path.exists(path):
             print("Downloading dataset {}...".format(path), file=sys.stderr)
-            urllib.request.urlretrieve(self._URL, filename=path)
+            urllib.request.urlretrieve(self._URL, filename="{}.tmp".format(path))
+            os.rename("{}.tmp".format(path), path)
 
         with zipfile.ZipFile(path, "r") as zip_file:
             for dataset in ["train", "dev", "test"]:
