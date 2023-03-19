@@ -45,7 +45,8 @@ def main(args: argparse.Namespace) -> None:
     # Generate test set annotations, but in `args.logdir` to allow parallel execution.
     os.makedirs(args.logdir, exist_ok=True)
     with open(os.path.join(args.logdir, "cifar_competition_test.txt"), "w", encoding="utf-8") as predictions_file:
-        for probs in model.predict(cifar.test.data["images"], batch_size=args.batch_size):
+        # TODO: Perform the prediction on the test data.
+        for probs in model.predict(..., batch_size=args.batch_size):
             print(np.argmax(probs), file=predictions_file)
 
 
