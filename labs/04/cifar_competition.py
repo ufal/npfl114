@@ -46,7 +46,7 @@ def main(args: argparse.Namespace) -> None:
     os.makedirs(args.logdir, exist_ok=True)
     with open(os.path.join(args.logdir, "cifar_competition_test.txt"), "w", encoding="utf-8") as predictions_file:
         # TODO: Perform the prediction on the test data.
-        for probs in model.predict(..., batch_size=args.batch_size):
+        for probs in model.predict(...):
             print(np.argmax(probs), file=predictions_file)
 
 
