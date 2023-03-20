@@ -1,6 +1,7 @@
 ### Assignment: cnn_manual
 #### Date: Deadline: Mar 27, 7:59 a.m.
 #### Points: 3 points
+#### Slides@: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?cnn_manual
 #### Tests: cnn_manual_tests
 
 To pass this assignment, you need to manually implement the forward and backward
