@@ -3,6 +3,8 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?06
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-06.pdf, PDF Slides
 #### Questions: #lecture_6_questions
+#### Lecture assignment: bboxes_utils
+#### Lecture assignment: svhn_competition
 
 - Fast R-CNN [[Fast R-CNN](https://arxiv.org/abs/1504.08083)]
 - Proposing RoIs using Faster R-CNN [[Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://arxiv.org/abs/1506.01497)]
