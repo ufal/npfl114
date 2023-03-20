@@ -3,7 +3,8 @@
 #### Points: 5 points+5 bonus
 
 The goal of this assignment is to implement a system performing object
-recognition, optionally utilizing pretrained EfficientNet-B0 backbone.
+recognition, optionally utilizing the pretrained EfficientNetV2-B0 backbone
+(or any other model from `tf.keras.applications`).
 
 The [Street View House Numbers (SVHN) dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/svhn_train.html)
 annotates for every photo all digits appearing on it, including their bounding
@@ -23,11 +24,6 @@ convert the dataset to NumPy. Alternatively, you can implement `bboxes_training`
 using TensorFlow operations or call Numpy implementation of `bboxes_training`
 directly in `tf.data.Dataset.map` by using `tf.numpy_function`,
 see [FAQ](https://ufal.mff.cuni.cz/courses/npfl114/2223-summer#faq_tf_data).
-
-Similarly to the `cags_classification`, you can load the EfficientNet-B0 using the provided
-[efficient_net.py](https://github.com/ufal/npfl114/tree/master/labs/06/efficient_net.py)
-module. Note that the `dynamic_input_shape=True` argument creates
-a model capable of processing an input image of any size.
 
 Each test set image annotation consists of a sequence of space separated
 five-tuples _label top left bottom right_, and the annotation is considered
