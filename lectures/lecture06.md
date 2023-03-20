@@ -2,6 +2,8 @@
 #### Date: Mar 20
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?06
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-06.pdf, PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-06-czech.mp4, CZ Lecture
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-06-czech.practicals.mp4, CZ Practicals
 #### Questions: #lecture_6_questions
 #### Lecture assignment: bboxes_utils
 #### Lecture assignment: svhn_competition
