@@ -3,6 +3,7 @@ import sys
 from typing import Dict, List, TextIO, Union
 import urllib.request
 import zipfile
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
 import tensorflow as tf
