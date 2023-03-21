@@ -142,7 +142,3 @@
   architecture including the block combining feature maps of different
   resolutions; the classification and bounding box generation heads, including
   their output size). [5]
-
-- Draw the BiFPN block architecture, including the positions of all
-  convolutions (and what kind of CNN is used), BatchNorms and ReLUs.
-  Finally describe how downscaling and upscaling is performed. [5]
