@@ -3,6 +3,10 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?07
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-07.pdf, PDF Slides
 #### Questions: #lecture_7_questions
+#### Lecture assignment: sequence_classification
+#### Lecture assignment: tagger_we
+#### Lecture assignment: tagger_cle
+#### Lecture assignment: tagger_competition
 
 - Sequence modelling using Recurrent Neural Networks (RNN) [Chapter 10 until Section 10.2.1 (excluding) of DLB]
 - The challenge of long-term dependencies [Section 10.7 of DLB]
