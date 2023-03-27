@@ -2,6 +2,8 @@
 #### Date: Mar 27
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?07
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-07.pdf, PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-07-czech.mp4, CZ Lecture
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-07-czech.practicals.mp4, CZ Practicals
 #### Questions: #lecture_7_questions
 #### Lecture assignment: sequence_classification
 #### Lecture assignment: tagger_we
