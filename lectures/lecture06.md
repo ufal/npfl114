@@ -15,5 +15,5 @@
 - Mask R-CNN [[Mask R-CNN](https://arxiv.org/abs/1703.06870)]
 - Feature Pyramid Networks [[Feature Pyramid Networks for Object Detection](https://arxiv.org/abs/1612.03144)]
 - Focal Loss, RetinaNet [[Focal Loss for Dense Object Detection](https://arxiv.org/abs/1708.02002)]
-- *EfficientDet [[EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/abs/1911.09070)]*
-- *Group Normalization [[Group Normalization](https://arxiv.org/abs/1803.08494)]*
+- _EfficientDet [[EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/abs/1911.09070)]_
+- _Group Normalization [[Group Normalization](https://arxiv.org/abs/1803.08494)]_

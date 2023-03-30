@@ -15,10 +15,10 @@
   distribution, Categorical distribution [Sections 3.2, 3.3, 3.8, 3.9.1 and 3.9.2 of DLB]
 - Self-information, entropy, cross-entropy, KL-divergence [Section 3.13 of DBL]
 - Gaussian distribution [Section 3.9.3 of DLB]
-- *Machine Learning Basics [Section 5.1-5.1.3 of DLB]*
-- *History of Deep Learning [Section 1.2 of DLB]*
-- *Linear regression [Section 5.1.4 of DLB]*
-- *Challenges Motivating Deep Learning [Section 5.11 of DLB]*
+- _Machine Learning Basics [Section 5.1-5.1.3 of DLB]_
+- _History of Deep Learning [Section 1.2 of DLB]_
+- _Linear regression [Section 5.1.4 of DLB]_
+- _Challenges Motivating Deep Learning [Section 5.11 of DLB]_
 - Neural network basics
   - Neural networks as graphs [Chapter 6 before Section 6.1 of DLB]
   - Output activation functions [Section 6.2.2 of DLB, excluding Section 6.2.2.4]

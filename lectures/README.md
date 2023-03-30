@@ -4,5 +4,5 @@ The main study material is the
 (referred to as DLB).
 
 References to study materials cover **all theory required** at the exam,
-and sometimes even more – the references in *italics* cover topics
+and sometimes even more – the references in _italics_ cover topics
 **not required** for the exam.

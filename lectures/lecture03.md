@@ -13,7 +13,7 @@
 
 - Softmax with NLL (negative log likelihood) as a loss function [Section 6.2.2.3 of DLB, notably equation (6.30); plus slides 10-12]
 - Regularization [Chapter 7 until Section 7.1 of DLB]
-  - Early stopping [Section 7.8 of DLB, without the *How early stopping acts as a regularizer* part]
+  - Early stopping [Section 7.8 of DLB, without the _How early stopping acts as a regularizer_ part]
   - L2 and L1 regularization [Sections 7.1 and 5.6.1 of DLB; plus slides 17-18]
   - Dataset augmentation [Section 7.4 of DLB]
   - Ensembling [Section 7.11 of DLB]
