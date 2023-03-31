@@ -2,10 +2,10 @@
 #### Date: Deadline: Apr 11, 7:59 a.m.
 #### Points: 4 points+5 bonus
 
-**There seems to be a bug in cuDNN 8.1 and newer (or in the way how TensorFlow
-uses it), causing the GPU implementation of LSTM and GRU to occassionally
-generate corrupted output. I will inform you about a way how to avoid the
-problem once I figure it out.**
+**There is a bug in GPU implementation of masked LSTM and GRU when using cuDNN
+8.1 or newer, causing silent corruption of results. The easiest way around it is
+to (a) either use LSTM and GRU on non-masked inputs (plain rectangular tensors),
+or (b) use non-zero `recurrent_dropout`, which prevents using the cuDNN.**
 
 In this assignment, you should extend `tagger_cle`
 into a real-world Czech part-of-speech tagger. We will use
