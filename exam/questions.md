@@ -162,3 +162,34 @@
 - Sketch a tagger architecture utilizing word embeddings, recurrent
   character-level word embeddings and two sentence-level bidirectional RNNs with
   a residual connection. [10]
+
+#### Questions@:, Lecture 8 Questions
+- Considering a linear-chain CRF, write down how a score of a label sequence
+  $\boldsymbol y$ is defined, and how can a log probability be computed
+  using the label sequence scores. [5]
+
+- Write down the dynamic programming algorithm for computing log probability of
+  a linear-chain CRF, including its asymptotic complexity. [10]
+
+- Write down the dynamic programming algorithm for linear-chain CRF decoding,
+  i.e., an algorithm computing the most probable label sequence $\boldsymbol y$.
+  [10]
+
+- In the context of CTC loss, describe regular and extended labelings and
+  write down an algorithm for computing the log probability of a gold label
+  sequence $\boldsymbol y$. [10]
+
+- Describe how CTC predictions are performed using a beam-search. [5]
+
+- Draw the CBOW architecture from `word2vec`, including the sizes of the inputs
+  and the sizes of the outputs and used non-linearities. Also make sure to
+  indicate where the embeddings are being trained. [5]
+
+- Draw the SkipGram architecture from `word2vec`, including the sizes of the
+  inputs and the sizes of the outputs and used non-linearities. Also make sure
+  to indicate where the embeddings are being trained. [5]
+
+- Describe the hierarchical softmax used in `word2vec`. [5]
+
+- Describe the negative sampling proposed in `word2vec`, including
+  the choice of distribution of negative samples. [5]
