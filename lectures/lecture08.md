@@ -2,6 +2,7 @@
 #### Date: Apr 03
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?08
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-08.pdf, PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-08-czech.mp4, CZ Lecture
 #### Questions: #lecture_8_questions
 #### Lecture assignment: tensorboard_projector
 #### Lecture assignment: tagger_crf
