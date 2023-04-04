@@ -13,6 +13,10 @@ You can repeat this preprocessing on a given audio using the `wav_decode` and
 This module can also load the dataset, downloading it when necessary (note that
 it has 200MB, so it might take a while). Furthermore, you can listen to the
 [development portion of the dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/common_voice_cs_dev.html).
+Lastly, the whole dataset is available for
+[download in MP3 format](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/datasets/common_voice_cs_mp3.tar)
+(but you are not expected to download that, only if you would like to perform some
+custom preprocessing).
 
 Additional following data can be utilized in this assignment:
 - You can use any _unannotated_ text data (Wikipedia, Czech National Corpus, …),
