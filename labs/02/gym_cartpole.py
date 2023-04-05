@@ -66,7 +66,7 @@ def main(args: argparse.Namespace) -> Optional[tf.keras.Model]:
     tf.config.threading.set_intra_op_parallelism_threads(args.threads)
     if args.debug:
         tf.config.run_functions_eagerly(True)
-        tf.data.experimental.enable_debug_mode()
+        # tf.data.experimental.enable_debug_mode()
 
     if not args.evaluate:
         # Create logdir name

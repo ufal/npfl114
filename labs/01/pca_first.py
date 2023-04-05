@@ -27,7 +27,7 @@ def main(args: argparse.Namespace) -> Tuple[float, float]:
     tf.config.threading.set_intra_op_parallelism_threads(args.threads)
     if args.debug:
         tf.config.run_functions_eagerly(True)
-        tf.data.experimental.enable_debug_mode()
+        # tf.data.experimental.enable_debug_mode()
 
     # Load data
     mnist = MNIST()
