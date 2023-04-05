@@ -1,10 +1,11 @@
 import os
 import sys
-from typing import Dict, List, Tuple, Sequence, TextIO
+from typing import Any, Dict, List, Tuple, Sequence, TextIO, Union
 import urllib.request
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
+import numpy.typing as npt
 import tensorflow as tf
 
 
@@ -103,11 +104,46 @@ class SVHN:
 
         return SVHN.evaluate(gold_dataset, predictions)
 
+    # Visualization infrastructure.
+    def visualize(image: npt.ArrayLike, labels: List[Any], bboxes: List[BBox], show: bool) -> Union[None, bytes]:
+        """Visualize the given image plus recognized objects.
+
+        Arguments:
+        - `image` is NumPy/TensorFlow input image with pixels in range [0-255];
+        - `labels` is a list of labels to be shown using the `str` method;
+        - `bboxes` is a list of `BBox`es (fourtuples TOP, LEFT, BOTTOM, RIGHT);
+        - `show` controls whether to show the figure or return a PNG file:
+          - if `True`, the figure is shown using `plt.show()`;
+          - if `False`, the figure is saved as a PNG file and returned as `bytes`.
+            It can then be saved to a file, or converted to a `tf.Tensor` using the
+            `tf.image.decode_png` and added to Tensorboard via `tf.summary.image`.
+        """
+        import matplotlib.pyplot as plt
+
+        plt.figure(figsize=(4, 4))
+        plt.axis("off")
+        plt.imshow(np.asarray(image, np.uint8))
+        for label, (top, left, bottom, right) in zip(labels, bboxes):
+            plt.gca().add_patch(plt.Rectangle(
+                [left, top], right - left, bottom - top, fill=False, edgecolor=[1, 0, 1], linewidth=2))
+            plt.gca().text(left, top, str(label), bbox={"facecolor": [1, 0, 1], "alpha": 0.5},
+                           clip_box=plt.gca().clipbox, clip_on=True, ha="left", va="top")
+
+        if show:
+            plt.show()
+        else:
+            import io
+            image = io.BytesIO()
+            plt.savefig(image, format="png", dpi=125, bbox_inches="tight", pad_inches=0)
+            plt.close()
+            return image.getvalue()
+
 
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--evaluate", default=None, type=str, help="Prediction file to evaluate")
+    parser.add_argument("--visualize", default=None, type=str, help="Prediction file to visualize")
     parser.add_argument("--dataset", default="dev", type=str, help="Gold dataset to evaluate")
     args = parser.parse_args()
 
@@ -115,3 +151,13 @@ if __name__ == "__main__":
         with open(args.evaluate, "r", encoding="utf-8-sig") as predictions_file:
             accuracy = SVHN.evaluate_file(getattr(SVHN(), args.dataset), predictions_file)
         print("SVHN accuracy: {:.2f}%".format(accuracy))
+
+    if args.visualize:
+        with open(args.visualize, "r", encoding="utf-8-sig") as predictions_file:
+            for line, example in zip(predictions_file, getattr(SVHN(), args.dataset)):
+                values = line.split()
+                classes, bboxes = [], []
+                for i in range(0, len(values), 5):
+                    classes.append(values[i])
+                    bboxes.append([float(value) for value in values[i + 1:i + 5]])
+                SVHN.visualize(example["image"], classes, bboxes, show=True)
