@@ -9,7 +9,7 @@ or occupied _voxels_, and your goal is to classify the object into one of
 [20×20×20 data](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/modelnet20.html)
 or [32×32×32 data](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/modelnet32.html).
 To load the dataset, use the
-[modelnet.py](https://github.com/ufal/npfl114/tree/master/labs/10/modelnet.py) module.
+[modelnet.py](https://github.com/ufal/npfl114/tree/master/labs/09/modelnet.py) module.
 
 The official dataset offers only train and test sets, with the **test set having
 a different distributions of labels**. Our dataset contains also a development
@@ -25,5 +25,5 @@ which achieves at least _88%_ test set accuracy gets 3 points; the rest
 4 points will be distributed depending on relative ordering of your solutions.
 
 You can start with the
-[3d_recognition.py](https://github.com/ufal/npfl114/tree/master/labs/10/3d_recognition.py)
+[3d_recognition.py](https://github.com/ufal/npfl114/tree/master/labs/09/3d_recognition.py)
 template, which among others generates test set annotations in the required format.
