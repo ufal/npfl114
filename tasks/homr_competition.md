@@ -2,9 +2,9 @@
 #### Date: Deadline: Apr 24, 7:59 a.m.
 #### Points: 3 points+5 bonus
 
-Tackle **h**andwritten **o**ptical **m**usic **r**ecognition in this assignment. The inputs are
-grayscale images of monophonic scores starting with a clef, key signature, and a time
-signature, followed by several staves. The
+Tackle the **h**andwritten **o**ptical **m**usic **r**ecognition in this
+assignment. The inputs are grayscale images of monophonic scores starting with
+a clef, key signature, and a time signature, followed by several staves. The
 [dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/homr_train.html)
 is loadable using the
 [homr_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/10/homr_dataset.py)
