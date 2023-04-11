@@ -15,9 +15,10 @@ The official dataset offers only train and test sets, with the **test set having
 a different distributions of labels**. Our dataset contains also a development
 set, which has **nearly the same** label distribution as the test set.
 
-If you want, it is possible to use the EfficientNet-B0 in this assignment;
-however, I do not know of a straightforward way to utilize it, apart from
-rendering the object to a 2D image (or several of them).
+If you want, it is possible to use any model from `tf.keras.applications` in
+this assignment; however, the only way I know how to utilize such a pre-trained
+model is to render the objects to a sequence of 2D images and classify them
+instead.
 
 The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2223-summer#competitions). Everyone who submits a solution
 which achieves at least _88%_ test set accuracy gets 3 points; the rest
