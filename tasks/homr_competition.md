@@ -1,5 +1,5 @@
 ### Assignment: homr_competition
-#### Date: Deadline: Apr 24, 7:59 a.m.
+#### Date: Deadline: ~~Apr 24~~May 2, 7:59 a.m.
 #### Points: 3 points+5 bonus
 
 Tackle the **h**andwritten **o**ptical **m**usic **r**ecognition in this
