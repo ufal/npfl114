@@ -24,7 +24,7 @@ class HOMRDataset:
         return example
 
     def __init__(self) -> None:
-        for dataset, size in [("train", 51365), ("dev", 5027), ("test", 5023)]:
+        for dataset, size in [("train", 51_365), ("dev", 5_027), ("test", 5_023)]:
             path = "homr.{}.tfrecord".format(dataset)
             if not os.path.exists(path):
                 print("Downloading file {}...".format(path), file=sys.stderr)
