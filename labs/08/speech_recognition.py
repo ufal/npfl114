@@ -48,7 +48,7 @@ class Model(tf.keras.Model):
         assert isinstance(gold_labels, tf.RaggedTensor), "Gold labels given to CTC loss must be RaggedTensors"
         assert isinstance(logits, tf.RaggedTensor), "Logits given to CTC loss must be RaggedTensors"
 
-        # TODO: Use tf.nn.ctc_loss to compute the CTC loss.
+        # TODO: Use `tf.nn.ctc_loss` to compute the CTC loss.
         # - Convert the `gold_labels` to SparseTensor and pass `None` as `label_length`.
         # - Convert `logits` to a dense Tensor and then either transpose the
         #   logits to `[max_audio_length, batch, dim]` or set `logits_time_major=False`
@@ -67,7 +67,7 @@ class Model(tf.keras.Model):
         # - Convert the `logits` to a dense Tensor and then transpose them
         #   to shape `[max_audio_length, batch, dim]` using `tf.transpose`
         # - Use `logits.row_lengths()` method to obtain the `sequence_length`
-        # - Convert the result of the decoded from a SparseTensor to a RaggedTensor
+        # - Convert the result of the decoder from a SparseTensor to a RaggedTensor
         predictions = ...
 
         assert isinstance(predictions, tf.RaggedTensor), "CTC predictions must be RaggedTensors"
