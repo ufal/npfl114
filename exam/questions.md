@@ -143,10 +143,6 @@
   resolutions; the classification and bounding box generation heads, including
   their output size). [5]
 
-- Draw the BiFPN block architecture, including the positions of all
-  convolutions (and what kind of CNN is used), BatchNorms and ReLUs.
-  Finally describe how downscaling and upscaling is performed. [5]
-
 #### Questions@:, Lecture 7 Questions
 - Write down how the Long Short-Term Memory (LSTM) cell operates, including
   the explicit formulas. Also mention the forget gate bias. [10]
