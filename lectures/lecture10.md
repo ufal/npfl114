@@ -2,6 +2,7 @@
 #### Date: Apr 17
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?10
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-10.pdf, PDF Slides
+#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-10-czech.mp4, CZ Lecture
 #### Questions: #lecture_10_questions
 #### Lecture assignment: lemmatizer_noattn
 #### Lecture assignment: lemmatizer_attn
