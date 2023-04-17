@@ -67,7 +67,7 @@ class Model(tf.keras.Model):
         # - Convert the `logits` to a dense Tensor and then transpose them
         #   to shape `[max_audio_length, batch, dim]` using `tf.transpose`
         # - Use `logits.row_lengths()` method to obtain the `sequence_length`
-        # - Convert the result of the decoder from a SparseTensor to a RaggedTensor
+        # - Convert the result of the decoder from a `tf.SparseTensor` to a `tf.RaggedTensor`
         predictions = ...
 
         assert isinstance(predictions, tf.RaggedTensor), "CTC predictions must be RaggedTensors"
