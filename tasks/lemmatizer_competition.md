@@ -11,7 +11,7 @@ You can also use the same additional data as in the `tagger_competition`
 assignment.
 
 The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2223-summer#competitions). Everyone who submits a solution
-a solution with at least 96% label accuracy gets 4 points; the rest 5 points
+a solution with at least 96.5% label accuracy gets 4 points; the rest 5 points
 will be distributed depending on relative ordering of your solutions. Lastly,
 **3 bonus points** will be given to anyone surpassing pre-neural-network
 state-of-the-art of **98.76%**.
