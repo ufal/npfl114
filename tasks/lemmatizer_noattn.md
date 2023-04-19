@@ -2,6 +2,7 @@
 #### Date: Deadline: May 2, 7:59 a.m.
 #### Points: 3 points
 #### Tests: lemmatizer_noattn_tests
+#### Examples: lemmatizer_noattn_examples
 
 The goal of this assignment is to create a simple lemmatizer. For training
 and evaluation, we use the same dataset as in `tagger_we` loadable by the
@@ -23,10 +24,25 @@ template and implement the following:
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 1. `python3 lemmatizer_noattn.py --epochs=1 --max_sentences=500 --batch_size=2 --cle_dim=32 --rnn_dim=32`
 ```
-250/250 - 15s - loss: 3.0551 - val_accuracy: 0.1196 - 15s/epoch - 59ms/step
+loss: 3.0551 - val_accuracy: 0.1196 - 16s/epoch - 64ms/step
 ```
 2. `python3 lemmatizer_noattn.py --epochs=1 --max_sentences=500 --batch_size=2 --cle_dim=32 --rnn_dim=32 --tie_embeddings`
 ```
-250/250 - 15s - loss: 2.8971 - val_accuracy: 0.1409 - 15s/epoch - 58ms/step
+loss: 2.8971 - val_accuracy: 0.1409 - 15s/epoch - 61ms/step
 ```
 #### Tests End:
+#### Examples Start: lemmatizer_noattn_examples
+_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
+- `python3 lemmatizer_noattn.py --epochs=3 --max_sentences=5000`
+```
+Epoch 1/3 loss: 2.2070 - val_accuracy: 0.3395 - 38s/epoch - 77ms/step
+Epoch 2/3 loss: 0.9121 - val_accuracy: 0.4963 - 30s/epoch - 59ms/step
+Epoch 3/3 loss: 0.5123 - val_accuracy: 0.6151 - 30s/epoch - 61ms/step
+```
+- `python3 lemmatizer_noattn.py --epochs=3 --max_sentences=5000 --tie_embeddings`
+```
+Epoch 1/3 loss: 1.8830 - val_accuracy: 0.3853 - 42s/epoch - 84ms/step
+Epoch 2/3 loss: 0.7513 - val_accuracy: 0.5403 - 29s/epoch - 59ms/step
+Epoch 3/3 loss: 0.4643 - val_accuracy: 0.6319 - 33s/epoch - 66ms/step
+```
+#### Examples End:
