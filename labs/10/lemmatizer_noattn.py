@@ -71,9 +71,9 @@ class Model(tf.keras.Model):
         self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
 
     def encoder(self, inputs: tf.Tensor) -> tf.Tensor:
-        # TODO: Embed the inputs using `source_embedding`.
+        # TODO: Embed the inputs using `self._source_embedding`.
 
-        # TODO: Run the `source_rnn` on the embedded sequences, and return the result.
+        # TODO: Run the `self._source_rnn` on the embedded sequences, and return the result.
         return ...
 
     def decoder_training(self, encoded: tf.Tensor, targets: tf.Tensor) -> tf.Tensor:
@@ -119,7 +119,8 @@ class Model(tf.keras.Model):
             # TODO:
             # - First embed the `inputs` using the `self._target_embedding` layer.
             # - Then call `self._target_rnn.cell` using two arguments, the embedded `inputs`
-            #   and the current `states`. The call returns a pair of outputs and new state.
+            #   and the current `states`. The call returns a pair of (outputs, new states),
+            #   where the new states should replace the current `states`.
             # - Pass the outputs through the `self._target_output_layer`.
             # - Finally generate the most probable prediction for every batch example.
             predictions = ...

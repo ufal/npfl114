@@ -53,9 +53,10 @@ class WithAttention(tf.keras.layers.AbstractRNNCell):
         # - According to the definition, we need to project the encoder states, but we have
         #   already done that in `setup_memory`, so we just take `self._encoded_projected`.
         # - Compute projected decoder state by passing `states` through the `self._project_decoder_layer`.
-        # - Sum the two projections. However, the first has shape [a, b, c] and the second [a, c]. Therefore,
-        #   expand the second to [a, b, c] or [a, 1, c] (the latter works because of broadcasting rules).
-        # - Pass the sum through the `tf.tanh` and then through the `self._output_layer`.
+        # - Sum the two projections. However, the first has shape `[batch_size, input_sequence_len, attention_dim]`
+        #   and the second just `[batch_size, attention_dim]`. Therefore, expand the second projection
+        #   to `[batch_size, 1, attention_dim]`, and then broadcasting will allow to sum the two projections.
+        # - Pass the sum through the `tf.nn.tanh` and then through the `self._output_layer`.
         # - Then, run softmax on a suitable axis, generating `weights`.
         # - Multiply the original (non-projected) encoder states `self._encoded` with `weights` and sum
         #   the result in the axis corresponding to characters, generating `attention`. Therefore,
@@ -115,9 +116,9 @@ class Model(tf.keras.Model):
         self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
 
     def encoder(self, inputs: tf.Tensor) -> tf.Tensor:
-        # TODO(lemmatizer_noattn): Embed the inputs using `source_embedding`.
+        # TODO(lemmatizer_noattn): Embed the inputs using `self._source_embedding`.
 
-        # TODO: Run the `source_rnn` on the embedded sequences, then convert its result
+        # TODO: Run the `self._source_rnn` on the embedded sequences, then convert its result
         # to a dense tensor using the `.to_tensor()` call, and return it.
         return ...
 
@@ -129,7 +130,7 @@ class Model(tf.keras.Model):
         # TODO: Pre-compute the projected encoder states in the attention by calling
         # the `setup_memory` of the `self._target_rnn.cell` on the `encoded` input.
 
-        # TODO(lemmatizer_noattn): Process the generated inputs by
+        # TODO: Process the generated inputs by
         # - the `self._target_embedding` layer to obtain embeddings,
         # - the `self._target_rnn` layer, passing an additional parameter `initial_state=[encoded[:, 0]]`,
         # - the `self._target_output_layer` to obtain logits,
@@ -151,7 +152,7 @@ class Model(tf.keras.Model):
         # TODO(decoder_training): Pre-compute the projected encoder states in the attention by calling
         # the `setup_memory` of the `self._target_rnn.cell` on the `encoded` input.
 
-        # TODO(lemmatizer_noattn): Define the following variables, that we will use in the cycle:
+        # TODO: Define the following variables, that we will use in the cycle:
         # - `index`: a scalar tensor with dtype `tf.int32` initialized to 0,
         # - `inputs`: a batch of `MorphoDataset.BOW` symbols of type `tf.int64`,
         # - `states`: initial RNN state from the encoder, i.e., `[encoded[:, 0]]`,
@@ -170,7 +171,8 @@ class Model(tf.keras.Model):
             # TODO(lemmatizer_noattn):
             # - First embed the `inputs` using the `self._target_embedding` layer.
             # - Then call `self._target_rnn.cell` using two arguments, the embedded `inputs`
-            #   and the current `states`. The call returns a pair of outputs and new state.
+            #   and the current `states`. The call returns a pair of (outputs, new states),
+            #   where the new states should replace the current `states`.
             # - Pass the outputs through the `self._target_output_layer`.
             # - Finally generate the most probable prediction for every batch example.
             predictions = ...
