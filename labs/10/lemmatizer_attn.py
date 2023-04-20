@@ -76,7 +76,7 @@ class Model(tf.keras.Model):
             vocabulary=self._target_mapping.get_vocabulary(), invert=True)
 
         # TODO(lemmatizer_noattn): Define
-        # - `self._source_embedding` as an embedding layer of source chars into `args.cle_dim` dimensions
+        # - `self._source_embedding` as an embedding layer of source ids into `args.cle_dim` dimensions
         self._source_embedding = ...
 
         # TODO: Define
@@ -118,7 +118,7 @@ class Model(tf.keras.Model):
         # TODO(lemmatizer_noattn): Embed the inputs using `source_embedding`.
 
         # TODO: Run the `source_rnn` on the embedded sequences, then convert its result
-        # it to a dense tensor using the `.to_tensor()` call, and return it.
+        # to a dense tensor using the `.to_tensor()` call, and return it.
         return ...
 
     def decoder_training(self, encoded: tf.Tensor, targets: tf.Tensor) -> tf.Tensor:
