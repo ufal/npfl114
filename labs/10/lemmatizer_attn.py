@@ -130,7 +130,7 @@ class Model(tf.keras.Model):
         # TODO: Pre-compute the projected encoder states in the attention by calling
         # the `setup_memory` of the `self._target_rnn.cell` on the `encoded` input.
 
-        # TODO(lemmatizer_noattn): Process the generated inputs by
+        # TODO: Process the generated inputs by
         # - the `self._target_embedding` layer to obtain embeddings,
         # - the `self._target_rnn` layer, passing an additional parameter `initial_state=[encoded[:, 0]]`,
         # - the `self._target_output_layer` to obtain logits,
@@ -152,7 +152,7 @@ class Model(tf.keras.Model):
         # TODO(decoder_training): Pre-compute the projected encoder states in the attention by calling
         # the `setup_memory` of the `self._target_rnn.cell` on the `encoded` input.
 
-        # TODO(lemmatizer_noattn): Define the following variables, that we will use in the cycle:
+        # TODO: Define the following variables, that we will use in the cycle:
         # - `index`: a scalar tensor with dtype `tf.int32` initialized to 0,
         # - `inputs`: a batch of `MorphoDataset.BOW` symbols of type `tf.int64`,
         # - `states`: initial RNN state from the encoder, i.e., `[encoded[:, 0]]`,
