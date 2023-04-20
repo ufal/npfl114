@@ -37,7 +37,7 @@ class Model(tf.keras.Model):
             vocabulary=self._target_mapping.get_vocabulary(), invert=True)
 
         # TODO: Define
-        # - `self._source_embedding` as an embedding layer of source chars into `args.cle_dim` dimensions
+        # - `self._source_embedding` as an embedding layer of source ids into `args.cle_dim` dimensions
         # - `self._source_rnn` as a bidirectional GRU with `args.rnn_dim` units, returning only the last output,
         #   summing opposite directions
         self._source_embedding = ...
