@@ -115,9 +115,9 @@ class Model(tf.keras.Model):
         self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
 
     def encoder(self, inputs: tf.Tensor) -> tf.Tensor:
-        # TODO(lemmatizer_noattn): Embed the inputs using `source_embedding`.
+        # TODO(lemmatizer_noattn): Embed the inputs using `self._source_embedding`.
 
-        # TODO: Run the `source_rnn` on the embedded sequences, then convert its result
+        # TODO: Run the `self._source_rnn` on the embedded sequences, then convert its result
         # it to a dense tensor using the `.to_tensor()` call, and return it.
         return ...
 
@@ -170,7 +170,8 @@ class Model(tf.keras.Model):
             # TODO(lemmatizer_noattn):
             # - First embed the `inputs` using the `self._target_embedding` layer.
             # - Then call `self._target_rnn.cell` using two arguments, the embedded `inputs`
-            #   and the current `states`. The call returns a pair of outputs and new state.
+            #   and the current `states`. The call returns a pair of (outputs, new states),
+            #   where the new states should replace the current `states`.
             # - Pass the outputs through the `self._target_output_layer`.
             # - Finally generate the most probable prediction for every batch example.
             predictions = ...
