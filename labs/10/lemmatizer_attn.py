@@ -53,9 +53,10 @@ class WithAttention(tf.keras.layers.AbstractRNNCell):
         # - According to the definition, we need to project the encoder states, but we have
         #   already done that in `setup_memory`, so we just take `self._encoded_projected`.
         # - Compute projected decoder state by passing `states` through the `self._project_decoder_layer`.
-        # - Sum the two projections. However, the first has shape [a, b, c] and the second [a, c]. Therefore,
-        #   expand the second to [a, b, c] or [a, 1, c] (the latter works because of broadcasting rules).
-        # - Pass the sum through the `tf.tanh` and then through the `self._output_layer`.
+        # - Sum the two projections. However, the first has shape `[batch_size, input_sequence_len, attention_dim]`
+        #   and the second just `[batch_size, attention_dim]`. Therefore, expand the second projection
+        #   to `[batch_size, 1, attention_dim]`, and then broadcasting will allow to sum the two projections.
+        # - Pass the sum through the `tf.nn.tanh` and then through the `self._output_layer`.
         # - Then, run softmax on a suitable axis, generating `weights`.
         # - Multiply the original (non-projected) encoder states `self._encoded` with `weights` and sum
         #   the result in the axis corresponding to characters, generating `attention`. Therefore,
