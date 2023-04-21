@@ -185,7 +185,7 @@ class Model(tf.keras.Model):
         data_flat = ...
 
         encoded = self.encoder(data_flat)
-        y_pred = self.decoder_inference(encoded, data_flat.bounding_shape(1) + 10)
+        y_pred = self.decoder_inference(encoded, data_flat.bounding_shape(axis=1) + 10)
         y_pred = self._target_mapping_inverse(y_pred)
         y_pred = tf.strings.reduce_join(y_pred, axis=-1)
 
