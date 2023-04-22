@@ -81,7 +81,7 @@
     - For official instructions, see the _Ubuntu 22.04 section_ of
       [the install guide](https://www.tensorflow.org/install/pip#linux_1).
     - For manual configuration:
-      - Use enfironmental variable `export XLA_FLAGS=--xla_gpu_cuda_data_dir=CUDA_DIR`
+      - Use environmental variable `export XLA_FLAGS=--xla_gpu_cuda_data_dir=CUDA_DIR`
         and make sure that the `CUDA_DIR` contains `nvvm/libdevice/libdevice.10.bc`.
       - Make sure `ptxas` is in the `PATH`.
   - In case of other errors, you can rerun your program with `export
