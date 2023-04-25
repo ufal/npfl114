@@ -8,7 +8,7 @@ a clef, key signature, and a time signature, followed by several staves. The
 [dataset](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/homr_train.html)
 is loadable using the
 [homr_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/09/homr_dataset.py)
-module, and is downloaded automatically if missing (note that is has ~500MB, so
+module, and is downloaded automatically if missing (note that it has ~500MB, so
 it might take a while). No other data or pretrained models are allowed for
 training.
 
@@ -22,7 +22,7 @@ _3%_ test set edit distance will get 3 points; the rest 5 points will be
 distributed depending on relative ordering of your solutions.
 You can evaluate the predictions as usual using the
 [homr_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/09/homr_dataset.py)
-module, either by running with `--evaluate=path` arguments, or using its
+module, either by running with the `--evaluate=path` argument, or using its
 `evaluate_file` method.
 
 You can start with the
