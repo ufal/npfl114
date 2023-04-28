@@ -70,13 +70,13 @@ class Model(tf.keras.Model):
 
         self.tb_callback = tf.keras.callbacks.TensorBoard(args.logdir)
 
-    def encoder(self, inputs: tf.Tensor) -> tf.Tensor:
+    def encoder(self, inputs: tf.RaggedTensor) -> tf.Tensor:
         # TODO: Embed the inputs using `self._source_embedding`.
 
         # TODO: Run the `self._source_rnn` on the embedded sequences, and return the result.
         return ...
 
-    def decoder_training(self, encoded: tf.Tensor, targets: tf.Tensor) -> tf.Tensor:
+    def decoder_training(self, encoded: tf.Tensor, targets: tf.RaggedTensor) -> tf.RaggedTensor:
         # TODO: Generate inputs for the decoder, which is obtained from `targets` by
         # - prepending `MorphoDataset.BOW` as the first element of every batch example,
         # - dropping the last element of `targets` (which is `MorphoDataset.EOW`)
@@ -89,7 +89,7 @@ class Model(tf.keras.Model):
         return ...
 
     @tf.function
-    def decoder_inference(self, encoded: tf.Tensor, max_length: tf.Tensor) -> tf.Tensor:
+    def decoder_inference(self, encoded: tf.Tensor, max_length: tf.Tensor) -> tf.RaggedTensor:
         """The decoder_inference runs a while-cycle inside a computation graph.
 
         To that end, it needs to be explicitly marked as @tf.function, so that the
