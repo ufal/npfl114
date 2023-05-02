@@ -8,7 +8,7 @@ Czech RoBERTa model [`ufal/robeczech-base`](https://huggingface.co/ufal/robeczec
 
 The dataset can be loaded using the
 [reading_comprehension_dataset.py](https://github.com/ufal/npfl114/tree/master/labs/11/reading_comprehension_dataset.py)
-module. The loaded dataset is the direct reprentation of the data and not yet
+module. The loaded dataset is the direct representation of the data and not yet
 ready to be directly trained on. Each of the `train`, `dev` and `test` datasets
 are composed of a list of paragraphs, each consisting of:
 - `context`: text with various information;
@@ -27,7 +27,7 @@ predictions as usual with the
 module, either by running with `--evaluate=path` arguments, or using its
 `evaluate_file` method.
 
-The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2223-summer#competitions). Everyone who submits a solution
+The task is a [_competition_](https://ufal.mff.cuni.cz/courses/npfl114/2223-summer#competitions). Everyone who submits
 a solution with at least **65%** answer accuracy gets 4 points; the rest 5 points
 will be distributed depending on relative ordering of your solutions. Note that
 usually achieving **62%** on the `dev` set is enough to get 65% on the `test`
