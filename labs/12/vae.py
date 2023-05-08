@@ -3,7 +3,7 @@ import argparse
 import datetime
 import os
 import re
-from typing import Any, Dict
+from typing import Dict
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
