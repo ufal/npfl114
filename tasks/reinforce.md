@@ -3,20 +3,20 @@
 #### Points: 2 points
 
 Solve the continuous [CartPole-v1 environment](https://gymnasium.farama.org/environments/classic_control/cart_pole/)
-environment from the [Gymnasium library](https://gymnasium.farama.org/) using the REINFORCE
-algorithm. The `gymnasium` environments have the followng methods and
+from the [Gymnasium library](https://gymnasium.farama.org/) using the REINFORCE
+algorithm. The `gymnasium` environments have the following methods and
 properties:
 - `observation_space`: the description of environment observations; for
   continuous spaces, `observation_space.shape` contains their shape
 - `action_space`: the description of environment actions
 - `reset() → new_state, info`: starts a new episode, returning the new
   state and additional environment-specific information
-- `step(action) → new_state, reward, terminated, truncated, info`: perform the
+- `step(action) → new_state, reward, terminated, truncated, info`: performs the
   chosen action in the environment, returning the new state, obtained reward,
   boolean flags indicating a terminal state and episode truncation, and
   additional environment-specific information
 
-We additionaly extend the `gymnasium` environment by:
+We additionally extend the `gymnasium` environment by:
 - `episode`: number of the current episode (zero-based)
 - `reset(start_evaluation=False) → new_state, info`: if `start_evaluation` is
   `True`, an evaluation is started

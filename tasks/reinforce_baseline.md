@@ -6,7 +6,7 @@ This is a continuation of the `reinforce` assignment.
 
 Using the [reinforce_baseline.py](https://github.com/ufal/npfl114/tree/master/labs/12/reinforce_baseline.py)
 template, solve the continuous [CartPole-v1 environment](https://gymnasium.farama.org/environments/classic_control/cart_pole/)
-environment using the REINFORCE with baseline algorithm.
+using the REINFORCE with baseline algorithm.
 
 Using a baseline lowers the variance of the value function gradient estimator,
 which allows faster training and decreases sensitivity to hyperparameter values.
