@@ -43,7 +43,7 @@ class VAE(tf.keras.Model):
         # - flattens them
         # - applies `len(args.encoder_layers)` dense layers with ReLU activation,
         #   i-th layer with `args.encoder_layers[i]` units
-        # - generate two outputs `z_mean` and `z_sd`, each passing the result
+        # - generates two outputs `z_mean` and `z_sd`, each passing the result
         #   of the above bullet through its own dense layer of `args.z_dim` units,
         #   with `z_sd` using exponential function as activation to keep it positive.
         self.encoder = ...
