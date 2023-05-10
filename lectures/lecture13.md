@@ -16,3 +16,4 @@
   - DDPM [[Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)]
   - DDIM [[Denoising Diffusion Implicit Models](https://arxiv.org/abs/2010.02502)]
   - _Stable Diffusion [[High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)]_
+  - _NCSN [[Generative Modeling by Estimating Gradients of the Data Distribution](https://arxiv.org/abs/1907.05600)]_
