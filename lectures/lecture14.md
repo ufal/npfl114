@@ -2,6 +2,7 @@
 #### Date: May 15
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?14
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-14.pdf, PDF Slides
+#### Lecture assignment: learning_to_learn
 
 - WaveNet [[WaveNet: A Generative Model for Raw Audio](https://arxiv.org/abs/1609.03499)]
 - Parallel WaveNet [[Parallel WaveNet: Fast High-Fidelity Speech Synthesis](https://arxiv.org/abs/1711.10433)]
