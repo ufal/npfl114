@@ -9,7 +9,7 @@ import tensorflow as tf
 tf.get_logger().addFilter(lambda m: "Analyzer.lamba_check" not in m.getMessage())  # Avoid pesky warning
 
 parser = argparse.ArgumentParser()
-parser.add_argument("prompt", type=str, help="Prompt for the model to generate.")
+parser.add_argument("--prompt", type=str, help="Prompt for the model to generate.")
 parser.add_argument("--images", default=3, type=int, help="Number of images to generate.")
 parser.add_argument("--output", default="image", type=str, help="Filename to save the images to.")
 parser.add_argument("--version", default=2, type=int, choices=[1, 2], help="Stable Diffusion version.")
