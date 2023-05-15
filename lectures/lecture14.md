@@ -3,6 +3,9 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?14
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-14.pdf, PDF Slides
 #### Lecture assignment: learning_to_learn
+#### Lecture assignment: ddim
+#### Lecture assignment: ddim_attention
+#### Lecture assignment: ddim_conditional
 
 - WaveNet [[WaveNet: A Generative Model for Raw Audio](https://arxiv.org/abs/1609.03499)]
 - Parallel WaveNet [[Parallel WaveNet: Fast High-Fidelity Speech Synthesis](https://arxiv.org/abs/1711.10433)]
