@@ -76,14 +76,14 @@ class VAE(tf.keras.Model):
 
             # TODO: Decode images using `z` (also passing `training=True` to the `self.decoder`).
 
-            # TODO: Define `reconstruction_loss` using the `self.compiled_loss`.
+            # TODO: Compute `reconstruction_loss` using the `self.compiled_loss`.
             reconstruction_loss = ...
 
-            # TODO: Define `latent_loss` as a mean of KL divergences of suitable distributions.
+            # TODO: Compute `latent_loss` as a mean of KL divergences of suitable distributions.
             # Note that the `tfp` distributions offer a method `kl_divergence`.
             latent_loss = ...
 
-            # TODO: Define `loss` as a sum of the `reconstruction_loss` (multiplied by the number
+            # TODO: Compute `loss` as a sum of the `reconstruction_loss` (multiplied by the number
             # of pixels in an image) and the `latent_loss` (multiplied by self._z_dim).
             loss = ...
 
