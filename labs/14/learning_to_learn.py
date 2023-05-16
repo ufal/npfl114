@@ -23,9 +23,9 @@ parser.add_argument("--lstm_dim", default=256, type=int, help="LSTM Dim")
 parser.add_argument("--recodex", default=False, action="store_true", help="Evaluation in ReCodEx.")
 parser.add_argument("--read_heads", default=1, type=int, help="Read heads.")
 parser.add_argument("--seed", default=42, type=int, help="Random seed.")
-parser.add_argument("--test_episodes", default=1000, type=int, help="Number of testing episodes.")
+parser.add_argument("--test_episodes", default=1_000, type=int, help="Number of testing episodes.")
 parser.add_argument("--threads", default=1, type=int, help="Maximum number of threads to use.")
-parser.add_argument("--train_episodes", default=10000, type=int, help="Number of training episodes.")
+parser.add_argument("--train_episodes", default=10_000, type=int, help="Number of training episodes.")
 # If you add more arguments, ReCodEx will keep them with your default values.
 
 
