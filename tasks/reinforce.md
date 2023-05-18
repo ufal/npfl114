@@ -8,7 +8,8 @@ algorithm. The `gymnasium` environments have the following methods and
 properties:
 - `observation_space`: the description of environment observations; for
   continuous spaces, `observation_space.shape` contains their shape
-- `action_space`: the description of environment actions
+- `action_space`: the description of environment actions; for discrete
+  actions, `action_space.n` is the number of actions
 - `reset() → new_state, info`: starts a new episode, returning the new
   state and additional environment-specific information
 - `step(action) → new_state, reward, terminated, truncated, info`: performs the
