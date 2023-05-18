@@ -246,3 +246,116 @@
 
 - Elaborate on BERT training process (what are the two objectives used and how
   exactly are the corresponding losses computed). [10]
+
+#### Questions@:, Lecture 12 Questions
+- Define the Markov Decision Process, including the definition of the return. [5]
+
+- Define the value function, such that all expectations are over simple random
+  variables (actions, states, rewards), not trajectories. [5]
+
+- Define the action-value function, such that all expectations are over simple
+  random variables (actions, states, rewards), not trajectories. [5]
+
+- Express the value function using the action-value function, and express the
+  action-value function using the value function. [5]
+
+- Formulate the policy gradient theorem. [5]
+
+- Prove the part of the policy gradient theorem showing the value
+  of $\nabla_{\boldsymbol\theta} v_\pi(s)$. [10]
+
+- Assuming the policy gradient theorem, formulate the loss used by the REINFORCE
+  algorithm and show how can its gradient be expressed as an expectation
+  over states and actions. [5]
+
+- Write down the REINFORCE algorithm, including the loss formula. [10]
+
+- Show that introducing baseline does not influence validity of the policy
+  gradient theorem. [5]
+
+- Write down the REINFORCE with baseline algorithm, including both loss
+  formulas. [10]
+
+- Sketch the overall structure and training procedure of the Neural Architecture
+  Search. You do not need to describe how exactly is the block produced by the
+  controller. [5]
+
+- Write down the variational lower bound (ELBO) in the form of a reconstruction
+  error minus the KL divergence between the encoder and the prior (i.e., in the
+  form used for model training). Then prove it is actually a lower bound on
+  the log-likelihood $\log P(\boldsymbol x)$. [10]
+
+- Draw an architecture of a variational autoencoder (VAE). Pay attention to the
+  parametrization of the distribution from the encoder (including the used
+  activation functions), and show how to perform latent variable sampling so
+  that it is differentiable with respect to the encoder parameters (the
+  reparametrization trick). [10]
+
+#### Questions@:, Lecture 13 Questions
+- Write down the min-max formulation of generative adversarial network (GAN)
+  objective. Then describe what loss is actually used for training the generator
+  in order to avoid vanishing gradients at the beginning of the training. [5]
+
+- Write down the training algorithm of generative adversarial networks (GAN),
+  including the losses minimized by the discriminator and the generator. Be sure
+  to use the version of generator loss which avoids vanishing gradients at the
+  beginning of the training. [10]
+
+- Explain how the class label is used when training a conditional generative
+  adversarial network (CGAN). [5]
+
+- Illustrate that alternating SGD steps are not guaranteed to converge for
+  a min-max problem. [5]
+
+- Assuming a data point $\boldsymbol x_0$ and a variance schedule
+  $\beta_1, \ldots, \beta_T$, define the forward diffusion process $q$. [5]
+
+- Assuming a variance schedule $\beta_1, \ldots, \beta_T$, prove how the forward
+  diffusion marginal $q(\boldsymbol x_t | \boldsymbol x_0)$ looks like. [10]
+
+- Write down the diffusion marginal $q(\boldsymbol x_t | \boldsymbol x_0)$ and
+  the formulas of the cosine schedule of the signal rate and the noise rate. [5]
+
+- Write down the DDPM training algorithm, including the formula of the loss. [5]
+
+- Specify the inputs and outputs of the DDPM model, and describe its
+  architecture – what the overall structure looks like (ResNet blocks,
+  downsampling and upsampling, self-attention blocks), how the time is
+  represented, and how the conditioning on an input image and an input text
+  looks like. [10]
+
+- Define the forward DDIM process, and show how its
+  forward diffusion marginal $q_0(\boldsymbol x_t | \boldsymbol x_0)$ looks like. [5]
+
+- Write down the DDIM sampling algorithm. [5]
+
+#### Questions@:, Lecture 14 Questions
+- Draw the WaveNet architecture (show the overall architecture, explain dilated
+  convolutions, write down the gated activations, describe global and local
+  conditioning). [10]
+
+- Define the Mixture of Logistic distribution used in Parallel WaveNet,
+  including the explicit formula of computing the likelihood of the data. [5]
+
+- Describe the changes in the Student model of Parallel WaveNet, which allow
+  efficient sampling (how does the latent prior look like, how the output
+  data distribution is modeled in a single iteration and then after multiple
+  iterations). [5]
+
+- Write down the loss used for training of the Student model in Parallel
+  WaveNet, then rewrite the cross-entropy part to a sum of per-time-step
+  cross-entropies, and explain how are the per-time-step cross-entropies
+  estimated. [10]
+
+- Describe the addressing mechanism used in Neural Turing Machines – show the
+  overall structure including the required parameters, and explain content
+  addressing, interpolation with location addressing, shifting and sharpening.
+  [10]
+
+- Explain the overall architecture of a Neural Turing Machine with an LSTM
+  controller, assuming $R$ reading heads and one write head. Describe the
+  inputs and outputs of the LSTM controller itself, then how the memory is read
+  from and written to, and how the final output is computed. You do not
+  need to write down the implementation of the addressing mechanism (you can
+  assume it is a function which gets parameters, memory and previous
+  distribution, and computes a new distribution over memory cells). [10]

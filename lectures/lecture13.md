@@ -6,6 +6,7 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-13-english.mp4, EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-13-english.practicals.mp4, EN Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-13-english.large_transformers.mp4, EN Large Transformers
+#### Questions: #lecture_13_questions
 #### Lecture assignment: gan
 #### Lecture assignment: dcgan
 
