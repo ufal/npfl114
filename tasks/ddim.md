@@ -34,7 +34,6 @@ loss: 0.7732 - sample_mean: 125.9786 - sample_std: 126.0531
 #### Tests End:
 #### Examples Start: ddim_examples
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-oxford_flowers102 lsun_bedrooms ffhq
 - `python3 ddim.py --dataset=oxford_flowers102`
 ![oxford_flowers102 samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_oxford_flowers102.jpg)
 - `python3 ddim.py --dataset=lsun_bedrooms`
