@@ -68,8 +68,7 @@ def ResidualBlock(inputs, width, noise_embeddings):
     hidden = ...
 
     # TODO(ddim): Pass `noise_embeddings` through a dense layer with `width` outputs and Swish
-    # activation, and for each batch example, add the resulting vector to every "pixel"
-    # in `hidden`.
+    # activation, and add it to `hidden`.
     hidden += ...
 
     # TODO(ddim): Pass `hidden` through another BatchNormalization, Swish activation, and 3x3 convolution
