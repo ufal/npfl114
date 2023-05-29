@@ -110,6 +110,10 @@ def raw_tf_function(dynamic_dims):
             self._instances = weakref.WeakKeyDictionary()
 
         def __call__(self, *args):
+            # Warn about missing support for ragged and sparse tensors.
+            if any(isinstance(arg, (tf.RaggedTensor, tf.SparseTensor)) for arg in args):
+                raise ValueError("The `raw_tf_function` cannot handle ragged and sparse tensors. "
+                                 "If you really want to use them, switch to `tf.function` instead.")
             # Convert inputs to tensors.
             ctx = tfe.context.context()
             args = [constant_op.convert_to_eager_tensor(arg, ctx) for arg in args]
