@@ -3,7 +3,7 @@ import argparse
 import datetime
 import os
 import re
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Dict, Iterable, Optional, Tuple, Union
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")  # Report only TF errors by default
 
 import numpy as np
@@ -106,19 +106,24 @@ class Model(tf.keras.Model):
             self._output_layer = ...
 
         @property
-        def state_size(self) -> List[tf.TensorShape]:
-            # TODO: Return the description of the state size as a list containing
-            # sizes of individual state tensors. The state is a list consisting
-            # of the following elements (in this order):
+        def state_size(self) -> Tuple[Union[int, tf.TensorShape]]:
+            # TODO: Return the description of the state size as a (possibly nested)
+            # tuple (or a list) containing shapes of individual state tensors. The state
+            # of the `MemoryAugmentedLSTMCell` consists of the following components:
             # - first the state tensors of the `self._controller` itself; note that
             #   the `self._controller` also has `state_size` property;
-            # - then the values of memory cells read by `self._read_heads` heads
+            # - then the values of memory cells read by the `self._read_heads` heads
             #   in the previous time step;
             # - finally the external memory itself, which is a matrix containing
             #   `self._memory_cells` cells as rows, each of length `self._cell_size`.
+            # A tensor shape is specified without the batch size, either as:
+            # - an integer, in which case the state tensor for a single example
+            #   is a vector of the given size; or
+            # - a `tf.TensorShape`, which allows declaring tensors of different
+            #   dimensionality than just vectors.
             raise NotImplementedError()
 
-        def call(self, inputs: tf.Tensor, states: List[tf.Tensor]) -> Tuple[tf.Tensor, List[tf.Tensor]]:
+        def call(self, inputs: tf.Tensor, states: Tuple[tf.Tensor]) -> Tuple[tf.Tensor, Tuple[tf.Tensor]]:
             # TODO: Decompose `states` into `controller_state`, `read_value` and `memory`
             # (see `state_size` describing the `states` structure).
             controller_state, read_value, memory = ...
