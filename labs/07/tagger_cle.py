@@ -35,9 +35,6 @@ class Model(tf.keras.Model):
             super().__init__()
             self._rate = rate
 
-        def get_config(self) -> Dict[str, Any]:
-            return {"rate": self._rate}
-
         def call(self, inputs: tf.RaggedTensor, training: bool) -> tf.RaggedTensor:
             if training:
                 # TODO: Generate as many random uniform numbers in range [0, 1) as there are

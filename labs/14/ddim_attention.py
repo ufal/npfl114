@@ -42,9 +42,6 @@ class SinusoidalEmbedding(tf.keras.layers.Layer):
         super().__init__(*args, **kwargs)
         self.dim = dim
 
-    def get_config(self):
-        return {"dim": self.dim}
-
     def call(self, inputs):
         # TODO(ddim): Compute the sinusoidal embeddings of the inputs in `[0, 1]` range.
         # The `inputs` have shape `[..., 1]`, and the embeddings should have

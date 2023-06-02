@@ -38,9 +38,6 @@ class Model(tf.keras.Model):
             # with `dim` units without an activation.
             raise NotImplementedError()
 
-        def get_config(self):
-            return {"dim": self.dim, "expansion": self.expansion}
-
         def call(self, inputs):
             # TODO: Execute the FFN Transformer layer.
             raise NotImplementedError()
@@ -53,9 +50,6 @@ class Model(tf.keras.Model):
             # each with shape `[dim, dim]`; keep the default for other `add_weight` arguments
             # (which means trainable float32 matrices initialized with `"glorot_uniform"`).
             raise NotImplementedError()
-
-        def get_config(self):
-            return {"dim": self.dim, "heads": self.heads}
 
         def call(self, inputs, mask):
             # TODO: Execute the self-attention layer.
@@ -88,9 +82,6 @@ class Model(tf.keras.Model):
             super().__init__(*args, **kwargs)
             self.dim = dim
 
-        def get_config(self):
-            return {"dim": self.dim}
-
         def call(self, inputs):
             # TODO: Compute the sinusoidal positional embeddings. Recalling that `self.dim` is even,
             # the embeddings have a shape `[max_sentence_len, self.dim]`, and for `0 <= i < dim/2`:
@@ -112,9 +103,6 @@ class Model(tf.keras.Model):
             # - the required number of transformer layers, each consisting of
             #   - a layer normalization and a self-attention layer followed by a dropout layer,
             #   - a layer normalization and a FFN layer followed by a dropout layer.
-
-        def get_config(self):
-            return {name: getattr(self, name) for name in ["layers", "dim", "expansion", "heads", "dropout"]}
 
         def call(self, inputs, mask):
             # TODO: First compute the positional embeddings.
