@@ -20,7 +20,7 @@ parser.add_argument("--dataset", default="oxford_flowers102", type=str, help="Im
 parser.add_argument("--debug", default=False, action="store_true", help="If given, run functions eagerly.")
 parser.add_argument("--downscale", default=8, type=int, help="Conditional downscale factor.")
 parser.add_argument("--ema", default=0.999, type=float, help="Exponential moving average momentum.")
-parser.add_argument("--epoch_images", default=50_000, type=int, help="Images per epoch.")
+parser.add_argument("--epoch_batches", default=1_000, type=int, help="Batches per epoch.")
 parser.add_argument("--epochs", default=100, type=int, help="Number of epochs.")
 parser.add_argument("--loss", default="MeanAbsoluteError", type=str, help="Loss object to use.")
 parser.add_argument("--plot_each", default=None, type=int, help="Plot generated images every such epoch.")
@@ -157,11 +157,11 @@ class DDIM(tf.keras.Model):
 
     def _diffusion_rates(self, times):
         """Compute signal and noise rates for the given times."""
-        starting_angle, final_angle = 0.2, 1.55
+        starting_angle, final_angle = 0.025, np.pi / 2 - 0.025
         # TODO(ddim): For a vector of `times` in [0, 1] range, return a pair of corresponding
         # `(signal_rates, noise_rates)`. The signal and noise rates are computed as
         # cosine and sine of an angle which is a linear interpolation from `starting_angle`
-        # of 0.2 rad (for time 0) to `final_angle` of 1.55 rad (for time 1).
+        # of 0.025 rad (for time 0) to `final_angle` of pi/2 - 0.025 rad (for time 1).
         # Because we use the rates as multipliers of image batches, reshape the rates
         # to a shape `[batch_size, 1, 1, 1]`, assuming `times` has a shape `[batch_size]`.
         signal_rates, noise_rates = ...
@@ -207,6 +207,8 @@ class DDIM(tf.keras.Model):
     def generate(self, initial_noise, conditioning, steps):
         """Sample a batch of images given the `initial_noise` using `steps` steps."""
         images = initial_noise
+        diffusion_process = []
+
         # TODO: Normalize the `conditioning` using the `self._image_normalization`.
         conditioning = ...
 
@@ -216,6 +218,9 @@ class DDIM(tf.keras.Model):
         steps = tf.linspace(tf.ones(tf.shape(initial_noise)[0]), tf.zeros(tf.shape(initial_noise)[0]), steps + 1)
 
         for times, next_times in zip(steps[:-1], steps[1:]):
+            # Store the current images converted to `tf.uint8` to allow denoising visualization.
+            diffusion_process.append(self._image_denormalization(images))
+
             # TODO(ddim): Compute the signal and noise rates of the current time step.
             signal_rates, noise_rates = ...
 
@@ -236,7 +241,7 @@ class DDIM(tf.keras.Model):
         # the `self._image_denormalization` to obtain a `tf.uint8` representation.
         images = ...
 
-        return images
+        return images, diffusion_process
 
 
 def main(args: argparse.Namespace) -> Dict[str, float]:
@@ -265,14 +270,13 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     # as conditioning used for generation in `TBSampler`.
     train = images64.skip(80).repeat()
     train = train.shuffle(10 * args.batch_size, seed=args.seed)
-    train = train.take(args.epoch_images)
     train = train.batch(args.batch_size)
     train = train.prefetch(tf.data.AUTOTUNE)
-    conditioning = images64.take(80).batch(80).get_single_element()
-    # TODO: The `conditioning` is now a batch of 80 images. Downscale them
-    # using `tf.keras.layers.AveragePooling2D` by a factor of `args.downscale`.
-    # Note that the images are represented using `tf.uint8`, so you need to
-    # convert them to floats first and then back to bytes.
+    dev = images64.take(80).batch(80).get_single_element()
+    # TODO: Using `dev`, which is a batch of 80 images, compute the conditioning
+    # by downscaling it using `tf.keras.layers.AveragePooling2D` by a factor
+    # of `args.downscale`. Note that the images are represented using `tf.uint8`,
+    # so you need to convert them to floats first and then back to bytes.
     conditioning = ...
 
     # Class for sampling images and storing them to TensorBoard.
@@ -286,13 +290,27 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
         def __call__(self, epoch, logs=None) -> None:
             # After the last epoch and every `args.plot_each` epoch, generate a sample to TensorBoard logs.
             if epoch + 1 == args.epochs or (epoch + 1) % (args.plot_each or args.epochs) == 0:
-                images = ddim.generate(self._noise, conditioning, args.sampling_steps)
-                image_rows = [tf.concat(list(row), axis=1) for row in tf.split(images, self._rows)]
+                # Generate a grid of `self._columns *  self._rows // 2` independent samples with conditioning.
+                samples = self._columns * self._rows // 2
+                images, _ = ddim.generate(self._noise[:samples], conditioning[:samples], args.sampling_steps)
+                image_rows = [tf.concat(list(row), axis=1) for row in tf.split(images, self._rows // 2)]
                 conditioning_rows = [tf.concat(list(row), axis=1) for row in tf.split(
-                    tf.keras.layers.UpSampling2D(args.downscale)(conditioning), self._rows)]
+                    tf.keras.layers.UpSampling2D(args.downscale)(conditioning[:samples]), self._rows // 2)]
                 images = tf.concat([row for rows in zip(conditioning_rows, image_rows) for row in rows], axis=0)
                 with ddim.tb_callback._train_writer.as_default(step=epoch):
                     tf.summary.image("images", images[tf.newaxis])
+                # For each of `self._columns *  self._rows // 5` conditionings, generate 3 different samples.
+                samples = self._columns * self._rows // 5
+                images, _ = ddim.generate(self._noise[:3 * samples],
+                                          tf.repeat(conditioning[:samples], 3, axis=0), args.sampling_steps)
+                image_rows = [tf.concat([tf.concat(list(col), axis=0) for col in tf.split(row, self._columns)], axis=1)
+                              for row in tf.split(images, self._rows // 5)]
+                dev_rows = [tf.concat(list(row), axis=1) for row in tf.split(dev[:samples], self._rows // 5)]
+                conditioning_rows = [tf.concat(list(row), axis=1) for row in tf.split(
+                    tf.keras.layers.UpSampling2D(args.downscale)(conditioning[:samples]), self._rows // 5)]
+                variants = tf.concat([row for rows in zip(dev_rows, conditioning_rows, image_rows) for row in rows], axis=0)
+                with ddim.tb_callback._train_writer.as_default(step=epoch):
+                    tf.summary.image("variants", variants[tf.newaxis])
             # After the last epoch, store statistics of the generated sample for ReCodEx to evaluate.
             if epoch + 1 == args.epochs:
                 logs["sample_mean"] = tf.math.reduce_mean(tf.cast(images, tf.float32))
@@ -303,8 +321,8 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
         optimizer=tf.optimizers.experimental.AdamW(jit_compile=False),
         loss=getattr(tf.losses, args.loss)(),
     )
-    logs = ddim.fit(train, epochs=args.epochs, callbacks=[
-        tf.keras.callbacks.LambdaCallback(on_epoch_end=TBSampler(16, 5)), ddim.tb_callback])
+    logs = ddim.fit(train, epochs=args.epochs, steps_per_epoch=args.epoch_batches, callbacks=[
+        tf.keras.callbacks.LambdaCallback(on_epoch_end=TBSampler(16, 10)), ddim.tb_callback])
 
     # Return the loss and sample statistics for ReCodEx to validate.
     return {metric: values[-1] for metric, values in logs.history.items()}

@@ -3,6 +3,10 @@
 #### Points: 3 points
 #### Tests: ddim_tests
 #### Examples: ddim_examples
+#### Tests: ddim_tests_v1, Tests Original
+
+**Jun 3: The templates and tests have been updated. ReCodEx accepts both the
+original and new templates; the original test outputs are still available.**
 
 Implement a Denoising Diffusion Implicit Model (DDIM) to unconditionally
 generate images with $64×64$ resolution.
@@ -23,6 +27,26 @@ solution can be also seen in the Examples.
 
 #### Tests Start: ddim_tests
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
+1. `python3 ddim.py --epochs=1 --epoch_batches=16 --batch_size=8 --stages=2 --stage_blocks=2 --channels=8 --ema=0.9 --sampling_steps=8`
+```
+loss: 0.7722 - sample_mean: 126.7602 - sample_std: 125.7844
+```
+2. `python3 ddim.py --epochs=1 --epoch_batches=10 --batch_size=12 --stages=3 --stage_blocks=1 --channels=12 --ema=0.8 --sampling_steps=7`
+```
+loss: 0.7749 - sample_mean: 125.7547 - sample_std: 125.7643
+```
+#### Tests End:
+#### Examples Start: ddim_examples
+_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
+- `python3 ddim.py --dataset=oxford_flowers102 --epochs=70 --plot_each=10`
+![oxford_flowers102 samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim-oxford_flowers102.webp)
+- `python3 ddim.py --dataset=lsun_bedrooms --epochs=100 --plot_each=10`
+![lsun_bedrooms samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim-lsun_bedrooms.webp)
+- `python3 ddim.py --dataset=ffhq --epochs=100 --plot_each=10`
+![ffhq samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim-ffhq.webp)
+#### Examples End:
+#### Tests Start: ddim_tests_v1
+_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 1. `python3 ddim.py --epochs=1 --epoch_images=128 --batch_size=8 --stages=2 --stage_blocks=2 --channels=8 --ema=0.9 --sampling_steps=8`
 ```
 loss: 0.7697 - sample_mean: 126.8403 - sample_std: 126.0691
@@ -32,12 +56,3 @@ loss: 0.7697 - sample_mean: 126.8403 - sample_std: 126.0691
 loss: 0.7732 - sample_mean: 125.9786 - sample_std: 126.0531
 ```
 #### Tests End:
-#### Examples Start: ddim_examples
-_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 ddim.py --dataset=oxford_flowers102`
-![oxford_flowers102 samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_oxford_flowers102.jpg)
-- `python3 ddim.py --dataset=lsun_bedrooms`
-![lsun_bedrooms samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_lsun_bedrooms.jpg)
-- `python3 ddim.py --dataset=ffhq`
-![ffhq samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_ffhq.jpg)
-#### Examples End:

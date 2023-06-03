@@ -3,6 +3,10 @@
 #### Points: 1 points
 #### Tests: ddim_attention_tests
 #### Examples: ddim_attention_examples
+#### Tests: ddim_attention_tests_v1, Tests Original
+
+**Jun 3: The templates and tests have been updated. ReCodEx accepts both the
+original and new templates; the original test outputs are still available.**
 
 This task is an extension of the `ddim` assignment. Your goal is
 to extend the original architecture with self-attention blocks,
@@ -15,6 +19,26 @@ the reference solution can be also seen in the Examples.
 
 #### Tests Start: ddim_attention_tests
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
+1. `python3 ddim_attention.py --epochs=1 --epoch_batches=16 --batch_size=8 --stages=2 --stage_blocks=1 --channels=6 --ema=0.9 --sampling_steps=8 --attention_stages=0 --attention_heads=4`
+```
+loss: 0.7818 - sample_mean: 126.5896 - sample_std: 125.8099
+```
+2. `python3 ddim_attention.py --epochs=1 --epoch_batches=10 --batch_size=12 --stages=3 --stage_blocks=1 --channels=4 --ema=0.8 --sampling_steps=7 --attention_stages=1 --attention_heads=2`
+```
+loss: 0.7918 - sample_mean: 126.3455 - sample_std: 125.8369
+```
+#### Tests End:
+#### Examples Start: ddim_attention_examples
+_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
+- `python3 ddim_attention.py --dataset=oxford_flowers102 --epochs=70 --plot_each=10`
+![oxford_flowers102 samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_attention-oxford_flowers102.webp)
+- `python3 ddim_attention.py --dataset=lsun_bedrooms --epochs=100 --plot_each=10`
+![lsun_bedrooms samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_attention-lsun_bedrooms.webp)
+- `python3 ddim_attention.py --dataset=ffhq --epochs=100 --plot_each=10`
+![ffhq samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_attention-ffhq.webp)
+#### Examples End:
+#### Tests Start: ddim_attention_tests_v1
+_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 1. `python3 ddim_attention.py --epochs=1 --epoch_images=128 --batch_size=8 --stages=2 --stage_blocks=1 --channels=6 --ema=0.9 --sampling_steps=8 --attention_stages=0 --attention_heads=4`
 ```
 loss: 0.7799 - sample_mean: 126.7503 - sample_std: 126.0936
@@ -24,12 +48,3 @@ loss: 0.7799 - sample_mean: 126.7503 - sample_std: 126.0936
 loss: 0.7912 - sample_mean: 126.6070 - sample_std: 126.1168
 ```
 #### Tests End:
-#### Examples Start: ddim_attention_examples
-_Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
-- `python3 ddim_attention.py --dataset=oxford_flowers102`
-![oxford_flowers102 samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_attention_oxford_flowers102.jpg)
-- `python3 ddim_attention.py --dataset=lsun_bedrooms`
-![lsun_bedrooms samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_attention_lsun_bedrooms.jpg)
-- `python3 ddim_attention.py --dataset=ffhq`
-![ffhq samples](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/ddim_attention_ffhq.jpg)
-#### Examples End:
