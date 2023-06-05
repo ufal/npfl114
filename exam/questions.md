@@ -195,12 +195,15 @@
   the choice of distribution of negative samples. [5]
 
 #### Questions@:, Lecture 10 Questions
-- Draw a sequence-to-sequence architecture for machine translation, both during
-  training and during inference (without attention). [5]
+- Considering machine translation, draw a recurrent sequence-to-sequence
+  architecture without attention, both during training and during inference
+  (include embedding layers, recurrent cells, classification layers,
+  argmax/softmax). [5]
 
-- Draw a sequence-to-sequence architecture for machine translation used during
-  training, including the attention. Then write down how exactly is the attention
-  computed. [10]
+- Considering machine translation, draw a recurrent sequence-to-sequence
+  architecture with attention, used during training (include embedding layers,
+  recurrent cells, attention, classification layers, argmax/softmax).
+  Then write down how exactly is the attention computed. [10]
 
 - Explain how can word embeddings tying be used in a sequence-to-sequence
   architecture. [5]
