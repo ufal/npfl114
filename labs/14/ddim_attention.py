@@ -211,8 +211,9 @@ class DDIM(tf.keras.Model):
         noisy_images = ...
 
         with tf.GradientTape() as tape:
-            # TODO(ddim): Predict the noise by the `self._network`. Do not forget to also pass
-            # the `training=True` argument (to run batch normalizations in training regime).
+            # TODO(ddim): Predict the noise by running the `self._network` on the noisy images
+            # and the noise rates. Do not forget to also pass the `training=True` argument
+            # (to run batch normalizations in training regime).
             predicted_noises = ...
 
             # TODO(ddim): Compute loss using the `self.compiled_loss`.
