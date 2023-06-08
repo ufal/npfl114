@@ -21,11 +21,11 @@ the reference solution can be also seen in the Examples.
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 1. `python3 ddim_conditional.py --epochs=1 --epoch_batches=16 --batch_size=8 --stages=2 --stage_blocks=2 --channels=8 --ema=0.9 --sampling_steps=8`
 ```
-loss: 0.7722 - sample_mean: 125.3482 - sample_std: 125.7723
+loss: 0.7722 - sample_mean: 125.3491 - sample_std: 125.7724
 ```
 2. `python3 ddim_conditional.py --epochs=1 --epoch_batches=10 --batch_size=12 --stages=3 --stage_blocks=1 --channels=12 --ema=0.8 --sampling_steps=7`
 ```
-loss: 0.7766 - sample_mean: 126.1307 - sample_std: 125.7729
+loss: 0.7766 - sample_mean: 126.1337 - sample_std: 125.7730
 ```
 #### Tests End:
 #### Examples Start: ddim_conditional_examples
@@ -41,10 +41,10 @@ _Note that your results may be slightly different, depending on your CPU type an
 _Note that your results may be slightly different, depending on your CPU type and whether you use a GPU._
 1. `python3 ddim_conditional.py --epochs=1 --epoch_images=128 --batch_size=8 --stages=2 --stage_blocks=2 --channels=8 --ema=0.9 --sampling_steps=8`
 ```
-loss: 0.7704 - sample_mean: 111.6396 - sample_std: 100.4455
+loss: 0.7704 - sample_mean: 111.7210 - sample_std: 100.4695
 ```
 2. `python3 ddim_conditional.py --epochs=1 --epoch_images=120 --batch_size=12 --stages=3 --stage_blocks=1 --channels=12 --ema=0.8 --sampling_steps=7`
 ```
-loss: 0.7750 - sample_mean: 111.8473 - sample_std: 100.4678
+loss: 0.7750 - sample_mean: 111.9353 - sample_std: 100.4928
 ```
 #### Tests End:

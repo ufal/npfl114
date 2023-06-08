@@ -274,10 +274,10 @@ def main(args: argparse.Namespace) -> Dict[str, float]:
     train = train.batch(args.batch_size)
     train = train.prefetch(tf.data.AUTOTUNE)
     dev = images64.take(80).batch(80).get_single_element()
-    # TODO: Using `dev`, which is a batch of 80 images, compute the conditioning
-    # by downscaling it using `tf.keras.layers.AveragePooling2D` by a factor
-    # of `args.downscale`. Note that the images are represented using `tf.uint8`,
-    # so you need to convert them to floats first and then back to bytes.
+    # TODO: Using `dev` (a batch of 80 images), compute the conditioning by downscaling
+    # it using `tf.keras.layers.AveragePooling2D` by a factor of `args.downscale`.
+    # Because the images are represented using `tf.uint8`, you need to convert them
+    # to floats first and then back to bytes; use `tf.image.convert_image_dtype`.
     conditioning = ...
 
     # Class for sampling images and storing them to TensorBoard.
