@@ -12,7 +12,7 @@ module, the goal is to learn to classify a
 [sequence of images using a custom hierarchy](https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/demos/learning_to_learn_demo.html)
 by employing external memory.
 
-The inputs image sequences consists of `args.classes` random chosen Omniglot
+The input image sequences consist of `args.classes` randomly chosen Omniglot
 classes, each class being assigned a randomly chosen label. For every chosen
 class, `args.images_per_class` images are randomly selected. Apart from the
 images, the input contain the random labels one step after the corresponding
