@@ -89,7 +89,7 @@ class Model(tf.keras.Model):
 
         The LSTM has dimensionality `units`. The external memory consists
         of `memory_cells` cells, each being a vector of `cell_size` elements.
-        The controller has `read_heads` read head and one write head.
+        The controller has `read_heads` read heads and one write head.
         """
         def __init__(self, units: int, memory_cells: int, cell_size: int, read_heads: int, **kwargs) -> None:
             super().__init__(**kwargs)
