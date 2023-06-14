@@ -205,8 +205,8 @@
   recurrent cells, attention, classification layers, argmax/softmax).
   Then write down how exactly is the attention computed. [10]
 
-- Explain how can word embeddings tying be used in a sequence-to-sequence
-  architecture. [5]
+- Explain how is word embeddings tying used in a sequence-to-sequence
+  architecture, including the necessary scaling. [5]
 
 - Write down why are subword units used in text processing, and describe the BPE
   algorithm for constructing a subword dictionary from a large corpus. [5]
