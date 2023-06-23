@@ -42,7 +42,7 @@
 - _**GPU** support on Linux_
 
   TensorFlow 2.11 supports NVIDIA GPU out of the box, but you need to install
-  CUDA 11.2 and cuDNN 8.1 libraries yourself.
+  CUDA 11.2 (or newer 11.x) and cuDNN 8.1 (or newer 8.x) libraries yourself.
 
 - _**GPU** support on Windows_
 
@@ -147,13 +147,13 @@
 
 - _How to install TensorFlow dependencies on [AIC](https://aic.ufal.mff.cuni.cz)?_
 
-  To enable CUDA 11.2 and cuDNN 8.1 on AIC, you can either use `modules` as described in
+  To enable CUDA 11.8 and cuDNN 8.9.2 on AIC, you can either use `modules` as described in
   the section “CUDA modules” at https://aic.ufal.mff.cuni.cz/index.php/Submitting_GPU_Jobs,
   or you can add the following to your `.profile`:
   ```
-  export PATH="/lnet/aic/opt/cuda/cuda-11.2/bin:$PATH"
-  export LD_LIBRARY_PATH="/lnet/aic/opt/cuda/cuda-11.2/lib64:/lnet/aic/opt/cuda/cuda-11.2/cudnn/8.1.1/lib64:/lnet/aic/opt/cuda/cuda-11.2/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
-  export XLA_FLAGS=--xla_gpu_cuda_data_dir=/lnet/aic/opt/cuda/cuda-11.2 # XLA configuration
+  export PATH="/lnet/aic/opt/cuda/cuda-11.8/bin:$PATH"
+  export LD_LIBRARY_PATH="/lnet/aic/opt/cuda/cuda-11.8/lib64:/lnet/aic/opt/cuda/cuda-11.8/cudnn/8.9.2/lib64:/lnet/aic/opt/cuda/cuda-11.8/extras/CUPTI/lib64:$LD_LIBRARY_PATH"
+  export XLA_FLAGS=--xla_gpu_cuda_data_dir=/lnet/aic/opt/cuda/cuda-11.8 # XLA configuration
   ```
 
 - _How to run a GPU computation on AIC?_
