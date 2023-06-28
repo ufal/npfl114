@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.23">
-<info created="D:20180305065134" modified="D:20230220095101"/>
+<info created="D:20180305065134" modified="D:20230628133002"/>
 <preamble>\usepackage{bm}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
@@ -269,7 +269,7 @@ h
 208 692 l
 240 632 l
 </path>
-<text matrix="-0.290248 0.956951 -0.956951 -0.290248 855.605 761.927" transformations="translations" pos="152 712" stroke="black" type="label" width="78.129" height="14.148" depth="6.44" valign="baseline" size="Large" style="math">\textcolor{brown}{g} \frac{\partial \textcolor{purple}{f(x_1, x_2, x_3, x_4)}}{\partial x_1}</text>
+<text matrix="-0.290248 0.956951 -0.956951 -0.290248 855.605 761.927" transformations="translations" pos="152 712" stroke="black" type="label" width="78.129" height="14.148" depth="6.44" valign="baseline" size="Large" style="math">\frac{\partial \textcolor{purple}{f(x_1, x_2, x_3, x_4)}}{\partial x_1} \textcolor{brown}{g}</text>
 <path stroke="black" pen="heavier" rarrow="normal/normal">
 128 652 m
 208 652 l
@@ -285,9 +285,9 @@ h
 208 572 l
 240 632 l
 </path>
-<text matrix="-0.290248 0.956951 -0.956951 -0.290248 855.605 721.927" transformations="translations" pos="152 712" stroke="black" type="label" width="78.129" height="14.148" depth="6.44" valign="baseline" size="Large" style="math">\textcolor{brown}{g} \frac{\partial \textcolor{purple}{f(x_1, x_2, x_3, x_4)}}{\partial x_2}</text>
-<text matrix="-0.290248 0.956951 -0.956951 -0.290248 855.605 681.927" transformations="translations" pos="152 712" stroke="black" type="label" width="78.129" height="14.148" depth="6.44" valign="baseline" size="Large" style="math">\textcolor{brown}{g} \frac{\partial \textcolor{purple}{f(x_1, x_2, x_3, x_4)}}{\partial x_3}</text>
-<text matrix="-0.290248 0.956951 -0.956951 -0.290248 855.605 641.927" transformations="translations" pos="152 712" stroke="black" type="label" width="78.129" height="14.148" depth="6.44" valign="baseline" size="Large" style="math">\textcolor{brown}{g} \frac{\partial \textcolor{purple}{f(x_1, x_2, x_3, x_4)}}{\partial x_4}</text>
+<text matrix="-0.290248 0.956951 -0.956951 -0.290248 855.605 721.927" transformations="translations" pos="152 712" stroke="black" type="label" width="78.129" height="14.148" depth="6.44" valign="baseline" size="Large" style="math">\frac{\partial \textcolor{purple}{f(x_1, x_2, x_3, x_4)}}{\partial x_2} \textcolor{brown}{g}</text>
+<text matrix="-0.290248 0.956951 -0.956951 -0.290248 855.605 681.927" transformations="translations" pos="152 712" stroke="black" type="label" width="78.129" height="14.148" depth="6.44" valign="baseline" size="Large" style="math">\frac{\partial \textcolor{purple}{f(x_1, x_2, x_3, x_4)}}{\partial x_3} \textcolor{brown}{g}</text>
+<text matrix="-0.290248 0.956951 -0.956951 -0.290248 855.605 641.927" transformations="translations" pos="152 712" stroke="black" type="label" width="78.129" height="14.148" depth="6.44" valign="baseline" size="Large" style="math">\frac{\partial \textcolor{purple}{f(x_1, x_2, x_3, x_4)}}{\partial x_4} \textcolor{brown}{g}</text>
 <text matrix="-0.290248 0.956951 -0.956951 -0.290248 1003.61 677.927" transformations="translations" pos="152 712" stroke="black" type="label" width="118.368" height="10.756" depth="3.59" valign="baseline" size="Large" style="math">y = f(x_1, x_2, x_3, x_4)</text>
 </page>
 </ipe>
