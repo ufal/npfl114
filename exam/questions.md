@@ -204,7 +204,7 @@
 
 - Considering machine translation, draw a recurrent sequence-to-sequence
   architecture with attention, used during training (include embedding layers,
-  recurrent cells, attention, classification layers, argmax/softmax).
+  recurrent cells, attention, classification layers).
   Then write down how exactly is the attention computed. [10]
 
 - Explain how is word embeddings tying used in a sequence-to-sequence
