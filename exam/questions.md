@@ -86,7 +86,7 @@
   of size $H \times W$ for both these padding schemes (stride is 1). [5]
 
 - Describe batch normalization including all its parameters, and write down an
-  algorithm how it is used during training and an algorithm how it is used
+  algorithm how it is used during training and the algorithm how it is used
   during inference. Be sure to explicitly write over what is being normalized in
   case of fully connected layers and in case of convolutional layers. [10]
 
@@ -174,11 +174,11 @@
   a linear-chain CRF, including its asymptotic complexity. [10]
 
 - Write down the dynamic programming algorithm for linear-chain CRF decoding,
-  i.e., an algorithm computing the most probable label sequence $\boldsymbol y$.
+  i.e., the algorithm computing the most probable label sequence $\boldsymbol y$.
   [10]
 
 - In the context of CTC loss, describe regular and extended labelings and
-  write down an algorithm for computing the log probability of a gold label
+  write down the algorithm for computing the log probability of a gold label
   sequence $\boldsymbol y$. [10]
 
 - Describe how CTC predictions are performed using a beam-search. [5]
