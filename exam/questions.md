@@ -159,9 +159,10 @@
   it is computed (be sure to explicitly state over what is being normalized in
   case of fully connected layers and convolutional layers). [5]
 
-- Sketch a tagger architecture utilizing word embeddings, recurrent
-  character-level word embeddings and two sentence-level bidirectional RNNs with
-  a residual connection. [10]
+- Draw a tagger architecture utilizing word embeddings, recurrent
+  character-level word embeddings (including how are these computed from
+  individual characters), and two sentence-level bidirectional RNNs with
+  a residual connection. Where would you put the dropout layers [10]
 
 #### Questions@:, Lecture 8 Questions
 - Considering a linear-chain CRF, write down how a score of a label sequence
