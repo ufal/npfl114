@@ -243,7 +243,7 @@
   applications. [5]
 
 - Describe the BERT architecture (you do not need to describe the (multi-head)
-  self-attention operation). Elaborate also on what positional embeddings
+  self-attention operation). Elaborate also on which positional embeddings
   are used and what are the GELU activations. [10]
 
 - Describe the GELU activations and explain why are they a combination of ReLUs
