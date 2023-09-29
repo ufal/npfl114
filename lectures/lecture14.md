@@ -3,9 +3,7 @@
 #### Slides: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides/?14
 #### Reading: https://ufal.mff.cuni.cz/~straka/courses/npfl114/2223/slides.pdf/npfl114-2223-14.pdf, PDF Slides
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-14-czech.mp4, CZ Lecture
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-14-czech.practicals.mp4, CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-14-english.mp4, EN Lecture
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-14-english.practicals.mp4, EN Practicals
 #### Questions: #lecture_14_questions
 #### Lecture assignment: learning_to_learn
 #### Lecture assignment: ddim

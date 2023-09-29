@@ -5,10 +5,8 @@
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-05-czech.mp4, CZ Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-05-czech.transposed_convolution.mp4, CZ Transposed Convolution
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-05-czech.transfer_learning.mp4, CZ Transfer Learning
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-05-czech.practicals.mp4, CZ Practicals
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-05-english.mp4, EN Lecture
 #### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-05-english.transposed_convolution.mp4, EN Transposed Convolution
-#### Video: https://lectures.ms.mff.cuni.cz/video/rec/npfl114/2223/npfl114-2223-05-english.practicals.mp4, EN Practicals
 #### Questions: #lecture_5_questions
 #### Lecture assignment: cnn_manual
 #### Lecture assignment: cags_classification
